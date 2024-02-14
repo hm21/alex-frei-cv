@@ -1,0 +1,47 @@
+:root {
+  margin: 0px;
+  padding: 0px;
+
+  --smooth-background: background-color 100ms ease;
+
+  --primary-font: "Roboto Flex", "Roboto", "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--page-background-primary);
+
+  transition: background-color 300ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: var(--primary-color);
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

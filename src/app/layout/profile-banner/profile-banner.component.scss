@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  background-color: var(--profile-banner-background);
+
+  height: 100%;
+
+  padding: 65px 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+img {
+  width: 144px;
+  height: 144px;
+  border-radius: 100%;
+
+  object-fit: cover;
+
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 7px;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+}

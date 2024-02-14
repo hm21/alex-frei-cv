@@ -1,0 +1,25 @@
+ul,
+li {
+  margin: 0px;
+}
+li {
+  padding: 0px;
+  list-style: none;
+  &:nth-child(1n + 2) {
+    margin-top: 10px;
+  }
+}
+ul {
+  padding: 10px 0;
+
+  height: 100%;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.spacer {
+  height: 100%;
+}

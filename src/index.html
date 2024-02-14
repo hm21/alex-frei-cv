@@ -1,13 +1,45 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AlexFreiCv</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<!DOCTYPE html>
+<html lang="de" theme="light">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+
+    <title>Alex Frei</title>
+
+    <!-- Infos -->
+    <meta name="author" content="Waio Applications" />
+
+    <!-- Configs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      href="assets/fonts/roboto-flex.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body id="body">
+    <noscript>
+      <div
+        style="
+          font-size: 4rem;
+          line-height: 120%;
+          text-align: center;
+          margin-top: 120px;
+        "
+        i18n
+      >
+        Please enable <b style="text-decoration: underline">JavaScript</b>,to
+        use this application
+      </div>
+    </noscript>
+
+    <af-root></af-root>
+  </body>
 </html>

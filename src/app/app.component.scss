@@ -1,0 +1,8 @@
+:host {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 77px 270px auto;
+  grid-template-rows: 1fr;
+}

@@ -1,0 +1,184 @@
+$primary: var(--primary);
+
+.cookie-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.cookie-info-card {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 1rem;
+    box-shadow: 0 0 10px 2px #282828;
+    max-width: 410px;
+}
+.cookie-details-card {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 1rem;
+    box-shadow: 0 0 10px 2px #282828;
+    max-width: 550px;
+}
+
+.cookie-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.cookie-btn {
+    cursor: pointer;
+    outline: none;
+    border: unset;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-family-primary);
+
+    &.flat {
+        flex-basis: 100%;
+        margin: 15px 0 10px;
+        font-weight: 500;
+        color: white;
+        background: $primary;
+        background: linear-gradient($primary, $primary);
+        transition: box-shadow 300ms ease;
+        -webkit-tap-highlight-color: transparent;
+
+        &:hover {
+            text-decoration: none;
+            box-shadow: 0 0 10px 2px #d3d3d3;
+        }
+    }
+    &.outline {
+        flex-basis: 45%;
+        background-color: white;
+        color: black;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.cookie-options,
+.cookie-option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+.cookie-options {
+    margin-top: 15px;
+}
+.cookie-option {
+    margin-right: 10px;
+}
+.cookie-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 7px;
+}
+svg {
+    height: 48px;
+    width: 48px;
+    width: 22px;
+    height: 28px;
+    margin-right: 10px;
+}
+h6 {
+    color: #0e2058;
+    font-size: 1.75rem;
+    line-height: 100%;
+}
+a,
+p {
+    font-size: 0.9rem;
+    line-height: 135%;
+}
+a {
+    color: $primary;
+}
+label {
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 135%;
+    user-select: none;
+}
+input {
+    cursor: pointer;
+    width: auto;
+    user-select: none;
+}
+
+.cookie-checkbox[type="checkbox"] {
+    display: none;
+}
+
+.cookie-checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        border-radius: 3px;
+        border: 1.5px solid rgba(0, 0, 0, 0.6);
+    }
+}
+
+.cookie-checkbox[type="checkbox"]:checked + .cookie-checkbox-label::before {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.cookie-checkbox[type="checkbox"]:checked + .cookie-checkbox-label::after {
+    content: "\2713";
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 20px;
+}
+
+.cookie-checkbox[type="checkbox"]:disabled + .cookie-checkbox-label::before {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+.cookie-checkbox[type="checkbox"]:disabled + .cookie-checkbox-label {
+    cursor: not-allowed;
+}
