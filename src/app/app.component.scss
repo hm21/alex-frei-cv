@@ -1,8 +1,27 @@
 :host {
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
   width: 100%;
 
   display: grid;
-  grid-template-columns: 77px 270px auto;
-  grid-template-rows: 1fr;
+  grid-template-columns: 77px 360px auto;
+  grid-template-rows: 100vh;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 77px 320px auto;
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 77px 280px auto;
+  }
+}
+
+main {
+  padding: 40px;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }

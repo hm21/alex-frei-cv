@@ -1,12 +1,16 @@
 @import "./font/font";
 
+@import "./theme/theme";
 @import "./theme/light-theme";
 @import "./theme/dark-theme";
 
 @import "./various/shared";
-
+@import "./various/layout";
 @import "./various/breakpoints";
 
 @import "./element/button";
+@import "./element/input";
+@import "./element/scrollbar";
+@import "./element/spacer";
 
 @import "node_modules/ngx-scroll-animations/styles/animations.min.css";

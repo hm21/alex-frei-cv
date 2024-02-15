@@ -1,0 +1,48 @@
+input,
+select,
+textarea {
+  width: 100%;
+  background-color: var(--input-background-color);
+  border-radius: 20px;
+  padding: 12px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 2rem;
+  color: var(--text-color-primary);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  align-items: center;
+
+  transition: border 200ms ease;
+
+  svg {
+    cursor: pointer;
+    width: 20px;
+    height: 15px;
+    transition: transform 200ms ease;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &:focus-within {
+    border-color: black;
+  }
+}

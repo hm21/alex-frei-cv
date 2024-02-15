@@ -1,3 +1,52 @@
+a,
 button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.btn {
+  outline: none;
+  border: unset;
+  user-select: none;
+
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4)); */
+  transition: transform 300ms ease, background-color 300ms ease;
+
+  color: white;
+  background-color: transparent;
+
+  border-radius: 48px;
+  border: 3px solid var(--color-light);
+
+  padding: 10px 34px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: normal;
+  white-space: nowrap;
+  will-change: filter, transform;
+
+  &.primary {
+    border: 3px solid var(--color-primary);
+    color: var(--text-color-primary);
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--color-light);
+    color: var(--color-primary);
+
+    &.primary {
+      background:var(--color-primary);
+      color: var(--color-light);
+    }
+  }
+  &:active {
+    transform: scale(0.95);
+    filter: unset;
+  }
 }

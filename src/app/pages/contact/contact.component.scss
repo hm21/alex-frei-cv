@@ -1,0 +1,34 @@
+:host {
+  max-width: 1000px;
+  display: block;
+
+  color: var(--text-color-primary);
+}
+.contact-options {
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.fill {
+  transition: fill 300ms ease;
+  fill: var(--contact-icon-primary);
+}
+.fill-secondary {
+  transition: fill 300ms ease;
+  fill: var(--contact-icon-secondary);
+}

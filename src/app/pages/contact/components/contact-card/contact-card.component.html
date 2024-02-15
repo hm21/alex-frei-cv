@@ -1,0 +1,32 @@
+<a [href]="url">
+  <div class="icon">
+    <ng-content select="#icon" />
+  </div>
+
+  <div class="col">
+    <h2 class="title">
+      <ng-content select="#title" />
+    </h2>
+    <p class="msg">
+      <ng-content select="#msg" />
+    </p>
+
+    <p class="action">
+      <span i18n>
+        <ng-content select="#action" />
+      </span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+        fill="#000000"
+      >
+        <path
+          class="chevron"
+          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+        />
+      </svg>
+    </p>
+  </div>
+</a>

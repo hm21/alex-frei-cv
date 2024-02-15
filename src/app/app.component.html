@@ -10,9 +10,7 @@
   [@.disabled]="!useRouteAnimations"
   [@routeAnimations]="getRouteAnimationData()"
 >
-  <router-outlet #outlet="outlet" />
+  <div class="container">
+    <router-outlet #outlet="outlet" />
+  </div>
 </main>
-
-<!-- <af-page-header />
-
-<af-page-footer /> -->

@@ -1,6 +1,39 @@
-<img src="https://picsum.photos/800" i18n-alt alt="Alex Frei Profilpicture" />
+<picture>
+  @for (format of ["avif", "webp", "png"]; track format) {
+  <source
+    srcset="
+      assets/img/avatar/alex_1x.{{format}} 1x,
+      assets/img/avatar/alex_2x.{{format}} 2x,
+      assets/img/avatar/alex_3x.{{format}} 3x,
+      assets/img/avatar/alex_4x.{{format}} 4x
+    "
+    type="image/{{ format }}"
+  />
+
+  }
+
+  <img
+    ngxHero
+    highQualityPath="assets/img/avatar/alex_original"
+    [supportedFormats]="['avif', 'webp', 'png']"
+    src="assets/img/avatar/alex_4x.png"
+    i18n-alt
+    alt="Alex Frei profil picture"
+  />
+</picture>
 
 <h1>Alex Frei</h1>
 <h2 i18n>Full Stack Developer</h2>
 
-<a routerLink="/contact"  i18n>Contact</a>
+<a class="btn" routerLink="/contact" i18n>Contact</a>
+
+<div class="spacer"></div>
+
+<a
+  class="source-btn color-light"
+  href="https://vscode.dev/github/hm21/alex-frei-cv"
+  target="_blank"
+  i18n
+>
+  View source code
+</a>

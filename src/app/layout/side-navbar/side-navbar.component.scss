@@ -1,3 +1,6 @@
+$active-nav-item: var(--color-primary);
+$inactive-nav-item: #b5b6b7;
+
 ul,
 li {
   margin: 0px;
@@ -5,12 +8,9 @@ li {
 li {
   padding: 0px;
   list-style: none;
-  &:nth-child(1n + 2) {
-    margin-top: 10px;
-  }
 }
 ul {
-  padding: 10px 0;
+  padding: 20px 0 10px;
 
   height: 100%;
   margin-left: auto;
@@ -20,6 +20,65 @@ ul {
   justify-content: flex-start;
   align-items: center;
 }
-.spacer {
-  height: 100%;
+
+.nav-item {
+  $border: 0.5px solid var(--border-color);
+
+  width: 100%;
+
+  border-bottom: $border;
+
+  &:first-child {
+    border-top: $border;
+  }
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 0;
+
+  span {
+    transition: color 300ms ease;
+    color: var(--text-color-primary);
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0 3px;
+
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .fill {
+    transition: fill 200ms ease;
+    fill: $inactive-nav-item;
+  }
+  .stroke {
+    transition: stroke 200ms ease;
+    stroke: $inactive-nav-item;
+  }
+
+  &:hover,
+  &.router-link-active {
+    .fill {
+      fill: $active-nav-item;
+    }
+    .stroke {
+      stroke: $active-nav-item;
+    }
+  }
+}
+
+svg {
+  height: 36px;
+  width: auto;
+}
+
+.af-language-switch {
+  margin-top: 10px;
 }
