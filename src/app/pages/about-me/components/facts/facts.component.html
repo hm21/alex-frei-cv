@@ -1,2 +1,16 @@
-<!-- TODO: update always coffees -->
-Kaffee-Tassen 2
+<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title">
+  <span i18n>Fun-Facts</span> <span class="info" i18n>About this Website</span>
+</h2>
+
+<section>
+  <ng-container #containerRef />
+</section>
+
+<ng-template #itemTemplate let-icon="icon" let-title="title" let-value="value">
+  <article ngxScrollAnimate="fade-in-up-scale" once="false" speed="500" aos=".5">
+    <img src="assets/img/icon/{{ icon }}.svg" [alt]="title" />
+
+    <h3>{{ title }}</h3>
+    <div [ngxCountAnimation]="value" duration="1000"></div>
+  </article>
+</ng-template>

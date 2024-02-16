@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  margin-bottom: 40px;
+}
+.info {
+  margin-left: 7px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+section {
+  margin-top: 25px;
+
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+article {
+  text-align: center;
+
+  border: 2px solid var(--border-color);
+  border-radius: 7px;
+  padding: 15px;
+
+  background-color: var(--card-background-color);
+
+  transition: transform 250ms ease;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+h3 {
+  margin-top: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.ngx-count-animation {
+  margin-top: 7px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}

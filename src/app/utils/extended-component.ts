@@ -4,6 +4,7 @@ import {
   Directive,
   ElementRef,
   NgZone,
+  OnInit,
   inject,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -16,7 +17,7 @@ import { MetaDataI, metaGenerator } from './meta-generator';
 /**
  * Abstract class representing an extended component with common functionality.
  */
-export abstract class ExtendedComponent {
+export abstract class ExtendedComponent implements OnInit {
   /** Optional page metadata. */
   protected pageMeta?: MetaDataI;
 

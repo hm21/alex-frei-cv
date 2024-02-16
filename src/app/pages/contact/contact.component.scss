@@ -14,11 +14,6 @@
   gap: 20px;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
 h2 {
   font-size: 1.4rem;
   font-weight: 700;
@@ -26,9 +21,9 @@ h2 {
 }
 .fill {
   transition: fill 300ms ease;
-  fill: var(--contact-icon-primary);
+  fill: var(--icon-primary);
 }
 .fill-secondary {
   transition: fill 300ms ease;
-  fill: var(--contact-icon-secondary);
+  fill: var(--icon-secondary);
 }

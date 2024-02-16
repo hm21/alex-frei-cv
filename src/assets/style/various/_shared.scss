@@ -18,7 +18,7 @@ body {
   max-height: 100vh;
   overflow: hidden;
 
-
+  color: var(--text-color-primary);
   background-color: var(--page-background-primary);
 
   transition: background-color 300ms ease;

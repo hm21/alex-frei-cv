@@ -10,11 +10,19 @@ textarea {
   outline: none;
   font-size: 2rem;
   color: var(--text-color-primary);
+
+  &:focus{
+    border-color: var(--color-primary) !important;
+  }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-accent) inset;
+  -webkit-text-fill-color: var(--text-color-primary) !important;
 }
 input[type="number"] {
   -moz-appearance: textfield;

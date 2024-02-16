@@ -1,0 +1,10 @@
+section {
+    margin: 20px 0;
+    
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  gap: 40px;
+}

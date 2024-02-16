@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { Subject, catchError, retry, throwError } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'af-contact-form',
@@ -15,6 +16,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   imports: [ReactiveFormsModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactFormComponent extends ExtendedComponent {
   public pageTitle = '';
@@ -37,9 +39,7 @@ export class ContactFormComponent extends ExtendedComponent {
     email: new FormControl('', [Validators.email]),
     // phone: new FormControl('',),
   });
-  constructor(
-    private http: HttpClient,
-  ) {
+  constructor(private http: HttpClient) {
     super();
   }
 
@@ -63,21 +63,24 @@ export class ContactFormComponent extends ExtendedComponent {
       this.mode === 'contact' ? $localize`Kontakt` : $localize`Support`;
   }
 
-  sendForm(): void {
+  public sendForm(): void {
     if (this._blacklist) {
       return;
     }
     if (this.form.invalid || this.form.get('email')?.value?.length === 0) {
       //&& this.form.get('phone')?.value?.length === 0
       this.showError = true;
+      this.cdRef.detectChanges();
     } else if (!this._sending && !this._sended && this._sendTries < 10) {
       this.showError = false;
       this._sending = true;
       this.form.disable();
       this._sendTries++;
+      this.cdRef.detectChanges();
+
       this.http
         .post(
-          'https://snaptab.ch/api/v1/messageHomepage',
+          environment.endpoints.contactMessage,
           Object.assign(this.form.value, { mode: this.mode })
         )
         .pipe(
@@ -104,15 +107,18 @@ export class ContactFormComponent extends ExtendedComponent {
                 break;
             }
             this.form.enable();
+            this.cdRef.detectChanges();
             return throwError(() => err.error);
           })
         )
         .subscribe(() => {
           this._sending = false;
           this._sended = true;
+          this.cdRef.detectChanges();
         });
     } else if (this._sendTries >= 10) {
       this.serverError = $localize`Zuviele Übermittlungsversuche! Versuchen Sie es später erneut.`;
+      this.cdRef.detectChanges();
     }
   }
 

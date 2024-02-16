@@ -9,7 +9,7 @@ import { CookieService } from '../cookie.service';
   providedIn: 'root',
 })
 export class AnalyticsService {
-  private functionsUrl = 'https://snaptab.ch/api/v1/analytics'; // TODO:
+  private functionsUrl = environment.endpoints.analytics;
 
   private http = inject(HttpClient);
   private cookies = inject(CookieService);

@@ -1,0 +1,100 @@
+/* Sizes */
+$sizes: (
+    0: 0,
+    1: 0.625rem,
+    2: 1.25rem,
+    3: 1.875rem,
+    4: 2.5rem
+);
+
+/* Margins */
+$margins: (
+    m: "",
+    mt: -top,
+    mr: -right,
+    mb: -bottom,
+    ml: -left
+);
+
+@each $margin in map-keys($margins) {
+    @each $size in map-keys($sizes) {
+        .#{$margin}#{$size} {
+            margin#{map-get($margins, $margin)}: map-get($sizes, $size);
+        }
+    }
+}
+
+@each $margin in map-keys($margins) {
+    .#{$margin}-auto {
+        margin#{map-get($margins, $margin)}: auto;
+    }
+}
+
+@each $margin in map-keys($margins) {
+    .#{$margin}-full {
+        margin#{map-get($margins, $margin)}: 100%;
+    }
+}
+
+/* Paddings */
+$paddings: (
+    p: "",
+    pt: -top,
+    pr: -right,
+    pb: -bottom,
+    pl: -left
+);
+
+@each $padding in map-keys($paddings) {
+    @each $size in map-keys($sizes) {
+        .#{$padding}#{$size} {
+            padding#{map-get($paddings, $padding)}: map-get($sizes, $size);
+        }
+    }
+}
+
+/* Colors */
+$colors: (
+    primary: var(--primary),
+    secondary: var(--secondary),
+    tertiary: var(--tertiary),
+    success: var(--success)
+);
+@each $color in map-keys($colors) {
+    .bg-#{$color} {
+        background-color: map-get($colors, $color);
+    }
+    .gradient-#{$color} {
+        /// Fix contrast warning in lighthouse...
+        background-image: linear-gradient(map-get($colors, $color), map-get($colors, $color));
+    }
+
+    .color-#{$color} {
+        color: map-get($colors, $color);
+    }
+}
+
+/* Text */
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+/* Size */
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}
+
+/* Error*/
+.error {
+    color: #f44336;
+    font-weight: 500;
+}

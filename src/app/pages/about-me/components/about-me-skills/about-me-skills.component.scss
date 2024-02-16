@@ -1,0 +1,33 @@
+section {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 40px;
+  row-gap: 20px;
+}
+svg {
+  width: 48px;
+  height: 48px;
+  display: inline;
+
+  margin: 5px 10px 5px 0;
+}
+.icon-background {
+  fill: var(--skill-icon-background);
+}
+h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+}
+
+@media (max-width: 1140px) {
+  svg {
+    width: 40px;
+    height: 40px;
+    margin: 5px 5px 5px 0;
+  }
+}

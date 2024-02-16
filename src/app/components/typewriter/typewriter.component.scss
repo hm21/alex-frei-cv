@@ -1,0 +1,44 @@
+:host {
+  display: inline;
+
+  color: #fff;
+  border-right: 0.2rem solid white;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+
+  &.blink {
+    animation: blink-caret 1s step-end infinite;
+
+    &.primary {
+      animation: blink-caret-primary 1s step-end infinite;
+    }
+  }
+
+  color: var(--text-color-secondary);
+  border-right: 0.12rem solid var(--text-color-secondary);
+
+  &.primary {
+    color: var(--color-primary);
+    border-right: 0.12rem solid var(--color-primary);
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--text-color-secondary);
+  }
+}
+@keyframes blink-caret-primary {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary);
+  }
+}

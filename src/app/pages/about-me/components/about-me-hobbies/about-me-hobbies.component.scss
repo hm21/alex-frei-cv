@@ -1,0 +1,28 @@
+section {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+article {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+p {
+  margin-top: 7px;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}

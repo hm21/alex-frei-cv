@@ -1,0 +1,72 @@
+<article>
+  <af-typewriter [items]="items" />
+
+  <h1 i18n>Alex Frei</h1>
+
+  <p i18n>
+    Hey, I'm Alex, a passionate software developer based in the beautiful
+    country of Switzerland. I thrive on turning ideas into elegant and
+    functional software solutions. Whether it's web development, mobile apps, or
+    tinkering with the latest tech gadgets, I'm always eager to learn and
+    create.
+  </p>
+</article>
+
+<article>
+  <table border="0">
+    <tbody>
+      <tr>
+        <td i18n>E-Mail</td>
+        <td>
+          <a href="mailto:alex.frei@waio.ch">alex.frei&#64;waio.ch </a>
+        </td>
+      </tr>
+      <tr>
+        <td i18n>Phone</td>
+        <td>
+          <a href="tel:+41799505276"> +41 79 950 52 76 </a>
+        </td>
+      </tr>
+      <tr>
+        <td i18n>Location</td>
+        <td>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=9642+Ebnat-Kappel,+St.+Gallen,+Schweiz"
+            target="_blank"
+            >9642 Ebnat-Kappel</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>LinkedIn</td>
+        <td>
+          <a href="https://www.linkedin.com/in/alex-frei-01b016202/">
+            Alex-Frei
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>Github</td>
+        <td>
+          <a href="https://github.com/hm21">hm21</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Stack-Overflow</td>
+        <td>
+          <a href="https://stackoverflow.com/users/9513092">Alex</a>
+        </td>
+      </tr>
+      <tr>
+        <td i18n>Languages</td>
+        <td i18n>German, English</td>
+      </tr>
+      <tr>
+        <td i18n>Age</td>
+        <td [ngxCountAnimation]="age" duration="1_400"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="corner"></div>
+  <div class="corner bottom right"></div>
+</article>
