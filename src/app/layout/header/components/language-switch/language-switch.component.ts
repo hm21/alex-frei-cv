@@ -1,6 +1,11 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { DOCUMENT, NgClass } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject
+} from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -27,10 +32,10 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
               opacity: 1,
               height: '*',
               'box-shadow': '*',
-            })
+            }),
           ),
         ],
-        { params: { duration: '200ms' } }
+        { params: { duration: '200ms' } },
       ),
       transition(
         ':leave',
@@ -47,15 +52,18 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
               opacity: 0,
               height: 0,
               'box-shadow': 'unset',
-            })
+            }),
           ),
         ],
-        { params: { duration: '250ms' } }
+        { params: { duration: '250ms' } },
       ),
     ]),
   ],
 })
-export class LanguageSwitchComponent extends ExtendedComponent {
+export class LanguageSwitchComponent
+  extends ExtendedComponent
+  implements OnInit
+{
   public showLanguage = false;
   public activeLanguage!: Language;
 
@@ -74,9 +82,7 @@ export class LanguageSwitchComponent extends ExtendedComponent {
 
   isDarkMode = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
-    super();
-  }
+  private document = inject(DOCUMENT);
 
   override ngOnInit(): void {
     // TODO: init from website config
@@ -91,7 +97,7 @@ export class LanguageSwitchComponent extends ExtendedComponent {
       fromEvent(this.document, 'click')
         .pipe(
           this.destroyPipe(),
-          filter(() => this.showLanguage)
+          filter(() => this.showLanguage),
         )
         .subscribe(() => {
           this.showLanguage = false;

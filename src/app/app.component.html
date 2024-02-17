@@ -1,11 +1,3 @@
-<nav>
-  <af-side-navbar />
-</nav>
-
-<aside>
-  <af-profile-banner />
-</aside>
-
 <main
   #mainRef
   [@.disabled]="!useRouteAnimations"
@@ -15,3 +7,16 @@
     <router-outlet #outlet="outlet" />
   </div>
 </main>
+
+<af-header
+  (closeSideMenu)="mobileMenuBtn.closeMenu()"
+  (toggleHero)="showMobileMenuBtn = !$event; cdRef.detectChanges()"
+  [ngClass]="{ show: showMobileMenu }"
+/>
+
+  <af-nav-mobile-menu-toggle-btn
+    #mobileMenuBtn
+    [ngStyle]="{ display: showMobileMenuBtn ? '' : 'none' }"
+    [open]="showMobileMenu"
+    (tap)="showMobileMenu = !showMobileMenu"
+  />

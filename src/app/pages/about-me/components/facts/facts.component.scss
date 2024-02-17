@@ -31,7 +31,7 @@ article {
 
   transition: transform 250ms ease;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
   }
 }
@@ -50,4 +50,10 @@ h3 {
   margin-top: 7px;
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+@media (max-width: 499px) {
+  section {
+    grid-template-columns: 100%;
+  }
 }

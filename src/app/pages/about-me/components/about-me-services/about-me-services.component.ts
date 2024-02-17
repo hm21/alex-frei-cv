@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  OnDestroy,
   OnInit,
   ViewChild,
   ViewContainerRef,
@@ -20,7 +21,7 @@ import { ServiceCard } from './model/service-card-interface';
 })
 export class AboutMeServicesComponent
   extends ExtendedComponent
-  implements OnInit
+  implements OnInit, OnDestroy
 {
   @ViewChild('serviceItemsRef', { read: ViewContainerRef, static: true })
   serviceItemsRef!: ViewContainerRef;
@@ -66,6 +67,10 @@ export class AboutMeServicesComponent
     });
 
     super.ngOnInit();
+  }
+
+  ngOnDestroy(): void {
+    this.serviceItemsRef.clear();
   }
 
   private createService(data: ServiceCard) {

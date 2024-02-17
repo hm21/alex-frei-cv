@@ -1,9 +1,10 @@
 import {
   Component,
+  OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
@@ -16,7 +17,10 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   templateUrl: './facts.component.html',
   styleUrl: './facts.component.scss',
 })
-export class FactsComponent extends ExtendedComponent implements OnInit {
+export class FactsComponent
+  extends ExtendedComponent
+  implements OnInit, OnDestroy
+{
   @ViewChild('containerRef', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
   @ViewChild('itemTemplate', { read: TemplateRef, static: true })
@@ -52,6 +56,10 @@ export class FactsComponent extends ExtendedComponent implements OnInit {
     this.createItems();
 
     super.ngOnInit();
+  }
+
+  ngOnDestroy(): void {
+    this.container.clear();
   }
 
   private createItems() {

@@ -26,3 +26,10 @@ img {
   height: 48px;
   object-fit: contain;
 }
+
+@media (max-width: 599px) {
+  section {
+    grid-template-columns: 100%;
+    gap: 60px;
+  }
+}

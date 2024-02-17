@@ -2,16 +2,18 @@ import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnDestroy,
+  OnInit,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { SafeHtml } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { LanguageSwitchComponent } from '../profile-banner/language-switch/language-switch.component';
-import { ThemeSwitchComponent } from '../profile-banner/theme-switch/theme-switch.component';
+import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
+import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
+import { navItems } from '../header/utils/nav-items';
 
 @Component({
   selector: 'af-side-navbar',
@@ -28,9 +30,17 @@ import { ThemeSwitchComponent } from '../profile-banner/theme-switch/theme-switc
   styleUrl: './side-navbar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SideNavbarComponent extends ExtendedComponent {
+export class SideNavbarComponent
+  extends ExtendedComponent
+  implements OnInit, OnDestroy
+{
   @ViewChild('navItemsRef', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
+  @ViewChild('languageContainerRef', { read: ViewContainerRef, static: true })
+  languageContainerRef!: ViewContainerRef;
+  @ViewChild('themeContainerRef', { read: ViewContainerRef, static: true })
+  themeContainerRef!: ViewContainerRef;
+
   @ViewChild('navItem', { read: TemplateRef, static: true })
   private navItem!: TemplateRef<any>;
 
@@ -45,7 +55,7 @@ export class SideNavbarComponent extends ExtendedComponent {
   @ViewChild('contactIcon', { read: TemplateRef, static: true })
   private contactIcon!: TemplateRef<any>;
 
-  public navItems: { svg: SafeHtml; name: string }[] = [];
+  public showNavbar = true;
 
   override ngOnInit(): void {
     this.createNavItems();
@@ -54,34 +64,30 @@ export class SideNavbarComponent extends ExtendedComponent {
   }
 
   ngOnDestroy(): void {
-    this.container.clear();
+    this.container?.clear();
   }
 
   private createNavItems() {
-    this.container.createEmbeddedView(this.navItem, {
-      path: '/about-me',
-      name: $localize`About me`,
-      icon: this.aboutMeIcon,
-    });
-    this.container.createEmbeddedView(this.navItem, {
-      path: '/resume',
-      name: $localize`Resume`,
-      icon: this.resumeIcon,
-    });
-    this.container.createEmbeddedView(this.navItem, {
-      path: '/portfolio',
-      name: $localize`Portfolio`,
-      icon: this.portfolioIcon,
-    });
-    this.container.createEmbeddedView(this.navItem, {
-      path: '/relax',
-      name: $localize`Relax`,
-      icon: this.relaxIcon,
-    });
-    this.container.createEmbeddedView(this.navItem, {
-      path: '/contact',
-      name: $localize`Contact`,
-      icon: this.contactIcon,
+    navItems.forEach((el) => {
+      switch (el.id) {
+        case 'aboutMe':
+          el.icon = this.aboutMeIcon;
+          break;
+        case 'resume':
+          el.icon = this.resumeIcon;
+          break;
+        case 'portfolio':
+          el.icon = this.portfolioIcon;
+          break;
+        case 'contact':
+          el.icon = this.contactIcon;
+          break;
+        case 'relax':
+          el.icon = this.relaxIcon;
+          break;
+      }
+
+      this.container!.createEmbeddedView(this.navItem, el);
     });
   }
 }

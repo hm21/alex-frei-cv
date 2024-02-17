@@ -91,20 +91,25 @@ td {
 
     &:first-child {
       margin-bottom: 20px;
+      margin-right: 0px;
     }
-    &:last-child{
+    &:last-child {
       background-color: var(--card-background-color-accent);
     }
   }
-  /*  article {
-    &:first-child {
-      margin-right: 20px;
-    }
+}
+@media (max-width: 1024px) {
+  :host {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 359px) {
+  article {
+    max-width: unset;
+
     &:last-child {
-      padding: 10px 20px;
+      overflow: auto;
+      padding: 5px 15px;
     }
   }
-  .corner {
-    border-width: 2px !important;
-  } */
 }

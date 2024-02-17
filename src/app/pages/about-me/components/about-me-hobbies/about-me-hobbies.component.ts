@@ -2,6 +2,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
@@ -20,7 +21,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 })
 export class AboutMeHobbiesComponent
   extends ExtendedComponent
-  implements OnInit
+  implements OnInit, OnDestroy
 {
   @ViewChild('containerRef', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
@@ -49,6 +50,10 @@ export class AboutMeHobbiesComponent
     this.createItems();
 
     super.ngOnInit();
+  }
+
+  ngOnDestroy(): void {
+    this.container.clear();
   }
 
   private createItems() {

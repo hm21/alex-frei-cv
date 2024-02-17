@@ -1,0 +1,7 @@
+<input
+  [(ngModel)]="theme.isDarkMode"
+  (ngModelChange)="theme.toggleTheme();cdRef.detectChanges();"
+  type="checkbox"
+  id="darkmode-toggle"
+/>
+<label for="darkmode-toggle"></label>

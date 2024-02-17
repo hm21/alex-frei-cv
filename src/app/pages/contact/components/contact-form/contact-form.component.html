@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="sendForm()">
   <div class="row">
     <div class="col h-start">
-      <label for="firstname" i18n>Vorname</label>
+      <label for="firstname" i18n>First Name</label>
       <input
         enterkeyhint="next"
         id="firstname"
@@ -10,7 +10,7 @@
         type="text"
       />
 
-      <label for="lastname" i18n>Nachname</label>
+      <label for="lastname" i18n>Last Name</label>
       <input
         enterkeyhint="next"
         id="lastname"
@@ -30,7 +30,7 @@
     </div>
 
     <div class="col h-stretch msg">
-      <label for="message" i18n>Nachricht</label>
+      <label for="message" i18n>Message</label>
       <textarea
         enterkeyhint="enter"
         #msg
@@ -51,23 +51,22 @@
         @if (showError) {
           @if (form.invalid || form.get("email")?.value?.length === 0) {
             <p class="danger mt2" i18n>
-              <b>Vorname</b>, <b>Nachname</b> und <b>Nachricht</b> sowie
-              <b>E-Mail</b>
-              wird benötigt.
+              <b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as
+              <b>E-Mail</b> are required.
             </p>
           }
           @if (form.get("email")?.invalid) {
-            <p class="danger mt2" i18n>Gültige E-Mail wird benötigt.</p>
+            <p class="danger mt2" i18n>Valid email address is required.</p>
           }
         }
         @if (serverError) {
           <p class="danger mt2" [innerText]="serverError"></p>
         }
 
-        <button class="btn primary" type="submit" i18n>Absenden</button>
+        <button class="btn primary" type="submit" i18n>Submit</button>
       } @else {
         <p class="color-primary mt2 sended-text" i18n>
-          Anfrage wurden erfolgreich übermittelt.
+          The request has been successfully submitted.
         </p>
       }
     } @else {
@@ -273,13 +272,12 @@
     }
   } @else {
     <p class="danger mt2" i18n>
-      Ihre IP-Adresse wurde auf die Blacklist gesetzt, weil Sie ungewöhnlich
-      viele Anfragen an den Server gesendet haben! Sollten diese Anfragen nicht
-      böswillig durchgeführt worden sein, wenden Sie sich bitte an den Support
-      über
+      Your IP address has been blacklisted because you have sent an unusually
+      high number of requests to the server! If these requests were not made
+      maliciously, please contact me via
       <b
         ><a class="danger" href="mailto:info@snaptab.ch?subject=Support"
-          >info&#64;snaptab.ch</a
+          >alex.frei&#64;hotmail.ch</a
         ></b
       >.
     </p>

@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgClass, NgStyle } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -15,15 +15,21 @@ import { NgxCountService } from 'ngx-count-animation';
 import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ProfileBannerComponent } from './layout/profile-banner/profile-banner.component';
-import { getTheme } from './layout/profile-banner/theme-switch/utils/theme-switch';
-import { SideNavbarComponent } from './layout/side-navbar/side-navbar.component';
+import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
+import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
+import { HeaderComponent } from './layout/header/header.component';
 import { ExtendedComponent } from './utils/extended-component';
 
 @Component({
   selector: 'af-root',
   standalone: true,
-  imports: [RouterOutlet, SideNavbarComponent, ProfileBannerComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    NavMobileMenuToggleBtnComponent,
+    NgClass,
+    NgStyle,
+  ],
   providers: [NgxScrollAnimationsService, NgxCountService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -46,12 +52,12 @@ export class AppComponent
 {
   @ViewChild('mainRef') mainRef!: ElementRef<HTMLElement>;
 
+  public showMobileMenuBtn = true;
+  public showMobileMenu = false;
   public useRouteAnimations = false;
 
   private contexts = inject(ChildrenOutletContexts);
   private renderer = inject(Renderer2);
-  private scrollManager = inject(NgxScrollAnimationsService);
-  private countManager = inject(NgxCountService);
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     super();
@@ -77,9 +83,6 @@ export class AppComponent
     }
 
     this.analytics.websiteVisit();
-
-    this.scrollManager.overrideScrollListener(this.mainRef.nativeElement);
-    this.countManager.overrideScrollListener(this.mainRef.nativeElement);
 
     if (this.isBrowser)
       // Skip a frame so that the first time when the user opens the page will not be an animation bug.

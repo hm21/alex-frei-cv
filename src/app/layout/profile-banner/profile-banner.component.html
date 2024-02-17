@@ -1,20 +1,22 @@
 <picture>
   @for (format of ["avif", "webp", "png"]; track format) {
-  <source
-    srcset="
-      assets/img/avatar/alex_1x.{{format}} 1x,
-      assets/img/avatar/alex_2x.{{format}} 2x,
-      assets/img/avatar/alex_3x.{{format}} 3x,
-      assets/img/avatar/alex_4x.{{format}} 4x
-    "
-    type="image/{{ format }}"
-  />
-
+    <source
+      srcset="
+        assets/img/avatar/alex_1x.{{format}} 1x,
+        assets/img/avatar/alex_2x.{{format}} 2x,
+        assets/img/avatar/alex_3x.{{format}} 3x,
+        assets/img/avatar/alex_4x.{{format}} 4x
+      "
+      type="image/{{ format }}"
+    />
   }
 
   <img
     ngxHero
+    [backdropPosition]="'beforeHeroItem'"
     highQualityPath="assets/img/avatar/alex_original"
+    (openHero)="toggleHero.emit(true)"
+    (closeHero)="toggleHero.emit(false)"
     [supportedFormats]="['avif', 'webp', 'png']"
     src="assets/img/avatar/alex_4x.png"
     i18n-alt
@@ -25,15 +27,36 @@
 <h1>Alex Frei</h1>
 <h2 i18n>Full Stack Developer</h2>
 
-<a class="btn" routerLink="/contact" i18n>Contact</a>
+<ng-container #navItemsRef />
+
+<a class="btn contact" routerLink="/contact" (click)="closeSideMenu.emit()" i18n
+  >Contact</a
+>
 
 <div class="spacer"></div>
 
-<a
-  class="source-btn color-light"
-  href="https://vscode.dev/github/hm21/alex-frei-cv"
-  target="_blank"
-  i18n
->
-  View source code
-</a>
+<footer>
+  <ng-container #languageContainerRef />
+
+  <a
+    class="source-btn color-light"
+    href="https://vscode.dev/github/hm21/alex-frei-cv"
+    target="_blank"
+    i18n
+  >
+    View source code
+  </a>
+
+  <ng-container #themeContainerRef />
+</footer>
+
+<ng-template #navItem let-name="name" let-icon="icon" let-path="path">
+  <a
+    class="nav-item"
+    [routerLink]="path"
+    routerLinkActive="router-link-active"
+    (click)="closeSideMenu.emit()"
+  >
+    {{ name }}
+  </a>
+</ng-template>

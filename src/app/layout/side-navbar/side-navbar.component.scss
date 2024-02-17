@@ -8,6 +8,9 @@ li {
 li {
   padding: 0px;
   list-style: none;
+  &:last-child {
+    margin-top: 10px;
+  }
 }
 ul {
   padding: 20px 0 10px;
@@ -77,8 +80,4 @@ a {
 svg {
   height: 36px;
   width: auto;
-}
-
-.af-language-switch {
-  margin-top: 10px;
 }

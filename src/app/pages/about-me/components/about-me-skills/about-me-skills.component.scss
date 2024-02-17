@@ -11,9 +11,6 @@ section {
 svg {
   width: 48px;
   height: 48px;
-  display: inline;
-
-  margin: 5px 10px 5px 0;
 }
 .icon-background {
   fill: var(--skill-icon-background);
@@ -21,13 +18,44 @@ svg {
 h3 {
   font-weight: 700;
   font-size: 1.2rem;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
 }
 
-@media (max-width: 1140px) {
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 20px;
+}
+
+@media (max-width: 1180px) {
   svg {
     width: 40px;
     height: 40px;
-    margin: 5px 5px 5px 0;
+  }
+  .icons {
+    gap: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+  .icons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 790px) {
+  section {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .icons {
+    justify-content: space-between;
   }
 }
