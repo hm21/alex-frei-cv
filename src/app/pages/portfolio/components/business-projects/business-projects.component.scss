@@ -1,0 +1,135 @@
+@import "various/breakpoints";
+
+$snaptab-color: #0f7dff;
+
+:host {
+  display: block;
+
+  margin-bottom: 120px;
+}
+section {
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background-color: var(--card-background-color);
+
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease;
+
+  &:hover {
+    background-color: var(--card-hover-color);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.snaptab-fill {
+  fill: #2f2e41;
+}
+.card {
+  border-radius: 7px;
+  padding: 30px;
+}
+article {
+  padding-left: 50px;
+}
+svg {
+  height: 280px;
+  width: auto;
+  flex-shrink: 0;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 120%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: $snaptab-color;
+}
+h4 {
+  font-size: 2.1rem;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.2rem;
+}
+.snaptab-primary {
+  color: $snaptab-color;
+}
+.af-typewriter {
+  border-right-color: $snaptab-color !important;
+}
+.snaptab-logo {
+  width: 64px;
+  height: 64px;
+  padding: 10px;
+  flex-shrink: 0;
+  background-color: $snaptab-color;
+  border-radius: 7px;
+
+  margin-right: 15px;
+}
+.break-after {
+  display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1340px) {
+  article {
+    padding-left: 0px;
+  }
+  .snaptab-gift {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  section {
+    margin-top: 40px;
+  }
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  article,
+  svg {
+    width: 100%;
+  }
+  .snaptab-gift {
+    max-height: 170px;
+  }
+  .snaptab-logo {
+    margin-right: 0px;
+  }
+  article {
+    padding-left: 0px;
+    margin-top: 30px;
+  }
+  h3,
+  h4,
+  p {
+    text-align: center;
+  }
+}
+@include xs {
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  .snaptab-gift {
+    max-height: 130px;
+  }
+  .break-before {
+    display: none;
+  }
+  .break-after {
+    display: unset;
+  }
+}

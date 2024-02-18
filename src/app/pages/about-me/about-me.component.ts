@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { MetaDataI } from 'src/app/utils/meta-generator';
 import { AboutMeHobbiesComponent } from './components/about-me-hobbies/about-me-hobbies.component';
@@ -16,6 +17,7 @@ import { FactsComponent } from './components/facts/facts.component';
     AboutMeServicesComponent,
     AboutMeSkillsComponent,
     FactsComponent,
+    RecommendedPagesComponent,
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',

@@ -2,8 +2,6 @@ import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { getCookie, setCookie } from '../../utils/cookies/cookie-utils';
-import { CookieService } from '../cookie.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,47 +10,33 @@ export class AnalyticsService {
   private functionsUrl = environment.endpoints.analytics;
 
   private http = inject(HttpClient);
-  private cookies = inject(CookieService);
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
   private get anonymId() {
-    if (!getCookie('analytics_id')) {
-      setCookie(
-        'analytics_id',
-        (+new Date()).toString() + Math.random().toString(36).substring(2, 11),
-        1
-      );
+    let id = localStorage.getItem('analytics_id');
+    if (!id) {
+      id =
+        (+new Date()).toString() + Math.random().toString(36).substring(2, 11);
+      localStorage.setItem('analytics_id', id);
     }
-    return getCookie('analytics_id');
+    return id;
   }
 
   private post(
     mode: 'websiteVisit' | 'pageVisit' | 'interaction',
     eventName?: string,
-    value = 0
+    value = 0,
   ) {
     if (isPlatformBrowser(this.platformId)) {
-      if (this.cookies.showAlert) {
-        this.cookies.waitAccepted.subscribe(() => {
-          this.post(mode, eventName, value);
-        });
-      } else {
-        if (
-          environment.analytics &&
-          JSON.parse(getCookie('cookie_detail_status') ?? '{}')?.analytics ==
-            'true'
-        ) {
-          this.http
-            .post(this.functionsUrl, {
-              mode,
-              eventName,
-              value,
-              anonymId: this.anonymId,
-            })
-            .subscribe();
-        }
-      }
+      this.http
+        .post(this.functionsUrl, {
+          mode,
+          eventName,
+          value,
+          anonymId: this.anonymId,
+        })
+        .subscribe();
     }
   }
   public websiteVisit() {

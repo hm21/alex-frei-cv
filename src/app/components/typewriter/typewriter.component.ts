@@ -17,7 +17,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
 })
-export class WaioTypewriterComponent
+export class TypewriterComponent
   extends ExtendedComponent
   implements AfterViewInit
 {

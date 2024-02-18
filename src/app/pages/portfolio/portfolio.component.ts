@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
+import { BusinessProjectsComponent } from './components/business-projects/business-projects.component';
+import { OtherProjectsComponent } from './components/other-projects/other-projects.component';
 
 @Component({
   selector: 'af-portfolio',
   standalone: true,
-  imports: [],
+  imports: [
+    RecommendedPagesComponent,
+    BusinessProjectsComponent,
+    OtherProjectsComponent,
+  ],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {
-
-}
+export class PortfolioComponent {}

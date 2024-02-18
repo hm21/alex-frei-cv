@@ -1,4 +1,3 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { DOCUMENT, NgClass, NgStyle } from '@angular/common';
 import {
   AfterViewInit,
@@ -15,6 +14,7 @@ import { NgxCountService } from 'ngx-count-animation';
 import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { slideInAnimation } from './animations/route-animations';
 import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
@@ -34,7 +34,8 @@ import { ExtendedComponent } from './utils/extended-component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [
-    trigger('routeAnimations', [
+    slideInAnimation,
+   /*  trigger('routeAnimations', [
       transition(
         '* <=> *',
         [
@@ -43,7 +44,7 @@ import { ExtendedComponent } from './utils/extended-component';
         ],
         { params: { duration: '200ms' } },
       ),
-    ]),
+    ]), */
   ],
 })
 export class AppComponent

@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
-import { WaioTypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
+import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 
 @Component({
   selector: 'af-about-me-intro',
   standalone: true,
-  imports: [WaioTypewriterComponent, NgxCountAnimationModule],
+  imports: [TypewriterComponent, NgxCountAnimationModule],
   templateUrl: './about-me-intro.component.html',
   styleUrl: './about-me-intro.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

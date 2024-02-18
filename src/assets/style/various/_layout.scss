@@ -1,34 +1,39 @@
 .row,
 .col {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .row {
-    &.h-start {
-        justify-content: flex-start;
-    }
-    &.h-end {
-        justify-content: flex-end;
-    }
-    &.v-center {
-        align-items: center;
-    }
+  &.h-start {
+    justify-content: flex-start;
+  }
+  &.h-end {
+    justify-content: flex-end;
+  }
+  &.v-center {
+    align-items: center;
+  }
 }
 
 .col {
-    flex-direction: column;
+  flex-direction: column;
 
-    &.h-start {
-        align-items: flex-start;
-    }
-    &.h-end {
-        align-items: flex-end;
-    }
-    &.h-stretch {
-        align-items: stretch;
-    }
-    &.v-center {
-        justify-content: center;
-    }
+  &.h-start {
+    align-items: flex-start;
+  }
+  &.h-end {
+    align-items: flex-end;
+  }
+  &.h-stretch {
+    align-items: stretch;
+  }
+  &.v-center {
+    justify-content: center;
+  }
+}
+
+.section-gap {
+  display: block;
+  margin-bottom: 140px;
 }

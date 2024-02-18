@@ -55,10 +55,8 @@ $paddings: (
 
 /* Colors */
 $colors: (
-    primary: var(--primary),
-    secondary: var(--secondary),
-    tertiary: var(--tertiary),
-    success: var(--success)
+    primary: var(--color-primary),
+    light: var(--color-light),
 );
 @each $color in map-keys($colors) {
     .bg-#{$color} {

@@ -5,9 +5,11 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
+  inject,
 } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { GitManagerService } from 'src/app/services/git-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
@@ -29,12 +31,12 @@ export class FactsComponent
   public items = [
     {
       title: $localize`Coffee Consumed`,
-      value: 6,
+      value: 8,
       icon: 'coffee',
     },
     {
       title: $localize`Walking Breaks`,
-      value: 1,
+      value: 2,
       icon: 'walking',
     },
     {
@@ -44,12 +46,12 @@ export class FactsComponent
     },
     {
       title: $localize`Git Commits`,
-      value: 1,
+      value: 0,
       icon: 'git',
     },
   ];
 
-  private githubUrl = 'https://api.github.com';
+  private gitManager = inject(GitManagerService);
 
   override ngOnInit(): void {
     this.getCommitCount();
@@ -68,60 +70,13 @@ export class FactsComponent
     });
   }
 
-  private async httpGet(theUrl: string, return_headers?: any) {
-    const xmlHttp = new XMLHttpRequest();
-    xmlHttp.open('GET', theUrl, false); // false for synchronous request
-    xmlHttp.send(null);
-
-    if (return_headers) {
-      return xmlHttp;
-    }
-    return xmlHttp.responseText;
-  }
-  private async get_first_commit(owner: string, repo: string) {
-    const url = this.githubUrl + '/repos/' + owner + '/' + repo + '/commits';
-    const req = (await this.httpGet(url, true)) as any;
-    let first_commit_hash = '';
-    if (req.getResponseHeader('Link')) {
-      const page_url = req
-        .getResponseHeader('Link')
-        .split(',')[1]
-        .split(';')[0]
-        .split('<')[1]
-        .split('>')[0];
-      const req_last_commit = await this.httpGet(page_url);
-      const first_commit = JSON.parse(req_last_commit as any);
-      first_commit_hash = first_commit[first_commit.length - 1]['sha'];
-    } else {
-      const first_commit = JSON.parse((req as any)!.responseText as any);
-      first_commit_hash = first_commit[first_commit.length - 1]['sha'];
-    }
-    return first_commit_hash;
-  }
-
   private async getCommitCount() {
-    if (!this.isBrowser) return;
-    const owner = 'hm21';
-    const repo = 'alex-frei-cv';
-    const sha = 'master';
-
-    const first_commit = await this.get_first_commit(owner, repo);
-    const compare_url =
-      this.githubUrl +
-      '/repos/' +
-      owner +
-      '/' +
-      repo +
-      '/compare/' +
-      first_commit +
-      '...' +
-      sha;
-    const commit_req = await this.httpGet(compare_url);
-    const commit_count = JSON.parse(commit_req as any)['total_commits'] + 1;
+    const count = await this.gitManager.getCommitCount();
+    if (!count) return;
 
     const i = this.items.findIndex((el) => el.icon === 'git');
     if (i >= 0) {
-      this.items[i].value = commit_count;
+      this.items[i].value = count;
     } else {
       throw new Error('Commit item not found!');
     }

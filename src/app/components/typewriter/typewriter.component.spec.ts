@@ -1,27 +1,27 @@
 import { ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { WaioTypewriterComponent } from './typewriter.component';
+import { TypewriterComponent } from './typewriter.component';
 
 describe('WaioTypewriterComponent', () => {
-  let component: WaioTypewriterComponent;
-  let fixture: ComponentFixture<WaioTypewriterComponent>;
+  let component: TypewriterComponent;
+  let fixture: ComponentFixture<TypewriterComponent>;
 
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         SharedTestingModule,
-        WaioTypewriterComponent,
+        TypewriterComponent,
       ],
-    }).overrideComponent(WaioTypewriterComponent, {
+    }).overrideComponent(TypewriterComponent, {
       set: { changeDetection: ChangeDetectionStrategy.Default }
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WaioTypewriterComponent);
+    fixture = TestBed.createComponent(TypewriterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

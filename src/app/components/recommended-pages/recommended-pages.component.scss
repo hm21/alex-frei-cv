@@ -1,0 +1,104 @@
+:host {
+  display: block;
+  margin-bottom: 40px;
+}
+section {
+  margin-top: 25px;
+
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(3, 1fr);
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 15px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+  padding: 15px;
+
+  background-color: var(--card-background-color);
+
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease;
+
+  svg {
+    transition: margin 250ms ease;
+
+    margin-right: 10px;
+    margin-left: auto;
+
+    flex-shrink: 0;
+  }
+  .chevron {
+    fill: var(--text-color-primary);
+  }
+
+  &:hover {
+    background-color: var(--card-hover-color);
+
+    svg {
+      margin-right: 0px;
+    }
+  }
+  &:active{
+    transform: scale(0.95);
+  }
+}
+
+object {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+h3 {
+  margin-bottom: 2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.ngx-count-animation {
+  margin-top: 7px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 1280px) {
+  section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+@media (max-width: 499px) {
+  section {
+    grid-template-columns: 100%;
+  }
+}
+
+:host ::ng-deep {
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 36px;
+      width: auto;
+    }
+    .fill {
+      transition: fill 200ms ease;
+      fill: var(--text-color-primary);
+    }
+    .stroke {
+      transition: stroke 200ms ease;
+      stroke: var(--text-color-primary);
+    }
+  }
+}
