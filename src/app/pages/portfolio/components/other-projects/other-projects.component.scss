@@ -8,6 +8,7 @@ section {
 }
 
 article {
+  position: relative;
   cursor: pointer;
 
   display: flex;
@@ -25,14 +26,6 @@ article {
     transform 250ms ease,
     background-color 250ms ease;
 
-  svg {
-    transition: margin 250ms ease;
-
-    margin-right: 10px;
-    margin-left: auto;
-
-    flex-shrink: 0;
-  }
   &:hover {
     background-color: var(--card-hover-color);
   }
@@ -49,4 +42,15 @@ h3 {
   font-weight: 700;
   margin-top: 5px;
   margin-bottom: 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
 }
