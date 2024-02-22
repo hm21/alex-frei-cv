@@ -63,16 +63,6 @@ p {
 .af-typewriter {
   border-right-color: $snaptab-color !important;
 }
-.snaptab-logo {
-  width: 64px;
-  height: 64px;
-  padding: 10px;
-  flex-shrink: 0;
-  background-color: $snaptab-color;
-  border-radius: 7px;
-
-  margin-right: 15px;
-}
 .break-after {
   display: none;
 }
@@ -131,5 +121,18 @@ p {
   }
   .break-after {
     display: unset;
+  }
+}
+
+:host ::ng-deep {
+  .snaptab-logo {
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    flex-shrink: 0;
+    background-color: $snaptab-color;
+    border-radius: 7px;
+
+    margin-right: 15px;
   }
 }

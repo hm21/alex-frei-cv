@@ -14,9 +14,11 @@
   [ngClass]="{ show: showMobileMenu }"
 />
 
-  <af-nav-mobile-menu-toggle-btn
-    #mobileMenuBtn
-    [ngStyle]="{ display: showMobileMenuBtn ? '' : 'none' }"
-    [open]="showMobileMenu"
-    (tap)="showMobileMenu = !showMobileMenu"
-  />
+<af-nav-mobile-menu-toggle-btn
+  #mobileMenuBtn
+  [ngStyle]="{ display: showMobileMenuBtn ? '' : 'none' }"
+  [open]="showMobileMenu"
+  (tap)="showMobileMenu = !showMobileMenu"
+/>
+
+<ng-container #modalRef />

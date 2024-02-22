@@ -54,3 +54,13 @@ h3 {
     height: 30px;
   }
 }
+.fill {
+  transition: fill 250ms ease;
+  fill: var(--text-color-primary);
+}
+
+@media (max-width: 1280px) {
+  section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

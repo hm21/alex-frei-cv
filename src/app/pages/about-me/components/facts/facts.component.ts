@@ -31,12 +31,12 @@ export class FactsComponent
   public items = [
     {
       title: $localize`Coffee Consumed`,
-      value: 8,
+      value: 10,
       icon: 'coffee',
     },
     {
       title: $localize`Walking Breaks`,
-      value: 2,
+      value: 3,
       icon: 'walking',
     },
     {

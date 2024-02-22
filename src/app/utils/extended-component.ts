@@ -87,7 +87,7 @@ export abstract class ExtendedComponent implements OnInit {
    * @protected
    * @returns An Observable that completes when the component is destroyed.
    */
-  protected destroyPipe() {
-    return takeUntilDestroyed(this.destroyRef);
+  protected destroyPipe<T>() {
+    return takeUntilDestroyed<T>(this.destroyRef);
   }
 }

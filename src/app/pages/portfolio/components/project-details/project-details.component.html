@@ -1,0 +1,184 @@
+<div
+  class="modal-content"
+  [@modal]="{
+    value: modalFadeOut ? 'out' : 'in',
+    params: { duration: modalAnimationDuration }
+  }"
+>
+  <section class="container">
+    <button
+      class="close-btn"
+      (click)="closeModal()"
+      type="button"
+      i18n-aria-label
+      aria-label="Close"
+    >
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+            class="fill"
+          ></path>
+        </g>
+      </svg>
+    </button>
+
+    <header class="row v-center mb2">
+      @if (data.logo) {
+        <div [innerHTML]="data.logo"></div>
+      }
+
+      <div>
+        <h1>{{ data.title }}</h1>
+        <h2>{{ data.subtitle }}</h2>
+      </div>
+    </header>
+
+    <div class="body row">
+      <aside>
+        <ng-container #videoContainer />
+
+        <p class="description" [innerHTML]="data.description"></p>
+
+        <div class="gallery">
+          @for (item of data.images; track $index) {
+            <picture>
+              @for (format of ["avif", "webp", "jpeg"]; track format) {
+                <source
+                  srcset="
+                    {{item.path}}_1x.{{format}} 1x,
+                    {{item.path}}_2x.{{format}} 2x,
+                    {{item.path}}_3x.{{format}} 3x,
+                    {{item.path}}_4x.{{format}} 4x
+                  "
+                  type="image/{{ format }}"
+                />
+              }
+
+              <img
+                loading="eager"
+                ngxHero
+                backdropPosition="beforeHeroItem"
+                highQualityPath="{{ item.path }}_4x"
+                [supportedFormats]="['avif', 'webp', 'jpeg']"
+                src="{{ item.path }}_4x.jpeg"
+                [alt]="item.alt"
+              />
+            </picture>
+          }
+        </div>
+      </aside>
+
+      <article>
+        @if (data.demoUrl) {
+          <h3 class="mb1" i18n>Demo</h3>
+          <ng-container
+            *ngTemplateOutlet="
+              urlTemplate;
+              context: {
+                url: data.demoUrl,
+                name: data.demoUrl
+              }
+            "
+          />
+        }
+
+        <ng-container #websiteContainer />
+
+        <h3 class="mt2 mb1" i18n>Technology</h3>
+        <ng-container #technologyContainer />
+      </article>
+    </div>
+  </section>
+</div>
+
+<ng-template #youtubePlayer let-url="url">
+  <div class="video-container">
+    <iframe
+      #videoPlayerRef
+      [src]="url"
+      i18n-title
+      title="YouTube video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+      allowfullscreen
+      class="youtube-player"
+      [ngStyle]="{ opacity: videoPlayerLoaded ? 1 : 0 }"
+      (load)="onVideoPlayerLoaded()"
+    ></iframe>
+    @if (!videoPlayerLoaded) {
+      <div class="loading-overlay">
+        <div class="spinner"></div>
+      </div>
+    }
+  </div>
+</ng-template>
+
+<ng-template #urlListTemplate let-title="title" let-items="items">
+  <h3 class="mt2">{{ title }}</h3>
+  <ul>
+    @for (item of items; track $index) {
+      <li>
+        <ng-container *ngTemplateOutlet="urlTemplate; context: item" />
+      </li>
+    }
+  </ul>
+</ng-template>
+<ng-template #urlTemplate let-url="url" let-name="name">
+  <a class="list-item" [href]="url">
+    <ng-container *ngTemplateOutlet="websiteIcon" />
+    <span>{{ name }}</span>
+  </a>
+</ng-template>
+<ng-template #websiteIcon>
+  <svg
+    viewBox="0 0 64 64"
+    xmlns="http://www.w3.org/2000/svg"
+    stroke-width="3"
+    class="list-icon stroke"
+    fill="none"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6"
+      ></path>
+      <path d="M37.86,51.1A47,47,0,0,1,32,56.7"></path>
+      <path
+        d="M32,7A34.14,34.14,0,0,1,43.57,30a34.07,34.07,0,0,1,.09,4.85"
+      ></path>
+      <path
+        d="M32,7A34.09,34.09,0,0,0,20.31,32.46c0,16.2,7.28,21,11.66,24.24"
+      ></path>
+      <line x1="10.37" y1="19.9" x2="53.75" y2="19.9"></line>
+      <line x1="32" y1="6.99" x2="32" y2="56.7"></line>
+      <line x1="11.05" y1="45.48" x2="37.04" y2="45.48"></line>
+      <line x1="7.14" y1="32.46" x2="56.86" y2="31.85"></line>
+      <path
+        d="M53.57,57,58,52.56l-8-8,4.55-2.91a.38.38,0,0,0-.12-.7L39.14,37.37a.39.39,0,0,0-.46.46L42,53.41a.39.39,0,0,0,.71.13L45.57,49Z"
+      ></path>
+    </g>
+  </svg>
+</ng-template>
+
+<ng-template #badgeTemplate let-title="title" let-items="items">
+  @if (title) {
+    <h4>{{ title }}</h4>
+  }
+  <ul class="badge-list">
+    @for (item of items; track $index) {
+      <li class="badge-chip">{{ item.name }}</li>
+    }
+  </ul>
+</ng-template>

@@ -1,4 +1,7 @@
-import { ApplicationConfig, isDevMode } from '@angular/core';
+import {
+    ApplicationConfig,
+    isDevMode
+} from '@angular/core';
 import {
     provideRouter,
     withEnabledBlockingInitialNavigation,
@@ -17,22 +20,27 @@ import { IS_BROWSER } from './utils/global-tokens';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes, withPreloading(QuicklinkStrategy), withEnabledBlockingInitialNavigation(), withInMemoryScrolling({
+    provideRouter(
+      routes,
+      withPreloading(QuicklinkStrategy),
+      withEnabledBlockingInitialNavigation(),
+      withInMemoryScrolling({
         scrollPositionRestoration: environment.production
-            ? 'enabled'
-            : 'disabled',
+          ? 'enabled'
+          : 'disabled',
         anchorScrolling: 'enabled',
-    })),
+      }),
+    ),
     provideClientHydration(),
     provideHttpClient(withFetch()),
     provideAnimations(),
     {
-        provide: IS_BROWSER,
-        useValue: true,
+      provide: IS_BROWSER,
+      useValue: true,
     },
     provideServiceWorker('ngsw-worker.js', {
-        enabled: !isDevMode(),
-        registrationStrategy: 'registerWhenStable:30000'
-    })
-],
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
+  ],
 };
