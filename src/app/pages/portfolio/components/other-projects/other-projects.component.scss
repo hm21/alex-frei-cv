@@ -7,7 +7,7 @@ section {
   grid-template-columns: repeat(3, 1fr);
 }
 
-article {
+button {
   position: relative;
   cursor: pointer;
 
@@ -16,6 +16,8 @@ article {
   align-items: flex-start;
   justify-content: flex-start;
 
+  text-align: start;
+  outline: none;
   border: 1px solid var(--border-color);
   border-radius: 7px;
   padding: 15px;
@@ -23,6 +25,7 @@ article {
   background-color: var(--card-background-color);
 
   transition:
+    border 250ms ease,
     transform 250ms ease,
     background-color 250ms ease;
 
@@ -31,6 +34,9 @@ article {
   }
   &:active {
     transform: scale(0.95);
+  }
+  &:focus {
+    border: 2px solid var(--text-color-primary);
   }
 }
 .type {
@@ -44,23 +50,25 @@ h3 {
   margin-bottom: 10px;
 }
 
-.icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-
-  svg {
-    width: 30px;
-    height: 30px;
-  }
-}
-.fill {
-  transition: fill 250ms ease;
-  fill: var(--text-color-primary);
-}
-
 @media (max-width: 1280px) {
   section {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+:host ::ng-deep {
+  .fill {
+    transition: fill 250ms ease;
+    fill: var(--text-color-primary);
+  }
+  .icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

@@ -1,15 +1,15 @@
-import { NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
+import { DOCUMENT, NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
 import {
   Component,
   OnInit,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  inject
+  inject,
 } from '@angular/core';
 import { SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 import { NgxImageHeroModule } from 'ngx-image-hero';
-import { timer } from 'rxjs';
+import { fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -40,11 +40,14 @@ export class ProjectDetailsComponent
   @ViewChild('youtubePlayer', { read: TemplateRef, static: true })
   youtubePlayer!: TemplateRef<{ url: string }>;
 
-  private modalManager = inject(ModalManagerService);
-
-  public modalAnimationDuration = 500;
+  public modalAnimationDurationIn = 500;
+  public modalAnimationDurationOut = 300;
   public modalFadeOut = false;
   public videoPlayerLoaded = false;
+  public copiedInstallCode = false;
+
+  private modalManager = inject(ModalManagerService);
+  private document = inject(DOCUMENT);
 
   override ngOnInit(): void {
     if (this.data.website) {
@@ -97,17 +100,25 @@ export class ProjectDetailsComponent
       });
     }
 
+    this.initKeyListeners();
+
     super.ngOnInit();
   }
 
-  public get data(): ProjectDetails {
-    return this.modalManager.modalData;
+  private initKeyListeners() {
+    fromEvent<KeyboardEvent>(this.document, 'keydown')
+      .pipe(this.destroyPipe())
+      .subscribe((event) => {
+        if (event.key === 'Escape') {
+          this.closeModal();
+        }
+      });
   }
 
   public closeModal() {
     this.modalFadeOut = true;
 
-    timer(this.modalAnimationDuration - 3)
+    timer(this.modalAnimationDurationOut)
       .pipe(this.destroyPipe())
       .subscribe(() => {
         this.modalManager.closeModal();
@@ -117,6 +128,15 @@ export class ProjectDetailsComponent
   public onVideoPlayerLoaded() {
     this.videoPlayerLoaded = true;
   }
+
+  public async copy(text: string) {
+    await navigator.clipboard.writeText(text);
+    this.copiedInstallCode = true;
+  }
+
+  public get data(): ProjectDetails {
+    return this.modalManager.modalData;
+  }
 }
 
 export interface ProjectDetails {
@@ -125,8 +145,9 @@ export interface ProjectDetails {
   subtitle: string;
   description: string;
   demoUrl?: string;
-  website: UrlListTemplateI[];
+  website?: UrlListTemplateI[];
   store?: UrlListTemplateI[];
+  install?: string;
   technology: {
     frontend?: BadgeTemplateI[];
     backend?: BadgeTemplateI[];
@@ -136,6 +157,9 @@ export interface ProjectDetails {
   images: {
     path: string;
     alt: string;
+    ratio?: string;
+    backgroundColor?: string;
+    isGif?: boolean;
   }[];
   video?: SafeResourceUrl;
 }

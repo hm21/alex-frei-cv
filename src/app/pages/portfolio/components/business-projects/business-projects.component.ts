@@ -8,7 +8,7 @@ import {
   ProjectDetails,
   ProjectDetailsComponent,
 } from '../project-details/project-details.component';
-import { snaptabLogo } from './utils/snaptab-logo';
+import { snaptabLogo } from '../utils/logos';
 
 @Component({
   selector: 'af-business-projects',
@@ -48,7 +48,7 @@ export class BusinessProjectsComponent
       title: 'snaptab',
       subtitle: 'The Allrounder-Tool for your Company!',
       description: $localize`
-          The application SnapTab was primarily developed for craftsmen and
+          The application snaptab was primarily developed for craftsmen and
           offers a wide range of features. From time tracking to scheduling
           appointments, tasks, project workflows, and even creating invoices and
           quotes, everything is provided. All of this is enhanced with
@@ -205,6 +205,7 @@ export class BusinessProjectsComponent
         {
           path: 'assets/img/snaptab/more/more_web',
           alt: $localize`More`,
+          backgroundColor: '#ACD2FF',
         },
       ],
       video: this.sanitizer.bypassSecurityTrustResourceUrl(

@@ -7,12 +7,14 @@ $snaptab-color: #0f7dff;
 
   margin-bottom: 120px;
 }
-section {
+button {
   cursor: pointer;
   border: 2px solid var(--border-color);
   background-color: var(--card-background-color);
 
+  text-align: start;
   transition:
+    border 250ms ease,
     transform 250ms ease,
     background-color 250ms ease;
 
@@ -21,6 +23,9 @@ section {
   }
   &:active {
     transform: scale(0.98);
+  }
+  &:focus {
+    border: 3px solid var(--text-color-primary);
   }
 }
 .snaptab-fill {
@@ -76,7 +81,7 @@ p {
   }
 }
 @media (max-width: 900px) {
-  section {
+  button {
     margin-top: 40px;
   }
   .row {

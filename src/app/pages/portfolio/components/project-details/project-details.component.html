@@ -2,7 +2,10 @@
   class="modal-content"
   [@modal]="{
     value: modalFadeOut ? 'out' : 'in',
-    params: { duration: modalAnimationDuration }
+    params: {
+      durationIn: modalAnimationDurationIn,
+      durationOut: modalAnimationDurationOut
+    }
   }"
 >
   <section class="container">
@@ -12,6 +15,8 @@
       type="button"
       i18n-aria-label
       aria-label="Close"
+      i18n-title
+      title="Close"
     >
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -31,7 +36,7 @@
 
     <header class="row v-center mb2">
       @if (data.logo) {
-        <div [innerHTML]="data.logo"></div>
+        <div class="logo" [innerHTML]="data.logo"></div>
       }
 
       <div>
@@ -48,28 +53,43 @@
 
         <div class="gallery">
           @for (item of data.images; track $index) {
-            <picture>
-              @for (format of ["avif", "webp", "jpeg"]; track format) {
-                <source
-                  srcset="
-                    {{item.path}}_1x.{{format}} 1x,
-                    {{item.path}}_2x.{{format}} 2x,
-                    {{item.path}}_3x.{{format}} 3x,
-                    {{item.path}}_4x.{{format}} 4x
-                  "
-                  type="image/{{ format }}"
-                />
+            <picture [style.backgroundColor]="item.backgroundColor ?? 'white'">
+              @if (!item.isGif) {
+                @for (format of ["avif", "webp", "jpeg"]; track format) {
+                  <source
+                    srcset="
+                      {{item.path}}_1x.{{format}} 1x,
+                      {{item.path}}_2x.{{format}} 2x,
+                      {{item.path}}_3x.{{format}} 3x,
+                      {{item.path}}_4x.{{format}} 4x
+                    "
+                    type="image/{{ format }}"
+                  />
+                }
               }
 
-              <img
-                loading="eager"
-                ngxHero
-                backdropPosition="beforeHeroItem"
-                highQualityPath="{{ item.path }}_4x"
-                [supportedFormats]="['avif', 'webp', 'jpeg']"
-                src="{{ item.path }}_4x.jpeg"
-                [alt]="item.alt"
-              />
+              @if (item.isGif) {
+                <img
+                  [style.aspectRatio]="item.ratio ?? '16 / 9'"
+                  loading="eager"
+                  ngxHero
+                  backdropPosition="beforeHeroItem"
+                  [supportedFormats]="['gif']"
+                  src="{{ item.path }}.gif"
+                  [alt]="item.alt"
+                />
+              } @else {
+                <img
+                  [style.aspectRatio]="item.ratio ?? '16 / 9'"
+                  loading="eager"
+                  ngxHero
+                  backdropPosition="beforeHeroItem"
+                  highQualityPath="{{ item.path }}_4x"
+                  [supportedFormats]="['avif', 'webp', 'jpeg']"
+                  src="{{ item.path }}_4x.jpeg"
+                  [alt]="item.alt"
+                />
+              }
             </picture>
           }
         </div>
@@ -78,20 +98,90 @@
       <article>
         @if (data.demoUrl) {
           <h3 class="mb1" i18n>Demo</h3>
-          <ng-container
-            *ngTemplateOutlet="
-              urlTemplate;
-              context: {
-                url: data.demoUrl,
-                name: data.demoUrl
-              }
-            "
-          />
+          <ul>
+            <li>
+              <ng-container
+                *ngTemplateOutlet="
+                  urlTemplate;
+                  context: {
+                    url: data.demoUrl,
+                    name: data.demoUrl
+                  }
+                "
+              />
+            </li>
+          </ul>
         }
 
         <ng-container #websiteContainer />
 
-        <h3 class="mt2 mb1" i18n>Technology</h3>
+        @if (data.install) {
+          <h3 class="mb1" i18n>Install</h3>
+          <ul>
+            <li>
+              <button
+                class="list-item row v-center"
+                type="button"
+                (click)="copy(data.install)"
+              >
+                @if (copiedInstallCode) {
+                  <svg
+                    class="list-icon stroke"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M8.5 12.5L10.5 14.5L15.5 9.5"
+                        class="stroke"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+                        class="stroke"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                    </g>
+                  </svg>
+                } @else {
+                  <svg
+                    class="list-icon stroke"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M16 12.9V17.1C16 20.6 14.6 22 11.1 22H6.9C3.4 22 2 20.6 2 17.1V12.9C2 9.4 3.4 8 6.9 8H11.1C14.6 8 16 9.4 16 12.9Z"
+                        class="stroke"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M22 6.9V11.1C22 14.6 20.6 16 17.1 16H16V12.9C16 9.4 14.6 8 11.1 8H8V6.9C8 3.4 9.4 2 12.9 2H17.1C20.6 2 22 3.4 22 6.9Z"
+                        class="stroke"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </g>
+                  </svg>
+                }
+
+                <span>
+                  {{ data.install }}
+                </span>
+              </button>
+            </li>
+          </ul>
+        }
+
+        <h3 [ngClass]="{mt2: data.install || data.website || data.demoUrl}" class="mb1" i18n>Technology</h3>
         <ng-container #technologyContainer />
       </article>
     </div>
@@ -121,7 +211,7 @@
 </ng-template>
 
 <ng-template #urlListTemplate let-title="title" let-items="items">
-  <h3 class="mt2">{{ title }}</h3>
+  <h3>{{ title }}</h3>
   <ul>
     @for (item of items; track $index) {
       <li>
@@ -131,7 +221,7 @@
   </ul>
 </ng-template>
 <ng-template #urlTemplate let-url="url" let-name="name">
-  <a class="list-item" [href]="url">
+  <a class="list-item" [href]="url" target="_blank">
     <ng-container *ngTemplateOutlet="websiteIcon" />
     <span>{{ name }}</span>
   </a>
