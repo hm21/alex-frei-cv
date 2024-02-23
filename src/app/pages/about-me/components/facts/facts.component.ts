@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { filter } from 'rxjs';
 import { GitManagerService } from 'src/app/services/git-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -71,14 +72,23 @@ export class FactsComponent
   }
 
   private async getCommitCount() {
-    const count = await this.gitManager.getCommitCount();
-    if (!count) return;
+    this.gitManager
+      .getCommitCount()
+      .pipe(
+        this.destroyPipe(),
+        filter((count) => !!count),
+      )
+      .subscribe((count) => {
+        if (!count) return;
 
-    const i = this.items.findIndex((el) => el.icon === 'git');
-    if (i >= 0) {
-      this.items[i].value = count;
-    } else {
-      throw new Error('Commit item not found!');
-    }
+        const i = this.items.findIndex((el) => el.icon === 'git');
+        if (i >= 0) {
+          this.items[i].value = count;
+        } else {
+          throw new Error('Commit item not found!');
+        }
+
+        this.cdRef.detectChanges();
+      });
   }
 }

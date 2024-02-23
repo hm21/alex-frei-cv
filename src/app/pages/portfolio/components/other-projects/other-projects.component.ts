@@ -106,7 +106,6 @@ export class OtherProjectsComponent implements OnInit {
           ],
         },
       },
-
       {
         type: $localize`Flutter open source`,
         title: 'pro_image_editor',
@@ -175,6 +174,7 @@ export class OtherProjectsComponent implements OnInit {
             url: 'https://github.com/hm21/pro_image_editor',
           },
         ],
+        install: 'flutter pub add pro_image_editor',
         technology: {
           frontend: [
             {

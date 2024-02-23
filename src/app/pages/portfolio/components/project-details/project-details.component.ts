@@ -45,6 +45,7 @@ export class ProjectDetailsComponent
   public modalFadeOut = false;
   public videoPlayerLoaded = false;
   public copiedInstallCode = false;
+  public showCopiedMsg = false;
 
   private modalManager = inject(ModalManagerService);
   private document = inject(DOCUMENT);
@@ -132,6 +133,12 @@ export class ProjectDetailsComponent
   public async copy(text: string) {
     await navigator.clipboard.writeText(text);
     this.copiedInstallCode = true;
+    this.showCopiedMsg = true;
+    timer(2_000)
+      .pipe(this.destroyPipe())
+      .subscribe(() => {
+        this.showCopiedMsg = false;
+      });
   }
 
   public get data(): ProjectDetails {

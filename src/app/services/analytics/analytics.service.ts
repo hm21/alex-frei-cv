@@ -26,17 +26,19 @@ export class AnalyticsService {
   private post(
     mode: 'websiteVisit' | 'pageVisit' | 'interaction',
     eventName?: string,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     value = 0,
   ) {
     if (isPlatformBrowser(this.platformId)) {
-      this.http
+      /** TODO: Post analytics */
+      /* this.http
         .post(this.functionsUrl, {
           mode,
           eventName,
           value,
           anonymId: this.anonymId,
         })
-        .subscribe();
+        .subscribe(); */
     }
   }
   public websiteVisit() {
