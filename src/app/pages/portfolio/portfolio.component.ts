@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
+import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { MetaDataI } from 'src/app/utils/meta-generator';
 import { BusinessProjectsComponent } from './components/business-projects/business-projects.component';
 import { OtherProjectsComponent } from './components/other-projects/other-projects.component';
 
@@ -14,4 +16,9 @@ import { OtherProjectsComponent } from './components/other-projects/other-projec
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {}
+export class PortfolioComponent extends ExtendedComponent {
+  protected override pageMeta: MetaDataI = {
+    title: $localize`Portfolio Alex Frei`,
+    description: $localize`Take a look at the portfolio more about Alex Frei`,
+  };
+}

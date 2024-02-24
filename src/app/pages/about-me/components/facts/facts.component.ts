@@ -6,6 +6,7 @@ import {
   ViewChild,
   ViewContainerRef,
   inject,
+  signal,
 } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
@@ -29,7 +30,7 @@ export class FactsComponent
   @ViewChild('itemTemplate', { read: TemplateRef, static: true })
   itemTemplate!: TemplateRef<any>;
 
-  public items = [
+  private items = signal([
     {
       title: $localize`Coffee Consumed`,
       value: 10,
@@ -50,7 +51,7 @@ export class FactsComponent
       value: 0,
       icon: 'git',
     },
-  ];
+  ]);
 
   private gitManager = inject(GitManagerService);
 
@@ -66,7 +67,7 @@ export class FactsComponent
   }
 
   private createItems() {
-    this.items.forEach((item) => {
+    this.items().forEach((item) => {
       this.container.createEmbeddedView(this.itemTemplate, item);
     });
   }
@@ -81,9 +82,9 @@ export class FactsComponent
       .subscribe((count) => {
         if (!count) return;
 
-        const i = this.items.findIndex((el) => el.icon === 'git');
+        const i = this.items().findIndex((el) => el.icon === 'git');
         if (i >= 0) {
-          this.items[i].value = count;
+          this.items()[i].value = count;
         } else {
           throw new Error('Commit item not found!');
         }
