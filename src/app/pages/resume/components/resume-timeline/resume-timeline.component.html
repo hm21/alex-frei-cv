@@ -1,0 +1,29 @@
+@for (item of items; track $index) {
+  <article
+    (mouseover)="item.hovered = true"
+    (mouseleave)="item.hovered = false"
+  >
+    <time [attr.datetime]="item.date | date: 'yyyy-MM-ddTHH:mm:ss'"
+      >{{ item.date | date }}
+    </time>
+
+    <div class="v-divider">
+      <div class="sonar-container">
+        <div [@sonarAnimation]="item.hovered" class="sonar"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>{{ item.title }}</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet.
+      </p>
+    </div>
+  </article>
+}

@@ -22,6 +22,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { ModalManagerService } from './services/modal-manager.service';
 import { ExtendedComponent } from './utils/extended-component';
 
+
 @Component({
   selector: 'af-root',
   standalone: true,

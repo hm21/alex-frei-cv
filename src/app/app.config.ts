@@ -1,12 +1,9 @@
+import { ApplicationConfig, isDevMode } from '@angular/core';
 import {
-    ApplicationConfig,
-    isDevMode
-} from '@angular/core';
-import {
-    provideRouter,
-    withEnabledBlockingInitialNavigation,
-    withInMemoryScrolling,
-    withPreloading,
+  provideRouter,
+  withEnabledBlockingInitialNavigation,
+  withInMemoryScrolling,
+  withPreloading,
 } from '@angular/router';
 
 import { provideHttpClient, withFetch } from '@angular/common/http';
@@ -17,6 +14,7 @@ import { QuicklinkStrategy } from 'ngx-quicklink';
 import { environment } from 'src/environments/environment';
 import { routes } from './app.routes';
 import { IS_BROWSER } from './utils/global-tokens';
+
 
 export const appConfig: ApplicationConfig = {
   providers: [
