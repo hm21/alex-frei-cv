@@ -1,0 +1,10 @@
+<div class="progress-header">
+  <div class="bar-name">{{ name }}</div>
+  <div class="progress">
+    <span [ngxCountAnimation]="progress" duration="500"></span>%
+  </div>
+</div>
+
+<div class="bar-container">
+  <div #barRef class="bar"></div>
+</div>

@@ -1,1 +1,18 @@
-<p>resume-skills works!</p>
+<h2 class="section-title" i18n>Frontend skills</h2>
+@for (item of frontendSkills; track $index) {
+  <af-progressbar [progress]="item.skill" [name]="item.name" />
+}
+
+<h2 style="--color-primary: #0BA376" class="section-title mt4" i18n>Backend skills</h2>
+@for (item of backendSkills; track $index) {
+  <af-progressbar style="--color-primary: #0BA376" [progress]="item.skill" [name]="item.name" />
+}
+
+<h2 style="--color-primary: #0f7dff" class="section-title mt4" i18n>More knowledges</h2>
+<ul class="badge-list">
+  @for (item of knowledges; track $index) {
+    <li ngxScrollAnimate="fade-in-up-scale" once="false" class="badge-chip">
+      {{ item }}
+    </li>
+  }
+</ul>

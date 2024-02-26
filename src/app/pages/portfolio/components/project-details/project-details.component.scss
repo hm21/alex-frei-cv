@@ -82,19 +82,11 @@ ul {
 li {
   padding: 3px 0;
 }
+
 .badge-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
   margin-bottom: 20px;
 }
 .badge-chip {
-  cursor: default;
-  display: inline-block;
-  font-size: 0.85rem;
-  background-color: #0f7dff;
-  color: white;
-  border-radius: 4px;
   padding: 3px 7px;
 }
 .list-item {

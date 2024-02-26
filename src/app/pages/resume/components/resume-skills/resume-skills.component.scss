@@ -1,0 +1,15 @@
+h2 {
+  margin-bottom: 15px;
+}
+.af-progressbar {
+  display: block;
+  margin-bottom: 12px;
+}
+.badge-list {
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .badge-list {
+    justify-content: flex-start;
+  }
+}

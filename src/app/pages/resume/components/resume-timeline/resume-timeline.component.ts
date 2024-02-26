@@ -1,87 +1,77 @@
-import {
-  animate,
-  keyframes,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { ResumeTimelineItem } from '../../utils/resume-interface';
+import { ResumeTimelineItemComponent } from './resume-timeline-item/resume-timeline-item.component';
 
 @Component({
   selector: 'af-resume-timeline',
   standalone: true,
-  imports: [DatePipe],
+  imports: [ResumeTimelineItemComponent],
   templateUrl: './resume-timeline.component.html',
   styleUrl: './resume-timeline.component.scss',
-  animations: [
-    trigger('sonarAnimation', [
-      transition('* => true', [
-        animate(
-          '1200ms ease',
-          keyframes([
-            style({
-              transform: 'translate(-50%, -50%) scale(0)',
-              opacity: 0.8,
-              offset: 0,
-            }),
-            style({
-              transform: 'translate(-50%, -50%) scale(2)',
-              opacity: 0,
-              offset: 1,
-            }),
-          ]),
-        ),
-      ]),
-    ]),
-  ],
 })
 export class ResumeTimelineComponent {
-  public items = [
+  public items: ResumeTimelineItem[] = [
     {
-      date: new Date(1995, 2, 21, 0, 5),
+      date: $localize`March 21, 1995`,
       title: $localize`Birthday`,
-      hovered: false,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Lehre`,
-      hovered: false,
+      date: $localize`2001 - 2010`,
+      title: $localize`Elementary school education`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Arbeit Brunner und Engler`,
-      hovered: false,
+      date: $localize`2010 - 2014`,
+      title: $localize`Apprenticeship for Certified Electrical-Installer EFZ`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Arbeit Elektro Sutter`,
-      hovered: false,
+      date: $localize`2014 - 2015`,
+      title: $localize`Work by Brunner & Engler as Electrical-Installer`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Militär`,
-      hovered: false,
+      date: $localize`March - November 2015`,
+      title: $localize`Military training`,
+      msg: $localize`Basic training and training to become a “Wachtmeister”.`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Programmieren lernen`,
-      hovered: false,
+      date: $localize`2016 - 2020`,
+      title: $localize`Work by Elektro Sutter as Electrical-Installer`,
+      msg: $localize`Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Projektstart "Rapport-App"`,
-      hovered: false,
+      date: $localize`2017`,
+      title: $localize`Learn programming with Java`,
+      msg: $localize`Program an “Endless Runner” game with libGDX`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Gründung WAIO Applications`,
-      hovered: false,
+      date: $localize`2017`,
+      title: $localize`Project start “Report-App”`,
+      msg: $localize`Program a simple rapport app with libGDX for use at the current workplace.`,
     },
     {
-      date: new Date(1995, 2, 21),
-      title: $localize`Projektstart "snaptab"`,
-      hovered: false,
+      date: $localize`2018`,
+      title: $localize`Fiber optic training`,
+      msg: $localize`Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation`,
+    },
+    {
+      date: $localize`2018 - 2019`,
+      title: $localize`Change “Report-App” from libGDX to Ionic`,
+      msg: $localize`To make the app more professional and simplify the programming of the app, I changed to Ionic 4.`,
+    },
+    {
+      date: $localize`2020`,
+      title: $localize`Foundation of WAIO Applications`,
+      msg: $localize`Program many different things such as website for company and managing tool. 
+      Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.`,
+    },
+    {
+      date: $localize`2021 - 2023`,
+      title: $localize`Project start “snaptab”`,
+      msg: $localize`Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.`,
+    },
+    {
+      date: $localize`October 24, 2022`,
+      title: $localize`Married`,
+      msg: $localize`Married with my wife in vietnam.`,
     },
   ];
 }

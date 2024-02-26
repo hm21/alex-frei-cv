@@ -1,0 +1,23 @@
+<div class="v-divider">
+  <div class="sonar-container">
+    <div
+      class="sonar"
+      [@sonarAnimation]="animationState"
+      (@sonarAnimation.done)="this.animationState = 'stop'"
+    ></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div ngxScrollAnimate="fade-in-up" once="false" class="date">
+    {{ item.date }}
+  </div>
+  <h2 ngxScrollAnimate="fade-in-up" once="false">{{ item.title }}</h2>
+
+  @if (item.msg) {
+    <p ngxScrollAnimate="fade-in-up" once="false">
+      {{ item.msg }}
+    </p>
+  }
+</div>

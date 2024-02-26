@@ -1,0 +1,70 @@
+:host {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  &:last-child {
+    .card {
+      margin-bottom: 0px;
+    }
+  }
+}
+.sonar-container {
+  position: relative;
+}
+
+.sonar,
+.dot {
+  position: absolute;
+  top: 0.75rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sonar {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+
+  transition: background-color 250ms ease;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--page-background-primary);
+  border: 3px solid var(--color-primary);
+  border-radius: 50%;
+
+  transition: background-color 250ms ease;
+}
+.v-divider {
+  position: relative;
+  background-color: var(--border-color);
+  width: 1px;
+  margin: 0 25px;
+  height: auto;
+
+  transition: background-color 250ms ease;
+}
+.card {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.date {
+  color: var(--text-color-primary);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.date,
+p {
+  line-height: 1.5rem;
+}

@@ -35,6 +35,8 @@ export class OtherProjectsComponent implements OnInit {
         subtitle: $localize`Presentation website from the company waio Applications.`,
         logo: this.sanitizer.bypassSecurityTrustHtml(waioLogo),
         description: $localize`
+        This website introduces WAIO Applications, my own company. Alongside information about my company, 
+        it offers two captivating games to enrich the user experience.<br/>
         You can find one of these games by clicking on the "Team" tab and then pressing the "Icebreaker" button. 
         The other game is hidden as an "easter egg" on the homepage. Simply scroll to the "For all devices" section, 
         click on the red rectangle (which represents a phone with a scale animation).<br/><br/>

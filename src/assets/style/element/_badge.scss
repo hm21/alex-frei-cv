@@ -1,0 +1,17 @@
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.badge-chip {
+  cursor: default;
+  display: inline-block;
+  font-size: 0.85rem;
+  background-color: #0f7dff;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 7px;
+}
