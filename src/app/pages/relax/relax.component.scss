@@ -7,3 +7,120 @@ h2 {
   font-weight: 400;
   font-size: 1.2rem;
 }
+h3 {
+  font-weight: 700;
+  font-size: 1.55rem;
+}
+p {
+  font-weight: 300;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  line-height: 150%;
+}
+.games {
+  margin-top: 40px;
+
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+
+  padding: 25px 40px;
+  text-align: center;
+  user-select: none;
+
+  background-color: var(--card-background-color);
+
+  transition:
+    background-color 250ms ease,
+    transform 250ms ease;
+
+  svg {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: var(--card-hover-color);
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}
+.quantum-quiz {
+  .hand {
+    transition: transform 400ms ease;
+  }
+  &:hover {
+    .hand {
+      transform: translateX(318px) rotate(16deg) scale(0.9);
+    }
+  }
+}
+@keyframes move-svg-line {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.color-clash {
+  .line {
+    transform-origin: center;
+    animation: move-svg-line 2500ms linear forwards infinite;
+    animation-play-state: paused;
+
+    &.line-1,
+    &.line-3,
+    &.line-5,
+    &.line-7 {
+      animation-direction: reverse;
+    }
+  }
+
+  &:hover {
+    .line {
+      animation-play-state: running;
+    }
+  }
+
+  .fill {
+    fill: var(--text-color-primary);
+  }
+}
+
+@media (max-width: 699.9px) {
+  h1 {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 499.9px) {
+  .games {
+    grid-template-columns: 1fr;
+  }
+  a {
+    padding: 15px;
+  }
+  h1 {
+    margin-top: 40px;
+  }
+}

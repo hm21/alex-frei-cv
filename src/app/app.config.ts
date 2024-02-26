@@ -32,13 +32,13 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(withFetch()),
     provideAnimations(),
-    {
-      provide: IS_BROWSER,
-      useValue: true,
-    },
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    {
+      provide: IS_BROWSER,
+      useValue: true,
+    },
   ],
 };

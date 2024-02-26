@@ -22,7 +22,6 @@ import { HeaderComponent } from './layout/header/header.component';
 import { ModalManagerService } from './services/modal-manager.service';
 import { ExtendedComponent } from './utils/extended-component';
 
-
 @Component({
   selector: 'af-root',
   standalone: true,
@@ -73,15 +72,14 @@ export class AppComponent
         '%cHello! Thanks for checking out my source code. Feel free to reach out if you have any questions or suggestions.',
         'color: #4FD168; font-family: roboto flex; background: black; padding:10px; border-radius:4px; font-size: 28px',
       );
-    }
 
-    this.analytics.websiteVisit();
+      this.analytics.websiteVisit();
 
-    if (this.isBrowser)
       // Skip a frame so that the first time when the user opens the page will not be an animation bug.
       timer(1)
         .pipe(this.destroyPipe())
         .subscribe(() => (this.useRouteAnimations = true));
+    }
   }
 
   ngOnDestroy(): void {
