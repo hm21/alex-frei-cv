@@ -34,6 +34,10 @@
       ],
       "rewrites": [
         {
+          "source": "/api/v1/quiz",
+          "function": "quiz"
+        },
+        {
           "source": "/de/**",
           "destination": "/de/index.html"
         },

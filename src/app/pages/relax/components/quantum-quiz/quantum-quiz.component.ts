@@ -1,4 +1,3 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
@@ -7,6 +6,7 @@ import {
   signal,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { cardFadeInUpScale } from 'src/app/animations/card-animations';
 import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
 import { environment } from 'src/environments/environment';
 import { QuantumQuizChooseTopicComponent } from './components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component';
@@ -34,21 +34,7 @@ import { GameStateChanged, Quiz } from './utils/quiz-interface';
   templateUrl: './quantum-quiz.component.html',
   styleUrls: ['./styles/quiz-card.scss', './quantum-quiz.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('cardAni', [
-      transition(
-        ':enter',
-        [
-          style({
-            opacity: 0.3,
-            transform: 'translateX(30px)',
-          }),
-          animate('{{duration}} ease', style({ opacity: 1, transform: '*' })),
-        ],
-        { params: { duration: '500ms' } },
-      ),
-    ]),
-  ],
+  animations: [cardFadeInUpScale],
 })
 export class QuantumQuizComponent {
   public GameState = GameState;

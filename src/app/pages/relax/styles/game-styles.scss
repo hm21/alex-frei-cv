@@ -4,6 +4,9 @@ header {
   justify-content: flex-start;
   padding-bottom: 7px;
   border-bottom: 1px solid var(--border-color);
+  @media (max-width: 500px) {
+    margin-top: 35px;
+  }
 }
 h1 {
   font-size: 2rem;

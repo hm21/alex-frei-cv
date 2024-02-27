@@ -31,7 +31,7 @@ h2 {
 
   &.active {
     color: white;
-    background-color: var(--color-primary);
+    background-color: #3d53f5;
   }
 }
 .count {
@@ -113,7 +113,7 @@ h2 {
   user-select: none;
   will-change: box-shadow, transform;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 
   span {
     font-size: 0.9rem;
@@ -171,3 +171,24 @@ li {
   justify-content: flex-start;
   gap: 3px;
 }
+
+@media (max-width: 959.9px) {
+  .answers {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .shortcuts {
+    display: none;
+  }
+}
+@media (max-width: 719.9px), (min-width: 1025px) and (max-width: 1160px) {
+  :host {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .levels {
+    border-left: unset;
+    border-top: 2px solid var(--color-primary);
+  }
+}
+
