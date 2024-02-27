@@ -1,0 +1,37 @@
+<h2 i18n>Choose a topic</h2>
+
+<p class="mb1" i18n>
+  You can choose your own topic. For example, you can enter "Soccer" or
+  "Angular," from which a unique quiz will be generated for you. Alternatively,
+  you can also press "Random" below to select a random topic.
+</p>
+
+<input
+  enterkeyhint="done"
+  id="topic"
+  autocomplete="off"
+  i18n-placeholder
+  placeholder="Insert a topic like Angular or Soccer"
+  [(ngModel)]="topic"
+  type="text"
+  maxlength="20"
+  (keydown.enter)="generate()"
+/>
+<div class="input-count">{{ topic().length }} / 20</div>
+
+<ng-container #errorRef />
+
+<div class="action-row">
+  <button (click)="generate(true)" class="button stroke" type="button" i18n>
+    Random
+  </button>
+  <button (click)="generate()" class="button" type="button" i18n>
+    Generate
+  </button>
+</div>
+
+<ng-template #errorTemplate let-msg="msg">
+  <div class="error-msg">
+    {{ msg }}
+  </div>
+</ng-template>

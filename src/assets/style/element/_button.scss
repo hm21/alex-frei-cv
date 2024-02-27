@@ -14,8 +14,9 @@ button {
   align-items: center;
   justify-content: center;
 
-  /* filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4)); */
-  transition: transform 300ms ease, background-color 300ms ease;
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease;
 
   color: white;
   background-color: transparent;
@@ -28,7 +29,7 @@ button {
   font-size: 1rem;
   line-height: normal;
   white-space: nowrap;
-  will-change: filter, transform;
+  will-change: transform;
 
   &.primary {
     border: 3px solid var(--color-primary);
@@ -41,7 +42,7 @@ button {
     color: var(--color-primary);
 
     &.primary {
-      background:var(--color-primary);
+      background: var(--color-primary);
       color: var(--color-light);
     }
   }

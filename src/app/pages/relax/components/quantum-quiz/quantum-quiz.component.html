@@ -2,3 +2,43 @@
   <af-back-btn path="/relax" />
   <h1 i18n>Quantum Quiz</h1>
 </header>
+
+<section>
+  @switch (gameState()) {
+    @case (GameState.instruction) {
+      <af-quantum-quiz-instruction
+        @cardAni
+        (next)="gameState.set(GameState.chooseTopic)"
+      />
+    }
+    @case (GameState.chooseTopic) {
+      <af-quantum-quiz-choose-topic
+        @cardAni
+        [errorMsg]="generateErrorMsg"
+        (generateQuiz)="generateQuiz($event)"
+      />
+    }
+    @case (GameState.generateQuiz) {
+      <af-quantum-quiz-generate-quiz @cardAni (generatedQuiz)="quiz = $event" />
+    }
+    @case (GameState.active) {
+      <af-quantum-quiz-game
+        [quiz]="quiz"
+        (stateChanged)="onStateChanged($event)"
+      />
+    }
+    @case (GameState.won) {
+      <af-quantum-quiz-won
+        @cardAni
+        (playAgain)="gameState.set(GameState.chooseTopic)"
+      />
+    }
+    @case (GameState.loose) {
+      <af-quantum-quiz-loose
+        @cardAni
+        [wonCash]="wonCash()"
+        (playAgain)="gameState.set(GameState.chooseTopic)"
+      />
+    }
+  }
+</section>

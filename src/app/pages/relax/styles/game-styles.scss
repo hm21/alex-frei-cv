@@ -2,6 +2,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--border-color);
 }
 h1 {
   font-size: 2rem;

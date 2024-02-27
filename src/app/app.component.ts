@@ -67,11 +67,13 @@ export class AppComponent
   }
 
   ngAfterViewInit(): void {
-    if (this.isBrowser && environment.production) {
-      console.log(
-        '%cHello! Thanks for checking out my source code. Feel free to reach out if you have any questions or suggestions.',
-        'color: #4FD168; font-family: roboto flex; background: black; padding:10px; border-radius:4px; font-size: 28px',
-      );
+    if (this.isBrowser) {
+      if (environment.production) {
+        console.log(
+          '%cHello! Thanks for checking out my source code. Feel free to reach out if you have any questions or suggestions.',
+          'color: #4FD168; font-family: roboto flex; background: black; padding:10px; border-radius:4px; font-size: 28px',
+        );
+      }
 
       this.analytics.websiteVisit();
 
