@@ -1,13 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable, PLATFORM_ID, inject } from '@angular/core';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AnalyticsService {
-  private functionsUrl = environment.endpoints.analytics;
+  private functionsUrl = ''; // environment.endpoints.analytics;
 
   private http = inject(HttpClient);
 

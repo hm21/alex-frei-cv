@@ -23,22 +23,18 @@ textarea {
 }
 p {
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 .danger {
   font-size: 1rem;
   color: #ff0000;
 }
-.sended-text {
-  font-size: 1.25rem;
-}
 .msg {
   width: 100%;
   margin-left: 40px;
 }
-.btn{
+.btn {
   margin: 30px auto 0;
-
 }
 @media screen and (max-width: $bp-md) {
   .row {

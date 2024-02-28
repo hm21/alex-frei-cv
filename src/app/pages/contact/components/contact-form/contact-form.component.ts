@@ -1,134 +1,135 @@
+import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef,
+  inject,
+  isDevMode,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Subject, catchError, retry, throwError } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'af-contact-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, DecimalPipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactFormComponent extends ExtendedComponent {
-  public pageTitle = '';
-  public serverError = '';
-  private mode: 'support' | 'contact' | '' = '';
+export class ContactFormComponent extends ExtendedComponent implements OnInit {
+  @ViewChild('footerRef', { static: true, read: ViewContainerRef })
+  footerRef!: ViewContainerRef;
 
-  public showError = false;
+  @ViewChild('errorRef', { static: true, read: TemplateRef })
+  errorRef!: TemplateRef<any>;
+  @ViewChild('successRef', { static: true, read: TemplateRef })
+  successRef!: TemplateRef<any>;
+  @ViewChild('blacklistRef', { static: true, read: TemplateRef })
+  blacklistRef!: TemplateRef<any>;
+  @ViewChild('submitBtnRef', { static: true, read: TemplateRef })
+  submitBtnRef!: TemplateRef<any>;
+  @ViewChild('loadingSpinner', { static: true, read: TemplateRef })
+  loadingSpinner!: TemplateRef<any>;
+
   private _blacklist = false;
   private _sended = false;
   private _sending = false;
 
   private _sendTries = 0;
 
-  private destroy = new Subject();
-
   public form = new FormGroup({
     firstname: new FormControl('', Validators.required),
     lastname: new FormControl('', Validators.required),
     msg: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.email]),
-    // phone: new FormControl('',),
   });
-  constructor(private http: HttpClient) {
-    super();
-  }
+
+  private http = inject(HttpClient);
 
   override ngOnInit(): void {
-    this.init();
+    this.footerRef.createEmbeddedView(this.submitBtnRef);
     super.ngOnInit();
   }
 
-  ngOnDestroy(): void {
-    this.destroy.next(null);
-    this.destroy.complete();
-  }
-
-  private init() {
-    this.form.reset();
-    this._sended = false;
-    this._sending = false;
-    this._sendTries = 0;
-
-    this.pageTitle =
-      this.mode === 'contact' ? $localize`Kontakt` : $localize`Support`;
-  }
-
   public sendForm(): void {
-    if (this._blacklist) {
-      return;
-    }
-    if (this.form.invalid || this.form.get('email')?.value?.length === 0) {
-      //&& this.form.get('phone')?.value?.length === 0
-      this.showError = true;
+    if (this._blacklist) return;
+
+    if (this.form.invalid || this.form.getRawValue().email?.length === 0) {
+      this.footerRef.clear();
+      this.footerRef.createEmbeddedView(this.errorRef, {
+        msg: this.form.get('email')?.invalid
+          ? 'Valid email address is required.'
+          : `<b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as <b>E-Mail</b> are required.`,
+      });
+      this.footerRef.createEmbeddedView(this.submitBtnRef);
       this.cdRef.detectChanges();
     } else if (!this._sending && !this._sended && this._sendTries < 10) {
-      this.showError = false;
       this._sending = true;
-      this.form.disable();
+      this.footerRef.clear();
+      this.footerRef.createEmbeddedView(this.loadingSpinner);
+
       this._sendTries++;
+      this.form.disable();
       this.cdRef.detectChanges();
 
       this.http
-        .post(
-          environment.endpoints.contactMessage,
-          Object.assign(this.form.value, { mode: this.mode })
-        )
-        .pipe(
-          retry(1),
-          catchError((err) => {
-            console.error(err);
+        .post(environment.endpoints.contactMessage, this.form.value)
+        .pipe(this.destroyPipe())
+        .subscribe({
+          next: () => {
+            this._sending = false;
+            this._sended = true;
+            this.footerRef.clear();
+            this.footerRef.createEmbeddedView(this.successRef, {
+              msg: $localize`The request has been successfully submitted.`,
+            });
+            this.cdRef.detectChanges();
+          },
+          error: (err) => {
+            if (isDevMode()) console.error(err);
             this._sending = false;
             if (err.error === 'Blacklist') {
               this._blacklist = true;
-              return throwError(() => 'DDOS ATTACK!');
+              this.footerRef.clear();
+              this.footerRef.createEmbeddedView(this.blacklistRef);
+            } else {
+              let msg = $localize`Unknown error! Please try again.`;
+              switch (err.status) {
+                case 403:
+                  msg = $localize`Forbidden request to the server.`;
+                  break;
+                case 400:
+                  msg = $localize`Invalid data sent. Please fill out the form correctly and try again.`;
+                  break;
+              }
+              this.footerRef.clear();
+              this.footerRef.createEmbeddedView(this.errorRef, {
+                msg,
+              });
+              this.footerRef.createEmbeddedView(this.submitBtnRef);
+              this.form.enable();
             }
-            switch (err.status) {
-              case 403:
-                this.serverError = $localize`Verbotene Anfrage an den Server.`;
-                break;
-              case 422:
-                this.serverError = $localize`Ungültige Daten gesendet. Füllen Sie das Formular korrekt aus und versuchen Sie es erneut.`;
-                break;
-              case 500:
-                this.serverError = $localize`Fehler beim Übermitteln der Nachricht. Versuchen Sie es später erneut.`;
-                break;
-              default:
-                this.serverError = $localize`Unbekannter Fehler! Bitte versuchen Sie es erneut.`;
-                break;
-            }
-            this.form.enable();
             this.cdRef.detectChanges();
-            return throwError(() => err.error);
-          })
-        )
-        .subscribe(() => {
-          this._sending = false;
-          this._sended = true;
-          this.cdRef.detectChanges();
+          },
         });
     } else if (this._sendTries >= 10) {
-      this.serverError = $localize`Zuviele Übermittlungsversuche! Versuchen Sie es später erneut.`;
+      this.footerRef.clear();
+      this.footerRef.createEmbeddedView(this.errorRef, {
+        msg: $localize`Too many submission attempts! Please try again later.`,
+      });
+
       this.cdRef.detectChanges();
     }
-  }
-
-  public get sending() {
-    return this._sending;
-  }
-  public get sended() {
-    return this._sended;
-  }
-  public get blacklist() {
-    return this._blacklist;
   }
 }

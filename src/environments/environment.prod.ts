@@ -3,5 +3,6 @@ export const environment = {
   analytics: true,
   endpoints: {
     quiz: 'https://alex-frei.web.app/api/v1/quiz',
+    contactMessage: 'https://alex-frei.web.app/api/v1/contact-form',
   },
 };

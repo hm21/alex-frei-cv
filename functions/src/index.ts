@@ -7,11 +7,26 @@ export const quiz = onRequest(
     memory: '128MiB',
     minInstances: 0,
     maxInstances: 3,
-    region: 'europe-west1',
+    region: 'europe-west6',
     enforceAppCheck: false,
     concurrency: 5,
   },
   async (req, res) => {
     await (await import('./games/quiz')).default(req, res);
+  },
+);
+export const contactForm = onRequest(
+  {
+    cors: ['alex-frei.web.app'],
+    timeoutSeconds: 60,
+    memory: '128MiB',
+    minInstances: 0,
+    maxInstances: 3,
+    region: 'europe-west6',
+    enforceAppCheck: false,
+    concurrency: 5,
+  },
+  async (req, res) => {
+    await (await import('./contact-form')).default(req, res);
   },
 );

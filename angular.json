@@ -20,6 +20,7 @@
             "outputPath": "dist/alex-frei-cv",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "localize": true,
             "polyfills": [
               "zone.js"
             ],
@@ -41,9 +42,7 @@
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "ssr": false
           },
           "configurations": {
             "production": {
@@ -59,13 +58,36 @@
                   "maximumError": "4kb"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "outputHashing": "all",
               "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "localize": [
+                "en",
+                "de"
+              ],
+              "baseHref": "/en/"
+            },
+            "de": {
+              "localize": [
+                "de"
+              ],
+              "baseHref": "/de/"
+            },
+            "en": {
+              "localize": [
+                "en"
+              ],
+              "baseHref": "/en/"
             }
           },
           "defaultConfiguration": "production"
@@ -111,6 +133,14 @@
               "src/assets/style/global-styles.scss"
             ],
             "scripts": []
+          }
+        }
+      },
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "de": {
+            "translation": "src/locale/messages.de.xlf"
           }
         }
       }

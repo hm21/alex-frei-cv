@@ -1,0 +1,1816 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3820348336004446893" datatype="html">
+        <source>Back button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/back-btn/back-btn.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8890553633144307762" datatype="html">
+        <source>Back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/back-btn/back-btn.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4873644682259066363" datatype="html">
+        <source> Next Recommended Pages
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/recommended-pages/recommended-pages.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8588395098030781778" datatype="html">
+        <source>Open sidemenu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3562199946446423606" datatype="html">
+        <source>About me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7182974689040833178" datatype="html">
+        <source>Resume</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9201103587777813545" datatype="html">
+        <source>Portfolio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3939458405623425043" datatype="html">
+        <source>Relax</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7339719027541273315" datatype="html">
+        <source>Alex Frei profil picture</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6442425155039585894" datatype="html">
+        <source>Full Stack Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3081310451796232082" datatype="html">
+        <source>Social-Github</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5215504455750389206" datatype="html">
+        <source>Social-Facebook</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6414569969464252813" datatype="html">
+        <source>Social-X aka Twitter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">106,108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5873413805101868453" datatype="html">
+        <source> Contact
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">132,134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7306768770762854120" datatype="html">
+        <source> View source code </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7328564269131534198" datatype="html">
+        <source>About Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/about-me.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1867367725682255665" datatype="html">
+        <source>Learn more about Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/about-me.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3683157540867041144" datatype="html">
+        <source>Hiking</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5268361223179343963" datatype="html">
+        <source>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7150322731406802059" datatype="html">
+        <source>Travel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7453924187669714095" datatype="html">
+        <source>Develop</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7194501120282715188" datatype="html">
+        <source>Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1970623594380235809" datatype="html">
+        <source> Hey, I&apos;m Alex, a passionate software developer based in the beautiful country of Switzerland. I thrive on turning ideas into elegant and functional software solutions. Whether it&apos;s web development, mobile apps, or tinkering with the latest tech gadgets, I&apos;m always eager to learn and create. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8115083664628466958" datatype="html">
+        <source>E-Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3262236020277300799" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="471816275243265264" datatype="html">
+        <source>Location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1949800099101277248" datatype="html">
+        <source>Languages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7487151404654126049" datatype="html">
+        <source>German, English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1130652265542107236" datatype="html">
+        <source>Age</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6206277469713306308" datatype="html">
+        <source>03/21/1995</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="285383250664560912" datatype="html">
+        <source>Angular Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7369259204641151721" datatype="html">
+        <source>Flutter Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1007625284753612149" datatype="html">
+        <source>Frontend Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8862667603841883589" datatype="html">
+        <source>Backend Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5892201018243406683" datatype="html">
+        <source>UI/ UX Designer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6177818185504486712" datatype="html">
+        <source>Google Cloud Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8015911148345197549" datatype="html">
+        <source>Firebase Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="592343560393631563" datatype="html">
+        <source>Supabase Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="491009254733628613" datatype="html">
+        <source> What I do
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1220644583785368760" datatype="html">
+        <source>Websites</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4193806628557781703" datatype="html">
+        <source>
+        As a dedicated web developer, I specialize in crafting visually stunning and fully functional websites. 
+        Whether you&apos;re looking to establish your online presence or enhance your existing site, I ensure top-notch quality and user satisfaction.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">32,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5650635157678221891" datatype="html">
+        <source>Apps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2771166999203405049" datatype="html">
+        <source>
+        With my expertise in mobile and web app development, I create innovative solutions tailored to your needs. 
+        From concept to launch, I prioritize usability and performance, delivering apps that stand out in today&apos;s competitive market.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">40,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8198980433602946702" datatype="html">
+        <source>Design</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3751326315417870338" datatype="html">
+        <source>
+        Design is my passion, and I bring creativity and flair to every project. 
+        I specialize in crafting visually captivating designs that reflect your brand identity and leave a lasting impression on your audience.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">48,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1360286660327265296" datatype="html">
+        <source>Backend</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="linenumber">457,459</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7554513284246138317" datatype="html">
+        <source>
+        As a backend developer, I architect robust and scalable systems to power your applications. 
+        From database design to server-side logic, I ensure seamless functionality and reliability, allowing you to focus on growing your business.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">56,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8487998094415395870" datatype="html">
+        <source> What I prefer
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5795063446422955782" datatype="html">
+        <source>Framework</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3447830112747057893" datatype="html">
+        <source>Various</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="linenumber">152,154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="103220111367852293" datatype="html">
+        <source>Frontend</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="linenumber">328,330</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1483267419452198083" datatype="html">
+        <source>Fun-Facts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6988462155330136998" datatype="html">
+        <source>About this Website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3893126089608256312" datatype="html">
+        <source>Coffee Consumed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5581791111414135821" datatype="html">
+        <source>Walking Breaks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6872114768409504226" datatype="html">
+        <source>Listen Songs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8127702299304006653" datatype="html">
+        <source>Git Commits</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7150593562313015326" datatype="html">
+        <source><x id="START_TAG_NG_CONTENT" ctype="x-ng_content" equiv-text="&lt;ng-content select=&quot;#action&quot; /&gt;"/><x id="CLOSE_TAG_NG_CONTENT" ctype="x-ng_content" equiv-text="&lt;ng-content select=&quot;#action&quot; /&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-card/contact-card.component.html</context>
+          <context context-type="linenumber">16,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6028371114637047813" datatype="html">
+        <source>First Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4407559560004943843" datatype="html">
+        <source>Last Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8066608938393600549" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">33,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935187492052582731" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5998880742670366153" datatype="html">
+        <source> Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b
+      &gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;danger&quot; href=&quot;mailto:alex.frei@hotmail.ch?subject=Blacklist&quot;
+        &gt;"/>alex.frei@hotmail.ch<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a
+      &gt;"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b
+    &gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">64,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3595827728359307152" datatype="html">
+        <source>The request has been successfully submitted.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5991432110094363437" datatype="html">
+        <source>Unknown error! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3927696452050800576" datatype="html">
+        <source>Forbidden request to the server.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4424606546053357541" datatype="html">
+        <source>Invalid data sent. Please fill out the form correctly and try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2435736959500861658" datatype="html">
+        <source>Too many submission attempts! Please try again later.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7336605590259895222" datatype="html">
+        <source> WhatsApp </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2746956598378576216" datatype="html">
+        <source>Open WhatsApp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4278193599702140595" datatype="html">
+        <source><x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg
+        version=&quot;1.1&quot;
+        id=&quot;Layer_1&quot;
+        xmlns=&quot;http://www.w3.org/2000/svg&quot;
+        xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+        viewBox=&quot;0 0 512 512&quot;
+        xml:space=&quot;preserve&quot;
+      &gt;"/><x id="START_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;g id=&quot;SVGRepo_bgCarrier&quot; stroke-width=&quot;0&quot;&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="START_TAG__SVG_G_1" ctype="x-_svg_g_1" equiv-text="&lt;g
+          id=&quot;SVGRepo_tracerCarrier&quot;
+          stroke-linecap=&quot;round&quot;
+          stroke-linejoin=&quot;round&quot;
+        &gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="START_TAG__SVG_G_3" ctype="x-_svg_g_3" equiv-text="&lt;g id=&quot;SVGRepo_iconCarrier&quot;&gt;"/><x id="START_TAG__SVG_G_2" ctype="x-_svg_g_2" equiv-text="&lt;g&gt;"/><x id="START_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;path
+              class=&quot;fill-secondary&quot;
+              d=&quot;M352.114,72.325V47.003c0-18.362-14.885-33.246-33.245-33.246H85.458 c-18.36,0.001-33.245,14.886-33.245,33.246v25.322H352.114z&quot;
+            &gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;/path&gt;"/><x id="START_TAG__SVG_PATH_1" ctype="x-_svg_path_1" equiv-text="&lt;path
+              class=&quot;fill-secondary&quot;
+              d=&quot;M52.213,398.391v66.604c0,18.362,14.885,33.246,33.245,33.246h233.41 c18.362,0,33.245-14.885,33.245-33.246v-66.604H52.213z&quot;
+            &gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;/path&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="START_TAG__SVG_G_2" ctype="x-_svg_g_2" equiv-text="&lt;g&gt;"/><x id="START_TAG__SVG_CIRCLE" ctype="x-_svg_circle" equiv-text="&lt;circle
+              class=&quot;fill&quot;
+              cx=&quot;202.162&quot;
+              cy=&quot;448.321&quot;
+              r=&quot;9.401&quot;
+            &gt;"/><x id="CLOSE_TAG__SVG_CIRCLE" ctype="x-_svg_circle" equiv-text="&lt;/circle&gt;"/><x id="START_TAG__SVG_PATH_2" ctype="x-_svg_path_2" equiv-text="&lt;path
+              class=&quot;fill&quot;
+              d=&quot;M202.163,471.476c-12.77,0-23.159-10.389-23.159-23.159s10.389-23.159,23.159-23.159 s23.159,10.389,23.159,23.159C225.322,461.087,214.934,471.476,202.163,471.476z M202.163,443.959 c-2.402,0-4.357,1.955-4.357,4.357s1.954,4.357,4.357,4.357s4.357-1.954,4.357-4.357S204.565,443.959,202.163,443.959z&quot;
+            &gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;/path&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="START_TAG__SVG_RECT" ctype="x-_svg_rect" equiv-text="&lt;rect
+            x=&quot;244.44&quot;
+            y=&quot;116.724&quot;
+            class=&quot;fill-secondary&quot;
+            width=&quot;215.355&quot;
+            height=&quot;168.495&quot;
+          &gt;"/><x id="CLOSE_TAG__SVG_RECT" ctype="x-_svg_rect" equiv-text="&lt;/rect&gt;"/><x id="START_TAG__SVG_PATH_3" ctype="x-_svg_path_3" equiv-text="&lt;path
+            class=&quot;fill&quot;
+            d=&quot;M459.787,102.959h-93.917V72.325V47.003C365.872,21.086,344.785,0,318.868,0H85.458 c-0.81,0-1.615,0.021-2.415,0.062C62.242,1.119,44.969,15.761,39.938,35.27c-0.967,3.752-1.482,7.684-1.482,11.733v25.322v326.066 v66.606c0,4.049,0.515,7.981,1.482,11.733c5.031,19.509,22.306,34.152,43.105,35.208c0.799,0.041,1.606,0.062,2.415,0.062h233.41 c25.917,0,47.004-21.086,47.004-47.003v-66.606v-46.077c0-7.599-6.159-13.758-13.758-13.758s-13.758,6.159-13.758,13.758v32.319 H65.971V86.083h272.384v16.877h-93.917c-7.599,0-13.758,6.159-13.758,13.758v168.501c0,7.599,6.16,13.758,13.758,13.758h215.348 c7.599,0,13.758-6.159,13.758-13.758V116.717C473.546,109.119,467.386,102.959,459.787,102.959z M338.356,412.149v52.848 c0,10.745-8.742,19.487-19.488,19.487H85.458c-10.745,0-19.487-8.742-19.487-19.487v-52.848H338.356z M65.971,58.567V47.003 c0-10.745,8.742-19.487,19.487-19.487h233.41c10.746,0,19.488,8.742,19.488,19.487v11.564H65.971z M446.029,271.459H258.197V151.145 l84.977,72.648c2.574,2.2,5.758,3.301,8.94,3.301c3.182,0,6.366-1.101,8.94-3.301l46.652-39.885 c5.776-4.938,6.455-13.622,1.518-19.398c-4.938-5.776-13.622-6.457-19.398-1.518l-37.712,32.242l-75.749-64.759h169.665V271.459z&quot;
+          &gt;"/><x id="CLOSE_TAG__SVG_PATH" ctype="x-_svg_path" equiv-text="&lt;/path&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">8,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4838975967389114290" datatype="html">
+        <source> Call </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7757671823665330300" datatype="html">
+        <source>Start call</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1285761715907822769" datatype="html">
+        <source> E-Mail </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1059908080981133475" datatype="html">
+        <source>Send E-Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2370050546944857169" datatype="html">
+        <source>Alternatively, you can get in touch via the contact form.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
+          <context context-type="linenumber">140,141</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5211593647529218831" datatype="html">
+        <source>Contact Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5236911264762992404" datatype="html">
+        <source>Contact Alex Frei right now.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5629671436105198901" datatype="html">
+        <source>Business Projects</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4683860880659222473" datatype="html">
+        <source>snaptab</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="linenumber">164,165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3789001511274969166" datatype="html">
+        <source> The <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;snaptab-primary&quot;&gt;"/>Allrounder-Tool<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> for <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br class=&quot;break-before&quot; /&gt;"/> your<x id="LINE_BREAK_1" equiv-text="&lt;br class=&quot;break-after&quot; /&gt;"/> <x id="START_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter
+        class=&quot;snaptab-primary&quot;
+        [items]=&quot;items&quot;
+      /&gt;"/><x id="CLOSE_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter
+        class=&quot;snaptab-primary&quot;
+        [items]=&quot;items&quot;
+      /&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="linenumber">168,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4714295378598704000" datatype="html">
+        <source> From project tracking to the completed QR invoice - that&apos;s what <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>snaptab<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> offers you. All important documentation regarding your projects and employees is created, giving you full control at all times! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="linenumber">178,182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5281048910640512287" datatype="html">
+        <source>Company!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="705519754422508972" datatype="html">
+        <source>Projects!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2427256133319138583" datatype="html">
+        <source>Needs!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6055086305211417287" datatype="html">
+        <source>Employees!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1498094916582121722" datatype="html">
+        <source>Industry!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1075732990815169061" datatype="html">
+        <source>Construction!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8110718739226457864" datatype="html">
+        <source>Control!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1609617232994884093" datatype="html">
+        <source>
+          The application snaptab was primarily developed for craftsmen and
+          offers a wide range of features. From time tracking to scheduling
+          appointments, tasks, project workflows, and even creating invoices and
+          quotes, everything is provided. All of this is enhanced with
+          artificial intelligence and the ability to collect payments directly
+          from customers using Stripe. Through the customer portal, customers
+          can directly access data shared by the company.
+          &lt;br /&gt;&lt;br /&gt;
+          The application is offered as a web app as well as a mobile app for
+          Android and iOS.
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">50,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4929583442443576063" datatype="html">
+        <source>Presentation website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6327574654864918743" datatype="html">
+        <source>Web-app</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3748965883549109139" datatype="html">
+        <source>Mobile-web-app “PWA”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6067630268607910201" datatype="html">
+        <source>Client-portal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8599987379723268011" datatype="html">
+        <source>Admin-access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8117668572148231876" datatype="html">
+        <source>Project</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4536004607617325628" datatype="html">
+        <source>Employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">179</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4447668871712407032" datatype="html">
+        <source>Docs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5729418620241283277" datatype="html">
+        <source>Events</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">187</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4703412002234796149" datatype="html">
+        <source>Gantt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8497528947328199741" datatype="html">
+        <source>Time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4248076781094600744" datatype="html">
+        <source>Client portal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3484984238852181071" datatype="html">
+        <source>AI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">203</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5937251202465808296" datatype="html">
+        <source>More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2069705302209920814" datatype="html">
+        <source> Other Projects
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5481284030283031915" datatype="html">
+        <source>Website</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6870824354328033862" datatype="html">
+        <source>Presentation website from the company waio Applications.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2404306310785420432" datatype="html">
+        <source>
+        This website introduces WAIO Applications, my own company. Alongside information about my company, 
+        it offers two captivating games to enrich the user experience.&lt;br/&gt;
+        You can find one of these games by clicking on the &quot;Team&quot; tab and then pressing the &quot;Icebreaker&quot; button. 
+        The other game is hidden as an &quot;easter egg&quot; on the homepage. Simply scroll to the &quot;For all devices&quot; section, 
+        click on the red rectangle (which represents a phone with a scale animation).&lt;br/&gt;&lt;br/&gt;
+        On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">37,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5195429168031052915" datatype="html">
+        <source>Waio Homepage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7235166256865062307" datatype="html">
+        <source>Waio Team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5462750284769560897" datatype="html">
+        <source>Waio Game 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4989925427936502178" datatype="html">
+        <source>Waio Game 2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5183297567427907684" datatype="html">
+        <source>Flutter open source</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4381248089990542293" datatype="html">
+        <source>A Flutter widget designed for image editing on any device.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7730284535445448313" datatype="html">
+        <source>
+        The ProImageEditor is a Flutter widget designed for image editing. It provides a flexible and convenient way to integrate image editing capabilities 
+        into Flutter projects. The editor has a great hit detection ensuring that drawing actions are triggered only when the user actively hovers over the drawing area. 
+        Furthermore, the editor is highly customizable, allowing for complete adaptation to specific project requirements, and it offers effortless translation capabilities, 
+        simplifying the localization process.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">116,121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2825944489942723865" datatype="html">
+        <source>Editor showcase</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3736654037818964847" datatype="html">
+        <source>Painting editor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6808464001005668002" datatype="html">
+        <source>Text editor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3191464676136788537" datatype="html">
+        <source>Crop rotate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2597779358497009510" datatype="html">
+        <source>Filter editor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1669994001683341404" datatype="html">
+        <source>Emoji editor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4244389066312482208" datatype="html">
+        <source>Sticker editor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2662699029149671881" datatype="html">
+        <source>Github-Page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">261</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4222037467811949681" datatype="html">
+        <source>Angular open source</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">240</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">283</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6774285373642240712" datatype="html">
+        <source>Add automatic scroll animations to an angular 9+ app.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8539152062104707277" datatype="html">
+        <source>
+        A package for implementing CSS scroll animations on elements. These animations activate when an element enters the viewport during page scrolling. 
+        Users have the flexibility to configure the animations to trigger multiple times or just once. Additionally, 
+        the package offers pre-made animations as well as the option to create custom ones to suit various requirements.
+       </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">201,205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7889620127601939568" datatype="html">
+        <source>Scroll animations showcase</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1002170015007706153" datatype="html">
+        <source>Easy way that images will fly to the middle of the screen for presentation.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7689134266850341635" datatype="html">
+        <source>
+        A package to implement hero animations, allowing users to click on images and smoothly zoom them into a larger, 
+        immersive view, enhancing the user experience and interaction with images.&lt;br/&gt;&lt;br/&gt;
+        Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">244,248</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="723955192887140537" datatype="html">
+        <source>Image hero showcase</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">253</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5337895058168876856" datatype="html">
+        <source>Count numbers up and down with smooth animation.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2116094780259070056" datatype="html">
+        <source>
+          A package that elegantly animates number changes, creating a visually engaging transition from one value to another, 
+          perfect for counting or displaying real-time data updates.&lt;br/&gt;&lt;br/&gt;
+          Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">288,292</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2981746578304917090" datatype="html">
+        <source>Count animation showcase</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3721298594029045214" datatype="html">
+        <source>IoT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">323</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7988858937831296342" datatype="html">
+        <source>Smarthome app to automate bee hives and gardens.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">325</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6133390707893312230" datatype="html">
+        <source>
+        This project is a real-time control application. Users can directly program the functions of GPIO ports without requiring any programming knowledge. 
+        Additionally, users can access data about the personal beehive, including real-time temperature readings and the amount of honey produced by the bees.
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">327,330</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4913960567088667274" datatype="html">
+        <source>Smarthome bee overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">334</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6352415780197482141" datatype="html">
+        <source>Smarthome bee details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">339</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8545834380965620864" datatype="html">
+        <source>Smarthome switch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">344</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="785371004610436854" datatype="html">
+        <source>Smarthome Ionic version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
+          <context context-type="linenumber">349</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7819314041543176992" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5886792202999625261" datatype="html">
+        <source>Demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6082171864197428613" datatype="html">
+        <source>Install</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">119,120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2115592966120408375" datatype="html">
+        <source>Copied</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1330330165139018730" datatype="html">
+        <source> Technology </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">193</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4523347413979510028" datatype="html">
+        <source>YouTube video</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">207,208</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1580589129894115210" datatype="html">
+        <source>Mobile-Store</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5284812472715499591" datatype="html">
+        <source>Prototype</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8693603235657020323" datatype="html">
+        <source>Other</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6706142209356072363" datatype="html">
+        <source> All the projects listed below were both designed and coded exclusively by me, except the design from the website <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/>waio<x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/>, where the most was not designed by me.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
+          <context context-type="linenumber">3,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6400603319541206541" datatype="html">
+        <source>Portfolio Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5343466815599726610" datatype="html">
+        <source>Take a look at the portfolio more about Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3608889974399310837" datatype="html">
+        <source>Color Clash</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/color-clash/color-clash.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="linenumber">203,204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7292364668877177897" datatype="html">
+        <source>Choose a topic</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="158495920482585075" datatype="html">
+        <source> You can choose your own topic. For example, you can enter &quot;Soccer&quot; or &quot;Angular,&quot; from which a unique quiz will be generated for you. Alternatively, you can also press &quot;Random&quot; below to select a random topic.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1250317277126583581" datatype="html">
+        <source>Insert a topic like Angular or Soccer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7001786492394928947" datatype="html">
+        <source> Random </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1464149227176693961" datatype="html">
+        <source> Generate </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5343623628327417712" datatype="html">
+        <source>The topic must be between 3 and 20 characters long!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6508017689861118852" datatype="html">
+        <source>The topic must be a text and not number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5320870651003627043" datatype="html">
+        <source>Question</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7841430672042223267" datatype="html">
+        <source>Correct</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2398993704199850879" datatype="html">
+        <source>Great job! Your answer is correct!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2917314929120683887" datatype="html">
+        <source> Continue </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2748884846672363037" datatype="html">
+        <source>Wrong</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6347645514913788737" datatype="html">
+        <source> I&apos;m sorry, but the correct answer was <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b
+          &gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">21,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8366540265192565402" datatype="html">
+        <source> Okay </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3458530371838111191" datatype="html">
+        <source>Option A</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5321019861937126757" datatype="html">
+        <source>Option B</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2715082373615972394" datatype="html">
+        <source>Option C</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4783119009559076602" datatype="html">
+        <source>Option D</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7016790272435410171" datatype="html">
+        <source>Enter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9178182467454450952" datatype="html">
+        <source>Confirm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4178935176374929667" datatype="html">
+        <source> One moment please <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> The quiz will be generated. This usually takes less than 20 seconds.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
+          <context context-type="linenumber">50,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5200647034853049117" datatype="html">
+        <source>Instruction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2337252110478242874" datatype="html">
+        <source> This game is like the quiz show &quot;Who Wants to Be a Millionaire.&quot; You will try to win the million, but you choose the topic. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> If you&apos;re unfamiliar, the rules of this quiz game are quite simple. You attempt to answer as many questions as possible until the one-million question, which progressively get more difficult. You always choose between four answers, where only one answer is correct.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="linenumber">4,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3885497195825665706" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5033344786701996312" datatype="html">
+        <source>Oops you loose!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1613601634394055332" datatype="html">
+        <source> It seems like you still have more to learn about this topic before you can master it. Try a new topic, and let&apos;s see if you can win more than <x id="INTERPOLATION" equiv-text="{{ +wonCash | number: &quot;1.2-2&quot; }}"/> CHF there.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="linenumber">63,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="409191878572054814" datatype="html">
+        <source> Play again </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="634279916762654627" datatype="html">
+        <source>Waooo you won!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4718651139256884791" datatype="html">
+        <source> It seems that you are a genius in this topic, congratulations! However, I have some disappointing news: I&apos;m not rich, so you haven&apos;t won a million. The only reward you&apos;ll receive is the experience and enjoyment you&apos;ve had ;)
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="linenumber">45,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2779077686408578226" datatype="html">
+        <source>Quantum Quiz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/quantum-quiz.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1832034400815744294" datatype="html">
+        <source>Unknown error occurs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3937846620771701095" datatype="html">
+        <source>Do you feel tired about checking out a lot of CVs?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7112269161396967312" datatype="html">
+        <source> Let&apos;s play a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>mini-game<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to relax a bit! </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5812804063606191703" datatype="html">
+        <source> Can you emerge victorious on the millionaire show with your AI-generated topic? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5831594539431733268" datatype="html">
+        <source> Attempt to keep your mind under control without getting confused. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="linenumber">205,206</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6660991822238768821" datatype="html">
+        <source>Time to relax and play</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7086942020668895494" datatype="html">
+        <source>Let&apos;s play a mini-game to relax a bit!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4669656126417510612" datatype="html">
+        <source>Frontend skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2419998429336592087" datatype="html">
+        <source>Backend skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1073479367381800971" datatype="html">
+        <source>More knowledges</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="242479384757553256" datatype="html">
+        <source>March 21, 1995</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2772668468223898232" datatype="html">
+        <source>Birthday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1966987492818924297" datatype="html">
+        <source>2001 - 2010</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="494564023046542629" datatype="html">
+        <source>Elementary school education</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7144712217485996848" datatype="html">
+        <source>2010 - 2014</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7758912282843969586" datatype="html">
+        <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7699869948741961187" datatype="html">
+        <source>2014 - 2015</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="427351650341508205" datatype="html">
+        <source>Work by Brunner &amp; Engler as Electrical-Installer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2287432808592559199" datatype="html">
+        <source>March - November 2015</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7589458222524264055" datatype="html">
+        <source>Military training</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8824231093838758371" datatype="html">
+        <source>Basic training and training to become a “Wachtmeister”.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4969824649958273751" datatype="html">
+        <source>2016 - 2020</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3837155764477744604" datatype="html">
+        <source>Work by Elektro Sutter as Electrical-Installer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="529536006459242055" datatype="html">
+        <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1296777797052107613" datatype="html">
+        <source>2017</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4034304399700968638" datatype="html">
+        <source>Learn programming with Java</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8462843308059139957" datatype="html">
+        <source>Program an “Endless Runner” game with libGDX</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7177834931710672504" datatype="html">
+        <source>Project start “Report-App”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6821485455358500630" datatype="html">
+        <source>Program a simple rapport app with libGDX for use at the current workplace.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5078177343633834238" datatype="html">
+        <source>2018</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6593634431046720544" datatype="html">
+        <source>Fiber optic training</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8894669005648674613" datatype="html">
+        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2769517692509899030" datatype="html">
+        <source>2018 - 2019</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3102765788895558769" datatype="html">
+        <source>Change “Report-App” from libGDX to Ionic</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9157945684475537355" datatype="html">
+        <source>To make the app more professional and simplify the programming of the app, I changed to Ionic 4.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1048684830448412689" datatype="html">
+        <source>2020</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5224815218969674863" datatype="html">
+        <source>Foundation of WAIO Applications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7603994005797778376" datatype="html">
+        <source>Program many different things such as website for company and managing tool. 
+      Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8227050146663557899" datatype="html">
+        <source>2021 - 2023</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8138922831819599928" datatype="html">
+        <source>Project start “snaptab”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="873084354537991197" datatype="html">
+        <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="656422260183809064" datatype="html">
+        <source>October 24, 2022</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1832809533651384093" datatype="html">
+        <source>Married</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2994601167663585516" datatype="html">
+        <source>Married with my wife in vietnam.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4486682505452707131" datatype="html">
+        <source>Resume Alex Frei</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7010851194388361735" datatype="html">
+        <source>Take a look on the resume from Alex Frei.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

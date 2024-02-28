@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "g:i18n": "ng extract-i18n --output-path src/locale",
     "serve:ssr:alex-frei-cv": "node dist/alex-frei-cv/server/server.mjs"
   },
   "private": true,

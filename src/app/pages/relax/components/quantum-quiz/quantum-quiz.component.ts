@@ -2,12 +2,14 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnInit,
   inject,
   signal,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { cardFadeInUpScale } from 'src/app/animations/card-animations';
 import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
+import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { environment } from 'src/environments/environment';
 import { QuantumQuizChooseTopicComponent } from './components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component';
 import { QuantumQuizGameComponent } from './components/quantum-quiz-game/quantum-quiz-game.component';
@@ -36,7 +38,7 @@ import { GameStateChanged, Quiz } from './utils/quiz-interface';
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [cardFadeInUpScale],
 })
-export class QuantumQuizComponent {
+export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
   public GameState = GameState;
   public gameState = signal<GameState>(GameState.instruction);
 
@@ -47,6 +49,18 @@ export class QuantumQuizComponent {
   public quiz: Quiz[] = [];
 
   private http = inject(HttpClient);
+
+  override ngOnInit(): void {
+    if (this.isBrowser) this.wakeUpQuizFunction();
+    super.ngOnInit();
+  }
+
+  private wakeUpQuizFunction() {
+    this.http
+      .post(environment.endpoints.quiz, 'wake-up')
+      .pipe(this.destroyPipe())
+      .subscribe();
+  }
 
   public generateQuiz(topic?: string) {
     this.gameState.set(GameState.generateQuiz);

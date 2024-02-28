@@ -4,8 +4,9 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
-  inject
+  inject,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -69,20 +70,21 @@ export class LanguageSwitchComponent
 
   public languages: Language[] = [
     {
-      iso2: 'de',
-      iso3: 'Deu',
-      name: 'Deutsch',
-    },
-    {
       iso2: 'en',
       iso3: 'Eng',
       name: 'English',
+    },
+    {
+      iso2: 'de',
+      iso3: 'Deu',
+      name: 'Deutsch',
     },
   ];
 
   isDarkMode = false;
 
   private document = inject(DOCUMENT);
+  private router = inject(Router);
 
   override ngOnInit(): void {
     // TODO: init from website config
@@ -109,7 +111,11 @@ export class LanguageSwitchComponent
   public changeLanguage(language: Language) {
     this.activeLanguage = language;
     this.showLanguage = false;
-    // TODO: navigate to other language
+
+    let url = window.location.href;
+    if (!url.endsWith('/')) url += '/';
+    url = window.location.href.replace('/en/', '/de/');
+    window.location.href = url;
   }
 }
 

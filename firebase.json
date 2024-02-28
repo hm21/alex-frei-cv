@@ -6,7 +6,7 @@
   "hosting": [
     {
       "target": "alex-frei",
-      "public": "dist/alex-frei-cv",
+      "public": "dist/alex-frei-cv/browser",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -36,6 +36,14 @@
         {
           "source": "/api/v1/quiz",
           "function": "quiz"
+        },
+        {
+          "source": "/api/v1/contact-form",
+          "function": "contactForm"
+        },
+        {
+          "source": "/en/**",
+          "destination": "/en/index.html"
         },
         {
           "source": "/de/**",
@@ -76,6 +84,5 @@
     "ui": {
       "enabled": true
     }
-  },
-  "remoteconfig": {}
+  }
 }

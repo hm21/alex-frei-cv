@@ -1,12 +1,15 @@
 import * as express from 'express';
+import { initializeApp } from 'firebase-admin/app';
 import { defineString } from 'firebase-functions/params';
 import * as https from 'firebase-functions/v2/https';
 import { HttpsError } from 'firebase-functions/v2/https';
 import OpenAI from 'openai';
+import { ddosCheck } from '../utils/ddos-ip-check';
 
 const openai = new OpenAI({
   apiKey: defineString('OPEN_AI_KEY').value(),
 });
+initializeApp();
 
 export default async (req: https.Request, resp: express.Response) => {
   function getRandomTopic(): string {
@@ -16,7 +19,12 @@ export default async (req: https.Request, resp: express.Response) => {
 
   if (req.method !== 'POST') {
     throw new HttpsError('permission-denied', 'Permission-denied!');
+  } else if (req.body === 'wake-up') {
+    return resp.status(200).json('Awake');
   }
+
+  const ddosAttack = await ddosCheck(req, 'quiz', 120);
+  if (ddosAttack) return resp.status(403).json('Blacklist');
 
   const lang = req.path.split('/')[1];
   let topic = (req.body?.['topic'] as string)?.substring(0, 20);

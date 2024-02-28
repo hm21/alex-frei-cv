@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "alex-frei"
+  },
+  "targets": {
+    "alex-frei": {
+      "hosting": {
+        "alex-frei": [
+          "alex-frei"
+        ]
+      }
+    }
+  }
+}
