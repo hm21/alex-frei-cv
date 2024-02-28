@@ -6,7 +6,6 @@ import {
   OnInit,
   inject,
 } from '@angular/core';
-import { Router } from '@angular/router';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -68,6 +67,8 @@ export class LanguageSwitchComponent
   public showLanguage = false;
   public activeLanguage!: Language;
 
+  private readonly languageId = $localize`en`;
+
   public languages: Language[] = [
     {
       iso2: 'en',
@@ -84,11 +85,11 @@ export class LanguageSwitchComponent
   isDarkMode = false;
 
   private document = inject(DOCUMENT);
-  private router = inject(Router);
 
   override ngOnInit(): void {
-    // TODO: init from website config
-    this.activeLanguage = this.languages[0];
+    this.activeLanguage =
+      this.languages.find((el) => el.iso2 === this.languageId) ??
+      this.languages[0];
 
     this.listenDropdownClose();
     super.ngOnInit();
@@ -109,12 +110,14 @@ export class LanguageSwitchComponent
   }
 
   public changeLanguage(language: Language) {
-    this.activeLanguage = language;
     this.showLanguage = false;
 
     let url = window.location.href;
     if (!url.endsWith('/')) url += '/';
-    url = window.location.href.replace('/en/', '/de/');
+    url = window.location.href.replace(
+      `/${this.activeLanguage.iso2}/`,
+      `/${language.iso2}/`,
+    );
     window.location.href = url;
   }
 }
