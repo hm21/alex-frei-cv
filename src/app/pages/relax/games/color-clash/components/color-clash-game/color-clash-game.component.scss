@@ -8,11 +8,50 @@
   max-height: calc(100vh - 165px);
   max-width: 500px;
 
+  overflow: hidden;
   margin: auto;
   text-align: center;
-  padding: 20px 15px;
   border-radius: 4px;
   background-color: #04b4e0;
+}
+.header {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 7px;
+}
+.items {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 250ms linear,
+    opacity 250ms linear;
+  will-change: transform;
+  padding: 7px 25px;
+
+  .mode {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: #454545;
+  }
+
+  &.pos-0 {
+    transform: translate(70%, -225%) scale(0);
+    opacity: 0;
+  }
+  &.pos-1 {
+    transform: translate(25%, -170%) scale(0.75);
+    opacity: 0.7;
+  }
 }
 .action-buttons {
   display: grid;
@@ -21,24 +60,25 @@
   gap: 10px;
 
   border-top: 2px solid white;
-  padding-top: 10px;
+  padding: 10px 15px 20px;
+}
+.item,
+.action-button {
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 7px;
+  background: white;
 }
 .action-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
   min-height: 48px;
   outline: none;
   border: unset;
   padding: 0px;
-  font-size: 32px;
-  font-weight: 700;
-  border-radius: 7px;
 
-  transition:
-    transform 300ms ease,
-    background-color 300ms ease;
+  transition: transform 300ms ease;
   will-change: transform;
 
   &:hover {
@@ -54,7 +94,20 @@
   }
 }
 
+kbd {
+  font-size: 0.65rem;
+  position: absolute;
+  top: 2px;
+  right: 3px;
+}
+@media (max-width: 960px) {
+  kbd {
+    display: none;
+  }
+}
+
 :host ::ng-deep {
+  .item,
   .action-button {
     color: var(--game-item-color);
     svg {

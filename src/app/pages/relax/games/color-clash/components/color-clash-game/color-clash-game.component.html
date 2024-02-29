@@ -1,28 +1,45 @@
+<div class="header">
+  @if (warmUpRounds() < 3) {
+    <span i18n>Warm-up laps</span>: {{ 3 - warmUpRounds() }}
+  } @else {
+    {{ time() }}
+  }
+</div>
+
 <div class="items">
-  <ng-container #itemsRef />
+  @for (item of viewItems(); track item.loopId) {
+    <div
+      [@viewItem]="{
+        value: 'in',
+        params: { color: item.isCorrect ? 'green' : 'red' }
+      }"
+      class="item pos-{{ $index }}"
+      [ngStyle]="{ '--game-item-color': item.color }"
+    >
+      <div class="mode">{{ item.mode | uppercase }}</div>
+      <div class="content" [innerHTML]="item.content"></div>
+    </div>
+  }
 </div>
 
 <div class="action-buttons">
   <ng-container #buttonsRef />
 </div>
 
-<ng-template #itemRef let-content="content" let-mode="mode">
-  <div class="item">
-    <div class="mode">{{ mode }}</div>
-    <div class="content" [innerHTML]="content"></div>
-  </div>
-</ng-template>
 <ng-template
   #buttonRef
-  let-index="index"
+  let-id="id"
   let-content="content"
   let-color="color"
+  let-shortcut="shortcut"
 >
   <button
     class="action-button"
     type="button"
-    (click)="buttonTap(index)"
-    [innerHTML]="content"
+    (click)="buttonTap(id, color)"
     [ngStyle]="{ '--game-item-color': color }"
-  ></button>
+  >
+    <div class="col" [innerHTML]="content"></div>
+    <kbd>{{shortcut}}</kbd>
+  </button>
 </ng-template>

@@ -24,6 +24,7 @@ import { GameStateChanged, Quiz } from '../../utils/quiz-interface';
   templateUrl: './quantum-quiz-game.component.html',
   styleUrls: [
     '../../../../styles/game-button.scss',
+    '../../../../styles/game-shortcut-key.scss',
     './quantum-quiz-game.component.scss',
   ],
 })
