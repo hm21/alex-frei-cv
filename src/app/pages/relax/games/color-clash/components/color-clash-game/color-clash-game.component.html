@@ -1,0 +1,28 @@
+<div class="items">
+  <ng-container #itemsRef />
+</div>
+
+<div class="action-buttons">
+  <ng-container #buttonsRef />
+</div>
+
+<ng-template #itemRef let-content="content" let-mode="mode">
+  <div class="item">
+    <div class="mode">{{ mode }}</div>
+    <div class="content" [innerHTML]="content"></div>
+  </div>
+</ng-template>
+<ng-template
+  #buttonRef
+  let-index="index"
+  let-content="content"
+  let-color="color"
+>
+  <button
+    class="action-button"
+    type="button"
+    (click)="buttonTap(index)"
+    [innerHTML]="content"
+    [ngStyle]="{ '--game-item-color': color }"
+  ></button>
+</ng-template>

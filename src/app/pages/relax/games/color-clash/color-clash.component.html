@@ -1,0 +1,17 @@
+<header>
+  <af-back-btn path="/relax" />
+  <h1 i18n>Color Clash</h1>
+</header>
+
+<section>
+  @switch (gameState()) {
+    @case (GameState.instruction) {
+      <af-color-clash-instruction
+        (next)="gameState.set(GameState.active)"
+      />
+    }
+    @case (GameState.active) {
+      <af-color-clash-game />
+    }
+  }
+</section>

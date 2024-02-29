@@ -42,6 +42,8 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
     this.reset$.next(null);
 
     this.removeBackdrop();
+    
+    this.tap.emit();
   }
 
   private createBackdrop() {

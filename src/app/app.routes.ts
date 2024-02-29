@@ -37,16 +37,16 @@ export const routes: Routes = [
         data: { animation: 'QuantumQuizPage' },
         loadComponent: () =>
           import(
-            './pages/relax/components/quantum-quiz/quantum-quiz.component'
+            './pages/relax/games/quantum-quiz/quantum-quiz.component'
           ).then((m) => m.QuantumQuizComponent),
       },
       {
         path: 'color-clash',
         data: { animation: 'ColorClashPage' },
         loadComponent: () =>
-          import(
-            './pages/relax/components/color-clash/color-clash.component'
-          ).then((m) => m.ColorClashComponent),
+          import('./pages/relax/games/color-clash/color-clash.component').then(
+            (m) => m.ColorClashComponent,
+          ),
       },
     ],
   },

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+   <url>
+      <loc>https://alex-frei.web.app/about-me</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/about-me" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/about-me" />
+   </url>
+   <url>
+      <loc>https://alex-frei.web.app/contact</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/contact" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/contact" />
+   </url>
+   <url>
+      <loc>https://alex-frei.web.app/portfolio</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/portfolio" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/portfolio" />
+   </url>
+   <url>
+      <loc>https://alex-frei.web.app/relax</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/relax" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/relax" />
+   </url>
+   <url>
+      <loc>https://alex-frei.web.app/relax/color-clash</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/relax/color-clash" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/relax/color-clash" />
+   </url>
+   <url>
+      <loc>https://alex-frei.web.app/relax/quantum-quiz</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/relax/quantum-quiz" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/relax/quantum-quiz" />
+   </url>
+   <url>
+      <loc>https://alex-frei.web.app/resume</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="https://alex-frei.web.app/en/resume" />
+      <xhtml:link rel="alternate" hreflang="de" href="https://alex-frei.web.app/de/resume" />
+   </url>
+</urlset>
