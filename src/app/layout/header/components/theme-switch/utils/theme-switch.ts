@@ -5,9 +5,10 @@ export function getTheme() {
     return localStorageTheme;
   }
 
-  const systemThemeIsDark = window.matchMedia(
+  return 'light';
+  /* const systemThemeIsDark = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches;
 
-  return systemThemeIsDark ? 'dark' : 'light';
+  return systemThemeIsDark ? 'dark' : 'light'; */
 }

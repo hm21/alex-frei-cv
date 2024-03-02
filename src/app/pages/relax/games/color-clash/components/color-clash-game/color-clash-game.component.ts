@@ -283,15 +283,17 @@ export class ColorClashGameComponent
         ? lastItem.color === color
         : lastItem!.id === id;
 
-    if (this.warmUpRounds() >= 3) {
+    if (this.warmUpRounds() > 3) {
       lastItem.isCorrect ? this.points++ : this.mistakes++;
     }
 
     timer(1)
       .pipe(this.destroyPipe())
       .subscribe(() => {
+        if (this.warmUpRounds() >= 3 && !this.activeCountdown) {
+          this.startCountdown();
+        }
         this.viewItems().pop();
-        if (!this.activeCountdown) this.startCountdown();
         this.generateItems();
       });
   }
@@ -389,6 +391,7 @@ export class ColorClashGameComponent
     );
 
     if (
+      !highScore.points ||
       this.mistakes < highScore?.mistakes ||
       (this.mistakes <= highScore?.mistakes && this.points > highScore.points)
     ) {
