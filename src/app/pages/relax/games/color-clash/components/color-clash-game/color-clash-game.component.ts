@@ -8,8 +8,10 @@ import {
 import { DOCUMENT, NgStyle, UpperCasePipe } from '@angular/common';
 import {
   Component,
+  EventEmitter,
   OnDestroy,
   OnInit,
+  Output,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
@@ -30,6 +32,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
   ColorClashGameButton,
   ColorClashGameItem,
+  ColorClashGameState,
   ColorClashRandomItem,
 } from '../../utils/color-clash-interface';
 
@@ -77,6 +80,9 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  @Output() updateGameState = new EventEmitter<ColorClashGameState>();
+  public GameState = ColorClashGameState;
+
   @ViewChild('buttonsRef', { static: true, read: ViewContainerRef })
   buttonsRef!: ViewContainerRef;
 

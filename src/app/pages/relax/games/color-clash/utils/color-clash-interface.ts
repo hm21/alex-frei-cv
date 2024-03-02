@@ -3,6 +3,7 @@ import { SafeHtml } from '@angular/platform-browser';
 export enum ColorClashGameState {
   instruction,
   active,
+  evaluation,
 }
 
 export interface ColorClashGameItem {

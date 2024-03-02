@@ -7,11 +7,21 @@
   @switch (gameState()) {
     @case (GameState.instruction) {
       <af-color-clash-instruction
+        @cardFadeInUpScale
         (next)="gameState.set(GameState.active)"
       />
     }
     @case (GameState.active) {
-      <af-color-clash-game />
+      <af-color-clash-game
+        @cardFadeInUpScale
+        (updateGameState)="gameState.set($event)"
+      />
+    }
+    @case (GameState.evaluation) {
+      <af-color-clash-evaluation
+        @cardFadeInUpScale
+        (updateGameState)="gameState.set($event)"
+      />
     }
   }
 </section>

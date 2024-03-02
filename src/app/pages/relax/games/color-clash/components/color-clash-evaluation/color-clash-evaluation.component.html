@@ -1,0 +1,17 @@
+<h2 i18n>Evaluation</h2>
+
+<p i18n>
+  Congratulations, you scored {{ points }} points and {{ mistakes }} mistakes!
+</p>
+<br />
+
+<div class="action-row">
+  <button
+    (click)="updateGameState.emit(GameState.active)"
+    class="button"
+    type="button"
+    i18n
+  >
+    Play again
+  </button>
+</div>
