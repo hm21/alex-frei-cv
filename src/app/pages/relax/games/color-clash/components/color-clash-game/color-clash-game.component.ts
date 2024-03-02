@@ -30,6 +30,7 @@ import {
 } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
+  ColorClashFinishEvent,
   ColorClashGameButton,
   ColorClashGameItem,
   ColorClashGameState,
@@ -80,6 +81,7 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  @Output() finishGame = new EventEmitter<ColorClashFinishEvent>();
   @Output() updateGameState = new EventEmitter<ColorClashGameState>();
   public GameState = ColorClashGameState;
 
@@ -99,7 +101,7 @@ export class ColorClashGameComponent
   public time = signal('02:00');
   public warmUpRounds = signal(0);
   private points = 0;
-  private wrong = 0;
+  private mistakes = 0;
   private itemCount = 0;
 
   private readonly shortcutKeys = ['s', 'd', 'f', 'j', 'k', 'l'];
@@ -282,7 +284,7 @@ export class ColorClashGameComponent
         : lastItem!.id === id;
 
     if (this.warmUpRounds() >= 3) {
-      lastItem.isCorrect ? this.points++ : this.wrong++;
+      lastItem.isCorrect ? this.points++ : this.mistakes++;
     }
 
     timer(1)
@@ -370,9 +372,37 @@ export class ColorClashGameComponent
       .subscribe((time) => {
         this.time.set(time);
         if (time === '00:00') {
-          this.activeCountdown = false;
-          this.countdownDestroy$.next(true);
+          this.setGameFinish();
         }
       });
+  }
+  private setGameFinish() {
+    this.activeCountdown = false;
+    this.countdownDestroy$.next(true);
+
+    const highScore = JSON.parse(
+      localStorage.getItem('color-clash-high-score') ??
+        JSON.stringify({
+          points: 0,
+          mistakes: 0,
+        }),
+    );
+
+    if (
+      this.mistakes < highScore?.mistakes ||
+      (this.mistakes <= highScore?.mistakes && this.points > highScore.points)
+    ) {
+      localStorage.setItem(
+        'color-clash-high-score',
+        JSON.stringify({
+          points: this.points,
+          mistakes: this.mistakes,
+        }),
+      );
+    }
+    this.finishGame.emit({
+      points: this.points,
+      mistakes: this.mistakes,
+    });
   }
 }

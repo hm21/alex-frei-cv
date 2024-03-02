@@ -14,12 +14,15 @@
     @case (GameState.active) {
       <af-color-clash-game
         @cardFadeInUpScale
+        (finishGame)="onFinishGame($event)"
         (updateGameState)="gameState.set($event)"
       />
     }
     @case (GameState.evaluation) {
       <af-color-clash-evaluation
         @cardFadeInUpScale
+        [points]="points()"
+        [mistakes]="mistakes()"
         (updateGameState)="gameState.set($event)"
       />
     }

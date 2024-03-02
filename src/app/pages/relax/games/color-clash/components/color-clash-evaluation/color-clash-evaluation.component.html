@@ -2,6 +2,12 @@
 
 <p i18n>
   Congratulations, you scored {{ points }} points and {{ mistakes }} mistakes!
+  <br /><br />
+  {{ msg }}
+  @if (highScoreMsg) {
+    <br /><br />
+    {{ highScoreMsg }}
+  }
 </p>
 <br />
 

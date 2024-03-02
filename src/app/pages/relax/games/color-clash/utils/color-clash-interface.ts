@@ -25,3 +25,7 @@ export interface ColorClashRandomItem {
   id: string;
   content: string | number;
 }
+export interface ColorClashFinishEvent{
+  points:number;
+  mistakes:number;
+}

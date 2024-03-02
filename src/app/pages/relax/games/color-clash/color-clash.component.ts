@@ -6,7 +6,10 @@ import { MetaDataI } from 'src/app/utils/meta-generator';
 import { ColorClashEvaluationComponent } from './components/color-clash-evaluation/color-clash-evaluation.component';
 import { ColorClashGameComponent } from './components/color-clash-game/color-clash-game.component';
 import { ColorClashInstructionComponent } from './components/color-clash-instruction/color-clash-instruction.component';
-import { ColorClashGameState } from './utils/color-clash-interface';
+import {
+  ColorClashFinishEvent,
+  ColorClashGameState,
+} from './utils/color-clash-interface';
 
 @Component({
   selector: 'af-color-clash',
@@ -17,9 +20,7 @@ import { ColorClashGameState } from './utils/color-clash-interface';
     ColorClashGameComponent,
     ColorClashEvaluationComponent,
   ],
-  animations:[
-    cardFadeInUpScale
-  ],
+  animations: [cardFadeInUpScale],
   templateUrl: './color-clash.component.html',
   styleUrls: [
     '../../styles/game-styles.scss',
@@ -34,6 +35,15 @@ export class ColorClashComponent extends ExtendedComponent {
   };
   public GameState = ColorClashGameState;
   public gameState = signal<ColorClashGameState>(
-    ColorClashGameState.evaluation,
+    ColorClashGameState.instruction,
   );
+
+  public points = signal(0);
+  public mistakes = signal(0);
+
+  public onFinishGame(ev: ColorClashFinishEvent) {
+    this.points.set(ev.points);
+    this.mistakes.set(ev.mistakes);
+    this.gameState.set(ColorClashGameState.evaluation);
+  }
 }
