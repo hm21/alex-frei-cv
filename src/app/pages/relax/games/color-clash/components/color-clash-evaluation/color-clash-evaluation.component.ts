@@ -43,7 +43,7 @@ export class ColorClashEvaluationComponent
   }
 
   private generateRatingText() {
-    if (this.mistakes > 7) {
+    if (this.mistakes > 5) {
       this.msg = $localize`You made a lot of mistakes. Take it slow next time, I\'m sure you can get better!`;
     } else if (this.mistakes > 0) {
       this.msg = $localize`Not bad, you just made a few mistakes. But can you also do it without any mistakes?`;

@@ -1,5 +1,9 @@
 :host {
   background-color: var(--profile-banner-background);
+  background: linear-gradient(
+    var(--profile-banner-background),
+    var(--profile-banner-background)
+  );
 
   padding: 65px 0 10px;
   height: 100%;

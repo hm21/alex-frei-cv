@@ -283,7 +283,7 @@ export class ColorClashGameComponent
         ? lastItem.color === color
         : lastItem!.id === id;
 
-    if (this.warmUpRounds() > 3) {
+    if (this.activeCountdown) {
       lastItem.isCorrect ? this.points++ : this.mistakes++;
     }
 

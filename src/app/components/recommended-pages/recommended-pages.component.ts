@@ -54,6 +54,10 @@ export class RecommendedPagesComponent
   }
 
   private createItems() {
+    const listBefore: any[] = [];
+    const listAfter: any[] = [];
+    const activeIndex = navItems.findIndex((e) => e.id === this.activeId);
+
     navItems
       .filter((el) => el.id !== 'contact' && el.id !== this.activeId)
       .map((el) => {
@@ -73,8 +77,15 @@ export class RecommendedPagesComponent
         }
         return el;
       })
-      .forEach((item) => {
-        this.container.createEmbeddedView(this.itemTemplate, item);
+      .forEach((el) => {
+        if (navItems.findIndex((e) => e.id === el.id) > activeIndex) {
+          listAfter.push(el);
+        } else {
+          listBefore.push(el);
+        }
       });
+    [...listAfter, ...listBefore].forEach((item) => {
+      this.container.createEmbeddedView(this.itemTemplate, item);
+    });
   }
 }

@@ -64,14 +64,14 @@ export class ResumeTimelineComponent {
       Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.`,
     },
     {
-      date: $localize`2021 - 2023`,
-      title: $localize`Project start “snaptab”`,
-      msg: $localize`Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.`,
-    },
-    {
       date: $localize`October 24, 2022`,
       title: $localize`Married`,
       msg: $localize`Married with my wife in vietnam.`,
+    },
+    {
+      date: $localize`2021 - Today`,
+      title: $localize`Project “snaptab”`,
+      msg: $localize`Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.`,
     },
   ];
 }

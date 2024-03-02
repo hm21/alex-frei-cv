@@ -92,7 +92,11 @@ td {
       margin-right: 0px;
     }
     &:last-child {
-      background-color: var(--card-background-color-accent);
+      background-color: var(--card-background-accent);
+      background: linear-gradient(
+        var(--card-background-accent),
+        var(--card-background-accent)
+      );
     }
   }
 }

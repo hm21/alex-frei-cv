@@ -36,6 +36,7 @@ button {
     color: var(--text-color-primary);
   }
 
+  &:focus-visible,
   &:hover {
     text-decoration: none;
     background-color: var(--color-light);

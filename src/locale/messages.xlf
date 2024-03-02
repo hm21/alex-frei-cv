@@ -24,6 +24,13 @@
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="7618870723010461457" datatype="html">
+        <source>en</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
         <source>Open sidemenu</source>
         <context-group purpose="location">

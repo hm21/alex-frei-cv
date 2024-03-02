@@ -2,6 +2,7 @@
   overflow: hidden;
   border: 1px solid var(--border-color);
   border-radius: 7px;
+  outline: none;
 
   flex-shrink: 0;
 
@@ -11,6 +12,7 @@
 
   position: relative;
 
+  &:focus-within,
   &:hover {
     border: 1px solid var(--border-color-darken);
     .action {
@@ -31,6 +33,7 @@ a {
 
   display: flex;
   align-items: center;
+  outline: none;
 }
 
 .col {

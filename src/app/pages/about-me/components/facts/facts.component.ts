@@ -33,12 +33,12 @@ export class FactsComponent
   private items = signal([
     {
       title: $localize`Coffee Consumed`,
-      value: 13,
+      value: 20,
       icon: 'coffee',
     },
     {
       title: $localize`Walking Breaks`,
-      value: 5,
+      value: 9,
       icon: 'walking',
     },
     {

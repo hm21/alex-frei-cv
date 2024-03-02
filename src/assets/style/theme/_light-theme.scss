@@ -1,27 +1,26 @@
 [data-theme="light"] {
-  --color-accent: #d5e8ff;
   --item-hover-color: rgb(215, 215, 230);
-  --menu-background-color: #ffffff;
-  --card-background-color: #ffffff;
+
+  --card-background: #ffffff;
+  --card-background-accent: #f1fcff;
   --card-hover-color: #f0f6ff;
-  --card-background-color-accent: #f1fcff;
+
   --input-background-color: #ffffff;
-  --shadow-primary: #040e2e29;
+  --shadow-color: #040e2e29;
 
   --text-color-primary: #353535;
   --text-color-secondary: #5c5c5c;
-  --text-color-accent: #ffffff;
 
   --page-background-primary: #ffffff;
-
-  --profile-banner-background: #04b4e0;
 
   --border-color: rgba(0, 0, 0, 0.3);
   --border-color-darken: rgba(0, 0, 0, 0.6);
 
-  --color-primary: #04b4e0;
+  --color-primary: #3b79ad; // #04b4e0;
+  --color-accent: #d5e8ff;
   --color-light: #f5f5f5;
 
+  --profile-banner-background: var(--color-primary);
   --skill-icon-background: #edf0f4;
 
   --icon-primary: #2d527c;
