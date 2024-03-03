@@ -39,7 +39,7 @@ main {
     width: $menu-size;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (max-height: 489px) {
   main {
     margin-left: 0px;
   }

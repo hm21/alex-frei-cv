@@ -17,7 +17,7 @@ aside {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (max-height: 489px) {
   .af-nav-mobile-menu-toggle-btn {
     z-index: 1001;
     display: unset;
