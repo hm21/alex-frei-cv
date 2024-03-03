@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ColorClashGameComponent } from './color-clash-game.component';
 
 describe('ColorClashGameComponent', () => {
@@ -8,10 +9,15 @@ describe('ColorClashGameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ColorClashGameComponent]
-    })
-    .compileComponents();
-    
+      imports: [
+        ColorClashGameComponent,
+        BrowserAnimationsModule,
+        SharedTestingModule,
+      ],
+    }).compileComponents();
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(ColorClashGameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -19,5 +25,33 @@ describe('ColorClashGameComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should generate game items', () => {
+    component.ngOnInit();
+    expect(component.viewItems().length).toBe(3);
+  });
+
+  it('should handle button tap', () => {
+    const mockId = 'mock-id';
+    const mockColor = 'mock-color';
+    const initialItemsLength = component.viewItems().length;
+    component.buttonTap(mockId, mockColor);
+    expect(component.viewItems().length).toBe(initialItemsLength - 1);
+  });
+
+  it('should start countdown', () => {
+    component.ngOnInit();
+    const initialTime = component.time();
+    component['startCountdown']();
+    fixture.detectChanges();
+    expect(component.time()).not.toBe(initialTime);
+  });
+
+  it('should set game finish', () => {
+    spyOn(localStorage, 'getItem').and.returnValue(null);
+    spyOn(localStorage, 'setItem');
+    component['setGameFinish']();
+    expect(localStorage.setItem).toHaveBeenCalled();
   });
 });

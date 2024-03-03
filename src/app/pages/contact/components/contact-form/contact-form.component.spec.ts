@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ContactFormComponent } from './contact-form.component';
 
 describe('ContactFormComponent', () => {
@@ -8,7 +9,7 @@ describe('ContactFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactFormComponent]
+      imports: [ContactFormComponent, SharedTestingModule]
     })
     .compileComponents();
     

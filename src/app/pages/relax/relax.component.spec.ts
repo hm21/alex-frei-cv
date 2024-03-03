@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { RelaxComponent } from './relax.component';
 
 describe('RelaxComponent', () => {
@@ -8,7 +9,7 @@ describe('RelaxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RelaxComponent]
+      imports: [RelaxComponent, SharedTestingModule]
     })
     .compileComponents();
     

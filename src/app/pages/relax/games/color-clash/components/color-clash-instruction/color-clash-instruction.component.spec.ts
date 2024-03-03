@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ColorClashInstructionComponent } from './color-clash-instruction.component';
 
 describe('ColorClashInstructionComponent', () => {
@@ -8,10 +9,9 @@ describe('ColorClashInstructionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ColorClashInstructionComponent]
-    })
-    .compileComponents();
-    
+      imports: [ColorClashInstructionComponent, SharedTestingModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ColorClashInstructionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

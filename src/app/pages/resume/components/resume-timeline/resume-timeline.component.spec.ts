@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ResumeTimelineComponent } from './resume-timeline.component';
 
 describe('ResumeTimelineComponent', () => {
@@ -8,7 +9,7 @@ describe('ResumeTimelineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResumeTimelineComponent]
+      imports: [ResumeTimelineComponent, SharedTestingModule]
     })
     .compileComponents();
     

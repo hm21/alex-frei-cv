@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { PortfolioComponent } from './portfolio.component';
 
 describe('PortfolioComponent', () => {
@@ -8,10 +9,9 @@ describe('PortfolioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PortfolioComponent]
-    })
-    .compileComponents();
-    
+      imports: [PortfolioComponent, SharedTestingModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(PortfolioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

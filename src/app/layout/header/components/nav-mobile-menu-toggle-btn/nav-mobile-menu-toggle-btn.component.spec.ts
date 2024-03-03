@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { NavMobileMenuToggleBtnComponent } from './nav-mobile-menu-toggle-btn.component';
 
 describe('NavMobileMenuToggleBtnComponent', () => {
@@ -8,7 +9,7 @@ describe('NavMobileMenuToggleBtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavMobileMenuToggleBtnComponent ]
+      imports: [ NavMobileMenuToggleBtnComponent, SharedTestingModule ]
     })
     .compileComponents();
 

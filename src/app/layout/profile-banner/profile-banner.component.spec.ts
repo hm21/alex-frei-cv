@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ProfileBannerComponent } from './profile-banner.component';
 
 describe('ProfileBannerComponent', () => {
@@ -8,7 +9,7 @@ describe('ProfileBannerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProfileBannerComponent]
+      imports: [ProfileBannerComponent, SharedTestingModule]
     })
     .compileComponents();
     

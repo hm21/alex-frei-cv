@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ThemeSwitchComponent } from './theme-switch.component';
 
 describe('ThemeSwitchComponent', () => {
@@ -8,7 +9,7 @@ describe('ThemeSwitchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ThemeSwitchComponent]
+      imports: [ThemeSwitchComponent, SharedTestingModule]
     })
     .compileComponents();
     

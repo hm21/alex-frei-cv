@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { LanguageSwitchComponent } from './language-switch.component';
 
 describe('LanguageSwitchComponent', () => {
@@ -8,10 +9,9 @@ describe('LanguageSwitchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LanguageSwitchComponent]
-    })
-    .compileComponents();
-    
+      imports: [LanguageSwitchComponent, SharedTestingModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(LanguageSwitchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

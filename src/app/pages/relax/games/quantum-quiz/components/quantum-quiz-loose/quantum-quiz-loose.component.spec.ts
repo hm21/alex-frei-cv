@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { QuantumQuizLooseComponent } from './quantum-quiz-loose.component';
 
 describe('QuantumQuizLooseComponent', () => {
@@ -8,7 +9,7 @@ describe('QuantumQuizLooseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [QuantumQuizLooseComponent]
+      imports: [QuantumQuizLooseComponent, SharedTestingModule]
     })
     .compileComponents();
     

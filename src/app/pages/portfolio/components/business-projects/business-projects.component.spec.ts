@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { BusinessProjectsComponent } from './business-projects.component';
 
 describe('BusinessProjectsComponent', () => {
@@ -8,7 +9,7 @@ describe('BusinessProjectsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BusinessProjectsComponent]
+      imports: [BusinessProjectsComponent, SharedTestingModule]
     })
     .compileComponents();
     

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { BackBtnComponent } from './back-btn.component';
 
 describe('BackBtnComponent', () => {
@@ -8,7 +9,7 @@ describe('BackBtnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BackBtnComponent]
+      imports: [BackBtnComponent, SharedTestingModule]
     })
     .compileComponents();
     

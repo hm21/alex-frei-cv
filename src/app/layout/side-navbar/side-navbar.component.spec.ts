@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { SideNavbarComponent } from './side-navbar.component';
 
 describe('SideNavbarComponent', () => {
@@ -8,7 +9,7 @@ describe('SideNavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SideNavbarComponent]
+      imports: [SideNavbarComponent, SharedTestingModule]
     })
     .compileComponents();
     

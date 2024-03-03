@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ColorClashEvaluationComponent } from './color-clash-evaluation.component';
 
 describe('ColorClashEvaluationComponent', () => {
@@ -8,7 +9,7 @@ describe('ColorClashEvaluationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ColorClashEvaluationComponent]
+      imports: [ColorClashEvaluationComponent, SharedTestingModule]
     })
     .compileComponents();
     
