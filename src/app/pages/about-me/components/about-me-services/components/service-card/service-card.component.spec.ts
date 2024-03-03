@@ -14,6 +14,9 @@ describe('ServiceCardComponent', () => {
 
     fixture = TestBed.createComponent(ServiceCardComponent);
     component = fixture.componentInstance;
+    component.title = 'Test Title';
+    component.icon = 'website';
+    component.msg = 'Test Message';
     fixture.detectChanges();
   });
 

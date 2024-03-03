@@ -103,11 +103,13 @@ footer {
 @media (max-width: 1024px), (max-height: 489px) {
   :host {
     max-height: 100vh;
+    padding: 30px 0 10px;
     overflow: auto;
   }
   .social {
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 20px;
   }
   footer {
     padding: 0 15px;
@@ -119,6 +121,9 @@ footer {
   }
   .af-theme-switch {
     margin-left: auto;
+  }
+  picture{
+    margin-bottom: 10px;
   }
   h2 {
     margin-bottom: 30px;
