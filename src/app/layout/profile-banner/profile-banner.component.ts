@@ -78,7 +78,7 @@ export class ProfileBannerComponent
   private checkMobileMenuItems() {
     if (!this.isBrowser) return;
 
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 1024 || window.innerHeight <= 489) {
       if (this.navItemsRef.length <= 0) this.createNavItems();
       if (this.languageContainerRef.length === 0) {
         this.languageContainerRef.createComponent(LanguageSwitchComponent);
