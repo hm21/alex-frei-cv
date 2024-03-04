@@ -45,7 +45,7 @@ export class FactsComponent
       icon: 'walking',
     },
     {
-      title: $localize`Listen Songs`,
+      title: $localize`Songs listened`,
       value: 425,
       icon: 'music',
     },

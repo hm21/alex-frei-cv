@@ -57,7 +57,7 @@ export class AboutMeServicesComponent
       title: $localize`Backend`,
       msg: $localize`
         As a backend developer, I architect robust and scalable systems to power your applications. 
-        From database design to server-side logic, I ensure seamless functionality and reliability, allowing you to focus on growing your business.
+        From database design to server-side logic, I ensure seamless functionality and reliability.
       `,
       icon: 'backend',
     },

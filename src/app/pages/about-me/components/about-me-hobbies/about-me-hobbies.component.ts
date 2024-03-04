@@ -51,17 +51,17 @@ export class AboutMeHobbiesComponent
   }[] = [
     {
       title: $localize`Hiking`,
-      message: $localize`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.`,
+      message: $localize`I'm the one who loves the silence of the wilderness, follows the call of the birds and experiences nature as his own symphony.`,
       icon: 'hiking',
     },
     {
       title: $localize`Travel`,
-      message: $localize`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.`,
+      message: $localize`I love to travel and explore new places, meet new people and learn about different cultures. I'm always ready for a new adventure.`,
       icon: 'travel',
     },
     {
       title: $localize`Develop`,
-      message: $localize`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.`,
+      message: $localize`As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.`,
       icon: 'develop',
     },
   ];

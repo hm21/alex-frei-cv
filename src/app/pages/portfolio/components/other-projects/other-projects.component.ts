@@ -43,7 +43,10 @@ export class OtherProjectsComponent implements OnInit {
         You can find one of these games by clicking on the "Team" tab and then pressing the "Icebreaker" button. 
         The other game is hidden as an "easter egg" on the homepage. Simply scroll to the "For all devices" section, 
         click on the red rectangle (which represents a phone with a scale animation).<br/><br/>
-        On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.
+        On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.<br/><br/>
+        The website was designed with a focus on performance and accessibility, and it is fully responsive,
+        ensuring a seamless experience across all devices.<br/><br/>
+        Most of the UI/UX part of this project is not mine.
         `,
         images: [
           {
