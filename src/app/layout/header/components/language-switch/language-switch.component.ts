@@ -64,11 +64,24 @@ export class LanguageSwitchComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /**
+   * Indicates whether the language dropdown is shown.
+   */
   public showLanguage = false;
+
+  /**
+   * The active language.
+   */
   public activeLanguage!: Language;
 
+  /**
+   * The default language ID.
+   */
   private readonly languageId = $localize`en`;
 
+  /**
+   * Array of supported languages.
+   */
   public languages: Language[] = [
     {
       iso2: 'en',
@@ -82,8 +95,14 @@ export class LanguageSwitchComponent
     },
   ];
 
-  isDarkMode = false;
+  /**
+   * Indicates whether dark mode is enabled.
+   */
+  public isDarkMode = false;
 
+  /**
+   * Document reference for accessing DOM.
+   */
   private document = inject(DOCUMENT);
 
   override ngOnInit(): void {
@@ -95,6 +114,10 @@ export class LanguageSwitchComponent
     super.ngOnInit();
   }
 
+  /**
+   * Listens for click events outside the language dropdown to close it.
+   * @private
+   */
   private listenDropdownClose() {
     this.ngZone.runOutsideAngular(() => {
       fromEvent(this.document, 'click')
@@ -109,6 +132,10 @@ export class LanguageSwitchComponent
     });
   }
 
+  /**
+   * Changes the language.
+   * @param {Language} language The language to change to.
+   */
   public changeLanguage(language: Language) {
     this.showLanguage = false;
 

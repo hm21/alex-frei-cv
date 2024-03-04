@@ -13,4 +13,26 @@ describe('ModalManagerService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should open modal', () => {
+    const mockComponent = { name: 'MockComponent' };
+    const mockData = { data: { id: 123 } };
+
+    service.openModal(mockComponent, mockData);
+
+    expect(service.modalData).toEqual(mockData.data);
+    service.modal$.subscribe((modal) => {
+      expect(modal.type).toBe('add');
+      expect(modal.component).toBe(mockComponent);
+    });
+  });
+
+  it('should close modal', () => {
+    service.closeModal();
+
+    expect(service.modalData).toBeUndefined();
+    service.modal$.subscribe((modal) => {
+      expect(modal.type).toBe('remove');
+    });
+  });
 });

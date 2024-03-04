@@ -7,6 +7,9 @@ import {
   trigger,
 } from '@angular/animations';
 
+/**
+ * Defines the animation for a modal component.
+ */
 export const modalAnimation = trigger('modal', [
   transition(
     ':enter',

@@ -10,5 +10,10 @@ import { QuicklinkModule } from 'ngx-quicklink';
   styleUrl: './back-btn.component.scss',
 })
 export class BackBtnComponent {
+  /**
+   * The path to navigate back to.
+   * @type {string}
+   * @required
+   */
   @Input({ required: true }) path!: string;
 }

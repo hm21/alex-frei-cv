@@ -1,5 +1,8 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 
+/**
+ * Defines the animation for a card component.
+ */
 export const cardFadeInUpScale = trigger('cardFadeInUpScale', [
   transition(
     ':enter',

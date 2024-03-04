@@ -18,15 +18,34 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   standalone: true,
 })
 export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
+  /**
+   * Indicates whether the mobile menu is open.
+   */
   @Input({ transform: booleanAttribute }) open = false;
+  /**
+   * Event emitter for tap event.
+   */
   @Output() tap = new EventEmitter();
 
+  /**
+   * Temporary backdrop reference.
+   * @private
+   */
   private tempBackdrop?: HTMLDivElement;
 
+  /**
+   * Subject for resetting.
+   */
   private reset$ = new Subject();
 
+  /**
+   * Document reference for accessing DOM.
+   */
   private document = inject(DOCUMENT);
 
+  /**
+   * Toggles the mobile menu.
+   */
   public toggleMenu() {
     this.reset$.next(null);
 
@@ -38,6 +57,10 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
 
     this.tap.emit();
   }
+
+  /**
+   * Closes the mobile menu.
+   */
   public closeMenu() {
     this.reset$.next(null);
 
@@ -46,6 +69,10 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
     this.tap.emit();
   }
 
+  /**
+   * Creates the backdrop for the mobile menu.
+   * @private
+   */
   private createBackdrop() {
     const backdrop = this.document.createElement('div');
     backdrop.id = 'sidebar-backdrop';
@@ -73,6 +100,10 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
     this.tempBackdrop = backdrop;
   }
 
+  /**
+   * Removes the backdrop for the mobile menu.
+   * @private
+   */
   private removeBackdrop() {
     if (this.tempBackdrop) {
       this.tempBackdrop!.classList.replace('fade-in', 'fade-out');

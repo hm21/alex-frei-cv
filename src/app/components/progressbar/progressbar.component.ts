@@ -26,16 +26,46 @@ export class ProgressbarComponent
   extends ExtendedComponent
   implements AfterViewInit
 {
+  /**
+   * Reference to the progress bar element.
+   * @type {ElementRef<HTMLElement>}
+   */
   @ViewChild('barRef') barRef!: ElementRef<HTMLElement>;
 
+  /**
+   * The progress value for the progress bar.
+   * @type {number}
+   * @required
+   */
   @Input({ required: true, transform: numberAttribute }) progress!: number;
+
+  /**
+   * The name of the progress bar.
+   * @type {string}
+   * @required
+   */
   @Input({ required: true }) name!: string;
 
+  /**
+   * Renderer for manipulating DOM elements.
+   */
   private renderer = inject(Renderer2);
+
+  /**
+   * Document reference for accessing DOM.
+   */
   private document = inject(DOCUMENT);
 
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;
+
+    this.initScrollListener();
+  }
+  
+  /**
+   * Initializes the scroll listener for the progress bar.
+   */
+  private initScrollListener() {
     const barElement = this.barRef.nativeElement;
 
     this.ngZone.runOutsideAngular(() => {

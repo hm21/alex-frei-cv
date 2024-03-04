@@ -1,3 +1,7 @@
+/**
+ * Array of navigation items.
+ * @type {NavItem[]}
+ */
 export const navItems: NavItem[] = [
   {
     path: '/about-me',
@@ -31,6 +35,10 @@ export const navItems: NavItem[] = [
   },
 ];
 
+/**
+ * Interface representing a navigation item.
+ * @interface
+ */
 interface NavItem {
   path: string;
   name: string;
@@ -38,4 +46,14 @@ interface NavItem {
   id: NavItemId;
   icon?: any;
 }
-export type NavItemId = 'aboutMe' | 'resume' | 'portfolio' | 'relax' | 'contact';
+
+/**
+ * Interface representing a navigation item.
+ * @interface
+ */
+export type NavItemId =
+  | 'aboutMe'
+  | 'resume'
+  | 'portfolio'
+  | 'relax'
+  | 'contact';

@@ -1,3 +1,6 @@
+/**
+ * The icon for the about me link.
+ */
 export const aboutMeIcon = `
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -9,6 +12,9 @@ export const aboutMeIcon = `
     <circle cx="12" cy="6" r="4" class="stroke" stroke-width="1" />
   </svg>`;
 
+/**
+ * The icon for the resume link.
+ */
 export const resumeIcon = `
   <svg class="fill" viewBox="0 0 846.66 846.66">
     <path
@@ -16,6 +22,9 @@ export const resumeIcon = `
     />
   </svg>`;
 
+/**
+ * The icon for the portfolio link.
+ */
 export const portfolioIcon = `
   <svg class="fill" viewBox="0 0 512 512">
     <path
@@ -34,6 +43,9 @@ export const portfolioIcon = `
     />
   </svg>`;
 
+/**
+ * The icon for the relax link.
+ */
 export const relaxIcon = `
   <svg class="fill" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
     <circle cx="59" cy="48" r="1" />
@@ -75,6 +87,9 @@ export const relaxIcon = `
     <path d="M32,45c-2.89,0-6,.939-6,3s3.11,3,6,3,6-.939,6-3S34.89,45,32,45Z" />
   </svg>`;
 
+/**
+ * The icon for the contact link.
+ */
 export const contactIcon = `
   <svg class="fill" viewBox="0 0 64 64">
     <path
