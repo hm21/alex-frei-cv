@@ -2,8 +2,8 @@ import { DOCUMENT } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { ProjectDetails } from '../utils/portfolio-interfaces';
 import {
-  ProjectDetails,
   ProjectDetailsComponent,
 } from './project-details.component';
 
@@ -79,7 +79,7 @@ describe('ProjectDetailsComponent', () => {
 
   it('should set videoPlayerLoaded to true on video player loaded', () => {
     component.onVideoPlayerLoaded();
-    expect(component.videoPlayerLoaded).toBeTrue();
+    expect(component.videoPlayerLoaded()).toBeTrue();
   });
 
   it('should return correct data', () => {
