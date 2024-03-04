@@ -10,6 +10,9 @@ import { ResumeTimelineItemComponent } from './resume-timeline-item/resume-timel
   styleUrl: './resume-timeline.component.scss',
 })
 export class ResumeTimelineComponent {
+  /**
+   * An array of resume timeline items.
+   */
   public items: ResumeTimelineItem[] = [
     {
       date: $localize`March 21, 1995`,

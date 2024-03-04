@@ -30,14 +30,31 @@ export class QuantumQuizChooseTopicComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /**
+   * The reference to the error view container.
+   */
   @ViewChild('errorRef', { read: ViewContainerRef, static: true })
   errorRef!: ViewContainerRef;
+
+  /**
+   * The reference to the error template.
+   */
   @ViewChild('errorTemplate', { read: TemplateRef, static: true })
   errorTemplate!: TemplateRef<any>;
 
+  /**
+   * The error message to display.
+   */
   @Input() errorMsg?: string;
+
+  /**
+   * Event emitter for generating a quiz.
+   */
   @Output() generateQuiz = new EventEmitter<string>();
 
+  /**
+   * The selected topic for the quiz.
+   */
   public topic = signal('');
 
   override ngOnInit(): void {
@@ -52,6 +69,10 @@ export class QuantumQuizChooseTopicComponent
     this.errorRef.clear();
   }
 
+  /**
+   * Generates a quiz based on the selected topic.
+   * @param random - Indicates whether to generate a random quiz or not.
+   */
   public generate(random?: boolean) {
     this.errorRef.clear();
     if (!random) {
@@ -60,7 +81,7 @@ export class QuantumQuizChooseTopicComponent
           $localize`The topic must be between 3 and 20 characters long!`,
         );
       } else if (!isNaN(+this.topic())) {
-        this.createError($localize`The topic must be a text and not number`);
+        this.createError($localize`The topic must be a text and not a number`);
       } else {
         this.generateQuiz.emit(random ? undefined : this.topic());
       }
@@ -69,6 +90,10 @@ export class QuantumQuizChooseTopicComponent
     }
   }
 
+  /**
+   * Creates an error message and displays it.
+   * @param msg - The error message to display.
+   */
   private createError(msg: string) {
     this.errorRef.createEmbeddedView(this.errorTemplate, {
       msg,

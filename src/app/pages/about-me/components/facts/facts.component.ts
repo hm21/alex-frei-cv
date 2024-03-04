@@ -25,11 +25,14 @@ export class FactsComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /** Reference to the container where fact items will be dynamically created. */
   @ViewChild('containerRef', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
+  /** Reference to the template for each fact item. */
   @ViewChild('itemTemplate', { read: TemplateRef, static: true })
   itemTemplate!: TemplateRef<any>;
 
+  /** Array of facts with their titles, values, and icons. */
   private items = signal([
     {
       title: $localize`Coffee Consumed`,
@@ -53,6 +56,7 @@ export class FactsComponent
     },
   ]);
 
+  /** Service for managing Git-related operations. */
   private gitManager = inject(GitManagerService);
 
   override ngOnInit(): void {
@@ -66,12 +70,14 @@ export class FactsComponent
     this.container.clear();
   }
 
+  /** Creates fact items based on the predefined data. */
   private createItems() {
     this.items().forEach((item) => {
       this.container.createEmbeddedView(this.itemTemplate, item);
     });
   }
 
+  /** Retrieves the current Git commit count asynchronously. */
   private async getCommitCount() {
     this.gitManager
       .getCommitCount()

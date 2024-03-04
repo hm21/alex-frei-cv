@@ -25,7 +25,14 @@ export class QuantumQuizLooseComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /**
+   * Event emitter for playing the game again.
+   */
   @Output() playAgain = new EventEmitter();
+
+  /**
+   * Input for the amount of cash won.
+   */
   @Input({ required: true }) wonCash: string | number = 0;
 
   override ngOnInit(): void {

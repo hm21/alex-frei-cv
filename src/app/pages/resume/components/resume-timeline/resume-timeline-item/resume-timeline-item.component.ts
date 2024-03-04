@@ -50,8 +50,14 @@ export class ResumeTimelineItemComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /**
+   * Represents a single item in the resume timeline.
+   */
   @Input({ required: true }) item!: ResumeTimelineItem;
 
+  /**
+   * Represents the animation state of the resume timeline item.
+   */
   public animationState = 'stop';
 
   override ngOnInit(): void {
@@ -59,6 +65,9 @@ export class ResumeTimelineItemComponent
     super.ngOnInit();
   }
 
+  /**
+   * Listens for hover events on the component and triggers the animation state change.
+   */
   private hoverListener() {
     this.ngZone.runOutsideAngular(() => {
       fromEvent(this.nativeElement, 'mouseenter')

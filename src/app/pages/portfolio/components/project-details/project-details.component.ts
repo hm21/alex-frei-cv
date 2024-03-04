@@ -6,13 +6,18 @@ import {
   ViewChild,
   ViewContainerRef,
   inject,
+  signal,
 } from '@angular/core';
-import { SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 import { NgxImageHeroModule } from 'ngx-image-hero';
 import { fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import {
+  BadgeTemplateI,
+  ProjectDetails,
+  UrlListTemplateI,
+} from '../utils/portfolio-interfaces';
 
 @Component({
   selector: 'af-project-details',
@@ -26,31 +31,57 @@ export class ProjectDetailsComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /** Reference to the container for displaying website URLs. */
   @ViewChild('websiteContainer', { read: ViewContainerRef, static: true })
   websiteContainer!: ViewContainerRef;
+  /** Reference to the container for displaying technology badges. */
   @ViewChild('technologyContainer', { read: ViewContainerRef, static: true })
   technologyContainer!: ViewContainerRef;
+  /** Reference to the container for displaying video player. */
   @ViewChild('videoContainer', { read: ViewContainerRef, static: true })
   videoContainer!: ViewContainerRef;
 
+  /** Reference to the badge template. */
   @ViewChild('badgeTemplate', { read: TemplateRef, static: true })
   badgeTemplate!: TemplateRef<{ title: string; items: BadgeTemplateI[] }>;
+  /** Reference to the URL list template. */
   @ViewChild('urlListTemplate', { read: TemplateRef, static: true })
   urlListTemplate!: TemplateRef<{ title: string; items: UrlListTemplateI[] }>;
+  /** Reference to the YouTube player template. */
   @ViewChild('youtubePlayer', { read: TemplateRef, static: true })
   youtubePlayer!: TemplateRef<{ url: string }>;
 
-  public modalAnimationDurationIn = 500;
-  public modalAnimationDurationOut = 300;
-  public modalFadeOut = false;
-  public videoPlayerLoaded = false;
-  public copiedInstallCode = false;
-  public showCopiedMsg = false;
+  /** Duration of modal animation for fade in. */
+  public readonly modalAnimationDurationIn = signal(500);
+  /** Duration of modal animation for fade out. */
+  public readonly modalAnimationDurationOut = signal(300);
+  /** Flag indicating if modal should fade out. */
+  public modalFadeOut = signal(false);
+  /** Flag indicating if video player is loaded. */
+  public videoPlayerLoaded = signal(false);
+  /** Flag indicating if install code is copied. */
+  public copiedInstallCode = signal(false);
+  /** Flag indicating if "Copied!" message should be shown. */
+  public showCopiedMsg = signal(false);
 
+  /** Modal manager service for managing modals. */
   private modalManager = inject(ModalManagerService);
+  /** Document reference for key event listeners. */
   private document = inject(DOCUMENT);
 
   override ngOnInit(): void {
+    this.createDetailInfos();
+    this.initKeyListeners();
+
+    super.ngOnInit();
+  }
+
+  /**
+   * Creates the detail information for the project.
+   * This method populates the website, store, video, and technology containers
+   * with the corresponding data from the `data` object.
+   */
+  private createDetailInfos() {
     if (this.data.website) {
       this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
         title: $localize`Website`,
@@ -62,6 +93,7 @@ export class ProjectDetailsComponent
         }),
       });
     }
+
     if (this.data.store) {
       this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
         title: $localize`Mobile-Store`,
@@ -100,12 +132,9 @@ export class ProjectDetailsComponent
         });
       });
     }
-
-    this.initKeyListeners();
-
-    super.ngOnInit();
   }
 
+  /** Initializes key event listeners. */
   private initKeyListeners() {
     fromEvent<KeyboardEvent>(this.document, 'keydown')
       .pipe(this.destroyPipe())
@@ -116,67 +145,39 @@ export class ProjectDetailsComponent
       });
   }
 
+  /** Closes the modal. */
   public closeModal() {
-    this.modalFadeOut = true;
+    this.modalFadeOut.set(true);
 
-    timer(this.modalAnimationDurationOut)
+    timer(this.modalAnimationDurationOut())
       .pipe(this.destroyPipe())
       .subscribe(() => {
         this.modalManager.closeModal();
       });
   }
 
+  /** Called when the video player is loaded. */
   public onVideoPlayerLoaded() {
-    this.videoPlayerLoaded = true;
+    this.videoPlayerLoaded.set(true);
   }
 
+  /**
+   * Copies text to clipboard.
+   * @param text Text to copy.
+   */
   public async copy(text: string) {
     await navigator.clipboard.writeText(text);
-    this.copiedInstallCode = true;
-    this.showCopiedMsg = true;
+    this.copiedInstallCode.set(true);
+    this.showCopiedMsg.set(true);
     timer(2_000)
       .pipe(this.destroyPipe())
       .subscribe(() => {
-        this.showCopiedMsg = false;
+        this.showCopiedMsg.set(false);
       });
   }
 
+  /** Gets the project details data. */
   public get data(): ProjectDetails {
     return this.modalManager.modalData;
   }
-}
-
-export interface ProjectDetails {
-  logo?: SafeHtml;
-  title: string;
-  subtitle: string;
-  description: string;
-  demoUrl?: string;
-  website?: UrlListTemplateI[];
-  store?: UrlListTemplateI[];
-  install?: string;
-  technology: {
-    frontend?: BadgeTemplateI[];
-    backend?: BadgeTemplateI[];
-    prototype?: BadgeTemplateI[];
-    other?: BadgeTemplateI[];
-  };
-  images: {
-    path: string;
-    alt: string;
-    ratio?: string;
-    backgroundColor?: string;
-    isGif?: boolean;
-  }[];
-  video?: SafeResourceUrl;
-}
-
-interface BadgeTemplateI {
-  name: string;
-}
-
-interface UrlListTemplateI {
-  url: string;
-  title: string;
-  name?: string;
 }

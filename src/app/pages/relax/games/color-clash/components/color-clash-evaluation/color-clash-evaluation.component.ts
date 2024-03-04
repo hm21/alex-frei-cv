@@ -5,6 +5,7 @@ import {
   OnInit,
   Output,
   numberAttribute,
+  signal,
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ColorClashGameState } from '../../utils/color-clash-interface';
@@ -24,14 +25,20 @@ export class ColorClashEvaluationComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /** Event emitter for updating the game state. */
   @Output() updateGameState = new EventEmitter<ColorClashGameState>();
+  /** Enumeration of Color Clash game states. */
   public GameState = ColorClashGameState;
 
+  /** Number of points achieved in the game. */
   @Input({ required: true, transform: numberAttribute }) points = 0;
+  /** Number of mistakes made in the game. */
   @Input({ required: true, transform: numberAttribute }) mistakes = 0;
 
-  public msg = ``;
-  public highScoreMsg = ``;
+  /** Message indicating the evaluation of the performance. */
+  public msg = signal('');
+  /** Message indicating the current high score. */
+  public highScoreMsg = signal('');
 
   override ngOnInit(): void {
     super.ngOnInit();
@@ -42,27 +49,45 @@ export class ColorClashEvaluationComponent
     this.classList.add('card');
   }
 
+  /** Generates the rating text based on points and mistakes. */
   private generateRatingText() {
     if (this.mistakes > 5) {
-      this.msg = $localize`You made a lot of mistakes. Take it slow next time, I\'m sure you can get better!`;
+      this.msg.set(
+        $localize`You made a lot of mistakes. Take it slow next time, I\'m sure you can get better!`,
+      );
     } else if (this.mistakes > 0) {
-      this.msg = $localize`Not bad, you just made a few mistakes. But can you also do it without any mistakes?`;
+      this.msg.set(
+        $localize`Not bad, you just made a few mistakes. But can you also do it without any mistakes?`,
+      );
     } else {
-      this.msg = $localize`Great job, you didn\'t make any mistakes. But can you score more points in that time without making any mistakes?`;
+      this.msg.set(
+        $localize`Great job, you didn\'t make any mistakes. But can you score more points in that time without making any mistakes?`,
+      );
       if (this.points < 120) {
-        this.msg += $localize`&nbspThe goal is to score more than 120 points without any mistakes!`;
+        this.msg.update(
+          (msg) =>
+            msg +
+            $localize`&nbspThe goal is to score more than 120 points without any mistakes!`,
+        );
       } else {
-        this.msg += $localize`&nbspBut wait a minute, you got more than 120 points?!! That's awesome, seems like you're a genius!`;
+        this.msg.update(
+          (msg) =>
+            msg +
+            $localize`&nbspBut wait a minute, you got more than 120 points?!! That's awesome, seems like you're a genius!`,
+        );
       }
     }
   }
 
+  /** Generates the high score message. */
   private generateHighScore() {
     const highScore = JSON.parse(
       localStorage.getItem('color-clash-high-score') ?? '{}',
     );
     if (highScore.points) {
-      this.highScoreMsg = $localize`Your current high score is ${highScore.points} points with ${highScore.mistakes} mistakes!`;
+      this.highScoreMsg.set(
+        $localize`Your current high score is ${highScore.points} points with ${highScore.mistakes} mistakes!`,
+      );
     }
   }
 }

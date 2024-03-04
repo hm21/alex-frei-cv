@@ -4,7 +4,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import {
-  ProjectDetails,
   ProjectDetailsComponent,
 } from '../project-details/project-details.component';
 import {
@@ -13,6 +12,7 @@ import {
   openSourceLogo,
   waioLogo,
 } from '../utils/logos';
+import { ProjectDetails } from '../utils/portfolio-interfaces';
 
 @Component({
   selector: 'af-other-projects',
@@ -22,9 +22,12 @@ import {
   styleUrl: './other-projects.component.scss',
 })
 export class OtherProjectsComponent implements OnInit {
+  /** Array of project items. */
   public items: ({ type: string } & ProjectDetails)[] = [];
 
+  /** Modal manager service for opening project details. */
   private modalManager = inject(ModalManagerService);
+  /** DomSanitizer for bypassing security. */
   private sanitizer = inject(DomSanitizer);
 
   ngOnInit(): void {
@@ -383,7 +386,12 @@ export class OtherProjectsComponent implements OnInit {
     ];
   }
 
-  public openProject(item: any) {
+
+  /**
+   * Opens the project details modal.
+   * @param item The project item to display details for.
+   */
+   public openProject(item: any) {
     this.modalManager.openModal(ProjectDetailsComponent, { data: item });
   }
 }

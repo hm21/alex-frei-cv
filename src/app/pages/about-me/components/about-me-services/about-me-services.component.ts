@@ -23,9 +23,11 @@ export class AboutMeServicesComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /** Reference to the container where service items will be created dynamically. */
   @ViewChild('serviceItemsRef', { read: ViewContainerRef, static: true })
   serviceItemsRef!: ViewContainerRef;
 
+  /** Array of service card data to be displayed. */
   private items: ServiceCard[] = [
     {
       title: $localize`Websites`,
@@ -73,6 +75,10 @@ export class AboutMeServicesComponent
     this.serviceItemsRef.clear();
   }
 
+  /**
+   * Dynamically creates a service card component with the provided data.
+   * @param data Service card data to be displayed.
+   */
   private createService(data: ServiceCard) {
     const componentRef =
       this.serviceItemsRef.createComponent(ServiceCardComponent);

@@ -28,7 +28,27 @@ export class AboutMeHobbiesComponent
   @ViewChild('itemTemplate', { read: TemplateRef, static: true })
   itemTemplate!: TemplateRef<any>;
 
-  public items = [
+  
+  /**
+   * Represents a collection of hobbies.
+   *
+   * @remarks
+   * Each item has a title, message, and icon.
+   */
+  public items: {
+    /**
+     * The title of the item.
+     */
+    title: string;
+    /**
+     * The message of the item.
+     */
+    message: string;
+    /**
+     * The icon of the item.
+     */
+    icon: string;
+  }[] = [
     {
       title: $localize`Hiking`,
       message: $localize`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.`,
@@ -56,6 +76,9 @@ export class AboutMeHobbiesComponent
     this.container.clear();
   }
 
+  /**
+   * Creates items by iterating over the array of items and creating embedded views using the provided item template.
+   */
   private createItems() {
     this.items.forEach((item) => {
       this.container.createEmbeddedView(this.itemTemplate, item);

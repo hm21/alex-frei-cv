@@ -23,6 +23,9 @@ export class QuantumQuizWonComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /**
+   * Event emitter for playing the game again.
+   */
   @Output() playAgain = new EventEmitter();
 
   override ngOnInit(): void {
