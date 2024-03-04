@@ -103,21 +103,21 @@
         <source>Social-Github</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">37,39</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5215504455750389206" datatype="html">
         <source>Social-Facebook</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">62,64</context>
+          <context context-type="linenumber">64,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6414569969464252813" datatype="html">
         <source>Social-X aka Twitter</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">106,108</context>
+          <context context-type="linenumber">109,111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5873413805101868453" datatype="html">
@@ -125,14 +125,14 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">132,134</context>
+          <context context-type="linenumber">135,137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7306768770762854120" datatype="html">
         <source> View source code </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">146,147</context>
+          <context context-type="linenumber">150,151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7328564269131534198" datatype="html">
@@ -1255,7 +1255,7 @@
       <trans-unit id="3608889974399310837" datatype="html">
         <source>Color Clash</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/color-clash/color-clash.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.html</context>
           <context context-type="linenumber">3,4</context>
         </context-group>
         <context-group purpose="location">
@@ -1263,10 +1263,223 @@
           <context context-type="linenumber">203,204</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="6886514549192725090" datatype="html">
+        <source>Color Clash Game</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5163146092400769584" datatype="html">
+        <source>Attempt to keep your mind under control without getting confused.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5988661743089198019" datatype="html">
+        <source>Evaluation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5185079845735800424" datatype="html">
+        <source> Congratulations, you scored <x id="INTERPOLATION" equiv-text="{{ points }}"/> points and <x id="INTERPOLATION_1" equiv-text="{{ mistakes }}"/> mistakes! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
+          <context context-type="linenumber">4,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="409191878572054814" datatype="html">
+        <source> Play again </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="965925007723173656" datatype="html">
+        <source>You made a lot of mistakes. Take it slow next time, I&apos;m sure you can get better!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5189038536564747724" datatype="html">
+        <source>Not bad, you just made a few mistakes. But can you also do it without any mistakes?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9028248846074123455" datatype="html">
+        <source>Great job, you didn&apos;t make any mistakes. But can you score more points in that time without making any mistakes?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3866315435884577468" datatype="html">
+        <source>&amp;nbspThe goal is to score more than 120 points without any mistakes!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5216349461695422231" datatype="html">
+        <source>&amp;nbspBut wait a minute, you got more than 120 points?!! That&apos;s awesome, seems like you&apos;re a genius!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9011689187710069765" datatype="html">
+        <source>Your current high score is <x id="PH" equiv-text="highScore.points"/> points with <x id="PH_1" equiv-text="highScore.mistakes"/> mistakes!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4667547387491062114" datatype="html">
+        <source>Warm-up laps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="225847109683170325" datatype="html">
+        <source>Show Instruction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6983516129072435613" datatype="html">
+        <source>One</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3594109821899435342" datatype="html">
+        <source>Two</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5053109843801600778" datatype="html">
+        <source>Three</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">308</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4586442404696053180" datatype="html">
+        <source>Four</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">310</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2358474031492585929" datatype="html">
+        <source>Five</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">312</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3553471239341143775" datatype="html">
+        <source>Six</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">314</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8862515584904423537" datatype="html">
+        <source>Seven</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7404127797382200841" datatype="html">
+        <source>Eight</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">318</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3039958236254194098" datatype="html">
+        <source>Nine</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">320</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6984675258712446825" datatype="html">
+        <source>Rectangle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">322</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2742734092970013664" datatype="html">
+        <source>Circle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">324</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6243699471535097376" datatype="html">
+        <source>Triangle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">326</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5200647034853049117" datatype="html">
+        <source>Instruction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8165740422377923749" datatype="html">
+        <source> This mini-game tests your brain to see how well you can concentrate on something without being distracted. The game always shows you an item with the title “Color” or “Meaning” and a colored text. Below that, you will always see six randomly generated buttons. Your goal is to press the correct button that matches the title and text. You have two minutes to score as many points as possible with as few mistakes as possible. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> For example, the title is “Color” and the text is “nine” with the color “red”. In this case, you should press the button below, which has a red color. In case the title is “Meaning”, you should press the button with the number “nine”.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
+          <context context-type="linenumber">4,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3885497195825665706" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7292364668877177897" datatype="html">
         <source>Choose a topic</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
@@ -1274,77 +1487,77 @@
         <source> You can choose your own topic. For example, you can enter &quot;Soccer&quot; or &quot;Angular,&quot; from which a unique quiz will be generated for you. Alternatively, you can also press &quot;Random&quot; below to select a random topic.
 </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">4,7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1250317277126583581" datatype="html">
         <source>Insert a topic like Angular or Soccer</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7001786492394928947" datatype="html">
         <source> Random </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">26,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1464149227176693961" datatype="html">
         <source> Generate </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5343623628327417712" datatype="html">
         <source>The topic must be between 3 and 20 characters long!</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6508017689861118852" datatype="html">
         <source>The topic must be a text and not number</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
           <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5320870651003627043" datatype="html">
         <source>Question</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7841430672042223267" datatype="html">
         <source>Correct</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">11,12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2398993704199850879" datatype="html">
         <source>Great job! Your answer is correct!</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">12,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2917314929120683887" datatype="html">
         <source> Continue </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2748884846672363037" datatype="html">
         <source>Wrong</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">19,20</context>
         </context-group>
       </trans-unit>
@@ -1352,56 +1565,56 @@
         <source> I&apos;m sorry, but the correct answer was <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b
           &gt;"/>. </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">21,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8366540265192565402" datatype="html">
         <source> Okay </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3458530371838111191" datatype="html">
         <source>Option A</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5321019861937126757" datatype="html">
         <source>Option B</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2715082373615972394" datatype="html">
         <source>Option C</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4783119009559076602" datatype="html">
         <source>Option D</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7016790272435410171" datatype="html">
         <source>Enter</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9178182467454450952" datatype="html">
         <source>Confirm</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
@@ -1409,36 +1622,22 @@
         <source> One moment please <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> The quiz will be generated. This usually takes less than 20 seconds.
 </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
           <context context-type="linenumber">50,54</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5200647034853049117" datatype="html">
-        <source>Instruction</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
-          <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2337252110478242874" datatype="html">
         <source> This game is like the quiz show &quot;Who Wants to Be a Millionaire.&quot; You will try to win the million, but you choose the topic. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> If you&apos;re unfamiliar, the rules of this quiz game are quite simple. You attempt to answer as many questions as possible until the one-million question, which progressively get more difficult. You always choose between four answers, where only one answer is correct.
 </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
           <context context-type="linenumber">4,12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3885497195825665706" datatype="html">
-        <source>Next</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
-          <context context-type="linenumber">16,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5033344786701996312" datatype="html">
         <source>Oops you loose!</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">60,62</context>
         </context-group>
       </trans-unit>
@@ -1446,25 +1645,14 @@
         <source> It seems like you still have more to learn about this topic before you can master it. Try a new topic, and let&apos;s see if you can win more than <x id="INTERPOLATION" equiv-text="{{ +wonCash | number: &quot;1.2-2&quot; }}"/> CHF there.
 </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">63,69</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="409191878572054814" datatype="html">
-        <source> Play again </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
-          <context context-type="linenumber">71,72</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
-          <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="634279916762654627" datatype="html">
         <source>Waooo you won!</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">42,44</context>
         </context-group>
       </trans-unit>
@@ -1472,14 +1660,14 @@
         <source> It seems that you are a genius in this topic, congratulations! However, I have some disappointing news: I&apos;m not rich, so you haven&apos;t won a million. The only reward you&apos;ll receive is the experience and enjoyment you&apos;ve had ;)
 </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">45,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2779077686408578226" datatype="html">
         <source>Quantum Quiz</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/quantum-quiz.component.html</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.html</context>
           <context context-type="linenumber">3,4</context>
         </context-group>
         <context-group purpose="location">
@@ -1487,15 +1675,30 @@
           <context context-type="linenumber">115,116</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2224234896179261015" datatype="html">
+        <source>Quantum Quiz Game</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4805719989765062473" datatype="html">
+        <source>Can you emerge victorious on the millionaire show with your AI-generated
+    topic?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
         <source>Unknown error occurs</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/components/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
@@ -1530,14 +1733,14 @@
         <source>Time to relax and play</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7086942020668895494" datatype="html">
         <source>Let&apos;s play a mini-game to relax a bit!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4669656126417510612" datatype="html">
@@ -1762,43 +1965,43 @@
           <context context-type="linenumber">63,64</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8227050146663557899" datatype="html">
-        <source>2021 - 2023</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8138922831819599928" datatype="html">
-        <source>Project start “snaptab”</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="873084354537991197" datatype="html">
-        <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">69</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="656422260183809064" datatype="html">
         <source>October 24, 2022</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832809533651384093" datatype="html">
         <source>Married</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2994601167663585516" datatype="html">
         <source>Married with my wife in vietnam.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7680367944178112353" datatype="html">
+        <source>2021 - Today</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8015410393514325898" datatype="html">
+        <source>Project “snaptab”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="873084354537991197" datatype="html">
+        <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">74</context>

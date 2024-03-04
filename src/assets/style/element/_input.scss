@@ -25,6 +25,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: var(--text-color-primary) !important;
 }
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 .input-row {
