@@ -45,6 +45,13 @@
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="2817793850755956519" datatype="html">
+        <source>Learn more about me.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7182974689040833178" datatype="html">
         <source>Resume</source>
         <context-group purpose="location">
@@ -54,6 +61,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
           <context context-type="linenumber">1,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8389905172455785310" datatype="html">
+        <source>View my resume.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9201103587777813545" datatype="html">
@@ -67,6 +81,13 @@
           <context context-type="linenumber">1,2</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4816634847062468790" datatype="html">
+        <source>Explore my portfolio.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="3939458405623425043" datatype="html">
         <source>Relax</source>
         <context-group purpose="location">
@@ -74,11 +95,25 @@
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="600135607816560697" datatype="html">
+        <source>Take a break and relax.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
           <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5255686146054479472" datatype="html">
+        <source>Get in touch with me.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7339719027541273315" datatype="html">
@@ -147,6 +182,14 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/about-me.component.ts</context>
           <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4457803817113448706" datatype="html">
+        <source> My hobbies
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.html</context>
+          <context context-type="linenumber">2,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3683157540867041144" datatype="html">
@@ -363,10 +406,10 @@
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3751326315417870338" datatype="html">
+      <trans-unit id="940587807395639833" datatype="html">
         <source>
-        Design is my passion, and I bring creativity and flair to every project. 
-        I specialize in crafting visually captivating designs that reflect your brand identity and leave a lasting impression on your audience.
+      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
+      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
       </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
@@ -687,6 +730,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8386595644548511297" datatype="html">
+        <source>The Allrounder-Tool for your Company!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1609617232994884093" datatype="html">
@@ -1836,15 +1886,15 @@
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8462843308059139957" datatype="html">
-        <source>Program an “Endless Runner” game with libGDX</source>
+      <trans-unit id="7643796150553263848" datatype="html">
+        <source>Program an “Endless Runner” game with libGDX.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5811235080902015505" datatype="html">
-        <source>Started “Report-App” Project</source>
+      <trans-unit id="1536616651371383953" datatype="html">
+        <source>Project “Report-App”</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">50</context>
@@ -1871,8 +1921,8 @@
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8894669005648674613" datatype="html">
-        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation</source>
+      <trans-unit id="6105716291590614939" datatype="html">
+        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">56</context>

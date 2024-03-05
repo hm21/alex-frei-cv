@@ -51,7 +51,7 @@ export class BusinessProjectsComponent
     const data: ProjectDetails = {
       logo: this.logo,
       title: 'snaptab',
-      subtitle: 'The Allrounder-Tool for your Company!',
+      subtitle: $localize`The Allrounder-Tool for your Company!`,
       description: $localize`
           The application snaptab was primarily developed for craftsmen and
           offers a wide range of features. From time tracking to scheduling

@@ -43,17 +43,17 @@ export class ResumeTimelineComponent {
     {
       date: $localize`2017`,
       title: $localize`Learned programming with Java`,
-      msg: $localize`Program an “Endless Runner” game with libGDX`,
+      msg: $localize`Program an “Endless Runner” game with libGDX.`,
     },
     {
       date: $localize`2017`,
-      title: $localize`Started “Report-App” Project`,
+      title: $localize`Project “Report-App”`,
       msg: $localize`Program a simple report app with libGDX for use at the current workplace.`,
     },
     {
       date: $localize`2018`,
       title: $localize`Fiber optic training`,
-      msg: $localize`Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation`,
+      msg: $localize`Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.`,
     },
     {
       date: $localize`2018 - 2019`,

@@ -48,8 +48,8 @@ export class AboutMeServicesComponent
     {
       title: $localize`Design`,
       msg: $localize`
-        Design is my passion, and I bring creativity and flair to every project. 
-        I specialize in crafting visually captivating designs that reflect your brand identity and leave a lasting impression on your audience.
+      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
+      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
       `,
       icon: 'design',
     },

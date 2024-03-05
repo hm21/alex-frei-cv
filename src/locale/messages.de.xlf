@@ -228,7 +228,7 @@
       </trans-unit>
       <trans-unit id="3434499986932366224" datatype="html">
         <source> Hey, I&apos;m Alex, a passionate software developer focused on turning ideas into elegant, functional solutions. Whether it&apos;s web development, mobile apps, or exploring the latest technology, I&apos;m driven by a love of innovation and problem solving. Let&apos;s connect and bring your projects to life! </source>
-        <target> Hey, ich bin Alex, ein leidenschaftlicher Softwareentwickler, der sich darauf konzentriert, Ideen in elegante, funktionale Lösungen zu verwandeln. Egal, ob es um Webentwicklung, mobile Anwendungen oder die Erforschung der neuesten Technologien geht, meine Liebe zur Innovation und Problemlösung treibt mich an. Lass uns zusammenarbeiten und deine Projekte zum Leben erwecken! </target>
+        <target> Hey, mein Name ist Alex und ich bin ein leidenschaftlicher Softwareentwickler, der sich darauf konzentriert, Ideen in elegante, funktionale Lösungen zu verwandeln. Egal, ob es um Webentwicklung, mobile Anwendungen oder die Erforschung der neuesten Technologien geht, meine Liebe zur Innovation und Problemlösung treibt mich an. Lass uns zusammenarbeiten und Ihre Projekte zum Leben erwecken! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
           <context context-type="linenumber">7,10</context>
@@ -380,7 +380,7 @@
         As a dedicated web developer, I specialize in crafting visually stunning and fully functional websites. 
         Whether you&apos;re looking to establish your online presence or enhance your existing site, I ensure top-notch quality and user satisfaction.
       </source>
-        <target>Als engagierter Webentwickler bin ich darauf spezialisiert, optisch ansprechende und voll funktionsfähige Websites zu erstellen. Ganz gleich, ob Sie Ihre Online-Präsenz aufbauen oder Ihre bestehende Website verbessern möchten, ich garantiere erstklassige Qualität und Benutzerzufriedenheit.</target>
+        <target>Als engagierter Webentwickler bin ich darauf spezialisiert, optisch ansprechende und voll funktionsfähige Webseiten zu erstellen. Ganz gleich, ob Sie Ihre Online-Präsenz aufbauen oder Ihre bestehende Webseite verbessern möchten, ich garantiere erstklassige Qualität und Benutzerzufriedenheit.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
           <context context-type="linenumber">34,37</context>
@@ -399,7 +399,7 @@
         With my expertise in mobile and web app development, I create innovative solutions tailored to your needs. 
         From concept to launch, I prioritize usability and performance, delivering apps that stand out in today&apos;s competitive market.
       </source>
-        <target>Mit meiner Erfahrung in der Entwicklung von mobilen und Web-Apps schaffe ich innovative Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Vom Konzept bis zur Markteinführung lege ich Wert auf Benutzerfreundlichkeit und Leistung und liefere Apps, die sich auf dem heutigen wettbewerbsorientierten Markt abheben.</target>
+        <target>Mit meiner Erfahrung in der Entwicklung von mobilen und Web-Apps schaffe ich innovative Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Vom Konzept bis zur Markteinführung lege ich Wert auf Benutzerfreundlichkeit sowie ausgezeichnete Leistung und erstelle Apps, die sich auf dem heutigen wettbewerbsorientierten Markt abheben.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
           <context context-type="linenumber">42,45</context>
@@ -411,17 +411,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
           <context context-type="linenumber">49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3751326315417870338" datatype="html">
-        <source>
-        Design is my passion, and I bring creativity and flair to every project. 
-        I specialize in crafting visually captivating designs that reflect your brand identity and leave a lasting impression on your audience.
-      </source>
-        <target>Design ist meine Leidenschaft, und ich bringe Kreativität und Flair in jedes Projekt ein. Ich bin darauf spezialisiert, visuell fesselnde Designs zu entwerfen, die Ihre Markenidentität widerspiegeln und einen bleibenden Eindruck bei Ihrem Publikum hinterlassen.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">50,53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1360286660327265296" datatype="html">
@@ -785,7 +774,7 @@ Die Anwendung wird sowohl als Web-App als auch als mobile App für Android und i
       </trans-unit>
       <trans-unit id="4929583442443576063" datatype="html">
         <source>Presentation website</source>
-        <target>Präsentationswebsite</target>
+        <target>Präsentationswebseite</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -926,7 +915,7 @@ Die Anwendung wird sowohl als Web-App als auch als mobile App für Android und i
       </trans-unit>
       <trans-unit id="6870824354328033862" datatype="html">
         <source>Presentation website from the company waio Applications.</source>
-        <target>Präsentationswebsite der Firma waio Applications.</target>
+        <target>Präsentationswebseite der Firma waio Applications.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">38</context>
@@ -944,9 +933,9 @@ Die Anwendung wird sowohl als Web-App als auch als mobile App für Android und i
         ensuring a seamless experience across all devices.&lt;br&gt;&lt;br&gt;
         Most of the UI/UX part of this project is not mine.
         </source>
-        <target>Diese Website stellt WAIO Applications, mein eigenes Unternehmen, vor. Neben Informationen über mein Unternehmen bietet sie zwei fesselnde Spiele, um das Benutzererlebnis zu bereichern. Eines dieser Spiele finden Sie, indem Sie auf den Tab „Team“ klicken und dann auf die Schaltfläche „Icebreaker“ drücken. Das andere Spiel ist als „Easter Egg“ auf der Homepage versteckt. Scrollen Sie einfach zum Abschnitt „Für alle Geräte“, klicken Sie auf das rote Rechteck (das ein Telefon mit einer Skalierungsanimation darstellt). &lt;br&gt;&lt;br&gt;
+        <target>Diese Webseite stellt WAIO Applications, mein eigenes Unternehmen, vor. Neben Informationen über mein Unternehmen bietet sie zwei fesselnde Spiele, um das Benutzererlebnis zu bereichern. Eines dieser Spiele finden Sie, indem Sie auf den Tab „Team“ klicken und dann auf die Schaltfläche „Icebreaker“ drücken. Das andere Spiel ist als „Easter Egg“ auf der Homepage versteckt. Scrollen Sie einfach zum Abschnitt „Für alle Geräte“, klicken Sie auf das rote Rechteck (das ein Telefon mit einer Skalierungsanimation darstellt). &lt;br&gt;&lt;br&gt;
 Auf der Subdomain image.waio.ch bieten wir ein unkompliziertes Tool zum Ändern der Größe und Konvertieren von Bildern in verschiedene Formate und Größen an. &lt;br&gt;&lt;br&gt;
-Die Website wurde mit Schwerpunkt auf Leistung und Zugänglichkeit entworfen und ist vollständig responsiv, um ein nahtloses Erlebnis auf allen Geräten zu gewährleisten. 
+Die Webseite wurde mit Schwerpunkt auf Leistung und Zugänglichkeit entworfen und ist vollständig responsiv, um ein nahtloses Erlebnis auf allen Geräten zu gewährleisten. 
 &lt;br&gt;&lt;br&gt;
 Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
@@ -1408,7 +1397,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="965925007723173656" datatype="html">
         <source>You made a lot of mistakes. Take it slow next time, I&apos;m sure you can get better!</source>
-        <target>Du hast viele Fehler gemacht. Lass es das nächste Mal langsam angehen, ich bin mir sicher, dass Sie besser werden können!</target>
+        <target>Sie haben zu viele Fehler gemacht. Lassen Sie es das nächste Mal langsam angehen, ich bin mir sicher, dass Sie besser werden können!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -1424,7 +1413,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="9028248846074123455" datatype="html">
         <source>Great job, you didn&apos;t make any mistakes. But can you score more points in that time without making any mistakes?</source>
-        <target>Toll, du hast keine Fehler gemacht. Aber können Sie in dieser Zeit mehr Punkte erzielen, ohne Fehler zu machen?</target>
+        <target>Toll, Sie haben keine Fehler gemacht. Aber können Sie in dieser Zeit mehr Punkte erzielen, ohne Fehler zu machen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -1714,7 +1703,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3458530371838111191" datatype="html">
         <source>Option A</source>
-        <target>Option A</target>
+        <target>Antwort A</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">70</context>
@@ -1722,7 +1711,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5321019861937126757" datatype="html">
         <source>Option B</source>
-        <target>Option B</target>
+        <target>Antwort B</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">71</context>
@@ -1730,7 +1719,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2715082373615972394" datatype="html">
         <source>Option C</source>
-        <target>Option C</target>
+        <target>Antwort C</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">72</context>
@@ -1738,7 +1727,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4783119009559076602" datatype="html">
         <source>Option D</source>
-        <target>Option D</target>
+        <target>Antwort D</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">73</context>
@@ -1773,7 +1762,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="2337252110478242874" datatype="html">
         <source> This game is like the quiz show &quot;Who Wants to Be a Millionaire.&quot; You will try to win the million, but you choose the topic. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> If you&apos;re unfamiliar, the rules of this quiz game are quite simple. You attempt to answer as many questions as possible until the one-million question, which progressively get more difficult. You always choose between four answers, where only one answer is correct.
 </source>
-        <target> Dieses Spiel ist wie die Quiz-Show „Wer wird Millionär“. Sie müssen versuchen die Million zu gewinnen in deinem selbst ausgewählten Thema. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Falls Sie dieses Quizspiel nicht kennen sind die Regeln sehr einfach. Sie versuchen, so viele Fragen wie möglich zu beantworten, bis Sie die eine Million Fragen erreicht haben, jedoch werden die Fragen stetig schwieriger. Sie haben immer die Wahl zwischen vier Antworten, wobei immer nur eine Antwort richtig ist.
+        <target> In diesem Spiel, das dem Format von „Wer wird Millionär“ ähnelt, ist es Ihr Ziel, die Million in Ihrem selbst gewählten Thema zu gewinnen. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Wenn Sie mit diesem Quizspiel nicht vertraut sind, sind die Regeln einfach: Beantworten Sie so viele Fragen wie möglich, bis Sie eine Million erreichen. Die Fragen werden jedoch zunehmend schwieriger, und Sie wählen immer aus vier Antworten, wobei nur eine richtig ist.
 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
@@ -1782,7 +1771,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5033344786701996312" datatype="html">
         <source>Oops you loose!</source>
-        <target>Hoppla, du hast verloren!</target>
+        <target>Hoppla, Sie haben verloren!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">60,62</context>
@@ -1800,7 +1789,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="634279916762654627" datatype="html">
         <source>Waooo you won!</source>
-        <target>Waoooo, du hast gewonnen!</target>
+        <target>Waoooo, Sie haben gewonnen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">42,44</context>
@@ -1838,7 +1827,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="937865599769579559" datatype="html">
         <source>Can you emerge victorious on the millionaire show with your AI-generated topic?</source>
-        <target>Können Sie mit Ihrem eigen ausgewähltem KI-generierten Thema aus der Millionärsshow als Sieger hervorgehen?</target>
+        <target>Können Sie mit einem von Ihnen ausgewählten KI-generierten Thema in der Millionärsshow als Sieger hervorgehen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
           <context context-type="linenumber">52</context>
@@ -1866,7 +1855,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7112269161396967312" datatype="html">
         <source> Let&apos;s play a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>mini-game<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to relax a bit! </source>
-        <target> Spiel ein <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>Minispiel<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> um einwenig zu entspannen! </target>
+        <target> Spielen Sie ein <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>Minispiel<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> um einwenig zu entspannen! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
           <context context-type="linenumber">5,8</context>
@@ -1874,7 +1863,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5812804063606191703" datatype="html">
         <source> Can you emerge victorious on the millionaire show with your AI-generated topic? </source>
-        <target> Können Sie mit Ihrem eigen ausgewähltem KI-generierten Thema aus der Millionärsshow als Sieger hervorgehen? </target>
+        <target>Können Sie mit einem von Ihnen ausgewählten KI-generierten Thema in der Millionärsshow als Sieger hervorgehen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
           <context context-type="linenumber">117,118</context>
@@ -1922,7 +1911,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1073479367381800971" datatype="html">
         <source>More knowledges</source>
-        <target>Sonstiges Wissen</target>
+        <target>Weiteres Wissen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
           <context context-type="linenumber">11,12</context>
@@ -1970,7 +1959,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7758912282843969586" datatype="html">
         <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
-        <target>Ausbildung zum geprüften Elektroinstallateur EFZ</target>
+        <target>Ausbildung als Elektroinstallateur EFZ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -2010,7 +1999,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8824231093838758371" datatype="html">
         <source>Basic training and training to become a “Wachtmeister”.</source>
-        <target>Grundausbildung und Ausbildung zum „Wachtmeister“.</target>
+        <target>Grundausbildung sowie Weiterbildung zum „Wachtmeister“.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">36</context>
@@ -2034,7 +2023,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="529536006459242055" datatype="html">
         <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
-        <target>Servicetechniker und Projektleiter. Nach 2018 arbeitete ich nur noch 80 %, sodass ich mehr Zeit zum Programmieren habe.</target>
+        <target>Servicetechniker und Projektleiter. Nach 2018 arbeitete ich nur noch 80 %, sodass ich mehr Zeit zum Programmieren hatte.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">41</context>
@@ -2060,22 +2049,6 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8462843308059139957" datatype="html">
-        <source>Program an “Endless Runner” game with libGDX</source>
-        <target>Programmierte ein „Endless Runner“-Spiel mit libGDX</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5811235080902015505" datatype="html">
-        <source>Started “Report-App” Project</source>
-        <target>Projekt „Rapport-App“ gestartet</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="3305172228304370038" datatype="html">
         <source>Program a simple report app with libGDX for use at the current workplace.</source>
         <target>Programmierte mit libGDX eine simple Rapport-App für den Einsatz am aktuellen Arbeitsplatz.</target>
@@ -2098,14 +2071,6 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">55</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8894669005648674613" datatype="html">
-        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation</source>
-        <target>Weiterbildung in Eschlikon bei „bingesser huber elektro ag“ in Außen- und Innenmontage</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2769517692509899030" datatype="html">
@@ -2151,7 +2116,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="2361532821371688356" datatype="html">
         <source>Programing many different things such as website for company and managing tool. 
       Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
-        <target>Programmierte viele verschiedene Dinge, wie etwa eine Website fürs eigene Unternehmen mit einem Verwaltungstool. Erstellung einer Web-App für die Schule Rotflue, die eine einfache Darstellung des pädagogischen Konzepts ermöglicht.</target>
+        <target>Programmierte viele verschiedene Dinge, wie etwa eine Webseite fürs eigene Unternehmen mit einem Verwaltungstool. Erstellung einer Web-App für die Schule Rotflue, die eine einfache Darstellung des pädagogischen Konzepts ermöglicht.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">66,67</context>
@@ -2167,7 +2132,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1832809533651384093" datatype="html">
         <source>Married</source>
-        <target>Verheiratet</target>
+        <target>Heirat</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -2199,8 +2164,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="873084354537991197" datatype="html">
         <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
-        <target>Beginn mit der Umwandlung der alten „Rapport-App“ in ein professionelles Produkt auf Basis von Angular und Flutter, das verkauft werden kann.
-</target>
+        <target>Beginn mit der Umwandlung der alten „Rapport-App“ in ein professionelles Produkt auf Basis von Angular und Flutter, welches verkauft werden kann.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">77</context>
@@ -2244,6 +2208,98 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
           <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2817793850755956519" datatype="html">
+        <source>Learn more about me.</source>
+        <target>Mehr über mich.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8389905172455785310" datatype="html">
+        <source>View my resume.</source>
+        <target>Einblicke in Lebenslauf.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4816634847062468790" datatype="html">
+        <source>Explore my portfolio.</source>
+        <target>Erkunde mein Portfolio.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="600135607816560697" datatype="html">
+        <source>Take a break and relax.</source>
+        <target>Mach eine Pause und entspanne.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5255686146054479472" datatype="html">
+        <source>Get in touch with me.</source>
+        <target>Kontakt mit mir aufnehmen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4457803817113448706" datatype="html">
+        <source> My hobbies
+</source>
+        <target>Meine Hobbies</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.html</context>
+          <context context-type="linenumber">2,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="940587807395639833" datatype="html">
+        <source>
+      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
+      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
+      </source>
+        <target>Als UI/UX-Designer gestalte ich intuitive Benutzeroberflächen für optimale Nutzererfahrung. Kreativ, technisch versiert und nutzerzentriert, strebe ich nach ästhetischen, funktionalen Designs, die Benutzerbedürfnisse erfüllen und die Interaktion verbessern.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
+          <context context-type="linenumber">50,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8386595644548511297" datatype="html">
+        <source>The Allrounder-Tool for your Company!</source>
+        <target>Das Allrounder-Tool für Ihre Firma!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7643796150553263848" datatype="html">
+        <source>Program an “Endless Runner” game with libGDX.</source>
+        <target>Programmieren Sie ein „Endless Runner“ Spiel mit libGDX.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1536616651371383953" datatype="html">
+        <source>Project “Report-App”</source>
+        <target>Projekt „Rapport-App“</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6105716291590614939" datatype="html">
+        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.</source>
+        <target>Weiterbildung in Eschlikon bei „bingesser huber elektro ag“ zum Thema Glasfaserinstallationen in Außen- und Innenbereichen.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
     </body>

@@ -1,4 +1,4 @@
-<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title">
+<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title" i18n>
   My hobbies
 </h2>
 
@@ -22,6 +22,14 @@
     />
 
     <h3 ngxScrollAnimate="fade-in-up" once="false" speed="700">{{ title }}</h3>
-    <p ngxScrollAnimate="fade-in-up" once="false" speed="700">{{ message }}</p>
+    <p
+      ngxScrollAnimate="fade-in-up"
+      aos="50"
+      thresholdMode="pixel"
+      once="false"
+      speed="700"
+    >
+      {{ message }}
+    </p>
   </article>
 </ng-template>
