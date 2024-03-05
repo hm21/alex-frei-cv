@@ -19,6 +19,6 @@ import { OtherProjectsComponent } from './components/other-projects/other-projec
 export class PortfolioComponent extends ExtendedComponent {
   protected override pageMeta: MetaDataI = {
     title: $localize`Portfolio Alex Frei`,
-    description: $localize`Take a look at the portfolio more about Alex Frei`,
+    description: $localize`Take a look at the portfolio to know more about Alex Frei`,
   };
 }

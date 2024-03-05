@@ -601,13 +601,6 @@
           <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2435736959500861658" datatype="html">
-        <source>Too many submission attempts! Please try again later.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">142</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7336605590259895222" datatype="html">
         <source> WhatsApp </source>
         <target> WhatsApp </target>
@@ -1033,7 +1026,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3736654037818964847" datatype="html">
         <source>Painting editor</source>
-        <target>Zeichnungseditor</target>
+        <target>Zeichnungs-Editor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">137</context>
@@ -1041,7 +1034,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6808464001005668002" datatype="html">
         <source>Text editor</source>
-        <target>Texteditor</target>
+        <target>Text-Editor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">144</context>
@@ -1049,7 +1042,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3191464676136788537" datatype="html">
         <source>Crop rotate</source>
-        <target>Zuschneidungseditor</target>
+        <target>Zuschneidungs-Editor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">151</context>
@@ -1057,7 +1050,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2597779358497009510" datatype="html">
         <source>Filter editor</source>
-        <target>Filtereditor</target>
+        <target>Filter-Editor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">158</context>
@@ -1073,7 +1066,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4244389066312482208" datatype="html">
         <source>Sticker editor</source>
-        <target>Sticker editor</target>
+        <target>Sticker-Editor</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">172</context>
@@ -1158,6 +1151,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         immersive view, enhancing the user experience and interaction with images.&lt;br&gt;&lt;br&gt;
         Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
         </source>
+        <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern ermöglichen, auf Bilder zu klicken, damit sie flüssig vergrößert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so sanft erscheint wie in der Realität. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">250,254</context>
@@ -1165,6 +1159,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="723955192887140537" datatype="html">
         <source>Image hero showcase</source>
+        <target>Image hero Vorschau</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">259</context>
@@ -1172,6 +1167,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5337895058168876856" datatype="html">
         <source>Count numbers up and down with smooth animation.</source>
+        <target>Zählt Zahlen flüssig hoch und runter.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">291</context>
@@ -1183,6 +1179,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
           perfect for counting or displaying real-time data updates.&lt;br&gt;&lt;br&gt;
           Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
         </source>
+        <target>Ein Paket, das Zahlenänderungen elegant animiert und einen visuell ansprechenden Übergang von einem Wert zum anderen schafft, perfekt zum Zählen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so flüssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">294,298</context>
@@ -1190,6 +1187,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2981746578304917090" datatype="html">
         <source>Count animation showcase</source>
+        <target>Count animation Vorschau</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">302</context>
@@ -1197,6 +1195,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3721298594029045214" datatype="html">
         <source>IoT</source>
+        <target>IoT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">329</context>
@@ -1204,6 +1203,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7988858937831296342" datatype="html">
         <source>Smarthome app to automate bee hives and gardens.</source>
+        <target>Smarthome-App zur Automatisierung von Bienenstöcken und Gärten.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">331</context>
@@ -1214,6 +1214,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         This project is a real-time control application. Users can directly program the functions of GPIO ports without requiring any programming knowledge. 
         Additionally, users can access data about the personal beehive, including real-time temperature readings and the amount of honey produced by the bees.
         </source>
+        <target>Dieses Projekt ist eine Echtzeit-Steuerungsanwendung. Die Benutzer können die Funktionen der GPIO-Ports direkt programmieren, ohne dass Programmierkenntnisse erforderlich sind. Außerdem können die Benutzer auf Daten über den persönlichen Bienenstock zugreifen, einschließlich Echtzeit-Temperaturmessungen sowie die von den Bienen produzierte Honigmenge.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">333,336</context>
@@ -1221,6 +1222,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4913960567088667274" datatype="html">
         <source>Smarthome bee overview</source>
+        <target>Smarthome Bienen-Übersicht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">340</context>
@@ -1228,6 +1230,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6352415780197482141" datatype="html">
         <source>Smarthome bee details</source>
+        <target>Smarthome Bienen-Details</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">345</context>
@@ -1235,6 +1238,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8545834380965620864" datatype="html">
         <source>Smarthome switch</source>
+        <target>Smarthome Schalter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">350</context>
@@ -1242,6 +1246,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="785371004610436854" datatype="html">
         <source>Smarthome Ionic version</source>
+        <target>Smarthome Ionic version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
           <context context-type="linenumber">355</context>
@@ -1249,6 +1254,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
         <source>Close</source>
+        <target>Schließen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
           <context context-type="linenumber">18</context>
@@ -1260,6 +1266,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5886792202999625261" datatype="html">
         <source>Demo</source>
+        <target>Demo</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
           <context context-type="linenumber">100,101</context>
@@ -1267,6 +1274,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6082171864197428613" datatype="html">
         <source>Install</source>
+        <target>Installieren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
           <context context-type="linenumber">119,120</context>
@@ -1274,6 +1282,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2115592966120408375" datatype="html">
         <source>Copied</source>
+        <target>Kopieren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
           <context context-type="linenumber">180</context>
@@ -1281,6 +1290,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1330330165139018730" datatype="html">
         <source> Technology </source>
+        <target>Technologie </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
           <context context-type="linenumber">193,194</context>
@@ -1288,6 +1298,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4523347413979510028" datatype="html">
         <source>YouTube video</source>
+        <target>YouTube Video</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
           <context context-type="linenumber">207,208</context>
@@ -1295,6 +1306,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1580589129894115210" datatype="html">
         <source>Mobile-Store</source>
+        <target>Mobile-Store</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
           <context context-type="linenumber">99</context>
@@ -1302,6 +1314,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5284812472715499591" datatype="html">
         <source>Prototype</source>
+        <target>Prototyp</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
           <context context-type="linenumber">123</context>
@@ -1309,6 +1322,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8693603235657020323" datatype="html">
         <source>Other</source>
+        <target>Sonstiges</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
           <context context-type="linenumber">125</context>
@@ -1317,6 +1331,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="7655204782877616451" datatype="html">
         <source> All the projects listed below were both designed and coded exclusively by me.
 </source>
+        <target> Alle unten aufgeführten Projekte sind ausschließlich von mir entworfen und programmiert.
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
           <context context-type="linenumber">3,6</context>
@@ -1324,20 +1340,15 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6400603319541206541" datatype="html">
         <source>Portfolio Alex Frei</source>
+        <target>Portfolio Alex Frei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5343466815599726610" datatype="html">
-        <source>Take a look at the portfolio more about Alex Frei</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="3608889974399310837" datatype="html">
         <source>Color Clash</source>
+        <target>Color Clash</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.html</context>
           <context context-type="linenumber">3,4</context>
@@ -1349,6 +1360,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6886514549192725090" datatype="html">
         <source>Color Clash Game</source>
+        <target>Color Clash Spiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
           <context context-type="linenumber">36</context>
@@ -1356,6 +1368,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5163146092400769584" datatype="html">
         <source>Attempt to keep your mind under control without getting confused.</source>
+        <target>Versuchen Sie, Ihren Verstand unter Kontrolle zu halten, ohne verwirrt zu werden.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -1363,6 +1376,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5988661743089198019" datatype="html">
         <source>Evaluation</source>
+        <target>Auswertung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">1,3</context>
@@ -1370,6 +1384,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5185079845735800424" datatype="html">
         <source> Congratulations, you scored <x id="INTERPOLATION" equiv-text="{{ points }}"/> points and <x id="INTERPOLATION_1" equiv-text="{{ mistakes }}"/> mistakes! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg()&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg()) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg() }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
+        <target> Herzlichen Glückwunsch, Sie haben <x id="INTERPOLATION" equiv-text="{{ points }}"/> Punkte und <x id="INTERPOLATION_1" equiv-text="{{ mistakes }}"/> Fehler! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg()&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg()) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg() }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">4,14</context>
@@ -1377,6 +1392,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="409191878572054814" datatype="html">
         <source> Play again </source>
+        <target>Erneut spielen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">21,22</context>
@@ -1392,6 +1408,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="965925007723173656" datatype="html">
         <source>You made a lot of mistakes. Take it slow next time, I&apos;m sure you can get better!</source>
+        <target>Du hast viele Fehler gemacht. Lass es das nächste Mal langsam angehen, ich bin mir sicher, dass Sie besser werden können!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -1399,6 +1416,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5189038536564747724" datatype="html">
         <source>Not bad, you just made a few mistakes. But can you also do it without any mistakes?</source>
+        <target>Nicht schlecht, Sie haben nur ein paar Fehler gemacht. Aber schaffen Sie es auch fehlerfrei?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">60</context>
@@ -1406,6 +1424,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="9028248846074123455" datatype="html">
         <source>Great job, you didn&apos;t make any mistakes. But can you score more points in that time without making any mistakes?</source>
+        <target>Toll, du hast keine Fehler gemacht. Aber können Sie in dieser Zeit mehr Punkte erzielen, ohne Fehler zu machen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -1413,6 +1432,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3866315435884577468" datatype="html">
         <source>&amp;nbspThe goal is to score more than 120 points without any mistakes!</source>
+        <target>&amp;nbspDas Ziel ist es, fehlerfrei mehr als 120 Punkte zu erzielen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">70</context>
@@ -1420,6 +1440,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5216349461695422231" datatype="html">
         <source>&amp;nbspBut wait a minute, you got more than 120 points?!! That&apos;s awesome, seems like you&apos;re a genius!</source>
+        <target>&amp;nbspAber Moment, Sie haben mehr als 120 Punkte?!! Das ist großartig, anscheinend sind Sie ein Genie!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -1427,6 +1448,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="9011689187710069765" datatype="html">
         <source>Your current high score is <x id="PH" equiv-text="highScore.points"/> points with <x id="PH_1" equiv-text="highScore.mistakes"/> mistakes!</source>
+        <target>Ihr aktueller Highscore beträgt <x id="PH" equiv-text="highScore.points"/> Punkte mit <x id="PH_1" equiv-text="highScore.mistakes"/> Fehlern!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">89</context>
@@ -1434,6 +1456,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4667547387491062114" datatype="html">
         <source>Warm-up laps</source>
+        <target>Aufwärmrunden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
           <context context-type="linenumber">3</context>
@@ -1441,6 +1464,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="225847109683170325" datatype="html">
         <source>Show Instruction</source>
+        <target>Anleitung anzeigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
           <context context-type="linenumber">32,33</context>
@@ -1448,6 +1472,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6983516129072435613" datatype="html">
         <source>One</source>
+        <target>Eins</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">406</context>
@@ -1455,6 +1480,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
         <source>Two</source>
+        <target>Zwei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">408</context>
@@ -1462,6 +1488,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
         <source>Three</source>
+        <target>Drei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">410</context>
@@ -1469,6 +1496,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
         <source>Four</source>
+        <target>Vier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">412</context>
@@ -1476,6 +1504,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
         <source>Five</source>
+        <target>Fünf</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">414</context>
@@ -1483,6 +1512,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
         <source>Six</source>
+        <target>Sechs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">416</context>
@@ -1490,6 +1520,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
         <source>Seven</source>
+        <target>Sieben</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">418</context>
@@ -1497,6 +1528,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
         <source>Eight</source>
+        <target>Acht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">420</context>
@@ -1504,6 +1536,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
         <source>Nine</source>
+        <target>Neun</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">422</context>
@@ -1511,6 +1544,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
         <source>Rectangle</source>
+        <target>Rechteck</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">424</context>
@@ -1518,6 +1552,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
         <source>Circle</source>
+        <target>Kreis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">426</context>
@@ -1525,6 +1560,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
         <source>Triangle</source>
+        <target>Dreieck</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">428</context>
@@ -1532,6 +1568,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
         <source>Instruction</source>
+        <target>Anleitung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">1,3</context>
@@ -1544,6 +1581,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="8165740422377923749" datatype="html">
         <source> This mini-game tests your brain to see how well you can concentrate on something without being distracted. The game always shows you an item with the title “Color” or “Meaning” and a colored text. Below that, you will always see six randomly generated buttons. Your goal is to press the correct button that matches the title and text. You have two minutes to score as many points as possible with as few mistakes as possible. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> For example, the title is “Color” and the text is “nine” with the color “red”. In this case, you should press the button below, which has a red color. In case the title is “Meaning”, you should press the button with the number “nine”.
 </source>
+        <target></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">4,16</context>
@@ -1551,6 +1589,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3885497195825665706" datatype="html">
         <source>Next</source>
+        <target>Weiter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">19,20</context>
@@ -1562,6 +1601,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7292364668877177897" datatype="html">
         <source>Choose a topic</source>
+        <target>Wähle ein Thema</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">1,3</context>
@@ -1570,6 +1610,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="158495920482585075" datatype="html">
         <source> You can choose your own topic. For example, you can enter &quot;Soccer&quot; or &quot;Angular,&quot; from which a unique quiz will be generated for you. Alternatively, you can also press &quot;Random&quot; below to select a random topic.
 </source>
+        <target>Sie können Ihr eigenes Thema auswählen. Beispielsweise können Sie „Fußball“ oder „Angular“ eingeben, woraus ein einzigartiges Quiz für Sie generiert wird. Alternativ können Sie auch unten auf „Zufällig“ klicken, um ein zufälliges Thema auszuwählen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">4,8</context>
@@ -1577,6 +1618,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1250317277126583581" datatype="html">
         <source>Insert a topic like Angular or Soccer</source>
+        <target>Geben Sie ein Thema wie Angular oder Fußball ein</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">14,15</context>
@@ -1584,6 +1626,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7001786492394928947" datatype="html">
         <source> Random </source>
+        <target>Zufällig</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">26,27</context>
@@ -1591,6 +1634,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1464149227176693961" datatype="html">
         <source> Generate </source>
+        <target>Generieren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">29,30</context>
@@ -1598,6 +1642,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5343623628327417712" datatype="html">
         <source>The topic must be between 3 and 20 characters long!</source>
+        <target>Das Thema muss zwischen 3 und 20 Zeichen lang sein!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
           <context context-type="linenumber">81</context>
@@ -1605,6 +1650,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="587771637347115681" datatype="html">
         <source>The topic must be a text and not a number</source>
+        <target>Das Thema muss ein Text und keine Zahl sein</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
           <context context-type="linenumber">84</context>
@@ -1612,6 +1658,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5320870651003627043" datatype="html">
         <source>Question</source>
+        <target>Frage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">5,6</context>
@@ -1619,6 +1666,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7841430672042223267" datatype="html">
         <source>Correct</source>
+        <target>Korrekt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">11,12</context>
@@ -1626,6 +1674,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2398993704199850879" datatype="html">
         <source>Great job! Your answer is correct!</source>
+        <target>Gut gemacht! Ihre Antwort ist richtig!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">12,14</context>
@@ -1633,6 +1682,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2917314929120683887" datatype="html">
         <source> Continue </source>
+        <target>Weiter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">15,16</context>
@@ -1640,6 +1690,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2748884846672363037" datatype="html">
         <source>Wrong</source>
+        <target>Falsch</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">19,20</context>
@@ -1647,6 +1698,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6347645514913788737" datatype="html">
         <source> I&apos;m sorry, but the correct answer was <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b           &gt;"/>. </source>
+        <target> Es tut mir leid, aber die richtige Antwort war <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b           &gt;"/>. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">21,26</context>
@@ -1654,6 +1706,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8366540265192565402" datatype="html">
         <source> Okay </source>
+        <target>Okay</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">27,28</context>
@@ -1661,6 +1714,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3458530371838111191" datatype="html">
         <source>Option A</source>
+        <target>Option A</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">70</context>
@@ -1668,6 +1722,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5321019861937126757" datatype="html">
         <source>Option B</source>
+        <target>Option B</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">71</context>
@@ -1675,6 +1730,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2715082373615972394" datatype="html">
         <source>Option C</source>
+        <target>Option C</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">72</context>
@@ -1682,6 +1738,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4783119009559076602" datatype="html">
         <source>Option D</source>
+        <target>Option D</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">73</context>
@@ -1689,6 +1746,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7016790272435410171" datatype="html">
         <source>Enter</source>
+        <target>Eingabe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">74</context>
@@ -1696,6 +1754,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="9178182467454450952" datatype="html">
         <source>Confirm</source>
+        <target>Bestätigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">74</context>
@@ -1704,6 +1763,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="4178935176374929667" datatype="html">
         <source> One moment please <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> The quiz will be generated. This usually takes less than 20 seconds.
 </source>
+        <target> Einen Moment bitte <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Das Quiz wird generiert. Dies dauert normalerweise weniger als 20 Sekunden.
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
           <context context-type="linenumber">50,54</context>
@@ -1712,6 +1773,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="2337252110478242874" datatype="html">
         <source> This game is like the quiz show &quot;Who Wants to Be a Millionaire.&quot; You will try to win the million, but you choose the topic. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> If you&apos;re unfamiliar, the rules of this quiz game are quite simple. You attempt to answer as many questions as possible until the one-million question, which progressively get more difficult. You always choose between four answers, where only one answer is correct.
 </source>
+        <target> Dieses Spiel ist wie die Quiz-Show „Wer wird Millionär“. Sie müssen versuchen die Million zu gewinnen in deinem selbst ausgewählten Thema. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Falls Sie dieses Quizspiel nicht kennen sind die Regeln sehr einfach. Sie versuchen, so viele Fragen wie möglich zu beantworten, bis Sie die eine Million Fragen erreicht haben, jedoch werden die Fragen stetig schwieriger. Sie haben immer die Wahl zwischen vier Antworten, wobei immer nur eine Antwort richtig ist.
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
           <context context-type="linenumber">4,13</context>
@@ -1719,6 +1782,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5033344786701996312" datatype="html">
         <source>Oops you loose!</source>
+        <target>Hoppla, du hast verloren!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">60,62</context>
@@ -1727,6 +1791,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="1613601634394055332" datatype="html">
         <source> It seems like you still have more to learn about this topic before you can master it. Try a new topic, and let&apos;s see if you can win more than <x id="INTERPOLATION" equiv-text="{{ +wonCash | number: &quot;1.2-2&quot; }}"/> CHF there.
 </source>
+        <target> Es scheint, als müssten Sie noch mehr über dieses Thema lernen, bevor Sie es meistern können. Probieren Sie ein neues Thema aus und versuchen Sie mehr als <x id="INTERPOLATION" equiv-text="{{ +wonCash | number: &quot;1.2-2&quot; }}"/> CHF dort zu gewinnen.
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">63,69</context>
@@ -1734,6 +1800,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="634279916762654627" datatype="html">
         <source>Waooo you won!</source>
+        <target>Waoooo, du hast gewonnen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">42,44</context>
@@ -1742,6 +1809,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="4718651139256884791" datatype="html">
         <source> It seems that you are a genius in this topic, congratulations! However, I have some disappointing news: I&apos;m not rich, so you haven&apos;t won a million. The only reward you&apos;ll receive is the experience and enjoyment you&apos;ve had ;)
 </source>
+        <target> Es scheint, dass Sie ein Genie in diesem Thema sind, herzlichen Glückwunsch! Allerdings habe ich eine schlechte Nachricht: Ich bin nicht reich, also haben Sie keine Million gewonnen. Die einzige Belohnung, die Sie erhalten, ist die Erfahrung und Freude, die Sie in diesem Spiel hatten ;)
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">45,49</context>
@@ -1749,6 +1818,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2779077686408578226" datatype="html">
         <source>Quantum Quiz</source>
+        <target>Quantum Quiz</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.html</context>
           <context context-type="linenumber">3,4</context>
@@ -1760,6 +1830,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2224234896179261015" datatype="html">
         <source>Quantum Quiz Game</source>
+        <target>Quantum Quiz Spiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
           <context context-type="linenumber">51</context>
@@ -1767,6 +1838,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="937865599769579559" datatype="html">
         <source>Can you emerge victorious on the millionaire show with your AI-generated topic?</source>
+        <target>Können Sie mit Ihrem eigen ausgewähltem KI-generierten Thema aus der Millionärsshow als Sieger hervorgehen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
           <context context-type="linenumber">52</context>
@@ -1774,6 +1846,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
         <source>Unknown error occurs</source>
+        <target>Unbekannter Fehler ist aufgetreten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
           <context context-type="linenumber">122</context>
@@ -1785,6 +1858,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
         <source>Do you feel tired about checking out a lot of CVs?</source>
+        <target>Fühlen Sie sich erschöpft vom Lesen vieler Bewerbungen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
           <context context-type="linenumber">2,4</context>
@@ -1792,6 +1866,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7112269161396967312" datatype="html">
         <source> Let&apos;s play a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>mini-game<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> to relax a bit! </source>
+        <target> Spiel ein <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>Minispiel<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> um einwenig zu entspannen! </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
           <context context-type="linenumber">5,8</context>
@@ -1799,6 +1874,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5812804063606191703" datatype="html">
         <source> Can you emerge victorious on the millionaire show with your AI-generated topic? </source>
+        <target> Können Sie mit Ihrem eigen ausgewähltem KI-generierten Thema aus der Millionärsshow als Sieger hervorgehen? </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
           <context context-type="linenumber">117,118</context>
@@ -1806,6 +1882,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5831594539431733268" datatype="html">
         <source> Attempt to keep your mind under control without getting confused. </source>
+        <target> Versuchen Sie, Ihren Verstand unter Kontrolle zu halten, ohne verwirrt zu werden. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
           <context context-type="linenumber">205,206</context>
@@ -1813,6 +1890,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6660991822238768821" datatype="html">
         <source>Time to relax and play</source>
+        <target>Zeit zum Entspannen und Spielen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -1820,6 +1898,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7086942020668895494" datatype="html">
         <source>Let&apos;s play a mini-game to relax a bit!</source>
+        <target>Spiel doch ein Minispiel, um ein wenig zu entspannen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
           <context context-type="linenumber">17</context>
@@ -1827,6 +1906,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4669656126417510612" datatype="html">
         <source>Frontend skills</source>
+        <target>Frontend skills</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
           <context context-type="linenumber">1,2</context>
@@ -1834,6 +1914,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2419998429336592087" datatype="html">
         <source>Backend skills</source>
+        <target>Backend skills</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
           <context context-type="linenumber">6,7</context>
@@ -1841,6 +1922,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1073479367381800971" datatype="html">
         <source>More knowledges</source>
+        <target>Sonstiges Wissen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
           <context context-type="linenumber">11,12</context>
@@ -1848,6 +1930,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="242479384757553256" datatype="html">
         <source>March 21, 1995</source>
+        <target>21. März 1995</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">18</context>
@@ -1855,6 +1938,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2772668468223898232" datatype="html">
         <source>Birthday</source>
+        <target>Geburtstag</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">19</context>
@@ -1862,6 +1946,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1966987492818924297" datatype="html">
         <source>2001 - 2010</source>
+        <target>2001 - 2010</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -1869,6 +1954,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="494564023046542629" datatype="html">
         <source>Elementary school education</source>
+        <target>Grundschulausbildung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">23</context>
@@ -1876,6 +1962,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7144712217485996848" datatype="html">
         <source>2010 - 2014</source>
+        <target>2010 - 2014</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -1883,6 +1970,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7758912282843969586" datatype="html">
         <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
+        <target>Ausbildung zum geprüften Elektroinstallateur EFZ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -1890,6 +1978,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7699869948741961187" datatype="html">
         <source>2014 - 2015</source>
+        <target>2014 - 2015</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -1897,6 +1986,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1034680067214071440" datatype="html">
         <source>Worked by Brunner &amp; Engler as Electrical-Installer</source>
+        <target>Bei Brunner &amp; Engler als Elektroinstallateur gearbeitet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -1904,6 +1994,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2287432808592559199" datatype="html">
         <source>March - November 2015</source>
+        <target>März - November 2015</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">34</context>
@@ -1911,6 +2002,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7589458222524264055" datatype="html">
         <source>Military training</source>
+        <target>Militärausbildung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">35</context>
@@ -1918,6 +2010,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8824231093838758371" datatype="html">
         <source>Basic training and training to become a “Wachtmeister”.</source>
+        <target>Grundausbildung und Ausbildung zum „Wachtmeister“.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">36</context>
@@ -1925,6 +2018,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4969824649958273751" datatype="html">
         <source>2016 - 2020</source>
+        <target>2016 - 2020</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">39</context>
@@ -1932,6 +2026,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="29005198844517419" datatype="html">
         <source>Worked by Elektro Sutter as Electrical-Installer</source>
+        <target>Bei Elektro Sutter als Elektroinstallateur gearbeitet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">40</context>
@@ -1939,6 +2034,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="529536006459242055" datatype="html">
         <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
+        <target>Servicetechniker und Projektleiter. Nach 2018 arbeitete ich nur noch 80 %, sodass ich mehr Zeit zum Programmieren habe.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">41</context>
@@ -1946,6 +2042,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1296777797052107613" datatype="html">
         <source>2017</source>
+        <target>2017</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">44</context>
@@ -1957,6 +2054,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5297827129625149604" datatype="html">
         <source>Learned programming with Java</source>
+        <target>Java Programmiersprache erlernt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">45</context>
@@ -1964,6 +2062,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8462843308059139957" datatype="html">
         <source>Program an “Endless Runner” game with libGDX</source>
+        <target>Programmierte ein „Endless Runner“-Spiel mit libGDX</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">46</context>
@@ -1971,6 +2070,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5811235080902015505" datatype="html">
         <source>Started “Report-App” Project</source>
+        <target>Projekt „Rapport-App“ gestartet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">50</context>
@@ -1978,6 +2078,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="3305172228304370038" datatype="html">
         <source>Program a simple report app with libGDX for use at the current workplace.</source>
+        <target>Programmierte mit libGDX eine simple Rapport-App für den Einsatz am aktuellen Arbeitsplatz.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">51</context>
@@ -1985,6 +2086,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5078177343633834238" datatype="html">
         <source>2018</source>
+        <target>2018</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">54</context>
@@ -1992,6 +2094,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="6593634431046720544" datatype="html">
         <source>Fiber optic training</source>
+        <target>Glasfaserschulung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">55</context>
@@ -1999,6 +2102,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8894669005648674613" datatype="html">
         <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation</source>
+        <target>Weiterbildung in Eschlikon bei „bingesser huber elektro ag“ in Außen- und Innenmontage</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">56</context>
@@ -2006,6 +2110,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="2769517692509899030" datatype="html">
         <source>2018 - 2019</source>
+        <target>2018 - 2019</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -2013,6 +2118,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="135092519774443252" datatype="html">
         <source>Changed “Report-App” from libGDX to Ionic</source>
+        <target>„Report-App“ von libGDX zu Ionic geändert</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">60</context>
@@ -2020,6 +2126,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="9157945684475537355" datatype="html">
         <source>To make the app more professional and simplify the programming of the app, I changed to Ionic 4.</source>
+        <target>Um die App professioneller zu gestalten und die Programmierung der App zu vereinfachen, bin ich auf Ionic 4 umgestiegen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -2027,6 +2134,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1048684830448412689" datatype="html">
         <source>2020</source>
+        <target>2020</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -2034,6 +2142,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="5224815218969674863" datatype="html">
         <source>Foundation of WAIO Applications</source>
+        <target>Gründung von WAIO Applications</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -2042,6 +2151,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="2361532821371688356" datatype="html">
         <source>Programing many different things such as website for company and managing tool. 
       Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
+        <target>Programmierte viele verschiedene Dinge, wie etwa eine Website fürs eigene Unternehmen mit einem Verwaltungstool. Erstellung einer Web-App für die Schule Rotflue, die eine einfache Darstellung des pädagogischen Konzepts ermöglicht.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">66,67</context>
@@ -2049,6 +2159,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="656422260183809064" datatype="html">
         <source>October 24, 2022</source>
+        <target>24. Oktober 2022</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">70</context>
@@ -2056,6 +2167,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1832809533651384093" datatype="html">
         <source>Married</source>
+        <target>Verheiratet</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">71</context>
@@ -2063,6 +2175,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1047879433058046950" datatype="html">
         <source>Married with my wife in Vietnam.</source>
+        <target>Heirat mit meiner Frau in Vietnam.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">72</context>
@@ -2070,6 +2183,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7680367944178112353" datatype="html">
         <source>2021 - Today</source>
+        <target>2021 - Heute</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -2077,6 +2191,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8015410393514325898" datatype="html">
         <source>Project “snaptab”</source>
+        <target>Projekt “snaptab”</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -2084,6 +2199,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="873084354537991197" datatype="html">
         <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
+        <target>Beginn mit der Umwandlung der alten „Rapport-App“ in ein professionelles Produkt auf Basis von Angular und Flutter, das verkauft werden kann.
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">77</context>
@@ -2091,6 +2208,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4486682505452707131" datatype="html">
         <source>Resume Alex Frei</source>
+        <target>Lebenslauf Alex Frei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
           <context context-type="linenumber">21</context>
@@ -2098,6 +2216,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7010851194388361735" datatype="html">
         <source>Take a look on the resume from Alex Frei.</source>
+        <target>Schauen Sie sich den Lebenslauf von Alex Frei an.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -2105,9 +2224,26 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1558123650356240976" datatype="html">
         <source> Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via </source>
+        <target> Ihre IP-Adresse wurde auf die schwarze Liste gesetzt, weil Sie ungewöhnlich viele Anfragen an den Server gesendet haben! Wenn diese Anfragen nicht in böser Absicht gestellt wurden, kontaktieren Sie mich bitte über </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
           <context context-type="linenumber">65,67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="457675898050475000" datatype="html">
+        <source>Too many requests! Please try again later.</source>
+        <target>Zu viele Anfragen! Bitte versuchen Sie es später noch einmal.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4848585539632032097" datatype="html">
+        <source>Take a look at the portfolio to know more about Alex Frei</source>
+        <target>Schauen Sie sich das Portfolio von Alex Frei an, um mehr über Ihn zu erfahren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
     </body>

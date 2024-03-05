@@ -536,8 +536,8 @@
           <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2435736959500861658" datatype="html">
-        <source>Too many submission attempts! Please try again later.</source>
+      <trans-unit id="457675898050475000" datatype="html">
+        <source>Too many requests! Please try again later.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
           <context context-type="linenumber">142</context>
@@ -1202,8 +1202,8 @@
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5343466815599726610" datatype="html">
-        <source>Take a look at the portfolio more about Alex Frei</source>
+      <trans-unit id="4848585539632032097" datatype="html">
+        <source>Take a look at the portfolio to know more about Alex Frei</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
           <context context-type="linenumber">22</context>
