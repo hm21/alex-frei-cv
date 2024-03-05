@@ -139,7 +139,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     } else if (this._sendTries >= 10) {
       this.footerRef.clear();
       this.footerRef.createEmbeddedView(this.errorRef, {
-        msg: $localize`Too many submission attempts! Please try again later.`,
+        msg: $localize`Too many requests! Please try again later.`,
       });
 
       this.cdRef.detectChanges();

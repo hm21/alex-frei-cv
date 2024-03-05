@@ -60,10 +60,12 @@
   <button class="btn primary" type="submit" i18n>Submit</button>
 </ng-template>
 <ng-template #blacklistRef>
-  <p class="danger mt2" i18n>
-    Your IP address has been blacklisted because you have sent an unusually high
-    number of requests to the server! If these requests were not made
-    maliciously, please contact me via
+  <p class="danger mt2">
+    <span i18n>
+      Your IP address has been blacklisted because you have sent an unusually
+      high number of requests to the server! If these requests were not made
+      maliciously, please contact me via
+    </span>
     <b
       ><a class="danger" href="mailto:alex.frei@hotmail.ch?subject=Blacklist"
         >alex.frei&#64;hotmail.ch</a
