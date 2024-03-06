@@ -35,6 +35,10 @@
           <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
         <source>Open sidemenu</source>
@@ -1570,7 +1574,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       <trans-unit id="8165740422377923749" datatype="html">
         <source> This mini-game tests your brain to see how well you can concentrate on something without being distracted. The game always shows you an item with the title “Color” or “Meaning” and a colored text. Below that, you will always see six randomly generated buttons. Your goal is to press the correct button that matches the title and text. You have two minutes to score as many points as possible with as few mistakes as possible. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> For example, the title is “Color” and the text is “nine” with the color “red”. In this case, you should press the button below, which has a red color. In case the title is “Meaning”, you should press the button with the number “nine”.
 </source>
-        <target></target>
+        <target> Dieses Minispiel testet Ihr Gehirn, um zu sehen, wie gut Sie sich auf etwas konzentrieren können, ohne abgelenkt zu werden. Das Spiel zeigt ihnen immer ein Element mit dem Titel „Farbe“ oder „Bedeutung“ und einem farbigen Text. Darunter sehen Sie immer sechs zufällig generierte Tasten. Ihr Ziel ist es, die richtige Taste zu drücken, die zum Titel und Text passt. Sie haben zwei Minuten Zeit, um so viele Punkte wie möglich mit so wenig Fehlern wie möglich zu erreichen. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Zum Beispiel lautet der Titel „Farbe“ und der Text ist „neun“ mit der Farbe „rot“. In diesem Fall sollten Sie unten auf die Taste drücken, die eine rote Farbe hat. Wenn der Titel „Bedeutung“ lautet, müssen Sie auf die Taste mit der Zahl „neun“ drücken.
+</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">4,16</context>
@@ -1838,11 +1843,11 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Unbekannter Fehler ist aufgetreten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">122</context>
+          <context context-type="linenumber">123</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">128</context>
+          <context context-type="linenumber">129</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">

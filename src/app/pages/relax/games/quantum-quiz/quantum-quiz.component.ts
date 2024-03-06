@@ -109,6 +109,7 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
     this.http
       .post(environment.endpoints.quiz, {
         topic,
+        lang: $localize`en`,
       })
       .subscribe({
         next: (res: any) => {
