@@ -18,7 +18,7 @@ export const metaGenerator = (
   }
 
   
-  const url = data.img ?? '/assets/img/avatar/alex_original.png';
+  const url = data.img ?? 'https://alex-frei.web.app/assets/img/avatar/alex_original.png';
   data.titleC.setTitle(data.title);
   data.metaC.updateTag({ name: `description`, content: data.description });
 
