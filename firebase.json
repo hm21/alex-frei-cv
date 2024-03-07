@@ -42,6 +42,10 @@
           "function": "contactForm"
         },
         {
+          "source": "/api/v1/git-commit-count",
+          "function": "gitCommits"
+        },
+        {
           "source": "/en/**",
           "destination": "/en/index.html"
         },

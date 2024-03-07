@@ -28,7 +28,6 @@ export class AboutMeHobbiesComponent
   @ViewChild('itemTemplate', { read: TemplateRef, static: true })
   itemTemplate!: TemplateRef<any>;
 
-  
   /**
    * Represents a collection of hobbies.
    *
@@ -55,10 +54,15 @@ export class AboutMeHobbiesComponent
       icon: 'hiking',
     },
     {
+      title: $localize`Swiming`,
+      message: $localize`What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it's the perfect win-win for body and mind.`,
+      icon: 'swim',
+    },
+    /*   {
       title: $localize`Travel`,
       message: $localize`I love to travel and explore new places, meet new people and learn about different cultures. I'm always ready for a new adventure.`,
       icon: 'travel',
-    },
+    }, */
     {
       title: $localize`Develop`,
       message: $localize`As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.`,

@@ -13,7 +13,7 @@
         <source>Back</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/back-btn/back-btn.component.html</context>
-          <context context-type="linenumber">8,9</context>
+          <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4873644682259066363" datatype="html">
@@ -21,7 +21,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/recommended-pages/recommended-pages.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7618870723010461457" datatype="html">
@@ -164,14 +164,14 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">135,138</context>
+          <context context-type="linenumber">135,137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7306768770762854120" datatype="html">
         <source> View source code </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">150,152</context>
+          <context context-type="linenumber">150,151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7328564269131534198" datatype="html">
@@ -193,49 +193,49 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3683157540867041144" datatype="html">
         <source>Hiking</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7127104315740473357" datatype="html">
         <source>I&apos;m the one who loves the silence of the wilderness, follows the call of the birds and experiences nature as his own symphony.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="7150322731406802059" datatype="html">
-        <source>Travel</source>
+      <trans-unit id="2573931776396641837" datatype="html">
+        <source>Swiming</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3329958024185504349" datatype="html">
+        <source>What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it&apos;s the perfect win-win for body and mind.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
           <context context-type="linenumber">58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7082202290289150718" datatype="html">
-        <source>I love to travel and explore new places, meet new people and learn about different cultures. I&apos;m always ready for a new adventure.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7453924187669714095" datatype="html">
         <source>Develop</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8768072903966848364" datatype="html">
         <source>As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7194501120282715188" datatype="html">
@@ -295,7 +295,7 @@
         <source>Age</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">64,65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6206277469713306308" datatype="html">
@@ -366,7 +366,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1220644583785368760" datatype="html">
@@ -450,7 +450,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5795063446422955782" datatype="html">
@@ -864,7 +864,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.html</context>
-          <context context-type="linenumber">2,5</context>
+          <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5481284030283031915" datatype="html">
@@ -907,7 +907,7 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">40,50</context>
+          <context context-type="linenumber">40,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5195429168031052915" datatype="html">
@@ -1210,7 +1210,7 @@
         <source> Technology </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">193,194</context>
+          <context context-type="linenumber">193</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4523347413979510028" datatype="html">
@@ -1246,7 +1246,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
-          <context context-type="linenumber">3,6</context>
+          <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6400603319541206541" datatype="html">
@@ -1473,7 +1473,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
-          <context context-type="linenumber">4,16</context>
+          <context context-type="linenumber">4,15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3885497195825665706" datatype="html">
@@ -1499,7 +1499,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
-          <context context-type="linenumber">4,8</context>
+          <context context-type="linenumber">4,7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1250317277126583581" datatype="html">
@@ -1562,7 +1562,7 @@
         <source> Continue </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">15,16</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2748884846672363037" datatype="html">
@@ -1584,7 +1584,7 @@
         <source> Okay </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3458530371838111191" datatype="html">
@@ -1642,7 +1642,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
-          <context context-type="linenumber">4,13</context>
+          <context context-type="linenumber">4,12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5033344786701996312" datatype="html">
@@ -1672,7 +1672,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
-          <context context-type="linenumber">45,49</context>
+          <context context-type="linenumber">45,48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2779077686408578226" datatype="html">

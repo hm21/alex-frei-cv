@@ -1,6 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
 import { HttpTestingController } from '@angular/common/http/testing';
+import { environment as debugEnvironment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { GitManagerService } from './git-manager.service';
 
@@ -20,16 +22,29 @@ describe('GitManagerService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should get commit count from GitHub API', () => {
-    const mockCommits = [{ commit: { message: 'Commit message' } }, { commit: { message: 'Another commit message' } }];
-    const expectedCommitCount = mockCommits.length;
+  afterEach(() => {
+    httpMock.verify();
+  });
 
-    service.getCommitCount().subscribe(count => {
-      expect(count).toBe(expectedCommitCount);
+  it('should return the commit count from cache if available', () => {
+    const mockCommitCount = 10;
+    service['gitCommitCount'] = mockCommitCount; // Set mock commit count in service
+
+    service.getCommitCount().subscribe((commitCount) => {
+      expect(commitCount).toEqual(mockCommitCount);
     });
 
-    const req = httpMock.expectOne('https://api.github.com/repos/hm21/alex-frei-cv/commits');
+    httpMock.expectNone(environment.endpoints.gitCommitCount);
+  });
+
+  it('should make an HTTP request to get the commit count if not available in cache', () => {
+    service['gitCommitCount'] = 0; // Set mock commit count in service
+    debugEnvironment.endpoints.gitCommitCount =
+      environment.endpoints.gitCommitCount;
+    service.getCommitCount().subscribe((count) => {
+      expect(count).toBeGreaterThan(0);
+    });
+    const req = httpMock.expectOne(environment.endpoints.gitCommitCount);
     expect(req.request.method).toBe('GET');
-    req.flush(mockCommits);
   });
 });

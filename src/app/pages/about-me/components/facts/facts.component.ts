@@ -36,23 +36,24 @@ export class FactsComponent
   private items = signal([
     {
       title: $localize`Coffee Consumed`,
-      value: 21,
+      value: 23,
       icon: 'coffee',
     },
     {
       title: $localize`Walking Breaks`,
-      value: 11,
+      value: 12,
       icon: 'walking',
     },
     {
       title: $localize`Songs listened`,
-      value: 425,
+      value: 1260,
       icon: 'music',
     },
     {
       title: $localize`Git Commits`,
       value: 0,
       icon: 'git',
+      loading: true,
     },
   ]);
 
@@ -91,6 +92,7 @@ export class FactsComponent
         const i = this.items().findIndex((el) => el.icon === 'git');
         if (i >= 0) {
           this.items()[i].value = count;
+          this.items()[i].loading = false;
         } else {
           throw new Error('Commit item not found!');
         }
