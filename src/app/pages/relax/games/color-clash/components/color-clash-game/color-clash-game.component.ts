@@ -81,49 +81,114 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /**
+   * Event emitted when the game finishes.
+   */
   @Output() finishGame = new EventEmitter<ColorClashFinishEvent>();
+
+  /**
+   * Event emitted when the game state is updated.
+   */
   @Output() updateGameState = new EventEmitter<ColorClashGameState>();
+
+  /**
+   * Enumeration of possible game states.
+   */
   public GameState = ColorClashGameState;
 
+  /**
+   * Reference to the buttons container in the template.
+   */
   @ViewChild('buttonsRef', { static: true, read: ViewContainerRef })
   buttonsRef!: ViewContainerRef;
 
+  /**
+   * Reference to the item template in the template.
+   */
   @ViewChild('itemRef', { static: true, read: TemplateRef })
   itemRef!: TemplateRef<any>;
+
+  /**
+   * Reference to the button template in the template.
+   */
   @ViewChild('buttonRef', { static: true, read: TemplateRef })
   buttonRef!: TemplateRef<ColorClashGameButton>;
 
+  /**
+   * Array of game items to be displayed.
+   */
   public viewItems = signal<ColorClashGameItem[]>([]);
+
+  /**
+   * Array of game buttons.
+   */
   private gameButtons: ColorClashGameButton[] = [];
 
+  /**
+   * Duration of the countdown timer in seconds.
+   */
   private countdownDuration: number = 120;
+
+  /**
+   * Flag indicating if the countdown is active.
+   */
   private activeCountdown = false;
+
+  /**
+   * Signal representing the remaining time in the format 'MM:SS'.
+   */
   public time = signal('02:00');
+
+  /**
+   * Signal representing the number of warm-up rounds.
+   */
   public warmUpRounds = signal(0);
+
+  /**
+   * Number of points earned by the player.
+   */
   private points = 0;
+
+  /**
+   * Number of mistakes made by the player.
+   */
   private mistakes = 0;
+
+  /**
+   * Number of items generated.
+   */
   private itemCount = 0;
 
+  /**
+   * Array of shortcut keys for the game buttons.
+   */
   private readonly shortcutKeys = ['s', 'd', 'f', 'j', 'k', 'l'];
 
+  /**
+   * Array of colors used for the game buttons and items.
+   */
   private readonly colors = [
-    // forest-green
-    '#009688',
-    // red
-    '#E91E63',
-    // blue
-    '#2196f3',
-    // violet
-    '#673ab7',
-    // dark orange
-    '#c77600',
-    // black
-    '#000000',
+    '#009688', // forest-green
+    '#E91E63', // red
+    '#2196f3', // blue
+    '#673ab7', // violet
+    '#c77600', // dark orange
+    '#000000', // black
   ];
 
+  /**
+   * Subject used to destroy the countdown timer.
+   */
   private countdownDestroy$ = new Subject();
 
+  /**
+   * Reference to the DomSanitizer service.
+   */
   private sanitizer = inject(DomSanitizer);
+
+  /**
+   * Reference to the Document object.
+   */
   private document = inject(DOCUMENT);
 
   override ngOnInit(): void {
@@ -142,7 +207,11 @@ export class ColorClashGameComponent
     this.countdownDestroy$.complete();
   }
 
+  /**
+   * Generates the game buttons.
+   */
   private generateButtons() {
+    // SVG definitions for different shapes
     const rectangleSVG = {
       id: 'rect',
       svg: `
@@ -168,6 +237,14 @@ export class ColorClashGameComponent
           `,
     };
 
+    /**
+     * Inserts an element at a specific position in an array.
+     * @param array - The array to insert the element into.
+     * @param element - The element to insert.
+     * @param position - The position to insert the element at.
+     * @returns The new array with the element inserted.
+     * @throws Error if the position is invalid.
+     */
     function insertAtPosition<T>(
       array: T[],
       element: T,
@@ -184,6 +261,11 @@ export class ColorClashGameComponent
       ];
       return newArray;
     }
+
+    /**
+     * Generates an array of random numbers.
+     * @returns An array of random numbers.
+     */
     function getRandomNumbers(): ColorClashRandomItem[] {
       const items: ColorClashRandomItem[] = [];
 
@@ -200,6 +282,11 @@ export class ColorClashGameComponent
 
       return items;
     }
+
+    /**
+     * Generates an array of random symbols.
+     * @returns An array of random symbols.
+     */
     function getRandomSymbol(): ColorClashRandomItem[] {
       const symbolsSVG = [rectangleSVG, triangleSVG, circleSVG];
 
@@ -254,6 +341,10 @@ export class ColorClashGameComponent
       this.buttonsRef.createEmbeddedView(this.buttonRef, btn);
     });
   }
+
+  /**
+   * Generates the game items.
+   */
   private generateItems() {
     while (this.viewItems().length < 3) {
       const id =
@@ -271,6 +362,11 @@ export class ColorClashGameComponent
     }
   }
 
+  /**
+   * Handles the button tap event.
+   * @param id - The ID of the button.
+   * @param color - The color of the button.
+   */
   public buttonTap(id: string | number, color: string) {
     const lastItem = this.viewItems()[this.viewItems().length - 1];
 
@@ -298,6 +394,12 @@ export class ColorClashGameComponent
       });
   }
 
+  /**
+   * Gets the meaning of an item based on its ID.
+   * @param id - The ID of the item.
+   * @returns The meaning of the item.
+   * @throws Error if the meaning for the ID is not found.
+   */
   private getMeaning(id: string) {
     switch (id) {
       case '1':
@@ -329,6 +431,9 @@ export class ColorClashGameComponent
     }
   }
 
+  /**
+   * Listens for shortcut key events.
+   */
   private listenShortcutKeys() {
     fromEvent<KeyboardEvent>(this.document, 'keydown')
       .pipe(
@@ -353,7 +458,16 @@ export class ColorClashGameComponent
         this.buttonTap(btn.id, btn.color);
       });
   }
+
+  /**
+   * Starts the countdown timer.
+   */
   private startCountdown() {
+    /**
+     * Converts seconds to the format 'MM:SS'.
+     * @param seconds - The number of seconds.
+     * @returns The formatted time string.
+     */
     function secondsToMMSS(seconds: number): string {
       const minutes: number = Math.floor(seconds / 60);
       const remainingSeconds: number = seconds % 60;
@@ -378,6 +492,10 @@ export class ColorClashGameComponent
         }
       });
   }
+
+  /**
+   * Sets the game finish state and updates the high score if necessary.
+   */
   private setGameFinish() {
     this.activeCountdown = false;
     this.countdownDestroy$.next(true);

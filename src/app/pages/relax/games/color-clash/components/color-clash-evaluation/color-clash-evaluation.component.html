@@ -3,10 +3,10 @@
 <p i18n>
   Congratulations, you scored {{ points }} points and {{ mistakes }} mistakes!
   <br /><br />
-  <span [innerHTML]="msg"></span>
-  @if (highScoreMsg) {
+  <span [innerHTML]="msg()"></span>
+  @if (highScoreMsg()) {
     <br /><br />
-    {{ highScoreMsg }}
+    {{ highScoreMsg() }}
   }
 </p>
 <br />

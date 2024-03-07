@@ -15,7 +15,7 @@ import { NgxCountService } from 'ngx-count-animation';
 import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { slideInAnimation } from './animations/route-animations';
+import { routeAnimation } from './animations/route-animations';
 import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
@@ -35,23 +35,38 @@ import { ExtendedComponent } from './utils/extended-component';
   providers: [NgxScrollAnimationsService, NgxCountService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  animations: [slideInAnimation],
+  animations: [routeAnimation],
 })
 export class AppComponent
   extends ExtendedComponent
   implements OnInit, AfterViewInit, OnDestroy
 {
+  /** Reference to the main HTML element of the component. */
   @ViewChild('mainRef') mainRef!: ElementRef<HTMLElement>;
+
+  /** Reference to the modal container element. */
   @ViewChild('modalRef', { read: ViewContainerRef })
   modalRef!: ViewContainerRef;
 
+  /** Flag to control the visibility of the mobile menu button. */
   public showMobileMenuBtn = true;
+
+  /** Flag to control the visibility of the mobile menu. */
   public showMobileMenu = false;
+
+  /** Flag indicating whether route animations should be used. */
   public useRouteAnimations = false;
 
+  /** Angular context for children outlets. */
   private contexts = inject(ChildrenOutletContexts);
+
+  /** Angular renderer for DOM manipulation. */
   private renderer = inject(Renderer2);
+
+  /** Document object for accessing DOM elements. */
   private document = inject(DOCUMENT);
+
+  /** Service for managing modals. */
   private modalManager = inject(ModalManagerService);
 
   override ngOnInit(): void {
@@ -88,6 +103,10 @@ export class AppComponent
     this.modalRef.clear();
   }
 
+  /**
+   * Initializes the component.
+   * Sets the theme based on the environment and listens for modal manager events.
+   */
   private listenModalManager() {
     this.modalManager.modal$.pipe(this.destroyPipe()).subscribe((res) => {
       this.modalRef.clear();
@@ -100,6 +119,10 @@ export class AppComponent
     });
   }
 
+  /**
+   * Retrieves animation data for route transitions.
+   * @returns Animation data for route transitions.
+   */
   public getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data.animation;
   }

@@ -4,7 +4,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import {
-  ProjectDetails,
   ProjectDetailsComponent,
 } from '../project-details/project-details.component';
 import {
@@ -13,6 +12,7 @@ import {
   openSourceLogo,
   waioLogo,
 } from '../utils/logos';
+import { ProjectDetails } from '../utils/portfolio-interfaces';
 
 @Component({
   selector: 'af-other-projects',
@@ -22,9 +22,12 @@ import {
   styleUrl: './other-projects.component.scss',
 })
 export class OtherProjectsComponent implements OnInit {
+  /** Array of project items. */
   public items: ({ type: string } & ProjectDetails)[] = [];
 
+  /** Modal manager service for opening project details. */
   private modalManager = inject(ModalManagerService);
+  /** DomSanitizer for bypassing security. */
   private sanitizer = inject(DomSanitizer);
 
   ngOnInit(): void {
@@ -40,7 +43,10 @@ export class OtherProjectsComponent implements OnInit {
         You can find one of these games by clicking on the "Team" tab and then pressing the "Icebreaker" button. 
         The other game is hidden as an "easter egg" on the homepage. Simply scroll to the "For all devices" section, 
         click on the red rectangle (which represents a phone with a scale animation).<br/><br/>
-        On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.
+        On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.<br/><br/>
+        The website was designed with a focus on performance and accessibility, and it is fully responsive,
+        ensuring a seamless experience across all devices.<br/><br/>
+        Most of the UI/UX part of this project is not mine.
         `,
         images: [
           {
@@ -383,7 +389,12 @@ export class OtherProjectsComponent implements OnInit {
     ];
   }
 
-  public openProject(item: any) {
+
+  /**
+   * Opens the project details modal.
+   * @param item The project item to display details for.
+   */
+   public openProject(item: any) {
     this.modalManager.openModal(ProjectDetailsComponent, { data: item });
   }
 }

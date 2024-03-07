@@ -28,26 +28,37 @@ import { environment } from 'src/environments/environment';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactFormComponent extends ExtendedComponent implements OnInit {
+  /** Reference to the footer container where dynamic content will be placed. */
   @ViewChild('footerRef', { static: true, read: ViewContainerRef })
   footerRef!: ViewContainerRef;
 
+  /** Reference to the error template. */
   @ViewChild('errorRef', { static: true, read: TemplateRef })
   errorRef!: TemplateRef<any>;
+  /** Reference to the success template. */
   @ViewChild('successRef', { static: true, read: TemplateRef })
   successRef!: TemplateRef<any>;
+  /** Reference to the blacklist template. */
   @ViewChild('blacklistRef', { static: true, read: TemplateRef })
   blacklistRef!: TemplateRef<any>;
+  /** Reference to the submit button template. */
   @ViewChild('submitBtnRef', { static: true, read: TemplateRef })
   submitBtnRef!: TemplateRef<any>;
+  /** Reference to the loading spinner template. */
   @ViewChild('loadingSpinner', { static: true, read: TemplateRef })
   loadingSpinner!: TemplateRef<any>;
 
+  /** Flag indicating whether the user is blacklisted. */
   private _blacklist = false;
+  /** Flag indicating whether the form has been successfully submitted. */
   private _sended = false;
+  /** Flag indicating whether the form is currently being sent. */
   private _sending = false;
 
+  /** Number of times the form submission has been attempted. */
   private _sendTries = 0;
 
+  /** Form group for the contact form. */
   public form = new FormGroup({
     firstname: new FormControl('', Validators.required),
     lastname: new FormControl('', Validators.required),
@@ -55,6 +66,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     email: new FormControl('', [Validators.email]),
   });
 
+  /** HttpClient for making HTTP requests. */
   private http = inject(HttpClient);
 
   override ngOnInit(): void {
@@ -62,6 +74,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     super.ngOnInit();
   }
 
+  /** Sends the contact form data. */
   public sendForm(): void {
     if (this._blacklist) return;
 
@@ -126,7 +139,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     } else if (this._sendTries >= 10) {
       this.footerRef.clear();
       this.footerRef.createEmbeddedView(this.errorRef, {
-        msg: $localize`Too many submission attempts! Please try again later.`,
+        msg: $localize`Too many requests! Please try again later.`,
       });
 
       this.cdRef.detectChanges();

@@ -32,15 +32,32 @@ export class RecommendedPagesComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /**
+   * Reference to the container element.
+   */
   @ViewChild('containerRef', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
+
+  /**
+   * Reference to the item template.
+   */
   @ViewChild('itemTemplate', { read: TemplateRef, static: true })
   itemTemplate!: TemplateRef<any>;
 
+  /**
+   * The active navigation item ID.
+   * @required
+   */
   @Input({ required: true }) activeId!: NavItemId;
 
+  /**
+   * Array of items to display.
+   */
   public items = [];
 
+  /**
+   * Sanitizer for bypassing security.
+   */
   private sanitizer = inject(DomSanitizer);
 
   override ngOnInit(): void {
@@ -53,6 +70,9 @@ export class RecommendedPagesComponent
     this.container.clear();
   }
 
+  /**
+   * Creates items for display.
+   */
   private createItems() {
     const listBefore: any[] = [];
     const listAfter: any[] = [];

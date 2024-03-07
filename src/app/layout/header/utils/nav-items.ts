@@ -1,36 +1,44 @@
+/**
+ * Array of navigation items.
+ * @type {NavItem[]}
+ */
 export const navItems: NavItem[] = [
   {
     path: '/about-me',
     name: $localize`About me`,
     id: 'aboutMe',
-    msg: 'Learn more about me.',
+    msg: $localize`Learn more about me.`,
   },
   {
     path: '/resume',
     name: $localize`Resume`,
     id: 'resume',
-    msg: 'View my resume.',
+    msg: $localize`View my resume.`,
   },
   {
     path: '/portfolio',
     name: $localize`Portfolio`,
     id: 'portfolio',
-    msg: 'Explore my portfolio.',
+    msg: $localize`Explore my portfolio.`,
   },
   {
     path: '/relax',
     name: $localize`Relax`,
     id: 'relax',
-    msg: 'Take a break and relax.',
+    msg: $localize`Take a break and relax.`,
   },
   {
     path: '/contact',
     name: $localize`Contact`,
     id: 'contact',
-    msg: 'Get in touch with me.',
+    msg: $localize`Get in touch with me.`,
   },
 ];
 
+/**
+ * Interface representing a navigation item.
+ * @interface
+ */
 interface NavItem {
   path: string;
   name: string;
@@ -38,4 +46,14 @@ interface NavItem {
   id: NavItemId;
   icon?: any;
 }
-export type NavItemId = 'aboutMe' | 'resume' | 'portfolio' | 'relax' | 'contact';
+
+/**
+ * Interface representing a navigation item.
+ * @interface
+ */
+export type NavItemId =
+  | 'aboutMe'
+  | 'resume'
+  | 'portfolio'
+  | 'relax'
+  | 'contact';

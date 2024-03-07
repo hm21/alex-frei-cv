@@ -7,23 +7,54 @@ import { IS_BROWSER } from '../utils/global-tokens';
   providedIn: 'root',
 })
 export class ScreenService {
+  /**
+   * The width of the screen.
+   */
   public width = 0;
+  /**
+   * The height of the screen.
+   */
   public height = 0;
-
+  
+  /**
+   * Indicates whether the screen size is extra small.
+   */
   public xs = false;
+  /**
+   * Indicates whether the screen size is small.
+   */
   public sm = false;
+  /**
+   * Indicates whether the screen size is medium.
+   */
   public md = false;
+  /**
+   * Indicates whether the screen size is large.
+   */
   public lg = false;
+  /**
+   * Indicates whether the screen size is extra large.
+   */
   public xl = false;
-
+  /**
+   * Subject for emitting screen size changes.
+   */
   public changed = new Subject<{
     height: number;
     width: number;
   }>();
-
+  /**
+   * Indicates whether the application is running in a browser.
+   */
   public isBrowser = inject(IS_BROWSER);
+  /**
+   * Reference to the document object.
+   */
   public document = inject(DOCUMENT);
 
+  /**
+   * Initializes the service.
+   */
   constructor() {
     this.calcScreenSize();
     if (this.isBrowser) {
@@ -33,6 +64,9 @@ export class ScreenService {
     }
   }
 
+  /**
+   * Calculates the screen size and updates the corresponding properties.
+   */
   public calcScreenSize() {
     this.height = this.isBrowser
       ? window.innerHeight

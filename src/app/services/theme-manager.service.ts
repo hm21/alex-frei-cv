@@ -7,9 +7,19 @@ import { IS_BROWSER } from '../utils/global-tokens';
   providedIn: 'root',
 })
 export class ThemeManagerService {
+  /**
+   * Indicates whether dark mode is enabled.
+   */
   public isDarkMode = false;
 
+  /**
+   * Reference to the document object.
+   */
   private document = inject(DOCUMENT);
+  
+  /**
+   * Indicates whether the application is running in a browser.
+   */
   public isBrowser = inject(IS_BROWSER);
 
   constructor() {
@@ -18,6 +28,9 @@ export class ThemeManagerService {
     }
   }
 
+  /**
+   * Toggles between light and dark themes.
+   */
   public toggleTheme() {
     const theme = this.isDarkMode ? 'dark' : 'light';
     localStorage.setItem('theme', theme);

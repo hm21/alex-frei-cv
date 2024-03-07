@@ -13,6 +13,10 @@ export class GitManagerService {
   private isBrowser = inject(IS_BROWSER);
   private http = inject(HttpClient);
 
+  /**
+   * Retrieves the number of commits from the GitHub repository.
+   * @returns {Observable<number>} An observable emitting the number of commits.
+   */
   public getCommitCount(): Observable<number> {
     if (!this.isBrowser || this.gitCommitCount) {
       return of(this.gitCommitCount);

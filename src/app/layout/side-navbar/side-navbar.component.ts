@@ -43,18 +43,40 @@ export class SideNavbarComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /**
+   * Reference to the container for navigation items.
+   * @type {ViewContainerRef}
+   */
   @ViewChild('navItemsRef', { read: ViewContainerRef, static: true })
   container!: ViewContainerRef;
+  /**
+   * Reference to the container for language switch component.
+   * @type {ViewContainerRef}
+   */
   @ViewChild('languageContainerRef', { read: ViewContainerRef, static: true })
   languageContainerRef!: ViewContainerRef;
+  /**
+   * Reference to the container for theme switch component.
+   * @type {ViewContainerRef}
+   */
   @ViewChild('themeContainerRef', { read: ViewContainerRef, static: true })
   themeContainerRef!: ViewContainerRef;
 
+  /**
+   * Reference to the navigation item template.
+   * @type {TemplateRef<any>}
+   */
   @ViewChild('navItem', { read: TemplateRef, static: true })
   private navItem!: TemplateRef<any>;
 
+  /**
+   * Indicates whether the side navbar is visible.
+   */
   public showNavbar = true;
 
+  /**
+   * Sanitizer for bypassing security.
+   */
   private sanitizer = inject(DomSanitizer);
 
   override ngOnInit(): void {
@@ -67,6 +89,10 @@ export class SideNavbarComponent
     this.container?.clear();
   }
 
+  /**
+   * Creates navigation items and adds them to the container.
+   * @private
+   */
   private createNavItems() {
     navItems.forEach((el) => {
       switch (el.id) {

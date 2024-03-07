@@ -1,10 +1,10 @@
 <div
   class="modal-content"
   [@modal]="{
-    value: modalFadeOut ? 'out' : 'in',
+    value: modalFadeOut() ? 'out' : 'in',
     params: {
-      durationIn: modalAnimationDurationIn,
-      durationOut: modalAnimationDurationOut
+      durationIn: modalAnimationDurationIn(),
+      durationOut: modalAnimationDurationOut()
     }
   }"
 >
@@ -124,7 +124,7 @@
                 type="button"
                 (click)="copy(data.install)"
               >
-                @if (copiedInstallCode) {
+                @if (copiedInstallCode()) {
                   <svg
                     class="list-icon stroke"
                     viewBox="0 0 24 24"
@@ -174,7 +174,7 @@
                 }
 
                 <span>
-                  @if (!showCopiedMsg) {
+                  @if (!showCopiedMsg()) {
                     {{ data.install }}
                   } @else {
                     <ng-container i18n>Copied</ng-container>
@@ -209,10 +209,10 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
       allowfullscreen
       class="youtube-player"
-      [ngStyle]="{ opacity: videoPlayerLoaded ? 1 : 0 }"
+      [ngStyle]="{ opacity: videoPlayerLoaded() ? 1 : 0 }"
       (load)="onVideoPlayerLoaded()"
     ></iframe>
-    @if (!videoPlayerLoaded) {
+    @if (!videoPlayerLoaded()) {
       <div class="loading-overlay">
         <div class="spinner"></div>
       </div>

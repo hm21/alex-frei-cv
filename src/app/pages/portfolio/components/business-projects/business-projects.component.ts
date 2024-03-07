@@ -5,10 +5,10 @@ import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.co
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
-  ProjectDetails,
   ProjectDetailsComponent,
 } from '../project-details/project-details.component';
 import { snaptabLogo } from '../utils/logos';
+import { ProjectDetails } from '../utils/portfolio-interfaces';
 
 @Component({
   selector: 'af-business-projects',
@@ -21,8 +21,10 @@ export class BusinessProjectsComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /** Safe HTML representation of the logo. */
   public logo!: SafeHtml;
 
+  /** Array of project items. */
   public items = [
     $localize`Company!`,
     $localize`Projects!`,
@@ -33,7 +35,9 @@ export class BusinessProjectsComponent
     $localize`Control!`,
   ];
 
+  /** Modal manager service for opening project details. */
   private modalManager = inject(ModalManagerService);
+  /** DomSanitizer for bypassing security. */
   private sanitizer = inject(DomSanitizer);
 
   override ngOnInit(): void {
@@ -42,11 +46,12 @@ export class BusinessProjectsComponent
     super.ngOnInit();
   }
 
+  /** Opens the project details modal. */
   public openProject() {
     const data: ProjectDetails = {
       logo: this.logo,
       title: 'snaptab',
-      subtitle: 'The Allrounder-Tool for your Company!',
+      subtitle: $localize`The Allrounder-Tool for your Company!`,
       description: $localize`
           The application snaptab was primarily developed for craftsmen and
           offers a wide range of features. From time tracking to scheduling

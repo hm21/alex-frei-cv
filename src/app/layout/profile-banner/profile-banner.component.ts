@@ -35,16 +35,37 @@ export class ProfileBannerComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /**
+   * Event emitter for closing the side menu.
+   */
   @Output() closeSideMenu = new EventEmitter<boolean>();
+  /**
+   * Event emitter for toggling the hero section.
+   */
   @Output() toggleHero = new EventEmitter<boolean>();
 
+  /**
+   * Reference to the container for navigation items.
+   * @type {ViewContainerRef}
+   */
   @ViewChild('navItemsRef', { read: ViewContainerRef, static: true })
   navItemsRef!: ViewContainerRef;
+  /**
+   * Reference to the container for language switch component.
+   * @type {ViewContainerRef}
+   */
   @ViewChild('languageContainerRef', { read: ViewContainerRef, static: true })
   languageContainerRef!: ViewContainerRef;
+  /**
+   * Reference to the container for theme switch component.
+   * @type {ViewContainerRef}
+   */
   @ViewChild('themeContainerRef', { read: ViewContainerRef, static: true })
   themeContainerRef!: ViewContainerRef;
-
+  /**
+   * Reference to the navigation item template.
+   * @type {TemplateRef<any>}
+   */
   @ViewChild('navItem', { read: TemplateRef, static: true })
   navItem!: TemplateRef<any>;
 
@@ -60,6 +81,10 @@ export class ProfileBannerComponent
     this.themeContainerRef.clear();
   }
 
+  /**
+   * Listens for screen resize events.
+   * @private
+   */
   private listenScreenResize() {
     if (!this.isBrowser) return;
     fromEvent(window, 'resize')
@@ -69,12 +94,20 @@ export class ProfileBannerComponent
       });
   }
 
+  /**
+   * Creates navigation items for mobile view and adds language and theme switch components.
+   * @private
+   */
   private createNavItems() {
     navItems.forEach((el) => {
       this.navItemsRef!.createEmbeddedView(this.navItem, el);
     });
   }
 
+  /**
+   * Checks if the mobile menu items need to be displayed based on the screen size.
+   * @private
+   */
   private checkMobileMenuItems() {
     if (!this.isBrowser) return;
 

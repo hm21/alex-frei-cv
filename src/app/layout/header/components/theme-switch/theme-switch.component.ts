@@ -16,5 +16,4 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 })
 export class ThemeSwitchComponent extends ExtendedComponent implements OnInit {
   public theme = inject(ThemeManagerService);
-
 }

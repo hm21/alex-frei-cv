@@ -2,6 +2,10 @@ import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable, PLATFORM_ID, inject } from '@angular/core';
 
+/**
+ * Service for managing analytics tracking.
+ * @injectable
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -12,7 +16,11 @@ export class AnalyticsService {
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {}
 
-  private get anonymId() {
+  /**
+   * Generates an anonymous ID for tracking.
+   * @returns {string} The generated anonymous ID.
+   */
+  private get anonymId(): string {
     let id = localStorage.getItem('analytics_id');
     if (!id) {
       id =
@@ -22,6 +30,11 @@ export class AnalyticsService {
     return id;
   }
 
+  /**
+   * Posts analytics data to the server.
+   * @param {('websiteVisit' | 'pageVisit' | 'interaction')} mode - The mode of analytics data.
+   * @param {string} [eventName] - The name of the event.
+   */
   private post(
     mode: 'websiteVisit' | 'pageVisit' | 'interaction',
     eventName?: string,
@@ -29,7 +42,7 @@ export class AnalyticsService {
     value = 0,
   ) {
     if (isPlatformBrowser(this.platformId)) {
-      /** TODO: Post analytics */
+      /** TODO: Post optional analytics */
       /* this.http
         .post(this.functionsUrl, {
           mode,
@@ -40,12 +53,26 @@ export class AnalyticsService {
         .subscribe(); */
     }
   }
+
+  /**
+   * Tracks a website visit.
+   */
   public websiteVisit() {
     this.post('websiteVisit', 'visit');
   }
+
+  /**
+   * Tracks a page visit.
+   * @param {string} pageName - The name of the visited page.
+   */
   public pageVisit(pageName: string) {
     this.post('pageVisit', pageName);
   }
+
+  /**
+   * Tracks an interaction event.
+   * @param {string} eventName - The name of the interaction event.
+   */
   public interaction(eventName: string) {
     this.post('interaction', eventName);
   }

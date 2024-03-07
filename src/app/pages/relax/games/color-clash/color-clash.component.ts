@@ -29,18 +29,40 @@ import {
   ],
 })
 export class ColorClashComponent extends ExtendedComponent {
+  /**
+   * The metadata for the page.
+   */
   protected override pageMeta: MetaDataI = {
     title: $localize`Color Clash Game`,
     description: $localize`Attempt to keep your mind under control without getting confused.`,
   };
+
+  /**
+   * Enum representing the different states of the Color Clash game.
+   */
   public GameState = ColorClashGameState;
+
+  /**
+   * The current state of the game.
+   */
   public gameState = signal<ColorClashGameState>(
     ColorClashGameState.instruction,
   );
 
+  /**
+   * The number of points earned in the game.
+   */
   public points = signal(0);
+
+  /**
+   * The number of mistakes made in the game.
+   */
   public mistakes = signal(0);
 
+  /**
+   * Event handler for when the game finishes.
+   * @param ev The finish event containing the points and mistakes.
+   */
   public onFinishGame(ev: ColorClashFinishEvent) {
     this.points.set(ev.points);
     this.mistakes.set(ev.mistakes);

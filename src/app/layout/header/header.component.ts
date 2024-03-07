@@ -19,6 +19,12 @@ import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-to
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent extends ExtendedComponent {
+  /**
+   * Event emitter for closing the side menu.
+   */
   @Output() closeSideMenu = new EventEmitter<boolean>();
+  /**
+   * Event emitter for toggling the profile avatar `hero` animation.
+   */
   @Output() toggleHero = new EventEmitter<boolean>();
 }

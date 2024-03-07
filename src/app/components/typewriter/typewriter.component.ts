@@ -4,7 +4,7 @@ import {
   Component,
   Input,
   NgZone,
-  inject
+  inject,
 } from '@angular/core';
 import { concatMap, filter, interval, map, timer } from 'rxjs';
 import { ScreenService } from 'src/app/services/screen.service';
@@ -21,6 +21,10 @@ export class TypewriterComponent
   extends ExtendedComponent
   implements AfterViewInit
 {
+  /**
+   * The items to display in the typewriter effect.
+   * @required
+   */
   @Input({ required: true }) items: string[] = [];
 
   private zone = inject(NgZone);
@@ -31,6 +35,10 @@ export class TypewriterComponent
     this.animateText();
   }
 
+  /**
+   * Animates the text in the typewriter effect.
+   * @private
+   */
   private animateText(): void {
     let text = '';
     const arr = this.items;
@@ -83,6 +91,11 @@ export class TypewriterComponent
     });
   }
 
+  /**
+   * Checks if the element is visible in the viewport.
+   * @returns {boolean} true if the element is visible, false otherwise.
+   * @private
+   */
   private isElementVisible(): boolean {
     const el = this.elRef.nativeElement;
     const bounding = el.getBoundingClientRect();

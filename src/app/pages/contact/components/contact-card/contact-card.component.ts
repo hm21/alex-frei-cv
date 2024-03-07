@@ -9,5 +9,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactCardComponent {
+  /**
+   * Represents the URL for the contact card.
+   */
   @Input({ required: true }) url!: string;
 }

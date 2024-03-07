@@ -11,6 +11,9 @@ import { SkillItem } from '../../utils/resume-interface';
   styleUrl: './resume-skills.component.scss',
 })
 export class ResumeSkillsComponent {
+  /**
+   * An array of frontend skills.
+   */
   public frontendSkills: SkillItem[] = [
     {
       name: `Angular`,
@@ -33,6 +36,10 @@ export class ResumeSkillsComponent {
       skill: 85,
     },
   ];
+
+  /**
+   * An array of backend skills.
+   */
   public backendSkills: SkillItem[] = [
     {
       name: `Firebase`,
@@ -56,6 +63,9 @@ export class ResumeSkillsComponent {
     },
   ];
 
+  /**
+   * An array of knowledge areas.
+   */
   public knowledges = [
     'Figma',
     'Typesense',

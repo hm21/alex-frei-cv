@@ -44,20 +44,42 @@ import { GameStateChanged, Quiz } from './utils/quiz-interface';
   animations: [cardFadeInUpScale],
 })
 export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
+  /**
+   * The metadata for the page.
+   */
   protected override pageMeta: MetaDataI = {
     title: $localize`Quantum Quiz Game`,
-    description: $localize`Can you emerge victorious on the millionaire show with your AI-generated
-    topic?`,
+    description: $localize`Can you emerge victorious on the millionaire show with your AI-generated topic?`,
   };
+
+  /**
+   * The possible game states for the Quantum Quiz.
+   */
   public GameState = QuizGameState;
+
+  /**
+   * The current game state.
+   */
   public gameState = signal<QuizGameState>(QuizGameState.instruction);
 
+  /**
+   * The amount of cash won by the player.
+   */
   public wonCash = signal(0);
 
+  /**
+   * The error message generated during quiz generation.
+   */
   public generateErrorMsg = '';
 
+  /**
+   * The list of quiz questions.
+   */
   public quiz: Quiz[] = [];
 
+  /**
+   * The HTTP client instance.
+   */
   private http = inject(HttpClient);
 
   override ngOnInit(): void {
@@ -65,6 +87,10 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
     super.ngOnInit();
   }
 
+  /**
+   * Performs the wake-up quiz function.
+   * Sends a POST request to the quiz endpoint to wake up the quiz function for faster response.
+   */
   private wakeUpQuizFunction() {
     this.http
       .post(environment.endpoints.quiz, 'wake-up')
@@ -72,12 +98,18 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
       .subscribe();
   }
 
+  /**
+   * Generates a new quiz.
+   * Sends a POST request to the quiz endpoint to generate a quiz based on the specified topic.
+   * @param topic The topic for the quiz. If not specified, a random topic will be used.
+   */
   public generateQuiz(topic?: string) {
     this.gameState.set(QuizGameState.generateQuiz);
 
     this.http
       .post(environment.endpoints.quiz, {
         topic,
+        lang: $localize`en`,
       })
       .subscribe({
         next: (res: any) => {
@@ -100,6 +132,11 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
       });
   }
 
+  /**
+   * Handles the state change event.
+   * Updates the won cash and game state based on the provided data.
+   * @param data The state change data.
+   */
   public onStateChanged(data: GameStateChanged) {
     this.wonCash.set(data.currentCash ?? 0);
     this.gameState.set(data.state);

@@ -23,9 +23,11 @@ export class AboutMeServicesComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  /** Reference to the container where service items will be created dynamically. */
   @ViewChild('serviceItemsRef', { read: ViewContainerRef, static: true })
   serviceItemsRef!: ViewContainerRef;
 
+  /** Array of service card data to be displayed. */
   private items: ServiceCard[] = [
     {
       title: $localize`Websites`,
@@ -46,8 +48,8 @@ export class AboutMeServicesComponent
     {
       title: $localize`Design`,
       msg: $localize`
-        Design is my passion, and I bring creativity and flair to every project. 
-        I specialize in crafting visually captivating designs that reflect your brand identity and leave a lasting impression on your audience.
+      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
+      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
       `,
       icon: 'design',
     },
@@ -55,7 +57,7 @@ export class AboutMeServicesComponent
       title: $localize`Backend`,
       msg: $localize`
         As a backend developer, I architect robust and scalable systems to power your applications. 
-        From database design to server-side logic, I ensure seamless functionality and reliability, allowing you to focus on growing your business.
+        From database design to server-side logic, I ensure seamless functionality and reliability.
       `,
       icon: 'backend',
     },
@@ -73,6 +75,10 @@ export class AboutMeServicesComponent
     this.serviceItemsRef.clear();
   }
 
+  /**
+   * Dynamically creates a service card component with the provided data.
+   * @param data Service card data to be displayed.
+   */
   private createService(data: ServiceCard) {
     const componentRef =
       this.serviceItemsRef.createComponent(ServiceCardComponent);

@@ -1,18 +1,22 @@
 import { isDevMode } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
+/**
+ * Generates meta tags for a webpage based on provided data.
+ * @param {MetaDataI & { titleC: Title; metaC: Meta }} data - The metadata and Angular Title/Meta services.
+ */
 export const metaGenerator = (
-  data: MetaDataI & { titleC: Title; metaC: Meta }
+  data: MetaDataI & { titleC: Title; metaC: Meta },
 ) => {
   if (isDevMode()) {
     if (data.title.length < 15 || data.title.length > 64) {
       console.warn(
-        `HTML title is too long or too short. The title should have a length between 15 and 64 Characters (Currently ${data.title.length})`
+        `HTML title is too long or too short. The title should have a length between 15 and 64 Characters (Currently ${data.title.length})`,
       );
     }
     if (data.description.length < 25 || data.description.length > 160) {
       console.warn(
-        `HTML description is too long or too short. The description should have a length between 25 and 160 Characters (Currently ${data.description.length})`
+        `HTML description is too long or too short. The description should have a length between 25 and 160 Characters (Currently ${data.description.length})`,
       );
     }
   }
@@ -40,6 +44,9 @@ export const metaGenerator = (
   data.metaC.updateTag({ name: `twitter:image`, content: url });
 };
 
+/**
+ * Interface for defining metadata for a webpage.
+ */
 export interface MetaDataI {
   title: string;
   description: string;

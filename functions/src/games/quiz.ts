@@ -26,7 +26,7 @@ export default async (req: https.Request, resp: express.Response) => {
   const ddosAttack = await ddosCheck(req, 'quiz', 120);
   if (ddosAttack) return resp.status(403).json('Blacklist');
 
-  const lang = req.path.split('/')[1];
+  const lang = req.body?.['lang'] as string ?? 'en';
   let topic = (req.body?.['topic'] as string)?.substring(0, 20);
 
   if (!topic || topic.length < 3) {

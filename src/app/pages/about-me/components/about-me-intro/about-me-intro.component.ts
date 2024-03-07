@@ -11,6 +11,9 @@ import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.co
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeIntroComponent implements OnInit {
+  /**
+   * An array of strings representing different roles or titles.
+   */
   public readonly items = [
     $localize`Full Stack Developer`,
     $localize`Angular Developer`,
@@ -23,9 +26,20 @@ export class AboutMeIntroComponent implements OnInit {
     $localize`Supabase Developer`,
   ];
 
+  /**
+   * Represents the age of the person.
+   */
   public age = 0;
 
   ngOnInit(): void {
+    this.calculateAge();
+  }
+
+  /**
+   * Calculates the age based on the provided birth date.
+   * @private
+   */
+  private calculateAge() {
     function calcAge(birthDate: Date) {
       const currDt = new Date();
 

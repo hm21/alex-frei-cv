@@ -1,4 +1,6 @@
-export const environment = {
+import { Environment } from './environment-interface';
+
+export const environment: Environment = {
   production: true,
   analytics: true,
   endpoints: {
