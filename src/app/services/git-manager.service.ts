@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, map, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { IS_BROWSER } from '../utils/global-tokens';
 
 @Injectable({
@@ -21,8 +22,6 @@ export class GitManagerService {
     if (!this.isBrowser || this.gitCommitCount) {
       return of(this.gitCommitCount);
     }
-
-    const url = `${this.githubUrl}/repos/hm21/alex-frei-cv/commits`;
-    return this.http.get<any[]>(url).pipe(map((el) => el.length));
+    return this.http.get<number>(environment.endpoints.gitCommitCount);
   }
 }

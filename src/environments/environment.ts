@@ -6,5 +6,6 @@ export const environment: Environment = {
   endpoints: {
     quiz: 'http://127.0.0.1:5001/alex-frei/europe-west6/quiz',
     contactMessage: 'http://127.0.0.1:5001/alex-frei/europe-west6/contactForm',
+    gitCommitCount: 'http://127.0.0.1:5001/alex-frei/europe-west6/gitCommits',
   },
 };

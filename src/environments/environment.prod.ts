@@ -6,5 +6,6 @@ export const environment: Environment = {
   endpoints: {
     quiz: 'https://alex-frei.web.app/api/v1/quiz',
     contactMessage: 'https://alex-frei.web.app/api/v1/contact-form',
+    gitCommitCount: 'https://alex-frei.web.app/api/v1/git-commit-count',
   },
 };

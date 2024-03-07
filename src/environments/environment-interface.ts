@@ -2,28 +2,33 @@
  * Represents the environment configuration.
  */
 export interface Environment {
+  /**
+   * Indicates whether the application is in production mode.
+   */
+  production: boolean;
+
+  /**
+   * Indicates whether analytics is enabled.
+   */
+  analytics: boolean;
+
+  /**
+   * Contains the endpoints for various features.
+   */
+  endpoints: {
     /**
-     * Indicates whether the application is in production mode.
+     * The endpoint for the quiz feature.
      */
-    production: boolean;
+    quiz: string;
 
     /**
-     * Indicates whether analytics is enabled.
+     * The endpoint for sending contact messages.
      */
-    analytics: boolean;
+    contactMessage: string;
 
     /**
-     * Contains the endpoints for various features.
+     * The endpoint for the git commit count.
      */
-    endpoints: {
-        /**
-         * The endpoint for the quiz feature.
-         */
-        quiz: string;
-
-        /**
-         * The endpoint for sending contact messages.
-         */
-        contactMessage: string;
-    };
+    gitCommitCount: string;
+  };
 }
