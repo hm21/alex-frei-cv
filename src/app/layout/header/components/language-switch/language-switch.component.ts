@@ -85,13 +85,18 @@ export class LanguageSwitchComponent
   public languages: Language[] = [
     {
       iso2: 'en',
-      iso3: 'Eng',
+      short: 'EN',
       name: 'English',
     },
     {
       iso2: 'de',
-      iso3: 'Deu',
+      short: 'DE',
       name: 'Deutsch',
+    },
+    {
+      iso2: 'vi',
+      short: 'VI',
+      name: 'Vietnamese',
     },
   ];
 
@@ -151,6 +156,6 @@ export class LanguageSwitchComponent
 
 interface Language {
   iso2: string;
-  iso3: string;
+  short: string;
   name: string;
 }

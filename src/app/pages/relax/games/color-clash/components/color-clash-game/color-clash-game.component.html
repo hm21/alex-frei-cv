@@ -16,7 +16,7 @@
       class="item pos-{{ $index }}"
       [ngStyle]="{ '--game-item-color': item.color }"
     >
-      <div class="mode">{{ item.mode | uppercase }}</div>
+      <div class="mode">{{ item.modeTranslated | uppercase }}</div>
       <div class="content" [innerHTML]="item.content"></div>
     </div>
   }

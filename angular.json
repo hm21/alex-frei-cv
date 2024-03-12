@@ -75,7 +75,8 @@
               "sourceMap": true,
               "localize": [
                 "en",
-                "de"
+                "de",
+                "vi"
               ],
               "baseHref": "/en/"
             },
@@ -84,6 +85,12 @@
                 "de"
               ],
               "baseHref": "/de/"
+            },
+            "vi": {
+              "localize": [
+                "vi"
+              ],
+              "baseHref": "/vi/"
             },
             "en": {
               "localize": [
@@ -145,6 +152,9 @@
         "locales": {
           "de": {
             "translation": "src/locale/messages.de.xlf"
+          },
+          "vi": {
+            "translation": "src/locale/messages.vi.xlf"
           }
         }
       }

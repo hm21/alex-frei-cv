@@ -32,6 +32,28 @@
           ]
         }
       ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "/about-me",
+          "type": 301
+        },
+        {
+          "source": "/en",
+          "destination": "/en/about-me",
+          "type": 301
+        },
+        {
+          "source": "/de",
+          "destination": "/de/about-me",
+          "type": 301
+        },
+        {
+          "source": "/vn",
+          "destination": "/vn/about-me",
+          "type": 301
+        }
+      ],
       "rewrites": [
         {
           "source": "/api/v1/quiz",
@@ -52,12 +74,9 @@
         {
           "source": "/de/**",
           "destination": "/de/index.html"
-        },
-        {
-          "source": "**",
-          "destination": "/en/index.html"
         }
       ],
+      "trailingSlash": false,
       "i18n": {
         "root": "/"
       }

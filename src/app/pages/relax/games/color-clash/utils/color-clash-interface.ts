@@ -14,6 +14,7 @@ export enum ColorClashGameState {
  */
 export interface ColorClashGameItem {
   mode: 'color' | 'meaning';
+  modeTranslated: string;
   content: SafeHtml;
   item: string;
   color: string;

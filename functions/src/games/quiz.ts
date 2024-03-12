@@ -26,7 +26,7 @@ export default async (req: https.Request, resp: express.Response) => {
   const ddosAttack = await ddosCheck(req, 'quiz', 120);
   if (ddosAttack) return resp.status(403).json('Blacklist');
 
-  const lang = req.body?.['lang'] as string ?? 'en';
+  const lang = (req.body?.['lang'] as string) ?? 'en';
   let topic = (req.body?.['topic'] as string)?.substring(0, 20);
 
   if (!topic || topic.length < 3) {
@@ -40,7 +40,7 @@ export default async (req: https.Request, resp: express.Response) => {
         content: `
                   Generate a quiz consisting of 15 questions for the user about the topic "${topic}". 
                   Each question should offer four answer options, with one correct answer. 
-                  The language in which you translate the questions and answers is ${lang === 'de' ? 'German' : 'English'}.
+                  The language in which you translate the questions and answers is ${lang === 'de' ? 'German' : lang === 'vi' ? 'Vietnamese' : 'English'}.
                   Start with an easy question and progressively increase the difficulty with each subsequent question.
                   The response should not include any identifiers such as 'a-' or '1'. Only the text content of the answer should be provided.
                   Provide the correct answer index within the array of answers in the response JSON format, structured as follows:

@@ -351,11 +351,14 @@ export class ColorClashGameComponent
         this.gameButtons[Math.floor(Math.random() * this.gameButtons.length)]
           .id;
       const meaning = this.getMeaning(id);
+      const mode = Math.random() > 0.5 ? 'color' : 'meaning';
       this.viewItems().unshift({
         color: this.colors[Math.floor(Math.random() * this.colors.length)],
         content: this.sanitizer.bypassSecurityTrustHtml(meaning),
         item: meaning,
-        mode: Math.random() > 0.5 ? 'color' : 'meaning',
+        mode,
+        modeTranslated:
+          mode === 'color' ? $localize`Color` : $localize`Meaning`,
         loopId: ++this.itemCount,
         id,
       });

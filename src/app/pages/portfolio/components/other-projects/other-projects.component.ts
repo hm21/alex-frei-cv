@@ -178,6 +178,10 @@ export class OtherProjectsComponent implements OnInit {
         demoUrl: 'https://hm21.github.io/pro_image_editor',
         website: [
           {
+            title: `pub.dev`,
+            url: 'https://pub.dev/packages/pro_image_editor',
+          },
+          {
             title: $localize`Github-Page`,
             url: 'https://github.com/hm21/pro_image_editor',
           },

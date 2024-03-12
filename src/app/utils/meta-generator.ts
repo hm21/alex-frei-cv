@@ -21,8 +21,8 @@ export const metaGenerator = (
     }
   }
 
-  
-  const url = data.img ?? 'https://alex-frei.web.app/assets/img/avatar/alex_original.png';
+  const url =
+    data.img ?? 'https://firebasestorage.googleapis.com/v0/b/alex-frei/o/alex_og.jpeg?alt=media';
   data.titleC.setTitle(data.title);
   data.metaC.updateTag({ name: `description`, content: data.description });
 
