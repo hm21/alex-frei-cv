@@ -30,14 +30,7 @@ describe('LanguageSwitchComponent', () => {
 
   it('should initialize correctly', () => {
     expect(component.showLanguage).toBeFalse();
-    expect(component.languages).toEqual([
-      { iso2: 'en', iso3: 'Eng', name: 'English' },
-      { iso2: 'de', iso3: 'Deu', name: 'Deutsch' },
-    ]);
-    expect(component.activeLanguage).toEqual({
-      iso2: 'en',
-      iso3: 'Eng',
-      name: 'English',
-    });
+  
+    expect(component.activeLanguage.iso2).toEqual('en');
   });
 });

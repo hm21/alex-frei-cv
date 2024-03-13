@@ -778,7 +778,7 @@ Die Anwendung wird sowohl als Web-App als auch als mobile App für Android und i
       </trans-unit>
       <trans-unit id="3748965883549109139" datatype="html">
         <source>Mobile-web-app “PWA”</source>
-        <target>Mobile-web-app “PWA”</target>
+        <target>Mobile-web-app „PWA”</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">79</context>
@@ -1054,19 +1054,19 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Github-Seite</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">181</context>
+          <context context-type="linenumber">185</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">224</context>
+          <context context-type="linenumber">228</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">267</context>
+          <context context-type="linenumber">271</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">310</context>
+          <context context-type="linenumber">314</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4222037467811949681" datatype="html">
@@ -1074,15 +1074,15 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Angular open source</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">203</context>
+          <context context-type="linenumber">207</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">246</context>
+          <context context-type="linenumber">250</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">289</context>
+          <context context-type="linenumber">293</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6774285373642240712" datatype="html">
@@ -1090,7 +1090,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Automatische scroll-animationen für Angular 9+ apps.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">205</context>
+          <context context-type="linenumber">209</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8539152062104707277" datatype="html">
@@ -1102,7 +1102,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Ein Paket zur Implementierung von CSS-Scroll-Animationen für Elemente. Diese Animationen werden aktiviert, wenn ein Element beim Scrollen der Seite in den „Sichtbereich“ eintritt. Die Benutzer haben die Flexibilität, die Animationen so zu konfigurieren, dass sie mehrmals oder nur einmal ausgelöst werden. Außerdem ermöglicht das Paket vorgefertigte sowie benutzerdefinierte Animationen für verschiedene Anforderungen zu erstellen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">207,211</context>
+          <context context-type="linenumber">211,215</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7889620127601939568" datatype="html">
@@ -1110,7 +1110,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Vorschau „scroll-animations“</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">216</context>
+          <context context-type="linenumber">220</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1002170015007706153" datatype="html">
@@ -1119,7 +1119,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">248</context>
+          <context context-type="linenumber">252</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7689134266850341635" datatype="html">
@@ -1131,7 +1131,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern ermöglichen, auf Bilder zu klicken, damit sie flüssig vergrößert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so sanft erscheint wie in der Realität. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">250,254</context>
+          <context context-type="linenumber">254,258</context>
         </context-group>
       </trans-unit>
       <trans-unit id="723955192887140537" datatype="html">
@@ -1139,7 +1139,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Image hero Vorschau</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">259</context>
+          <context context-type="linenumber">263</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5337895058168876856" datatype="html">
@@ -1147,7 +1147,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Zählt Zahlen flüssig hoch und runter.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">295</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2116094780259070056" datatype="html">
@@ -1159,7 +1159,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Ein Paket, das Zahlenänderungen elegant animiert und einen visuell ansprechenden Übergang von einem Wert zum anderen schafft, perfekt zum Zählen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so flüssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">294,298</context>
+          <context context-type="linenumber">298,302</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2981746578304917090" datatype="html">
@@ -1167,7 +1167,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Count animation Vorschau</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">302</context>
+          <context context-type="linenumber">306</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3721298594029045214" datatype="html">
@@ -1175,7 +1175,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>IoT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">329</context>
+          <context context-type="linenumber">333</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7988858937831296342" datatype="html">
@@ -1183,7 +1183,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Smarthome-App zur Automatisierung von Bienenstöcken und Gärten.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">331</context>
+          <context context-type="linenumber">335</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6133390707893312230" datatype="html">
@@ -1194,7 +1194,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Dieses Projekt ist eine Echtzeit-Steuerungsanwendung. Die Benutzer können die Funktionen der GPIO-Ports direkt programmieren, ohne dass Programmierkenntnisse erforderlich sind. Außerdem können die Benutzer auf Daten über den persönlichen Bienenstock zugreifen, einschließlich Echtzeit-Temperaturmessungen sowie die von den Bienen produzierte Honigmenge.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">333,336</context>
+          <context context-type="linenumber">337,340</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4913960567088667274" datatype="html">
@@ -1202,7 +1202,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Smarthome Bienen-Übersicht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">340</context>
+          <context context-type="linenumber">344</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6352415780197482141" datatype="html">
@@ -1210,7 +1210,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Smarthome Bienen-Details</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">345</context>
+          <context context-type="linenumber">349</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8545834380965620864" datatype="html">
@@ -1218,7 +1218,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Smarthome Schalter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">350</context>
+          <context context-type="linenumber">354</context>
         </context-group>
       </trans-unit>
       <trans-unit id="785371004610436854" datatype="html">
@@ -1226,7 +1226,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Smarthome Ionic version</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">355</context>
+          <context context-type="linenumber">359</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1758,14 +1758,6 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
           <context context-type="linenumber">4,12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5033344786701996312" datatype="html">
-        <source>Oops you loose!</source>
-        <target>Hoppla, Sie haben verloren!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
-          <context context-type="linenumber">60,62</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="1613601634394055332" datatype="html">
         <source> It seems like you still have more to learn about this topic before you can master it. Try a new topic, and let&apos;s see if you can win more than <x id="INTERPOLATION" equiv-text="{{ +wonCash | number: &quot;1.2-2&quot; }}"/> CHF there.
 </source>
@@ -2072,7 +2064,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="135092519774443252" datatype="html">
         <source>Changed “Report-App” from libGDX to Ionic</source>
-        <target>„Report-App“ von libGDX zu Ionic geändert</target>
+        <target>„Rapport-App“ von libGDX zu Ionic geändert</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">60</context>
@@ -2145,7 +2137,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8015410393514325898" datatype="html">
         <source>Project “snaptab”</source>
-        <target>Projekt “snaptab”</target>
+        <target>Projekt „snaptab”</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">76</context>
@@ -2269,7 +2261,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7643796150553263848" datatype="html">
         <source>Program an “Endless Runner” game with libGDX.</source>
-        <target>Programmieren Sie ein „Endless Runner“ Spiel mit libGDX.</target>
+        <target>Programmierte ein „Endless Runner“ Spiel mit libGDX.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
           <context context-type="linenumber">46</context>
@@ -2321,6 +2313,14 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
           <context context-type="linenumber">361</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1188841585502022097" datatype="html">
+        <source>Oops you lose!</source>
+        <target>Ups, du hast verloren!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="linenumber">60,62</context>
         </context-group>
       </trans-unit>
     </body>

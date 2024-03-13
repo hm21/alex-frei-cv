@@ -1017,41 +1017,41 @@
         <source>Github-Page</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">181</context>
+          <context context-type="linenumber">185</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">224</context>
+          <context context-type="linenumber">228</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">267</context>
+          <context context-type="linenumber">271</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">310</context>
+          <context context-type="linenumber">314</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4222037467811949681" datatype="html">
         <source>Angular open source</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">203</context>
+          <context context-type="linenumber">207</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">246</context>
+          <context context-type="linenumber">250</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">289</context>
+          <context context-type="linenumber">293</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6774285373642240712" datatype="html">
         <source>Add automatic scroll animations to an angular 9+ app.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">205</context>
+          <context context-type="linenumber">209</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8539152062104707277" datatype="html">
@@ -1062,21 +1062,21 @@
        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">207,211</context>
+          <context context-type="linenumber">211,215</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7889620127601939568" datatype="html">
         <source>Scroll animations showcase</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">216</context>
+          <context context-type="linenumber">220</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1002170015007706153" datatype="html">
         <source>Easy way that images will fly to the middle of the screen for presentation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">248</context>
+          <context context-type="linenumber">252</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7689134266850341635" datatype="html">
@@ -1087,21 +1087,21 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">250,254</context>
+          <context context-type="linenumber">254,258</context>
         </context-group>
       </trans-unit>
       <trans-unit id="723955192887140537" datatype="html">
         <source>Image hero showcase</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">259</context>
+          <context context-type="linenumber">263</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5337895058168876856" datatype="html">
         <source>Count numbers up and down with smooth animation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">295</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2116094780259070056" datatype="html">
@@ -1112,28 +1112,28 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">294,298</context>
+          <context context-type="linenumber">298,302</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2981746578304917090" datatype="html">
         <source>Count animation showcase</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">302</context>
+          <context context-type="linenumber">306</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3721298594029045214" datatype="html">
         <source>IoT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">329</context>
+          <context context-type="linenumber">333</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7988858937831296342" datatype="html">
         <source>Smarthome app to automate bee hives and gardens.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">331</context>
+          <context context-type="linenumber">335</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6133390707893312230" datatype="html">
@@ -1143,35 +1143,35 @@
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">333,336</context>
+          <context context-type="linenumber">337,340</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4913960567088667274" datatype="html">
         <source>Smarthome bee overview</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">340</context>
+          <context context-type="linenumber">344</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6352415780197482141" datatype="html">
         <source>Smarthome bee details</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">345</context>
+          <context context-type="linenumber">349</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8545834380965620864" datatype="html">
         <source>Smarthome switch</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">350</context>
+          <context context-type="linenumber">354</context>
         </context-group>
       </trans-unit>
       <trans-unit id="785371004610436854" datatype="html">
         <source>Smarthome Ionic version</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">355</context>
+          <context context-type="linenumber">359</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1659,8 +1659,8 @@
           <context context-type="linenumber">4,12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5033344786701996312" datatype="html">
-        <source>Oops you loose!</source>
+      <trans-unit id="1188841585502022097" datatype="html">
+        <source>Oops you lose!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">60,62</context>
