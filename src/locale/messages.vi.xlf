@@ -1677,7 +1677,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
       </trans-unit>
       <trans-unit id="6347645514913788737" datatype="html">
         <source> I&apos;m sorry, but the correct answer was <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b           &gt;"/>. </source>
-        <target> Tôi xin lỗi, nhưng câu trả lời đúng là <x id="START_BD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ trueAnswerLetter () }}"/><x id="CLOSE_bol_TEXT" ctype="x-b" equiv-text="&lt;/b &gt;"/>. </target>
+        <target> Tôi xin lỗi, nhưng câu trả lời đúng là <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b           &gt;"/>. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">21,26</context>
