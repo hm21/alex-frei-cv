@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import {
   Component,
   EventEmitter,
@@ -7,10 +8,10 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
+  inject,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroModule } from 'ngx-image-hero';
-import { QuicklinkModule } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
@@ -25,7 +26,6 @@ import { navItems } from '../header/utils/nav-items';
     LanguageSwitchComponent,
     RouterLink,
     RouterLinkActive,
-    QuicklinkModule,
     NgxImageHeroModule,
   ],
   templateUrl: './profile-banner.component.html',
@@ -68,6 +68,8 @@ export class ProfileBannerComponent
    */
   @ViewChild('navItem', { read: TemplateRef, static: true })
   navItem!: TemplateRef<any>;
+
+  private http = inject(HttpClient);
 
   override ngOnInit(): void {
     this.listenScreenResize();
@@ -126,5 +128,23 @@ export class ProfileBannerComponent
       this.languageContainerRef.clear();
       this.themeContainerRef.clear();
     }
+  }
+
+  /**
+   * Downloads the resume in pdf format.
+   * @public
+   */
+  public downloadPdf() {
+    const url = 'assets/docs/alex_frei_cv.pdf';
+    const filename = 'alex_frei_cv.pdf';
+
+    this.http.get(url, { responseType: 'blob' }).subscribe((blob: Blob) => {
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
   }
 }

@@ -140,22 +140,12 @@
           <context context-type="linenumber">109,111</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5873413805101868453" datatype="html">
-        <source> Contact
-</source>
-        <target> Kontakt
-</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">135,137</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7306768770762854120" datatype="html">
         <source> View source code </source>
         <target> Quellcode anzeigen </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">150,151</context>
+          <context context-type="linenumber">143,144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7328564269131534198" datatype="html">
@@ -2321,6 +2311,14 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2280421609807146729" datatype="html">
+        <source>Download PDF</source>
+        <target>PDF Herunterladen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">129,130</context>
         </context-group>
       </trans-unit>
     </body>
