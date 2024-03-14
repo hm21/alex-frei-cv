@@ -144,7 +144,7 @@
         <target>Xem mã nguồn</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">143,144</context>
+          <context context-type="linenumber">151,152</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7328564269131534198" datatype="html">
@@ -2313,12 +2313,21 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
           <context context-type="linenumber">60,62</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2280421609807146729" datatype="html">
-        <source>Download PDF</source>
-        <target>Tải PDF</target>
+      <trans-unit id="7568282694041997945" datatype="html">
+        <source>Download the CV as a PDF.</source>
+        <target>Tải CV dưới dạng PDF</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">129,130</context>
+          <context context-type="linenumber">133,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5955791233379406977" datatype="html">
+        <source> Download
+</source>
+        <target> Tải</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">136,137</context>
         </context-group>
       </trans-unit>
     </body>
