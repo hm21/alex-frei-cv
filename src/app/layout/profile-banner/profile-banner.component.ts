@@ -12,6 +12,7 @@ import {
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroModule } from 'ngx-image-hero';
+import { QuicklinkModule } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
@@ -24,6 +25,7 @@ import { navItems } from '../header/utils/nav-items';
   imports: [
     ThemeSwitchComponent,
     LanguageSwitchComponent,
+    QuicklinkModule,
     RouterLink,
     RouterLinkActive,
     NgxImageHeroModule,
