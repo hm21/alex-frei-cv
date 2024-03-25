@@ -60,6 +60,6 @@ export class AboutMeIntroComponent implements OnInit {
       return age;
     }
 
-    this.age = calcAge(new Date(1995, 3, 21));
+    this.age = calcAge(new Date(1995, 2, 21));
   }
 }
