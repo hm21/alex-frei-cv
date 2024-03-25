@@ -11,6 +11,7 @@ import {
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { filter } from 'rxjs';
+import { funFacts } from 'src/app/configs/fun-facts';
 import { GitManagerService } from 'src/app/services/git-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -33,29 +34,7 @@ export class FactsComponent
   itemTemplate!: TemplateRef<any>;
 
   /** Array of facts with their titles, values, and icons. */
-  private items = signal([
-    {
-      title: $localize`Coffee Consumed`,
-      value: 28,
-      icon: 'coffee',
-    },
-    {
-      title: $localize`Walking Breaks`,
-      value: 15,
-      icon: 'walking',
-    },
-    {
-      title: $localize`Songs listened`,
-      value: 1260,
-      icon: 'music',
-    },
-    {
-      title: $localize`Git Commits`,
-      value: 0,
-      icon: 'git',
-      loading: true,
-    },
-  ]);
+  private items = signal(funFacts);
 
   /** Service for managing Git-related operations. */
   private gitManager = inject(GitManagerService);

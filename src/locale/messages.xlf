@@ -24,6 +24,395 @@
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3893126089608256312" datatype="html">
+        <source>Coffee Consumed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5581791111414135821" datatype="html">
+        <source>Walking Breaks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4154923317433097087" datatype="html">
+        <source>Songs listened</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8127702299304006653" datatype="html">
+        <source>Git Commits</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2573931776396641837" datatype="html">
+        <source>Swiming</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3329958024185504349" datatype="html">
+        <source>What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it&apos;s the perfect win-win for body and mind.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7453924187669714095" datatype="html">
+        <source>Develop</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8768072903966848364" datatype="html">
+        <source>As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3683157540867041144" datatype="html">
+        <source>Hiking</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1375277519132612708" datatype="html">
+        <source>I am one of those people who love the silence of the wilderness, following the call of the birds and experiencing nature as a unique symphony.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="242479384757553256" datatype="html">
+        <source>March 21, 1995</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2772668468223898232" datatype="html">
+        <source>Birthday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1966987492818924297" datatype="html">
+        <source>2001 - 2010</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="494564023046542629" datatype="html">
+        <source>Elementary school education</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7144712217485996848" datatype="html">
+        <source>2010 - 2014</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7758912282843969586" datatype="html">
+        <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7699869948741961187" datatype="html">
+        <source>2014 - 2015</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1034680067214071440" datatype="html">
+        <source>Worked by Brunner &amp; Engler as Electrical-Installer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2287432808592559199" datatype="html">
+        <source>March - November 2015</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7589458222524264055" datatype="html">
+        <source>Military training</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8824231093838758371" datatype="html">
+        <source>Basic training and training to become a “Wachtmeister”.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4969824649958273751" datatype="html">
+        <source>2016 - 2020</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="29005198844517419" datatype="html">
+        <source>Worked by Elektro Sutter as Electrical-Installer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="529536006459242055" datatype="html">
+        <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1296777797052107613" datatype="html">
+        <source>2017</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5297827129625149604" datatype="html">
+        <source>Learned programming with Java</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7643796150553263848" datatype="html">
+        <source>Program an “Endless Runner” game with libGDX.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1536616651371383953" datatype="html">
+        <source>Project “Report-App”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3305172228304370038" datatype="html">
+        <source>Program a simple report app with libGDX for use at the current workplace.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5078177343633834238" datatype="html">
+        <source>2018</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6593634431046720544" datatype="html">
+        <source>Fiber optic training</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6105716291590614939" datatype="html">
+        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2769517692509899030" datatype="html">
+        <source>2018 - 2019</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="135092519774443252" datatype="html">
+        <source>Changed “Report-App” from libGDX to Ionic</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9157945684475537355" datatype="html">
+        <source>To make the app more professional and simplify the programming of the app, I changed to Ionic 4.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1048684830448412689" datatype="html">
+        <source>2020</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5224815218969674863" datatype="html">
+        <source>Foundation of WAIO Applications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2361532821371688356" datatype="html">
+        <source>Programing many different things such as website for company and managing tool. 
+      Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="656422260183809064" datatype="html">
+        <source>October 24, 2022</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1832809533651384093" datatype="html">
+        <source>Married</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1047879433058046950" datatype="html">
+        <source>Married with my wife in Vietnam.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7680367944178112353" datatype="html">
+        <source>2021 - Today</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8015410393514325898" datatype="html">
+        <source>Project “snaptab”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="873084354537991197" datatype="html">
+        <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1220644583785368760" datatype="html">
+        <source>Websites</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8094203035318077457" datatype="html">
+        <source>
+    As a passionate web developer, I am able to create engaging and fully functional websites. 
+    Whether you need a new website or just want to implement new features, I guarantee first-class quality and user satisfaction.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5650635157678221891" datatype="html">
+        <source>Apps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4899975516988508965" datatype="html">
+        <source>
+    With my experience in the development of mobile and web apps, I create innovative solutions that are tailored to your needs. 
+    I attach great importance to user-friendliness and excellent performance so that the app stands out from the competition.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">14,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8198980433602946702" datatype="html">
+        <source>Design</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="940587807395639833" datatype="html">
+        <source>
+      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
+      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">22,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1360286660327265296" datatype="html">
+        <source>Backend</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="linenumber">457,459</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4114955461878444038" datatype="html">
+        <source>
+        As a backend developer, I architect robust and scalable systems to power your applications. 
+        From database design to server-side logic, I ensure seamless functionality and reliability.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="linenumber">30,33</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7618870723010461457" datatype="html">
         <source>en</source>
         <context-group purpose="location">
@@ -203,48 +592,6 @@
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3683157540867041144" datatype="html">
-        <source>Hiking</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">52</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7127104315740473357" datatype="html">
-        <source>I&apos;m the one who loves the silence of the wilderness, follows the call of the birds and experiences nature as his own symphony.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2573931776396641837" datatype="html">
-        <source>Swiming</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">57</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3329958024185504349" datatype="html">
-        <source>What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it&apos;s the perfect win-win for body and mind.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7453924187669714095" datatype="html">
-        <source>Develop</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8768072903966848364" datatype="html">
-        <source>As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.ts</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7194501120282715188" datatype="html">
         <source>Alex Frei</source>
         <context-group purpose="location">
@@ -252,18 +599,18 @@
           <context context-type="linenumber">4,6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3434499986932366224" datatype="html">
-        <source> Hey, I&apos;m Alex, a passionate software developer focused on turning ideas into elegant, functional solutions. Whether it&apos;s web development, mobile apps, or exploring the latest technology, I&apos;m driven by a love of innovation and problem solving. Let&apos;s connect and bring your projects to life! </source>
+      <trans-unit id="4459582151726446038" datatype="html">
+        <source> Hey, my name is Alex and I&apos;m a passionate software developer who loves to turn ideas into simple and functional solutions. Whether it&apos;s a website, mobile app or server backend, my love for innovation and problem solving drives me to realize every project. Let&apos;s bring your projects to life together! </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">7,10</context>
+          <context context-type="linenumber">7,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8115083664628466958" datatype="html">
         <source>E-Mail</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">18,19</context>
+          <context context-type="linenumber">19,20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
@@ -274,42 +621,42 @@
         <source>Phone</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">24,25</context>
+          <context context-type="linenumber">25,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="471816275243265264" datatype="html">
         <source>Location</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">30,31</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1949800099101277248" datatype="html">
         <source>Languages</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">60,61</context>
+          <context context-type="linenumber">61,62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7487151404654126049" datatype="html">
         <source>German, English</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">61,62</context>
+          <context context-type="linenumber">62,63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1130652265542107236" datatype="html">
         <source>Age</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">65,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6206277469713306308" datatype="html">
         <source>03/21/1995</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">67,68</context>
+          <context context-type="linenumber">68,69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="285383250664560912" datatype="html">
@@ -376,82 +723,6 @@
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="1220644583785368760" datatype="html">
-        <source>Websites</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4193806628557781703" datatype="html">
-        <source>
-        As a dedicated web developer, I specialize in crafting visually stunning and fully functional websites. 
-        Whether you&apos;re looking to establish your online presence or enhance your existing site, I ensure top-notch quality and user satisfaction.
-      </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">34,37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5650635157678221891" datatype="html">
-        <source>Apps</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2771166999203405049" datatype="html">
-        <source>
-        With my expertise in mobile and web app development, I create innovative solutions tailored to your needs. 
-        From concept to launch, I prioritize usability and performance, delivering apps that stand out in today&apos;s competitive market.
-      </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">42,45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8198980433602946702" datatype="html">
-        <source>Design</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="940587807395639833" datatype="html">
-        <source>
-      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
-      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
-      </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">50,53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1360286660327265296" datatype="html">
-        <source>Backend</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">57</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
-          <context context-type="linenumber">457,459</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">121</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4114955461878444038" datatype="html">
-        <source>
-        As a backend developer, I architect robust and scalable systems to power your applications. 
-        From database design to server-side logic, I ensure seamless functionality and reliability.
-      </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.ts</context>
-          <context context-type="linenumber">58,61</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="8487998094415395870" datatype="html">
         <source> What I prefer
 </source>
@@ -497,34 +768,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
           <context context-type="linenumber">2,3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3893126089608256312" datatype="html">
-        <source>Coffee Consumed</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5581791111414135821" datatype="html">
-        <source>Walking Breaks</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
-          <context context-type="linenumber">43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4154923317433097087" datatype="html">
-        <source>Songs listened</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
-          <context context-type="linenumber">48</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8127702299304006653" datatype="html">
-        <source>Git Commits</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.ts</context>
-          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6028371114637047813" datatype="html">
@@ -1793,249 +2036,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
           <context context-type="linenumber">11,12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="242479384757553256" datatype="html">
-        <source>March 21, 1995</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2772668468223898232" datatype="html">
-        <source>Birthday</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1966987492818924297" datatype="html">
-        <source>2001 - 2010</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="494564023046542629" datatype="html">
-        <source>Elementary school education</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7144712217485996848" datatype="html">
-        <source>2010 - 2014</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7758912282843969586" datatype="html">
-        <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7699869948741961187" datatype="html">
-        <source>2014 - 2015</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1034680067214071440" datatype="html">
-        <source>Worked by Brunner &amp; Engler as Electrical-Installer</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2287432808592559199" datatype="html">
-        <source>March - November 2015</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7589458222524264055" datatype="html">
-        <source>Military training</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8824231093838758371" datatype="html">
-        <source>Basic training and training to become a “Wachtmeister”.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4969824649958273751" datatype="html">
-        <source>2016 - 2020</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="29005198844517419" datatype="html">
-        <source>Worked by Elektro Sutter as Electrical-Installer</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="529536006459242055" datatype="html">
-        <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1296777797052107613" datatype="html">
-        <source>2017</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5297827129625149604" datatype="html">
-        <source>Learned programming with Java</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7643796150553263848" datatype="html">
-        <source>Program an “Endless Runner” game with libGDX.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1536616651371383953" datatype="html">
-        <source>Project “Report-App”</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3305172228304370038" datatype="html">
-        <source>Program a simple report app with libGDX for use at the current workplace.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5078177343633834238" datatype="html">
-        <source>2018</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">54</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6593634431046720544" datatype="html">
-        <source>Fiber optic training</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">55</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6105716291590614939" datatype="html">
-        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2769517692509899030" datatype="html">
-        <source>2018 - 2019</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">59</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="135092519774443252" datatype="html">
-        <source>Changed “Report-App” from libGDX to Ionic</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9157945684475537355" datatype="html">
-        <source>To make the app more professional and simplify the programming of the app, I changed to Ionic 4.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1048684830448412689" datatype="html">
-        <source>2020</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5224815218969674863" datatype="html">
-        <source>Foundation of WAIO Applications</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2361532821371688356" datatype="html">
-        <source>Programing many different things such as website for company and managing tool. 
-      Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">66,67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="656422260183809064" datatype="html">
-        <source>October 24, 2022</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1832809533651384093" datatype="html">
-        <source>Married</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">71</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1047879433058046950" datatype="html">
-        <source>Married with my wife in Vietnam.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7680367944178112353" datatype="html">
-        <source>2021 - Today</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">75</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8015410393514325898" datatype="html">
-        <source>Project “snaptab”</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="873084354537991197" datatype="html">
-        <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-timeline/resume-timeline.component.ts</context>
-          <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4486682505452707131" datatype="html">

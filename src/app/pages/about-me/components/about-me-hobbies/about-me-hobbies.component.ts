@@ -9,7 +9,9 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { hobbies } from 'src/app/configs/hobbies';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { Hobbies } from './utils/about-me-hobbies-interfaces';
 
 @Component({
   selector: 'af-about-me-hobbies',
@@ -34,41 +36,7 @@ export class AboutMeHobbiesComponent
    * @remarks
    * Each item has a title, message, and icon.
    */
-  public items: {
-    /**
-     * The title of the item.
-     */
-    title: string;
-    /**
-     * The message of the item.
-     */
-    message: string;
-    /**
-     * The icon of the item.
-     */
-    icon: string;
-  }[] = [
-    {
-      title: $localize`Hiking`,
-      message: $localize`I'm the one who loves the silence of the wilderness, follows the call of the birds and experiences nature as his own symphony.`,
-      icon: 'hiking',
-    },
-    {
-      title: $localize`Swiming`,
-      message: $localize`What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it's the perfect win-win for body and mind.`,
-      icon: 'swim',
-    },
-    /*   {
-      title: $localize`Travel`,
-      message: $localize`I love to travel and explore new places, meet new people and learn about different cultures. I'm always ready for a new adventure.`,
-      icon: 'travel',
-    }, */
-    {
-      title: $localize`Develop`,
-      message: $localize`As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.`,
-      icon: 'develop',
-    },
-  ];
+  public items: Hobbies[] = hobbies;
 
   override ngOnInit(): void {
     this.createItems();

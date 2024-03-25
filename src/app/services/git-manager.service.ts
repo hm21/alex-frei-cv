@@ -8,7 +8,6 @@ import { IS_BROWSER } from '../utils/global-tokens';
   providedIn: 'root',
 })
 export class GitManagerService {
-  private githubUrl = 'https://api.github.com';
   private gitCommitCount = 0;
 
   private isBrowser = inject(IS_BROWSER);
@@ -22,6 +21,7 @@ export class GitManagerService {
     if (!this.isBrowser || this.gitCommitCount) {
       return of(this.gitCommitCount);
     }
+
     return this.http.get<number>(environment.endpoints.gitCommitCount);
   }
 }

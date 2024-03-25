@@ -7,6 +7,7 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { services } from 'src/app/configs/services';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServiceCard } from './model/service-card-interface';
@@ -28,40 +29,7 @@ export class AboutMeServicesComponent
   serviceItemsRef!: ViewContainerRef;
 
   /** Array of service card data to be displayed. */
-  private items: ServiceCard[] = [
-    {
-      title: $localize`Websites`,
-      msg: $localize`
-        As a dedicated web developer, I specialize in crafting visually stunning and fully functional websites. 
-        Whether you're looking to establish your online presence or enhance your existing site, I ensure top-notch quality and user satisfaction.
-      `,
-      icon: 'website',
-    },
-    {
-      title: $localize`Apps`,
-      msg: $localize`
-        With my expertise in mobile and web app development, I create innovative solutions tailored to your needs. 
-        From concept to launch, I prioritize usability and performance, delivering apps that stand out in today's competitive market.
-      `,
-      icon: 'app',
-    },
-    {
-      title: $localize`Design`,
-      msg: $localize`
-      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
-      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
-      `,
-      icon: 'design',
-    },
-    {
-      title: $localize`Backend`,
-      msg: $localize`
-        As a backend developer, I architect robust and scalable systems to power your applications. 
-        From database design to server-side logic, I ensure seamless functionality and reliability.
-      `,
-      icon: 'backend',
-    },
-  ];
+  private items: ServiceCard[] = services;
 
   override ngOnInit(): void {
     this.items.forEach((el) => {

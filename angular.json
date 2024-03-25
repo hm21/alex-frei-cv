@@ -78,7 +78,7 @@
                 "de",
                 "vi"
               ],
-              "baseHref": "/en/"
+              "baseHref": "/"
             },
             "de": {
               "localize": [

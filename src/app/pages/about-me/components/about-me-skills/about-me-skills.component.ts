@@ -9,5 +9,4 @@ import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
   styleUrl: './about-me-skills.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutMeSkillsComponent {
-}
+export class AboutMeSkillsComponent {}
