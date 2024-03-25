@@ -2316,7 +2316,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
     With my experience in the development of mobile and web apps, I create innovative solutions that are tailored to your needs. 
     I attach great importance to user-friendliness and excellent performance so that the app stands out from the competition.
       </source>
-        <target>Mit meiner Erfahrung in der Entwicklung von mobilen und Web-Apps schaffe ich innovative Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Dabei lege ich großen Wert auf Benutzerfreundlichkeit sowie ausgezeichnete Performance, damit sich die App von der Konkurrenz abhebt.</target>
+        <target>Mit meiner Erfahrung in der Entwicklung von mobile und web-Apps schaffe ich innovative Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind. Dabei lege ich großen Wert auf Benutzerfreundlichkeit sowie ausgezeichnete Performance, damit sich die App von der Konkurrenz abhebt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/services.ts</context>
           <context context-type="linenumber">14,17</context>
@@ -2324,7 +2324,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4459582151726446038" datatype="html">
         <source> Hey, my name is Alex and I&apos;m a passionate software developer who loves to turn ideas into simple and functional solutions. Whether it&apos;s a website, mobile app or server backend, my love for innovation and problem solving drives me to realize every project. Let&apos;s bring your projects to life together! </source>
-        <target> Hey, mein Name ist Alex und ich bin ein leidenschaftlicher Softwareentwickler, der es liebt, Ideen in einfache und funktionale Lösungen zu verwandeln. Egal ob Website, Mobile App oder Server Backend, meine Liebe zur Innovation und Problemlösung treibt mich an, jedes Projekt zu realisieren. Lassen Sie uns gemeinsam Ihre Projekte zum Leben erwecken!</target>
+        <target> Hey, mein Name ist Alex und ich bin ein leidenschaftlicher Softwareentwickler, der es liebt, Ideen in einfache und funktionale Lösungen zu verwandeln. Egal ob Webseite, Mobile App oder Server Backend, meine Liebe zur Innovation und Problemlösung treibt mich an, jedes Projekt zu realisieren. Lassen Sie uns gemeinsam Ihre Projekte zum Leben erwecken!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
           <context context-type="linenumber">7,11</context>
