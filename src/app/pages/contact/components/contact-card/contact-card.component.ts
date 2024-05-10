@@ -17,5 +17,5 @@ export class ContactCardComponent {
   /**
    * Represents the URL for the contact card.
    */
-  public url = inject(new HostAttributeToken('url'), { optional: false });
+  public url = inject(new HostAttributeToken('url'), { optional: true });
 }

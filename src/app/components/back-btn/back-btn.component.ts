@@ -14,5 +14,5 @@ export class BackBtnComponent {
    * The path to navigate back to.
    * @required
    */
-  public path = inject(new HostAttributeToken('path'), { optional: false });
+  public path = inject(new HostAttributeToken('path'), { optional: true });
 }
