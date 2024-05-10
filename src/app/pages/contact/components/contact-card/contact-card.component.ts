@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostAttributeToken,
+  inject,
+} from '@angular/core';
 
 @Component({
   selector: 'af-contact-card',
@@ -12,5 +17,5 @@ export class ContactCardComponent {
   /**
    * Represents the URL for the contact card.
    */
-  @Input({ required: true }) url!: string;
+  public url = inject(new HostAttributeToken('url'), { optional: false });
 }

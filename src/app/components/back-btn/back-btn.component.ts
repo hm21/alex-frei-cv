@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostAttributeToken, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkModule } from 'ngx-quicklink';
 
@@ -12,8 +12,7 @@ import { QuicklinkModule } from 'ngx-quicklink';
 export class BackBtnComponent {
   /**
    * The path to navigate back to.
-   * @type {string}
    * @required
    */
-  @Input({ required: true }) path!: string;
+  public path = inject(new HostAttributeToken('path'), { optional: false });
 }
