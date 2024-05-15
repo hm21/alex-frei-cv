@@ -1,5 +1,6 @@
 import * as express from 'express';
 import { initializeApp } from 'firebase-admin/app';
+import { info } from 'firebase-functions/logger';
 import { defineString } from 'firebase-functions/params';
 import * as https from 'firebase-functions/v2/https';
 import { HttpsError } from 'firebase-functions/v2/https';
@@ -27,10 +28,21 @@ export default async (req: https.Request, resp: express.Response) => {
   if (ddosAttack) return resp.status(403).json('Blacklist');
 
   const lang = (req.body?.['lang'] as string) ?? 'en';
-  let topic = (req.body?.['topic'] as string)?.substring(0, 20);
+  const existingQuestions = (req.body?.['questions'] as string[]) ?? [];
+  let questionsText = '';
+  existingQuestions.forEach((el, index) => {
+    questionsText += `${index}. ${el}\n`;
+  });
+  const targetLanguage =
+    lang === 'de' ? 'German' : lang === 'vi' ? 'Vietnamese' : 'English';
 
+  let topic = (req.body?.['topic'] as string)?.substring(0, 20);
   if (!topic || topic.length < 3) {
     topic = getRandomTopic();
+  }
+
+  if (existingQuestions.length === 0) {
+    info('Generate quiz', { topic, lang });
   }
 
   const completion = await openai.chat.completions.create({
@@ -38,21 +50,17 @@ export default async (req: https.Request, resp: express.Response) => {
       {
         role: 'user',
         content: `
-                  Generate a quiz consisting of 15 questions for the user about the topic "${topic}". 
+                  Generate one quiz question about the topic "${topic}". 
+                  ${existingQuestions.length > 0 ? 'The existing quiz questions are: ' + questionsText + ' The new question must be unique to the existing question.' : ''}
                   Each question should offer four answer options, with one correct answer. 
-                  The language in which you translate the questions and answers is ${lang === 'de' ? 'German' : lang === 'vi' ? 'Vietnamese' : 'English'}.
-                  Start with an easy question and progressively increase the difficulty with each subsequent question.
+                  The language in which you translate the questions and answers is ${targetLanguage}.
+                  This question should be harder then the existing one which progressively increase the difficulty with each subsequent question.
                   The response should not include any identifiers such as 'a-' or '1'. Only the text content of the answer should be provided.
                   Provide the correct answer index within the array of answers in the response JSON format, structured as follows:
                   {
-                    "quiz": [
-                      {
-                        "question": "Text from question",
-                        "answers": ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
-                        "correctAnswer": 2
-                      },
-                      ... 
-                    ]
+                    "question": "Text from question",
+                    "answers": ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+                    "correctAnswer": 0
                   }
                   If unable to generate a quiz, return a JSON file indicating the reason for the error in the specified language. 
                   The JSON structure for the error message should follow the format below:

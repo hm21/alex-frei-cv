@@ -3,24 +3,25 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  Input,
   OnInit,
   Output,
   Renderer2,
   ViewChild,
   computed,
   inject,
-  signal,
+  input,
+  signal
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { QuizGameState } from '../../utils/quiz-enum';
 import { GameStateChanged, Quiz } from '../../utils/quiz-interface';
+import { QuantumQuizGenerateQuizComponent } from '../quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component';
 
 @Component({
   selector: 'af-quantum-quiz-game',
   standalone: true,
-  imports: [DecimalPipe, NgClass],
+  imports: [QuantumQuizGenerateQuizComponent, DecimalPipe, NgClass],
   templateUrl: './quantum-quiz-game.component.html',
   styleUrls: [
     '../../../../styles/game-button.scss',
@@ -28,7 +29,10 @@ import { GameStateChanged, Quiz } from '../../utils/quiz-interface';
     './quantum-quiz-game.component.scss',
   ],
 })
-export class QuantumQuizGameComponent extends ExtendedComponent implements OnInit {
+export class QuantumQuizGameComponent
+  extends ExtendedComponent
+  implements OnInit
+{
   /**
    * Reference to the answer button element for option A.
    */
@@ -58,7 +62,7 @@ export class QuantumQuizGameComponent extends ExtendedComponent implements OnIni
    * Input property for the quiz data.
    * The quiz data contains an array of Quiz objects.
    */
-  @Input({ required: true }) quiz!: Quiz[];
+  public quiz = input.required<Quiz[]>();
 
   /**
    * The current level of the game.
@@ -91,6 +95,8 @@ export class QuantumQuizGameComponent extends ExtendedComponent implements OnIni
    * @param option The selected option ('A', 'B', 'C', or 'D').
    */
   public selectOption(option: 'A' | 'B' | 'C' | 'D') {
+    if (this.level() >= this.quiz().length) return;
+
     if (this.correctAnswerLetter() === option) {
       if (this.level() >= 14) {
         this.nextPage();
@@ -179,42 +185,42 @@ export class QuantumQuizGameComponent extends ExtendedComponent implements OnIni
    * Computed property for the active question in the game.
    */
   public activeQuestion = computed(() => {
-    return this.quiz[this.level()].question;
+    return this.quiz()[this.level()].question;
   });
 
   /**
    * Computed property for answer option A in the game.
    */
   public answerA = computed(() => {
-    return this.quiz[this.level()].answers[0];
+    return this.quiz()[this.level()].answers[0];
   });
 
   /**
    * Computed property for answer option B in the game.
    */
   public answerB = computed(() => {
-    return this.quiz[this.level()].answers[1];
+    return this.quiz()[this.level()].answers[1];
   });
 
   /**
    * Computed property for answer option C in the game.
    */
   public answerC = computed(() => {
-    return this.quiz[this.level()].answers[2];
+    return this.quiz()[this.level()].answers[2];
   });
 
   /**
    * Computed property for answer option D in the game.
    */
   public answerD = computed(() => {
-    return this.quiz[this.level()].answers[3];
+    return this.quiz()[this.level()].answers[3];
   });
 
   /**
    * Computed property for the correct answer letter in the game.
    */
   public correctAnswerLetter = computed(() => {
-    switch (this.quiz[this.level()].correctAnswer) {
+    switch (this.quiz()[this.level()].correctAnswer) {
       case 0:
         return 'A';
       case 1:

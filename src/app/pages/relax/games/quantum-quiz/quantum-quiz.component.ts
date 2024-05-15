@@ -4,6 +4,7 @@ import {
   Component,
   OnInit,
   inject,
+  isDevMode,
   signal,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -105,19 +106,35 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
    */
   public generateQuiz(topic?: string) {
     this.gameState.set(QuizGameState.generateQuiz);
+    this.quiz = [];
+    this.generateNewQuestion(topic);
+  }
 
+  private generateNewQuestion(topic?: string) {
     this.http
       .post(environment.endpoints.quiz, {
         topic,
         lang: $localize`en`,
+        questions: this.quiz.map((el) => el.question),
       })
+      .pipe(this.destroyPipe())
       .subscribe({
         next: (res: any) => {
           const data = JSON.parse(res ?? '{}');
 
-          if (data?.['quiz']) {
-            this.quiz = data?.['quiz'];
-            this.gameState.set(QuizGameState.active);
+          if (data && !data?.error) {
+            if (this.quiz.length === 0) {
+              this.gameState.set(QuizGameState.active);
+            }
+            if (isDevMode()) console.log(data);
+            this.quiz.push(data);
+            this.cdRef.detectChanges();
+            if (
+              this.quiz.length < 15 &&
+              this.gameState() === QuizGameState.active
+            ) {
+              this.generateNewQuestion(topic);
+            }
           } else {
             this.generateErrorMsg =
               data?.['error'] ?? $localize`Unknown error occurs`;

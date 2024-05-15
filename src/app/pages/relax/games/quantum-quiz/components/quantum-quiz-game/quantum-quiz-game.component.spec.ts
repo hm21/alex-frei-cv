@@ -15,13 +15,17 @@ describe('QuantumQuizGameComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(QuantumQuizGameComponent);
     component = fixture.componentInstance;
-    component.quiz = [
-      {
-        question: 'Test Question',
-        answers: ['A', 'B', 'C', 'D'],
-        correctAnswer: 0,
-      },
-    ];
+
+    fixture.componentRef.setInput(
+      'quiz',
+      Array.from({ length: 15 }, () => {
+        return {
+          question: 'Test Question',
+          answers: ['A', 'B', 'C', 'D'],
+          correctAnswer: 0,
+        };
+      }),
+    );
     fixture.detectChanges();
   });
 
@@ -33,11 +37,11 @@ describe('QuantumQuizGameComponent', () => {
     spyOn(component, 'correctAnswerLetter').and.returnValue('A');
     spyOn(component, 'nextQuestion');
 
-    fixture.detectChanges(); 
+    fixture.detectChanges();
 
     const buttonA = fixture.componentInstance.answerRefA.nativeElement;
-    expect(buttonA).toBeTruthy(); 
-    buttonA.click(); 
+    expect(buttonA).toBeTruthy();
+    buttonA.click();
 
     expect(component.state()).toEqual('correct');
   });

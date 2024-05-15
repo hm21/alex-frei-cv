@@ -1,79 +1,93 @@
 <div class="play-content">
-  <div class="question-container">
-    @switch (state()) {
-      @case ("pending") {
-        <h2 i18n>Question</h2>
-        <div class="question">
-          {{ activeQuestion() }}
-        </div>
-      }
-      @case ("correct") {
-        <h2 i18n>Correct</h2>
-        <div class="question" i18n>Great job! Your answer is correct!</div>
+  @if (level() < quiz().length) {
+    <div class="question-container">
+      @switch (state()) {
+        @case ("pending") {
+          <h2 i18n>Question</h2>
+          <div class="question">
+            {{ activeQuestion() }}
+          </div>
+        }
+        @case ("correct") {
+          <h2 i18n>Correct</h2>
+          <div class="question" i18n>Great job! Your answer is correct!</div>
 
-        <button class="button mb3" (click)="nextQuestion()" type="button" i18n>
-          Continue
-        </button>
-      }
-      @case ("wrong") {
-        <h2 i18n>Wrong</h2>
-        <div class="question" i18n>
-          I'm sorry, but the correct answer was
-          <b>{{ correctAnswerLetter() }}</b
-          >.
-        </div>
+          <button
+            class="button mb3"
+            (click)="nextQuestion()"
+            type="button"
+            i18n
+          >
+            Continue
+          </button>
+        }
+        @case ("wrong") {
+          <h2 i18n>Wrong</h2>
+          <div class="question" i18n>
+            I'm sorry, but the correct answer was
+            <b>{{ correctAnswerLetter() }}</b
+            >.
+          </div>
 
-        <button class="button" (click)="nextPage()" type="button" i18n>
-          Okay
-        </button>
+          <button class="button" (click)="nextPage()" type="button" i18n>
+            Okay
+          </button>
+        }
       }
-    }
-  </div>
-
-  <div>
-    <div class="answers" [ngClass]="{ disabled: state() !== 'pending' }">
-      <button
-        #answerRefA
-        class="game-button"
-        (click)="selectOption('A')"
-        type="button"
-      >
-        A: <span>{{ answerA() }}</span>
-      </button>
-      <button
-        #answerRefB
-        class="game-button"
-        (click)="selectOption('B')"
-        type="button"
-      >
-        B: <span>{{ answerB() }}</span>
-      </button>
-      <button
-        #answerRefC
-        class="game-button"
-        (click)="selectOption('C')"
-        type="button"
-      >
-        C: <span>{{ answerC() }}</span>
-      </button>
-      <button
-        #answerRefD
-        class="game-button"
-        (click)="selectOption('D')"
-        type="button"
-      >
-        D: <span>{{ answerD() }}</span>
-      </button>
     </div>
 
-    <ul class="shortcuts">
-      <li><kbd>1</kbd> <span i18n>Option A</span></li>
-      <li><kbd>2</kbd> <span i18n>Option B</span></li>
-      <li><kbd>3</kbd> <span i18n>Option C</span></li>
-      <li><kbd>4</kbd> <span i18n>Option D</span></li>
-      <li><kbd i18n>Enter</kbd> <span i18n>Confirm</span></li>
-    </ul>
-  </div>
+    <div>
+      <div
+        class="answers"
+        [ngClass]="{
+          disabled: state() !== 'pending'
+        }"
+      >
+        <button
+          #answerRefA
+          class="game-button"
+          (click)="selectOption('A')"
+          type="button"
+        >
+          A: <span>{{ answerA() }}</span>
+        </button>
+        <button
+          #answerRefB
+          class="game-button"
+          (click)="selectOption('B')"
+          type="button"
+        >
+          B: <span>{{ answerB() }}</span>
+        </button>
+        <button
+          #answerRefC
+          class="game-button"
+          (click)="selectOption('C')"
+          type="button"
+        >
+          C: <span>{{ answerC() }}</span>
+        </button>
+        <button
+          #answerRefD
+          class="game-button"
+          (click)="selectOption('D')"
+          type="button"
+        >
+          D: <span>{{ answerD() }}</span>
+        </button>
+      </div>
+
+      <ul class="shortcuts">
+        <li><kbd>1</kbd> <span i18n>Option A</span></li>
+        <li><kbd>2</kbd> <span i18n>Option B</span></li>
+        <li><kbd>3</kbd> <span i18n>Option C</span></li>
+        <li><kbd>4</kbd> <span i18n>Option D</span></li>
+        <li><kbd i18n>Enter</kbd> <span i18n>Confirm</span></li>
+      </ul>
+    </div>
+  } @else {
+    <af-quantum-quiz-generate-quiz />
+  }
 </div>
 
 <div class="levels">
