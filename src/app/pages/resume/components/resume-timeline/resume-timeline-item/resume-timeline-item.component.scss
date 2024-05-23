@@ -68,3 +68,17 @@ p {
 p {
   line-height: 1.5rem;
 }
+@keyframes sonarAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.sonar-animation {
+  animation: sonarAnimation 1500ms ease;
+}

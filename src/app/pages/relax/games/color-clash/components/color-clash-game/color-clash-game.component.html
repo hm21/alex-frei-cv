@@ -2,7 +2,7 @@
   @if (warmUpRounds() < 3) {
     <span i18n>Warm-up laps</span>: {{ 3 - warmUpRounds() }}
   } @else {
-    {{ time() }}
+    <span #timeBanner>01:00</span>
   }
 </div>
 

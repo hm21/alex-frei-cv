@@ -3,75 +3,67 @@
 </h2>
 
 <section>
-  <ng-container #containerRef />
+  @for (item of items(); track $index) {
+    <article
+      ngxScrollAnimate="fade-in-up-scale"
+      once="false"
+      speed="500"
+      aos=".5"
+    >
+      <img src="assets/img/icon/{{ item.icon }}.svg" [alt]="item.title" />
+
+      <h3>{{ item.title }}</h3>
+      @if (!item.loading) {
+        <div [ngxCountAnimation]="item.value" duration="1000"></div>
+      } @else {
+        <svg
+          class="loading-spinner"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="32"
+            stroke-width="8"
+            stroke="#008fd4"
+            stroke-dasharray="50.26548245743669 50.26548245743669"
+            fill="none"
+            stroke-linecap="round"
+          >
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              dur="1s"
+              repeatCount="indefinite"
+              keyTimes="0;1"
+              values="0 50 50;360 50 50"
+            ></animateTransform>
+          </circle>
+          <circle
+            cx="50"
+            cy="50"
+            r="23"
+            stroke-width="8"
+            stroke="#386579"
+            stroke-dasharray="36.12831551628262 36.12831551628262"
+            stroke-dashoffset="36.12831551628262"
+            fill="none"
+            stroke-linecap="round"
+          >
+            <animateTransform
+              attributeName="transform"
+              type="rotate"
+              dur="1s"
+              repeatCount="indefinite"
+              keyTimes="0;1"
+              values="0 50 50;-360 50 50"
+            ></animateTransform>
+          </circle>
+        </svg>
+      }
+    </article>
+  }
 </section>
-
-<ng-template
-  #itemTemplate
-  let-icon="icon"
-  let-title="title"
-  let-value="value"
-  let-loading="loading"
->
-  <article
-    ngxScrollAnimate="fade-in-up-scale"
-    once="false"
-    speed="500"
-    aos=".5"
-  >
-    <img src="assets/img/icon/{{ icon }}.svg" [alt]="title" />
-
-    <h3>{{ title }}</h3>
-    @if (!loading) {
-      <div [ngxCountAnimation]="value" duration="1000"></div>
-    } @else {
-      <svg
-        class="loading-spinner"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="xMidYMid"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          r="32"
-          stroke-width="8"
-          stroke="#008fd4"
-          stroke-dasharray="50.26548245743669 50.26548245743669"
-          fill="none"
-          stroke-linecap="round"
-        >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            dur="1s"
-            repeatCount="indefinite"
-            keyTimes="0;1"
-            values="0 50 50;360 50 50"
-          ></animateTransform>
-        </circle>
-        <circle
-          cx="50"
-          cy="50"
-          r="23"
-          stroke-width="8"
-          stroke="#386579"
-          stroke-dasharray="36.12831551628262 36.12831551628262"
-          stroke-dashoffset="36.12831551628262"
-          fill="none"
-          stroke-linecap="round"
-        >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            dur="1s"
-            repeatCount="indefinite"
-            keyTimes="0;1"
-            values="0 50 50;-360 50 50"
-          ></animateTransform>
-        </circle>
-      </svg>
-    }
-  </article>
-</ng-template>

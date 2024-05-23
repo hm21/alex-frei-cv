@@ -1,5 +1,5 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { NgModule } from '@angular/core';
+import { NgModule, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   provideRouter,
@@ -30,6 +30,7 @@ import { IS_BROWSER } from 'src/app/utils/global-tokens';
       useValue: true,
     },
     quicklinkProviders,
+    provideExperimentalZonelessChangeDetection(),
     provideRouter(
       routes,
       withPreloading(QuicklinkStrategy),

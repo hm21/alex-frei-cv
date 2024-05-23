@@ -63,6 +63,7 @@ describe('ProjectDetailsComponent', () => {
         { provide: ModalManagerService, useValue: modalManagerServiceMock },
         { provide: DOCUMENT, useValue: documentMock },
       ],
+      teardown: {destroyAfterEach: false} 
     }).compileComponents();
   });
 

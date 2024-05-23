@@ -14,6 +14,7 @@ describe('WaioTypewriterComponent', () => {
         SharedTestingModule,
         TypewriterComponent,
       ],
+      teardown: {destroyAfterEach: false} 
     }).overrideComponent(TypewriterComponent, {
       set: { changeDetection: ChangeDetectionStrategy.Default }
     })

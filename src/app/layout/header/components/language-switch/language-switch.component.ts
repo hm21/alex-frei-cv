@@ -1,11 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { DOCUMENT, NgClass } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  inject,
-} from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -15,7 +10,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   imports: [NgClass],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('dropdown', [
       transition(
@@ -67,7 +61,7 @@ export class LanguageSwitchComponent
   /**
    * Indicates whether the language dropdown is shown.
    */
-  public showLanguage = false;
+  public showLanguage = signal(false);
 
   /**
    * The active language.
@@ -124,17 +118,14 @@ export class LanguageSwitchComponent
    * @private
    */
   private listenDropdownClose() {
-    this.ngZone.runOutsideAngular(() => {
-      fromEvent(this.document, 'click')
-        .pipe(
-          this.destroyPipe(),
-          filter(() => this.showLanguage),
-        )
-        .subscribe(() => {
-          this.showLanguage = false;
-          this.cdRef.detectChanges();
-        });
-    });
+    fromEvent(this.document, 'click')
+      .pipe(
+        this.destroyPipe(),
+        filter(() => this.showLanguage()),
+      )
+      .subscribe(() => {
+        this.showLanguage.set(false);
+      });
   }
 
   /**
@@ -142,7 +133,7 @@ export class LanguageSwitchComponent
    * @param {Language} language The language to change to.
    */
   public changeLanguage(language: Language) {
-    this.showLanguage = false;
+    this.showLanguage.set(false);
 
     let url = window.location.href;
     if (!url.endsWith('/')) url += '/';

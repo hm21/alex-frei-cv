@@ -13,6 +13,7 @@ describe('ContactFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ContactFormComponent, ReactiveFormsModule, SharedTestingModule],
+      teardown: {destroyAfterEach: false} 
     }).compileComponents();
   });
 

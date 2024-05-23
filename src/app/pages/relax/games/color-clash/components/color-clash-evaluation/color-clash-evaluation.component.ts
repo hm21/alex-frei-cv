@@ -63,17 +63,17 @@ export class ColorClashEvaluationComponent
       this.msg.set(
         $localize`Great job, you didn\'t make any mistakes. But can you score more points in that time without making any mistakes?`,
       );
-      if (this.points < 120) {
+      if (this.points < 60) {
         this.msg.update(
           (msg) =>
             msg +
-            $localize`&nbspThe goal is to score more than 120 points without any mistakes!`,
+            $localize`&nbspThe goal is to score more than 60 points without any mistakes!`,
         );
       } else {
         this.msg.update(
           (msg) =>
             msg +
-            $localize`&nbspBut wait a minute, you got more than 120 points?!! That's awesome, seems like you're a genius!`,
+            $localize`&nbspBut wait a minute, you got more than 60 points?!! That's awesome, seems like you're a genius!`,
         );
       }
     }

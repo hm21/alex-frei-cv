@@ -1,13 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  inject,
-  isDevMode,
-  signal,
-} from '@angular/core';
+import { Component, OnInit, inject, isDevMode, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Subject, takeUntil } from 'rxjs';
 import { cardFadeInUpScale } from 'src/app/animations/card-animations';
 import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -41,7 +35,6 @@ import { GameStateChanged, Quiz } from './utils/quiz-interface';
     '../../styles/quiz-card.scss',
     './quantum-quiz.component.scss',
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [cardFadeInUpScale],
 })
 export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
@@ -71,17 +64,19 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
   /**
    * The error message generated during quiz generation.
    */
-  public generateErrorMsg = '';
+  public generateErrorMsg = signal('');
 
   /**
    * The list of quiz questions.
    */
-  public quiz: Quiz[] = [];
+  public quiz = signal<Quiz[]>([]);
 
   /**
    * The HTTP client instance.
    */
   private http = inject(HttpClient);
+
+  private destroyQuizGeneration$ = new Subject();
 
   override ngOnInit(): void {
     if (this.isBrowser) this.wakeUpQuizFunction();
@@ -106,7 +101,8 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
    */
   public generateQuiz(topic?: string) {
     this.gameState.set(QuizGameState.generateQuiz);
-    this.quiz = [];
+    this.generateErrorMsg.set('');
+    this.quiz.set([]);
     this.generateNewQuestion(topic);
   }
 
@@ -115,35 +111,42 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
       .post(environment.endpoints.quiz, {
         topic,
         lang: $localize`en`,
-        questions: this.quiz.map((el) => el.question),
+        questions: this.quiz().map((el) => el.question),
       })
-      .pipe(this.destroyPipe())
+      .pipe(takeUntil(this.destroyQuizGeneration$), this.destroyPipe())
       .subscribe({
         next: (res: any) => {
-          const data = JSON.parse(res ?? '{}');
+          let data: any = {};
+          try {
+            data = JSON.parse(res ?? '{}');
+          } catch (error) {
+            console.error('JSON.parse failed', error)
+            return this.generateNewQuestion(topic);
+          }
 
           if (data && !data?.error) {
             if (this.quiz.length === 0) {
               this.gameState.set(QuizGameState.active);
             }
             if (isDevMode()) console.log(data);
-            this.quiz.push(data);
-            this.cdRef.detectChanges();
+            this.quiz.update((items) => [...items, data]);
             if (
-              this.quiz.length < 15 &&
+              this.quiz().length < 15 &&
               this.gameState() === QuizGameState.active
             ) {
               this.generateNewQuestion(topic);
             }
           } else {
-            this.generateErrorMsg =
-              data?.['error'] ?? $localize`Unknown error occurs`;
+            this.generateErrorMsg.set(
+              data?.['error'] ?? $localize`Unknown error occurs`,
+            );
             this.gameState.set(QuizGameState.chooseTopic);
           }
         },
         error: (error: HttpErrorResponse) => {
-          this.generateErrorMsg =
-            error?.statusText ?? $localize`Unknown error occurs`;
+          this.generateErrorMsg.set(
+            error?.statusText ?? $localize`Unknown error occurs`,
+          );
           this.gameState.set(QuizGameState.chooseTopic);
         },
       });
@@ -157,5 +160,7 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
   public onStateChanged(data: GameStateChanged) {
     this.wonCash.set(data.currentCash ?? 0);
     this.gameState.set(data.state);
+    this.destroyQuizGeneration$.next(null);
+    this.generateErrorMsg.set('');
   }
 }

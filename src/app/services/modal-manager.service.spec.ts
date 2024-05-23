@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ModalManagerService } from './modal-manager.service';
 
 describe('ModalManagerService', () => {
   let service: ModalManagerService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [SharedTestingModule],
+      teardown: {destroyAfterEach: false} 
+    });
     service = TestBed.inject(ModalManagerService);
   });
 

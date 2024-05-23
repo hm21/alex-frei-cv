@@ -1,10 +1,9 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   OnDestroy,
   OnInit,
   ViewChild,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { services } from 'src/app/configs/services';
@@ -18,7 +17,6 @@ import { ServiceCard } from './model/service-card-interface';
   imports: [ServiceCardComponent, NgxScrollAnimationsModule],
   templateUrl: './about-me-services.component.html',
   styleUrl: './about-me-services.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeServicesComponent
   extends ExtendedComponent

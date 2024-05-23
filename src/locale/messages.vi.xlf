@@ -32,11 +32,11 @@
         <target>vi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">74</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
@@ -100,7 +100,7 @@
         <target>Ảnh đại diện của Alex Frei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">23,25</context>
+          <context context-type="linenumber">21,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6442425155039585894" datatype="html">
@@ -108,11 +108,11 @@
         <target>Full Stack Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">28,30</context>
+          <context context-type="linenumber">26,28</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3081310451796232082" datatype="html">
@@ -120,7 +120,7 @@
         <target>Mạng xã hội-Github</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">38,40</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5215504455750389206" datatype="html">
@@ -128,7 +128,7 @@
         <target>Mạng xã hội Facebook</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">64,66</context>
+          <context context-type="linenumber">62,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6414569969464252813" datatype="html">
@@ -136,7 +136,7 @@
         <target>Mạng xã hội Twitter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">109,111</context>
+          <context context-type="linenumber">107,109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7306768770762854120" datatype="html">
@@ -144,7 +144,7 @@
         <target>Xem mã nguồn</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">151,152</context>
+          <context context-type="linenumber">149,150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7328564269131534198" datatype="html">
@@ -260,7 +260,7 @@
         <target>Angular Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7369259204641151721" datatype="html">
@@ -268,7 +268,7 @@
         <target>Flutter Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1007625284753612149" datatype="html">
@@ -276,7 +276,7 @@
         <target>Frontend Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862667603841883589" datatype="html">
@@ -284,7 +284,7 @@
         <target>Backend Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5892201018243406683" datatype="html">
@@ -292,7 +292,7 @@
         <target>Nhà thiết kế UI/UX</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6177818185504486712" datatype="html">
@@ -300,7 +300,7 @@
         <target>Google Cloud Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8015911148345197549" datatype="html">
@@ -308,7 +308,7 @@
         <target>Firebase Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="592343560393631563" datatype="html">
@@ -316,7 +316,7 @@
         <target>Supabase Developer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="491009254733628613" datatype="html">
@@ -502,7 +502,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Yêu cầu đã được gửi thành công.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">108</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5991432110094363437" datatype="html">
@@ -510,7 +510,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Lỗi không xác định! Vui lòng thử lại.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">120</context>
+          <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3927696452050800576" datatype="html">
@@ -518,7 +518,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Yêu cầu bị cấm đối với máy chủ.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4424606546053357541" datatype="html">
@@ -526,7 +526,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Đã gửi dữ liệu không hợp lệ. Vui lòng điền vào biểu mẫu một cách chính xác và thử lại.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7336605590259895222" datatype="html">
@@ -590,7 +590,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Liên hệ với Alex Frei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5236911264762992404" datatype="html">
@@ -598,7 +598,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Hãy liên hệ ngay với Alex Frei.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/contact.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5629671436105198901" datatype="html">
@@ -1360,22 +1360,6 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3866315435884577468" datatype="html">
-        <source>&amp;nbspThe goal is to score more than 120 points without any mistakes!</source>
-        <target>&amp;nbsp Mục tiêu là ghi được hơn 120 điểm mà không mắc bất kỳ sai sót nào!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5216349461695422231" datatype="html">
-        <source>&amp;nbspBut wait a minute, you got more than 120 points?!! That&apos;s awesome, seems like you&apos;re a genius!</source>
-        <target>&amp;nbsp Nhưng chờ đã, bạn có hơn 120 điểm à?!! Điều đó thật tuyệt vời, có vẻ như bạn là thiên tài!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="9011689187710069765" datatype="html">
         <source>Your current high score is <x id="PH" equiv-text="highScore.points"/> points with <x id="PH_1" equiv-text="highScore.mistakes"/> mistakes!</source>
         <target>Điểm cao hiện tại của bạn là <x id="PH" equiv-text="highScore.points"/> điểm với <x id="PH_1" equiv-text="highScore.mistakes"/> lỗi!</target>
@@ -1405,7 +1389,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Một</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">409</context>
+          <context context-type="linenumber">415</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
@@ -1413,7 +1397,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Hai</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">411</context>
+          <context context-type="linenumber">417</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
@@ -1421,7 +1405,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Ba</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">413</context>
+          <context context-type="linenumber">419</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
@@ -1429,7 +1413,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Bốn</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">415</context>
+          <context context-type="linenumber">421</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
@@ -1437,7 +1421,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Năm</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">417</context>
+          <context context-type="linenumber">423</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
@@ -1445,7 +1429,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Sáu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">419</context>
+          <context context-type="linenumber">425</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
@@ -1453,7 +1437,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Bảy</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">421</context>
+          <context context-type="linenumber">427</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
@@ -1461,7 +1445,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Tám</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">423</context>
+          <context context-type="linenumber">429</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
@@ -1469,7 +1453,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Chín</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">425</context>
+          <context context-type="linenumber">431</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
@@ -1477,7 +1461,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Hình chữ nhật</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">427</context>
+          <context context-type="linenumber">433</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
@@ -1485,7 +1469,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Vòng tròn</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">429</context>
+          <context context-type="linenumber">435</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
@@ -1493,7 +1477,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Tam giác</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">431</context>
+          <context context-type="linenumber">437</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
@@ -1575,7 +1559,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Chủ đề phải dài từ 3 đến 20 ký tự!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="587771637347115681" datatype="html">
@@ -1583,7 +1567,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Chủ đề phải là văn bản chứ không phải số</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5320870651003627043" datatype="html">
@@ -1742,7 +1726,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Quantum Quiz Game</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="937865599769579559" datatype="html">
@@ -1750,7 +1734,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Bạn có thể giành chiến thắng trong chương trình triệu phú với chủ đề do AI tạo ra không?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
@@ -1758,11 +1742,11 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Xảy ra lỗi không xác định</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">140</context>
+          <context context-type="linenumber">141</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">146</context>
+          <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
@@ -2120,7 +2104,7 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
         <target>Quá nhiều yêu cầu! Vui lòng thử lại sau.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="linenumber">136</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4848585539632032097" datatype="html">
@@ -2245,7 +2229,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <target>Màu sắc</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">361</context>
+          <context context-type="linenumber">362</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984907873245479480" datatype="html">
@@ -2253,7 +2237,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <target>Ý nghĩa</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">361</context>
+          <context context-type="linenumber">362</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1188841585502022097" datatype="html">
@@ -2269,7 +2253,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <target>Tải CV dưới dạng PDF</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">133,135</context>
+          <context context-type="linenumber">131,133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5955791233379406977" datatype="html">
@@ -2278,7 +2262,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <target> Tải</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">136,137</context>
+          <context context-type="linenumber">134,135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1375277519132612708" datatype="html">
@@ -2328,6 +2312,23 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
           <context context-type="linenumber">50,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7234544955129613346" datatype="html">
+        <source>&amp;nbspThe goal is to score more than 60 points without any mistakes!</source>
+        <target>&amp;nbsp Mục tiêu là ghi được hơn 60 điểm mà không mắc bất kỳ sai sót nào!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3813774522743670844" datatype="html">
+        <source>&amp;nbspBut wait a minute, you got more than 60 points?!! That&apos;s awesome, seems like you&apos;re a genius!</source>
+        <target>&amp;nbspNhưng chờ đã, bạn có hơn 60 điểm à?!! Điều đó thật tuyệt vời, có vẻ như bạn là thiên tài!
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
     </body>

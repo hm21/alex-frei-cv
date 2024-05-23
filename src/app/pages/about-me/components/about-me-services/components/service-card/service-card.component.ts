@@ -1,11 +1,10 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   Input,
   OnInit,
   TemplateRef,
   ViewChild,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -17,7 +16,6 @@ import { ServiceCardIcon } from '../../model/service-card-type';
   imports: [NgxScrollAnimationsModule],
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ServiceCardComponent extends ExtendedComponent implements OnInit {
   /** Reference to the container where service items will be created dynamically. */

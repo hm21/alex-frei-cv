@@ -13,6 +13,7 @@ describe('GitManagerService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [SharedTestingModule],
+      teardown: {destroyAfterEach: false} 
     });
     service = TestBed.inject(GitManagerService);
     httpMock = TestBed.inject(HttpTestingController);

@@ -8,6 +8,7 @@ import {
 import { DOCUMENT, NgStyle, UpperCasePipe } from '@angular/common';
 import {
   Component,
+  ElementRef,
   EventEmitter,
   OnDestroy,
   OnInit,
@@ -26,6 +27,7 @@ import {
   interval,
   map,
   takeUntil,
+  tap,
   timer,
 } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -114,6 +116,9 @@ export class ColorClashGameComponent
   @ViewChild('buttonRef', { static: true, read: TemplateRef })
   buttonRef!: TemplateRef<ColorClashGameButton>;
 
+  @ViewChild('timeBanner')
+  timeBanner!: ElementRef<HTMLElement>;
+
   /**
    * Array of game items to be displayed.
    */
@@ -127,17 +132,12 @@ export class ColorClashGameComponent
   /**
    * Duration of the countdown timer in seconds.
    */
-  private countdownDuration: number = 120;
+  private countdownDuration: number = 60;
 
   /**
    * Flag indicating if the countdown is active.
    */
   private activeCountdown = false;
-
-  /**
-   * Signal representing the remaining time in the format 'MM:SS'.
-   */
-  public time = signal('02:00');
 
   /**
    * Signal representing the number of warm-up rounds.
@@ -352,15 +352,18 @@ export class ColorClashGameComponent
           .id;
       const meaning = this.getMeaning(id);
       const mode = Math.random() > 0.5 ? 'color' : 'meaning';
-      this.viewItems().unshift({
-        color: this.colors[Math.floor(Math.random() * this.colors.length)],
-        content: this.sanitizer.bypassSecurityTrustHtml(meaning),
-        item: meaning,
-        mode,
-        modeTranslated:
-          mode === 'color' ? $localize`Color` : $localize`Meaning`,
-        loopId: ++this.itemCount,
-        id,
+      this.viewItems.update((items) => {
+        const newItem: ColorClashGameItem = {
+          color: this.colors[Math.floor(Math.random() * this.colors.length)],
+          content: this.sanitizer.bypassSecurityTrustHtml(meaning),
+          item: meaning,
+          mode,
+          modeTranslated:
+            mode === 'color' ? $localize`Color` : $localize`Meaning`,
+          loopId: ++this.itemCount,
+          id,
+        };
+        return [newItem, ...items];
       });
     }
   }
@@ -371,7 +374,7 @@ export class ColorClashGameComponent
    * @param color - The color of the button.
    */
   public buttonTap(id: string | number, color: string) {
-    const lastItem = this.viewItems()[this.viewItems().length - 1];
+    const lastItem = this.viewItems().at(-1)!;
 
     if (this.warmUpRounds() < 3) {
       this.warmUpRounds.update((count) => ++count);
@@ -392,7 +395,10 @@ export class ColorClashGameComponent
         if (this.warmUpRounds() >= 3 && !this.activeCountdown) {
           this.startCountdown();
         }
-        this.viewItems().pop();
+        this.viewItems.update((items) => {
+          items.pop();
+          return items;
+        });
         this.generateItems();
       });
   }
@@ -474,10 +480,7 @@ export class ColorClashGameComponent
     function secondsToMMSS(seconds: number): string {
       const minutes: number = Math.floor(seconds / 60);
       const remainingSeconds: number = seconds % 60;
-      const minutesStr: string = minutes < 10 ? '0' + minutes : '' + minutes;
-      const secondsStr: string =
-        remainingSeconds < 10 ? '0' + remainingSeconds : '' + remainingSeconds;
-      return `${minutesStr}:${secondsStr}`;
+      return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     }
 
     this.activeCountdown = true;
@@ -487,12 +490,13 @@ export class ColorClashGameComponent
         map((tick) => secondsToMMSS(this.countdownDuration - tick - 1)),
         takeUntil(this.countdownDestroy$),
         this.destroyPipe(),
+        tap((time) => {
+          this.timeBanner.nativeElement.innerHTML = time;
+        }),
+        filter((time) => time === '00:00'),
       )
-      .subscribe((time) => {
-        this.time.set(time);
-        if (time === '00:00') {
-          this.setGameFinish();
-        }
+      .subscribe(() => {
+        this.setGameFinish();
       });
   }
 

@@ -5,10 +5,8 @@ import {
   EventEmitter,
   OnInit,
   Output,
-  Renderer2,
   ViewChild,
   computed,
-  inject,
   input,
   signal
 } from '@angular/core';
@@ -82,8 +80,6 @@ export class QuantumQuizGameComponent
     1_000_000, 500_000, 125_000, 64_000, 32_000, 16_000, 8_000, 4_000, 2_000,
     1_000, 500, 300, 200, 100, 50,
   ];
-
-  private renderer = inject(Renderer2);
 
   override ngOnInit(): void {
     this.listenShortcutKeys();

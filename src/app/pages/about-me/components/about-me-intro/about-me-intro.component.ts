@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 
@@ -8,7 +8,6 @@ import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.co
   imports: [TypewriterComponent, NgxCountAnimationModule],
   templateUrl: './about-me-intro.component.html',
   styleUrl: './about-me-intro.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeIntroComponent implements OnInit {
   /**

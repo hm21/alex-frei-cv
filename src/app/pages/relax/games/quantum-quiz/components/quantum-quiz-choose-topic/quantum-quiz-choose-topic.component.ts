@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -9,7 +8,7 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  signal,
+  signal
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -24,7 +23,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
     '../../../../styles/game-button.scss',
     './quantum-quiz-choose-topic.component.scss',
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  
 })
 export class QuantumQuizChooseTopicComponent
   extends ExtendedComponent

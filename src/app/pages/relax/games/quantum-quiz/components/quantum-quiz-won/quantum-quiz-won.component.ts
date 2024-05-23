@@ -1,9 +1,8 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   OnInit,
-  Output,
+  Output
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -17,7 +16,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
     '../../../../styles/game-button.scss',
     './quantum-quiz-won.component.scss',
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuantumQuizWonComponent
   extends ExtendedComponent

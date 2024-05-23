@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   OnInit,
@@ -18,7 +17,6 @@ import { Quiz } from '../../utils/quiz-interface';
     '../../../../styles/game-button.scss',
     './quantum-quiz-generate-quiz.component.scss',
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuantumQuizGenerateQuizComponent
   extends ExtendedComponent

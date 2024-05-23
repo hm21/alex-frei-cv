@@ -37,7 +37,7 @@ export const backendSkills: SkillItem[] = [
     skill: 80,
   },
   {
-    name: `ASP.NET`,
+    name: `.NET`,
     skill: 30,
   },
   {

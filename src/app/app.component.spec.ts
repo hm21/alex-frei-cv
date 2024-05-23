@@ -30,6 +30,7 @@ describe('AppComponent', () => {
         { provide: ElementRef, useValue: { nativeElement: {} } },
         { provide: ViewContainerRef, useValue: {} },
       ],
+      teardown: {destroyAfterEach: false} 
     }).compileComponents();
   });
 

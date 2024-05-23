@@ -17,6 +17,7 @@ describe('ThemeManagerService', () => {
         ThemeManagerService,
         { provide: DOCUMENT, useValue: documentMock },
       ],
+      teardown: {destroyAfterEach: false} 
     });
     service = TestBed.inject(ThemeManagerService);
   });
@@ -26,7 +27,7 @@ describe('ThemeManagerService', () => {
   });
 
   it('should toggle theme to dark mode', () => {
-    service.isDarkMode = true;
+    service.isDarkMode.set(true);
     service.toggleTheme();
     expect(localStorage.getItem('theme')).toBe('dark');
     expect(documentMock.documentElement.setAttribute).toHaveBeenCalledWith(
@@ -36,7 +37,7 @@ describe('ThemeManagerService', () => {
   });
 
   it('should toggle theme to light mode', () => {
-    service.isDarkMode = false;
+    service.isDarkMode.set(false);
     service.toggleTheme();
     expect(localStorage.getItem('theme')).toBe('light');
     expect(documentMock.documentElement.setAttribute).toHaveBeenCalledWith(

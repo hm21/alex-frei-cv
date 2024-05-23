@@ -13,19 +13,19 @@
     @case (GameState.chooseTopic) {
       <af-quantum-quiz-choose-topic
         @cardFadeInUpScale
-        [errorMsg]="generateErrorMsg"
+        [errorMsg]="generateErrorMsg()"
         (generateQuiz)="generateQuiz($event)"
       />
     }
     @case (GameState.generateQuiz) {
       <af-quantum-quiz-generate-quiz
         @cardFadeInUpScale
-        (generatedQuiz)="quiz = $event"
+        (generatedQuiz)="quiz.set($event)"
       />
     }
     @case (GameState.active) {
       <af-quantum-quiz-game
-        [quiz]="quiz"
+        [quiz]="quiz()"
         (stateChanged)="onStateChanged($event)"
       />
     }

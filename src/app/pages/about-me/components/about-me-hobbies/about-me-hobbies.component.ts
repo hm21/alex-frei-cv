@@ -1,12 +1,11 @@
 import { NgTemplateOutlet } from '@angular/common';
 import {
-  ChangeDetectionStrategy,
   Component,
   OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { hobbies } from 'src/app/configs/hobbies';
@@ -19,7 +18,6 @@ import { Hobbies } from './utils/about-me-hobbies-interfaces';
   imports: [NgxScrollAnimationsModule, NgTemplateOutlet],
   templateUrl: './about-me-hobbies.component.html',
   styleUrl: './about-me-hobbies.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeHobbiesComponent
   extends ExtendedComponent

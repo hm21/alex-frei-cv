@@ -1,11 +1,10 @@
 import {
-  ChangeDetectorRef,
   DestroyRef,
   Directive,
   ElementRef,
-  NgZone,
   OnInit,
-  inject,
+  Renderer2,
+  inject
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Meta, Title } from '@angular/platform-browser';
@@ -27,8 +26,7 @@ export abstract class ExtendedComponent implements OnInit {
   protected destroyRef = inject(DestroyRef);
   private titleRef = inject(Title);
   private metaRef = inject(Meta);
-  protected ngZone = inject(NgZone);
-  protected cdRef = inject(ChangeDetectorRef);
+  protected renderer = inject(Renderer2);
 
   ngOnInit(): void {
     this.initComponent();

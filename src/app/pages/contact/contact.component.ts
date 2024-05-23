@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { MetaDataI } from 'src/app/utils/meta-generator';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
@@ -13,7 +13,6 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent extends ExtendedComponent {
   protected override pageMeta: MetaDataI = {

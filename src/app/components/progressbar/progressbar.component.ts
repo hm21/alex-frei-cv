@@ -1,11 +1,9 @@
 import { DOCUMENT } from '@angular/common';
 import {
   AfterViewInit,
-  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
-  Renderer2,
   ViewChild,
   inject,
   numberAttribute,
@@ -20,7 +18,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   imports: [NgxCountAnimationModule],
   templateUrl: './progressbar.component.html',
   styleUrl: './progressbar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProgressbarComponent
   extends ExtendedComponent
@@ -47,11 +44,6 @@ export class ProgressbarComponent
   @Input({ required: true }) name!: string;
 
   /**
-   * Renderer for manipulating DOM elements.
-   */
-  private renderer = inject(Renderer2);
-
-  /**
    * Document reference for accessing DOM.
    */
   private document = inject(DOCUMENT);
@@ -61,31 +53,29 @@ export class ProgressbarComponent
 
     this.initScrollListener();
   }
-  
+
   /**
    * Initializes the scroll listener for the progress bar.
    */
   private initScrollListener() {
     const barElement = this.barRef.nativeElement;
 
-    this.ngZone.runOutsideAngular(() => {
-      fromEvent(this.document, 'scroll')
-        .pipe(
-          this.destroyPipe(),
-          throttleTime(50, undefined, { leading: true, trailing: true }),
-          startWith(null),
-          delay(1),
-          map(() => {
-            const rect = barElement.getBoundingClientRect();
-            const windowHeight =
-              window.innerHeight || this.document.documentElement.clientHeight;
-            const isVisible = rect.top < windowHeight;
-            return isVisible ? this.progress : 0;
-          }),
-        )
-        .subscribe((width) => {
-          this.renderer.setStyle(barElement, 'width', `${width}%`);
-        });
-    });
+    fromEvent(this.document, 'scroll')
+      .pipe(
+        this.destroyPipe(),
+        throttleTime(50, undefined, { leading: true, trailing: true }),
+        startWith(null),
+        delay(1),
+        map(() => {
+          const rect = barElement.getBoundingClientRect();
+          const windowHeight =
+            window.innerHeight || this.document.documentElement.clientHeight;
+          const isVisible = rect.top < windowHeight;
+          return isVisible ? this.progress : 0;
+        }),
+      )
+      .subscribe((width) => {
+        this.renderer.setStyle(barElement, 'width', `${width}%`);
+      });
   }
 }

@@ -1,10 +1,6 @@
 <div class="v-divider">
   <div class="sonar-container">
-    <div
-      class="sonar"
-      [@sonarAnimation]="animationState"
-      (@sonarAnimation.done)="this.animationState = 'stop'"
-    ></div>
+    <div #sonar class="sonar"></div>
     <div class="dot"></div>
   </div>
 </div>

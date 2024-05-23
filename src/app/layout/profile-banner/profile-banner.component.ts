@@ -41,10 +41,6 @@ export class ProfileBannerComponent
    * Event emitter for closing the side menu.
    */
   @Output() closeSideMenu = new EventEmitter<boolean>();
-  /**
-   * Event emitter for toggling the hero section.
-   */
-  @Output() toggleHero = new EventEmitter<boolean>();
 
   /**
    * Reference to the container for navigation items.

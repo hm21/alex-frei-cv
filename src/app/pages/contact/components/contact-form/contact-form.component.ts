@@ -1,14 +1,13 @@
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import {
-  ChangeDetectionStrategy,
   Component,
   OnInit,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
   inject,
-  isDevMode,
+  isDevMode
 } from '@angular/core';
 import {
   FormControl,
@@ -25,7 +24,6 @@ import { environment } from 'src/environments/environment';
   imports: [ReactiveFormsModule, DecimalPipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactFormComponent extends ExtendedComponent implements OnInit {
   /** Reference to the footer container where dynamic content will be placed. */
@@ -86,7 +84,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
           : `<b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as <b>E-Mail</b> are required.`,
       });
       this.footerRef.createEmbeddedView(this.submitBtnRef);
-      this.cdRef.detectChanges();
     } else if (!this._sending && !this._sended && this._sendTries < 10) {
       this._sending = true;
       this.footerRef.clear();
@@ -94,7 +91,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
 
       this._sendTries++;
       this.form.disable();
-      this.cdRef.detectChanges();
 
       this.http
         .post(environment.endpoints.contactMessage, this.form.value)
@@ -107,7 +103,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
             this.footerRef.createEmbeddedView(this.successRef, {
               msg: $localize`The request has been successfully submitted.`,
             });
-            this.cdRef.detectChanges();
           },
           error: (err) => {
             if (isDevMode()) console.error(err);
@@ -133,7 +128,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
               this.footerRef.createEmbeddedView(this.submitBtnRef);
               this.form.enable();
             }
-            this.cdRef.detectChanges();
           },
         });
     } else if (this._sendTries >= 10) {
@@ -142,7 +136,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
         msg: $localize`Too many requests! Please try again later.`,
       });
 
-      this.cdRef.detectChanges();
     }
   }
 }

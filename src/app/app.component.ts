@@ -5,10 +5,9 @@ import {
   ElementRef,
   OnDestroy,
   OnInit,
-  Renderer2,
   ViewChild,
   ViewContainerRef,
-  inject,
+  inject
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { NgxCountService } from 'ngx-count-animation';
@@ -59,9 +58,6 @@ export class AppComponent
 
   /** Angular context for children outlets. */
   private contexts = inject(ChildrenOutletContexts);
-
-  /** Angular renderer for DOM manipulation. */
-  private renderer = inject(Renderer2);
 
   /** Document object for accessing DOM elements. */
   private document = inject(DOCUMENT);

@@ -9,6 +9,7 @@ describe('QuantumQuizGameComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [QuantumQuizGameComponent, SharedTestingModule],
+      teardown: {destroyAfterEach: false} 
     }).compileComponents();
   });
 

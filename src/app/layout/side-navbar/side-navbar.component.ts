@@ -1,13 +1,12 @@
 import { NgTemplateOutlet } from '@angular/common';
 import {
-  ChangeDetectionStrategy,
   Component,
   OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  inject,
+  inject
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -37,7 +36,6 @@ import {
   ],
   templateUrl: './side-navbar.component.html',
   styleUrl: './side-navbar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideNavbarComponent
   extends ExtendedComponent

@@ -15,6 +15,7 @@ describe('LanguageSwitchComponent', () => {
       providers: [
         { provide: DOCUMENT, useValue: documentMock },
       ],
+      teardown: {destroyAfterEach: false} 
     }).compileComponents();
   });
 
@@ -29,7 +30,7 @@ describe('LanguageSwitchComponent', () => {
   });
 
   it('should initialize correctly', () => {
-    expect(component.showLanguage).toBeFalse();
+    expect(component.showLanguage()).toBeFalse();
   
     expect(component.activeLanguage.iso2).toEqual('en');
   });

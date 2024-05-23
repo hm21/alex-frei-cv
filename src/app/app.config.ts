@@ -1,4 +1,4 @@
-import { ApplicationConfig, isDevMode } from '@angular/core';
+import { ApplicationConfig, isDevMode, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
@@ -18,6 +18,7 @@ import { IS_BROWSER } from './utils/global-tokens';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideExperimentalZonelessChangeDetection(),
     provideRouter(
       routes,
       withPreloading(QuicklinkStrategy),

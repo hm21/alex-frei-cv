@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IS_BROWSER } from '../utils/global-tokens';
 
@@ -22,6 +22,10 @@ export class GitManagerService {
       return of(this.gitCommitCount);
     }
 
-    return this.http.get<number>(environment.endpoints.gitCommitCount);
+    return this.http.get<number>(environment.endpoints.gitCommitCount).pipe(
+      tap(val=>{
+        this.gitCommitCount = val;
+      })
+    );
   }
 }

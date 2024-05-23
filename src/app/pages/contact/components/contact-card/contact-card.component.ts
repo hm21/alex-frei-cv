@@ -1,8 +1,7 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   HostAttributeToken,
-  inject,
+  inject
 } from '@angular/core';
 
 @Component({
@@ -11,7 +10,6 @@ import {
   imports: [],
   templateUrl: './contact-card.component.html',
   styleUrl: './contact-card.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactCardComponent {
   /**

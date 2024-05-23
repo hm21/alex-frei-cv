@@ -1,9 +1,4 @@
-import {
-  ComponentFixture,
-  TestBed,
-  fakeAsync,
-  tick,
-} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ColorClashGameComponent } from './color-clash-game.component';
@@ -19,6 +14,7 @@ describe('ColorClashGameComponent', () => {
         BrowserAnimationsModule,
         SharedTestingModule,
       ],
+      teardown: { destroyAfterEach: false },
     }).compileComponents();
   });
 
@@ -37,15 +33,23 @@ describe('ColorClashGameComponent', () => {
     expect(component.viewItems().length).toBe(3);
   });
 
-  it('should start countdown', fakeAsync(() => {
+  it('should start countdown', async () => {
     component.ngOnInit();
-    const initialTime = component.time();
+
+    component.warmUpRounds.set(3);
+    component.buttonTap('1', '#0f7dff');
+
+    await new Promise((res) => setTimeout(() => res(null), 1));
+
+    const initialTime = component.timeBanner.nativeElement.innerHTML;
+    
     component['startCountdown']();
-    fixture.detectChanges();
-    tick(1001);
-    expect(component.time()).not.toBe(initialTime);
+
+    await new Promise((res) => setTimeout(() => res(null), 1001));
+
+    expect(component.timeBanner.nativeElement.innerHTML).not.toBe(initialTime);
     component.ngOnDestroy();
-  }));
+  });
 
   it('should set game finish', () => {
     spyOn(localStorage, 'getItem').and.returnValue(null);

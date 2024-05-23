@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ContactCardComponent } from './contact-card.component';
 
 describe('ContactCardComponent', () => {
@@ -8,10 +9,9 @@ describe('ContactCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactCardComponent]
-    })
-    .compileComponents();
-    
+      imports: [ContactCardComponent, SharedTestingModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ContactCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

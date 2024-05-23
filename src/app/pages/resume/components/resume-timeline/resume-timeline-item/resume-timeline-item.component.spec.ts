@@ -10,6 +10,7 @@ describe('ResumeTimelineItemComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ResumeTimelineItemComponent, SharedTestingModule],
+      teardown: {destroyAfterEach: false} 
     }).compileComponents();
   });
 

@@ -1,11 +1,10 @@
 import { DecimalPipe } from '@angular/common';
 import {
-  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
   OnInit,
-  Output,
+  Output
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -19,7 +18,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
     '../../../../styles/game-button.scss',
     './quantum-quiz-loose.component.scss',
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class QuantumQuizLooseComponent
   extends ExtendedComponent

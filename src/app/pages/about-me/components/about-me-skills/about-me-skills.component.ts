@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 
 @Component({
@@ -7,6 +7,5 @@ import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
   imports: [NgxScrollAnimationsModule],
   templateUrl: './about-me-skills.component.html',
   styleUrl: './about-me-skills.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeSkillsComponent {}

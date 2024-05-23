@@ -1,16 +1,11 @@
-import {
-  animate,
-  keyframes,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { NgClass } from '@angular/common';
 import {
-  ChangeDetectionStrategy,
   Component,
+  ElementRef,
   Input,
   OnInit,
+  ViewChild,
+  signal,
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { fromEvent } from 'rxjs';
@@ -23,33 +18,13 @@ import { ResumeTimelineItem } from '../../../utils/resume-interface';
   imports: [NgClass, NgxScrollAnimationsModule],
   templateUrl: './resume-timeline-item.component.html',
   styleUrl: './resume-timeline-item.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('sonarAnimation', [
-      transition('* => show', [
-        animate(
-          '1500ms ease',
-          keyframes([
-            style({
-              transform: 'translate(-50%, -50%) scale(1)',
-              opacity: 0.8,
-              offset: 0,
-            }),
-            style({
-              transform: 'translate(-50%, -50%) scale(2)',
-              opacity: 0,
-              offset: 1,
-            }),
-          ]),
-        ),
-      ]),
-    ]),
-  ],
 })
 export class ResumeTimelineItemComponent
   extends ExtendedComponent
   implements OnInit
 {
+  @ViewChild('sonar') sonar!: ElementRef<HTMLElement>;
+
   /**
    * Represents a single item in the resume timeline.
    */
@@ -58,24 +33,30 @@ export class ResumeTimelineItemComponent
   /**
    * Represents the animation state of the resume timeline item.
    */
-  public animationState = 'stop';
+  public animationState = signal('stop');
 
   override ngOnInit(): void {
-    this.hoverListener();
     super.ngOnInit();
+  }
+
+  ngAfterViewInit(): void {
+    this.hoverListener();
   }
 
   /**
    * Listens for hover events on the component and triggers the animation state change.
    */
   private hoverListener() {
-    this.ngZone.runOutsideAngular(() => {
-      fromEvent(this.nativeElement, 'mouseenter')
-        .pipe(this.destroyPipe())
-        .subscribe(() => {
-          this.animationState = 'show';
-          this.cdRef.detectChanges();
-        });
-    });
+    fromEvent(this.nativeElement, 'mouseenter')
+      .pipe(this.destroyPipe())
+      .subscribe(() => {
+        this.renderer.addClass(this.sonar.nativeElement, 'sonar-animation');
+      });
+
+    fromEvent(this.sonar.nativeElement, 'animationend')
+      .pipe(this.destroyPipe())
+      .subscribe(() => {
+        this.renderer.removeClass(this.sonar.nativeElement, 'sonar-animation');
+      });
   }
 }
