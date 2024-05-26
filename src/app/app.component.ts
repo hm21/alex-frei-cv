@@ -7,7 +7,8 @@ import {
   OnInit,
   ViewChild,
   ViewContainerRef,
-  inject
+  inject,
+  signal,
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { NgxCountService } from 'ngx-count-animation';
@@ -48,13 +49,13 @@ export class AppComponent
   modalRef!: ViewContainerRef;
 
   /** Flag to control the visibility of the mobile menu button. */
-  public showMobileMenuBtn = true;
+  public showMobileMenuBtn = signal(true);
 
   /** Flag to control the visibility of the mobile menu. */
-  public showMobileMenu = false;
+  public showMobileMenu = signal(false);
 
   /** Flag indicating whether route animations should be used. */
-  public useRouteAnimations = false;
+  public useRouteAnimations = signal(false);
 
   /** Angular context for children outlets. */
   private contexts = inject(ChildrenOutletContexts);
@@ -91,7 +92,7 @@ export class AppComponent
       // Skip a frame so that the first time when the user opens the page will not be an animation bug.
       timer(1)
         .pipe(this.destroyPipe())
-        .subscribe(() => (this.useRouteAnimations = true));
+        .subscribe(() => this.useRouteAnimations.set(true));
     }
   }
 

@@ -1,6 +1,6 @@
 <main
   #mainRef
-  [@.disabled]="!useRouteAnimations"
+  [@.disabled]="!useRouteAnimations()"
   [@routeAnimation]="getRouteAnimationData()"
 >
   <div class="container">
@@ -10,14 +10,14 @@
 
 <af-header
   (closeSideMenu)="mobileMenuBtn.closeMenu()"
-  [ngClass]="{ show: showMobileMenu }"
+  [ngClass]="{ show: showMobileMenu() }"
 />
 
 <af-nav-mobile-menu-toggle-btn
   #mobileMenuBtn
-  [ngStyle]="{ display: showMobileMenuBtn ? '' : 'none' }"
-  [open]="showMobileMenu"
-  (tap)="showMobileMenu = !showMobileMenu"
+  [ngStyle]="{ display: showMobileMenuBtn() ? '' : 'none' }"
+  [open]="showMobileMenu()"
+  (tap)="showMobileMenu.set(!showMobileMenu())"
 />
 
 <ng-container #modalRef />

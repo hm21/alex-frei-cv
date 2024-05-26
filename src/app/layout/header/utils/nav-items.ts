@@ -10,16 +10,16 @@ export const navItems: NavItem[] = [
     msg: $localize`Learn more about me.`,
   },
   {
-    path: '/resume',
-    name: $localize`Resume`,
-    id: 'resume',
-    msg: $localize`View my resume.`,
-  },
-  {
     path: '/portfolio',
     name: $localize`Portfolio`,
     id: 'portfolio',
     msg: $localize`Explore my portfolio.`,
+  },
+  {
+    path: '/resume',
+    name: $localize`Resume`,
+    id: 'resume',
+    msg: $localize`View my resume.`,
   },
   {
     path: '/relax',

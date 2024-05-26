@@ -11,7 +11,7 @@ export const funFacts = [
   },
   {
     title: $localize`Songs listened`,
-    value: 1402,
+    value: 1406,
     icon: 'music',
   },
   {
