@@ -62,8 +62,9 @@
               }
 
               <img
-                [style.aspectRatio]="item.ratio ?? '16 / 9'"
                 loading="eager"
+                [style.aspectRatio]="item.ratio ?? '16 / 9'"
+                afImageLoader
                 ngxHero
                 backdropPosition="beforeHeroItem"
                 [highQualityPath]="item.isGif ? undefined : item.path + '_4x'"

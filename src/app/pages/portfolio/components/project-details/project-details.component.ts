@@ -11,6 +11,7 @@ import {
 import { NgxImageHeroModule } from 'ngx-image-hero';
 import { filter, fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
+import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -23,7 +24,14 @@ import {
 @Component({
   selector: 'af-project-details',
   standalone: true,
-  imports: [NgClass, NgStyle, NgTemplateOutlet, NgxImageHeroModule, SafePipe],
+  imports: [
+    NgClass,
+    NgStyle,
+    NgTemplateOutlet,
+    NgxImageHeroModule,
+    SafePipe,
+    ImageLoaderDirective,
+  ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   animations: [modalAnimation],

@@ -194,6 +194,7 @@ li {
   animation: spin 1s linear infinite;
 }
 
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -204,6 +205,10 @@ li {
 }
 
 :host ::ng-deep {
+  .skeleton-loading::after {
+    border-radius: 3px !important;
+    overflow: hidden;
+  }
   .logo {
     width: 64px;
     height: 64px;
