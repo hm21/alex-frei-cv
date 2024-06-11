@@ -15,7 +15,7 @@ export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
   images: [
     {
       path: 'assets/img/ngx-image-hero/showcase',
-      alt: $localize`Image hero showcase`,
+      alt: `Image hero showcase`,
       ratio: '10 / 5.6',
       isGif: true,
     },

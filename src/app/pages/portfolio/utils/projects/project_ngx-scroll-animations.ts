@@ -15,7 +15,7 @@ export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails = 
   images: [
     {
       path: 'assets/img/ngx-scroll-animations/showcase',
-      alt: $localize`Scroll animations showcase`,
+      alt: `Scroll animations showcase`,
       ratio: '7 / 3.9',
       isGif: true,
     },

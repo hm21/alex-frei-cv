@@ -60,7 +60,7 @@
         <target>Sơ yếu lý lịch</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">20</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
@@ -72,7 +72,7 @@
         <target>Danh mục</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
@@ -365,7 +365,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">121</context>
+          <context context-type="linenumber">122</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4114955461878444038" datatype="html">
@@ -414,7 +414,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">119</context>
+          <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1483267419452198083" datatype="html">
@@ -438,7 +438,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Lượng cà phê đã uống </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
-          <context context-type="linenumber">3</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5581791111414135821" datatype="html">
@@ -446,7 +446,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Giải lao đi bộ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4154923317433097087" datatype="html">
@@ -454,7 +454,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Bài hát đã nghe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8127702299304006653" datatype="html">
@@ -462,7 +462,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Git Commits</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6028371114637047813" datatype="html">
@@ -638,7 +638,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Công ty</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="705519754422508972" datatype="html">
@@ -646,7 +646,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Dự án</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2427256133319138583" datatype="html">
@@ -654,7 +654,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Nhu cầu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6055086305211417287" datatype="html">
@@ -662,7 +662,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Nhân viên</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1498094916582121722" datatype="html">
@@ -670,7 +670,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Công nghiệp</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1075732990815169061" datatype="html">
@@ -678,7 +678,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Công trình</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8110718739226457864" datatype="html">
@@ -686,501 +686,199 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <target>Điều khiển</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1609617232994884093" datatype="html">
-        <source>
-          The application snaptab was primarily developed for craftsmen and
-          offers a wide range of features. From time tracking to scheduling
-          appointments, tasks, project workflows, and even creating invoices and
-          quotes, everything is provided. All of this is enhanced with
-          artificial intelligence and the ability to collect payments directly
-          from customers using Stripe. Through the customer portal, customers
-          can directly access data shared by the company.
-          &lt;br&gt;&lt;br&gt;
-          The application is offered as a web app as well as a mobile app for
-          Android and iOS.
-          </source>
-        <target>Ứng dụng snaptab chủ yếu được thiết kế cho thợ thủ công và cung cấp nhiều tính năng khác nhau. Từ theo dõi thời gian đến lên lịch cuộc hẹn, nhiệm vụ, quy trình công việc của dự án và thậm chí tạo hóa đơn và báo giá, mọi thứ đều được cung cấp. Tất cả điều này được tăng cường nhờ  AL và khả năng thu thanh toán trực tiếp từ khách hàng sử dụng Stripe. Thông qua cổng thông tin khách hàng, khách hàng có thể truy cập trực tiếp vào dữ liệu được công ty chia sẻ.
-           &lt;br&gt;&lt;br&gt;
-  ứng dụng được cung cấp dưới dạng trình duyệt web cũng như trình duyệt di động dành cho hệ điều hành Android và iOS.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">55,66</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4929583442443576063" datatype="html">
         <source>Presentation website</source>
         <target>Trình bày trang web </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6327574654864918743" datatype="html">
         <source>Web-app</source>
         <target>Ứng dụng web</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3748965883549109139" datatype="html">
         <source>Mobile-web-app “PWA”</source>
         <target>Ứng dụng web dành cho thiết bị di động “PWA”</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6067630268607910201" datatype="html">
         <source>Client-portal</source>
         <target>Cổng thông tin khách hàng</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8599987379723268011" datatype="html">
         <source>Admin-access</source>
         <target>Quyền truy cập của quản trị viên</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">87</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8117668572148231876" datatype="html">
-        <source>Project</source>
-        <target>Dự án</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">180</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4536004607617325628" datatype="html">
-        <source>Employee</source>
-        <target>Nhân viên</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">184</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4447668871712407032" datatype="html">
-        <source>Docs</source>
-        <target>Tài liệu</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">188</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5729418620241283277" datatype="html">
-        <source>Events</source>
-        <target>Sự kiện</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">192</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4703412002234796149" datatype="html">
-        <source>Gantt</source>
-        <target>Gantt</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">196</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8497528947328199741" datatype="html">
-        <source>Time</source>
-        <target>Thời gian</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">200</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4248076781094600744" datatype="html">
-        <source>Client portal</source>
-        <target>Cổng thông tin khách hàng</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">204</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3484984238852181071" datatype="html">
-        <source>AI</source>
-        <target>Trí tuệ nhân tạo</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">208</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5937251202465808296" datatype="html">
-        <source>More</source>
-        <target>Thêm</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">212</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2069705302209920814" datatype="html">
-        <source> Other Projects
-</source>
-        <target>Dự án khác</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.html</context>
-          <context context-type="linenumber">2,4</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5481284030283031915" datatype="html">
         <source>Website</source>
         <target>Trang mạng</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">123</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">166</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">170</context>
-        </context-group>
-        <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6870824354328033862" datatype="html">
         <source>Presentation website from the company waio Applications.</source>
         <target>Trình bày trang Web từ công ty Phần mềm ứng dụng Waio.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">125</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="728662466198011549" datatype="html">
-        <source>
-        This website introduces WAIO Applications, my own company. Alongside information about my company, 
-        it offers two captivating games to enrich the user experience.&lt;br&gt;
-        You can find one of these games by clicking on the &quot;Team&quot; tab and then pressing the &quot;Icebreaker&quot; button. 
-        The other game is hidden as an &quot;easter egg&quot; on the homepage. Simply scroll to the &quot;For all devices&quot; section, 
-        click on the red rectangle (which represents a phone with a scale animation).&lt;br&gt;&lt;br&gt;
-        On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.&lt;br&gt;&lt;br&gt;
-        The website was designed with a focus on performance and accessibility, and it is fully responsive,
-        ensuring a seamless experience across all devices.&lt;br&gt;&lt;br&gt;
-        Most of the UI/UX part of this project is not mine.
-        </source>
-        <target>Trang web này giới thiệu về WAIO, công ty riêng của tôi. Bên cạnh thông tin về công ty của tôi, phần dưới còn cung cấp hai trò chơi hấp dẫn để làm phong phú thêm trải nghiệm của người dùng.&lt;br&gt;
- Bạn có thể tìm thấy một trong những trò chơi này bằng cách nhấn vào nút &quot;Đội&quot; và sau đó nhấn nút &quot;Tàu phá băng&quot;.
- Trò chơi còn lại được ẩn dưới dạng &quot;quả trứng Phục sinh&quot; trên trang chủ. Chỉ cần kéo đến phần &quot;Dành cho tất cả thiết bị&quot;, nhấn vào hình chữ nhật màu đỏ (biểu thị một chiếc điện thoại có hình ảnh động tỷ lệ).&lt;br&gt;&lt;br&gt;
-  Trên miền phụ image.waio.ch, chúng tôi cung cấp một công cụ đơn giản để thay đổi kích thước và chuyển đổi hình ảnh sang nhiều định dạng và kích cỡ khác nhau.&lt;br&gt;&lt;br&gt;
- Trang web được thiết kế tập trung vào hiệu suất và khả năng truy cập, đồng thời nó hoàn toàn đáp ứng, đảm bảo trải nghiệm liền mạch trên tất cả các thiết bị.&lt;br&gt;&lt;br&gt;
-Hầu hết phần UI/UX của dự án này không phải của tôi.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">127,136</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5195429168031052915" datatype="html">
         <source>Waio Homepage</source>
         <target>Trang chủ của Waio</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">141</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7235166256865062307" datatype="html">
         <source>Waio Team</source>
         <target>Nhóm Waio</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">147</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5462750284769560897" datatype="html">
         <source>Waio Game 1</source>
         <target>Trò chơi Waio 1</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4989925427936502178" datatype="html">
         <source>Waio Game 2</source>
         <target>Trò chơi Waio 2</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5183297567427907684" datatype="html">
         <source>Flutter open source</source>
         <target>Flutter mã nguồn mở</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4381248089990542293" datatype="html">
         <source>A Flutter widget designed for image editing on any device.</source>
         <target>Tiện ích Flutter được thiết kế để chỉnh sửa hình ảnh trên mọi thiết bị.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7730284535445448313" datatype="html">
-        <source>
-        The ProImageEditor is a Flutter widget designed for image editing. It provides a flexible and convenient way to integrate image editing capabilities 
-        into Flutter projects. The editor has a great hit detection ensuring that drawing actions are triggered only when the user actively hovers over the drawing area. 
-        Furthermore, the editor is highly customizable, allowing for complete adaptation to specific project requirements, and it offers effortless translation capabilities, 
-        simplifying the localization process.
-        </source>
-        <target>ProImageEditor là một tiện ích Flutter được thiết kế để chỉnh sửa hình ảnh. Nó cung cấp một cách linh hoạt và thuận tiện để tích hợp khả năng chỉnh sửa hình ảnh vào các dự án Flutter. Trình chỉnh sửa có khả năng phát hiện lượt truy cập tuyệt vời, đảm bảo rằng các hành động vẽ chỉ được kích hoạt khi người dùng chủ động di chuột qua khu vực vẽ.
-  Hơn nữa, trình chỉnh sửa có khả năng tùy biến cao, cho phép thích ứng hoàn toàn với các yêu cầu cụ thể của dự án và cung cấp khả năng dịch thuật dễ dàng, đơn giản hóa quá trình bản địa hóa.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">38,43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2825944489942723865" datatype="html">
-        <source>Editor showcase</source>
-        <target>Trình diễn biên tập</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3736654037818964847" datatype="html">
-        <source>Painting editor</source>
-        <target>Trình chỉnh sửa vẽ tranh</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6808464001005668002" datatype="html">
-        <source>Text editor</source>
-        <target>Trình soạn thảo văn bản</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3191464676136788537" datatype="html">
-        <source>Crop rotate</source>
-        <target>Cắt xoay</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2597779358497009510" datatype="html">
-        <source>Filter editor</source>
-        <target>Trình chỉnh sửa bộ lọc</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">74</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1669994001683341404" datatype="html">
-        <source>Emoji editor</source>
-        <target>Trình chỉnh sửa biểu tượng cảm xúc</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">81</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4244389066312482208" datatype="html">
-        <source>Sticker editor</source>
-        <target>Trình chỉnh sửa nhãn dán</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">88</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2662699029149671881" datatype="html">
         <source>Github-Page</source>
         <target>Trang Github</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">101</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="linenumber">81</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">226</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="linenumber">26</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">269</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="linenumber">26</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">312</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4222037467811949681" datatype="html">
         <source>Angular open source</source>
         <target>Angular open source</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">205</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="linenumber">5</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">248</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="linenumber">5</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6774285373642240712" datatype="html">
         <source>Add automatic scroll animations to an angular 9+ app.</source>
         <target>Thêm hoạt ảnh cuộn tự động vào ứng dụng 9+ góc cạnh.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">207</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8539152062104707277" datatype="html">
-        <source>
-        A package for implementing CSS scroll animations on elements. These animations activate when an element enters the viewport during page scrolling. 
-        Users have the flexibility to configure the animations to trigger multiple times or just once. Additionally, 
-        the package offers pre-made animations as well as the option to create custom ones to suit various requirements.
-       </source>
-        <target>Gói này triển khai các hoạt ảnh cuộn CSS trên các phần tử. Những hoạt ảnh này kích hoạt khi một phần tử xuất hiện trong khi kéo trang.
-Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kích hoạt nhiều lần hoặc chỉ một lần. Ngoài ra, gói này còn cung cấp các hình ảnh động được tạo sẵn cũng như tùy chọn tạo hình ảnh động tùy chỉnh để phù hợp với các yêu cầu khác nhau.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">209,213</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7889620127601939568" datatype="html">
-        <source>Scroll animations showcase</source>
-        <target>Giới thiệu hình ảnh động kéo cuộn </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">218</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1002170015007706153" datatype="html">
         <source>Easy way that images will fly to the middle of the screen for presentation.</source>
         <target>Cách dễ dàng là hình ảnh sẽ bay ra giữa màn hình để trình chiếu.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">250</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7689134266850341635" datatype="html">
-        <source>
-        A package to implement hero animations, allowing users to click on images and smoothly zoom them into a larger, 
-        immersive view, enhancing the user experience and interaction with images.&lt;br&gt;&lt;br&gt;
-        Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
-        </source>
-        <target>Gói triển khai hoạt ảnh chính, cho phép người dùng nhấp vào hình ảnh và phóng to chúng một cách mượt mà thành chế độ xem lớn hơn, sống động, nâng cao trải nghiệm người dùng và tương tác với hình ảnh.&lt;br&gt;&lt;br&gt;
-  Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà như trong thực tế. Điều này là do tôi đã giảm tốc độ khung hình của GIF để tiết kiệm dung lượng lưu trữ.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">252,256</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="723955192887140537" datatype="html">
-        <source>Image hero showcase</source>
-        <target>Giới thiệu hình ảnh anh hùng</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">261</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5337895058168876856" datatype="html">
         <source>Count numbers up and down with smooth animation.</source>
         <target>Đếm số lên xuống với hình ảnh động mượt mà.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">293</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2116094780259070056" datatype="html">
-        <source>
-          A package that elegantly animates number changes, creating a visually engaging transition from one value to another, 
-          perfect for counting or displaying real-time data updates.&lt;br&gt;&lt;br&gt;
-          Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
-        </source>
-        <target>Một gói tạo hiệu ứng thay đổi số một cách trang nhã, tạo ra sự chuyển tiếp hấp dẫn về mặt trực quan từ giá trị này sang giá trị khác, hoàn hảo để đếm hoặc hiển thị các cập nhật dữ liệu theo thời gian thực.&lt;br&gt;&lt;br&gt;
-Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà như trong thực tế. Điều này là do tôi đã giảm tốc độ khung hình của GIF để tiết kiệm dung lượng lưu trữ.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">296,300</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2981746578304917090" datatype="html">
-        <source>Count animation showcase</source>
-        <target>Đếm trưng bày hoạt hình</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">304</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3721298594029045214" datatype="html">
         <source>IoT</source>
         <target>IoT</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">331</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_smarthome.ts</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7988858937831296342" datatype="html">
         <source>Smarthome app to automate bee hives and gardens.</source>
         <target>Ứng dụng Smarthome để tự động hóa tổ ong và vườn.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">333</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6133390707893312230" datatype="html">
-        <source>
-        This project is a real-time control application. Users can directly program the functions of GPIO ports without requiring any programming knowledge. 
-        Additionally, users can access data about the personal beehive, including real-time temperature readings and the amount of honey produced by the bees.
-        </source>
-        <target>Dự án này là một ứng dụng quản lý thời gian thực. Người dùng có thể lập trình trực tiếp các chức năng của cổng GPIO mà không cần bất kỳ kiến thức lập trình nào.
- Ngoài ra, người dùng có thể truy cập dữ liệu về tổ ong cá nhân, bao gồm chỉ số nhiệt độ theo thời gian thực và lượng mật ong do ong tạo ra.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">335,338</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4913960567088667274" datatype="html">
-        <source>Smarthome bee overview</source>
-        <target>Tổng quan về Smarthome Bee</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">342</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6352415780197482141" datatype="html">
-        <source>Smarthome bee details</source>
-        <target>Thông tin chi tiết về Smarthome Bee</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">347</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8545834380965620864" datatype="html">
-        <source>Smarthome switch</source>
-        <target>Công tắc nhà thông minh</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">352</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="785371004610436854" datatype="html">
-        <source>Smarthome Ionic version</source>
-        <target>Phiên bản Smarthome Ionic</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.ts</context>
-          <context context-type="linenumber">357</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_smarthome.ts</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1188,11 +886,11 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Đóng</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">20,21</context>
+          <context context-type="linenumber">21,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5886792202999625261" datatype="html">
@@ -1200,7 +898,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Thử nghiệm</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">100,101</context>
+          <context context-type="linenumber">85,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6082171864197428613" datatype="html">
@@ -1208,7 +906,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Cài đặt</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">119,120</context>
+          <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2115592966120408375" datatype="html">
@@ -1216,7 +914,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Đã sao chép</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">180</context>
+          <context context-type="linenumber">165</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1330330165139018730" datatype="html">
@@ -1224,7 +922,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Công nghệ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">193</context>
+          <context context-type="linenumber">178</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4523347413979510028" datatype="html">
@@ -1232,7 +930,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Video trên YouTube</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">207,208</context>
+          <context context-type="linenumber">192,193</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1580589129894115210" datatype="html">
@@ -1240,7 +938,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Cửa hàng di động</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">99</context>
+          <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5284812472715499591" datatype="html">
@@ -1248,7 +946,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Nguyên mẫu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8693603235657020323" datatype="html">
@@ -1256,7 +954,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Khác</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">125</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7655204782877616451" datatype="html">
@@ -2128,7 +1826,7 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
         <target>Xem hồ sơ của tôi.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4816634847062468790" datatype="html">
@@ -2136,7 +1834,7 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
         <target>Khám phá portfolio của tôi.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="600135607816560697" datatype="html">
@@ -2180,8 +1878,8 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <source>The Allrounder-Tool for your Company!</source>
         <target>Công cụ toàn diện dành cho công ty của bạn!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7643796150553263848" datatype="html">
@@ -2329,6 +2027,125 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
           <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9033841997412056770" datatype="html">
+        <source> Other Public Projects
+</source>
+        <target>Dự án khác</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="965381335090089470" datatype="html">
+        <source>
+    The ProImageEditor is a Flutter widget designed for image editing. It provides a flexible and convenient way to integrate image editing capabilities 
+    into Flutter projects. The editor has a great hit detection ensuring that drawing actions are triggered only when the user actively hovers over the drawing area. 
+    Furthermore, the editor is highly customizable, allowing for complete adaptation to specific project requirements, and it offers effortless translation capabilities, 
+    simplifying the localization process.&lt;br&gt;
+    Of course, the editor also supports multi-threading, where it run in dart native as isolated task and in the web inside web workers.
+    </source>
+        <target>ProImageEditor là một tiện ích Flutter được thiết kế để chỉnh sửa hình ảnh. Nó cung cấp một cách linh hoạt và thuận tiện để tích hợp khả năng chỉnh sửa hình ảnh vào các dự án Flutter. Trình chỉnh sửa có khả năng phát hiện lượt truy cập tuyệt vời, đảm bảo rằng các hành động vẽ chỉ được kích hoạt khi người dùng chủ động di chuột qua khu vực vẽ.
+  Hơn nữa, trình chỉnh sửa có khả năng tùy biến cao, cho phép thích ứng hoàn toàn với các yêu cầu cụ thể của dự án và cung cấp khả năng dịch thuật dễ dàng, đơn giản hóa quá trình bản địa hóa.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="linenumber">9,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7350255949203905689" datatype="html">
+        <source>
+        The application snaptab was primarily developed for craftsmen and
+        offers a wide range of features. From time tracking to scheduling
+        appointments, tasks, project workflows, and even creating invoices and
+        quotes, everything is provided. All of this is enhanced with
+        artificial intelligence and the ability to collect payments directly
+        from customers using Stripe. Through the customer portal, customers
+        can directly access data shared by the company.
+        &lt;br&gt;&lt;br&gt;
+        The application is offered as a web app as well as a mobile app for
+        Android and iOS.
+        </source>
+        <target>Ứng dụng snaptab chủ yếu được thiết kế cho thợ thủ công và cung cấp nhiều tính năng khác nhau. Từ theo dõi thời gian đến lên lịch cuộc hẹn, nhiệm vụ, quy trình công việc của dự án và thậm chí tạo hóa đơn và báo giá, mọi thứ đều được cung cấp. Tất cả điều này được tăng cường nhờ  AL và khả năng thu thanh toán trực tiếp từ khách hàng sử dụng Stripe. Thông qua cổng thông tin khách hàng, khách hàng có thể truy cập trực tiếp vào dữ liệu được công ty chia sẻ.
+           &lt;br&gt;&lt;br&gt;
+  ứng dụng được cung cấp dưới dạng trình duyệt web cũng như trình duyệt di động dành cho hệ điều hành Android và iOS.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="linenumber">7,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1639297382498004291" datatype="html">
+        <source>
+    This website introduces WAIO Applications, my own company. Alongside information about my company, 
+    it offers two captivating games to enrich the user experience.&lt;br&gt;
+    You can find one of these games by clicking on the &quot;Team&quot; tab and then pressing the &quot;Icebreaker&quot; button. 
+    The other game is hidden as an &quot;easter egg&quot; on the homepage. Simply scroll to the &quot;For all devices&quot; section, 
+    click on the red rectangle (which represents a phone with a scale animation).&lt;br&gt;&lt;br&gt;
+    On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.&lt;br&gt;&lt;br&gt;
+    The website was designed with a focus on performance and accessibility, and it is fully responsive,
+    ensuring a seamless experience across all devices.&lt;br&gt;&lt;br&gt;
+    Most of the UI/UX part of this project is not mine.
+    </source>
+        <target>Trang web này giới thiệu về WAIO, công ty riêng của tôi. Bên cạnh thông tin về công ty của tôi, phần dưới còn cung cấp hai trò chơi hấp dẫn để làm phong phú thêm trải nghiệm của người dùng.&lt;br&gt;
+ Bạn có thể tìm thấy một trong những trò chơi này bằng cách nhấn vào nút &quot;Đội&quot; và sau đó nhấn nút &quot;Tàu phá băng&quot;.
+ Trò chơi còn lại được ẩn dưới dạng &quot;quả trứng Phục sinh&quot; trên trang chủ. Chỉ cần kéo đến phần &quot;Dành cho tất cả thiết bị&quot;, nhấn vào hình chữ nhật màu đỏ (biểu thị một chiếc điện thoại có hình ảnh động tỷ lệ).&lt;br&gt;&lt;br&gt;
+  Trên miền phụ image.waio.ch, chúng tôi cung cấp một công cụ đơn giản để thay đổi kích thước và chuyển đổi hình ảnh sang nhiều định dạng và kích cỡ khác nhau.&lt;br&gt;&lt;br&gt;
+ Trang web được thiết kế tập trung vào hiệu suất và khả năng truy cập, đồng thời nó hoàn toàn đáp ứng, đảm bảo trải nghiệm liền mạch trên tất cả các thiết bị.&lt;br&gt;&lt;br&gt;
+Hầu hết phần UI/UX của dự án này không phải của tôi.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="linenumber">9,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1958216158924998792" datatype="html">
+        <source>
+      A package that elegantly animates number changes, creating a visually engaging transition from one value to another, 
+      perfect for counting or displaying real-time data updates.&lt;br&gt;&lt;br&gt;
+      Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
+    </source>
+        <target>Một gói tạo hiệu ứng thay đổi số một cách trang nhã, tạo ra sự chuyển tiếp hấp dẫn về mặt trực quan từ giá trị này sang giá trị khác, hoàn hảo để đếm hoặc hiển thị các cập nhật dữ liệu theo thời gian thực.&lt;br&gt;&lt;br&gt;
+Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà như trong thực tế. Điều này là do tôi đã giảm tốc độ khung hình của GIF để tiết kiệm dung lượng lưu trữ.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="linenumber">10,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3342380122465629008" datatype="html">
+        <source>
+    A package to implement hero animations, allowing users to click on images and smoothly zoom them into a larger, 
+    immersive view, enhancing the user experience and interaction with images.&lt;br&gt;&lt;br&gt;
+    Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
+    </source>
+        <target>Gói triển khai hoạt ảnh chính, cho phép người dùng nhấp vào hình ảnh và phóng to chúng một cách mượt mà thành chế độ xem lớn hơn, sống động, nâng cao trải nghiệm người dùng và tương tác với hình ảnh.&lt;br&gt;&lt;br&gt;
+  Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà như trong thực tế. Điều này là do tôi đã giảm tốc độ khung hình của GIF để tiết kiệm dung lượng lưu trữ.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="linenumber">9,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5060016153364842971" datatype="html">
+        <source>
+    A package for implementing CSS scroll animations on elements. These animations activate when an element enters the viewport during page scrolling. 
+    Users have the flexibility to configure the animations to trigger multiple times or just once. Additionally, 
+    the package offers pre-made animations as well as the option to create custom ones to suit various requirements.
+   </source>
+        <target>Gói này triển khai các hoạt ảnh cuộn CSS trên các phần tử. Những hoạt ảnh này kích hoạt khi một phần tử xuất hiện trong khi kéo trang.
+Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kích hoạt nhiều lần hoặc chỉ một lần. Ngoài ra, gói này còn cung cấp các hình ảnh động được tạo sẵn cũng như tùy chọn tạo hình ảnh động tùy chỉnh để phù hợp với các yêu cầu khác nhau.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="linenumber">9,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8343197697195579349" datatype="html">
+        <source>
+    This project is a real-time control application. Users can directly program the functions of GPIO ports without requiring any programming knowledge. 
+    Additionally, users can access data about the personal beehive, including real-time temperature readings and the amount of honey produced by the bees.
+    </source>
+        <target>Dự án này là một ứng dụng quản lý thời gian thực. Người dùng có thể lập trình trực tiếp các chức năng của cổng GPIO mà không cần bất kỳ kiến thức lập trình nào.
+ Ngoài ra, người dùng có thể truy cập dữ liệu về tổ ong cá nhân, bao gồm chỉ số nhiệt độ theo thời gian thực và lượng mật ong do ong tạo ra.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_smarthome.ts</context>
+          <context context-type="linenumber">9,12</context>
         </context-group>
       </trans-unit>
     </body>

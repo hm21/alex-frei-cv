@@ -129,54 +129,54 @@ export const PROJECT_SNAPTAB = {
   images: [
     {
       path: 'assets/img/snaptab/dashboard/dashboard',
-      alt: $localize`Dashboard`,
-      ratio:'2.207 / 1'
+      alt: `Dashboard`,
+      ratio: '2.207 / 1',
     },
     {
       path: 'assets/img/snaptab/project_infos/project_infos',
-      alt: $localize`Project-Infos`,
-      ratio:'2.207 / 1'
+      alt: `Project-Infos`,
+      ratio: '2.207 / 1',
     },
     {
       path: 'assets/img/snaptab/todo/todo',
-      alt: $localize`Todo`,
-      ratio:'2.207 / 1'
+      alt: `Todo`,
+      ratio: '2.207 / 1',
     },
     {
       path: 'assets/img/snaptab/project/project_mobile',
-      alt: $localize`Project`,
+      alt: `Project`,
     },
     {
       path: 'assets/img/snaptab/employee/employee_web',
-      alt: $localize`Employee`,
+      alt: `Employee`,
     },
     {
       path: 'assets/img/snaptab/docs/docs_web',
-      alt: $localize`Docs`,
+      alt: `Docs`,
     },
     {
       path: 'assets/img/snaptab/events/events_web',
-      alt: $localize`Events`,
+      alt: `Events`,
     },
     {
       path: 'assets/img/snaptab/gantt/gantt_web',
-      alt: $localize`Gantt`,
+      alt: `Gantt`,
     },
     {
       path: 'assets/img/snaptab/time/time_mobile',
-      alt: $localize`Time`,
+      alt: `Time`,
     },
     {
       path: 'assets/img/snaptab/client-portal/client-portal_web',
-      alt: $localize`Client portal`,
+      alt: `Client portal`,
     },
     {
       path: 'assets/img/snaptab/ai/ai_mobile',
-      alt: $localize`AI`,
+      alt: `AI`,
     },
     {
       path: 'assets/img/snaptab/more/more_web',
-      alt: $localize`More`,
+      alt: `More`,
       backgroundColor: '#ACD2FF',
     },
   ],

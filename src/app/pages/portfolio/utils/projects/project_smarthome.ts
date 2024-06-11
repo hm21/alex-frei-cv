@@ -13,22 +13,22 @@ export const PROJECT_SMARTHOME: { type: string } & ProjectDetails = {
   images: [
     {
       path: 'assets/img/smarthome/bee_overview/bee_overview',
-      alt: $localize`Smarthome bee overview`,
+      alt: `Smarthome bee overview`,
       ratio: '1.12 / 1.94',
     },
     {
       path: 'assets/img/smarthome/bee_details/bee_details',
-      alt: $localize`Smarthome bee details`,
+      alt: `Smarthome bee details`,
       ratio: '1.12 / 1.94',
     },
     {
       path: 'assets/img/smarthome/switch/switch',
-      alt: $localize`Smarthome switch`,
+      alt: `Smarthome switch`,
       ratio: '1.12 / 1.94',
     },
     {
       path: 'assets/img/smarthome/ionic-version/ionic-version',
-      alt: $localize`Smarthome Ionic version`,
+      alt: `Smarthome Ionic version`,
       ratio: '1 / 2.2',
     },
   ],

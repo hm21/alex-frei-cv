@@ -15,7 +15,7 @@ export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
   images: [
     {
       path: 'assets/img/ngx-count-animation/showcase',
-      alt: $localize`Count animation showcase`,
+      alt: `Count animation showcase`,
       ratio: '4.86 / 5.61',
       isGif: true,
     },
