@@ -15,6 +15,11 @@ $list-icon-size: 1rem;
   background-color: var(--page-background-primary);
 
   will-change: transform, border-radius, box-shadow;
+  scrollbar-gutter: stable both-edges;
+
+  &.open-hero {
+    overflow: hidden;
+  }
 }
 
 section {
@@ -218,6 +223,11 @@ li {
   .fill {
     transition: fill 250ms ease;
     fill: var(--text-color-primary);
+  }
+  #hero-backdrop {
+    position: absolute !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: saturate(180%) blur(10px) !important;
   }
 }
 

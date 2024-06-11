@@ -5,14 +5,14 @@
   </div>
 </div>
 
-<div class="card">
-  <div ngxScrollAnimate="fade-in-up" once="false" class="date">
+<div class="card" ngxScrollAnimate="fade-in-up" once="false">
+  <div class="date">
     {{ item.date }}
   </div>
-  <h2 ngxScrollAnimate="fade-in-up" once="false">{{ item.title }}</h2>
+  <h2>{{ item.title }}</h2>
 
   @if (item.msg) {
-    <p ngxScrollAnimate="fade-in-up" once="false">
+    <p>
       {{ item.msg }}
     </p>
   }

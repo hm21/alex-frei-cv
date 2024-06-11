@@ -14,8 +14,8 @@
 </ul>
 
 <ng-template #navItem let-name="name" let-icon="icon" let-path="path">
-  <li class="nav-item">
-    <a [routerLink]="path" routerLinkActive="router-link-active">
+  <li>
+    <a class="nav-item" [routerLink]="path" routerLinkActive="router-link-active">
       <div [innerHTML]="icon"></div>
       <span>{{ name }}</span>
     </a>

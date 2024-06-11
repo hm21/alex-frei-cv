@@ -1,11 +1,12 @@
 <div
   class="modal-content"
+  [ngClass]="{ 'open-hero': openHero() }"
   [@modal]="{
     value: modalFadeOut() ? 'out' : 'in',
     params: {
       durationIn: modalAnimationDurationIn(),
-      durationOut: modalAnimationDurationOut()
-    }
+      durationOut: modalAnimationDurationOut(),
+    },
   }"
 >
   <section class="container">
@@ -36,7 +37,7 @@
 
     <header class="row v-center mb2">
       @if (data.logo) {
-        <div class="logo" [innerHTML]="data.logo"></div>
+        <div class="logo" [innerHTML]="data.logo | safe"></div>
       }
 
       <div>
@@ -55,41 +56,25 @@
           @for (item of data.images; track $index) {
             <picture [style.backgroundColor]="item.backgroundColor ?? 'white'">
               @if (!item.isGif) {
-                @for (format of ["avif", "webp", "jpeg"]; track format) {
-                  <source
-                    srcset="
-                      {{item.path}}_1x.{{format}} 1x,
-                      {{item.path}}_2x.{{format}} 2x,
-                      {{item.path}}_3x.{{format}} 3x,
-                      {{item.path}}_4x.{{format}} 4x
-                    "
-                    type="image/{{ format }}"
-                  />
-                }
+                <source srcset="{{item.path}}_1x.avif" type="image/avif" />
+                <source srcset="{{item.path}}_1x.webp" type="image/webp" />
+                <source srcset="{{item.path}}_1x.jpeg" type="image/jpeg" />
               }
 
-              @if (item.isGif) {
-                <img
-                  [style.aspectRatio]="item.ratio ?? '16 / 9'"
-                  loading="eager"
-                  ngxHero
-                  backdropPosition="beforeHeroItem"
-                  [supportedFormats]="['gif']"
-                  src="{{ item.path }}.gif"
-                  [alt]="item.alt"
-                />
-              } @else {
-                <img
-                  [style.aspectRatio]="item.ratio ?? '16 / 9'"
-                  loading="eager"
-                  ngxHero
-                  backdropPosition="beforeHeroItem"
-                  highQualityPath="{{ item.path }}_4x"
-                  [supportedFormats]="['avif', 'webp', 'jpeg']"
-                  src="{{ item.path }}_4x.jpeg"
-                  [alt]="item.alt"
-                />
-              }
+              <img
+                [style.aspectRatio]="item.ratio ?? '16 / 9'"
+                loading="eager"
+                ngxHero
+                backdropPosition="beforeHeroItem"
+                [highQualityPath]="item.isGif ? undefined : item.path + '_4x'"
+                [supportedFormats]="
+                  item.isGif ? ['gif'] : ['avif', 'webp', 'jpeg']
+                "
+                [src]="item.path + (item.isGif ? '.gif' : '_4x.jpeg')"
+                [alt]="item.alt"
+                (openHero)="openHero.set(true)"
+                (closeHero)="openHero.set(false)"
+              />
             </picture>
           }
         </div>
@@ -105,7 +90,7 @@
                   urlTemplate;
                   context: {
                     url: data.demoUrl,
-                    name: data.demoUrl
+                    name: data.demoUrl,
                   }
                 "
               />
@@ -202,7 +187,7 @@
   <div class="video-container">
     <iframe
       #videoPlayerRef
-      [src]="url"
+      [src]="url | safe: 'resourceUrl'"
       i18n-title
       title="YouTube video"
       frameborder="0"

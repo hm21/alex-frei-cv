@@ -9,20 +9,21 @@ import {
   signal,
 } from '@angular/core';
 import { NgxImageHeroModule } from 'ngx-image-hero';
-import { fromEvent, timer } from 'rxjs';
+import { filter, fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
   BadgeTemplateI,
   ProjectDetails,
   UrlListTemplateI,
-} from '../utils/portfolio-interfaces';
+} from '../../utils/portfolio-interfaces';
 
 @Component({
   selector: 'af-project-details',
   standalone: true,
-  imports: [NgClass, NgStyle, NgTemplateOutlet, NgxImageHeroModule],
+  imports: [NgClass, NgStyle, NgTemplateOutlet, NgxImageHeroModule, SafePipe],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   animations: [modalAnimation],
@@ -63,11 +64,12 @@ export class ProjectDetailsComponent
   public copiedInstallCode = signal(false);
   /** Flag indicating if "Copied!" message should be shown. */
   public showCopiedMsg = signal(false);
-
   /** Modal manager service for managing modals. */
   private modalManager = inject(ModalManagerService);
   /** Document reference for key event listeners. */
   private document = inject(DOCUMENT);
+
+  public openHero = signal(false);
 
   override ngOnInit(): void {
     this.createDetailInfos();
@@ -93,7 +95,6 @@ export class ProjectDetailsComponent
         }),
       });
     }
-
     if (this.data.store) {
       this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
         title: $localize`Mobile-Store`,
@@ -137,7 +138,10 @@ export class ProjectDetailsComponent
   /** Initializes key event listeners. */
   private initKeyListeners() {
     fromEvent<KeyboardEvent>(this.document, 'keydown')
-      .pipe(this.destroyPipe())
+      .pipe(
+        this.destroyPipe(),
+        filter(() => !this.openHero()),
+      )
       .subscribe((event) => {
         if (event.key === 'Escape') {
           this.closeModal();

@@ -1,5 +1,11 @@
 export const funFacts = [
   {
+    title: $localize`Git Commits`,
+    value: 0,
+    icon: 'git',
+    loading: true,
+  },
+  {
     title: $localize`Coffee Consumed`,
     value: 35,
     icon: 'coffee',
@@ -13,11 +19,5 @@ export const funFacts = [
     title: $localize`Songs listened`,
     value: 1406,
     icon: 'music',
-  },
-  {
-    title: $localize`Git Commits`,
-    value: 0,
-    icon: 'git',
-    loading: true,
   },
 ];
