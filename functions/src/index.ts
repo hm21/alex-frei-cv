@@ -1,5 +1,7 @@
 import { onRequest } from 'firebase-functions/v2/https';
 
+import './extensions/extensions';
+
 export const quiz = onRequest(
   {
     cors: ['alex-frei.web.app'],

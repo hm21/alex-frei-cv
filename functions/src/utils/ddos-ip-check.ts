@@ -25,7 +25,7 @@ export const ddosCheck = async (
 
   if (ipAddress) {
     const dt = new Date();
-    const path = `ddos/${counterName}/${ipAddress}/${dt.getFullYear()}-${dt.getMonth()}-${dt.getDate()}-${dt.getHours()}`;
+    const path = `ddos/${counterName}/${ipAddress}/${dt.year}-${dt.month}-${dt.day}-${dt.hours}`;
     try {
       if (await ipIsOnBlacklist(ipAddress)) return true;
 

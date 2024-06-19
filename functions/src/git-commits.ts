@@ -49,9 +49,9 @@ export default async (req: Request, resp: express.Response) => {
 };
 function formatDate(date: Date): string {
   const year = date.getFullYear();
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
-  const day = date.getDate().toString().padStart(2, '0');
-  const hours = date.getHours().toString().padStart(2, '0');
+  const month = date.getMonthFormatted();
+  const day = date.getDateFormatted();
+  const hours = date.getHoursFormatted();
 
   return `${year}-${month}-${day}-${hours}`;
 }

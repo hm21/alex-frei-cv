@@ -14,7 +14,7 @@ initializeApp();
 
 export default async (req: https.Request, resp: express.Response) => {
   function getRandomTopic(): string {
-    const randomIndex: number = Math.floor(Math.random() * randomTopics.length);
+    const randomIndex: number = Math.randomNextInt(randomTopics.length);
     return randomTopics[randomIndex];
   }
 
@@ -29,10 +29,9 @@ export default async (req: https.Request, resp: express.Response) => {
 
   const lang = (req.body?.['lang'] as string) ?? 'en';
   const existingQuestions = (req.body?.['questions'] as string[]) ?? [];
-  let questionsText = '';
-  existingQuestions.forEach((el, index) => {
-    questionsText += `${index}. ${el}\n`;
-  });
+
+  const questionsText = existingQuestions.toNumberedList();
+
   const targetLanguage =
     lang === 'de' ? 'German' : lang === 'vi' ? 'Vietnamese' : 'English';
 
