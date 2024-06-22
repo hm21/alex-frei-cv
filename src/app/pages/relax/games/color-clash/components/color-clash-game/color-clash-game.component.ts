@@ -420,8 +420,7 @@ export class ColorClashGameComponent
    * @param color - The color of the button.
    */
   public buttonTap(id: string | number, color: string) {
-    const lastItem = this.viewItems().at(-1)!;
-
+    const lastItem = this.viewItems().getLastItem()!;
     if (this.warmUpRounds() < 3) {
       this.warmUpRounds.update((count) => ++count);
     }

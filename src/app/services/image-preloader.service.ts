@@ -22,16 +22,20 @@ export class ImagePreloaderService {
 
     for (const item of GAMES) {
       urls.push(
-        `assets/img/game/${item.id}/${item.id}_${window.devicePixelRatio.ceil()}x`,
+        `assets/img/game/${item.id}/${item.id}_${this.devicePixelRatio}x`,
       );
     }
     for (const item of CONTACT_OPTIONS) {
       urls.push(
-        `assets/img/contact/${item.id}/${item.id}_${window.devicePixelRatio.ceil()}x`,
+        `assets/img/contact/${item.id}/${item.id}_${this.devicePixelRatio}x`,
       );
     }
 
     this.preloadUrls(urls, true);
+  }
+
+  private get devicePixelRatio() {
+    return Math.min(4, Math.max(1, window.devicePixelRatio.ceil()));
   }
 
   /** Preload image urls */

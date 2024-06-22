@@ -1,6 +1,7 @@
 input,
 select,
 textarea {
+  appearance: none;
   width: 100%;
   background-color: var(--input-background-color);
   border-radius: 20px;
@@ -10,6 +11,7 @@ textarea {
   outline: none;
   font-size: 2rem;
   color: var(--text-color-primary);
+  box-shadow: none !important;
 
   &:focus{
     border-color: var(--color-primary) !important;
