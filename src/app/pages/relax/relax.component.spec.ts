@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { provideServiceWorker } from '@angular/service-worker';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { RelaxComponent } from './relax.component';
 
@@ -9,10 +10,10 @@ describe('RelaxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RelaxComponent, SharedTestingModule]
-    })
-    .compileComponents();
-    
+      providers: [provideServiceWorker('ngsw-worker.js')],
+      imports: [RelaxComponent, SharedTestingModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RelaxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

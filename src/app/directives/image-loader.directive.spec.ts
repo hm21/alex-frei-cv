@@ -6,7 +6,6 @@ import { ImageLoaderDirective } from './image-loader.directive';
 describe('ImageLoaderDirective', () => {
   let elRefMock: ElementRef;
   let rendererMock: Renderer2;
-  let destroyRefMock: DestroyRef;
   let parentElement: HTMLElement;
   let imageElement: HTMLImageElement;
 

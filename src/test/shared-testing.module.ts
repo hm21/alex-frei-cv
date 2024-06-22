@@ -15,6 +15,7 @@ import {
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { routes } from 'src/app/app.routes';
 import { IS_BROWSER } from 'src/app/utils/global-tokens';
+import '../app/utils/extensions/extensions';
 
 @NgModule({
   imports: [

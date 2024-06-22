@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ImageFormatSupportService } from './image-format-support.service';
 
 describe('ImageFormatSupportService', () => {
   let service: ImageFormatSupportService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      teardown: { destroyAfterEach: false },
+      imports: [SharedTestingModule],
+    });
     service = TestBed.inject(ImageFormatSupportService);
   });
 
