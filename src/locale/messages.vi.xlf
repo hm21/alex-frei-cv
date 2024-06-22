@@ -2089,6 +2089,22 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
           <context context-type="linenumber">25,27</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4519990428097513339" datatype="html">
+        <source>Valid email address is required.</source>
+        <target>địa chỉ email hợp lệ là bắt buộc.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2619411074304656554" datatype="html">
+        <source>&lt;b&gt;First Name&lt;/b&gt;, &lt;b&gt;Last Name&lt;/b&gt;, and &lt;b&gt;Message&lt;/b&gt; as well as &lt;b&gt;E-Mail&lt;/b&gt; are required.</source>
+        <target>Bắt buộc phải có &lt;b&gt;Tên&lt;/b&gt;, &lt;b&gt;Họ&lt;/b&gt; và &lt;b&gt;Tin nhắn&lt;/b&gt; cũng như &lt;b&gt;E-Mail&lt;/b&gt;.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -8,7 +8,7 @@ import {
   ViewChild,
   ViewContainerRef,
   inject,
-  isDevMode
+  isDevMode,
 } from '@angular/core';
 import {
   FormControl,
@@ -82,8 +82,8 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
       this.footerRef.clear();
       this.footerRef.createEmbeddedView(this.errorRef, {
         msg: this.form.get('email')?.invalid
-          ? 'Valid email address is required.'
-          : `<b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as <b>E-Mail</b> are required.`,
+          ? $localize`Valid email address is required.`
+          : $localize`<b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as <b>E-Mail</b> are required.`,
       });
       this.footerRef.createEmbeddedView(this.submitBtnRef);
     } else if (!this._sending && !this._sended && this._sendTries < 10) {
@@ -137,7 +137,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
       this.footerRef.createEmbeddedView(this.errorRef, {
         msg: $localize`Too many requests! Please try again later.`,
       });
-
     }
   }
 }
