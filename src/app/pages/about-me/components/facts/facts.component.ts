@@ -1,21 +1,33 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject,
+  signal,
+} from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { filter } from 'rxjs';
-import { funFacts } from 'src/app/configs/fun-facts';
+import { FUN_FACTS } from 'src/app/configs/fun-facts';
+import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { GitManagerService } from 'src/app/services/git-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
   selector: 'af-facts',
   standalone: true,
-  imports: [NgxScrollAnimationsModule, NgxCountAnimationModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    NgxScrollAnimationsModule,
+    NgxCountAnimationModule,
+    CardEffectsDirective,
+  ],
   templateUrl: './facts.component.html',
   styleUrl: './facts.component.scss',
 })
 export class FactsComponent extends ExtendedComponent implements OnInit {
   /** Array of facts with their titles, values, and icons. */
-  public items = signal(funFacts);
+  public items = signal(FUN_FACTS);
 
   /** Service for managing Git-related operations. */
   private gitManager = inject(GitManagerService);
@@ -36,7 +48,7 @@ export class FactsComponent extends ExtendedComponent implements OnInit {
       .subscribe((count) => {
         if (!count) return;
 
-        const i = this.items().findIndex((el) => el.icon === 'git');
+        const i = this.items().findIndex((el) => el.id === 'git-commits');
         if (i >= 0) {
           this.items.update((items) => {
             items[i].value = count;

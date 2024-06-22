@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
+import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { PROJECT_SNAPTAB } from '../../utils/projects/project-snaptab';
@@ -10,9 +11,17 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
 @Component({
   selector: 'af-business-projects',
   standalone: true,
-  imports: [NgxScrollAnimationsModule, TypewriterComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    NgxScrollAnimationsModule,
+    TypewriterComponent,
+    CardEffectsDirective,
+  ],
   templateUrl: './business-projects.component.html',
-  styleUrl: './business-projects.component.scss',
+  styleUrls: [
+    './business-projects.component.scss',
+    '../../utils/project-card-style.scss',
+  ],
 })
 export class BusinessProjectsComponent extends ExtendedComponent {
   /** Safe HTML representation of the logo. */

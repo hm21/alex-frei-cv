@@ -1,6 +1,6 @@
 import { Hobbies } from '../pages/about-me/components/about-me-hobbies/utils/about-me-hobbies-interfaces';
 
-export const hobbies: Hobbies[] = [
+export const HOBBIES: Hobbies[] = [
   {
     title: $localize`Swiming`,
     message: $localize`What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it's the perfect win-win for body and mind.`,

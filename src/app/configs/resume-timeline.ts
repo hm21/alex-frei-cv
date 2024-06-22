@@ -1,6 +1,6 @@
 import { ResumeTimelineItem } from '../pages/resume/utils/resume-interface';
 
-export const resumeTimelineItems: ResumeTimelineItem[] = [
+export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
   {
     date: $localize`March 21, 1995`,
     title: $localize`Birthday`,

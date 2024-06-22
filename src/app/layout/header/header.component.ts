@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ProfileBannerComponent } from '../profile-banner/profile-banner.component';
 import { SideNavbarComponent } from '../side-navbar/side-navbar.component';
@@ -8,6 +8,7 @@ import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-to
 @Component({
   selector: 'af-header',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     NgClass,
 

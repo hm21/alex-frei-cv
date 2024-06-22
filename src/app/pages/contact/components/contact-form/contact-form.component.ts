@@ -1,6 +1,7 @@
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import {
+  ChangeDetectionStrategy,
   Component,
   OnInit,
   TemplateRef,
@@ -21,6 +22,7 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'af-contact-form',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ReactiveFormsModule, DecimalPipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',

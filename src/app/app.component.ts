@@ -1,12 +1,13 @@
-import { DOCUMENT, NgClass, NgStyle } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import {
-  AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   OnDestroy,
   OnInit,
   ViewChild,
   ViewContainerRef,
+  afterNextRender,
   inject,
   signal,
 } from '@angular/core';
@@ -19,6 +20,7 @@ import { routeAnimation } from './animations/route-animations';
 import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
+import { ImagePreloaderService } from './services/image-preloader.service';
 import { ModalManagerService } from './services/modal-manager.service';
 import { ExtendedComponent } from './utils/extended-component';
 
@@ -35,11 +37,12 @@ import { ExtendedComponent } from './utils/extended-component';
   providers: [NgxScrollAnimationsService, NgxCountService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [routeAnimation],
 })
 export class AppComponent
   extends ExtendedComponent
-  implements OnInit, AfterViewInit, OnDestroy
+  implements OnInit, OnDestroy
 {
   /** Reference to the main HTML element of the component. */
   @ViewChild('mainRef') mainRef!: ElementRef<HTMLElement>;
@@ -60,11 +63,18 @@ export class AppComponent
   /** Angular context for children outlets. */
   private contexts = inject(ChildrenOutletContexts);
 
-  /** Document object for accessing DOM elements. */
-  private document = inject(DOCUMENT);
-
   /** Service for managing modals. */
   private modalManager = inject(ModalManagerService);
+
+  /** Preload images with ServiceWorker */
+  private imagePreloader = inject(ImagePreloaderService);
+
+  constructor() {
+    super();
+    afterNextRender(() => {
+      this.afterAppIsStable();
+    });
+  }
 
   override ngOnInit(): void {
     if (this.isBrowser) {
@@ -78,26 +88,26 @@ export class AppComponent
     super.ngOnInit();
   }
 
-  ngAfterViewInit(): void {
+  ngOnDestroy(): void {
+    this.modalRef.clear();
+  }
+
+  private afterAppIsStable(): void {
     if (this.isBrowser) {
+      // Make sure that the page animation will not fail when the page is opened for the first time.
+      timer(1).subscribe(() => this.useRouteAnimations.set(true));
+      // Preload all global images
+      this.imagePreloader.startPreloadGlobalImages();
+      // Log website visit
+      this.analytics.websiteVisit();
+
       if (environment.production) {
         console.log(
           '%cHello! Thanks for checking out my source code. Feel free to reach out if you have any questions or suggestions.',
           'color: #4FD168; font-family: roboto flex; background: black; padding:10px; border-radius:4px; font-size: 28px',
         );
       }
-
-      this.analytics.websiteVisit();
-
-      // Skip a frame so that the first time when the user opens the page will not be an animation bug.
-      timer(1)
-        .pipe(this.destroyPipe())
-        .subscribe(() => this.useRouteAnimations.set(true));
     }
-  }
-
-  ngOnDestroy(): void {
-    this.modalRef.clear();
   }
 
   /**

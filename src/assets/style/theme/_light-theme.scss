@@ -4,25 +4,36 @@
   --card-background: #ffffff;
   --card-background-accent: #f1fcff;
   --card-hover-color: #f0f6ff;
+  --card-gradient: linear-gradient(to right, #f1f7ff, #e2edff);
 
   --input-background-color: #ffffff;
   --shadow-color: #040e2e29;
 
   --text-color-primary: #353535;
   --text-color-secondary: #5c5c5c;
-  --text-color-light: #f4f4f4;
 
   --page-background-primary: #ffffff;
 
   --border-color: rgba(0, 0, 0, 0.3);
   --border-color-darken: rgba(0, 0, 0, 0.6);
 
-  --color-primary: #3b79ad; // #04b4e0;
+  --color-primary-50: #f9fafc;
+  --color-primary-100: #eaeef5;
+  --color-primary-200: #cbd5e7;
+  --color-primary-300: #adbed9;
+  --color-primary-400: #90a6cb;
+  --color-primary-500: #6e8cbb;
+  --color-primary-600: #4e72a8;
+  --color-primary-700: #45608c;
+  --color-primary-800: #3a4c6f;
+  --color-primary-900: #2d3850;
+
+  --color-primary: #3b79ad;
   --color-accent: #d5e8ff;
   --color-light: #f5f5f5;
 
-  --profile-banner-background: var(--color-primary);
-  --skill-icon-background: #edf0f4;
+  --profile-banner-background: #214569d1;
+  --profile-banner-backdrop:  saturate(180%) blur(10px);
 
   --icon-primary: #2d527c;
   --icon-secondary: #cee8fa;

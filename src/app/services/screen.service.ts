@@ -1,12 +1,14 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, inject } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject, fromEvent, throttleTime } from 'rxjs';
 import { IS_BROWSER } from '../utils/global-tokens';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ScreenService {
+  public scroll$!: Observable<any>;
+
   /**
    * The width of the screen.
    */
@@ -15,7 +17,7 @@ export class ScreenService {
    * The height of the screen.
    */
   public height = 0;
-  
+
   /**
    * Indicates whether the screen size is extra small.
    */
@@ -61,6 +63,10 @@ export class ScreenService {
       window.addEventListener('resize', () => {
         this.calcScreenSize();
       });
+
+      this.scroll$ = fromEvent(this.document, 'scroll').pipe(
+        throttleTime(50, undefined, { leading: true, trailing: true }),
+      );
     }
   }
 

@@ -1,4 +1,11 @@
-<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title" i18n>
+<h2
+  ngxScrollAnimate="fade-in-left"
+  aos="1"
+  speed="400"
+  once="false"
+  class="section-title"
+  i18n
+>
   Next Recommended Pages
 </h2>
 
@@ -8,36 +15,68 @@
 
 <ng-template
   #itemTemplate
-  let-icon="icon"
+  let-id="id"
   let-name="name"
   let-msg="msg"
   let-path="path"
 >
   <a
     [routerLink]="path"
+    #card
     ngxScrollAnimate="fade-in-up-scale"
     once="false"
     speed="500"
     aos="1.2"
   >
-    <div class="icon" [innerHTML]="icon"></div>
-
-    <div class="col">
-      <h3>{{ name }}</h3>
-
-      <p>{{ msg }}</p>
+    <div class="thumbnail">
+      <ng-container *ngTemplateOutlet="imgRef; context: { name, id }" />
     </div>
 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24px"
-      height="24px"
-      viewBox="0 0 24 24"
-    >
-      <path
-        class="chevron"
-        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-      />
-    </svg>
+    <div class="glass-box">
+      <div class="frosted-background">
+        <ng-container *ngTemplateOutlet="imgRef; context: { name, id }" />
+      </div>
+      <div afCardEffects [card]="card" class="frosted-glass"></div>
+
+      <div class="text-container">
+        <div class="col">
+          <h3>{{ name }}</h3>
+
+          <p>{{ msg }}</p>
+        </div>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28px"
+          height="28px"
+          viewBox="0 0 24 24"
+        >
+          <path
+            class="chevron"
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </div>
+    </div>
   </a>
+</ng-template>
+
+<ng-template #imgRef let-id="id" let-name="name">
+  <picture>
+    @for (format of ["avif", "webp", "jpeg"]; track format) {
+      <source
+        srcset="
+          assets/img/recommended-page/{{id}}/{{id}}_1x.{{format}} 1x,
+          assets/img/recommended-page/{{id}}/{{id}}_2x.{{format}} 2x,
+          assets/img/recommended-page/{{id}}/{{id}}_3x.{{format}} 3x,
+          assets/img/recommended-page/{{id}}/{{id}}_4x.{{format}} 4x
+        "
+        type="image/{{ format }}"
+      />
+    }
+    <img
+      src="assets/img/recommended-page/{{ id }}/{{ id }}_4x.jpeg"
+      [alt]="name"
+    />
+  </picture>
 </ng-template>

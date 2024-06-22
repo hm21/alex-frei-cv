@@ -1,1 +1,7 @@
- 
+:host {
+  padding: var(--page-padding) 0;
+  display: block;
+}
+.horizontal-space {
+  padding: 0 var(--page-padding);
+}

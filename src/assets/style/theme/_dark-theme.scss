@@ -1,28 +1,39 @@
 [data-theme="dark"] {
   --item-hover-color: rgb(88, 88, 94);
 
-  --card-hover-color: #49494f;
   --card-background: #353539;
   --card-background-accent: #49494f;
+  --card-hover-color: #49494f;
+  --card-gradient: linear-gradient(to right, #273043, #232c3d);
 
   --input-background-color: #353539;
   --shadow-color: rgb(66 68 73);
 
   --text-color-primary: #f4f4f4;
   --text-color-secondary: #d5d5d5;
-  --text-color-light: #353535;
 
   --page-background-primary: #222222;
 
   --border-color: #f4f4f4;
   --border-color-darken: rgb(190, 190, 190);
 
+  --color-primary-50: #1b1e26;
+  --color-primary-100: #242a35;
+  --color-primary-200: #2e3645;
+  --color-primary-300: #384155;
+  --color-primary-400: #424c65;
+  --color-primary-500: #4c5775;
+  --color-primary-600: #566285;
+  --color-primary-700: #606c95;
+  --color-primary-800: #6a76a5;
+  --color-primary-900: #eaeef5;
+
   --color-primary: #4d8dc3;
   --color-accent: #49494f;
   --color-light: #f8f8f8;
 
-  --profile-banner-background: #444444;
-  --skill-icon-background: #353539;
+  --profile-banner-background: #262626db;
+  --profile-banner-backdrop: grayscale(0.4) blur(10px);
 
   --icon-primary: rgb(22, 22, 22);
   --icon-secondary: #919191;

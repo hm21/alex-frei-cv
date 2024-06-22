@@ -1,7 +1,25 @@
-<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title" i18n>
+<h2
+  ngxScrollAnimate="fade-in-left"
+  aos="1"
+  speed="400"
+  once="false"
+  class="section-title"
+  i18n
+>
   What I do
 </h2>
 
 <section>
-  <ng-container #serviceItemsRef />
+  @for (item of items; track $index) {
+    <af-service-card
+      ngxScrollAnimate="fade-in-up"
+      aos="70"
+      thresholdMode="pixel"
+      speed="600"
+      once="false"
+      [title]="item.title"
+      [msg]="item.msg"
+      [icon]="item.icon"
+    />
+  }
 </section>

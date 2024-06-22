@@ -1,14 +1,16 @@
+import { DOCUMENT } from '@angular/common';
 import {
   DestroyRef,
   Directive,
   ElementRef,
   OnInit,
   Renderer2,
-  inject
+  inject,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Meta, Title } from '@angular/platform-browser';
 import { AnalyticsService } from '../services/analytics/analytics.service';
+import { ScreenService } from '../services/screen.service';
 import { IS_BROWSER } from './global-tokens';
 import { MetaDataI, metaGenerator } from './meta-generator';
 
@@ -22,11 +24,13 @@ export abstract class ExtendedComponent implements OnInit {
 
   public elRef = inject<ElementRef<HTMLElement>>(ElementRef);
   public isBrowser = inject(IS_BROWSER);
+  protected screen = inject(ScreenService);
   protected analytics = inject(AnalyticsService);
   protected destroyRef = inject(DestroyRef);
   private titleRef = inject(Title);
   private metaRef = inject(Meta);
   protected renderer = inject(Renderer2);
+  protected document = inject(DOCUMENT);
 
   ngOnInit(): void {
     this.initComponent();

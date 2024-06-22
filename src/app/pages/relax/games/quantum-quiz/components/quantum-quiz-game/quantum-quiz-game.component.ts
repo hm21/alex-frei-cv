@@ -1,5 +1,6 @@
 import { DecimalPipe, NgClass } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -19,6 +20,7 @@ import { QuantumQuizGenerateQuizComponent } from '../quantum-quiz-generate-quiz/
 @Component({
   selector: 'af-quantum-quiz-game',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [QuantumQuizGenerateQuizComponent, DecimalPipe, NgClass],
   templateUrl: './quantum-quiz-game.component.html',
   styleUrls: [

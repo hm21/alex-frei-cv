@@ -1,12 +1,11 @@
-import { DOCUMENT } from '@angular/common';
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
   ViewChild,
-  inject,
-  numberAttribute,
+  numberAttribute
 } from '@angular/core';
 import { NgxCountAnimationModule } from 'ngx-count-animation';
 import { delay, fromEvent, map, startWith, throttleTime } from 'rxjs';
@@ -15,6 +14,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 @Component({
   selector: 'af-progressbar',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgxCountAnimationModule],
   templateUrl: './progressbar.component.html',
   styleUrl: './progressbar.component.scss',
@@ -42,11 +42,6 @@ export class ProgressbarComponent
    * @required
    */
   @Input({ required: true }) name!: string;
-
-  /**
-   * Document reference for accessing DOM.
-   */
-  private document = inject(DOCUMENT);
 
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;

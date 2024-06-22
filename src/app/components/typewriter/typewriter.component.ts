@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, Input, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { concatMap, filter, interval, map, timer } from 'rxjs';
-import { ScreenService } from 'src/app/services/screen.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
@@ -8,6 +7,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   template: '',
   styleUrls: ['./typewriter.component.scss'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TypewriterComponent
   extends ExtendedComponent
@@ -18,8 +18,6 @@ export class TypewriterComponent
    * @required
    */
   @Input({ required: true }) items: string[] = [];
-
-  private screen = inject(ScreenService);
 
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;

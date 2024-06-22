@@ -5,8 +5,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
-import { DOCUMENT, NgStyle, UpperCasePipe } from '@angular/common';
+import { NgStyle, UpperCasePipe } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -26,10 +27,12 @@ import {
   fromEvent,
   interval,
   map,
+  startWith,
   takeUntil,
   tap,
   timer,
 } from 'rxjs';
+import { ThemeManagerService } from 'src/app/services/theme-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
   ColorClashFinishEvent,
@@ -42,6 +45,7 @@ import {
 @Component({
   selector: 'af-color-clash-game',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgStyle, UpperCasePipe],
   templateUrl: './color-clash-game.component.html',
   styleUrls: [
@@ -173,7 +177,7 @@ export class ColorClashGameComponent
     '#2196f3', // blue
     '#673ab7', // violet
     '#c77600', // dark orange
-    '#000000', // black
+    '#000000', // black => white in darkmode
   ];
 
   /**
@@ -181,21 +185,15 @@ export class ColorClashGameComponent
    */
   private countdownDestroy$ = new Subject();
 
-  /**
-   * Reference to the DomSanitizer service.
-   */
   private sanitizer = inject(DomSanitizer);
-
-  /**
-   * Reference to the Document object.
-   */
-  private document = inject(DOCUMENT);
+  public theme = inject(ThemeManagerService);
 
   override ngOnInit(): void {
     if (this.isBrowser) {
       this.generateButtons();
       this.generateItems();
       this.listenShortcutKeys();
+      this.listenTheme();
     }
 
     super.ngOnInit();
@@ -205,6 +203,60 @@ export class ColorClashGameComponent
     this.buttonsRef.clear();
     this.countdownDestroy$.next(true);
     this.countdownDestroy$.complete();
+  }
+
+  /**
+   * Listens for shortcut key events.
+   */
+  private listenShortcutKeys() {
+    fromEvent<KeyboardEvent>(this.document, 'keydown')
+      .pipe(
+        filter((event) => this.shortcutKeys.includes(event.key)),
+        this.destroyPipe(),
+      )
+      .subscribe((event) => {
+        const i =
+          event.key === 's'
+            ? 0
+            : event.key === 'd'
+              ? 1
+              : event.key === 'f'
+                ? 2
+                : event.key === 'j'
+                  ? 3
+                  : event.key === 'k'
+                    ? 4
+                    : 5;
+
+        const btn = this.gameButtons[i];
+        this.buttonTap(btn.id, btn.color);
+      });
+  }
+  /**
+   * Listens for theme change events.
+   */
+  private listenTheme() {
+    this.theme.changed$
+      .pipe(this.destroyPipe(), startWith(this.theme.isDarkMode()))
+      .subscribe((isDarkMode) => {
+        const oldColor = !isDarkMode ? '#ffffff' : '#000000';
+        const newColor = isDarkMode ? '#ffffff' : '#000000';
+
+        this.colors.updateLastItem(newColor);
+        this.gameButtons
+          .filter((el) => el.color == oldColor)
+          .forEach((button) => {
+            button.color = newColor;
+          });
+        this.viewItems.update((items) => {
+          items
+            .filter((e) => e.color === oldColor)
+            .forEach((item) => {
+              item.color = newColor;
+            });
+          return [...items];
+        });
+      });
   }
 
   /**
@@ -270,7 +322,7 @@ export class ColorClashGameComponent
       const items: ColorClashRandomItem[] = [];
 
       while (items.length < 4) {
-        const randomNumber = Math.floor(Math.random() * 9) + 1;
+        const randomNumber = Math.randomNextInt(10, 1);
 
         if (items.findIndex((el) => el.id === randomNumber.toString()) < 0) {
           items.push({
@@ -293,8 +345,7 @@ export class ColorClashGameComponent
       const symbols: ColorClashRandomItem[] = [];
 
       while (symbols.length < 2) {
-        const randomSymbol =
-          symbolsSVG[Math.floor(Math.random() * symbolsSVG.length)];
+        const randomSymbol = symbolsSVG[Math.randomNextInt(symbolsSVG.length)];
 
         if (symbols.findIndex((el) => el.id === randomSymbol.id) < 0) {
           symbols.push({
@@ -310,20 +361,16 @@ export class ColorClashGameComponent
     let items: Array<any> = getRandomNumbers();
 
     getRandomSymbol().forEach((el) => {
-      items = insertAtPosition(
-        items,
-        el,
-        Math.floor(Math.random() * (items.length + 1)),
-      );
+      items = insertAtPosition(items, el, Math.randomNextInt(items.length + 1));
     });
 
-    this.gameButtons = [];
+    this.gameButtons.clear();
     const colors = [...this.colors];
     items.forEach((item, i) => {
       const btn = {
         id: item.id,
         content: this.sanitizer.bypassSecurityTrustHtml(item.content),
-        color: colors.splice(Math.floor(Math.random() * colors.length), 1)[0],
+        color: colors.splice(Math.randomNextInt(colors.length), 1)[0],
         shortcut:
           i === 0
             ? 'S'
@@ -348,13 +395,12 @@ export class ColorClashGameComponent
   private generateItems() {
     while (this.viewItems().length < 3) {
       const id =
-        this.gameButtons[Math.floor(Math.random() * this.gameButtons.length)]
-          .id;
+        this.gameButtons[Math.randomNextInt(this.gameButtons.length)].id;
       const meaning = this.getMeaning(id);
       const mode = Math.random() > 0.5 ? 'color' : 'meaning';
       this.viewItems.update((items) => {
         const newItem: ColorClashGameItem = {
-          color: this.colors[Math.floor(Math.random() * this.colors.length)],
+          color: this.colors[Math.randomNextInt(this.colors.length)],
           content: this.sanitizer.bypassSecurityTrustHtml(meaning),
           item: meaning,
           mode,
@@ -441,34 +487,6 @@ export class ColorClashGameComponent
   }
 
   /**
-   * Listens for shortcut key events.
-   */
-  private listenShortcutKeys() {
-    fromEvent<KeyboardEvent>(this.document, 'keydown')
-      .pipe(
-        filter((event) => this.shortcutKeys.includes(event.key)),
-        this.destroyPipe(),
-      )
-      .subscribe((event) => {
-        const i =
-          event.key === 's'
-            ? 0
-            : event.key === 'd'
-              ? 1
-              : event.key === 'f'
-                ? 2
-                : event.key === 'j'
-                  ? 3
-                  : event.key === 'k'
-                    ? 4
-                    : 5;
-
-        const btn = this.gameButtons[i];
-        this.buttonTap(btn.id, btn.color);
-      });
-  }
-
-  /**
    * Starts the countdown timer.
    */
   private startCountdown() {
@@ -478,9 +496,9 @@ export class ColorClashGameComponent
      * @returns The formatted time string.
      */
     function secondsToMMSS(seconds: number): string {
-      const minutes: number = Math.floor(seconds / 60);
+      const minutes: number = (seconds / 60).floor();
       const remainingSeconds: number = seconds % 60;
-      return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+      return `${minutes.padStart(2, '0')}:${remainingSeconds.padStart(2, '0')}`;
     }
 
     this.activeCountdown = true;

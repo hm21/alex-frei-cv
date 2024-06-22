@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -16,6 +17,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 @Component({
   selector: 'af-quantum-quiz-choose-topic',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FormsModule],
   templateUrl: './quantum-quiz-choose-topic.component.html',
   styleUrls: [

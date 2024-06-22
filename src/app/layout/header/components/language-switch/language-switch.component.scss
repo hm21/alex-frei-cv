@@ -37,6 +37,7 @@
 }
 .dropdown-panel {
   position: absolute;
+  z-index: 10;
 
   bottom: 32px;
   left: 0px;
@@ -56,6 +57,7 @@
   justify-content: flex-start;
 
   button {
+    color: inherit;
     cursor: pointer;
     font-size: 0.9rem;
     padding: 16px;

@@ -1,11 +1,11 @@
-import { DOCUMENT, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
   Output,
-  booleanAttribute,
-  inject,
+  booleanAttribute
 } from '@angular/core';
 import { Subject, fromEvent, take, takeUntil } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -16,6 +16,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   styleUrls: ['./nav-mobile-menu-toggle-btn.component.scss'],
   imports: [NgClass],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
   /**
@@ -37,11 +38,6 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
    * Subject for resetting.
    */
   private reset$ = new Subject();
-
-  /**
-   * Document reference for accessing DOM.
-   */
-  private document = inject(DOCUMENT);
 
   /**
    * Toggles the mobile menu.

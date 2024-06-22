@@ -1,0 +1,22 @@
+.frosted-glass,
+.frosted-background {
+  position: absolute !important;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.frosted-background {
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.frosted-glass {
+  z-index: 2;
+  background-color: #12293a99;
+  backdrop-filter: saturate(180%) blur(8px);
+}

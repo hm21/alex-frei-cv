@@ -1,21 +1,24 @@
 import { NgTemplateOutlet } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   OnDestroy,
   OnInit,
   TemplateRef,
   ViewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
-import { hobbies } from 'src/app/configs/hobbies';
+import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
+import { HOBBIES } from 'src/app/configs/hobbies';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { Hobbies } from './utils/about-me-hobbies-interfaces';
 
 @Component({
   selector: 'af-about-me-hobbies',
   standalone: true,
-  imports: [NgxScrollAnimationsModule, NgTemplateOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgxScrollAnimationsModule, NgTemplateOutlet, TypewriterComponent],
   templateUrl: './about-me-hobbies.component.html',
   styleUrl: './about-me-hobbies.component.scss',
 })
@@ -34,7 +37,7 @@ export class AboutMeHobbiesComponent
    * @remarks
    * Each item has a title, message, and icon.
    */
-  public items: Hobbies[] = hobbies;
+  public items: Hobbies[] = HOBBIES;
 
   override ngOnInit(): void {
     this.createItems();

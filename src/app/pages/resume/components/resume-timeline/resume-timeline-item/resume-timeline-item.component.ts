@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   Input,
@@ -15,6 +16,7 @@ import { ResumeTimelineItem } from '../../../utils/resume-interface';
 @Component({
   selector: 'af-resume-timeline-item',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass, NgxScrollAnimationsModule],
   templateUrl: './resume-timeline-item.component.html',
   styleUrl: './resume-timeline-item.component.scss',

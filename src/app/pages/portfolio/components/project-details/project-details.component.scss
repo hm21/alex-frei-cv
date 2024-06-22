@@ -39,16 +39,10 @@ article {
   width: 100%;
   max-width: 330px;
 
-  border-radius: 7px;
-  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  border: 1px solid var(--color-primary-800);
 
   padding: 12px;
-
-  background-color: var(--card-background-accent);
-  background: linear-gradient(
-    var(--card-background-accent),
-    var(--card-background-accent)
-  );
 }
 .gallery {
   margin-top: 30px;
@@ -107,6 +101,7 @@ li {
   outline: none;
   font-size: $list-icon-size;
   color: var(--color-primary);
+  font-weight: 500;
 
   display: flex;
   align-items: center;
@@ -147,20 +142,29 @@ li {
   top: 10px;
   right: 10px;
 
-  width: 24px;
-  height: 24px;
+  background-color: var(--page-background-primary);
+  padding: 5px;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
 
-  background-color: transparent;
-  padding: 0px;
   margin: 0px;
   outline: none;
   border: none;
+
+  transition: background-color 250ms ease;
 
   svg {
     width: 100%;
     height: 100%;
 
     fill: var(--text-color-primary);
+  }
+
+  @media (max-width: 500px) {
+    &:hover {
+      background-color: var(--item-hover-color);
+    }
   }
 }
 .youtube-player {
@@ -193,7 +197,6 @@ li {
   height: 30px;
   animation: spin 1s linear infinite;
 }
-
 
 @keyframes spin {
   0% {
@@ -231,8 +234,6 @@ li {
   }
   #hero-backdrop {
     position: absolute !important;
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: saturate(180%) blur(10px) !important;
   }
 }
 
@@ -249,7 +250,11 @@ li {
     padding: 6px 0;
   }
 }
-
+@media (max-width: 499px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 399.9px) {
   .gallery {
     grid-template-columns: 1fr;

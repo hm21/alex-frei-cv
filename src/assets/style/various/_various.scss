@@ -1,0 +1,12 @@
+.page-padding {
+  display: block;
+  padding: var(--page-padding);
+}
+
+#hero-backdrop {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: saturate(180%) blur(10px) !important;
+}
+.ngx-scroll-animations {
+  will-change: opacity, transform;
+}

@@ -31,7 +31,7 @@ h2 {
 
   &.active {
     color: white;
-    background-color: #3d53f5;
+    background-color: var(--color-primary-600);
   }
 }
 .count {
@@ -61,7 +61,7 @@ h2 {
 
   &.disabled {
     .game-button {
-      box-shadow: #3c4fe0 0 3px 7px inset !important;
+      box-shadow: var(--color-primary-600) 0 3px 7px inset !important;
       transform: translateY(2px) !important;
 
       cursor: default;
@@ -90,11 +90,11 @@ h2 {
   }
 }
 .game-button {
-  background-color: #3d53f5;
+  background-color: var(--color-primary-700);
   background-image: radial-gradient(
-    100% 100% at 100% 0,
-    #4e7cc8 0,
-    #3d53f5 100%
+    100% 50% at 100% 0,
+    var(--color-primary-600) 0,
+    var(--color-primary-700) 100%
   );
   text-align: left;
   outline: none;
@@ -122,17 +122,17 @@ h2 {
 
   &:focus {
     box-shadow:
-      #3c4fe0 0 0 0 1.5px inset,
+      var(--color-primary-800) 0 0 0 1.5px inset,
       rgba(45, 35, 66, 0.4) 0 2px 4px,
       rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-      #3c4fe0 0 -3px 0 inset;
+      var(--color-primary-800) 0 -3px 0 inset;
   }
 
   &:hover {
     box-shadow:
       rgba(45, 35, 66, 0.4) 0 4px 8px,
       rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-      #3c4fe0 0 -3px 0 inset;
+      var(--color-primary-800) 0 -3px 0 inset;
     transform: translateY(-2px);
   }
 }
@@ -177,4 +177,3 @@ li {
     border-top: 2px solid var(--color-primary);
   }
 }
-

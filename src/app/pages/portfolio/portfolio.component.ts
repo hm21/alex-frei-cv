@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { MetaDataI } from 'src/app/utils/meta-generator';
@@ -8,6 +8,7 @@ import { OtherProjectsComponent } from './components/other-projects/other-projec
 @Component({
   selector: 'af-portfolio',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     RecommendedPagesComponent,
     BusinessProjectsComponent,
@@ -21,4 +22,9 @@ export class PortfolioComponent extends ExtendedComponent {
     title: $localize`Portfolio Alex Frei`,
     description: $localize`Take a look at the portfolio to know more about Alex Frei`,
   };
+
+  override ngOnInit(): void {
+    this.classList.add('page-padding');
+    super.ngOnInit();
+  }
 }

@@ -1,5 +1,6 @@
-import { DOCUMENT, NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
+import { NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   OnInit,
   TemplateRef,
@@ -24,6 +25,7 @@ import {
 @Component({
   selector: 'af-project-details',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     NgClass,
     NgStyle,
@@ -74,8 +76,6 @@ export class ProjectDetailsComponent
   public showCopiedMsg = signal(false);
   /** Modal manager service for managing modals. */
   private modalManager = inject(ModalManagerService);
-  /** Document reference for key event listeners. */
-  private document = inject(DOCUMENT);
 
   public openHero = signal(false);
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { MetaDataI } from 'src/app/utils/meta-generator';
@@ -11,6 +11,7 @@ import { FactsComponent } from './components/facts/facts.component';
 @Component({
   selector: 'af-about-me',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AboutMeHobbiesComponent,
     AboutMeIntroComponent,

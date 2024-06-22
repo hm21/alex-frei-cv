@@ -1,6 +1,6 @@
 import { ServiceCard } from '../pages/about-me/components/about-me-services/model/service-card-interface';
 
-export const services: ServiceCard[] = [
+export const SERVICES: ServiceCard[] = [
   {
     title: $localize`Websites`,
     msg: $localize`

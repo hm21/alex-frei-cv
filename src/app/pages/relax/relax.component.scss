@@ -7,42 +7,33 @@ h2 {
   font-weight: 400;
   font-size: 1.2rem;
 }
-h3 {
-  font-weight: 700;
-  font-size: 1.55rem;
-}
-p {
-  font-weight: 300;
-  font-size: 0.95rem;
-  margin-top: 10px;
-  line-height: 150%;
-}
 .games {
   margin-top: 40px;
 
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  row-gap: 80px;
+  column-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
 }
 a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  display: block;
+  position: relative;
+  overflow: hidden;
 
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: var(--card-radius);
+  background-color: var(--color-primary-200);
 
-  padding: 25px 40px;
-  text-align: center;
-  user-select: none;
-
-  background-color: var(--card-background);
+  height: 240px;
+  width: 100%;
 
   transition:
-    background-color 250ms ease,
-    transform 250ms ease;
+    transform 250ms ease,
+    box-shadow 250ms ease;
 
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
   svg {
     width: 88px;
     height: 88px;
@@ -50,62 +41,34 @@ a {
   }
 
   &:hover {
-    background-color: var(--card-hover-color);
+    transform: scale(1.02);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.5);
   }
   &:active {
     transform: scale(0.96);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0);
   }
 }
-.quantum-quiz {
-  .hand {
-    transition: transform 400ms ease;
-  }
-  &:hover {
-    .hand {
-      transform: translateX(318px) rotate(16deg) scale(0.9);
-    }
-  }
+.foreground-effect {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
 }
-@keyframes move-svg-line {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(5px);
-  }
-  50% {
-    transform: translateX(0px);
-  }
-  75% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+
+img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.color-clash {
-  .line {
-    transform-origin: center;
-    animation: move-svg-line 2500ms linear forwards infinite;
-    animation-play-state: paused;
-
-    &.line-1,
-    &.line-3,
-    &.line-5,
-    &.line-7 {
-      animation-direction: reverse;
-    }
-  }
-
-  &:hover {
-    .line {
-      animation-play-state: running;
-    }
-  }
-
-  .fill {
-    fill: var(--text-color-primary);
-  }
+p {
+  color: var(--color-primary-900);
+  margin: 16px 12px 0;
 }
 
 @media (max-width: 699.9px) {
@@ -116,9 +79,6 @@ a {
 @media (max-width: 499.9px) {
   .games {
     grid-template-columns: 1fr;
-  }
-  a {
-    padding: 15px;
   }
   h1 {
     margin-top: 40px;

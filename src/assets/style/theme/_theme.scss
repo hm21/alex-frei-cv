@@ -1,0 +1,14 @@
+:root {
+  --primary-font: "Roboto Flex", "Roboto", "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --smooth-background: background-color 100ms ease;
+  --card-radius: 16px;
+  --page-padding: 40px;
+  @media (max-width: 500px) {
+    --page-padding: 20px;
+  }
+}
+@import "./light-theme";
+@import "./dark-theme";
+@import "./frosted-glass-theme";

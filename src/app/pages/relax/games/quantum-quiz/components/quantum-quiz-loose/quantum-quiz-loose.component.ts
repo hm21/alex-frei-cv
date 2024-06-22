@@ -1,5 +1,6 @@
 import { DecimalPipe } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -11,6 +12,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 @Component({
   selector: 'af-quantum-quiz-loose',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [DecimalPipe],
   templateUrl: './quantum-quiz-loose.component.html',
   styleUrls: [

@@ -1,4 +1,4 @@
-/**
+/** TODO: delete all of it
  * The icon for the about me link.
  */
 export const aboutMeIcon = `

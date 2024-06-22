@@ -1,156 +1,173 @@
-<picture>
-  @for (format of ["avif", "webp", "png"]; track format) {
-    <source
-      srcset="
-        assets/img/avatar/alex_1x.{{format}} 1x,
-        assets/img/avatar/alex_2x.{{format}} 2x,
-        assets/img/avatar/alex_3x.{{format}} 3x,
-        assets/img/avatar/alex_4x.{{format}} 4x
-      "
-      type="image/{{ format }}"
+<div class="frosted-background">
+  <picture>
+    @for (format of ["avif", "webp", "jpeg"]; track format) {
+      <source
+        srcset="assets/img/splash/bubbles.{{format}}"
+        type="image/{{ format }}"
+      />
+    }
+    <img src="assets/img/splash/bubbles.jpeg" alt="" />
+  </picture>
+</div>
+
+<!-- That the hero animation will work is it required that we create a separated layer which applies the backdrop-filter.  -->
+<div class="frosted-glass"></div>
+
+<div class="frosted-box">
+  <picture class="avatar">
+    @for (format of ["avif", "webp", "png"]; track format) {
+      <source
+        srcset="
+          assets/img/avatar/alex_1x.{{format}} 1x,
+          assets/img/avatar/alex_2x.{{format}} 2x,
+          assets/img/avatar/alex_3x.{{format}} 3x,
+          assets/img/avatar/alex_4x.{{format}} 4x
+        "
+        type="image/{{ format }}"
+      />
+    }
+
+    <img
+      ngxHero
+      backdropPosition="beforeHeroItem"
+      highQualityPath="assets/img/avatar/alex_original"
+      [supportedFormats]="['avif', 'webp', 'png']"
+      src="assets/img/avatar/alex_4x.png"
+      i18n-alt
+      alt="Alex Frei profil picture"
     />
-  }
+  </picture>
 
-  <img
-    ngxHero
-    backdropPosition="beforeHeroItem"
-    highQualityPath="assets/img/avatar/alex_original"
-    [supportedFormats]="['avif', 'webp', 'png']"
-    src="assets/img/avatar/alex_4x.png"
-    i18n-alt
-    alt="Alex Frei profil picture"
-  />
-</picture>
+  <h1>Alex Frei</h1>
+  <h2 i18n>Full Stack Developer</h2>
 
-<h1>Alex Frei</h1>
-<h2 i18n>Full Stack Developer</h2>
+  <ng-container #navItemsRef />
 
-<ng-container #navItemsRef />
-
-<div class="social">
-  <a
-    (click)="closeSideMenu.emit()"
-    href="https://github.com/hm21"
-    target="_blank"
-    i18n-aria-label
-    aria-label="Social-Github"
-  >
-    <svg
-      viewBox="0 0 20 20"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      class="fill"
+  <div class="social">
+    <a
+      (click)="closeSideMenu.emit()"
+      href="https://github.com/hm21"
+      target="_blank"
+      i18n-aria-label
+      aria-label="Social-Github"
     >
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-140.000000, -7559.000000)" class="fill">
-          <g id="icons" transform="translate(56.000000, 160.000000)">
-            <path
-              d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
-            ></path>
-          </g>
-        </g>
-      </g>
-    </svg>
-  </a>
-
-  <a
-    (click)="closeSideMenu.emit()"
-    href="https://www.facebook.com/profile.php?id=100078013238002"
-    target="_blank"
-    i18n-aria-label
-    aria-label="Social-Facebook"
-  >
-    <svg
-      viewBox="-5 0 20 20"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      class="fill"
-    >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-      <g
-        id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></g>
-      <g id="SVGRepo_iconCarrier">
-        <g
-          id="Page-1"
-          stroke="none"
-          stroke-width="1"
-          fill="none"
-          fill-rule="evenodd"
-        >
-          <g
-            id="Dribbble-Light-Preview"
-            transform="translate(-385.000000, -7399.000000)"
-            class="fill"
-          >
+      <svg
+        viewBox="0 0 20 20"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        class="fill"
+      >
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-140.000000, -7559.000000)" class="fill">
             <g id="icons" transform="translate(56.000000, 160.000000)">
               <path
-                d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
-                id="facebook-[#176]"
+                d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
               ></path>
             </g>
           </g>
         </g>
-      </g>
-    </svg>
-  </a>
+      </svg>
+    </a>
 
-  <a
-    (click)="closeSideMenu.emit()"
-    href="https://twitter.com/Frei2100"
-    target="_blank"
-    i18n-aria-label
-    aria-label="Social-X aka Twitter"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      shape-rendering="geometricPrecision"
-      text-rendering="geometricPrecision"
-      image-rendering="optimizeQuality"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      viewBox="0 0 512 462.799"
+    <a
+      (click)="closeSideMenu.emit()"
+      href="https://www.facebook.com/profile.php?id=100078013238002"
+      target="_blank"
+      i18n-aria-label
+      aria-label="Social-Facebook"
     >
-      <path
+      <svg
+        viewBox="-5 0 20 20"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
         class="fill"
-        fill-rule="nonzero"
-        d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
-      />
-    </svg>
-  </a>
-</div>
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              id="Dribbble-Light-Preview"
+              transform="translate(-385.000000, -7399.000000)"
+              class="fill"
+            >
+              <g id="icons" transform="translate(56.000000, 160.000000)">
+                <path
+                  d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                  id="facebook-[#176]"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
 
-<button
-  class="btn contact"
-  (click)="downloadPdf()"
-  i18n-title
-  title="Download the CV as a PDF."
-  i18n
->
-  Download
-</button>
+    <a
+      (click)="closeSideMenu.emit()"
+      href="https://twitter.com/Frei2100"
+      target="_blank"
+      i18n-aria-label
+      aria-label="Social-X aka Twitter"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        shape-rendering="geometricPrecision"
+        text-rendering="geometricPrecision"
+        image-rendering="optimizeQuality"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        viewBox="0 0 512 462.799"
+      >
+        <path
+          class="fill"
+          fill-rule="nonzero"
+          d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
+        />
+      </svg>
+    </a>
+  </div>
 
-<div class="spacer"></div>
-
-<footer>
-  <ng-container #languageContainerRef />
-
-  <a
-    class="source-btn color-light"
-    href="https://github.com/hm21/alex-frei-cv"
-    (click)="closeSideMenu.emit()"
-    target="_blank"
+  <button
+    class="btn contact"
+    (click)="downloadPdf()"
+    i18n-title
+    title="Download the CV as a PDF."
     i18n
   >
-    View source code
-  </a>
+    Download
+  </button>
 
-  <ng-container #themeContainerRef />
-</footer>
+  <div class="spacer"></div>
+
+  <footer>
+    <ng-container #languageContainerRef />
+
+    <a
+      class="source-btn color-light"
+      href="https://github.com/hm21/alex-frei-cv"
+      (click)="closeSideMenu.emit()"
+      target="_blank"
+      i18n
+    >
+      View source code
+    </a>
+
+    <ng-container #themeContainerRef />
+  </footer>
+</div>
 
 <ng-template #navItem let-name="name" let-icon="icon" let-path="path">
   <a

@@ -1,55 +1,71 @@
-<div class="header">
-  @if (warmUpRounds() < 3) {
-    <span i18n>Warm-up laps</span>: {{ 3 - warmUpRounds() }}
-  } @else {
-    <span #timeBanner>01:00</span>
-  }
+<div class="frosted-background">
+  <picture>
+    @for (format of ["avif", "webp", "jpeg"]; track format) {
+      <source
+        srcset="assets/img/splash/swirling.{{format}}"
+        type="image/{{ format }}"
+      />
+    }
+    <img src="assets/img/splash/swirling.jpeg" alt="" />
+  </picture>
 </div>
 
-<div class="items">
-  @for (item of viewItems(); track item.loopId) {
-    <div
-      [@viewItem]="{
-        value: 'in',
-        params: { color: item.isCorrect ? 'green' : 'red' }
-      }"
-      class="item pos-{{ $index }}"
-      [ngStyle]="{ '--game-item-color': item.color }"
-    >
-      <div class="mode">{{ item.modeTranslated | uppercase }}</div>
-      <div class="content" [innerHTML]="item.content"></div>
-    </div>
-  }
-</div>
+<div class="frosted-glass"></div>
 
-<div class="action-buttons">
-  <ng-container #buttonsRef />
-</div>
+<div class="frosted-box">
+  <div class="header">
+    @if (warmUpRounds() < 3) {
+      <span i18n>Warm-up laps</span>: {{ 3 - warmUpRounds() }}
+    } @else {
+      <span #timeBanner>01:00</span>
+    }
+  </div>
 
-<button
-  (click)="updateGameState.next(GameState.instruction)"
-  i18n-aria-label
-  aria-label="Show Instruction"
-  class="instruction-button"
->
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g id="SVGRepo_iconCarrier">
-      <path
-        d="M12 20H12.01"
-        stroke="#323232"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></path>
-      <path
-        d="M7 9C7 7.87439 7.37194 6.83566 7.99963 6C8.91184 4.78555 10.3642 4 12 4C14.7614 4 17 6.23858 17 9C17 11.4212 15.279 13.4405 12.9936 13.9013C12.4522 14.0104 12 14.4477 12 15V15V16"
-        stroke="#323232"
-        stroke-width="2"
-        stroke-linecap="round"
-      ></path>
-    </g>
-  </svg>
-</button>
+  <div class="items">
+    @for (item of viewItems(); track item.loopId) {
+      <div
+        [@viewItem]="{
+          value: 'in',
+          params: { color: item.isCorrect ? 'green' : 'red' },
+        }"
+        class="item pos-{{ $index }}"
+        [ngStyle]="{ '--game-item-color': item.color }"
+      >
+        <div class="mode">{{ item.modeTranslated | uppercase }}</div>
+        <div class="content" [innerHTML]="item.content"></div>
+      </div>
+    }
+  </div>
+
+  <div class="action-buttons">
+    <ng-container #buttonsRef />
+  </div>
+
+  <button
+    (click)="updateGameState.next(GameState.instruction)"
+    i18n-aria-label
+    aria-label="Show Instruction"
+    class="instruction-button"
+  >
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M12 20H12.01"
+          stroke="#323232"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M7 9C7 7.87439 7.37194 6.83566 7.99963 6C8.91184 4.78555 10.3642 4 12 4C14.7614 4 17 6.23858 17 9C17 11.4212 15.279 13.4405 12.9936 13.9013C12.4522 14.0104 12 14.4477 12 15V15V16"
+          stroke="#323232"
+          stroke-width="2"
+          stroke-linecap="round"
+        ></path>
+      </g>
+    </svg>
+  </button>
+</div>
 
 <ng-template
   #buttonRef

@@ -5,8 +5,9 @@
 
   display: block;
 
+  border-radius: var(--card-radius);
+
   border: 1px solid var(--border-color);
-  border-radius: 4px;
 
   background-color: var(--card-background);
 

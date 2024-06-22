@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   OnInit,
@@ -9,6 +10,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 @Component({
   selector: 'af-quantum-quiz-won',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
   templateUrl: './quantum-quiz-won.component.html',
   styleUrls: [

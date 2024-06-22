@@ -1,4 +1,11 @@
-<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title" i18n>
+<h2
+  ngxScrollAnimate="fade-in-left"
+  aos="1"
+  speed="400"
+  once="false"
+  class="section-title"
+  i18n
+>
   Other Public Projects
 </h2>
 
@@ -13,8 +20,7 @@
       <h3>{{ item.title }}</h3>
       <p>{{ item.subtitle }}</p>
 
-      <div class="icon" [innerHTML]="item.logo | safe">
-      </div>
+      <div class="icon" [innerHTML]="item.logo | safe"></div>
     </button>
   }
 </section>

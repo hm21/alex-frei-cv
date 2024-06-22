@@ -11,25 +11,49 @@ section {
   grid-template-columns: repeat(3, 1fr);
 }
 
-a {
+.frosted-background {
+  z-index: 1;
+}
+.thumbnail {
+  width: 90px;
+  height: 100%;
+  flex-shrink: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.glass-box {
+  position: relative;
+  width: 100%;
+}
+.text-container {
+  z-index: 3;
+  position: inherit;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-
-  gap: 15px;
-
-  border: 1px solid var(--border-color);
-  border-radius: 7px;
+  justify-content: space-between;
+  height: 100%;
   padding: 15px;
+}
+a {
+  position: relative;
+  overflow: hidden;
 
-  background-color: var(--card-background);
+  display: flex;
+  align-items: stretch;
 
+  border-radius: 8px;
+
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
   transition:
-    transform 250ms ease,
-    background-color 250ms ease;
+    transform 200ms ease,
+    box-shadow 200ms ease;
 
   svg {
-    transition: margin 250ms ease;
+    transition: transform 250ms ease;
 
     margin-right: 10px;
     margin-left: auto;
@@ -37,19 +61,25 @@ a {
     flex-shrink: 0;
   }
   .chevron {
-    fill: var(--text-color-primary);
+    fill: var(--color-light);
   }
 
   &:hover {
-    background-color: var(--card-hover-color);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.5);
 
     svg {
-      margin-right: 0px;
+      transform: translateX(10px);
     }
   }
   &:active {
     transform: scale(0.95);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0);
   }
+}
+
+h3,
+p {
+  color: var(--color-light);
 }
 h3 {
   margin-bottom: 2px;
@@ -60,11 +90,6 @@ p {
   font-size: 0.9rem;
   font-weight: 300;
 }
-.ngx-count-animation {
-  margin-top: 7px;
-  font-size: 1.8rem;
-  font-weight: 500;
-}
 
 @media (max-width: 1280px) {
   section {
@@ -74,25 +99,5 @@ p {
 @media (max-width: 499px) {
   section {
     grid-template-columns: 100%;
-  }
-}
-
-:host ::ng-deep {
-  .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    svg {
-      height: 36px;
-      width: auto;
-    }
-    .fill {
-      transition: fill 200ms ease;
-      fill: var(--text-color-primary);
-    }
-    .stroke {
-      transition: stroke 200ms ease;
-      stroke: var(--text-color-primary);
-    }
   }
 }

@@ -1,12 +1,22 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit, inject, isDevMode, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject,
+  isDevMode,
+  signal,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Subject, takeUntil } from 'rxjs';
+import { Router } from '@angular/router';
+import { Subject, filter, fromEvent, takeUntil } from 'rxjs';
 import { cardFadeInUpScale } from 'src/app/animations/card-animations';
-import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
+import { GAMES } from 'src/app/configs/games';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { MetaDataI } from 'src/app/utils/meta-generator';
 import { environment } from 'src/environments/environment';
+import { GameHeaderComponent } from '../../components/game-header/game-header.component';
+import { Game } from '../../utils/game-model';
 import { QuantumQuizChooseTopicComponent } from './components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component';
 import { QuantumQuizGameComponent } from './components/quantum-quiz-game/quantum-quiz-game.component';
 import { QuantumQuizGenerateQuizComponent } from './components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component';
@@ -19,8 +29,9 @@ import { GameStateChanged, Quiz } from './utils/quiz-interface';
 @Component({
   selector: 'af-quantum-quiz',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    BackBtnComponent,
+    GameHeaderComponent,
     FormsModule,
     QuantumQuizChooseTopicComponent,
     QuantumQuizGenerateQuizComponent,
@@ -76,16 +87,51 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
    */
   private http = inject(HttpClient);
 
+  /**
+   * The router instance used for navigation.
+   */
+  private router = inject(Router);
+
+  /**
+   * A subject used to signal the destruction of the quiz generation process.
+   * When this subject emits a value, all subscriptions related to quiz generation are terminated.
+   */
   private destroyQuizGeneration$ = new Subject();
 
+  /** Informations about the game  */
+  public game!: Game;
+
   override ngOnInit(): void {
-    if (this.isBrowser) this.wakeUpQuizFunction();
+    if (this.isBrowser) {
+      this.wakeUpQuizFunction();
+      this.initKeyListener();
+    }
+    this.game = GAMES.find((el) => el.id === 'quantum-quiz')!;
     super.ngOnInit();
   }
 
   /**
+   * Initializes the key listener for the Escape key.
+   * When the Escape key is pressed, the user is navigated to the 'relax' page.
+   */
+  private initKeyListener() {
+    fromEvent<KeyboardEvent>(this.document, 'keydown')
+      .pipe(
+        filter((event) => event.key === 'Escape'),
+        this.destroyPipe(),
+      )
+      .subscribe(() => {
+        this.router.navigate(['relax']);
+      });
+  }
+
+  /**
    * Performs the wake-up quiz function.
-   * Sends a POST request to the quiz endpoint to wake up the quiz function for faster response.
+   * 
+   * **Note:** This website will never have many visitors or people playing this game. 
+   * That mean when a user play a game normaly the serverfunction will have a cold start. 
+   * So that the user does not experience this delay, we wake up the server function before 
+   * the user start the game.
    */
   private wakeUpQuizFunction() {
     this.http
@@ -106,6 +152,19 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
     this.generateNewQuestion(topic);
   }
 
+  /**
+   * Generates a new quiz question based on the provided topic.
+   *
+   * This method sends a POST request to the quiz endpoint to fetch a new question.
+   * If the response contains a valid question, it updates the quiz state and continues
+   * fetching questions until the quiz has at least 15 questions.
+   *
+   * If an error occurs during the request or response processing, appropriate error
+   * handling is performed and the quiz state is updated accordingly.
+   *
+   * @param topic An optional parameter specifying the topic for the new question.
+   *              If no topic is provided, a question from a random topic may be fetched.
+   */
   private generateNewQuestion(topic?: string) {
     this.http
       .post(environment.endpoints.quiz, {
@@ -120,7 +179,7 @@ export class QuantumQuizComponent extends ExtendedComponent implements OnInit {
           try {
             data = JSON.parse(res ?? '{}');
           } catch (error) {
-            console.error('JSON.parse failed', error)
+            console.error('JSON.parse failed', error);
             return this.generateNewQuestion(topic);
           }
 

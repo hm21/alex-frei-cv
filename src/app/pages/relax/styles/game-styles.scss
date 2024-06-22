@@ -1,17 +1,7 @@
 section {
-  margin-top: 30px;
+  margin: 20px var(--page-padding) var(--page-padding);
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-bottom: 7px;
-  border-bottom: 1px solid var(--border-color);
-  @media (max-width: 500px) {
-    margin-top: 35px;
-  }
-}
 h1 {
   font-size: 2rem;
   font-weight: 700;

@@ -10,8 +10,12 @@
   cursor: default;
   display: inline-block;
   font-size: 0.85rem;
-  background-color: #0f7dff;
-  background: linear-gradient(#0f7dff, #0f7dff);
+  background-color: var(--color-primary-700);
+  background: linear-gradient(
+    45deg,
+    var(--color-primary-600),
+    var(--color-primary-700)
+  );
   color: white;
   border-radius: 4px;
   padding: 3px 7px;

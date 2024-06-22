@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  height: 125px;
+}
+h1 {
+  color: transparent;
+}
+picture {
+  z-index: 1;
+}
+img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.af-back-btn {
+  background-color: var(--card-background);
+  border-radius: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+@media (min-width: 1650px) {
+  :host {
+    border-radius: 0 0 16px 16px;
+  }
+}

@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   Input,
   OnInit,
@@ -13,6 +14,7 @@ import { ServiceCardIcon } from '../../model/service-card-type';
 @Component({
   selector: 'af-service-card',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgxScrollAnimationsModule],
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
@@ -53,8 +55,11 @@ export class ServiceCardComponent extends ExtendedComponent implements OnInit {
 
   /**
    * Sets the icon template based on the value of the `icon` property.
+   * 
    * The icon template is created by embedding the corresponding view based on the `icon` value.
-   * Supported icon values are: 'website', 'app', 'design', 'backend'.
+   * 
+   * Supported icon values are: `website`, `app`, `design` and `backend`.
+   * 
    * Throws an error if the `icon` value is not one of the supported values.
    */
   private setIconTemplate() {

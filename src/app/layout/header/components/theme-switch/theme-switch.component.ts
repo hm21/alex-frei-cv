@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   OnInit,
   inject
@@ -10,6 +11,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 @Component({
   selector: 'af-theme-switch',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FormsModule],
   templateUrl: './theme-switch.component.html',
   styleUrl: './theme-switch.component.scss',

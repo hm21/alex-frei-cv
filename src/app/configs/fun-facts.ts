@@ -1,23 +1,23 @@
-export const funFacts = [
+export const FUN_FACTS = [
   {
     title: $localize`Git Commits`,
     value: 0,
-    icon: 'git',
+    id: 'git-commits',
     loading: true,
   },
   {
     title: $localize`Coffee Consumed`,
-    value: 36,
-    icon: 'coffee',
+    value: 44,
+    id: 'consumed-coffee',
   },
   {
     title: $localize`Walking Breaks`,
-    value: 18,
-    icon: 'walking',
+    value: 21,
+    id: 'walking-breaks',
   },
   {
     title: $localize`Songs listened`,
-    value: 1476,
-    icon: 'music',
+    value: 1892,
+    id: 'listened-songs',
   },
 ];

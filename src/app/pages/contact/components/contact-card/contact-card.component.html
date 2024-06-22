@@ -1,9 +1,14 @@
-<a [href]="url">
-  <div class="icon">
-    <ng-content select="#icon" />
+<a #card [href]="url()" class="row">
+  <div class="thumbnail">
+    <ng-container *ngTemplateOutlet="imgRef" />
   </div>
 
   <div class="col">
+    <div class="frosted-background">
+      <ng-container *ngTemplateOutlet="imgRef" />
+    </div>
+    <div afCardEffects [card]="card" class="frosted-glass"></div>
+
     <h2 class="title">
       <ng-content select="#title" />
     </h2>
@@ -30,3 +35,20 @@
     </p>
   </div>
 </a>
+
+<ng-template #imgRef>
+  <picture>
+    @for (format of ["avif", "webp", "jpeg"]; track format) {
+      <source
+        srcset="
+          assets/img/contact/{{id()}}/{{id()}}_1x.{{format}} 1x,
+          assets/img/contact/{{id()}}/{{id()}}_2x.{{format}} 2x,
+          assets/img/contact/{{id()}}/{{id()}}_3x.{{format}} 3x,
+          assets/img/contact/{{id()}}/{{id()}}_4x.{{format}} 4x
+        "
+        type="image/{{ format }}"
+      />
+    }
+    <img alt="" src="assets/img/contact/{{ id() }}/{{ id() }}_4x.jpeg" />
+  </picture>
+</ng-template>

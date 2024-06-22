@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   OnInit,
@@ -10,6 +11,7 @@ import { Quiz } from '../../utils/quiz-interface';
 @Component({
   selector: 'af-quantum-quiz-generate-quiz',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
   templateUrl: './quantum-quiz-generate-quiz.component.html',
   styleUrls: [

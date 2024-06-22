@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   Input,
@@ -13,6 +14,7 @@ import { ColorClashGameState } from '../../utils/color-clash-interface';
 @Component({
   selector: 'af-color-clash-evaluation',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
   templateUrl: './color-clash-evaluation.component.html',
   styleUrls: [

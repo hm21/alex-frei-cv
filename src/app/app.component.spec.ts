@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { ElementRef, Renderer2, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideServiceWorker } from '@angular/service-worker';
 import { NgxCountService } from 'ngx-count-animation';
 import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
@@ -22,6 +23,7 @@ describe('AppComponent', () => {
         SharedTestingModule
       ],
       providers: [
+        provideServiceWorker('ngsw-worker.js'),
         NgxScrollAnimationsService,
         NgxCountService,
         ModalManagerService,

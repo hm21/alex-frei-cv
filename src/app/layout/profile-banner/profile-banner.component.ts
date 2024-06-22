@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   OnDestroy,
@@ -22,6 +23,7 @@ import { navItems } from '../header/utils/nav-items';
 @Component({
   selector: 'af-profile-banner',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     ThemeSwitchComponent,
     LanguageSwitchComponent,

@@ -1,6 +1,6 @@
 import { SkillItem } from '../pages/resume/utils/resume-interface';
 
-export const frontendSkills: SkillItem[] = [
+export const FRONTEND_SKILLS: SkillItem[] = [
   {
     name: `Angular`,
     skill: 100,
@@ -23,7 +23,7 @@ export const frontendSkills: SkillItem[] = [
   },
 ];
 
-export const backendSkills: SkillItem[] = [
+export const BACKEND_SKILLS: SkillItem[] = [
   {
     name: `Firebase`,
     skill: 100,
@@ -46,7 +46,7 @@ export const backendSkills: SkillItem[] = [
   },
 ];
 
-export const knowledges = [
+export const KNOWLEDGES = [
   'Figma',
   'Typesense',
   'Elasticsearch',

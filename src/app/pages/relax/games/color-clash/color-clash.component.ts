@@ -1,8 +1,17 @@
-import { Component, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  signal,
+} from '@angular/core';
+import { Router } from '@angular/router';
+import { filter, fromEvent } from 'rxjs';
 import { cardFadeInUpScale } from 'src/app/animations/card-animations';
-import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
+import { GAMES } from 'src/app/configs/games';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { MetaDataI } from 'src/app/utils/meta-generator';
+import { GameHeaderComponent } from '../../components/game-header/game-header.component';
+import { Game } from '../../utils/game-model';
 import { ColorClashEvaluationComponent } from './components/color-clash-evaluation/color-clash-evaluation.component';
 import { ColorClashGameComponent } from './components/color-clash-game/color-clash-game.component';
 import { ColorClashInstructionComponent } from './components/color-clash-instruction/color-clash-instruction.component';
@@ -14,8 +23,9 @@ import {
 @Component({
   selector: 'af-color-clash',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    BackBtnComponent,
+    GameHeaderComponent,
     ColorClashInstructionComponent,
     ColorClashGameComponent,
     ColorClashEvaluationComponent,
@@ -58,6 +68,36 @@ export class ColorClashComponent extends ExtendedComponent {
    * The number of mistakes made in the game.
    */
   public mistakes = signal(0);
+
+  /**
+   * The router instance used for navigation.
+   */
+  private router = inject(Router);
+
+  /** Informations about the game  */
+  public game!: Game;
+
+  override ngOnInit(): void {
+    if (this.isBrowser) {
+      this.initKeyListener();
+    }
+    this.game = GAMES.find((el) => el.id === 'color-clash')!;
+  }
+
+  /**
+   * Initializes the key listener for the Escape key.
+   * When the Escape key is pressed, the user is navigated to the 'relax' page.
+   */
+  private initKeyListener() {
+    fromEvent<KeyboardEvent>(this.document, 'keydown')
+      .pipe(
+        filter((event) => event.key === 'Escape'),
+        this.destroyPipe(),
+      )
+      .subscribe(() => {
+        this.router.navigate(['relax']);
+      });
+  }
 
   /**
    * Event handler for when the game finishes.

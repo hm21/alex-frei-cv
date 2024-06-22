@@ -29,7 +29,6 @@ button {
   font-size: 1rem;
   line-height: normal;
   white-space: nowrap;
-  will-change: transform;
 
   &.primary {
     border: 3px solid var(--color-primary);
@@ -49,6 +48,5 @@ button {
   }
   &:active {
     transform: scale(0.95);
-    filter: unset;
   }
 }

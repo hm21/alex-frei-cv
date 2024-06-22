@@ -1,5 +1,5 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
@@ -15,9 +15,13 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
 @Component({
   selector: 'af-other-projects',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgxScrollAnimationsModule, NgTemplateOutlet, SafePipe],
   templateUrl: './other-projects.component.html',
-  styleUrl: './other-projects.component.scss',
+  styleUrls: [
+    './other-projects.component.scss',
+    '../../utils/project-card-style.scss',
+  ],
 })
 export class OtherProjectsComponent {
   /** Array of project items. */

@@ -1,0 +1,43 @@
+button {
+  position: relative;
+  cursor: pointer;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  text-align: start;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+
+  background: var(--card-gradient);
+  color: var(--text-color-primary);
+  box-shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0px 1px 3px rgba(16, 24, 40, 0.2);
+
+  transition:
+    box-shadow 250ms ease,
+    transform 250ms ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow:
+      0 0 #0000,
+      0 0 #0000,
+      0px 2px 4px rgba(16, 24, 40, 0.45);
+  }
+  &:focus {
+    border: none;
+    box-shadow:
+      0 0 #0000,
+      0 0 #0000,
+      0px 1px 2px 0px rgba(16, 24, 40, 0.15);
+  }
+  &:active {
+    transform: scale(0.985);
+    box-shadow: none;
+  }
+}

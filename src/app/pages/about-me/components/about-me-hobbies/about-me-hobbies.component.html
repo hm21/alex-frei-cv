@@ -1,4 +1,11 @@
-<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title" i18n>
+<h2
+  ngxScrollAnimate="fade-in-left"
+  aos="1"
+  speed="400"
+  once="false"
+  class="section-title"
+  i18n
+>
   My hobbies
 </h2>
 
@@ -13,23 +20,43 @@
   let-message="message"
 >
   <article>
-    <img
-      ngxScrollAnimate="fade-in-up-scale"
-      once="false"
-      speed="700"
-      src="assets/img/icon/{{ icon }}.svg"
-      [alt]="title"
-    />
+    <picture>
+      @for (format of ["avif", "webp", "jpeg"]; track format) {
+        <source
+          srcset="
+            assets/img/hobby/{{icon}}/{{ icon }}_1x.{{format}} 1x,
+            assets/img/hobby/{{icon}}/{{ icon }}_2x.{{format}} 2x,
+            assets/img/hobby/{{icon}}/{{ icon }}_3x.{{format}} 3x,
+            assets/img/hobby/{{icon}}/{{ icon }}_4x.{{format}} 4x
+          "
+          type="image/{{ format }}"
+        />
+      }
+      <img
+        ngxScrollAnimate="fade-in-up-scale"
+        aos="100"
+        thresholdMode="pixel"
+        once="false"
+        speed="700"
+        src="assets/img/hobby/{{ icon }}/{{ icon }}_4x.jpeg"
+        [alt]="title"
+      />
+    </picture>
 
-    <h3 ngxScrollAnimate="fade-in-up" once="false" speed="700">{{ title }}</h3>
-    <p
+    <div
       ngxScrollAnimate="fade-in-up"
-      aos="50"
+      aos="100"
       thresholdMode="pixel"
       once="false"
       speed="700"
     >
-      {{ message }}
-    </p>
+      <h3>
+        {{ title }}
+      </h3>
+
+      <p>
+        {{ message }}
+      </p>
+    </div>
   </article>
 </ng-template>

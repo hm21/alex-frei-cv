@@ -1,12 +1,13 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { DOCUMENT, NgClass } from '@angular/common';
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
   selector: 'af-language-switch',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss',
@@ -98,11 +99,6 @@ export class LanguageSwitchComponent
    * Indicates whether dark mode is enabled.
    */
   public isDarkMode = false;
-
-  /**
-   * Document reference for accessing DOM.
-   */
-  private document = inject(DOCUMENT);
 
   override ngOnInit(): void {
     this.activeLanguage =

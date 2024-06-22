@@ -93,10 +93,11 @@ td {
     }
     &:last-child {
       background-color: var(--card-background-accent);
-      background: linear-gradient(
-        var(--card-background-accent),
-        var(--card-background-accent)
-      );
+      background: var(--card-gradient);
+      border-radius: var(--card-radius);
+      .corner {
+        display: none;
+      }
     }
   }
 }

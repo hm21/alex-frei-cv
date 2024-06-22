@@ -1,12 +1,12 @@
 @import "./font/font";
 
-@import "./theme/light-theme";
-@import "./theme/dark-theme";
+@import "./theme/theme";
 
 @import "./various/shared";
 @import "./various/layout";
 @import "./various/breakpoints";
 @import "./various/animations";
+@import "./various/various";
 
 @import "./element/button";
 @import "./element/badge";
@@ -17,5 +17,7 @@
 @import "./element/skeleton";
 @import "./element/spacer";
 @import "./element/hero-image";
+
+@import "./effects/light-move-effect";
 
 @import "node_modules/ngx-scroll-animations/styles/animations.min.css";

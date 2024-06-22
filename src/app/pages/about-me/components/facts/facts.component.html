@@ -1,18 +1,47 @@
-<h2 ngxScrollAnimate="fade-in-left" once="false" class="section-title">
+<h2
+  ngxScrollAnimate="fade-in-left"
+  aos="1"
+  speed="400"
+  once="false"
+  class="section-title"
+>
   <span i18n>Fun-Facts</span> <span class="info" i18n>About this Website</span>
 </h2>
 
 <section>
   @for (item of items(); track $index) {
     <article
+      #card
       ngxScrollAnimate="fade-in-up-scale"
       once="false"
       speed="500"
       aos=".5"
     >
-      <img src="assets/img/icon/{{ item.icon }}.svg" [alt]="item.title" />
+      <picture>
+        @for (format of ["avif", "webp", "jpeg"]; track format) {
+          <source
+            srcset="
+              assets/img/fun-fact/{{item.id}}/{{item.id}}_1x.{{format}} 1x,
+              assets/img/fun-fact/{{item.id}}/{{item.id}}_2x.{{format}} 2x,
+              assets/img/fun-fact/{{item.id}}/{{item.id}}_3x.{{format}} 3x,
+              assets/img/fun-fact/{{item.id}}/{{item.id}}_4x.{{format}} 4x
+            "
+            type="image/{{ format }}"
+          />
+        }
+        <img
+          src="assets/img/fun-fact/{{ item.id }}/{{ item.id }}_4x.jpeg"
+          [alt]="item.title"
+        />
+      </picture>
 
-      <h3>{{ item.title }}</h3>
+      <div
+        afCardEffects
+        enableHoverAnimations="false"
+        [card]="card"
+        class="backdrop"
+      ></div>
+
       @if (!item.loading) {
         <div [ngxCountAnimation]="item.value" duration="1000"></div>
       } @else {
@@ -64,6 +93,7 @@
           </circle>
         </svg>
       }
+      <h3>{{ item.title }}</h3>
     </article>
   }
 </section>
