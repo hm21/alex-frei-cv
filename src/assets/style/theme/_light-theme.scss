@@ -1,4 +1,4 @@
-[data-theme="light"] {
+:root {
   --item-hover-color: rgb(215, 215, 230);
 
   --card-background: #ffffff;
@@ -33,7 +33,7 @@
   --color-light: #f5f5f5;
 
   --profile-banner-background: #214569d1;
-  --profile-banner-backdrop:  saturate(180%) blur(10px);
+  --profile-banner-backdrop: saturate(180%) blur(10px);
 
   --icon-primary: #2d527c;
   --icon-secondary: #cee8fa;
