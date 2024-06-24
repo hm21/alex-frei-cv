@@ -1,4 +1,3 @@
-import { NgClass, NgStyle } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -17,7 +16,6 @@ import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { timer } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { routeAnimation } from './animations/route-animations';
-import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
 import { ImagePreloaderService } from './services/image-preloader.service';
@@ -27,13 +25,7 @@ import { ExtendedComponent } from './utils/extended-component';
 @Component({
   selector: 'af-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    NavMobileMenuToggleBtnComponent,
-    NgClass,
-    NgStyle,
-  ],
+  imports: [RouterOutlet, HeaderComponent],
   providers: [NgxScrollAnimationsService, NgxCountService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -50,12 +42,6 @@ export class AppComponent
   /** Reference to the modal container element. */
   @ViewChild('modalRef', { read: ViewContainerRef })
   modalRef!: ViewContainerRef;
-
-  /** Flag to control the visibility of the mobile menu button. */
-  public showMobileMenuBtn = signal(true);
-
-  /** Flag to control the visibility of the mobile menu. */
-  public showMobileMenu = signal(false);
 
   /** Flag indicating whether route animations should be used. */
   public useRouteAnimations = signal(false);

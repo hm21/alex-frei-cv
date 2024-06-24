@@ -1,8 +1,8 @@
 {
   "name": "Alex Frei",
   "short_name": "Alex",
-  "theme_color": "#0F7DFF",
-  "background_color": "#fafafa",
+  "theme_color": "#4e72a8",
+  "background_color": "#f9fafc",
   "display": "standalone",
   "description": "Find out more about Alex Frei",
   "scope": "./",

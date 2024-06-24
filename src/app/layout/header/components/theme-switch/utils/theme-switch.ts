@@ -14,7 +14,9 @@ export function getTheme(): 'light' | 'dark' {
   }
 
   return 'light';
-  /* const systemThemeIsDark = window.matchMedia(
+  /* Optional auto detect the design
+  
+   const systemThemeIsDark = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches;
 

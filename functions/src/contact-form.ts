@@ -14,6 +14,8 @@ export default async (req: https.Request, resp: express.Response) => {
     email: string;
     msg: string;
   } = req.body;
+
+  // Validate the request body data
   if (
     typeof d.firstname !== 'string' ||
     typeof d.lastname !== 'string' ||
@@ -23,19 +25,23 @@ export default async (req: https.Request, resp: express.Response) => {
     return resp.status(400).json('Invalid form data');
   }
 
+  // Check for potential DDOS attack
   const ddosAttack = await ddosCheck(req, 'contact-form', 7);
   if (ddosAttack) return resp.status(403).json('Blacklist');
 
-  const msg = `Firstname: ${d.firstname?.trim().substring(0, 60)}\n
-  Lastname: ${d.lastname?.trim().substring(0, 60)}\n
-  E-Mail: ${d.email?.trim().substring(0, 256)}\n
-  Nachricht: ${d.msg?.trim().substring(0, 10_000)}\n`;
+  // Format the message to be sent to Telegram
+  const msg = `Firstname: ${d.firstname?.trim().truncate(60)}\n
+  Lastname: ${d.lastname?.trim().truncate(60)}\n
+  E-Mail: ${d.email?.trim().truncate(256)}\n
+  Nachricht: ${d.msg?.trim().truncate(10_000)}`;
 
+  // Initialize the Telegram bot
   const bot: TelegramBot = new TelegramBot(
     defineString('TELEGRAM_BOT_TOKEN').value(),
     { polling: false },
   );
 
+  // Send the message to the specified Telegram chat ID
   return bot
     .sendMessage(defineString('TELEGRAM_CHAT_ID').value(), msg)
     .then(() => {

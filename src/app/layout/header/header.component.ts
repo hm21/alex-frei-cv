@@ -1,5 +1,10 @@
-import { NgClass } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ProfileBannerComponent } from '../profile-banner/profile-banner.component';
 import { SideNavbarComponent } from '../side-navbar/side-navbar.component';
@@ -10,8 +15,6 @@ import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-to
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgClass,
-
     SideNavbarComponent,
     ProfileBannerComponent,
     NavMobileMenuToggleBtnComponent,
@@ -20,8 +23,21 @@ import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-to
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent extends ExtendedComponent {
-  /**
-   * Event emitter for closing the side menu.
-   */
-  @Output() closeSideMenu = new EventEmitter<boolean>();
+  private header = viewChild<ElementRef<HTMLElement>>('header');
+  private toggleBtn = viewChild(NavMobileMenuToggleBtnComponent);
+
+  /** Flag to control the visibility of the mobile menu. */
+  public showMobileMenu = signal(false);
+
+  public toggleMenu() {
+    this.showMobileMenu.update((value) => !value);
+
+    if (this.showMobileMenu()) {
+      this.renderer.addClass(this.header()?.nativeElement, 'show');
+      this.toggleBtn()!.open = true;
+    } else {
+      this.renderer.removeClass(this.header()?.nativeElement, 'show');
+      this.toggleBtn()!.open = false;
+    }
+  }
 }

@@ -1,4 +1,9 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+} from '@angular/core';
 import { concatMap, filter, interval, map, timer } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -44,7 +49,7 @@ export class TypewriterComponent
         map(() => {
           if (text.length < arr[lastIndex].length && !breakH) {
             speed = 100;
-            return arr[lastIndex].substring(0, text.length + 1);
+            return arr[lastIndex].truncate(text.length + 1);
           } else if (breakH < 15) {
             if (!this.elRef.nativeElement.classList.contains('blink')) {
               this.elRef.nativeElement.classList.add('blink');
@@ -55,7 +60,7 @@ export class TypewriterComponent
             if (this.elRef.nativeElement.classList.contains('blink')) {
               this.elRef.nativeElement.classList.remove('blink');
             }
-            return arr[lastIndex].substring(0, text.length - 1);
+            return arr[lastIndex].truncate(text.length - 1);
           } else if (breakEndH < 4) {
             breakEndH++;
           } else {

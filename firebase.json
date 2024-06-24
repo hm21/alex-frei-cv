@@ -49,8 +49,8 @@
           "type": 301
         },
         {
-          "source": "/vn",
-          "destination": "/vn/about-me",
+          "source": "/vi",
+          "destination": "/vi/about-me",
           "type": 301
         }
       ],
@@ -74,6 +74,10 @@
         {
           "source": "/de/**",
           "destination": "/de/index.html"
+        },
+        {
+          "source": "/vi/**",
+          "destination": "/vi/index.html"
         }
       ],
       "trailingSlash": false,

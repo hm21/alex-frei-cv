@@ -9,23 +9,26 @@ import { ddosCheck } from './utils/ddos-ip-check';
 initializeApp();
 
 export default async (req: Request, resp: express.Response) => {
+  // Check for potential DDOS attack
   const ddosAttack = await ddosCheck(req, 'git-commits', 600);
   if (ddosAttack) return resp.status(403).json('Blacklist');
 
   const dt = new Date();
   const commitRtdbRef = getDatabase().ref('git/commits');
 
+  // Retrieve the temporary commit count from the database
   const temporaryCount = (
     await commitRtdbRef.child(formatDate(dt)).get()
   ).val();
 
   if (temporaryCount) {
+    // Return the cached commit count if available
     return resp.status(200).json(temporaryCount);
   } else {
-    /// Delete older temporary git commits to save storage
+    // Delete older temporary git commits to save storage
     await commitRtdbRef.remove().catch(error);
 
-    /// Get current commit count
+    // Get current commit count from GitHub API
     return await axios
       .get('https://api.github.com/repos/hm21/alex-frei-cv/commits', {
         params: {
@@ -37,7 +40,7 @@ export default async (req: Request, resp: express.Response) => {
       .then(async (response) => {
         const count = response.data.length ?? 0;
 
-        /// Set current commit count in rtdb
+        // Set current commit count in the database
         await commitRtdbRef.child(formatDate(dt)).set(count).catch(error);
 
         return resp.status(200).json(count);

@@ -27,7 +27,6 @@
     "@angular/router": "^18.0.4",
     "@angular/service-worker": "^18.0.4",
     "@angular/ssr": "^18.0.5",
-    "@angular/youtube-player": "^18.0.4",
     "express": "^4.19.2",
     "ngx-count-animation": "^1.1.1",
     "ngx-image-hero": "^1.0.8",

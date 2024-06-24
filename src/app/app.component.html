@@ -8,16 +8,6 @@
   </div>
 </main>
 
-<af-header
-  (closeSideMenu)="mobileMenuBtn.closeMenu()"
-  [ngClass]="{ show: showMobileMenu() }"
-/>
-
-<af-nav-mobile-menu-toggle-btn
-  #mobileMenuBtn
-  [ngStyle]="{ display: showMobileMenuBtn() ? '' : 'none' }"
-  [open]="showMobileMenu()"
-  (tap)="showMobileMenu.set(!showMobileMenu())"
-/>
+<af-header />
 
 <ng-container #modalRef />

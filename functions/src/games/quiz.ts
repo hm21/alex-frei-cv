@@ -18,32 +18,40 @@ export default async (req: https.Request, resp: express.Response) => {
     return randomTopics[randomIndex];
   }
 
+  // Check if the request method is POST
   if (req.method !== 'POST') {
     throw new HttpsError('permission-denied', 'Permission-denied!');
   } else if (req.body === 'wake-up') {
     return resp.status(200).json('Awake');
   }
 
+  // Check for potential DDOS attack
   const ddosAttack = await ddosCheck(req, 'quiz', 120);
   if (ddosAttack) return resp.status(403).json('Blacklist');
 
+  // Extract language and existing questions from the request body
   const lang = (req.body?.['lang'] as string) ?? 'en';
   const existingQuestions = (req.body?.['questions'] as string[]) ?? [];
 
+  // Convert existing questions to a numbered list for the prompt
   const questionsText = existingQuestions.toNumberedList();
 
+  // Determine the target language based on the request body
   const targetLanguage =
     lang === 'de' ? 'German' : lang === 'vi' ? 'Vietnamese' : 'English';
 
-  let topic = (req.body?.['topic'] as string)?.substring(0, 20);
+  // Get the topic name from the body, or create a random topic if not provided or too short
+  let topic = (req.body?.['topic'] as string)?.truncate(20);
   if (!topic || topic.length < 3) {
     topic = getRandomTopic();
   }
 
+  // Log that a user has started to create a new quiz.
   if (existingQuestions.length === 0) {
     info('Generate quiz', { topic, lang });
   }
 
+  // Create the completion request to the OpenAI API
   const completion = await openai.chat.completions.create({
     messages: [
       {

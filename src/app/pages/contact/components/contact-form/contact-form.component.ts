@@ -63,7 +63,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     firstname: new FormControl('', Validators.required),
     lastname: new FormControl('', Validators.required),
     msg: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.email]),
+    email: new FormControl('', [Validators.required, Validators.email]),
   });
 
   /** HttpClient for making HTTP requests. */
@@ -78,65 +78,118 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   public sendForm(): void {
     if (this._blacklist) return;
 
-    if (this.form.invalid || this.form.getRawValue().email?.length === 0) {
-      this.footerRef.clear();
-      this.footerRef.createEmbeddedView(this.errorRef, {
-        msg: this.form.get('email')?.invalid
-          ? $localize`Valid email address is required.`
-          : $localize`<b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as <b>E-Mail</b> are required.`,
-      });
-      this.footerRef.createEmbeddedView(this.submitBtnRef);
-    } else if (!this._sending && !this._sended && this._sendTries < 10) {
-      this._sending = true;
-      this.footerRef.clear();
-      this.footerRef.createEmbeddedView(this.loadingSpinner);
-
-      this._sendTries++;
-      this.form.disable();
-
-      this.http
-        .post(environment.endpoints.contactMessage, this.form.value)
-        .pipe(this.destroyPipe())
-        .subscribe({
-          next: () => {
-            this._sending = false;
-            this._sended = true;
-            this.footerRef.clear();
-            this.footerRef.createEmbeddedView(this.successRef, {
-              msg: $localize`The request has been successfully submitted.`,
-            });
-          },
-          error: (err) => {
-            if (isDevMode()) console.error(err);
-            this._sending = false;
-            if (err.error === 'Blacklist') {
-              this._blacklist = true;
-              this.footerRef.clear();
-              this.footerRef.createEmbeddedView(this.blacklistRef);
-            } else {
-              let msg = $localize`Unknown error! Please try again.`;
-              switch (err.status) {
-                case 403:
-                  msg = $localize`Forbidden request to the server.`;
-                  break;
-                case 400:
-                  msg = $localize`Invalid data sent. Please fill out the form correctly and try again.`;
-                  break;
-              }
-              this.footerRef.clear();
-              this.footerRef.createEmbeddedView(this.errorRef, {
-                msg,
-              });
-              this.footerRef.createEmbeddedView(this.submitBtnRef);
-              this.form.enable();
-            }
-          },
-        });
+    if (this.form.invalid) {
+      this.showFormError();
+    } else if (this.canSendForm()) {
+      this.processFormSubmission();
     } else if (this._sendTries >= 10) {
-      this.footerRef.clear();
-      this.footerRef.createEmbeddedView(this.errorRef, {
-        msg: $localize`Too many requests! Please try again later.`,
-      });
+      this.showError($localize`Too many requests! Please try again later.`);
     }
+  }
+  /**
+   * Displays an error message when the form is invalid.
+   * It determines the appropriate error message based on the form's email field validity.
+   * Clears the footer reference and creates an embedded view with the error message and submit button.
+   */
+  private showFormError(): void {
+    const errorMsg = this.form.get('email')?.invalid
+      ? $localize`Valid email address is required.`
+      : $localize`<b>First Name</b>, <b>Last Name</b>, and <b>Message</b> as well as <b>E-Mail</b> are required.`;
+
+    this.footerRef.clear();
+    this.footerRef.createEmbeddedView(this.errorRef, { msg: errorMsg });
+    this.footerRef.createEmbeddedView(this.submitBtnRef);
+  }
+
+  /**
+   * Checks if the form can be sent.
+   * @returns {boolean} - Returns true if the form can be sent, otherwise false.
+   * Conditions for sending include not currently sending, not already sent, and fewer than 10 send attempts.
+   */
+  private canSendForm(): boolean {
+    return !this._sending && !this._sended && this._sendTries < 10;
+  }
+
+  /**
+   * Processes the form submission.
+   * Sets the sending state, clears the footer, and shows the loading spinner.
+   * Increments the send attempts counter and disables the form.
+   * Makes an HTTP POST request to submit the form data.
+   * Handles the response by calling either handleSuccess or handleError based on the result.
+   */
+  private processFormSubmission(): void {
+    this._sending = true;
+    this.footerRef.clear();
+    this.footerRef.createEmbeddedView(this.loadingSpinner);
+
+    this._sendTries++;
+    this.form.disable();
+
+    this.http
+      .post(environment.endpoints.contactMessage, this.form.value)
+      .pipe(this.destroyPipe())
+      .subscribe({
+        next: () => this.handleSuccess(),
+        error: (err) => this.handleError(err),
+      });
+  }
+
+  /**
+   * Handles successful form submission.
+   * Sets the sending and sent states, clears the footer, and shows the success message.
+   */
+  private handleSuccess(): void {
+    this._sending = false;
+    this._sended = true;
+    this.footerRef.clear();
+    this.footerRef.createEmbeddedView(this.successRef, {
+      msg: $localize`The request has been successfully submitted.`,
+    });
+  }
+
+  /**
+   * Handles errors during form submission.
+   * Logs the error in development mode.
+   * Sets the sending state to false.
+   * If the error is due to a blacklist, sets the blacklist state and shows the blacklist message.
+   * Otherwise, determines the appropriate error message based on the error status and shows it.
+   * Re-enables the form.
+   * @param {any} err - The error object received from the HTTP request.
+   */
+  private handleError(err: any): void {
+    if (isDevMode()) console.error(err);
+
+    this._sending = false;
+
+    if (err.error === 'Blacklist') {
+      this._blacklist = true;
+      this.footerRef.clear();
+      this.footerRef.createEmbeddedView(this.blacklistRef);
+    } else {
+      let msg = $localize`Unknown error! Please try again.`;
+
+      switch (err.status) {
+        case 403:
+          msg = $localize`Forbidden request to the server.`;
+          break;
+        case 400:
+          msg = $localize`Invalid data sent. Please fill out the form correctly and try again.`;
+          break;
+      }
+
+      this.showError(msg);
+      this.footerRef.createEmbeddedView(this.submitBtnRef);
+      this.form.enable();
+    }
+  }
+
+  /**
+   * Displays a specified error message.
+   * Clears the footer reference and creates an embedded view with the error message.
+   * @param {string} msg - The error message to display.
+   */
+  private showError(msg: string): void {
+    this.footerRef.clear();
+    this.footerRef.createEmbeddedView(this.errorRef, { msg });
   }
 }

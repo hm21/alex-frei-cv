@@ -473,7 +473,7 @@
         <target>Die Nachricht wurde erfolgreich übermittelt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">146</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5991432110094363437" datatype="html">
@@ -481,7 +481,7 @@
         <target>Unbekannter Fehler! Bitte versuchen Sie es erneut.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">169</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3927696452050800576" datatype="html">
@@ -489,7 +489,7 @@
         <target>Verbotene Anfrage an den Server.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">120</context>
+          <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4424606546053357541" datatype="html">
@@ -497,7 +497,7 @@
         <target>Ungültige Daten gesendet. Bitte füllen Sie das Formular korrekt aus und versuchen Sie es erneut.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">176</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2746956598378576216" datatype="html">
@@ -922,7 +922,7 @@
         <target>Portfolio Alex Frei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6886514549192725090" datatype="html">
@@ -1030,7 +1030,7 @@
         <target>Eins</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">461</context>
+          <context context-type="linenumber">460</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
@@ -1038,7 +1038,7 @@
         <target>Zwei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">463</context>
+          <context context-type="linenumber">462</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
@@ -1046,7 +1046,7 @@
         <target>Drei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">465</context>
+          <context context-type="linenumber">464</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
@@ -1054,7 +1054,7 @@
         <target>Vier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">467</context>
+          <context context-type="linenumber">466</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
@@ -1062,7 +1062,7 @@
         <target>Fünf</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">469</context>
+          <context context-type="linenumber">468</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
@@ -1070,7 +1070,7 @@
         <target>Sechs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">471</context>
+          <context context-type="linenumber">470</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
@@ -1078,7 +1078,7 @@
         <target>Sieben</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">473</context>
+          <context context-type="linenumber">472</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
@@ -1086,7 +1086,7 @@
         <target>Acht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">475</context>
+          <context context-type="linenumber">474</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
@@ -1094,7 +1094,7 @@
         <target>Neun</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">477</context>
+          <context context-type="linenumber">476</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
@@ -1102,7 +1102,7 @@
         <target>Rechteck</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">479</context>
+          <context context-type="linenumber">478</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
@@ -1110,7 +1110,7 @@
         <target>Kreis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">481</context>
+          <context context-type="linenumber">480</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
@@ -1118,7 +1118,7 @@
         <target>Dreieck</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">483</context>
+          <context context-type="linenumber">482</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
@@ -1690,7 +1690,7 @@
         <target>Zu viele Anfragen! Bitte versuchen Sie es später noch einmal.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">138</context>
+          <context context-type="linenumber">86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4848585539632032097" datatype="html">
@@ -1698,7 +1698,7 @@
         <target>Schauen Sie sich das Portfolio von Alex Frei an, um mehr über Ihn zu erfahren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2817793850755956519" datatype="html">
@@ -2091,7 +2091,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Es ist eine gültige E-Mail-Adresse erforderlich.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2619411074304656554" datatype="html">
@@ -2099,7 +2099,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>&lt;b&gt;Vorname&lt;/b&gt;, &lt;b&gt;Nachname&lt;/b&gt; und &lt;b&gt;Nachricht&lt;/b&gt; sowie&lt;b&gt;E-Mail&lt;/b&gt; werden benötigt.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">86</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
     </body>
