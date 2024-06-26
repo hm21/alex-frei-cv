@@ -67,7 +67,6 @@ export class CardEffectsDirective implements OnInit {
     if (!this.enableHoverAnimations) return;
     fromEvent(this.elementRef, 'mouseenter')
       .pipe(
-        takeUntilDestroyed(this.destroyRef),
         switchMap(() =>
           this.manager.activeAnimation$.pipe(
             take(1),
@@ -83,6 +82,7 @@ export class CardEffectsDirective implements OnInit {
           this.manager.activeAnimation$.next(false);
           this.renderer.removeClass(this.elRef.nativeElement, 'light-effect');
         }),
+        takeUntilDestroyed(this.destroyRef),
       )
       .subscribe();
   }

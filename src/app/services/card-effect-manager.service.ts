@@ -10,7 +10,7 @@ import {
   startWith,
   switchMap,
   takeUntil,
-  tap
+  tap,
 } from 'rxjs';
 import { ScreenService } from './screen.service';
 

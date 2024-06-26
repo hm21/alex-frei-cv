@@ -5,7 +5,7 @@ import {
   EventEmitter,
   Input,
   Output,
-  booleanAttribute
+  booleanAttribute,
 } from '@angular/core';
 import { Subject, fromEvent, take, takeUntil } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -61,7 +61,7 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
     this.reset$.next(null);
 
     this.removeBackdrop();
-    
+
     this.tap.emit();
   }
 

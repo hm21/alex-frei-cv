@@ -30,7 +30,7 @@ export class PortfolioComponent extends ExtendedComponent {
     this.classList.add('page-padding');
 
     /// Ensure there are no scrollbar offset issues when open the modal
-    this.modalManager.modal$.subscribe((res) => {
+    this.modalManager.modal$.pipe(this.destroyPipe()).subscribe((res) => {
       if (res.type === 'add' && this.isScrollbarVisible && !this.screen.xs) {
         this.renderer.setStyle(
           this.elRef.nativeElement,

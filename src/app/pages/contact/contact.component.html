@@ -1,9 +1,9 @@
 <div class="contact-options">
   @for (item of contactOptions; track item.id) {
     <af-contact-card [id]="item.id" [url]="item.url">
-      <ng-container id="title"> {{ item.title }} </ng-container>
-      <ng-container id="msg"> {{ item.msg }} </ng-container>
-      <ng-container id="action">{{ item.actionMsg }}</ng-container>
+      <ng-container ngProjectAs="[title]"> {{ item.title }} </ng-container>
+      <ng-container ngProjectAs="[msg]"> {{ item.msg }} </ng-container>
+      <ng-container ngProjectAs="[action]">{{ item.actionMsg }}</ng-container>
     </af-contact-card>
   }
 </div>

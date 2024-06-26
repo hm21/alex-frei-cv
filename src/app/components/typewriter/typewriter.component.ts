@@ -47,39 +47,40 @@ export class TypewriterComponent
         concatMap(() => timer(speed)),
         filter(() => this.isElementVisible()),
         map(() => {
-          if (text.length < arr[lastIndex].length && !breakH) {
+          const length = text.length;
+          const arrText = arr[lastIndex];
+
+          if (length < arrText.length && !breakH) {
             speed = 100;
-            return arr[lastIndex].truncate(text.length + 1);
-          } else if (breakH < 15) {
-            if (!this.elRef.nativeElement.classList.contains('blink')) {
-              this.elRef.nativeElement.classList.add('blink');
-            }
-            breakH++;
-          } else if (text.length > 0) {
-            speed = 40;
-            if (this.elRef.nativeElement.classList.contains('blink')) {
-              this.elRef.nativeElement.classList.remove('blink');
-            }
-            return arr[lastIndex].truncate(text.length - 1);
-          } else if (breakEndH < 4) {
-            breakEndH++;
-          } else {
-            breakH = 0;
-            breakEndH = 0;
-            lastIndex++;
-            if (lastIndex >= arr.length) {
-              lastIndex = 0;
-            }
-            return '';
+            return arrText.truncate(length + 1);
           }
-          return false;
+
+          if (breakH < 15) {
+            this.classList.add('blink');
+            breakH++;
+            return false;
+          } else if (length > 0) {
+            speed = 40;
+            this.classList.remove('blink');
+            return arrText.truncate(length - 1);
+          }
+
+          if (breakEndH < 4) {
+            breakEndH++;
+            return false;
+          }
+
+          breakH = 0;
+          breakEndH = 0;
+          lastIndex = (lastIndex + 1) % arr.length;
+          return '';
         }),
         filter((v) => v !== false),
         map((val) => val.toString()),
       )
       .subscribe((val) => {
         text = val;
-        this.elRef.nativeElement.innerHTML = val.replace(/\s/g, '&nbsp;');
+        this.nativeElement.innerHTML = val.replace(/\s/g, '&nbsp;');
       });
   }
 
@@ -89,8 +90,7 @@ export class TypewriterComponent
    * @private
    */
   private isElementVisible(): boolean {
-    const el = this.elRef.nativeElement;
-    const bounding = el.getBoundingClientRect();
+    const bounding = this.nativeElement.getBoundingClientRect();
     const y = bounding.top - this.screen.height;
     return y < 0 && bounding.top > -bounding.height;
   }

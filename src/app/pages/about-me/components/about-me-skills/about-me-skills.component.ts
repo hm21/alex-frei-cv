@@ -14,7 +14,7 @@ import {
   distinctUntilChanged,
   fromEvent,
   map,
-  startWith
+  startWith,
 } from 'rxjs';
 import { SKILL_CARDS } from 'src/app/configs/skill-cards';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -115,9 +115,7 @@ export class AboutMeSkillsComponent
       combineLatest([scroll$, visibilityChange$])
         .pipe(
           this.destroyPipe(),
-          map(([isElementVisible, isVisible]) => {
-            return isElementVisible && isVisible;
-          }),
+          map(([isElementVisible, isVisible]) => isElementVisible && isVisible),
         )
         .subscribe((show) => {
           this.renderer.setStyle(

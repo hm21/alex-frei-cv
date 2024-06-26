@@ -10,15 +10,15 @@
     <div afCardEffects [card]="card" class="frosted-glass"></div>
 
     <h2 class="title">
-      <ng-content select="#title" />
+      <ng-content select="[title]" />
     </h2>
     <p class="msg">
-      <ng-content select="#msg" />
+      <ng-content select="[msg]" />
     </p>
 
     <p class="action">
       <span>
-        <ng-content select="#action" />
+        <ng-content select="[action]" />
       </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -212,23 +212,26 @@ export class ColorClashGameComponent
     fromEvent<KeyboardEvent>(this.document, 'keydown')
       .pipe(
         filter((event) => this.shortcutKeys.includes(event.key)),
+        map((event) => {
+          switch (event.key) {
+            case 's':
+              return 0;
+            case 'd':
+              return 1;
+            case 'f':
+              return 2;
+            case 'j':
+              return 3;
+            case 'k':
+              return 4;
+            default:
+              return 5;
+          }
+        }),
         this.destroyPipe(),
       )
-      .subscribe((event) => {
-        const i =
-          event.key === 's'
-            ? 0
-            : event.key === 'd'
-              ? 1
-              : event.key === 'f'
-                ? 2
-                : event.key === 'j'
-                  ? 3
-                  : event.key === 'k'
-                    ? 4
-                    : 5;
-
-        const btn = this.gameButtons[i];
+      .subscribe((buttonId) => {
+        const btn = this.gameButtons[buttonId];
         this.buttonTap(btn.id, btn.color);
       });
   }

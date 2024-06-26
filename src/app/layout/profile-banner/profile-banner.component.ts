@@ -138,13 +138,16 @@ export class ProfileBannerComponent
     const url = 'assets/docs/alex_frei_cv.pdf';
     const filename = 'alex_frei_cv.pdf';
 
-    this.http.get(url, { responseType: 'blob' }).subscribe((blob: Blob) => {
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
+    this.http
+      .get(url, { responseType: 'blob' })
+      .pipe(this.destroyPipe())
+      .subscribe((blob: Blob) => {
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
   }
 }
