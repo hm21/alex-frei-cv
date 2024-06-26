@@ -23,7 +23,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px var(--color-accent) inset;
+  -webkit-box-shadow: 0 0 0 1000px var(--color-accent) inset !important;
   -webkit-text-fill-color: var(--text-color-primary) !important;
 }
 input[type="number"] {
