@@ -28,10 +28,10 @@
     "@angular/service-worker": "^18.0.4",
     "@angular/ssr": "^18.0.5",
     "express": "^4.19.2",
-    "ngx-count-animation": "^1.1.1",
-    "ngx-image-hero": "^1.0.8",
+    "ngx-count-animation": "^2.0.0",
+    "ngx-image-hero": "^2.0.1",
     "ngx-quicklink": "^0.4.6",
-    "ngx-scroll-animations": "^1.2.2",
+    "ngx-scroll-animations": "^2.0.0",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.3"
   },

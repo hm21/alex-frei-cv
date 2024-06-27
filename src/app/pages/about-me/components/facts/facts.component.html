@@ -1,22 +1,10 @@
-<h2
-  ngxScrollAnimate="fade-in-left"
-  aos="1"
-  speed="400"
-  once="false"
-  class="section-title"
->
+<h2 ngxScrollAnimate="fade-in-left" aos="1" speed="400" class="section-title">
   <span i18n>Fun-Facts</span> <span class="info" i18n>About this Website</span>
 </h2>
 
 <section>
   @for (item of items(); track $index) {
-    <article
-      #card
-      ngxScrollAnimate="fade-in-up-scale"
-      once="false"
-      speed="500"
-      aos=".5"
-    >
+    <article #card ngxScrollAnimate="fade-in-up-scale" speed="500" aos=".5">
       <picture>
         @for (format of ["avif", "webp", "jpeg"]; track format) {
           <source

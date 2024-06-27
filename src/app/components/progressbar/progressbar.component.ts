@@ -7,7 +7,7 @@ import {
   ViewChild,
   numberAttribute
 } from '@angular/core';
-import { NgxCountAnimationModule } from 'ngx-count-animation';
+import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { delay, fromEvent, map, startWith, throttleTime } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -15,7 +15,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   selector: 'af-progressbar',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxCountAnimationModule],
+  imports: [NgxCountAnimationDirective],
   templateUrl: './progressbar.component.html',
   styleUrl: './progressbar.component.scss',
 })

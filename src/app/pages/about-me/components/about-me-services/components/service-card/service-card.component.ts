@@ -1,13 +1,13 @@
 import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-  TemplateRef,
-  ViewChild,
-  ViewContainerRef
+    ChangeDetectionStrategy,
+    Component,
+    Input,
+    OnInit,
+    TemplateRef,
+    ViewChild,
+    ViewContainerRef
 } from '@angular/core';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ServiceCardIcon } from '../../model/service-card-type';
 
@@ -15,7 +15,7 @@ import { ServiceCardIcon } from '../../model/service-card-type';
   selector: 'af-service-card',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsModule],
+  imports: [NgxScrollAnimationsDirective],
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
 })

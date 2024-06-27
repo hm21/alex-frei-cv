@@ -7,7 +7,7 @@ export const FUN_FACTS = [
   },
   {
     title: $localize`Coffee Consumed`,
-    value: 46,
+    value: 47,
     id: 'consumed-coffee',
   },
   {
@@ -17,7 +17,7 @@ export const FUN_FACTS = [
   },
   {
     title: $localize`Songs listened`,
-    value: 1923,
+    value: 1952,
     id: 'listened-songs',
   },
 ];

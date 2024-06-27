@@ -5,8 +5,8 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { NgxCountAnimationModule } from 'ngx-count-animation';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { NgxCountAnimationDirective } from 'ngx-count-animation';
+import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { filter } from 'rxjs';
 import { FUN_FACTS } from 'src/app/configs/fun-facts';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
@@ -18,8 +18,8 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgxScrollAnimationsModule,
-    NgxCountAnimationModule,
+    NgxScrollAnimationsDirective,
+    NgxCountAnimationDirective,
     CardEffectsDirective,
   ],
   templateUrl: './facts.component.html',

@@ -1,9 +1,6 @@
 <h2 class="section-title" i18n>Frontend skills</h2>
 @for (item of frontendSkills; track $index) {
-  <af-progressbar
-    [progress]="item.skill"
-    [name]="item.name"
-  />
+  <af-progressbar [progress]="item.skill" [name]="item.name" />
 }
 
 <h2 style="--color-primary: #0ba376" class="section-title mt4" i18n>
@@ -26,7 +23,7 @@
 </h2>
 <ul class="badge-list">
   @for (item of knowledges; track $index) {
-    <li ngxScrollAnimate="fade-in-up-scale" once="false" class="badge-chip">
+    <li ngxScrollAnimate="fade-in-up-scale" class="badge-chip">
       {{ item }}
     </li>
   }

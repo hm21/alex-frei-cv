@@ -1,6 +1,6 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
 import { ProjectDetails } from '../../utils/portfolio-interfaces';
@@ -16,7 +16,7 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   selector: 'af-other-projects',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsModule, NgTemplateOutlet, SafePipe],
+  imports: [NgxScrollAnimationsDirective, NgTemplateOutlet, SafePipe],
   templateUrl: './other-projects.component.html',
   styleUrls: [
     './other-projects.component.scss',

@@ -2,7 +2,6 @@
   ngxScrollAnimate="fade-in-left"
   aos="1"
   speed="400"
-  once="false"
   class="section-title"
   i18n
 >
@@ -11,11 +10,7 @@
 
 <section>
   @for (item of items; track $index) {
-    <button
-      (click)="openProject(item)"
-      ngxScrollAnimate="fade-in-up-scale"
-      once="false"
-    >
+    <button (click)="openProject(item)" ngxScrollAnimate="fade-in-up-scale">
       <div class="type">{{ item.type }}</div>
       <h3>{{ item.title }}</h3>
       <p>{{ item.subtitle }}</p>

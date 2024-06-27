@@ -8,7 +8,6 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
 import {
   combineLatest,
   distinctUntilChanged,
@@ -24,7 +23,7 @@ import { SkillCard } from './utils/skill-card-model';
   selector: 'af-about-me-skills',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsModule],
+  imports: [],
   templateUrl: './about-me-skills.component.html',
   styleUrl: './about-me-skills.component.scss',
 })

@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkModule } from 'ngx-quicklink';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { NavItemId, navItems } from 'src/app/layout/header/utils/nav-items';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -23,7 +23,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   imports: [
     QuicklinkModule,
     RouterLink,
-    NgxScrollAnimationsModule,
+    NgxScrollAnimationsDirective,
     NgTemplateOutlet,
     CardEffectsDirective,
   ],

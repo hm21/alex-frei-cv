@@ -17,7 +17,9 @@ import {
 } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideServiceWorker } from '@angular/service-worker';
+import { provideNgxCountAnimations } from 'ngx-count-animation';
 import { QuicklinkStrategy } from 'ngx-quicklink';
+import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
 import { environment } from 'src/environments/environment';
 import '../app/utils/extensions/extensions';
 import { routes } from './app.routes';
@@ -40,6 +42,11 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withI18nSupport()),
     provideHttpClient(withFetch()),
     provideAnimations(),
+    provideNgxScrollAnimations({
+      animationName: 'fade-in-up',
+      once: false,
+    }),
+    provideNgxCountAnimations(),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:3000',

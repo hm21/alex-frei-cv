@@ -2,7 +2,6 @@
   ngxScrollAnimate="fade-in-left"
   aos="1"
   speed="400"
-  once="false"
   class="section-title"
   i18n
 >
@@ -36,20 +35,13 @@
         ngxScrollAnimate="fade-in-up-scale"
         aos="100"
         thresholdMode="pixel"
-        once="false"
         speed="700"
         src="assets/img/hobby/{{ icon }}/{{ icon }}_4x.jpeg"
         [alt]="title"
       />
     </picture>
 
-    <div
-      ngxScrollAnimate="fade-in-up"
-      aos="100"
-      thresholdMode="pixel"
-      once="false"
-      speed="700"
-    >
+    <div ngxScrollAnimate aos="100" thresholdMode="pixel" speed="700">
       <h3>
         {{ title }}
       </h3>

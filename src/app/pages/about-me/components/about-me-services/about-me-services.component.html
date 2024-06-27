@@ -2,7 +2,6 @@
   ngxScrollAnimate="fade-in-left"
   aos="1"
   speed="400"
-  once="false"
   class="section-title"
   i18n
 >
@@ -12,11 +11,10 @@
 <section>
   @for (item of items; track $index) {
     <af-service-card
-      ngxScrollAnimate="fade-in-up"
+      ngxScrollAnimate
       aos="70"
       thresholdMode="pixel"
       speed="600"
-      once="false"
       [title]="item.title"
       [msg]="item.msg"
       [icon]="item.icon"

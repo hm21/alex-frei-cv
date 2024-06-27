@@ -1,14 +1,14 @@
 import { NgClass } from '@angular/common';
 import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  Input,
-  OnInit,
-  ViewChild,
-  signal,
+    ChangeDetectionStrategy,
+    Component,
+    ElementRef,
+    Input,
+    OnInit,
+    ViewChild,
+    signal,
 } from '@angular/core';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ResumeTimelineItem } from '../../../utils/resume-interface';
@@ -17,7 +17,7 @@ import { ResumeTimelineItem } from '../../../utils/resume-interface';
   selector: 'af-resume-timeline-item',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgClass, NgxScrollAnimationsModule],
+  imports: [NgClass, NgxScrollAnimationsDirective],
   templateUrl: './resume-timeline-item.component.html',
   styleUrl: './resume-timeline-item.component.scss',
 })

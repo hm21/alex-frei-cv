@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
-import { NgxScrollAnimationsModule } from 'ngx-scroll-animations';
+import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { ModalManagerService } from 'src/app/services/modal-manager.service';
@@ -13,7 +13,7 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgxScrollAnimationsModule,
+    NgxScrollAnimationsDirective,
     TypewriterComponent,
     CardEffectsDirective,
   ],

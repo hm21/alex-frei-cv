@@ -9,7 +9,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
-import { NgxImageHeroModule } from 'ngx-image-hero';
+import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { filter, fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
@@ -30,7 +30,7 @@ import {
     NgClass,
     NgStyle,
     NgTemplateOutlet,
-    NgxImageHeroModule,
+    NgxImageHeroDirective,
     SafePipe,
     ImageLoaderDirective,
   ],

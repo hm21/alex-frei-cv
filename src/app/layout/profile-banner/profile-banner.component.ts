@@ -12,7 +12,7 @@ import {
   inject,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgxImageHeroModule } from 'ngx-image-hero';
+import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -30,7 +30,7 @@ import { navItems } from '../header/utils/nav-items';
     QuicklinkModule,
     RouterLink,
     RouterLinkActive,
-    NgxImageHeroModule,
+    NgxImageHeroDirective,
   ],
   templateUrl: './profile-banner.component.html',
   styleUrl: './profile-banner.component.scss',
