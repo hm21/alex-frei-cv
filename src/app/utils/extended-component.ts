@@ -8,11 +8,11 @@ import {
   inject,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Meta, Title } from '@angular/platform-browser';
 import { AnalyticsService } from '../services/analytics/analytics.service';
-import { ScreenService } from '../services/screen.service';
-import { IS_BROWSER } from './global-tokens';
-import { MetaDataI, metaGenerator } from './meta-generator';
+import { MetaManagerService } from '../services/meta-manager/meta-manager.service';
+import { PageMetaData } from '../services/meta-manager/page-meta-data.interface';
+import { ScreenService } from '../services/screen/screen.service';
+import { IS_BROWSER } from './is-browser.provider';
 
 @Directive() // Dummy decorator
 /**
@@ -20,17 +20,16 @@ import { MetaDataI, metaGenerator } from './meta-generator';
  */
 export abstract class ExtendedComponent implements OnInit {
   /** Optional page metadata. */
-  protected pageMeta?: MetaDataI;
+  protected pageMeta?: PageMetaData;
 
   public elRef = inject<ElementRef<HTMLElement>>(ElementRef);
   public isBrowser = inject(IS_BROWSER);
   protected screen = inject(ScreenService);
   protected analytics = inject(AnalyticsService);
   protected destroyRef = inject(DestroyRef);
-  private titleRef = inject(Title);
-  private metaRef = inject(Meta);
   protected renderer = inject(Renderer2);
   protected document = inject(DOCUMENT);
+  protected metaManager = inject(MetaManagerService);
 
   ngOnInit(): void {
     this.initComponent();
@@ -60,12 +59,8 @@ export abstract class ExtendedComponent implements OnInit {
    * @param data - The metadata information.
    * @public
    */
-  public setPageMeta(data: MetaDataI): void {
-    metaGenerator({
-      ...data,
-      titleC: this.titleRef,
-      metaC: this.metaRef,
-    });
+  public setPageMeta(data: PageMetaData): void {
+    this.metaManager.generate(data);
   }
 
   /**

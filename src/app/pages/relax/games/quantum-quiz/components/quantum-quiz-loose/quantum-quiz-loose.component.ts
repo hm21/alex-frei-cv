@@ -2,12 +2,12 @@ import { DecimalPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  Input,
   OnInit,
-  Output
+  inject
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { QuizGameState } from '../../utils/quiz-enum';
+import { QuizManagerService } from '../../utils/quiz-manager.service';
 
 @Component({
   selector: 'af-quantum-quiz-loose',
@@ -25,19 +25,19 @@ export class QuantumQuizLooseComponent
   extends ExtendedComponent
   implements OnInit
 {
-  /**
-   * Event emitter for playing the game again.
-   */
-  @Output() playAgain = new EventEmitter();
-
-  /**
-   * Input for the amount of cash won.
-   */
-  @Input({ required: true }) wonCash: string | number = 0;
+  private gameManager = inject(QuizManagerService);
 
   override ngOnInit(): void {
     super.ngOnInit();
 
     this.classList.add('card');
+  }
+
+  public get wonCash() {
+    return this.gameManager.wonCash;
+  }
+
+  public playAgain() {
+    this.gameManager.gameState.set(QuizGameState.chooseTopic);
   }
 }

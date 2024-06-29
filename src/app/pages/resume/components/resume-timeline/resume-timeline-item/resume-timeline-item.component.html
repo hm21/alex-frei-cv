@@ -7,13 +7,14 @@
 
 <div class="card" ngxScrollAnimate>
   <div class="date">
-    {{ item.date }}
+    <ng-content select="[date]" />
   </div>
-  <h2>{{ item.title }}</h2>
 
-  @if (item.msg) {
-    <p>
-      {{ item.msg }}
-    </p>
-  }
+  <h2>
+    <ng-content select="[title]" />
+  </h2>
+
+  <p>
+    <ng-content select="[msg]" />
+  </p>
 </div>

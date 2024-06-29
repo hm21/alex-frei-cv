@@ -1,27 +1,15 @@
-<af-game-header [game]="game" />
+<af-game-header />
 
 <section>
   @switch (gameState()) {
     @case (GameState.instruction) {
-      <af-color-clash-instruction
-        @cardFadeInUpScale
-        (next)="gameState.set(GameState.active)"
-      />
+      <af-color-clash-instruction @cardFadeInUpScale />
     }
     @case (GameState.active) {
-      <af-color-clash-game
-        @cardFadeInUpScale
-        (finishGame)="onFinishGame($event)"
-        (updateGameState)="gameState.set($event)"
-      />
+      <af-color-clash-game @cardFadeInUpScale />
     }
     @case (GameState.evaluation) {
-      <af-color-clash-evaluation
-        @cardFadeInUpScale
-        [points]="points()"
-        [mistakes]="mistakes()"
-        (updateGameState)="gameState.set($event)"
-      />
+      <af-color-clash-evaluation @cardFadeInUpScale />
     }
   }
 </section>

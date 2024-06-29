@@ -1,7 +1,8 @@
-import { Injectable, inject, isDevMode } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { CONTACT_OPTIONS } from '../configs/contact-options';
-import { GAMES } from '../configs/games';
+import { CONTACT_OPTIONS } from '../../configs/contact-options';
+import { GAMES } from '../../configs/games';
+import { LoggerService } from '../logger/logger.service';
 import { ImageFormatSupportService } from './image-format-support.service';
 
 @Injectable({
@@ -10,11 +11,14 @@ import { ImageFormatSupportService } from './image-format-support.service';
 export class ImagePreloaderService {
   private serviceWorker = inject(SwUpdate);
   private imageFormatSupport = inject(ImageFormatSupportService);
+  private logger = inject(LoggerService);
 
   private imageFormat = 'jpeg';
   private readonly enableLogs = false;
 
-  /** Preload images which are global required */
+  /**
+   * Preloads images that are globally required.
+   */
   public async startPreloadGlobalImages() {
     await this.checkBestSupportedImageFormat();
 
@@ -34,12 +38,23 @@ export class ImagePreloaderService {
     this.preloadUrls(urls, true);
   }
 
-  private get devicePixelRatio() {
+  /**
+   * Gets the device pixel ratio, ensuring it is between 1 and 4.
+   * @returns {number} The device pixel ratio.
+   */
+  private get devicePixelRatio(): number {
     return Math.min(4, Math.max(1, window.devicePixelRatio.ceil()));
   }
 
-  /** Preload image urls */
-  public async preloadUrls(urls: string[], ignoreCheckImageFormat = false) {
+  /**
+   * Preloads image URLs.
+   * @param {string[]} urls - The URLs of the images to preload.
+   * @param {boolean} [ignoreCheckImageFormat=false] - Whether to ignore checking the best supported image format.
+   */
+  public async preloadUrls(
+    urls: string[],
+    ignoreCheckImageFormat: boolean = false,
+  ) {
     if (!ignoreCheckImageFormat) await this.checkBestSupportedImageFormat();
 
     urls = urls.map((url) => `${url}.${this.imageFormat}`);
@@ -59,6 +74,9 @@ export class ImagePreloaderService {
     }
   }
 
+  /**
+   * Checks and sets the best supported image format.
+   */
   private async checkBestSupportedImageFormat() {
     if (await this.imageFormatSupport.isAvifSupported()) {
       this.imageFormat = 'avif';
@@ -67,7 +85,12 @@ export class ImagePreloaderService {
     }
   }
 
-  private async preloadImagesWithServiceWorker(urls: string[]) {
+  /**
+   * Preloads images using the service worker.
+   * @param {string[]} urls - The URLs of the images to preload.
+   * @returns {Promise<void>}
+   */
+  private async preloadImagesWithServiceWorker(urls: string[]): Promise<void> {
     const cache = await caches.open('my-cache');
     const promises = urls.map(async (url) => {
       this.log(`Caching: ${url}`);
@@ -83,7 +106,12 @@ export class ImagePreloaderService {
     this.log('All images preloaded with service worker');
   }
 
-  private preloadImagesWithoutServiceWorker(urls: string[]) {
+  /**
+   * Preloads images without using the service worker.
+   * @param {string[]} urls - The URLs of the images to preload.
+   * @returns {Promise<void>}
+   */
+  private preloadImagesWithoutServiceWorker(urls: string[]): Promise<void> {
     return new Promise((resolve, reject) => {
       const promises = urls.map((url) => {
         return new Promise((res, rej) => {
@@ -103,7 +131,7 @@ export class ImagePreloaderService {
       Promise.all(promises)
         .then(() => {
           this.log('All images preloaded without service worker');
-          resolve(null);
+          resolve();
         })
         .catch((err) => {
           this.log('Error preloading images', { error: true });
@@ -112,12 +140,19 @@ export class ImagePreloaderService {
     });
   }
 
+  /**
+   * Logs a message if logging is enabled.
+   * @param {string} msg - The message to log.
+   * @param {Object} [options] - Optional settings for the log message.
+   * @param {boolean} [options.error=false] - Whether the log message is an error.
+   */
   private log(msg: string, options?: { error?: boolean }) {
-    if (!isDevMode() || !this.enableLogs) return;
+    if (!this.enableLogs) return;
+
     if (options?.error) {
-      console.error(msg);
+      this.logger.error(msg).print();
     } else {
-      console.log(msg);
+      this.logger.log(msg).print();
     }
   }
 }

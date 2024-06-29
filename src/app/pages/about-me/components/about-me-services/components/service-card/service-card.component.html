@@ -3,11 +3,11 @@
 </div>
 
 <h3 class="title">
-  {{ title }}
+  <ng-content select="[title]" />
 </h3>
 
 <p class="msg">
-  {{ msg }}
+  <ng-content select="[msg]" />
 </p>
 
 <ng-template #websiteIcon>

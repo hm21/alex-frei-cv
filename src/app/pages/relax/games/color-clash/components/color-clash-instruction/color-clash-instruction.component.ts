@@ -1,5 +1,12 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject
+} from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ColorClashGameState } from '../../utils/color-clash-interface';
+import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 
 @Component({
   selector: 'af-color-clash-instruction',
@@ -17,11 +24,15 @@ export class ColorClashInstructionComponent
   extends ExtendedComponent
   implements OnInit
 {
-  @Output() next = new EventEmitter();
+  private gameManager = inject(ColorClashManagerService);
 
   override ngOnInit(): void {
     super.ngOnInit();
 
     this.classList.add('card');
+  }
+
+  public next() {
+    this.gameManager.gameState.set(ColorClashGameState.active);
   }
 }

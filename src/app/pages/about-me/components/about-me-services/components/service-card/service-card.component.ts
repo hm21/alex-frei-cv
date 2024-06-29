@@ -1,11 +1,11 @@
 import {
-    ChangeDetectionStrategy,
-    Component,
-    Input,
-    OnInit,
-    TemplateRef,
-    ViewChild,
-    ViewContainerRef
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -40,10 +40,6 @@ export class ServiceCardComponent extends ExtendedComponent implements OnInit {
   @ViewChild('backendIcon', { read: TemplateRef, static: true })
   private backendIcon!: TemplateRef<any>;
 
-  /** Title of the service. */
-  @Input({ required: true }) title!: string;
-  /** Description message of the service. */
-  @Input({ required: true }) msg!: string;
   /** Icon representing the service. */
   @Input({ required: true }) icon!: ServiceCardIcon;
 

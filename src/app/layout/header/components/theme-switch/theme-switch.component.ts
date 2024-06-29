@@ -5,7 +5,7 @@ import {
   inject
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ThemeManagerService } from 'src/app/services/theme-manager.service';
+import { ThemeManagerService } from 'src/app/services/theme-manager/theme-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({

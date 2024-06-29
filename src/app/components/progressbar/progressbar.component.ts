@@ -36,13 +36,6 @@ export class ProgressbarComponent
    */
   @Input({ required: true, transform: numberAttribute }) progress!: number;
 
-  /**
-   * The name of the progress bar.
-   * @type {string}
-   * @required
-   */
-  @Input({ required: true }) name!: string;
-
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;
 
@@ -57,17 +50,17 @@ export class ProgressbarComponent
 
     fromEvent(this.document, 'scroll')
       .pipe(
-        this.destroyPipe(),
         throttleTime(50, undefined, { leading: true, trailing: true }),
         startWith(null),
         delay(1),
         map(() => {
           const rect = barElement.getBoundingClientRect();
           const windowHeight =
-            window.innerHeight || this.document.documentElement.clientHeight;
+          window.innerHeight || this.document.documentElement.clientHeight;
           const isVisible = rect.top < windowHeight;
           return isVisible ? this.progress : 0;
         }),
+        this.destroyPipe(),
       )
       .subscribe((width) => {
         this.renderer.setStyle(barElement, 'width', `${width}%`);

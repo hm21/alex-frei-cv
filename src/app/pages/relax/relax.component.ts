@@ -8,9 +8,9 @@ import { RouterLink } from '@angular/router';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { GAMES } from 'src/app/configs/games';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
-import { ImagePreloaderService } from 'src/app/services/image-preloader.service';
+import { ImagePreloaderService } from 'src/app/services/image-manager/image-preloader.service';
+import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { MetaDataI } from 'src/app/utils/meta-generator';
 
 @Component({
   selector: 'af-relax',
@@ -23,7 +23,7 @@ import { MetaDataI } from 'src/app/utils/meta-generator';
 export class RelaxComponent extends ExtendedComponent {
   public games = GAMES;
 
-  protected override pageMeta: MetaDataI = {
+  protected override pageMeta: PageMetaData = {
     title: $localize`Time to relax and play`,
     description: $localize`Let's play a mini-game to relax a bit!`,
   };

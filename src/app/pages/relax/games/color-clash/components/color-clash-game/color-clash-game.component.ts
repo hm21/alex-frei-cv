@@ -10,10 +10,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
-  EventEmitter,
   OnDestroy,
   OnInit,
-  Output,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
@@ -32,15 +30,15 @@ import {
   tap,
   timer,
 } from 'rxjs';
-import { ThemeManagerService } from 'src/app/services/theme-manager.service';
+import { ThemeManagerService } from 'src/app/services/theme-manager/theme-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
-  ColorClashFinishEvent,
   ColorClashGameButton,
   ColorClashGameItem,
   ColorClashGameState,
   ColorClashRandomItem,
 } from '../../utils/color-clash-interface';
+import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 
 @Component({
   selector: 'af-color-clash-game',
@@ -87,16 +85,6 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  /**
-   * Event emitted when the game finishes.
-   */
-  @Output() finishGame = new EventEmitter<ColorClashFinishEvent>();
-
-  /**
-   * Event emitted when the game state is updated.
-   */
-  @Output() updateGameState = new EventEmitter<ColorClashGameState>();
-
   /**
    * Enumeration of possible game states.
    */
@@ -149,16 +137,6 @@ export class ColorClashGameComponent
   public warmUpRounds = signal(0);
 
   /**
-   * Number of points earned by the player.
-   */
-  private points = 0;
-
-  /**
-   * Number of mistakes made by the player.
-   */
-  private mistakes = 0;
-
-  /**
    * Number of items generated.
    */
   private itemCount = 0;
@@ -187,6 +165,7 @@ export class ColorClashGameComponent
 
   private sanitizer = inject(DomSanitizer);
   public theme = inject(ThemeManagerService);
+  private gameManager = inject(ColorClashManagerService);
 
   override ngOnInit(): void {
     if (this.isBrowser) {
@@ -235,6 +214,7 @@ export class ColorClashGameComponent
         this.buttonTap(btn.id, btn.color);
       });
   }
+
   /**
    * Listens for theme change events.
    */
@@ -434,7 +414,9 @@ export class ColorClashGameComponent
         : lastItem!.id === id;
 
     if (this.activeCountdown) {
-      lastItem.isCorrect ? this.points++ : this.mistakes++;
+      lastItem.isCorrect
+        ? this.gameManager.points.update((val) => val + 1)
+        : this.gameManager.mistakes.update((val) => val + 1);
     }
 
     timer(1)
@@ -537,20 +519,23 @@ export class ColorClashGameComponent
 
     if (
       !highScore.points ||
-      this.mistakes < highScore?.mistakes ||
-      (this.mistakes <= highScore?.mistakes && this.points > highScore.points)
+      this.gameManager.mistakes() < highScore?.mistakes ||
+      (this.gameManager.mistakes() <= highScore?.mistakes &&
+        this.gameManager.points() > highScore.points)
     ) {
       localStorage.setItem(
         'color-clash-high-score',
         JSON.stringify({
-          points: this.points,
-          mistakes: this.mistakes,
+          points: this.gameManager.points(),
+          mistakes: this.gameManager.mistakes(),
         }),
       );
     }
-    this.finishGame.emit({
-      points: this.points,
-      mistakes: this.mistakes,
-    });
+
+    this.gameManager.gameState.set(ColorClashGameState.evaluation);
+  }
+
+  public openInstructions() {
+    this.gameManager.gameState.set(ColorClashGameState.instruction);
   }
 }

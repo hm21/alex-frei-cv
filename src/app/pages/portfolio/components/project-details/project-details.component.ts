@@ -14,7 +14,7 @@ import { filter, fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { ModalManagerService } from 'src/app/services/modal-manager.service';
+import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
   BadgeTemplateI,

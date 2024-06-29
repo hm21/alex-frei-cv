@@ -4,7 +4,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { CONTACT_MESSAGES } from 'src/app/configs/contact-options';
-import { environment } from 'src/environments/environment';
+import { Endpoints } from 'src/app/utils/endpoints/endpoints.interface';
+import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ContactFormComponent } from './contact-form.component';
 
@@ -13,15 +14,14 @@ describe('ContactFormComponent', () => {
   let fixture: ComponentFixture<ContactFormComponent>;
   let httpMock: HttpTestingController;
   let submitButton: DebugElement;
+  let endpoints: Endpoints;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ContactFormComponent, ReactiveFormsModule, SharedTestingModule],
       teardown: { destroyAfterEach: false },
     }).compileComponents();
-  });
-
-  beforeEach(() => {
+ 
     fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
     const formValue = {
@@ -32,6 +32,7 @@ describe('ContactFormComponent', () => {
     };
     component.form.setValue(formValue);
     httpMock = TestBed.inject(HttpTestingController);
+    endpoints = TestBed.inject(ENDPOINTS);
     fixture.detectChanges();
     submitButton = fixture.debugElement.query(By.css('button[type="submit"]'));
   });
@@ -102,7 +103,7 @@ describe('ContactFormComponent', () => {
     });
     component.submit$.next();
 
-    const req = httpMock.expectOne(environment.endpoints.contactMessage);
+    const req = httpMock.expectOne(endpoints.contactMessage);
     expect(req.request.method).toBe('POST');
     req.flush({});
 
@@ -123,7 +124,7 @@ describe('ContactFormComponent', () => {
     });
     component.submit$.next();
 
-    const req = httpMock.expectOne(environment.endpoints.contactMessage);
+    const req = httpMock.expectOne(endpoints.contactMessage);
     req.flush(
       { error: 'Blacklist' },
       { status: 400, statusText: 'Bad Request' },

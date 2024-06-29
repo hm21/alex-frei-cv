@@ -1,5 +1,5 @@
 <div class="play-content">
-  @if (level() < quiz().length) {
+  @if (level() < quizQuestions().length) {
     <div class="question-container">
       @switch (state()) {
         @case ("pending") {

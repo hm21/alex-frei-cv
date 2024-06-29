@@ -13,9 +13,9 @@ import { delay, filter, fromEvent, switchMap, take, tap } from 'rxjs';
 import {
   AnimationElementI,
   CardEffectManagerService,
-} from '../services/card-effect-manager.service';
-import { generateUniqueId } from '../utils/generate_unique_id';
-import { IS_BROWSER } from '../utils/global-tokens';
+} from '../services/card-effect-manager/card-effect-manager.service';
+import { IdManagerService } from '../services/id-manager/id-manager.service';
+import { IS_BROWSER } from '../utils/is-browser.provider';
 
 @Directive({
   selector: '[afCardEffects]',
@@ -31,6 +31,7 @@ export class CardEffectsDirective implements OnInit {
   private elRef = inject(ElementRef);
   private destroyRef = inject(DestroyRef);
   private isBrowser = inject(IS_BROWSER);
+  private idManager = inject(IdManagerService);
 
   private animationElement!: AnimationElementI;
 
@@ -59,7 +60,7 @@ export class CardEffectsDirective implements OnInit {
         }
       },
       element: this.elementRef,
-      id: generateUniqueId(),
+      id: this.idManager.generateUniqueId(),
     };
   }
 

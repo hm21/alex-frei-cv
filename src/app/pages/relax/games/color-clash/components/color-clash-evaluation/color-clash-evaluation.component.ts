@@ -1,15 +1,12 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  Input,
   OnInit,
-  Output,
-  numberAttribute,
-  signal,
+  inject
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ColorClashGameState } from '../../utils/color-clash-interface';
+import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 
 @Component({
   selector: 'af-color-clash-evaluation',
@@ -27,69 +24,55 @@ export class ColorClashEvaluationComponent
   extends ExtendedComponent
   implements OnInit
 {
-  /** Event emitter for updating the game state. */
-  @Output() updateGameState = new EventEmitter<ColorClashGameState>();
-  /** Enumeration of Color Clash game states. */
-  public GameState = ColorClashGameState;
-
-  /** Number of points achieved in the game. */
-  @Input({ required: true, transform: numberAttribute }) points = 0;
-  /** Number of mistakes made in the game. */
-  @Input({ required: true, transform: numberAttribute }) mistakes = 0;
-
   /** Message indicating the evaluation of the performance. */
-  public msg = signal('');
+  public msg = '';
   /** Message indicating the current high score. */
-  public highScoreMsg = signal('');
+  public highScoreMsg = '';
+
+  private gameManager = inject(ColorClashManagerService);
 
   override ngOnInit(): void {
     super.ngOnInit();
     this.generateRatingText();
 
-    if (this.isBrowser) this.generateHighScore();
+    if (this.isBrowser) this.generateHighScoreMsg();
 
     this.classList.add('card');
   }
 
+  public get points() {
+    return this.gameManager.points;
+  }
+  public get mistakes() {
+    return this.gameManager.mistakes;
+  }
+  public playAgain() {
+    this.gameManager.gameState.set(ColorClashGameState.active);
+  }
+
   /** Generates the rating text based on points and mistakes. */
   private generateRatingText() {
-    if (this.mistakes > 5) {
-      this.msg.set(
-        $localize`You made a lot of mistakes. Take it slow next time, I\'m sure you can get better!`,
-      );
-    } else if (this.mistakes > 0) {
-      this.msg.set(
-        $localize`Not bad, you just made a few mistakes. But can you also do it without any mistakes?`,
-      );
+    if (this.mistakes() > 5) {
+      this.msg = $localize`You made a lot of mistakes. Take it slow next time, I\'m sure you can get better!`;
+    } else if (this.mistakes() > 0) {
+      this.msg = $localize`Not bad, you just made a few mistakes. But can you also do it without any mistakes?`;
     } else {
-      this.msg.set(
-        $localize`Great job, you didn\'t make any mistakes. But can you score more points in that time without making any mistakes?`,
-      );
-      if (this.points < 60) {
-        this.msg.update(
-          (msg) =>
-            msg +
-            $localize`&nbspThe goal is to score more than 60 points without any mistakes!`,
-        );
+      this.msg = $localize`Great job, you didn\'t make any mistakes. But can you score more points in that time without making any mistakes?`;
+      if (this.points() < 60) {
+        this.msg += $localize`&nbspThe goal is to score more than 60 points without any mistakes!`;
       } else {
-        this.msg.update(
-          (msg) =>
-            msg +
-            $localize`&nbspBut wait a minute, you got more than 60 points?!! That's awesome, seems like you're a genius!`,
-        );
+        this.msg += $localize`&nbspBut wait a minute, you got more than 60 points?!! That's awesome, seems like you're a genius!`;
       }
     }
   }
 
   /** Generates the high score message. */
-  private generateHighScore() {
+  private generateHighScoreMsg() {
     const highScore = JSON.parse(
       localStorage.getItem('color-clash-high-score') ?? '{}',
     );
     if (highScore.points) {
-      this.highScoreMsg.set(
-        $localize`Your current high score is ${highScore.points} points with ${highScore.mistakes} mistakes!`,
-      );
+      this.highScoreMsg = $localize`Your current high score is ${highScore.points} points with ${highScore.mistakes} mistakes!`;
     }
   }
 }

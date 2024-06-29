@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { QuantumQuizComponent } from './quantum-quiz.component';
+import { QuizManagerService } from './utils/quiz-manager.service';
 
 describe('QuantumQuizComponent', () => {
   let component: QuantumQuizComponent;
@@ -9,10 +10,10 @@ describe('QuantumQuizComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [QuantumQuizComponent, SharedTestingModule]
-    })
-    .compileComponents();
-    
+      imports: [QuantumQuizComponent, SharedTestingModule],
+      providers: [QuizManagerService],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(QuantumQuizComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

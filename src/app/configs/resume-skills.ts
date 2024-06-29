@@ -3,46 +3,46 @@ import { SkillItem } from '../pages/resume/utils/resume-interface';
 export const FRONTEND_SKILLS: SkillItem[] = [
   {
     name: `Angular`,
-    skill: 100,
+    skillLevel: 100,
   },
   {
     name: `Flutter`,
-    skill: 100,
+    skillLevel: 100,
   },
   {
     name: `Typescript / Javascript`,
-    skill: 95,
+    skillLevel: 95,
   },
   {
     name: `HTML / CSS`,
-    skill: 95,
+    skillLevel: 95,
   },
   {
     name: `Ionic`,
-    skill: 85,
+    skillLevel: 85,
   },
 ];
 
 export const BACKEND_SKILLS: SkillItem[] = [
   {
     name: `Firebase`,
-    skill: 100,
+    skillLevel: 100,
   },
   {
     name: `Supabase`,
-    skill: 85,
+    skillLevel: 85,
   },
   {
     name: `Google Cloud`,
-    skill: 80,
+    skillLevel: 80,
   },
   {
     name: `.NET`,
-    skill: 30,
+    skillLevel: 30,
   },
   {
     name: `Azure`,
-    skill: 20,
+    skillLevel: 20,
   },
 ];
 

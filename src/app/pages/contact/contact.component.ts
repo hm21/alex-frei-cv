@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CONTACT_OPTIONS } from 'src/app/configs/contact-options';
+import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { MetaDataI } from 'src/app/utils/meta-generator';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
@@ -16,7 +16,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 export class ContactComponent extends ExtendedComponent {
   public contactOptions = CONTACT_OPTIONS;
 
-  protected override pageMeta: MetaDataI = {
+  protected override pageMeta: PageMetaData = {
     title: $localize`Contact Alex Frei`,
     description: $localize`Contact Alex Frei right now.`,
   };

@@ -9,11 +9,7 @@ export function getTheme(): 'light' | 'dark' {
     | undefined
     | null;
 
-  if (localStorageTheme) {
-    return localStorageTheme;
-  }
-
-  return 'light';
+  return localStorageTheme ?? 'light';
   /* Optional auto detect the design
   
    const systemThemeIsDark = window.matchMedia(

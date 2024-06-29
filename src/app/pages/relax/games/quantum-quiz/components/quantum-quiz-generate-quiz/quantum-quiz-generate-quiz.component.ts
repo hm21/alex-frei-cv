@@ -1,12 +1,9 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  OnInit,
-  Output
+  OnInit
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { Quiz } from '../../utils/quiz-interface';
 
 @Component({
   selector: 'af-quantum-quiz-generate-quiz',
@@ -24,8 +21,6 @@ export class QuantumQuizGenerateQuizComponent
   extends ExtendedComponent
   implements OnInit
 {
-  @Output() generatedQuiz = new EventEmitter<Quiz[]>();
-
   override ngOnInit(): void {
     super.ngOnInit();
 

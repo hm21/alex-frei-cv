@@ -35,5 +35,5 @@ export interface SkillItem {
   /**
    * The skill level (a number representing the proficiency).
    */
-  skill: number;
+  skillLevel: number;
 }

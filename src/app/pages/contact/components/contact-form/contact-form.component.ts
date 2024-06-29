@@ -4,8 +4,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
-  inject,
-  isDevMode,
+  inject
 } from '@angular/core';
 import {
   FormControl,
@@ -28,8 +27,9 @@ import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
+import { LoggerService } from 'src/app/services/logger/logger.service';
+import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'af-contact-form',
@@ -64,8 +64,9 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   /** Number of times the form submission has been attempted. */
   private sendTries = 0;
 
-  /** HttpClient for making HTTP requests. */
   private http = inject(HttpClient);
+  private endpoints = inject(ENDPOINTS);
+  private logger = inject(LoggerService);
 
   override ngOnInit(): void {
     this.form.valueChanges
@@ -86,7 +87,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
         tap((form) => this.prepareFormForSubmission(form)),
         switchMap((form) =>
           this.http
-            .post(environment.endpoints.contactMessage, form.value)
+            .post(this.endpoints.contactMessage, form.value)
             .pipe(catchError((err) => this.handleError(err))),
         ),
         filter((res) => res !== 'error'),
@@ -143,7 +144,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
    * @returns An observable that emits 'error'.
    */
   private handleError(err: any): Observable<any> {
-    if (isDevMode()) console.error(err);
+    this.logger.error(err).print();
 
     if (err.error === 'Blacklist') {
       this.formState$.next({

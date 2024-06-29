@@ -3,18 +3,16 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
-  EventEmitter,
   OnInit,
-  Output,
   ViewChild,
   computed,
-  input,
+  inject,
   signal
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { QuizGameState } from '../../utils/quiz-enum';
-import { GameStateChanged, Quiz } from '../../utils/quiz-interface';
+import { QuizManagerService } from '../../utils/quiz-manager.service';
 import { QuantumQuizGenerateQuizComponent } from '../quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component';
 
 @Component({
@@ -54,17 +52,6 @@ export class QuantumQuizGameComponent
   @ViewChild('answerRefD') answerRefD!: ElementRef<HTMLButtonElement>;
 
   /**
-   * Event emitter for state changes in the game.
-   */
-  @Output() stateChanged = new EventEmitter<GameStateChanged>();
-
-  /**
-   * Input property for the quiz data.
-   * The quiz data contains an array of Quiz objects.
-   */
-  public quiz = input.required<Quiz[]>();
-
-  /**
    * The current level of the game.
    */
   public level = signal(0);
@@ -83,6 +70,12 @@ export class QuantumQuizGameComponent
     1_000, 500, 300, 200, 100, 50,
   ];
 
+  private gameManager = inject(QuizManagerService);
+
+  public get quizQuestions() {
+    return this.gameManager.questions;
+  }
+
   override ngOnInit(): void {
     this.listenShortcutKeys();
     super.ngOnInit();
@@ -93,7 +86,7 @@ export class QuantumQuizGameComponent
    * @param option The selected option ('A', 'B', 'C', or 'D').
    */
   public selectOption(option: 'A' | 'B' | 'C' | 'D') {
-    if (this.level() >= this.quiz().length) return;
+    if (this.level() >= this.quizQuestions().length) return;
 
     if (this.correctAnswerLetter() === option) {
       if (this.level() >= 14) {
@@ -119,7 +112,7 @@ export class QuantumQuizGameComponent
    * Moves to the next page in the game.
    */
   public nextPage() {
-    this.stateChanged.emit({
+    this.gameManager.onStateChanged({
       currentCash: this.cashList[15 - this.level()],
       state: this.state() !== 'wrong' ? QuizGameState.won : QuizGameState.loose,
     });
@@ -183,42 +176,42 @@ export class QuantumQuizGameComponent
    * Computed property for the active question in the game.
    */
   public activeQuestion = computed(() => {
-    return this.quiz()[this.level()].question;
+    return this.quizQuestions()[this.level()].question;
   });
 
   /**
    * Computed property for answer option A in the game.
    */
   public answerA = computed(() => {
-    return this.quiz()[this.level()].answers[0];
+    return this.quizQuestions()[this.level()].answers[0];
   });
 
   /**
    * Computed property for answer option B in the game.
    */
   public answerB = computed(() => {
-    return this.quiz()[this.level()].answers[1];
+    return this.quizQuestions()[this.level()].answers[1];
   });
 
   /**
    * Computed property for answer option C in the game.
    */
   public answerC = computed(() => {
-    return this.quiz()[this.level()].answers[2];
+    return this.quizQuestions()[this.level()].answers[2];
   });
 
   /**
    * Computed property for answer option D in the game.
    */
   public answerD = computed(() => {
-    return this.quiz()[this.level()].answers[3];
+    return this.quizQuestions()[this.level()].answers[3];
   });
 
   /**
    * Computed property for the correct answer letter in the game.
    */
   public correctAnswerLetter = computed(() => {
-    switch (this.quiz()[this.level()].correctAnswer) {
+    switch (this.quizQuestions()[this.level()].correctAnswer) {
       case 0:
         return 'A';
       case 1:

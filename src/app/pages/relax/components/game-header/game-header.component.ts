@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
-import { Game } from '../../utils/game-model';
+import { GAME } from '../../utils/game.token';
 
 @Component({
   selector: 'af-game-header',
@@ -10,9 +10,15 @@ import { Game } from '../../utils/game-model';
   styleUrl: './game-header.component.scss',
 })
 export class GameHeaderComponent {
-  @Input({ required: true }) set game(game: Game) {
-    this.gameName = game.name;
-    const rawPath = `assets/img/game/${game.id}/${game.id}_4x`;
+  public gameName = '';
+  public fallbackPath = '';
+  public imagePaths: { path: string; type: string }[] = [];
+
+  private game = inject(GAME);
+
+  ngOnInit(): void {
+    this.gameName = this.game.name;
+    const rawPath = `assets/img/game/${this.game.id}/${this.game.id}_4x`;
 
     this.imagePaths.clear();
     ['avif', 'webp', 'jpeg'].forEach((format) => {
@@ -23,8 +29,4 @@ export class GameHeaderComponent {
     });
     this.fallbackPath = `${rawPath}.jpeg`;
   }
-
-  public gameName = '';
-  public fallbackPath = '';
-  public imagePaths: { path: string; type: string }[] = [];
 }

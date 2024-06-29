@@ -1,24 +1,28 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { QuizManagerService } from '../../utils/quiz-manager.service';
 import { QuantumQuizGameComponent } from './quantum-quiz-game.component';
 
 describe('QuantumQuizGameComponent', () => {
   let component: QuantumQuizGameComponent;
   let fixture: ComponentFixture<QuantumQuizGameComponent>;
+  let gameManager: QuizManagerService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [QuantumQuizGameComponent, SharedTestingModule],
-      teardown: {destroyAfterEach: false} 
+      providers: [QuizManagerService],
+      teardown: { destroyAfterEach: false },
     }).compileComponents();
+
+    gameManager = TestBed.inject(QuizManagerService);
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(QuantumQuizGameComponent);
     component = fixture.componentInstance;
 
-    fixture.componentRef.setInput(
-      'quiz',
+    gameManager.questions.set(
       Array.from({ length: 15 }, () => {
         return {
           question: 'Test Question',

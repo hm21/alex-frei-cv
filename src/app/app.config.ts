@@ -20,40 +20,36 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { provideNgxCountAnimations } from 'ngx-count-animation';
 import { QuicklinkStrategy } from 'ngx-quicklink';
 import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
-import { environment } from 'src/environments/environment';
 import '../app/utils/extensions/extensions';
 import { routes } from './app.routes';
-import { IS_BROWSER } from './utils/global-tokens';
+import { provideLogger } from './services/logger/logger-configs.provider';
+import { provideEndpoints } from './utils/endpoints/endpoints.provider';
+import { providePlatformDetection } from './utils/is-browser.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideLogger(),
+    provideEndpoints(),
+    providePlatformDetection(),
+    provideNgxScrollAnimations({ once: false }),
+    provideNgxCountAnimations(),
+
     provideExperimentalZonelessChangeDetection(),
+    provideAnimations(),
+    provideHttpClient(withFetch()),
+    provideClientHydration(withI18nSupport()),
     provideRouter(
       routes,
       withPreloading(QuicklinkStrategy),
       withEnabledBlockingInitialNavigation(),
       withInMemoryScrolling({
-        scrollPositionRestoration: environment.production
-          ? 'enabled'
-          : 'disabled',
+        scrollPositionRestoration: isDevMode() ? 'disabled' : 'enabled',
         anchorScrolling: 'enabled',
       }),
     ),
-    provideClientHydration(withI18nSupport()),
-    provideHttpClient(withFetch()),
-    provideAnimations(),
-    provideNgxScrollAnimations({
-      animationName: 'fade-in-up',
-      once: false,
-    }),
-    provideNgxCountAnimations(),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:3000',
     }),
-    {
-      provide: IS_BROWSER,
-      useValue: true,
-    },
   ],
 };

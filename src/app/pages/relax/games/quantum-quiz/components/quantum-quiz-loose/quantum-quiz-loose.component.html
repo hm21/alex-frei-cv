@@ -62,12 +62,12 @@
 <p i18n>
   It seems like you still have more to learn about this topic before you can
   master it. Try a new topic, and let's see if you can win more than
-  {{ +wonCash | number: "1.2-2" }} CHF there.
+  {{ +wonCash() | number: "1.2-2" }} CHF there.
 </p>
 <br />
 
 <div class="action-row">
-  <button (click)="playAgain.emit()" class="button" type="button" i18n>
+  <button (click)="playAgain()" class="button" type="button" i18n>
     Play again
   </button>
 </div>

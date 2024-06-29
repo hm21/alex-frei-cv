@@ -1,23 +1,19 @@
-import { NgClass } from '@angular/common';
 import {
-    ChangeDetectionStrategy,
-    Component,
-    ElementRef,
-    Input,
-    OnInit,
-    ViewChild,
-    signal,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { ResumeTimelineItem } from '../../../utils/resume-interface';
 
 @Component({
   selector: 'af-resume-timeline-item',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgClass, NgxScrollAnimationsDirective],
+  imports: [NgxScrollAnimationsDirective],
   templateUrl: './resume-timeline-item.component.html',
   styleUrl: './resume-timeline-item.component.scss',
 })
@@ -26,20 +22,6 @@ export class ResumeTimelineItemComponent
   implements OnInit
 {
   @ViewChild('sonar') sonar!: ElementRef<HTMLElement>;
-
-  /**
-   * Represents a single item in the resume timeline.
-   */
-  @Input({ required: true }) item!: ResumeTimelineItem;
-
-  /**
-   * Represents the animation state of the resume timeline item.
-   */
-  public animationState = signal('stop');
-
-  override ngOnInit(): void {
-    super.ngOnInit();
-  }
 
   ngAfterViewInit(): void {
     this.hoverListener();

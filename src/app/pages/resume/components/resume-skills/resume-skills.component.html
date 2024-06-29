@@ -1,6 +1,8 @@
 <h2 class="section-title" i18n>Frontend skills</h2>
 @for (item of frontendSkills; track $index) {
-  <af-progressbar [progress]="item.skill" [name]="item.name" />
+  <af-progressbar [progress]="item.skillLevel">
+    <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
+  </af-progressbar>
 }
 
 <h2 style="--color-primary: #0ba376" class="section-title mt4" i18n>
@@ -9,9 +11,10 @@
 @for (item of backendSkills; track $index) {
   <af-progressbar
     style="--color-primary-600: #29ca9a; --color-primary-700: #0ba376"
-    [progress]="item.skill"
-    [name]="item.name"
-  />
+    [progress]="item.skillLevel"
+  >
+    <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
+  </af-progressbar>
 }
 
 <h2

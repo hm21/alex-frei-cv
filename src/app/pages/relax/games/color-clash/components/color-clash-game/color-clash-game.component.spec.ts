@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 import { ColorClashGameComponent } from './color-clash-game.component';
 
 describe('ColorClashGameComponent', () => {
@@ -14,6 +15,7 @@ describe('ColorClashGameComponent', () => {
         BrowserAnimationsModule,
         SharedTestingModule,
       ],
+      providers: [ColorClashManagerService],
       teardown: { destroyAfterEach: false },
     }).compileComponents();
   });
@@ -42,7 +44,7 @@ describe('ColorClashGameComponent', () => {
     await new Promise((res) => setTimeout(() => res(null), 1));
 
     const initialTime = component.timeBanner.nativeElement.innerHTML;
-    
+
     component['startCountdown']();
 
     await new Promise((res) => setTimeout(() => res(null), 1001));

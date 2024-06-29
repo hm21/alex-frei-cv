@@ -1,18 +1,17 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  Input,
   OnDestroy,
   OnInit,
-  Output,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
+  inject,
   signal
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { QuizManagerService } from '../../utils/quiz-manager.service';
 
 @Component({
   selector: 'af-quantum-quiz-choose-topic',
@@ -25,7 +24,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
     '../../../../styles/game-button.scss',
     './quantum-quiz-choose-topic.component.scss',
   ],
-  
 })
 export class QuantumQuizChooseTopicComponent
   extends ExtendedComponent
@@ -44,26 +42,20 @@ export class QuantumQuizChooseTopicComponent
   errorTemplate!: TemplateRef<any>;
 
   /**
-   * The error message to display.
-   */
-  @Input() errorMsg?: string;
-
-  /**
-   * Event emitter for generating a quiz.
-   */
-  @Output() generateQuiz = new EventEmitter<string>();
-
-  /**
    * The selected topic for the quiz.
    */
   public topic = signal('');
+
+  private gameManager = inject(QuizManagerService);
 
   override ngOnInit(): void {
     super.ngOnInit();
 
     this.classList.add('card');
 
-    if (this.errorMsg) this.createError(this.errorMsg);
+    if (this.gameManager.generateErrorMsg()) {
+      this.createError(this.gameManager.generateErrorMsg());
+    }
   }
 
   ngOnDestroy(): void {
@@ -76,18 +68,19 @@ export class QuantumQuizChooseTopicComponent
    */
   public generate(random?: boolean) {
     this.errorRef.clear();
-    if (!random) {
-      if (this.topic().length < 3 || this.topic().length > 20) {
-        this.createError(
-          $localize`The topic must be between 3 and 20 characters long!`,
-        );
-      } else if (!isNaN(+this.topic())) {
-        this.createError($localize`The topic must be a text and not a number`);
-      } else {
-        this.generateQuiz.emit(random ? undefined : this.topic());
-      }
+    if (random) {
+      this.gameManager.generateQuiz(random ? undefined : this.topic());
+      return;
+    }
+
+    if (this.topic().length < 3 || this.topic().length > 20) {
+      this.createError(
+        $localize`The topic must be between 3 and 20 characters long!`,
+      );
+    } else if (!isNaN(+this.topic())) {
+      this.createError($localize`The topic must be a text and not a number`);
     } else {
-      this.generateQuiz.emit(random ? undefined : this.topic());
+      this.gameManager.generateQuiz(random ? undefined : this.topic());
     }
   }
 

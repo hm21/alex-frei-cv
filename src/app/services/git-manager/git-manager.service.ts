@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { IS_BROWSER } from '../utils/global-tokens';
+import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
+import { IS_BROWSER } from '../../utils/is-browser.provider';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +10,7 @@ import { IS_BROWSER } from '../utils/global-tokens';
 export class GitManagerService {
   private gitCommitCount = 0;
 
+  private endpoints = inject(ENDPOINTS);
   private isBrowser = inject(IS_BROWSER);
   private http = inject(HttpClient);
 
@@ -22,7 +23,7 @@ export class GitManagerService {
       return of(this.gitCommitCount);
     }
 
-    return this.http.get<number>(environment.endpoints.gitCommitCount).pipe(
+    return this.http.get<number>(this.endpoints.gitCommitCount).pipe(
       tap(val=>{
         this.gitCommitCount = val;
       })

@@ -16,9 +16,14 @@ import {
   QuicklinkStrategy,
   quicklinkProviders,
 } from 'ngx-quicklink';
-import { NgxScrollAnimationsDirective, provideNgxScrollAnimations } from 'ngx-scroll-animations';
+import {
+  NgxScrollAnimationsDirective,
+  provideNgxScrollAnimations,
+} from 'ngx-scroll-animations';
 import { routes } from 'src/app/app.routes';
-import { IS_BROWSER } from 'src/app/utils/global-tokens';
+import { provideLogger } from 'src/app/services/logger/logger-configs.provider';
+import { provideEndpoints } from 'src/app/utils/endpoints/endpoints.provider';
+import { providePlatformDetection } from 'src/app/utils/is-browser.provider';
 import '../app/utils/extensions/extensions';
 
 @NgModule({
@@ -30,11 +35,10 @@ import '../app/utils/extensions/extensions';
   ],
   exports: [HttpClientTestingModule, NgxScrollAnimationsDirective],
   providers: [
-    {
-      provide: IS_BROWSER,
-      useValue: true,
-    },
     quicklinkProviders,
+    provideEndpoints(),
+    provideLogger(),
+    providePlatformDetection(),
     provideExperimentalZonelessChangeDetection(),
     provideNgxScrollAnimations(),
     provideNgxCountAnimations(),

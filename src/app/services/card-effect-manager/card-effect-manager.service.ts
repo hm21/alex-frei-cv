@@ -4,15 +4,15 @@ import {
   Subject,
   delay,
   filter,
-  interval,
   map,
   of,
   startWith,
   switchMap,
   takeUntil,
   tap,
+  timer
 } from 'rxjs';
-import { ScreenService } from './screen.service';
+import { ScreenService } from '../screen/screen.service';
 
 @Injectable({
   providedIn: 'root',
@@ -75,10 +75,7 @@ export class CardEffectManagerService {
             this.maxRandomDelay,
           );
 
-          return interval(delay).pipe(
-            startWith(0),
-            takeUntil(this.stopRandomInterval$),
-          );
+          return timer(0, delay).pipe(takeUntil(this.stopRandomInterval$));
         }),
         map(() =>
           this.animationItems.filter(

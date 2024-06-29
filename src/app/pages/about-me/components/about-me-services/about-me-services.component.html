@@ -15,9 +15,10 @@
       aos="70"
       thresholdMode="pixel"
       speed="600"
-      [title]="item.title"
-      [msg]="item.msg"
       [icon]="item.icon"
-    />
+    >
+      <ng-container ngProjectAs="[title]">{{ item.title }}</ng-container>
+      <ng-container ngProjectAs="[msg]">{{ item.msg }}</ng-container>
+    </af-service-card>
   }
 </section>

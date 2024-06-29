@@ -3,7 +3,7 @@ import { SafeHtml } from '@angular/platform-browser';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
-import { ModalManagerService } from 'src/app/services/modal-manager.service';
+import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { PROJECT_SNAPTAB } from '../../utils/projects/project-snaptab';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';

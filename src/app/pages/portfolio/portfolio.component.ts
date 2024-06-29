@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
-import { ModalManagerService } from 'src/app/services/modal-manager.service';
+import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
+import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { MetaDataI } from 'src/app/utils/meta-generator';
 import { BusinessProjectsComponent } from './components/business-projects/business-projects.component';
 import { OtherProjectsComponent } from './components/other-projects/other-projects.component';
 
@@ -19,7 +19,7 @@ import { OtherProjectsComponent } from './components/other-projects/other-projec
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent extends ExtendedComponent {
-  protected override pageMeta: MetaDataI = {
+  protected override pageMeta: PageMetaData = {
     title: $localize`Portfolio Alex Frei`,
     description: $localize`Take a look at the portfolio to know more about Alex Frei`,
   };
