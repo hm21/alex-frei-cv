@@ -21,42 +21,98 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/recommended-pages/recommended-pages.component.html</context>
-          <context context-type="linenumber">9,11</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4519990428097513339" datatype="html">
+        <source>Valid email address is required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2619411074304656554" datatype="html">
+        <source>&lt;b&gt;First Name&lt;/b&gt;, &lt;b&gt;Last Name&lt;/b&gt;, and &lt;b&gt;Message&lt;/b&gt; as well as &lt;b&gt;E-Mail&lt;/b&gt; are required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1748905913180075343" datatype="html">
+        <source>Too many attempts to send the form. Try again later.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3595827728359307152" datatype="html">
+        <source>The request has been successfully submitted.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5991432110094363437" datatype="html">
+        <source>Unknown error! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4424606546053357541" datatype="html">
+        <source>Invalid data sent. Please fill out the form correctly and try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3927696452050800576" datatype="html">
+        <source>Forbidden request to the server.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8639017100793272214" datatype="html">
+        <source>Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9199677421881026415" datatype="html">
         <source>WhatsApp</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2746956598378576216" datatype="html">
         <source>Open WhatsApp</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6398433642385327932" datatype="html">
         <source>Call</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7757671823665330300" datatype="html">
         <source>Start call</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8115083664628466958" datatype="html">
         <source>E-Mail</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
@@ -64,14 +120,14 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="linenumber">27,28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1059908080981133475" datatype="html">
         <source>Send E-Mail</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8127702299304006653" datatype="html">
@@ -110,7 +166,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5163146092400769584" datatype="html">
@@ -121,7 +177,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2573931776396641837" datatype="html">
@@ -488,8 +544,8 @@
           <context context-type="linenumber">75</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">172</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
+          <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
@@ -656,7 +712,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.html</context>
-          <context context-type="linenumber">9,11</context>
+          <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7194501120282715188" datatype="html">
@@ -776,7 +832,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.html</context>
-          <context context-type="linenumber">9,11</context>
+          <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1450372883954287287" datatype="html">
@@ -784,105 +840,49 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
-          <context context-type="linenumber">9,11</context>
+          <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1483267419452198083" datatype="html">
         <source>Fun-Facts</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6988462155330136998" datatype="html">
         <source>About this Website</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
-          <context context-type="linenumber">8,9</context>
+          <context context-type="linenumber">2,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6028371114637047813" datatype="html">
         <source>First Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">4,5</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4407559560004943843" datatype="html">
         <source>Last Name</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">13,14</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8066608938393600549" datatype="html">
         <source>Message</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">39,40</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="935187492052582731" datatype="html">
-        <source>Submit</source>
+      <trans-unit id="4943998242904350511" datatype="html">
+        <source> Submit </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">60,61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1558123650356240976" datatype="html">
-        <source> Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">65,67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="457675898050475000" datatype="html">
-        <source>Too many requests! Please try again later.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">86</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4519990428097513339" datatype="html">
-        <source>Valid email address is required.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">96</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2619411074304656554" datatype="html">
-        <source>&lt;b&gt;First Name&lt;/b&gt;, &lt;b&gt;Last Name&lt;/b&gt;, and &lt;b&gt;Message&lt;/b&gt; as well as &lt;b&gt;E-Mail&lt;/b&gt; are required.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">97</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3595827728359307152" datatype="html">
-        <source>The request has been successfully submitted.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">146</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5991432110094363437" datatype="html">
-        <source>Unknown error! Please try again.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">169</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3927696452050800576" datatype="html">
-        <source>Forbidden request to the server.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">173</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4424606546053357541" datatype="html">
-        <source>Invalid data sent. Please fill out the form correctly and try again.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.ts</context>
-          <context context-type="linenumber">176</context>
+          <context context-type="linenumber">267,268</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2370050546944857169" datatype="html">
@@ -994,7 +994,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.html</context>
-          <context context-type="linenumber">9,11</context>
+          <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1367,7 +1367,7 @@
         <source>Color Clash Game</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5988661743089198019" datatype="html">
@@ -1378,7 +1378,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5185079845735800424" datatype="html">
-        <source> Congratulations, you scored <x id="INTERPOLATION" equiv-text="{{ points }}"/> points and <x id="INTERPOLATION_1" equiv-text="{{ mistakes }}"/> mistakes! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg()&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg()) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg() }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
+        <source> Congratulations, you scored <x id="INTERPOLATION" equiv-text="{{ points() }}"/> points and <x id="INTERPOLATION_1" equiv-text="{{ mistakes() }}"/> mistakes! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">4,14</context>
@@ -1388,7 +1388,7 @@
         <source> Play again </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
-          <context context-type="linenumber">21,22</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
@@ -1403,42 +1403,42 @@
         <source>You made a lot of mistakes. Take it slow next time, I&apos;m sure you can get better!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5189038536564747724" datatype="html">
         <source>Not bad, you just made a few mistakes. But can you also do it without any mistakes?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9028248846074123455" datatype="html">
         <source>Great job, you didn&apos;t make any mistakes. But can you score more points in that time without making any mistakes?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7234544955129613346" datatype="html">
         <source>&amp;nbspThe goal is to score more than 60 points without any mistakes!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3813774522743670844" datatype="html">
         <source>&amp;nbspBut wait a minute, you got more than 60 points?!! That&apos;s awesome, seems like you&apos;re a genius!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9011689187710069765" datatype="html">
         <source>Your current high score is <x id="PH" equiv-text="highScore.points"/> points with <x id="PH_1" equiv-text="highScore.mistakes"/> mistakes!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4667547387491062114" datatype="html">
@@ -1459,98 +1459,98 @@
         <source>Color</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">408</context>
+          <context context-type="linenumber">391</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984907873245479480" datatype="html">
         <source>Meaning</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">408</context>
+          <context context-type="linenumber">391</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6983516129072435613" datatype="html">
         <source>One</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">460</context>
+          <context context-type="linenumber">445</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
         <source>Two</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">462</context>
+          <context context-type="linenumber">447</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
         <source>Three</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">464</context>
+          <context context-type="linenumber">449</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
         <source>Four</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">466</context>
+          <context context-type="linenumber">451</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
         <source>Five</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">468</context>
+          <context context-type="linenumber">453</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
         <source>Six</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">470</context>
+          <context context-type="linenumber">455</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
         <source>Seven</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">472</context>
+          <context context-type="linenumber">457</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
         <source>Eight</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">474</context>
+          <context context-type="linenumber">459</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
         <source>Nine</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">476</context>
+          <context context-type="linenumber">461</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
         <source>Rectangle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">478</context>
+          <context context-type="linenumber">463</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
         <source>Circle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">480</context>
+          <context context-type="linenumber">465</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
         <source>Triangle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">482</context>
+          <context context-type="linenumber">467</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
@@ -1623,14 +1623,14 @@
         <source>The topic must be between 3 and 20 characters long!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">82</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="587771637347115681" datatype="html">
         <source>The topic must be a text and not a number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5320870651003627043" datatype="html">
@@ -1749,7 +1749,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="1613601634394055332" datatype="html">
-        <source> It seems like you still have more to learn about this topic before you can master it. Try a new topic, and let&apos;s see if you can win more than <x id="INTERPOLATION" equiv-text="{{ +wonCash | number: &quot;1.2-2&quot; }}"/> CHF there.
+        <source> It seems like you still have more to learn about this topic before you can master it. Try a new topic, and let&apos;s see if you can win more than <x id="INTERPOLATION" equiv-text="{{ +wonCash() | number: &quot;1.2-2&quot; }}"/> CHF there.
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
@@ -1775,18 +1775,18 @@
         <source>Quantum Quiz Game</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
         <source>Unknown error occurs</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">200</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
+          <context context-type="linenumber">122</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">207</context>
+          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
+          <context context-type="linenumber">129</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
@@ -1829,7 +1829,7 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
-          <context context-type="linenumber">10,12</context>
+          <context context-type="linenumber">9,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8690701807527770032" datatype="html">
