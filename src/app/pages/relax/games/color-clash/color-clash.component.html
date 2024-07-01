@@ -1,15 +1,5 @@
 <af-game-header />
 
-<section>
-  @switch (gameState()) {
-    @case (GameState.instruction) {
-      <af-color-clash-instruction @cardFadeInUpScale />
-    }
-    @case (GameState.active) {
-      <af-color-clash-game @cardFadeInUpScale />
-    }
-    @case (GameState.evaluation) {
-      <af-color-clash-evaluation @cardFadeInUpScale />
-    }
-  }
+<section [@gameScreenAnimation]="getRouteAnimationData()">
+  <router-outlet name="state" />
 </section>

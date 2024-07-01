@@ -9,7 +9,7 @@
   <div class="games">
     @for (game of games; track $index) {
       <article>
-        <a [routerLink]="game.id">
+        <a [routerLink]="[game.id, { outlets: { state: game.startState } }]">
           <picture>
             @for (format of ["avif", "webp", "jpeg"]; track format) {
               <source

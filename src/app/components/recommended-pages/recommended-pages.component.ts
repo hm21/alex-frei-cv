@@ -10,7 +10,7 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { QuicklinkModule } from 'ngx-quicklink';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { NavItemId, navItems } from 'src/app/layout/header/utils/nav-items';
@@ -21,7 +21,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    QuicklinkModule,
+    QuicklinkDirective,
     RouterLink,
     NgxScrollAnimationsDirective,
     NgTemplateOutlet,

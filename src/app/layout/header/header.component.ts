@@ -24,7 +24,7 @@ import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-to
 })
 export class HeaderComponent extends ExtendedComponent {
   private header = viewChild<ElementRef<HTMLElement>>('header');
-  private toggleBtn = viewChild(NavMobileMenuToggleBtnComponent);
+  public toggleBtn = viewChild(NavMobileMenuToggleBtnComponent);
 
   /** Flag to control the visibility of the mobile menu. */
   public showMobileMenu = signal(false);

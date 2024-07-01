@@ -7,9 +7,11 @@ import {
   ViewChild,
   ViewContainerRef,
   inject,
-  signal
+  signal,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { QuizManagerService } from '../../utils/quiz-manager.service';
 
@@ -17,13 +19,9 @@ import { QuizManagerService } from '../../utils/quiz-manager.service';
   selector: 'af-quantum-quiz-choose-topic',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink, QuicklinkDirective],
   templateUrl: './quantum-quiz-choose-topic.component.html',
-  styleUrls: [
-    '../../../../styles/quiz-card.scss',
-    '../../../../styles/game-button.scss',
-    './quantum-quiz-choose-topic.component.scss',
-  ],
+  styleUrl: './quantum-quiz-choose-topic.component.scss',
 })
 export class QuantumQuizChooseTopicComponent
   extends ExtendedComponent

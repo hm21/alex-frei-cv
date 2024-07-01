@@ -2,23 +2,20 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
-  inject
+  inject,
 } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { ColorClashGameState } from '../../utils/color-clash-interface';
 import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 
 @Component({
   selector: 'af-color-clash-evaluation',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [],
+  imports: [RouterLink, QuicklinkDirective],
   templateUrl: './color-clash-evaluation.component.html',
-  styleUrls: [
-    '../../../../styles/quiz-card.scss',
-    '../../../../styles/game-button.scss',
-    './color-clash-evaluation.component.scss',
-  ],
+  styleUrl: './color-clash-evaluation.component.scss',
 })
 export class ColorClashEvaluationComponent
   extends ExtendedComponent
@@ -45,9 +42,6 @@ export class ColorClashEvaluationComponent
   }
   public get mistakes() {
     return this.gameManager.mistakes;
-  }
-  public playAgain() {
-    this.gameManager.gameState.set(ColorClashGameState.active);
   }
 
   /** Generates the rating text based on points and mistakes. */

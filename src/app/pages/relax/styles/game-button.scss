@@ -1,55 +1,57 @@
-.button {
-  outline: none;
-  border: unset;
+:host ::ng-deep {
+  .button {
+    outline: none;
+    border: unset;
 
-  text-decoration: none;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition:
-    transform 300ms ease,
-    background-color 300ms ease;
-
-  color: var(--color-light);
-  background-color: var(--color-primary-700);
-  background-image: radial-gradient(
-    100% 50% at 100% 0,
-    var(--color-primary-600) 0,
-    var(--color-primary-700) 100%
-  );
-
-  border-radius: 5px;
-
-  padding: 8px 30px;
-  font-weight: 500;
-  font-size: 0.9rem;
-  line-height: normal;
-  white-space: nowrap;
-  will-change: transform;
-
-  &.stroke {
-    color: var(--color-primary-700);
-    background-color: transparent;
-    background: transparent;
-  }
-
-  &:hover {
     text-decoration: none;
-    transform: scale(1.03);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+      transform 300ms ease,
+      background-color 300ms ease;
+
+    color: var(--color-light);
+    background-color: var(--color-primary-700);
+    background-image: radial-gradient(
+      100% 50% at 100% 0,
+      var(--color-primary-600) 0,
+      var(--color-primary-700) 100%
+    );
+
+    border-radius: 5px;
+
+    padding: 8px 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: normal;
+    white-space: nowrap;
+    will-change: transform;
 
     &.stroke {
-      background-color: var(--color-light);
+      color: var(--color-primary-700);
+      background-color: transparent;
+      background: transparent;
     }
-  }
 
-  &:focus {
-    transform: scale(1.03);
-    box-shadow: 0px 0px 6px var(--shadow-color);
-  }
+    &:hover {
+      text-decoration: none;
+      transform: scale(1.03);
 
-  &:active {
-    transform: scale(0.95);
+      &.stroke {
+        background-color: var(--color-light);
+      }
+    }
+
+    &:focus {
+      transform: scale(1.03);
+      box-shadow: 0px 0px 6px var(--shadow-color);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }

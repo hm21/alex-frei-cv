@@ -1,19 +1,13 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, inject, signal } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil, tap } from 'rxjs';
 import { LoggerService } from 'src/app/services/logger/logger.service';
 import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
 import { GameManager } from '../../../utils/game-manager';
-import { QuizGameState } from './quiz-enum';
-import { GameStateChanged, Quiz } from './quiz-interface';
+import { Quiz } from './quiz-interface';
 
 @Injectable()
 export class QuizManagerService extends GameManager {
-  /**
-   * The current game state.
-   */
-  public gameState = signal<QuizGameState>(QuizGameState.instruction);
-
   /**
    * The amount of cash won by the player.
    */
@@ -29,11 +23,35 @@ export class QuizManagerService extends GameManager {
    */
   public questions = signal<Quiz[]>([]);
 
+  /**
+   * The current level of the game.
+   */
+  public level = signal(0);
+
+  /**
+   * The current state of the game.
+   * Possible values are 'pending', 'correct', or 'wrong'.
+   */
+  public state = signal<'pending' | 'correct' | 'wrong'>('pending');
+
+  /**
+   * The list of cash amounts for each level of the game.
+   */
+  public readonly cashList = [
+    1_000_000, 500_000, 125_000, 64_000, 32_000, 16_000, 8_000, 4_000, 2_000,
+    1_000, 500, 300, 200, 100, 50,
+  ];
+
+  /**
+   * Indicates if the quiz generation is active.
+   */
+  public generatingQuestions = false;
+
   private endpoints = inject(ENDPOINTS);
   private logger = inject(LoggerService);
   private http = inject(HttpClient);
 
-  private destroyQuizGeneration$ = new Subject<void>();
+  public destroyQuizGeneration$ = new Subject<void>();
 
   constructor() {
     super();
@@ -69,10 +87,17 @@ export class QuizManagerService extends GameManager {
    * @param topic The topic for the quiz. If not specified, a random topic will be used.
    */
   public generateQuiz(topic?: string) {
-    this.gameState.set(QuizGameState.generateQuiz);
+    this.generatingQuestions = true;
+    this.state.set('pending');
+    this.level.set(0);
     this.generateErrorMsg.set('');
     this.questions.set([]);
     this.generateNewQuestion(topic);
+    this.router.navigate([
+      '/relax',
+      'quantum-quiz',
+      { outlets: { state: 'generate' } },
+    ]);
   }
   /**
    * Generates a new quiz question based on the provided topic.
@@ -88,13 +113,23 @@ export class QuizManagerService extends GameManager {
    *              If no topic is provided, a question from a random topic may be fetched.
    */
   private generateNewQuestion(topic?: string) {
+    if (!this.generatingQuestions) return;
     this.http
       .post(this.endpoints.quiz, {
         topic,
         lang: $localize`en`,
         questions: this.questions().map((el) => el.question),
       })
-      .pipe(takeUntil(this.destroyQuizGeneration$), takeUntil(this.destroy$))
+      .pipe(
+        takeUntil(
+          this.destroyQuizGeneration$.pipe(
+            tap(() => {
+              this.generatingQuestions = false;
+            }),
+          ),
+        ),
+        takeUntil(this.destroy$),
+      )
       .subscribe({
         next: (res: any) => {
           let data: any = {};
@@ -107,28 +142,46 @@ export class QuizManagerService extends GameManager {
 
           if (data && !data?.error) {
             if (this.questions().length === 0) {
-              this.gameState.set(QuizGameState.active);
+              this.router.navigate(
+                ['/relax', 'quantum-quiz', { outlets: { state: 'play' } }],
+                {
+                  replaceUrl: true,
+                },
+              );
             }
             this.questions.update((items) => [...items, data]);
             this.logger.info(`Question ${this.questions().length}`).print(data);
-            if (
-              this.questions().length < 15 &&
-              this.gameState() === QuizGameState.active
-            ) {
+            if (this.questions().length < 15 && this.generatingQuestions) {
               this.generateNewQuestion(topic);
+            } else {
+              this.generatingQuestions = false;
             }
           } else {
             this.generateErrorMsg.set(
               data?.['error'] ?? $localize`Unknown error occurs`,
             );
-            this.gameState.set(QuizGameState.chooseTopic);
+            this.router.navigate(
+              [
+                '/relax',
+                'quantum-quiz',
+                { outlets: { state: 'choose-topic' } },
+              ],
+              {
+                replaceUrl: true,
+              },
+            );
           }
         },
         error: (error: HttpErrorResponse) => {
           this.generateErrorMsg.set(
             error?.statusText ?? $localize`Unknown error occurs`,
           );
-          this.gameState.set(QuizGameState.chooseTopic);
+          this.router.navigate(
+            ['/relax', 'quantum-quiz', { outlets: { state: 'choose-topic' } }],
+            {
+              replaceUrl: true,
+            },
+          );
         },
       });
   }
@@ -138,10 +191,32 @@ export class QuizManagerService extends GameManager {
    * Updates the won cash and game state based on the provided data.
    * @param data The state change data.
    */
-  public onStateChanged(data: GameStateChanged) {
-    this.wonCash.set(data.currentCash ?? 0);
-    this.gameState.set(data.state);
+  public gameEnd() {
+    this.wonCash.set(this.cashList[15 - this.level()] ?? 0);
     this.destroyQuizGeneration$.next();
     this.generateErrorMsg.set('');
+
+    this.router.navigate(
+      [
+        '/relax',
+        'quantum-quiz',
+        {
+          outlets: {
+            state:
+              this.isGameWon ? 'won' : 'loose',
+          },
+        },
+      ],
+      {
+        replaceUrl: true,
+      },
+    );
+  }
+
+  /**
+   * Indicates if the user won the game.
+   */
+  public get isGameWon() {
+    return this.state() !== 'wrong' && this.level() >= 14;
   }
 }

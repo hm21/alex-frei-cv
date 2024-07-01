@@ -5,14 +5,14 @@ import {
   inject,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { QuicklinkModule } from 'ngx-quicklink';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
   selector: 'af-back-btn',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, QuicklinkModule],
+  imports: [RouterLink, QuicklinkDirective],
   templateUrl: './back-btn.component.html',
   styleUrl: './back-btn.component.scss',
 })

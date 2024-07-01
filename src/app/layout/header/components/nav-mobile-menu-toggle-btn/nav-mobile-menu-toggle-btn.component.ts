@@ -2,13 +2,13 @@ import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
   Input,
-  Output,
   booleanAttribute,
+  inject
 } from '@angular/core';
 import { Subject, fromEvent, take, takeUntil } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { HeaderComponent } from '../../header.component';
 
 @Component({
   selector: 'af-nav-mobile-menu-toggle-btn',
@@ -23,10 +23,6 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
    * Indicates whether the mobile menu is open.
    */
   @Input({ transform: booleanAttribute }) open = false;
-  /**
-   * Event emitter for tap event.
-   */
-  @Output() tap = new EventEmitter();
 
   /**
    * Temporary backdrop reference.
@@ -38,6 +34,9 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
    * Subject for resetting.
    */
   private reset$ = new Subject();
+
+  
+  private header = inject(HeaderComponent);
 
   /**
    * Toggles the mobile menu.
@@ -51,7 +50,7 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
       this.removeBackdrop();
     }
 
-    this.tap.emit();
+    this.header.toggleMenu();
   }
 
   /**
@@ -62,7 +61,7 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
 
     this.removeBackdrop();
 
-    this.tap.emit();
+    this.header.toggleMenu();
   }
 
   /**

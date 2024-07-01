@@ -6,12 +6,10 @@ import {
   OnInit,
   ViewChild,
   computed,
-  inject,
-  signal
+  inject
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import { QuizGameState } from '../../utils/quiz-enum';
 import { QuizManagerService } from '../../utils/quiz-manager.service';
 import { QuantumQuizGenerateQuizComponent } from '../quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component';
 
@@ -51,24 +49,15 @@ export class QuantumQuizGameComponent
    */
   @ViewChild('answerRefD') answerRefD!: ElementRef<HTMLButtonElement>;
 
-  /**
-   * The current level of the game.
-   */
-  public level = signal(0);
-
-  /**
-   * The current state of the game.
-   * Possible values are 'pending', 'correct', or 'wrong'.
-   */
-  public state = signal<'pending' | 'correct' | 'wrong'>('pending');
-
-  /**
-   * The list of cash amounts for each level of the game.
-   */
-  public readonly cashList = [
-    1_000_000, 500_000, 125_000, 64_000, 32_000, 16_000, 8_000, 4_000, 2_000,
-    1_000, 500, 300, 200, 100, 50,
-  ];
+  public get level() {
+    return this.gameManager.level;
+  }
+  public get state() {
+    return this.gameManager.state;
+  }
+  public get cashList() {
+    return this.gameManager.cashList;
+  }
 
   private gameManager = inject(QuizManagerService);
 
@@ -79,6 +68,10 @@ export class QuantumQuizGameComponent
   override ngOnInit(): void {
     this.listenShortcutKeys();
     super.ngOnInit();
+  }
+
+  ngOnDestroy(): void {
+    this.gameManager.destroyQuizGeneration$.next();
   }
 
   /**
@@ -100,6 +93,7 @@ export class QuantumQuizGameComponent
       }
     } else {
       this.state.set('wrong');
+      this.gameManager.destroyQuizGeneration$.next();
       this.renderer.addClass(this[`answerRef${option}`].nativeElement, 'wrong');
       this.renderer.addClass(
         this[`answerRef${this.correctAnswerLetter()}`].nativeElement,
@@ -112,10 +106,7 @@ export class QuantumQuizGameComponent
    * Moves to the next page in the game.
    */
   public nextPage() {
-    this.gameManager.onStateChanged({
-      currentCash: this.cashList[15 - this.level()],
-      state: this.state() !== 'wrong' ? QuizGameState.won : QuizGameState.loose,
-    });
+    this.gameManager.gameEnd();
   }
 
   /**
@@ -139,7 +130,7 @@ export class QuantumQuizGameComponent
    * Handles the Enter key and number keys (1, 2, 3, 4) for selecting options.
    */
   private listenShortcutKeys() {
-    fromEvent<KeyboardEvent>(document, 'keydown')
+    fromEvent<KeyboardEvent>(this.document, 'keydown')
       .pipe(
         filter((event) => {
           const key = event.key;

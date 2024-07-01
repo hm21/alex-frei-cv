@@ -19,6 +19,8 @@ import {
   signal,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router, RouterLink } from '@angular/router';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import {
   Subject,
   filter,
@@ -35,8 +37,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
   ColorClashGameButton,
   ColorClashGameItem,
-  ColorClashGameState,
-  ColorClashRandomItem,
+  ColorClashRandomItem
 } from '../../utils/color-clash-interface';
 import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 
@@ -44,7 +45,7 @@ import { ColorClashManagerService } from '../../utils/color-clash-manager.servic
   selector: 'af-color-clash-game',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgStyle, UpperCasePipe],
+  imports: [NgStyle, UpperCasePipe, RouterLink, QuicklinkDirective],
   templateUrl: './color-clash-game.component.html',
   styleUrls: [
     '../../../../styles/game-shortcut-key.scss',
@@ -85,11 +86,6 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  /**
-   * Enumeration of possible game states.
-   */
-  public GameState = ColorClashGameState;
-
   /**
    * Reference to the buttons container in the template.
    */
@@ -163,6 +159,7 @@ export class ColorClashGameComponent
    */
   private countdownDestroy$ = new Subject();
 
+  private router = inject(Router);
   private sanitizer = inject(DomSanitizer);
   public theme = inject(ThemeManagerService);
   private gameManager = inject(ColorClashManagerService);
@@ -532,10 +529,10 @@ export class ColorClashGameComponent
       );
     }
 
-    this.gameManager.gameState.set(ColorClashGameState.evaluation);
-  }
-
-  public openInstructions() {
-    this.gameManager.gameState.set(ColorClashGameState.instruction);
+    this.router.navigate([
+      '/relax',
+      'color-clash',
+      { outlets: { state: 'evaluation' } },
+    ]);
   }
 }

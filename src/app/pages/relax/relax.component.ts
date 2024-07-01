@@ -5,7 +5,7 @@ import {
   inject
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { QuicklinkModule } from 'ngx-quicklink';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { GAMES } from 'src/app/configs/games';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { ImagePreloaderService } from 'src/app/services/image-manager/image-preloader.service';
@@ -16,7 +16,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   selector: 'af-relax',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, QuicklinkModule, CardEffectsDirective],
+  imports: [RouterLink, QuicklinkDirective, CardEffectsDirective],
   templateUrl: './relax.component.html',
   styleUrl: './relax.component.scss',
 })

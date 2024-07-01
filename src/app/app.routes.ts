@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { relaxRoutes } from './pages/relax/relax.routes';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/about-me' },
@@ -24,33 +25,7 @@ export const routes: Routes = [
         (m) => m.PortfolioComponent,
       ),
   },
-  {
-    path: 'relax',
-    children: [
-      {
-        path: '',
-        data: { animation: 'RelaxPage' },
-        loadComponent: () =>
-          import('./pages/relax/relax.component').then((m) => m.RelaxComponent),
-      },
-      {
-        path: 'quantum-quiz',
-        data: { animation: 'QuantumQuizPage' },
-        loadComponent: () =>
-          import(
-            './pages/relax/games/quantum-quiz/quantum-quiz.component'
-          ).then((m) => m.QuantumQuizComponent),
-      },
-      {
-        path: 'color-clash',
-        data: { animation: 'ColorClashPage' },
-        loadComponent: () =>
-          import('./pages/relax/games/color-clash/color-clash.component').then(
-            (m) => m.ColorClashComponent,
-          ),
-      },
-    ],
-  },
+  ...relaxRoutes,
   {
     path: 'contact',
     data: { animation: 'ContactPage' },

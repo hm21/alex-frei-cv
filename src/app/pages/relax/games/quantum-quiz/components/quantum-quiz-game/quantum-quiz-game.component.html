@@ -29,7 +29,7 @@
             >.
           </div>
 
-          <button class="button" (click)="nextPage()" type="button" i18n>
+          <button class="button mb3" (click)="nextPage()" type="button" i18n>
             Okay
           </button>
         }
@@ -40,7 +40,7 @@
       <div
         class="answers"
         [ngClass]="{
-          disabled: state() !== 'pending'
+          disabled: state() !== 'pending',
         }"
       >
         <button

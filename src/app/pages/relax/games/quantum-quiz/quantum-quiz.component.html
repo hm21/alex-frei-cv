@@ -1,24 +1,5 @@
 <af-game-header />
 
-<section>
-  @switch (gameState()) {
-    @case (GameState.instruction) {
-      <af-quantum-quiz-instruction />
-    }
-    @case (GameState.chooseTopic) {
-      <af-quantum-quiz-choose-topic @cardFadeInUpScale />
-    }
-    @case (GameState.generateQuiz) {
-      <af-quantum-quiz-generate-quiz @cardFadeInUpScale />
-    }
-    @case (GameState.active) {
-      <af-quantum-quiz-game />
-    }
-    @case (GameState.won) {
-      <af-quantum-quiz-won @cardFadeInUpScale />
-    }
-    @case (GameState.loose) {
-      <af-quantum-quiz-loose @cardFadeInUpScale />
-    }
-  }
+<section [@gameScreenAnimation]="getRouteAnimationData()">
+  <router-outlet name="state" />
 </section>

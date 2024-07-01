@@ -1,15 +1,6 @@
 import { SafeHtml } from '@angular/platform-browser';
 
 /**
- * Represents the possible states of the Color Clash game.
- */
-export enum ColorClashGameState {
-  instruction,
-  active,
-  evaluation,
-}
-
-/**
  * Represents an item in the Color Clash game.
  */
 export interface ColorClashGameItem {

@@ -1,8 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
@@ -11,11 +7,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
   templateUrl: './quantum-quiz-generate-quiz.component.html',
-  styleUrls: [
-    '../../../../styles/quiz-card.scss',
-    '../../../../styles/game-button.scss',
-    './quantum-quiz-generate-quiz.component.scss',
-  ],
+  styleUrl: './quantum-quiz-generate-quiz.component.scss',
 })
 export class QuantumQuizGenerateQuizComponent
   extends ExtendedComponent

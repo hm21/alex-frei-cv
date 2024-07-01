@@ -2,22 +2,21 @@ import { HttpClient } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
   OnDestroy,
   OnInit,
-  Output,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  inject,
+  inject
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
-import { QuicklinkModule } from 'ngx-quicklink';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
+import { HeaderComponent } from '../header/header.component';
 import { navItems } from '../header/utils/nav-items';
 
 @Component({
@@ -27,7 +26,7 @@ import { navItems } from '../header/utils/nav-items';
   imports: [
     ThemeSwitchComponent,
     LanguageSwitchComponent,
-    QuicklinkModule,
+    QuicklinkDirective,
     RouterLink,
     RouterLinkActive,
     NgxImageHeroDirective,
@@ -39,11 +38,6 @@ export class ProfileBannerComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  /**
-   * Event emitter for closing the side menu.
-   */
-  @Output() closeSideMenu = new EventEmitter<boolean>();
-
   /**
    * Reference to the container for navigation items.
    * @type {ViewContainerRef}
@@ -70,6 +64,7 @@ export class ProfileBannerComponent
   navItem!: TemplateRef<any>;
 
   private http = inject(HttpClient);
+  private header = inject(HeaderComponent);
 
   override ngOnInit(): void {
     this.listenScreenResize();
@@ -81,6 +76,10 @@ export class ProfileBannerComponent
     this.navItemsRef.clear();
     this.languageContainerRef.clear();
     this.themeContainerRef.clear();
+  }
+
+  public closeSideMenu(){
+    this.header.toggleBtn()?.closeMenu();
   }
 
   /**

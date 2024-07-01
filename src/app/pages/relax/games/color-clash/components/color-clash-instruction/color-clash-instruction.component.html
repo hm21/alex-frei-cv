@@ -16,5 +16,16 @@
 <br />
 
 <div class="action-row">
-  <button (click)="next()" class="button" type="button" i18n>Next</button>
+  <a
+    [routerLink]="[
+      '/relax',
+      'color-clash',
+      { outlets: { state: 'play' } },
+    ]"
+    class="button"
+    type="button"
+    i18n
+  >
+    Next
+  </a>
 </div>

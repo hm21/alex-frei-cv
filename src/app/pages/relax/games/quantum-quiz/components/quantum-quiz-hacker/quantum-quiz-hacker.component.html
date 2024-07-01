@@ -1,0 +1,44 @@
+<picture>
+  @for (format of ["avif", "webp", "jpeg"]; track format) {
+    <source
+      srcset="
+        assets/img/game/hacker/hacker_1x.{{format}} 1x,
+        assets/img/game/hacker/hacker_2x.{{format}} 2x,
+        assets/img/game/hacker/hacker_3x.{{format}} 3x,
+        assets/img/game/hacker/hacker_4x.{{format}} 4x
+      "
+      type="image/{{ format }}"
+    />
+  }
+  <img src="assets/img/game/hacker/hacker_4x.jpeg" alt="hacker" />
+</picture>
+
+<article>
+  <h2>Welcome to the Dark Side</h2>
+
+  <p>
+    I see that you are trying to hack the game!
+    <br />
+    <br />
+    Even if you haven't succeeded yet, becoming a hacker is the first step. Let
+    me give you a tip on how to be successful.
+    <br />
+    <br />
+    "Open the browser console and play around"
+  </p>
+  <br />
+
+  <div class="action-row">
+    <button
+      [routerLink]="[
+        '/relax',
+        'quantum-quiz',
+        { outlets: { state: 'choose-topic' } },
+      ]"
+      class="button"
+      type="button"
+    >
+      Go back
+    </button>
+  </div>
+</article>

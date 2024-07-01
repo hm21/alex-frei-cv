@@ -45,7 +45,7 @@
 
   <div class="social">
     <a
-      (click)="closeSideMenu.emit()"
+      (click)="closeSideMenu()"
       href="https://github.com/hm21"
       target="_blank"
       i18n-aria-label
@@ -71,7 +71,7 @@
     </a>
 
     <a
-      (click)="closeSideMenu.emit()"
+      (click)="closeSideMenu()"
       href="https://www.facebook.com/profile.php?id=100078013238002"
       target="_blank"
       i18n-aria-label
@@ -116,7 +116,7 @@
     </a>
 
     <a
-      (click)="closeSideMenu.emit()"
+      (click)="closeSideMenu()"
       href="https://twitter.com/Frei2100"
       target="_blank"
       i18n-aria-label
@@ -158,7 +158,7 @@
     <a
       class="source-btn color-light"
       href="https://github.com/hm21/alex-frei-cv"
-      (click)="closeSideMenu.emit()"
+      (click)="closeSideMenu()"
       target="_blank"
       i18n
     >
@@ -174,7 +174,7 @@
     class="nav-item"
     [routerLink]="path"
     routerLinkActive="router-link-active"
-    (click)="closeSideMenu.emit()"
+    (click)="closeSideMenu()"
   >
     {{ name }}
   </a>

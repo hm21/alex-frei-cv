@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { QuicklinkModule } from 'ngx-quicklink';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
@@ -34,7 +34,7 @@ import {
     NgTemplateOutlet,
     RouterLink,
     RouterLinkActive,
-    QuicklinkModule,
+    QuicklinkDirective,
   ],
   templateUrl: './side-navbar.component.html',
   styleUrl: './side-navbar.component.scss',

@@ -1,15 +1,8 @@
 import { Injectable, signal } from '@angular/core';
 import { GameManager } from '../../../utils/game-manager';
-import { ColorClashGameState } from './color-clash-interface';
 
 @Injectable()
 export class ColorClashManagerService extends GameManager {
-  /**
-   * The current state of the game.
-   */
-  public gameState = signal<ColorClashGameState>(
-    ColorClashGameState.instruction,
-  );
 
   /**
    * The number of points earned in the game.

@@ -67,7 +67,16 @@
 <br />
 
 <div class="action-row">
-  <button (click)="playAgain()" class="button" type="button" i18n>
+  <a
+    [routerLink]="[
+      '/relax',
+      'quantum-quiz',
+      { outlets: { state: 'choose-topic' } },
+    ]"
+    class="button"
+    type="button"
+    i18n
+  >
     Play again
-  </button>
+  </a>
 </div>

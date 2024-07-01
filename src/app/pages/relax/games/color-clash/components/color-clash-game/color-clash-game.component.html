@@ -41,8 +41,12 @@
     <ng-container #buttonsRef />
   </div>
 
-  <button
-    (click)="openInstructions()"
+  <a
+    [routerLink]="[
+      '/relax',
+      'color-clash',
+      { outlets: { state: 'instruction' } },
+    ]"
     i18n-aria-label
     aria-label="Show Instruction"
     class="instruction-button"
@@ -64,7 +68,7 @@
         ></path>
       </g>
     </svg>
-  </button>
+  </a>
 </div>
 
 <ng-template
