@@ -7,11 +7,9 @@ import { QuizManagerService } from '../utils/quiz-manager.service';
  * If there is an error message generated or questions are not being generated,
  * the user is redirected to the 'relax/quantum-quiz' route with a 'choose-topic' outlet.
  *
- * @param {ActivatedRouteSnapshot} route - The activated route snapshot.
- * @param {RouterStateSnapshot} state - The router state snapshot.
  * @returns {boolean} - Returns true if there is no error message and questions are being generated, otherwise false.
  */
-export const quantumQuizPlayGuard: CanActivateFn = (route, state) => {
+export const quantumQuizPlayGuard: CanActivateFn = (): boolean => {
   const gameManager = inject(QuizManagerService);
 
   if (gameManager.generateErrorMsg() || !gameManager.generatingQuestions) {

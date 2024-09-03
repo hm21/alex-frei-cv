@@ -11,7 +11,7 @@ describe('SafePipe', () => {
     });
   });
 
-  it('create an instance', inject([DomSanitizer], (sanitizer: DomSanitizer) => {
+  it('create an instance', inject([DomSanitizer], () => {
     TestBed.runInInjectionContext(() => {
       const pipe = new SafePipe();
       expect(pipe).toBeTruthy();

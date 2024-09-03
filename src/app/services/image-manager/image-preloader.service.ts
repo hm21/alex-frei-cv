@@ -61,7 +61,7 @@ export class ImagePreloaderService {
 
     if (this.serviceWorker.isEnabled) {
       this.log('Service worker is active, using cache');
-      this.preloadImagesWithServiceWorker(urls).catch((err) => {
+      this.preloadImagesWithServiceWorker(urls).catch(() => {
         this.log(
           'Failed to preload images with service worker, fallback to image objects',
           { error: true },

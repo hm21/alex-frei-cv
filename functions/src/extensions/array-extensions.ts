@@ -72,7 +72,7 @@ Array.prototype.removeDuplicates = function <T>(): Array<T> {
 
 Array.prototype.toNumberedList = function (): string {
   if (!this.every((item) => typeof item === 'string')) {
-    throw new TypeError('All items in the array must be strings.');
+    throw new Error('All items in the array must be strings.');
   }
 
   return this.map((el, index) => `${index + 1}. ${el}`).join('\n') + '\n';
@@ -80,7 +80,7 @@ Array.prototype.toNumberedList = function (): string {
 
 Array.prototype.toMultipleLineList = function (): string {
   if (!this.every((item) => typeof item === 'string')) {
-    throw new TypeError('All items in the array must be strings.');
+    throw new Error('All items in the array must be strings.');
   }
 
   return this.join('\n') + '\n';

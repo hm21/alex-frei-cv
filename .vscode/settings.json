@@ -1,4 +1,6 @@
 {
+  "eslint.enable": true,
+  "eslint.run": "onType",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },

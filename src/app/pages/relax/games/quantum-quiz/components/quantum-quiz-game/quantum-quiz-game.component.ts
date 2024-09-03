@@ -3,10 +3,11 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  OnDestroy,
   OnInit,
   ViewChild,
   computed,
-  inject
+  inject,
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -27,7 +28,7 @@ import { QuantumQuizGenerateQuizComponent } from '../quantum-quiz-generate-quiz/
 })
 export class QuantumQuizGameComponent
   extends ExtendedComponent
-  implements OnInit
+  implements OnInit, OnDestroy
 {
   /**
    * Reference to the answer button element for option A.

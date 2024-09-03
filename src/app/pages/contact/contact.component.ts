@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CONTACT_OPTIONS } from 'src/app/configs/contact-options';
 import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -13,7 +13,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
-export class ContactComponent extends ExtendedComponent {
+export class ContactComponent extends ExtendedComponent implements OnInit {
   public contactOptions = CONTACT_OPTIONS;
 
   protected override pageMeta: PageMetaData = {

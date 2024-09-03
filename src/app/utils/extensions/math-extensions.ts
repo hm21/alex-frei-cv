@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface Math {
   /**
    * Generates a random integer between the specified min (inclusive) and max (exclusive) values.

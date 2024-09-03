@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface String {
   /**
    * Truncate the string to the specified maximum length.

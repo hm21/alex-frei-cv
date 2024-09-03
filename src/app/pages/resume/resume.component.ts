@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -17,7 +17,7 @@ import { ResumeTimelineComponent } from './components/resume-timeline/resume-tim
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss',
 })
-export class ResumeComponent extends ExtendedComponent {
+export class ResumeComponent extends ExtendedComponent implements OnInit {
   protected override pageMeta: PageMetaData = {
     title: $localize`Resume Alex Frei`,
     description: $localize`Take a look on the resume from Alex Frei.`,

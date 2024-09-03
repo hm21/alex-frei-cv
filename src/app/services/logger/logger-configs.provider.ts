@@ -38,7 +38,7 @@ export function provideLogger(): Provider {
   return [
     {
       provide: LOGGER_CONFIGS,
-      useFactory: (platformId: Object) =>
+      useFactory: (platformId: object) =>
         isPlatformBrowser(platformId) ? browserConfigs : serverConfigs,
       deps: [PLATFORM_ID],
     },

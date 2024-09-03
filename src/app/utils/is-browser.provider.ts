@@ -8,12 +8,12 @@ export function providePlatformDetection(): Provider {
   return [
     {
       provide: IS_BROWSER,
-      useFactory: (platformId: Object) => isPlatformBrowser(platformId),
+      useFactory: (platformId: object) => isPlatformBrowser(platformId),
       deps: [PLATFORM_ID],
     },
     {
       provide: IS_SERVER,
-      useFactory: (platformId: Object) => isPlatformServer(platformId),
+      useFactory: (platformId: object) => isPlatformServer(platformId),
       deps: [PLATFORM_ID],
     },
   ];

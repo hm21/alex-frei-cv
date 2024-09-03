@@ -70,7 +70,7 @@ export class QuizManagerService extends GameManager {
    * Performs the wake-up quiz function.
    *
    * **Note:** This website will never have many visitors or people playing this game.
-   * That mean when a user play a game normaly the serverfunction will have a cold start.
+   * That mean when a user play a game normally the serverFunction will have a cold start.
    * So that the user does not experience this delay, we wake up the server function before
    * the user start the game.
    */

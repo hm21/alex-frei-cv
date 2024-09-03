@@ -61,6 +61,7 @@ Array.prototype.updateLastItem = function <T>(value: T): void {
 };
 
 Array.prototype.removeByIndex = function <T>(index: number): Array<T> {
+  // eslint-disable-next-line @typescript-eslint/no-this-alias
   const newArr = this;
   newArr.splice(index, 1);
   return newArr;

@@ -3,6 +3,7 @@ import {
   Directive,
   ElementRef,
   Input,
+  OnDestroy,
   OnInit,
   Renderer2,
   booleanAttribute,
@@ -21,7 +22,7 @@ import { IS_BROWSER } from '../utils/is-browser.provider';
   selector: '[afCardEffects]',
   standalone: true,
 })
-export class CardEffectsDirective implements OnInit {
+export class CardEffectsDirective implements OnInit, OnDestroy {
   /** Optional card reference if the effect is inside of the card */
   @Input() card?: HTMLElement;
   @Input({ transform: booleanAttribute }) enableHoverAnimations = true;

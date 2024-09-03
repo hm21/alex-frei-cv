@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   ElementRef,
@@ -19,7 +20,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 })
 export class ResumeTimelineItemComponent
   extends ExtendedComponent
-  implements OnInit
+  implements OnInit, AfterViewInit
 {
   @ViewChild('sonar') sonar!: ElementRef<HTMLElement>;
 

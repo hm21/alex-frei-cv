@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  OnInit,
   afterNextRender,
   inject
 } from '@angular/core';
@@ -20,7 +21,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
   templateUrl: './relax.component.html',
   styleUrl: './relax.component.scss',
 })
-export class RelaxComponent extends ExtendedComponent {
+export class RelaxComponent extends ExtendedComponent implements OnInit {
   public games = GAMES;
 
   protected override pageMeta: PageMetaData = {

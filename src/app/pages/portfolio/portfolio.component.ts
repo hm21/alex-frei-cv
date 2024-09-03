@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
 import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
@@ -18,7 +23,7 @@ import { OtherProjectsComponent } from './components/other-projects/other-projec
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent extends ExtendedComponent {
+export class PortfolioComponent extends ExtendedComponent implements OnInit {
   protected override pageMeta: PageMetaData = {
     title: $localize`Portfolio Alex Frei`,
     description: $localize`Take a look at the portfolio to know more about Alex Frei`,

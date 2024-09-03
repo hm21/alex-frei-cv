@@ -11,8 +11,6 @@ import { QuizManagerService } from '../utils/quiz-manager.service';
 import { quantumQuizWonGuard } from './quantum-quiz-won.guard';
 
 describe('quantumQuizWonGuard', () => {
-  let router: jasmine.SpyObj<Router>;
-
   const executeGuard: CanActivateFn = (...guardParameters) =>
     quantumQuizWonGuard(...guardParameters);
   beforeEach(() => {
@@ -49,7 +47,7 @@ describe('quantumQuizWonGuard', () => {
 
   it('should prevent activation and redirect if the game is not won', inject(
     [QuizManagerService, Router],
-    (gameManager: QuizManagerService, router: Router) => {
+    (gameManager: QuizManagerService) => {
       TestBed.runInInjectionContext(() => {
         Object.defineProperty(gameManager, 'isGameWon', {
           get: () => false,

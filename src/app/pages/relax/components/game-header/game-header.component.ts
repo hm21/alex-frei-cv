@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
 import { GAME } from '../../utils/game.token';
 
@@ -9,7 +9,7 @@ import { GAME } from '../../utils/game.token';
   templateUrl: './game-header.component.html',
   styleUrl: './game-header.component.scss',
 })
-export class GameHeaderComponent {
+export class GameHeaderComponent implements OnInit {
   public gameName = '';
   public fallbackPath = '';
   public imagePaths: { path: string; type: string }[] = [];

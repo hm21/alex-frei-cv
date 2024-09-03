@@ -20,7 +20,7 @@ export class AnalyticsService {
    * Posts analytics data to the server.
    * @param {('websiteVisit' | 'pageVisit' | 'interaction')} mode - The mode of analytics data.
    * @param {string} [eventName] - The name of the event.
-   */
+   * /
   private post(
     mode: 'websiteVisit' | 'pageVisit' | 'interaction',
     eventName?: string,
@@ -35,12 +35,12 @@ export class AnalyticsService {
           anonymId: this.idManager.userId,
         })
         .subscribe(); 
-    }*/
+    }* /
   }
 
   /**
    * Tracks a website visit.
-   */
+   * /
   public websiteVisit() {
     this.post('websiteVisit', 'visit');
   }
@@ -48,7 +48,7 @@ export class AnalyticsService {
   /**
    * Tracks a page visit.
    * @param {string} pageName - The name of the visited page.
-   */
+   * /
   public pageVisit(pageName: string) {
     this.post('pageVisit', pageName);
   }
@@ -56,8 +56,8 @@ export class AnalyticsService {
   /**
    * Tracks an interaction event.
    * @param {string} eventName - The name of the interaction event.
-   */
+   * /
   public interaction(eventName: string) {
     this.post('interaction', eventName);
-  }
+  }*/
 }

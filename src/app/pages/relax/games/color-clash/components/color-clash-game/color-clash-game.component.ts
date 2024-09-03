@@ -37,7 +37,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 import {
   ColorClashGameButton,
   ColorClashGameItem,
-  ColorClashRandomItem
+  ColorClashRandomItem,
 } from '../../utils/color-clash-interface';
 import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 
@@ -151,7 +151,7 @@ export class ColorClashGameComponent
     '#2196f3', // blue
     '#673ab7', // violet
     '#c77600', // dark orange
-    '#000000', // black => white in darkmode
+    '#000000', // black => white in darkMode
   ];
 
   /**
@@ -411,9 +411,11 @@ export class ColorClashGameComponent
         : lastItem!.id === id;
 
     if (this.activeCountdown) {
-      lastItem.isCorrect
-        ? this.gameManager.points.update((val) => val + 1)
-        : this.gameManager.mistakes.update((val) => val + 1);
+      if (lastItem.isCorrect) {
+        this.gameManager.points.update((val) => val + 1);
+      } else {
+        this.gameManager.mistakes.update((val) => val + 1);
+      }
     }
 
     timer(1)

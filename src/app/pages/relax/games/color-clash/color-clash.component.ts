@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnDestroy,
+} from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { GAMES } from 'src/app/configs/games';
 import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
@@ -38,7 +43,10 @@ import { ColorClashManagerService } from './utils/color-clash-manager.service';
     './color-clash.component.scss',
   ],
 })
-export class ColorClashComponent extends ExtendedComponent {
+export class ColorClashComponent
+  extends ExtendedComponent
+  implements OnDestroy
+{
   /**
    * The metadata for the page.
    */
