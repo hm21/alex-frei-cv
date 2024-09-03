@@ -10,7 +10,6 @@ export const quiz = onRequest(
     minInstances: 0,
     maxInstances: 3,
     region: 'europe-west6',
-    enforceAppCheck: false,
     concurrency: 5,
   },
   async (req, res) => {
@@ -25,7 +24,6 @@ export const gitCommits = onRequest(
     minInstances: 0,
     maxInstances: 5,
     region: 'europe-west6',
-    enforceAppCheck: false,
     concurrency: 50,
   },
   async (req, res) => {
@@ -40,7 +38,6 @@ export const contactForm = onRequest(
     minInstances: 0,
     maxInstances: 3,
     region: 'europe-west6',
-    enforceAppCheck: false,
     concurrency: 5,
   },
   async (req, res) => {
