@@ -43,13 +43,13 @@ describe('ColorClashGameComponent', () => {
 
     await new Promise((res) => setTimeout(() => res(null), 1));
 
-    const initialTime = component.timeBanner.nativeElement.innerHTML;
+    const initialTime = component.timeBanner()!.nativeElement.innerHTML;
 
     component['startCountdown']();
 
     await new Promise((res) => setTimeout(() => res(null), 1001));
 
-    expect(component.timeBanner.nativeElement.innerHTML).not.toBe(initialTime);
+    expect(component.timeBanner()!.nativeElement.innerHTML).not.toBe(initialTime);
     component.ngOnDestroy();
   });
 

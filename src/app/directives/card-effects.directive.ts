@@ -2,12 +2,12 @@ import {
   DestroyRef,
   Directive,
   ElementRef,
-  Input,
   OnDestroy,
   OnInit,
   Renderer2,
   booleanAttribute,
   inject,
+  input
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, filter, fromEvent, switchMap, take, tap } from 'rxjs';
@@ -24,8 +24,8 @@ import { IS_BROWSER } from '../utils/providers/is-browser.provider';
 })
 export class CardEffectsDirective implements OnInit, OnDestroy {
   /** Optional card reference if the effect is inside of the card */
-  @Input() card?: HTMLElement;
-  @Input({ transform: booleanAttribute }) enableHoverAnimations = true;
+  public card = input<HTMLElement | undefined>();
+  public enableHoverAnimations = input(true, { transform: booleanAttribute });
 
   private manager = inject(CardEffectManagerService);
   private renderer = inject(Renderer2);
@@ -66,7 +66,7 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
   }
 
   private initHoverAnimation() {
-    if (!this.enableHoverAnimations) return;
+    if (!this.enableHoverAnimations()) return;
     fromEvent(this.elementRef, 'mouseenter')
       .pipe(
         switchMap(() =>
@@ -90,6 +90,6 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
   }
 
   private get elementRef() {
-    return this.card ?? this.elRef.nativeElement;
+    return this.card() ?? this.elRef.nativeElement;
   }
 }

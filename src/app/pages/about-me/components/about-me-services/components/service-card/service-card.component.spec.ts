@@ -13,8 +13,8 @@ describe('ServiceCardComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(ServiceCardComponent);
+    fixture.componentRef.setInput('icon', 'website');
     component = fixture.componentInstance;
-    component.icon = 'website';
     fixture.detectChanges();
   });
 

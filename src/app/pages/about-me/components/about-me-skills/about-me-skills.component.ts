@@ -5,8 +5,8 @@ import {
   OnDestroy,
   OnInit,
   TemplateRef,
-  ViewChild,
-  ViewContainerRef,
+  viewChild,
+  ViewContainerRef
 } from '@angular/core';
 import {
   combineLatest,
@@ -31,12 +31,13 @@ export class AboutMeSkillsComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  @ViewChild('containerRef', { read: ViewContainerRef, static: true })
-  containerRef!: ViewContainerRef;
-  @ViewChild('bubbleTemplate', { read: TemplateRef, static: true })
-  bubbleTemplate!: TemplateRef<any>;
-  @ViewChild('listRef', { static: true })
-  listRef!: ElementRef<HTMLUListElement>;
+  private containerRef = viewChild.required('containerRef', {
+    read: ViewContainerRef,
+  });
+  private bubbleTemplate = viewChild.required('bubbleTemplate', {
+    read: TemplateRef<any>,
+  });
+  private listRef = viewChild.required<ElementRef<HTMLUListElement>>('listRef');
 
   /**
    * Duration of the animation in milliseconds.
@@ -55,7 +56,7 @@ export class AboutMeSkillsComponent
   }
 
   ngOnDestroy(): void {
-    this.containerRef.clear();
+    this.containerRef().clear();
   }
 
   /**
@@ -73,7 +74,7 @@ export class AboutMeSkillsComponent
    * Adds a skill item to the view container.
    */
   private addItem(skill: SkillCard) {
-    this.containerRef.createEmbeddedView(this.bubbleTemplate, { skill });
+    this.containerRef().createEmbeddedView(this.bubbleTemplate(), { skill });
   }
 
   /**
@@ -81,7 +82,7 @@ export class AboutMeSkillsComponent
    */
   private initAnimation() {
     if (this.isBrowser) {
-      const elRef = this.listRef.nativeElement;
+      const elRef = this.listRef().nativeElement;
       // Generate the items twice so that the user can't see the end.
       this.renderer.setStyle(
         elRef,

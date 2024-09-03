@@ -4,10 +4,10 @@ import {
   OnDestroy,
   OnInit,
   TemplateRef,
-  ViewChild,
   ViewContainerRef,
   inject,
   signal,
+  viewChild
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -30,14 +30,16 @@ export class QuantumQuizChooseTopicComponent
   /**
    * The reference to the error view container.
    */
-  @ViewChild('errorRef', { read: ViewContainerRef, static: true })
-  errorRef!: ViewContainerRef;
+  private errorRef = viewChild.required('errorRef', {
+    read: ViewContainerRef,
+  });
 
   /**
    * The reference to the error template.
    */
-  @ViewChild('errorTemplate', { read: TemplateRef, static: true })
-  errorTemplate!: TemplateRef<any>;
+  private errorTemplate = viewChild.required('errorTemplate', {
+    read: TemplateRef<any>,
+  });
 
   /**
    * The selected topic for the quiz.
@@ -57,7 +59,7 @@ export class QuantumQuizChooseTopicComponent
   }
 
   ngOnDestroy(): void {
-    this.errorRef.clear();
+    this.errorRef().clear();
   }
 
   /**
@@ -65,7 +67,7 @@ export class QuantumQuizChooseTopicComponent
    * @param random - Indicates whether to generate a random quiz or not.
    */
   public generate(random?: boolean) {
-    this.errorRef.clear();
+    this.errorRef().clear();
     if (random) {
       this.gameManager.generateQuiz(random ? undefined : this.topic());
       return;
@@ -87,7 +89,7 @@ export class QuantumQuizChooseTopicComponent
    * @param msg - The error message to display.
    */
   private createError(msg: string) {
-    this.errorRef.createEmbeddedView(this.errorTemplate, {
+    this.errorRef().createEmbeddedView(this.errorTemplate(), {
       msg,
     });
   }

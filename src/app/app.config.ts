@@ -15,10 +15,6 @@ import {
   withFetch,
   withInterceptors,
 } from '@angular/common/http';
-import {
-  provideClientHydration,
-  withI18nSupport,
-} from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideNgxCountAnimations } from 'ngx-count-animation';
@@ -45,7 +41,7 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([globalHttpErrorHandlerInterceptor]),
     ),
-    provideClientHydration(withI18nSupport()),
+    // provideClientHydration(withI18nSupport()),
     quicklinkProviders,
     provideRouter(
       routes,

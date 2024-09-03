@@ -1,6 +1,11 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { NgClass } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
@@ -65,11 +70,6 @@ export class LanguageSwitchComponent
   public showLanguage = signal(false);
 
   /**
-   * The active language.
-   */
-  public activeLanguage!: Language;
-
-  /**
    * The default language ID.
    */
   private readonly languageId = $localize`en`;
@@ -94,6 +94,10 @@ export class LanguageSwitchComponent
       name: 'Vietnamese',
     },
   ];
+  /**
+   * The active language.
+   */
+  public activeLanguage = signal<Language>(this.languages[0]);
 
   /**
    * Indicates whether dark mode is enabled.
@@ -101,9 +105,10 @@ export class LanguageSwitchComponent
   public isDarkMode = false;
 
   override ngOnInit(): void {
-    this.activeLanguage =
+    this.activeLanguage.set(
       this.languages.find((el) => el.iso2 === this.languageId) ??
-      this.languages[0];
+        this.languages[0],
+    );
 
     this.listenDropdownClose();
     super.ngOnInit();
@@ -134,7 +139,7 @@ export class LanguageSwitchComponent
     let url = window.location.href;
     if (!url.endsWith('/')) url += '/';
     url = window.location.href.replace(
-      `/${this.activeLanguage.iso2}/`,
+      `/${this.activeLanguage().iso2}/`,
       `/${language.iso2}/`,
     );
     window.location.href = url;

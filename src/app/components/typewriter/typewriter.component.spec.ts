@@ -7,22 +7,20 @@ describe('WaioTypewriterComponent', () => {
   let component: TypewriterComponent;
   let fixture: ComponentFixture<TypewriterComponent>;
 
-
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        SharedTestingModule,
-        TypewriterComponent,
-      ],
-      teardown: {destroyAfterEach: false} 
-    }).overrideComponent(TypewriterComponent, {
-      set: { changeDetection: ChangeDetectionStrategy.Default }
+      imports: [SharedTestingModule, TypewriterComponent],
+      teardown: { destroyAfterEach: false },
     })
+      .overrideComponent(TypewriterComponent, {
+        set: { changeDetection: ChangeDetectionStrategy.Default },
+      })
       .compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TypewriterComponent);
+    fixture.componentRef.setInput('items', ['item1', 'item2']);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -32,7 +30,6 @@ describe('WaioTypewriterComponent', () => {
   });
 
   it('should accept input for items', () => {
-    component.items = ['item1', 'item2'];
-    expect(component.items).toEqual(['item1', 'item2']);
+    expect(component.items()).toEqual(['item1', 'item2']);
   });
 });

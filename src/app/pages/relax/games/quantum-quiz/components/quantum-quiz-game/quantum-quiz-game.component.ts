@@ -5,9 +5,9 @@ import {
   ElementRef,
   OnDestroy,
   OnInit,
-  ViewChild,
   computed,
   inject,
+  viewChild
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -33,22 +33,26 @@ export class QuantumQuizGameComponent
   /**
    * Reference to the answer button element for option A.
    */
-  @ViewChild('answerRefA') answerRefA!: ElementRef<HTMLButtonElement>;
+  public answerRefA =
+    viewChild.required<ElementRef<HTMLButtonElement>>('answerRefA');
 
   /**
    * Reference to the answer button element for option B.
    */
-  @ViewChild('answerRefB') answerRefB!: ElementRef<HTMLButtonElement>;
+  public answerRefB =
+    viewChild.required<ElementRef<HTMLButtonElement>>('answerRefB');
 
   /**
    * Reference to the answer button element for option C.
    */
-  @ViewChild('answerRefC') answerRefC!: ElementRef<HTMLButtonElement>;
+  public answerRefC =
+    viewChild.required<ElementRef<HTMLButtonElement>>('answerRefC');
 
   /**
    * Reference to the answer button element for option D.
    */
-  @ViewChild('answerRefD') answerRefD!: ElementRef<HTMLButtonElement>;
+  public answerRefD =
+    viewChild.required<ElementRef<HTMLButtonElement>>('answerRefD');
 
   public get level() {
     return this.gameManager.level;
@@ -88,16 +92,16 @@ export class QuantumQuizGameComponent
       } else {
         this.state.set('correct');
         this.renderer.addClass(
-          this[`answerRef${option}`].nativeElement,
+          this[`answerRef${option}`]().nativeElement,
           'correct',
         );
       }
     } else {
       this.state.set('wrong');
       this.gameManager.destroyQuizGeneration$.next();
-      this.renderer.addClass(this[`answerRef${option}`].nativeElement, 'wrong');
+      this.renderer.addClass(this[`answerRef${option}`]().nativeElement, 'wrong');
       this.renderer.addClass(
-        this[`answerRef${this.correctAnswerLetter()}`].nativeElement,
+        this[`answerRef${this.correctAnswerLetter()}`]().nativeElement,
         'correct',
       );
     }
@@ -118,7 +122,7 @@ export class QuantumQuizGameComponent
 
     ['A', 'B', 'C', 'D'].forEach((el) => {
       this.renderer.removeClass(
-        this[`answerRef${el as 'A'}`].nativeElement,
+        this[`answerRef${el as 'A'}`]().nativeElement,
         'correct',
       );
     });

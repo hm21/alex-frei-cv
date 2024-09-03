@@ -1,11 +1,11 @@
 <picture>
-  @for (item of imagePaths; track item.path) {
+  @for (item of imagePaths(); track item.path) {
     <source [srcset]="item.path" [type]="item.type" />
   }
-  <img [src]="fallbackPath" [alt]="gameName" />
+  <img [src]="fallbackPath()" [alt]="gameName()" />
 </picture>
 
 <af-back-btn path="/relax" />
 
 <!-- h1 only for SEO -->
-<h1>{{ gameName }}</h1>
+<h1>{{ gameName() }}</h1>

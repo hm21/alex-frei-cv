@@ -2,12 +2,12 @@ import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
+  input,
   OnDestroy,
   OnInit,
   TemplateRef,
-  ViewChild,
-  ViewContainerRef,
+  viewChild,
+  ViewContainerRef
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
@@ -37,25 +37,22 @@ export class RecommendedPagesComponent
   /**
    * Reference to the container element.
    */
-  @ViewChild('containerRef', { read: ViewContainerRef, static: true })
-  container!: ViewContainerRef;
+  private container = viewChild.required('containerRef', {
+    read: ViewContainerRef,
+  });
 
   /**
    * Reference to the item template.
    */
-  @ViewChild('itemTemplate', { read: TemplateRef, static: true })
-  itemTemplate!: TemplateRef<any>;
+  private itemTemplate = viewChild.required('itemTemplate', {
+    read: TemplateRef<any>,
+  });
 
   /**
    * The active navigation item ID.
    * @required
    */
-  @Input({ required: true }) activeId!: NavItemId;
-
-  /**
-   * Array of items to display.
-   */
-  public items = [];
+  public activeId = input.required<NavItemId>()
 
   override ngOnInit(): void {
     this.createItems();
@@ -64,7 +61,7 @@ export class RecommendedPagesComponent
   }
 
   ngOnDestroy(): void {
-    this.container.clear();
+    this.container().clear();
   }
 
   /**
@@ -73,10 +70,10 @@ export class RecommendedPagesComponent
   private createItems() {
     const listBefore: any[] = [];
     const listAfter: any[] = [];
-    const activeIndex = navItems.findIndex((e) => e.id === this.activeId);
+    const activeIndex = navItems.findIndex((e) => e.id === this.activeId());
 
     navItems
-      .filter((el) => el.id !== 'contact' && el.id !== this.activeId)
+      .filter((el) => el.id !== 'contact' && el.id !== this.activeId())
       .forEach((el) => {
         if (navItems.findIndex((e) => e.id === el.id) > activeIndex) {
           listAfter.push(el);
@@ -85,7 +82,7 @@ export class RecommendedPagesComponent
         }
       });
     [...listAfter, ...listBefore].forEach((item) => {
-      this.container.createEmbeddedView(this.itemTemplate, item);
+      this.container().createEmbeddedView(this.itemTemplate(), item);
     });
   }
 }

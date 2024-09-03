@@ -63,7 +63,6 @@ export class QuizManagerService extends GameManager {
   override destroy() {
     super.destroy();
     this.destroyQuizGeneration$.next();
-    this.destroyQuizGeneration$.complete();
   }
 
   /**

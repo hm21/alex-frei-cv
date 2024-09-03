@@ -5,9 +5,9 @@ import {
   OnDestroy,
   OnInit,
   TemplateRef,
-  ViewChild,
   ViewContainerRef,
-  inject
+  inject,
+  viewChild
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -45,34 +45,16 @@ export class SideNavbarComponent
 {
   /**
    * Reference to the container for navigation items.
-   * @type {ViewContainerRef}
    */
-  @ViewChild('navItemsRef', { read: ViewContainerRef, static: true })
-  container!: ViewContainerRef;
-  /**
-   * Reference to the container for language switch component.
-   * @type {ViewContainerRef}
-   */
-  @ViewChild('languageContainerRef', { read: ViewContainerRef, static: true })
-  languageContainerRef!: ViewContainerRef;
-  /**
-   * Reference to the container for theme switch component.
-   * @type {ViewContainerRef}
-   */
-  @ViewChild('themeContainerRef', { read: ViewContainerRef, static: true })
-  themeContainerRef!: ViewContainerRef;
-
+  private navItemsRef = viewChild.required('navItemsRef', {
+    read: ViewContainerRef,
+  });
   /**
    * Reference to the navigation item template.
-   * @type {TemplateRef<any>}
    */
-  @ViewChild('navItem', { read: TemplateRef, static: true })
-  private navItem!: TemplateRef<any>;
-
-  /**
-   * Indicates whether the side navbar is visible.
-   */
-  public showNavbar = true;
+  private navItem = viewChild.required('navItem', {
+    read: TemplateRef<any>,
+  });
 
   /**
    * Sanitizer for bypassing security.
@@ -86,7 +68,7 @@ export class SideNavbarComponent
   }
 
   ngOnDestroy(): void {
-    this.container?.clear();
+    this.navItemsRef()?.clear();
   }
 
   /**
@@ -113,7 +95,7 @@ export class SideNavbarComponent
           break;
       }
 
-      this.container!.createEmbeddedView(this.navItem, el);
+      this.navItemsRef()!.createEmbeddedView(this.navItem(), el);
     });
   }
 }

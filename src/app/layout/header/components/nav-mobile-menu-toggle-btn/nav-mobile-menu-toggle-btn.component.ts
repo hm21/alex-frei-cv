@@ -2,9 +2,8 @@ import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
-  booleanAttribute,
-  inject
+  inject,
+  model
 } from '@angular/core';
 import { Subject, fromEvent, take, takeUntil } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -22,7 +21,7 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
   /**
    * Indicates whether the mobile menu is open.
    */
-  @Input({ transform: booleanAttribute }) open = false;
+  public open = model(false);
 
   /**
    * Temporary backdrop reference.
@@ -35,7 +34,6 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
    */
   private reset$ = new Subject();
 
-  
   private header = inject(HeaderComponent);
 
   /**
@@ -44,7 +42,7 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
   public toggleMenu() {
     this.reset$.next(null);
 
-    if (!this.open) {
+    if (!this.open()) {
       this.createBackdrop();
     } else {
       this.removeBackdrop();

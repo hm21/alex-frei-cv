@@ -13,10 +13,10 @@ import {
   OnDestroy,
   OnInit,
   TemplateRef,
-  ViewChild,
   ViewContainerRef,
   inject,
   signal,
+  viewChild
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
@@ -89,23 +89,18 @@ export class ColorClashGameComponent
   /**
    * Reference to the buttons container in the template.
    */
-  @ViewChild('buttonsRef', { static: true, read: ViewContainerRef })
-  buttonsRef!: ViewContainerRef;
-
-  /**
-   * Reference to the item template in the template.
-   */
-  @ViewChild('itemRef', { static: true, read: TemplateRef })
-  itemRef!: TemplateRef<any>;
+  private buttonsRef = viewChild.required('buttonsRef', {
+    read: ViewContainerRef,
+  });
 
   /**
    * Reference to the button template in the template.
    */
-  @ViewChild('buttonRef', { static: true, read: TemplateRef })
-  buttonRef!: TemplateRef<ColorClashGameButton>;
+  private buttonRef = viewChild.required('buttonRef', {
+    read: TemplateRef<ColorClashGameButton>,
+  });
 
-  @ViewChild('timeBanner')
-  timeBanner!: ElementRef<HTMLElement>;
+  public timeBanner = viewChild<ElementRef<HTMLElement>>('timeBanner');
 
   /**
    * Array of game items to be displayed.
@@ -176,7 +171,6 @@ export class ColorClashGameComponent
   }
 
   ngOnDestroy(): void {
-    this.buttonsRef.clear();
     this.countdownDestroy$.next(true);
     this.countdownDestroy$.complete();
   }
@@ -365,7 +359,7 @@ export class ColorClashGameComponent
                     : 'L',
       };
       this.gameButtons.push(btn);
-      this.buttonsRef.createEmbeddedView(this.buttonRef, btn);
+      this.buttonsRef().createEmbeddedView(this.buttonRef(), btn);
     });
   }
 
@@ -492,7 +486,7 @@ export class ColorClashGameComponent
         takeUntil(this.countdownDestroy$),
         this.destroyPipe(),
         tap((time) => {
-          this.timeBanner.nativeElement.innerHTML = time;
+          this.timeBanner()!.nativeElement.innerHTML = time;
         }),
         filter((time) => time === '00:00'),
       )

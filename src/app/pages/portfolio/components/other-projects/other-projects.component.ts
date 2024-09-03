@@ -9,7 +9,7 @@ import { PROJECT_WAIO } from '../../utils/projects/project-waio';
 import { PROJECT_COUNT_ANIMATION } from '../../utils/projects/project_ngx-count-animation';
 import { PROJECT_NGX_IMAGE_HERO } from '../../utils/projects/project_ngx-image-hero';
 import { PROJECT_NGX_SCROLL_ANIMATIONS } from '../../utils/projects/project_ngx-scroll-animations';
-import { PROJECT_SMARTHOME } from '../../utils/projects/project_smarthome';
+import { PROJECT_SMART_HOME } from '../../utils/projects/project_smarthome';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';
 
 @Component({
@@ -25,13 +25,13 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
 })
 export class OtherProjectsComponent {
   /** Array of project items. */
-  public items: ({ type: string } & ProjectDetails)[] = [
+  public readonly items: ({ type: string } & ProjectDetails)[] = [
     PROJECT_PRO_IMAGE_EDITOR,
     PROJECT_WAIO,
     PROJECT_NGX_SCROLL_ANIMATIONS,
     PROJECT_NGX_IMAGE_HERO,
     PROJECT_COUNT_ANIMATION,
-    PROJECT_SMARTHOME,
+    PROJECT_SMART_HOME,
   ];
   /** Modal manager service for opening project details. */
   private modal = inject(ModalManager);

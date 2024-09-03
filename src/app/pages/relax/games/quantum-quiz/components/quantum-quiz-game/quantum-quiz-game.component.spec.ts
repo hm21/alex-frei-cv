@@ -44,7 +44,7 @@ describe('QuantumQuizGameComponent', () => {
 
     fixture.detectChanges();
 
-    const buttonA = fixture.componentInstance.answerRefA.nativeElement;
+    const buttonA = fixture.componentInstance.answerRefA().nativeElement;
     expect(buttonA).toBeTruthy();
     buttonA.click();
 

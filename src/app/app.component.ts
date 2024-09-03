@@ -1,12 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ElementRef,
   OnInit,
-  ViewChild,
   afterNextRender,
   inject,
-  signal,
+  signal
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { NgxCountService } from 'ngx-count-animation';
@@ -31,9 +29,6 @@ import { ExtendedComponent } from './utils/extended-component';
   animations: [routeAnimation],
 })
 export class AppComponent extends ExtendedComponent implements OnInit {
-  /** Reference to the main HTML element of the component. */
-  @ViewChild('mainRef') mainRef!: ElementRef<HTMLElement>;
-
   /** Flag indicating whether route animations should be used. */
   public useRouteAnimations = signal(false);
 

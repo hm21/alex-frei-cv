@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 
@@ -29,7 +34,7 @@ export class AboutMeIntroComponent implements OnInit {
   /**
    * Represents the age of the person.
    */
-  public age = 0;
+  public age = signal(0);
 
   ngOnInit(): void {
     this.calculateAge();
@@ -55,6 +60,6 @@ export class AboutMeIntroComponent implements OnInit {
       return age;
     }
 
-    this.age = calcAge(new Date(1995, 2, 21));
+    this.age.set(calcAge(new Date(1995, 2, 21)));
   }
 }

@@ -4,9 +4,9 @@ import {
   Component,
   OnInit,
   TemplateRef,
-  ViewChild,
   ViewContainerRef,
-  signal
+  signal,
+  viewChild
 } from '@angular/core';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { filter, fromEvent, timer } from 'rxjs';
@@ -38,24 +38,30 @@ import {
 })
 export class ProjectDetailsComponent extends Modal<ProjectDetails> implements OnInit {
   /** Reference to the container for displaying website URLs. */
-  @ViewChild('websiteContainer', { read: ViewContainerRef, static: true })
-  websiteContainer!: ViewContainerRef;
+  private websiteContainer = viewChild.required('websiteContainer', {
+    read: ViewContainerRef,
+  });
   /** Reference to the container for displaying technology badges. */
-  @ViewChild('technologyContainer', { read: ViewContainerRef, static: true })
-  technologyContainer!: ViewContainerRef;
+  private technologyContainer = viewChild.required('technologyContainer', {
+    read: ViewContainerRef,
+  });
   /** Reference to the container for displaying video player. */
-  @ViewChild('videoContainer', { read: ViewContainerRef, static: true })
-  videoContainer!: ViewContainerRef;
+  private videoContainer = viewChild.required('videoContainer', {
+    read: ViewContainerRef,
+  });
 
   /** Reference to the badge template. */
-  @ViewChild('badgeTemplate', { read: TemplateRef, static: true })
-  badgeTemplate!: TemplateRef<{ title: string; items: BadgeTemplateI[] }>;
+  private badgeTemplate = viewChild.required('badgeTemplate', {
+    read: TemplateRef<{ title: string; items: BadgeTemplateI[] }>,
+  });
   /** Reference to the URL list template. */
-  @ViewChild('urlListTemplate', { read: TemplateRef, static: true })
-  urlListTemplate!: TemplateRef<{ title: string; items: UrlListTemplateI[] }>;
+  private urlListTemplate = viewChild.required('urlListTemplate', {
+    read: TemplateRef<{ title: string; items: UrlListTemplateI[] }>,
+  });
   /** Reference to the YouTube player template. */
-  @ViewChild('youtubePlayer', { read: TemplateRef, static: true })
-  youtubePlayer!: TemplateRef<{ url: string }>;
+  private youtubePlayer = viewChild.required('youtubePlayer', {
+    read: TemplateRef<{ url: string }>,
+  });
 
 
   /** Duration of modal animation for fade in. */
@@ -87,7 +93,7 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
    */
   private createDetailInfos() {
     if (this.data().website) {
-      this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
+      this.websiteContainer().createEmbeddedView(this.urlListTemplate(), {
         title: $localize`Website`,
         items: this.data().website!.map((el) => {
           return {
@@ -98,7 +104,7 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
       });
     }
     if (this.data().store) {
-      this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
+      this.websiteContainer().createEmbeddedView(this.urlListTemplate(), {
         title: $localize`Mobile-Store`,
         items: this.data().store!.map((el) => {
           return {
@@ -110,7 +116,7 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
     }
 
     if (this.data().video) {
-      this.videoContainer.createEmbeddedView(this.youtubePlayer, {
+      this.videoContainer().createEmbeddedView(this.youtubePlayer(), {
         url: this.data().video,
       });
     }
@@ -129,7 +135,7 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
                   : null;
         if (!title) throw new Error(`Title for key '${key}' does not exists!`);
 
-        this.technologyContainer.createEmbeddedView(this.badgeTemplate, {
+        this.technologyContainer().createEmbeddedView(this.badgeTemplate(), {
           title,
           items: this.data().technology[key as 'frontend'],
         });

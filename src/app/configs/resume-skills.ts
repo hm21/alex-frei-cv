@@ -46,7 +46,7 @@ export const BACKEND_SKILLS: SkillItem[] = [
   },
 ];
 
-export const KNOWLEDGES = [
+export const KNOWLEDGE = [
   'Figma',
   'Typesense',
   'Elasticsearch',
