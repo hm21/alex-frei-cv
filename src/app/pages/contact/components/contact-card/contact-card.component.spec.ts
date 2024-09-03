@@ -13,6 +13,8 @@ describe('ContactCardComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(ContactCardComponent);
+    fixture.componentRef.setInput('url', 'url');
+    fixture.componentRef.setInput('id', 'mail');
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

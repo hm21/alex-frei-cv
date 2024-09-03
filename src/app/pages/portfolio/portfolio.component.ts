@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
-import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { BusinessProjectsComponent } from './components/business-projects/business-projects.component';
 import { OtherProjectsComponent } from './components/other-projects/other-projects.component';
@@ -29,20 +29,20 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
     description: $localize`Take a look at the portfolio to know more about Alex Frei`,
   };
 
-  private modalManager = inject(ModalManagerService);
+  private modal = inject(ModalManager);
 
   override ngOnInit(): void {
     this.classList.add('page-padding');
 
     /// Ensure there are no scrollbar offset issues when open the modal
-    this.modalManager.modal$.pipe(this.destroyPipe()).subscribe((res) => {
-      if (res.type === 'add' && this.isScrollbarVisible && !this.screen.xs) {
+    this.modal.onChangeState$.pipe(this.destroyPipe()).subscribe((res) => {
+      if (res === 'open' && this.isScrollbarVisible && !this.screen.xs) {
         this.renderer.setStyle(
           this.elRef.nativeElement,
           'margin-right',
           `${this.scrollbarWidth}px`,
         );
-      } else if (res.type === 'remove') {
+      } else if (res === 'close') {
         this.renderer.removeStyle(this.elRef.nativeElement, 'margin-right');
       }
     });

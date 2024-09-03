@@ -1,5 +1,6 @@
 import { Injectable, inject, isDevMode } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { LoggerService } from '../logger/logger.service';
 import { PageMetaData } from './page-meta-data.interface';
 
 @Injectable({
@@ -8,6 +9,7 @@ import { PageMetaData } from './page-meta-data.interface';
 export class MetaManagerService {
   public title = inject(Title);
   public meta = inject(Meta);
+  public logger = inject(LoggerService);
 
   /**
    * The metadata for the active page.
@@ -27,14 +29,18 @@ export class MetaManagerService {
 
     if (isDevMode()) {
       if (data.title.length < 15 || data.title.length > 64) {
-        console.warn(
-          `HTML title is too long or too short. The title should have a length between 15 and 64 Characters (Currently ${data.title.length})`,
-        );
+        this.logger
+          .warn(
+            `HTML title is too long or too short. The title should have a length between 15 and 64 Characters (Currently ${data.title.length}). The current title is ${data.title}`,
+          )
+          .print();
       }
       if (data.description.length < 25 || data.description.length > 160) {
-        console.warn(
-          `HTML description is too long or too short. The description should have a length between 25 and 160 Characters (Currently ${data.description.length})`,
-        );
+        this.logger
+          .warn(
+            `HTML description is too long or too short. The description should have a length between 25 and 160 Characters (Currently ${data.description.length})`,
+          )
+          .print();
       }
     }
     this.activeMetaData = data;

@@ -3,8 +3,9 @@ import { SafeHtml } from '@angular/platform-browser';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
-import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ProjectDetails } from '../../utils/portfolio-interfaces';
 import { PROJECT_SNAPTAB } from '../../utils/projects/project-snaptab';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';
 
@@ -38,13 +39,15 @@ export class BusinessProjectsComponent extends ExtendedComponent {
     $localize`Control!`,
   ];
 
-  /** Modal manager service for opening project details. */
-  private modalManager = inject(ModalManagerService);
+  private modal = inject(ModalManager);
 
   /** Opens the project details modal. */
   public openProject() {
-    this.modalManager.openModal(ProjectDetailsComponent, {
-      data: PROJECT_SNAPTAB,
-    });
+    this.modal.open<ProjectDetailsComponent, ProjectDetails>(
+      ProjectDetailsComponent,
+      {
+        data: PROJECT_SNAPTAB,
+      },
+    );
   }
 }

@@ -36,13 +36,13 @@
     </button>
 
     <header class="row v-center mb2">
-      @if (data.logo) {
-        <div class="logo" [innerHTML]="data.logo | safe"></div>
+      @if (data().logo) {
+        <div class="logo" [innerHTML]="data().logo | safe"></div>
       }
 
       <div>
-        <h1>{{ data.title }}</h1>
-        <h2>{{ data.subtitle }}</h2>
+        <h1>{{ data().title }}</h1>
+        <h2>{{ data().subtitle }}</h2>
       </div>
     </header>
 
@@ -50,10 +50,10 @@
       <aside>
         <ng-container #videoContainer />
 
-        <p class="description" [innerHTML]="data.description"></p>
+        <p class="description" [innerHTML]="data().description"></p>
 
         <div class="gallery">
-          @for (item of data.images; track $index) {
+          @for (item of data().images; track $index) {
             <picture [style.backgroundColor]="item.backgroundColor ?? 'white'">
               @if (!item.isGif) {
                 <source srcset="{{item.path}}_1x.avif" type="image/avif" />
@@ -82,7 +82,7 @@
       </aside>
 
       <article>
-        @if (data.demoUrl) {
+        @if (data().demoUrl) {
           <h3 class="mb1" i18n>Demo</h3>
           <ul>
             <li>
@@ -90,8 +90,8 @@
                 *ngTemplateOutlet="
                   urlTemplate;
                   context: {
-                    url: data.demoUrl,
-                    name: data.demoUrl,
+                    url: data().demoUrl,
+                    name: data().demoUrl,
                   }
                 "
               />
@@ -101,14 +101,14 @@
 
         <ng-container #websiteContainer />
 
-        @if (data.install) {
+        @if (data().install) {
           <h3 class="mb1" i18n>Install</h3>
           <ul>
             <li>
               <button
                 class="list-item row v-center"
                 type="button"
-                (click)="copy(data.install)"
+                (click)="copy(data().install!)"
               >
                 @if (copiedInstallCode()) {
                   <svg
@@ -161,7 +161,7 @@
 
                 <span>
                   @if (!showCopiedMsg()) {
-                    {{ data.install }}
+                    {{ data().install }}
                   } @else {
                     <ng-container i18n>Copied</ng-container>
                   }
@@ -172,7 +172,10 @@
         }
 
         <h3
-          [ngClass]="{ mt2: data.install || data.website || data.demoUrl }"
+          [ngClass]="{
+            mt2:
+              data().install || data().website || data().demoUrl,
+          }"
           class="mb1"
           i18n
         >

@@ -6,16 +6,14 @@ import {
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  inject,
-  signal,
+  signal
 } from '@angular/core';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { filter, fromEvent, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { Modal } from 'src/app/utils/modal/modal.component';
 import {
   BadgeTemplateI,
   ProjectDetails,
@@ -38,10 +36,7 @@ import {
   styleUrl: './project-details.component.scss',
   animations: [modalAnimation],
 })
-export class ProjectDetailsComponent
-  extends ExtendedComponent
-  implements OnInit
-{
+export class ProjectDetailsComponent extends Modal<ProjectDetails> implements OnInit {
   /** Reference to the container for displaying website URLs. */
   @ViewChild('websiteContainer', { read: ViewContainerRef, static: true })
   websiteContainer!: ViewContainerRef;
@@ -62,6 +57,7 @@ export class ProjectDetailsComponent
   @ViewChild('youtubePlayer', { read: TemplateRef, static: true })
   youtubePlayer!: TemplateRef<{ url: string }>;
 
+
   /** Duration of modal animation for fade in. */
   public readonly modalAnimationDurationIn = signal(500);
   /** Duration of modal animation for fade out. */
@@ -74,8 +70,6 @@ export class ProjectDetailsComponent
   public copiedInstallCode = signal(false);
   /** Flag indicating if "Copied!" message should be shown. */
   public showCopiedMsg = signal(false);
-  /** Modal manager service for managing modals. */
-  private modalManager = inject(ModalManagerService);
 
   public openHero = signal(false);
 
@@ -92,10 +86,10 @@ export class ProjectDetailsComponent
    * with the corresponding data from the `data` object.
    */
   private createDetailInfos() {
-    if (this.data.website) {
+    if (this.data().website) {
       this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
         title: $localize`Website`,
-        items: this.data.website.map((el) => {
+        items: this.data().website!.map((el) => {
           return {
             ...el,
             name: el.url,
@@ -103,10 +97,10 @@ export class ProjectDetailsComponent
         }),
       });
     }
-    if (this.data.store) {
+    if (this.data().store) {
       this.websiteContainer.createEmbeddedView(this.urlListTemplate, {
         title: $localize`Mobile-Store`,
-        items: this.data.store.map((el) => {
+        items: this.data().store!.map((el) => {
           return {
             ...el,
             name: el.title,
@@ -115,14 +109,14 @@ export class ProjectDetailsComponent
       });
     }
 
-    if (this.data.video) {
+    if (this.data().video) {
       this.videoContainer.createEmbeddedView(this.youtubePlayer, {
-        url: this.data.video,
+        url: this.data().video,
       });
     }
 
-    if (this.data.technology) {
-      Object.keys(this.data.technology).map((key) => {
+    if (this.data().technology) {
+      Object.keys(this.data().technology).map((key) => {
         const title =
           key === 'frontend'
             ? $localize`Frontend`
@@ -137,7 +131,7 @@ export class ProjectDetailsComponent
 
         this.technologyContainer.createEmbeddedView(this.badgeTemplate, {
           title,
-          items: this.data.technology[key as 'frontend'],
+          items: this.data().technology[key as 'frontend'],
         });
       });
     }
@@ -164,7 +158,7 @@ export class ProjectDetailsComponent
     timer(this.modalAnimationDurationOut())
       .pipe(this.destroyPipe())
       .subscribe(() => {
-        this.modalManager.closeModal();
+        this.close();
       });
   }
 
@@ -186,10 +180,5 @@ export class ProjectDetailsComponent
       .subscribe(() => {
         this.showCopiedMsg.set(false);
       });
-  }
-
-  /** Gets the project details data. */
-  public get data(): ProjectDetails {
-    return this.modalManager.modalData;
   }
 }

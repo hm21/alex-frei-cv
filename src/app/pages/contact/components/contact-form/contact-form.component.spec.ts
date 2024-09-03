@@ -4,8 +4,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { CONTACT_MESSAGES } from 'src/app/configs/contact-options';
-import { Endpoints } from 'src/app/utils/endpoints/endpoints.interface';
-import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
+import { Endpoints } from 'src/app/utils/providers/endpoints/endpoints.interface';
+import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ContactFormComponent } from './contact-form.component';
 

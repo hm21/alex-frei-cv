@@ -1,21 +1,19 @@
 import { DOCUMENT } from '@angular/common';
+import { Renderer2, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
+import { renderer2Mock } from 'src/test/mocks/renderer2.mock';
+import { viewContainerRefMock } from 'src/test/mocks/view-container-ref.mock';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { ProjectDetails } from '../../utils/portfolio-interfaces';
-import {
-  ProjectDetailsComponent,
-} from './project-details.component';
+import { ProjectDetailsComponent } from './project-details.component';
 
 describe('ProjectDetailsComponent', () => {
   let component: ProjectDetailsComponent;
   let fixture: ComponentFixture<ProjectDetailsComponent>;
-  let modalManagerServiceMock: Partial<ModalManagerService>;
-  let modalManagerService: ModalManagerService;
   let documentMock: Document;
 
   beforeEach(async () => {
-    modalManagerServiceMock = {
+    /*  modalManagerServiceMock = {
       modalData: {
         logo: '<svg></svg>',
         title: 'Lorem ipsum',
@@ -53,24 +51,32 @@ describe('ProjectDetailsComponent', () => {
         },
         images: [],
       },
-    };
+    }; */
 
     documentMock = document;
 
     await TestBed.configureTestingModule({
       imports: [ProjectDetailsComponent, SharedTestingModule],
       providers: [
-        { provide: ModalManagerService, useValue: modalManagerServiceMock },
         { provide: DOCUMENT, useValue: documentMock },
+        {
+          provide: Renderer2,
+          useValue: renderer2Mock,
+        },
+        {
+          provide: ViewContainerRef,
+          useValue: viewContainerRefMock,
+        },
+        ModalManager,
       ],
-      teardown: {destroyAfterEach: false} 
+      teardown: { destroyAfterEach: false },
     }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProjectDetailsComponent);
+    fixture.componentRef.setInput('data', {});
     component = fixture.componentInstance;
-    modalManagerService = TestBed.inject(ModalManagerService);
     fixture.detectChanges();
   });
 
@@ -81,17 +87,5 @@ describe('ProjectDetailsComponent', () => {
   it('should set videoPlayerLoaded to true on video player loaded', () => {
     component.onVideoPlayerLoaded();
     expect(component.videoPlayerLoaded()).toBeTrue();
-  });
-
-  it('should return correct data', () => {
-    const testData: ProjectDetails = {
-      title: 'Test Title',
-      subtitle: 'Test Subtitle',
-      description: 'Test Description',
-      technology: {},
-      images: [],
-    };
-    modalManagerService.modalData = testData;
-    expect(component.data).toEqual(testData);
   });
 });

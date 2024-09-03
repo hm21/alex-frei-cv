@@ -8,7 +8,6 @@ import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { AppComponent } from './app.component';
 import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { ModalManagerService } from './services/modal-manager/modal-manager.service';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -26,7 +25,6 @@ describe('AppComponent', () => {
         provideServiceWorker('ngsw-worker.js'),
         NgxScrollAnimationsService,
         NgxCountService,
-        ModalManagerService,
         Renderer2,
         { provide: DOCUMENT, useValue: document },
         { provide: ElementRef, useValue: { nativeElement: {} } },

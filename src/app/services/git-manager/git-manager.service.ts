@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
-import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
-import { IS_BROWSER } from '../../utils/is-browser.provider';
+import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
+import { IS_BROWSER } from '../../utils/providers/is-browser.provider';
 
 @Injectable({
   providedIn: 'root',

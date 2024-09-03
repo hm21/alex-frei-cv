@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, inject, signal } from '@angular/core';
 import { Subject, takeUntil, tap } from 'rxjs';
 import { LoggerService } from 'src/app/services/logger/logger.service';
-import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
+import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 import { GameManager } from '../../../utils/game-manager';
 import { Quiz } from './quiz-interface';
 

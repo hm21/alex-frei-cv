@@ -2,7 +2,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { ModalManagerService } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
 import { ProjectDetails } from '../../utils/portfolio-interfaces';
 import { PROJECT_PRO_IMAGE_EDITOR } from '../../utils/projects/project-pro_image_editor';
 import { PROJECT_WAIO } from '../../utils/projects/project-waio';
@@ -34,13 +34,18 @@ export class OtherProjectsComponent {
     PROJECT_SMARTHOME,
   ];
   /** Modal manager service for opening project details. */
-  private modalManager = inject(ModalManagerService);
+  private modal = inject(ModalManager);
 
   /**
    * Opens the project details modal.
    * @param item The project item to display details for.
    */
-  public openProject(item: any) {
-    this.modalManager.openModal(ProjectDetailsComponent, { data: item });
+  public openProject(item: ProjectDetails) {
+    this.modal.open<ProjectDetailsComponent, ProjectDetails>(
+      ProjectDetailsComponent,
+      {
+        data: item,
+      },
+    );
   }
 }

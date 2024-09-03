@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
 import { HttpTestingController } from '@angular/common/http/testing';
-import { Endpoints } from 'src/app/utils/endpoints/endpoints.interface';
-import { ENDPOINTS, productionEndpoints } from 'src/app/utils/endpoints/endpoints.provider';
+import { Endpoints } from 'src/app/utils/providers/endpoints/endpoints.interface';
+import { ENDPOINTS, productionEndpoints } from 'src/app/utils/providers/endpoints/endpoints.provider';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { GitManagerService } from './git-manager.service';
 

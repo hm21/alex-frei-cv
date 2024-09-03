@@ -7,7 +7,7 @@ import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
   withInMemoryScrolling,
-  withPreloading
+  withPreloading,
 } from '@angular/router';
 
 import {
@@ -27,9 +27,9 @@ import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
 import '../app/utils/extensions/extensions';
 import { routes } from './app.routes';
 import { provideLogger } from './services/logger/logger-configs.provider';
-import { provideEndpoints } from './utils/endpoints/endpoints.provider';
 import { globalHttpErrorHandlerInterceptor } from './utils/interceptor/global-http-error-handler.interceptor';
-import { providePlatformDetection } from './utils/is-browser.provider';
+import { provideEndpoints } from './utils/providers/endpoints/endpoints.provider';
+import { providePlatformDetection } from './utils/providers/is-browser.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [

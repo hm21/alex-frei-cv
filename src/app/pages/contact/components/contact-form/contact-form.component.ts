@@ -28,8 +28,8 @@ import {
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
 import { LoggerService } from 'src/app/services/logger/logger.service';
-import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 
 @Component({
   selector: 'af-contact-form',

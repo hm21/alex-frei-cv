@@ -126,7 +126,12 @@ export class LoggerService {
       msg: any,
       style?: string,
     ) {
-      return console[type].bind(console, `%c${msg}`, style);
+      return console[type].bind(
+        console,
+        /// Objects can't be colored
+        typeof msg !== 'object' ? `%c${msg}` : msg,
+        style,
+      );
     }
 
     switch (level) {
