@@ -15,16 +15,6 @@ export interface ColorClashGameItem {
 }
 
 /**
- * Represents a button in the Color Clash game.
- */
-export interface ColorClashGameButton {
-  content: SafeHtml;
-  color: string;
-  shortcut: string;
-  id: string;
-}
-
-/**
  * Represents a random item in the Color Clash game.
  */
 export interface ColorClashRandomItem {

@@ -1,10 +1,3 @@
-import {
-  animate,
-  keyframes,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { NgStyle, UpperCasePipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
@@ -16,7 +9,7 @@ import {
   ViewContainerRef,
   inject,
   signal,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
@@ -34,12 +27,13 @@ import {
 } from 'rxjs';
 import { ThemeManagerService } from 'src/app/services/theme-manager/theme-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
-import {
-  ColorClashGameButton,
-  ColorClashGameItem,
-  ColorClashRandomItem,
-} from '../../utils/color-clash-interface';
+import { colorClashItemAnimation } from '../../../../../../animations/color-clash-item.animation';
 import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
+import {
+  ColorClashGameItem
+} from '../../utils/color-clash.interface';
+import { ColorClashGameButton } from '../models/color-clash-button.model';
+import { ColorClashRandomItems } from '../models/color-clash-random-items.model';
 
 @Component({
   selector: 'af-color-clash-game',
@@ -51,95 +45,47 @@ import { ColorClashManagerService } from '../../utils/color-clash-manager.servic
     '../../../../styles/game-shortcut-key.scss',
     './color-clash-game.component.scss',
   ],
-  animations: [
-    trigger('viewItem', [
-      transition(
-        ':leave',
-        [
-          style({
-            opacity: 1,
-            transform: '*',
-          }),
-          animate(
-            '{{duration}} ease',
-            keyframes([
-              style({
-                offset: 0.7,
-                opacity: 0.5,
-                transform: 'translate(-50%, 50px)',
-                background: '{{color}}',
-              }),
-              style({
-                offset: 1,
-                opacity: 0,
-                transform: 'translate(-50%, 70px)',
-              }),
-            ]),
-          ),
-        ],
-        { params: { duration: '500ms', color: 'red' } },
-      ),
-    ]),
-  ],
+  animations: [colorClashItemAnimation],
 })
 export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  /**
-   * Reference to the buttons container in the template.
-   */
+  /** Reference to the buttons container in the template. */
   private buttonsRef = viewChild.required('buttonsRef', {
     read: ViewContainerRef,
   });
 
-  /**
-   * Reference to the button template in the template.
-   */
+  /** Reference to the button template in the template. */
   private buttonRef = viewChild.required('buttonRef', {
     read: TemplateRef<ColorClashGameButton>,
   });
 
+  /** Reference to the time banner element. */
   public timeBanner = viewChild<ElementRef<HTMLElement>>('timeBanner');
 
-  /**
-   * Array of game items to be displayed.
-   */
+  /** Array of game items to be displayed. */
   public viewItems = signal<ColorClashGameItem[]>([]);
 
-  /**
-   * Array of game buttons.
-   */
+  /** Array of game buttons. */
   private gameButtons: ColorClashGameButton[] = [];
 
-  /**
-   * Duration of the countdown timer in seconds.
-   */
+  /** Duration of the countdown timer in seconds. */
   private countdownDuration: number = 60;
 
-  /**
-   * Flag indicating if the countdown is active.
-   */
+  /** Flag indicating if the countdown is active. */
   private activeCountdown = false;
 
-  /**
-   * Signal representing the number of warm-up rounds.
-   */
+  /** Signal representing the number of warm-up rounds. */
   public warmUpRounds = signal(0);
 
-  /**
-   * Number of items generated.
-   */
+  /** Number of items generated. */
   private itemCount = 0;
 
-  /**
-   * Array of shortcut keys for the game buttons.
-   */
+  /** Array of shortcut keys for the game buttons. */
   private readonly shortcutKeys = ['s', 'd', 'f', 'j', 'k', 'l'];
 
-  /**
-   * Array of colors used for the game buttons and items.
-   */
+  /** Array of colors used for the game buttons and items. */
   private readonly colors = [
     '#009688', // forest-green
     '#E91E63', // red
@@ -149,9 +95,7 @@ export class ColorClashGameComponent
     '#000000', // black => white in darkMode
   ];
 
-  /**
-   * Subject used to destroy the countdown timer.
-   */
+  /** Subject used to destroy the countdown timer. */
   private countdownDestroy$ = new Subject();
 
   private router = inject(Router);
@@ -175,9 +119,7 @@ export class ColorClashGameComponent
     this.countdownDestroy$.complete();
   }
 
-  /**
-   * Listens for shortcut key events.
-   */
+  /** Listens for shortcut key events. */
   private listenShortcutKeys() {
     fromEvent<KeyboardEvent>(this.document, 'keydown')
       .pipe(
@@ -206,9 +148,7 @@ export class ColorClashGameComponent
       });
   }
 
-  /**
-   * Listens for theme change events.
-   */
+  /** Listens for theme change events. */
   private listenTheme() {
     this.theme.changed$
       .pipe(this.destroyPipe(), startWith(this.theme.isDarkMode()))
@@ -233,139 +173,25 @@ export class ColorClashGameComponent
       });
   }
 
-  /**
-   * Generates the game buttons.
-   */
+  /** Generates the game buttons. */
   private generateButtons() {
-    // SVG definitions for different shapes
-    const rectangleSVG = {
-      id: 'rect',
-      svg: `
-      <svg fill="red" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="100" height="100"/>
-      </svg>
-      `,
-    };
-    const triangleSVG = {
-      id: 'triangle',
-      svg: `
-          <svg fill="red" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="50,0 0,100 100,100" />
-          </svg>
-          `,
-    };
-    const circleSVG = {
-      id: 'circle',
-      svg: `
-          <svg fill="red" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="50"/>
-          </svg>
-          `,
-    };
-
-    /**
-     * Inserts an element at a specific position in an array.
-     * @param array - The array to insert the element into.
-     * @param element - The element to insert.
-     * @param position - The position to insert the element at.
-     * @returns The new array with the element inserted.
-     * @throws Error if the position is invalid.
-     */
-    function insertAtPosition<T>(
-      array: T[],
-      element: T,
-      position: number,
-    ): T[] {
-      if (position < 0 || position > array.length) {
-        throw new Error('Invalid position');
-      }
-
-      const newArray = [
-        ...array.slice(0, position),
-        element,
-        ...array.slice(position),
-      ];
-      return newArray;
-    }
-
-    /**
-     * Generates an array of random numbers.
-     * @returns An array of random numbers.
-     */
-    function getRandomNumbers(): ColorClashRandomItem[] {
-      const items: ColorClashRandomItem[] = [];
-
-      while (items.length < 4) {
-        const randomNumber = Math.randomNextInt(10, 1);
-
-        if (items.findIndex((el) => el.id === randomNumber.toString()) < 0) {
-          items.push({
-            id: randomNumber.toString(),
-            content: randomNumber,
-          });
-        }
-      }
-
-      return items;
-    }
-
-    /**
-     * Generates an array of random symbols.
-     * @returns An array of random symbols.
-     */
-    function getRandomSymbol(): ColorClashRandomItem[] {
-      const symbolsSVG = [rectangleSVG, triangleSVG, circleSVG];
-
-      const symbols: ColorClashRandomItem[] = [];
-
-      while (symbols.length < 2) {
-        const randomSymbol = symbolsSVG[Math.randomNextInt(symbolsSVG.length)];
-
-        if (symbols.findIndex((el) => el.id === randomSymbol.id) < 0) {
-          symbols.push({
-            id: randomSymbol.id,
-            content: randomSymbol.svg,
-          });
-        }
-      }
-
-      return symbols;
-    }
-
-    let items: Array<any> = getRandomNumbers();
-
-    getRandomSymbol().forEach((el) => {
-      items = insertAtPosition(items, el, Math.randomNextInt(items.length + 1));
-    });
-
     this.gameButtons.clear();
     const colors = [...this.colors];
-    items.forEach((item, i) => {
-      const btn = {
+    new ColorClashRandomItems().generate().forEach((item, i) => {
+      const btn = new ColorClashGameButton({
         id: item.id,
-        content: this.sanitizer.bypassSecurityTrustHtml(item.content),
+        content: this.sanitizer.bypassSecurityTrustHtml(
+          item.content.toString(),
+        ),
         color: colors.splice(Math.randomNextInt(colors.length), 1)[0],
-        shortcut:
-          i === 0
-            ? 'S'
-            : i === 1
-              ? 'D'
-              : i === 2
-                ? 'F'
-                : i === 3
-                  ? 'J'
-                  : i === 4
-                    ? 'K'
-                    : 'L',
-      };
+        buttonIndex: i,
+      });
       this.gameButtons.push(btn);
       this.buttonsRef().createEmbeddedView(this.buttonRef(), btn);
     });
   }
 
-  /**
-   * Generates the game items.
-   */
+  /** Generates the game items. */
   private generateItems() {
     while (this.viewItems().length < 3) {
       const id =
@@ -463,9 +289,7 @@ export class ColorClashGameComponent
     }
   }
 
-  /**
-   * Starts the countdown timer.
-   */
+  /** Starts the countdown timer. */
   private startCountdown() {
     /**
      * Converts seconds to the format 'MM:SS'.
@@ -495,9 +319,7 @@ export class ColorClashGameComponent
       });
   }
 
-  /**
-   * Sets the game finish state and updates the high score if necessary.
-   */
+  /** Sets the game finish state and updates the high score if necessary. */
   private setGameFinish() {
     this.activeCountdown = false;
     this.countdownDestroy$.next(true);
