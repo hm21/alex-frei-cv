@@ -4,8 +4,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { CONTACT_MESSAGES } from 'src/app/configs/contact-options';
-import { Endpoints } from 'src/app/utils/endpoints/endpoints.interface';
-import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
+import { Endpoints } from 'src/app/utils/providers/endpoints/endpoints.interface';
+import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ContactFormComponent } from './contact-form.component';
 
@@ -78,8 +78,7 @@ describe('ContactFormComponent', () => {
     expect(submitButton.nativeElement.disabled).toBeFalse();
   });
 
-  it('should update formState$ to error if form is invalid on submit', () => {
-    spyOn(component.formState$, 'next');
+  it('should update formState to error if form is invalid on submit', () => {
     component.form.setValue({
       firstname: '',
       lastname: '',
@@ -87,14 +86,14 @@ describe('ContactFormComponent', () => {
       email: '',
     });
     component.submit$.next();
-    expect(component.formState$.next).toHaveBeenCalledWith({
+    expect(component.formState()).toEqual({
       state: 'error',
       msg: CONTACT_MESSAGES.invalidEmail,
       canSend: true,
     });
   });
 
-  it('should send form data when form is valid and update formState$ to success', () => {
+  it('should send form data when form is valid and update formState to success', () => {
     component.form.setValue({
       firstname: 'John',
       lastname: 'Doe',
@@ -107,15 +106,14 @@ describe('ContactFormComponent', () => {
     expect(req.request.method).toBe('POST');
     req.flush({});
 
-    expect(component.formState$.value.state).toBe('success');
-    expect(component.formState$.value.msg).toBe(
+    expect(component.formState().state).toBe('success');
+    expect(component.formState().msg).toBe(
       CONTACT_MESSAGES.submissionSuccess,
     );
-    expect(component.formState$.value.canSend).toBeFalse();
+    expect(component.formState().canSend).toBeFalse();
   });
 
   it('should handle error response correctly', () => {
-    spyOn(component.formState$, 'next');
     component.form.setValue({
       firstname: 'John',
       lastname: 'Doe',
@@ -130,7 +128,7 @@ describe('ContactFormComponent', () => {
       { status: 400, statusText: 'Bad Request' },
     );
 
-    expect(component.formState$.next).toHaveBeenCalledWith({
+    expect(component.formState()).toEqual({
       state: 'error',
       msg: jasmine.any(String),
       canSend: true,

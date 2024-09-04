@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { NavItemId } from 'src/app/layout/header/utils/nav-items';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { RecommendedPagesComponent } from './recommended-pages.component';
 
@@ -13,6 +14,8 @@ describe('RecommendedPagesComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(RecommendedPagesComponent);
+    const activeId: NavItemId = 'aboutMe';
+    fixture.componentRef.setInput('activeId', activeId);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

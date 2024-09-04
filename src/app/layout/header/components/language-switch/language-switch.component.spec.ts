@@ -32,6 +32,6 @@ describe('LanguageSwitchComponent', () => {
   it('should initialize correctly', () => {
     expect(component.showLanguage()).toBeFalse();
   
-    expect(component.activeLanguage.iso2).toEqual('en');
+    expect(component.activeLanguage().iso2).toEqual('en');
   });
 });

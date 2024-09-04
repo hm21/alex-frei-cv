@@ -7,7 +7,7 @@ import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
   withInMemoryScrolling,
-  withPreloading
+  withPreloading,
 } from '@angular/router';
 
 import {
@@ -15,10 +15,6 @@ import {
   withFetch,
   withInterceptors,
 } from '@angular/common/http';
-import {
-  provideClientHydration,
-  withI18nSupport,
-} from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideNgxCountAnimations } from 'ngx-count-animation';
@@ -27,9 +23,9 @@ import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
 import '../app/utils/extensions/extensions';
 import { routes } from './app.routes';
 import { provideLogger } from './services/logger/logger-configs.provider';
-import { provideEndpoints } from './utils/endpoints/endpoints.provider';
 import { globalHttpErrorHandlerInterceptor } from './utils/interceptor/global-http-error-handler.interceptor';
-import { providePlatformDetection } from './utils/is-browser.provider';
+import { provideEndpoints } from './utils/providers/endpoints/endpoints.provider';
+import { providePlatformDetection } from './utils/providers/is-browser.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -45,7 +41,7 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([globalHttpErrorHandlerInterceptor]),
     ),
-    provideClientHydration(withI18nSupport()),
+    // provideClientHydration(withI18nSupport()),
     quicklinkProviders,
     provideRouter(
       routes,

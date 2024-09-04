@@ -1,10 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
+  input,
   OnInit,
   TemplateRef,
-  ViewChild,
+  viewChild,
   ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
@@ -20,28 +20,30 @@ import { ServiceCardIcon } from '../../model/service-card-type';
   styleUrl: './service-card.component.scss',
 })
 export class ServiceCardComponent extends ExtendedComponent implements OnInit {
-  /** Reference to the container where service items will be created dynamically. */
-  @ViewChild('serviceItemsRef', { read: ViewContainerRef, static: true })
-  serviceItemsRef!: ViewContainerRef;
   /** Reference to the container for displaying icons. */
-  @ViewChild('iconRef', { read: ViewContainerRef, static: true })
-  iconRef!: ViewContainerRef;
+  private iconRef = viewChild.required('iconRef', {
+    read: ViewContainerRef,
+  });
 
   /** Reference to the website icon template. */
-  @ViewChild('websiteIcon', { read: TemplateRef, static: true })
-  private websiteIcon!: TemplateRef<any>;
+  private websiteIcon = viewChild.required('websiteIcon', {
+    read: TemplateRef<any>,
+  });
   /** Reference to the apps icon template. */
-  @ViewChild('appsIcon', { read: TemplateRef, static: true })
-  private appsIcon!: TemplateRef<any>;
+  private appsIcon = viewChild.required('appsIcon', {
+    read: TemplateRef<any>,
+  });
   /** Reference to the design icon template. */
-  @ViewChild('designIcon', { read: TemplateRef, static: true })
-  private designIcon!: TemplateRef<any>;
+  private designIcon = viewChild.required('designIcon', {
+    read: TemplateRef<any>,
+  });
   /** Reference to the backend icon template. */
-  @ViewChild('backendIcon', { read: TemplateRef, static: true })
-  private backendIcon!: TemplateRef<any>;
+  private backendIcon = viewChild.required('backendIcon', {
+    read: TemplateRef<any>,
+  });
 
   /** Icon representing the service. */
-  @Input({ required: true }) icon!: ServiceCardIcon;
+  public icon = input.required<ServiceCardIcon>();
 
   override ngOnInit(): void {
     this.setIconTemplate();
@@ -51,26 +53,26 @@ export class ServiceCardComponent extends ExtendedComponent implements OnInit {
 
   /**
    * Sets the icon template based on the value of the `icon` property.
-   * 
+   *
    * The icon template is created by embedding the corresponding view based on the `icon` value.
-   * 
+   *
    * Supported icon values are: `website`, `app`, `design` and `backend`.
-   * 
+   *
    * Throws an error if the `icon` value is not one of the supported values.
    */
   private setIconTemplate() {
-    switch (this.icon) {
+    switch (this.icon()) {
       case 'website':
-        this.iconRef.createEmbeddedView(this.websiteIcon);
+        this.iconRef().createEmbeddedView(this.websiteIcon());
         break;
       case 'app':
-        this.iconRef.createEmbeddedView(this.appsIcon);
+        this.iconRef().createEmbeddedView(this.appsIcon());
         break;
       case 'design':
-        this.iconRef.createEmbeddedView(this.designIcon);
+        this.iconRef().createEmbeddedView(this.designIcon());
         break;
       case 'backend':
-        this.iconRef.createEmbeddedView(this.backendIcon);
+        this.iconRef().createEmbeddedView(this.backendIcon());
         break;
 
       default:

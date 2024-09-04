@@ -1,12 +1,12 @@
 import { NgTemplateOutlet } from '@angular/common';
 import {
-    ChangeDetectionStrategy,
-    Component,
-    OnDestroy,
-    OnInit,
-    TemplateRef,
-    ViewChild,
-    ViewContainerRef,
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit,
+  TemplateRef,
+  viewChild,
+  ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
@@ -26,10 +26,13 @@ export class AboutMeHobbiesComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  @ViewChild('containerRef', { read: ViewContainerRef, static: true })
-  container!: ViewContainerRef;
-  @ViewChild('itemTemplate', { read: TemplateRef, static: true })
-  itemTemplate!: TemplateRef<any>;
+  
+  private containerRef = viewChild.required('containerRef', {
+    read: ViewContainerRef,
+  });
+  private itemTemplate = viewChild.required('itemTemplate', {
+    read: TemplateRef<any>,
+  });
 
   /**
    * Represents a collection of hobbies.
@@ -37,7 +40,7 @@ export class AboutMeHobbiesComponent
    * @remarks
    * Each item has a title, message, and icon.
    */
-  public items: Hobbies[] = HOBBIES;
+  private readonly items: Hobbies[] = HOBBIES;
 
   override ngOnInit(): void {
     this.createItems();
@@ -46,7 +49,7 @@ export class AboutMeHobbiesComponent
   }
 
   ngOnDestroy(): void {
-    this.container.clear();
+    this.containerRef().clear();
   }
 
   /**
@@ -54,7 +57,7 @@ export class AboutMeHobbiesComponent
    */
   private createItems() {
     this.items.forEach((item) => {
-      this.container.createEmbeddedView(this.itemTemplate, item);
+      this.containerRef().createEmbeddedView(this.itemTemplate(), item);
     });
   }
 }

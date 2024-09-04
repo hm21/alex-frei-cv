@@ -1,6 +1,7 @@
 import { snaptabLogo } from '../logos';
+import { ProjectDetails } from '../portfolio-interfaces';
 
-export const PROJECT_SNAPTAB = {
+export const PROJECT_SNAPTAB: ProjectDetails = {
   logo: snaptabLogo,
   title: 'snaptab',
   subtitle: $localize`The Allrounder-Tool for your Company!`,

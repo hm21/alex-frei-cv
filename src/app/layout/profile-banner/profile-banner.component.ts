@@ -2,12 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
   Component,
-  OnDestroy,
   OnInit,
   TemplateRef,
-  ViewChild,
   ViewContainerRef,
-  inject
+  inject,
+  viewChild
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
@@ -36,32 +35,32 @@ import { navItems } from '../header/utils/nav-items';
 })
 export class ProfileBannerComponent
   extends ExtendedComponent
-  implements OnInit, OnDestroy
+  implements OnInit
 {
   /**
    * Reference to the container for navigation items.
-   * @type {ViewContainerRef}
    */
-  @ViewChild('navItemsRef', { read: ViewContainerRef, static: true })
-  navItemsRef!: ViewContainerRef;
+  private navItemsRef = viewChild.required('navItemsRef', {
+    read: ViewContainerRef,
+  });
   /**
    * Reference to the container for language switch component.
-   * @type {ViewContainerRef}
    */
-  @ViewChild('languageContainerRef', { read: ViewContainerRef, static: true })
-  languageContainerRef!: ViewContainerRef;
+  private languageContainerRef = viewChild.required('languageContainerRef', {
+    read: ViewContainerRef,
+  });
   /**
    * Reference to the container for theme switch component.
-   * @type {ViewContainerRef}
    */
-  @ViewChild('themeContainerRef', { read: ViewContainerRef, static: true })
-  themeContainerRef!: ViewContainerRef;
+  private themeContainerRef = viewChild.required('themeContainerRef', {
+    read: ViewContainerRef,
+  });
   /**
    * Reference to the navigation item template.
-   * @type {TemplateRef<any>}
    */
-  @ViewChild('navItem', { read: TemplateRef, static: true })
-  navItem!: TemplateRef<any>;
+  private navItem = viewChild.required('navItem', {
+    read: TemplateRef<any>,
+  });
 
   private http = inject(HttpClient);
   private header = inject(HeaderComponent);
@@ -72,13 +71,7 @@ export class ProfileBannerComponent
     super.ngOnInit();
   }
 
-  ngOnDestroy(): void {
-    this.navItemsRef.clear();
-    this.languageContainerRef.clear();
-    this.themeContainerRef.clear();
-  }
-
-  public closeSideMenu(){
+  public closeSideMenu() {
     this.header.toggleBtn()?.closeMenu();
   }
 
@@ -101,7 +94,7 @@ export class ProfileBannerComponent
    */
   private createNavItems() {
     navItems.forEach((el) => {
-      this.navItemsRef!.createEmbeddedView(this.navItem, el);
+      this.navItemsRef().createEmbeddedView(this.navItem(), el);
     });
   }
 
@@ -113,19 +106,19 @@ export class ProfileBannerComponent
     if (!this.isBrowser) return;
 
     if (window.innerWidth <= 1024 || window.innerHeight <= 489) {
-      if (this.navItemsRef.length <= 0) this.createNavItems();
-      if (this.languageContainerRef.length === 0) {
-        this.languageContainerRef.createComponent(LanguageSwitchComponent);
+      if (this.navItemsRef().length <= 0) this.createNavItems();
+      if (this.languageContainerRef().length === 0) {
+        this.languageContainerRef().createComponent(LanguageSwitchComponent);
       }
-      if (this.themeContainerRef.length === 0) {
+      if (this.themeContainerRef().length === 0) {
         const ref =
-          this.themeContainerRef.createComponent(ThemeSwitchComponent);
+          this.themeContainerRef().createComponent(ThemeSwitchComponent);
         ref.instance.elRef.nativeElement.style.marginLeft = 'auto';
       }
     } else {
-      this.navItemsRef.clear();
-      this.languageContainerRef.clear();
-      this.themeContainerRef.clear();
+      this.navItemsRef().clear();
+      this.languageContainerRef().clear();
+      this.themeContainerRef().clear();
     }
   }
 

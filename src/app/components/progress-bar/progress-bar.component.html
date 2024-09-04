@@ -3,7 +3,7 @@
     <ng-content select="[name]"/>
   </div>
   <div class="progress">
-    <span [ngxCountAnimation]="progress" duration="500"></span>%
+    <span [ngxCountAnimation]="progress()" duration="500"></span>%
   </div>
 </div>
 

@@ -78,7 +78,7 @@ export default async (req: https.Request, resp: express.Response) => {
                   `,
       },
     ],
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4o-mini',
   });
 
   return resp.status(200).json(completion.choices[0].message.content);

@@ -14,7 +14,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent extends ExtendedComponent implements OnInit {
-  public contactOptions = CONTACT_OPTIONS;
+  public readonly contactOptions = CONTACT_OPTIONS;
 
   protected override pageMeta: PageMetaData = {
     title: $localize`Contact Alex Frei`,

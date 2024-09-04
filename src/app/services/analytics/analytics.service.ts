@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { IS_BROWSER } from 'src/app/utils/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
 import { IdManagerService } from '../id-manager/id-manager.service';
- 
+
 /// This is just an example how to log analytics in the server.
 /**
  * Service for managing analytics tracking.
@@ -40,9 +40,9 @@ export class AnalyticsService {
 
   /**
    * Tracks a website visit.
-   * /
+   */
   public websiteVisit() {
-    this.post('websiteVisit', 'visit');
+    // this.post('websiteVisit', 'visit');
   }
 
   /**

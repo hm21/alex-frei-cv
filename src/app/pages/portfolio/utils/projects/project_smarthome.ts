@@ -1,7 +1,7 @@
 import { iotLogo } from '../logos';
 import { ProjectDetails } from '../portfolio-interfaces';
 
-export const PROJECT_SMARTHOME: { type: string } & ProjectDetails = {
+export const PROJECT_SMART_HOME: { type: string } & ProjectDetails = {
   type: $localize`IoT`,
   title: 'smarthome',
   subtitle: $localize`Smarthome app to automate bee hives and gardens.`,

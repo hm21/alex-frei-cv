@@ -4,7 +4,8 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
-  inject
+  inject,
+  signal
 } from '@angular/core';
 import {
   FormControl,
@@ -13,7 +14,6 @@ import {
   Validators,
 } from '@angular/forms';
 import {
-  BehaviorSubject,
   Observable,
   Subject,
   catchError,
@@ -21,15 +21,15 @@ import {
   map,
   of,
   switchMap,
-  tap,
+  tap
 } from 'rxjs';
 import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
 import { LoggerService } from 'src/app/services/logger/logger.service';
-import { ENDPOINTS } from 'src/app/utils/endpoints/endpoints.provider';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 
 @Component({
   selector: 'af-contact-form',
@@ -52,7 +52,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   public submit$ = new Subject<void>();
 
   /** Observable that tracks the form state and related messages. */
-  public formState$ = new BehaviorSubject<{
+  public formState = signal<{
     state: 'success' | 'error' | 'loading' | '';
     msg?: string;
     canSend: boolean;
@@ -71,18 +71,19 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   override ngOnInit(): void {
     this.form.valueChanges
       .pipe(
-        map(() => this.formState$.value),
+        map(() => this.formState()),
         filter((el) => el.state === 'error' && this.form.valid),
         this.destroyPipe(),
       )
       .subscribe(() => {
-        this.formState$.next({ state: '', canSend: true });
+        this.formState.set({ state: '', canSend: true });
       });
 
     this.submit$
       .pipe(
         map(() => this.form),
         tap((form) => this.updateFormState(form)),
+        /// Ensure the form is valid and verify that the user has not submitted it more than 10 times.
         filter((form) => form.valid && this.sendTries < 10),
         tap((form) => this.prepareFormForSubmission(form)),
         switchMap((form) =>
@@ -94,7 +95,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
         this.destroyPipe(),
       )
       .subscribe(() => {
-        this.formState$.next({
+        this.formState.set({
           state: 'success',
           msg: CONTACT_MESSAGES.submissionSuccess,
           canSend: false,
@@ -108,7 +109,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
    */
   private updateFormState(form: FormGroup) {
     if (form.invalid) {
-      this.formState$.next({
+      this.formState.set({
         state: 'error',
         msg: this.form.get('email')?.invalid
           ? CONTACT_MESSAGES.invalidEmail
@@ -117,7 +118,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
       });
     } else if (this.sendTries >= 10) {
       form.disable();
-      this.formState$.next({
+      this.formState.set({
         state: 'error',
         msg: CONTACT_MESSAGES.tooManyAttempts,
         canSend: false,
@@ -132,7 +133,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   private prepareFormForSubmission(form: FormGroup) {
     this.sendTries++;
     form.disable();
-    this.formState$.next({
+    this.formState.set({
       state: 'loading',
       canSend: false,
     });
@@ -147,7 +148,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     this.logger.error(err).print();
 
     if (err.error === 'Blacklist') {
-      this.formState$.next({
+      this.formState.set({
         state: 'error',
         msg: `<span>${CONTACT_MESSAGES.blacklist}</span>
           <b>
@@ -172,7 +173,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
         msg = CONTACT_MESSAGES.unknownError;
       }
 
-      this.formState$.next({
+      this.formState.set({
         state: 'error',
         msg,
         canSend: true,

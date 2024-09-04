@@ -4,7 +4,7 @@ import {
   Component,
   ElementRef,
   OnInit,
-  ViewChild,
+  viewChild
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { fromEvent } from 'rxjs';
@@ -22,7 +22,7 @@ export class ResumeTimelineItemComponent
   extends ExtendedComponent
   implements OnInit, AfterViewInit
 {
-  @ViewChild('sonar') sonar!: ElementRef<HTMLElement>;
+  private sonar = viewChild.required<ElementRef<HTMLElement>>('sonar');
 
   ngAfterViewInit(): void {
     this.hoverListener();
@@ -35,13 +35,16 @@ export class ResumeTimelineItemComponent
     fromEvent(this.nativeElement, 'mouseenter')
       .pipe(this.destroyPipe())
       .subscribe(() => {
-        this.renderer.addClass(this.sonar.nativeElement, 'sonar-animation');
+        this.renderer.addClass(this.sonar().nativeElement, 'sonar-animation');
       });
 
-    fromEvent(this.sonar.nativeElement, 'animationend')
+    fromEvent(this.sonar().nativeElement, 'animationend')
       .pipe(this.destroyPipe())
       .subscribe(() => {
-        this.renderer.removeClass(this.sonar.nativeElement, 'sonar-animation');
+        this.renderer.removeClass(
+          this.sonar().nativeElement,
+          'sonar-animation',
+        );
       });
   }
 }

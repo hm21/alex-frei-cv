@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
-import { ProgressbarComponent } from 'src/app/components/progressbar/progressbar.component';
+import { ProgressBarComponent } from 'src/app/components/progress-bar/progress-bar.component';
 import {
-    BACKEND_SKILLS,
-    FRONTEND_SKILLS,
-    KNOWLEDGES,
+  BACKEND_SKILLS,
+  FRONTEND_SKILLS,
+  KNOWLEDGE,
 } from 'src/app/configs/resume-skills';
 import { SkillItem } from '../../utils/resume-interface';
 
@@ -12,7 +12,7 @@ import { SkillItem } from '../../utils/resume-interface';
   selector: 'af-resume-skills',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ProgressbarComponent, NgxScrollAnimationsDirective],
+  imports: [ProgressBarComponent, NgxScrollAnimationsDirective],
   templateUrl: './resume-skills.component.html',
   styleUrl: './resume-skills.component.scss',
 })
@@ -30,5 +30,5 @@ export class ResumeSkillsComponent {
   /**
    * An array of knowledge areas.
    */
-  public knowledges = KNOWLEDGES;
+  public knowledge = KNOWLEDGE;
 }

@@ -3,38 +3,36 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
-  Input,
-  ViewChild,
-  numberAttribute
+  input,
+  numberAttribute,
+  viewChild
 } from '@angular/core';
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { delay, fromEvent, map, startWith, throttleTime } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
-  selector: 'af-progressbar',
+  selector: 'af-progress-bar',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgxCountAnimationDirective],
-  templateUrl: './progressbar.component.html',
-  styleUrl: './progressbar.component.scss',
+  templateUrl: './progress-bar.component.html',
+  styleUrl: './progress-bar.component.scss',
 })
-export class ProgressbarComponent
+export class ProgressBarComponent
   extends ExtendedComponent
   implements AfterViewInit
 {
   /**
    * Reference to the progress bar element.
-   * @type {ElementRef<HTMLElement>}
    */
-  @ViewChild('barRef') barRef!: ElementRef<HTMLElement>;
+  private barRef = viewChild.required<ElementRef<HTMLElement>>('barRef');
 
   /**
    * The progress value for the progress bar.
-   * @type {number}
    * @required
    */
-  @Input({ required: true, transform: numberAttribute }) progress!: number;
+  public progress = input.required({ transform: numberAttribute });
 
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;
@@ -46,7 +44,7 @@ export class ProgressbarComponent
    * Initializes the scroll listener for the progress bar.
    */
   private initScrollListener() {
-    const barElement = this.barRef.nativeElement;
+    const barElement = this.barRef().nativeElement;
 
     fromEvent(this.document, 'scroll')
       .pipe(
@@ -56,9 +54,9 @@ export class ProgressbarComponent
         map(() => {
           const rect = barElement.getBoundingClientRect();
           const windowHeight =
-          window.innerHeight || this.document.documentElement.clientHeight;
+            window.innerHeight || this.document.documentElement.clientHeight;
           const isVisible = rect.top < windowHeight;
-          return isVisible ? this.progress : 0;
+          return isVisible ? this.progress() : 0;
         }),
         this.destroyPipe(),
       )

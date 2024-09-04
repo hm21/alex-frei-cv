@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { IS_BROWSER } from 'src/app/utils/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
 
 @Injectable({
   providedIn: 'root',

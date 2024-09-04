@@ -37,8 +37,8 @@ describe('MetaManagerService', () => {
 
   it('should set the title and meta tags correctly', () => {
     const data: PageMetaData = {
-      title: 'Test Title',
-      description: 'Test Description',
+      title: 'Mock Test Title',
+      description: 'Mock Long Test Description',
       img: 'https://example.com/test.jpg',
     };
 

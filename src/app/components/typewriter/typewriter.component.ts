@@ -2,7 +2,7 @@ import {
   AfterViewInit,
   ChangeDetectionStrategy,
   Component,
-  Input,
+  input
 } from '@angular/core';
 import { concatMap, filter, interval, map, timer } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -22,7 +22,7 @@ export class TypewriterComponent
    * The items to display in the typewriter effect.
    * @required
    */
-  @Input({ required: true }) items: string[] = [];
+  public items = input.required<string[]>();
 
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;
@@ -35,7 +35,7 @@ export class TypewriterComponent
    */
   private animateText(): void {
     let text = '';
-    const arr = this.items;
+    const arr = this.items();
     let lastIndex = 0;
     let breakH = 0;
     let breakEndH = 0;

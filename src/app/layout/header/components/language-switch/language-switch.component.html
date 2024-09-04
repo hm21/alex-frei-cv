@@ -10,7 +10,7 @@
   </svg>
 
   <span>
-    {{ activeLanguage.short }}
+    {{ activeLanguage().short }}
   </span>
 </button>
 
@@ -19,7 +19,7 @@
   @for (language of languages; track $index) {
   <button
     (click)="changeLanguage(language)"
-    [ngClass]="{ selected: activeLanguage.iso2 === language.iso2 }"
+    [ngClass]="{ selected: activeLanguage().iso2 === language.iso2 }"
   >
     {{ language.name }}
   </button>

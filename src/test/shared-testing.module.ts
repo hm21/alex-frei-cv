@@ -22,8 +22,8 @@ import {
 } from 'ngx-scroll-animations';
 import { routes } from 'src/app/app.routes';
 import { provideLogger } from 'src/app/services/logger/logger-configs.provider';
-import { provideEndpoints } from 'src/app/utils/endpoints/endpoints.provider';
-import { providePlatformDetection } from 'src/app/utils/is-browser.provider';
+import { provideEndpoints } from 'src/app/utils/providers/endpoints/endpoints.provider';
+import { providePlatformDetection } from 'src/app/utils/providers/is-browser.provider';
 import '../app/utils/extensions/extensions';
 
 @NgModule({

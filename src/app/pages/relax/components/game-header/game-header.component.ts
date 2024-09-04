@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { BackBtnComponent } from 'src/app/components/back-btn/back-btn.component';
 import { GAME } from '../../utils/game.token';
 
@@ -10,23 +10,26 @@ import { GAME } from '../../utils/game.token';
   styleUrl: './game-header.component.scss',
 })
 export class GameHeaderComponent implements OnInit {
-  public gameName = '';
-  public fallbackPath = '';
-  public imagePaths: { path: string; type: string }[] = [];
+  public gameName = signal('');
+  public fallbackPath = signal('');
+  public imagePaths = signal<{ path: string; type: string }[]>([]);
 
   private game = inject(GAME);
 
   ngOnInit(): void {
-    this.gameName = this.game.name;
+    this.gameName.set(this.game.name);
     const rawPath = `assets/img/game/${this.game.id}/${this.game.id}_4x`;
 
-    this.imagePaths.clear();
+    this.imagePaths().clear();
     ['avif', 'webp', 'jpeg'].forEach((format) => {
-      this.imagePaths.push({
-        type: `image/${format}`,
-        path: `${rawPath}.${format}`,
+      this.imagePaths.update((el) => {
+        el.push({
+          type: `image/${format}`,
+          path: `${rawPath}.${format}`,
+        });
+        return el;
       });
     });
-    this.fallbackPath = `${rawPath}.jpeg`;
+    this.fallbackPath.set(`${rawPath}.jpeg`);
   }
 }
