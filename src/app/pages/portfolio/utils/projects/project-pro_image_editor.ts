@@ -15,6 +15,13 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
     `,
   images: [
     {
+      path: 'assets/img/pro_image_editor/grounded-design',
+      alt: `Grounded-Design`,
+      ratio: '1 / 1.524',
+      isGif: true,
+      backgroundColor: '#000000',
+    },
+    {
       path: 'assets/img/pro_image_editor/frosted-glass-design',
       alt: `Frosted-Glass-Design`,
       ratio: '1 / 1.524',
@@ -70,13 +77,13 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
       isGif: true,
       backgroundColor: '#000000',
     },
-    {
+    /* {
       path: 'assets/img/pro_image_editor/blur-editor',
       alt: `Blur-Editor`,
       ratio: '1 / 1.524',
       isGif: true,
       backgroundColor: '#000000',
-    },
+    }, */
   ],
   demoUrl: 'https://hm21.github.io/pro_image_editor',
   website: [
