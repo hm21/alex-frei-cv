@@ -25,9 +25,9 @@ describe('ContactFormComponent', () => {
     fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
     const formValue = {
-      firstname: 'John',
-      lastname: 'Doe',
-      msg: 'Test message',
+      givenName: 'John',
+      familyName: 'Doe',
+      message: 'Test message',
       email: 'john.doe@example.com',
     };
     component.form.setValue(formValue);
@@ -46,17 +46,17 @@ describe('ContactFormComponent', () => {
   });
 
   it('should have a form with 4 controls', () => {
-    expect(component.form.contains('firstname')).toBeTruthy();
-    expect(component.form.contains('lastname')).toBeTruthy();
-    expect(component.form.contains('msg')).toBeTruthy();
+    expect(component.form.contains('givenName')).toBeTruthy();
+    expect(component.form.contains('familyName')).toBeTruthy();
+    expect(component.form.contains('message')).toBeTruthy();
     expect(component.form.contains('email')).toBeTruthy();
   });
 
   it('should mark form as invalid if fields are empty', () => {
     component.form.setValue({
-      firstname: '',
-      lastname: '',
-      msg: '',
+      givenName: '',
+      familyName: '',
+      message: '',
       email: '',
     });
     expect(component.form.invalid).toBeTrue();
@@ -69,9 +69,9 @@ describe('ContactFormComponent', () => {
 
   it('should enable submit button when form is valid', () => {
     component.form.setValue({
-      firstname: 'John',
-      lastname: 'Doe',
-      msg: 'Hello!',
+      givenName: 'John',
+      familyName: 'Doe',
+      message: 'Hello!',
       email: 'john.doe@example.com',
     });
     fixture.detectChanges();
@@ -80,24 +80,24 @@ describe('ContactFormComponent', () => {
 
   it('should update formState to error if form is invalid on submit', () => {
     component.form.setValue({
-      firstname: '',
-      lastname: '',
-      msg: '',
+      givenName: '',
+      familyName: '',
+      message: '',
       email: '',
     });
     component.submit$.next();
     expect(component.formState()).toEqual({
       state: 'error',
-      msg: CONTACT_MESSAGES.invalidEmail,
+      message: CONTACT_MESSAGES.invalidEmail,
       canSend: true,
     });
   });
 
   it('should send form data when form is valid and update formState to success', () => {
     component.form.setValue({
-      firstname: 'John',
-      lastname: 'Doe',
-      msg: 'Hello!',
+      givenName: 'John',
+      familyName: 'Doe',
+      message: 'Hello!',
       email: 'john.doe@example.com',
     });
     component.submit$.next();
@@ -107,7 +107,7 @@ describe('ContactFormComponent', () => {
     req.flush({});
 
     expect(component.formState().state).toBe('success');
-    expect(component.formState().msg).toBe(
+    expect(component.formState().message).toBe(
       CONTACT_MESSAGES.submissionSuccess,
     );
     expect(component.formState().canSend).toBeFalse();
@@ -115,9 +115,9 @@ describe('ContactFormComponent', () => {
 
   it('should handle error response correctly', () => {
     component.form.setValue({
-      firstname: 'John',
-      lastname: 'Doe',
-      msg: 'Hello!',
+      givenName: 'John',
+      familyName: 'Doe',
+      message: 'Hello!',
       email: 'john.doe@example.com',
     });
     component.submit$.next();
@@ -130,7 +130,7 @@ describe('ContactFormComponent', () => {
 
     expect(component.formState()).toEqual({
       state: 'error',
-      msg: jasmine.any(String),
+      message: jasmine.any(String),
       canSend: true,
     });
   });
