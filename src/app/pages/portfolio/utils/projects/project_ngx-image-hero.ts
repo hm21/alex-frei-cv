@@ -28,19 +28,6 @@ export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
-    frontend: [
-      {
-        name: 'Angular',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'HTML',
-      },
-      {
-        name: 'CSS',
-      },
-    ],
+    frontend: ['Angular', 'Typescript', 'HTML', 'CSS'],
   },
 };

@@ -28,16 +28,6 @@ export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
-    frontend: [
-      {
-        name: 'Angular',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'HTML',
-      },
-    ],
+    frontend: ['Angular', 'Typescript', 'HTML'],
   },
 };

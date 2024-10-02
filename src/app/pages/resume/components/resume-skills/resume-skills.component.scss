@@ -5,11 +5,11 @@ h2 {
   display: block;
   margin-bottom: 12px;
 }
-.badge-list {
+.chip-list {
   justify-content: space-between;
 }
 @media (max-width: 600px) {
-  .badge-list {
+  .chip-list {
     justify-content: flex-start;
   }
 }

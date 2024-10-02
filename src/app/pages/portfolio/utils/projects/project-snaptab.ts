@@ -55,77 +55,18 @@ export const PROJECT_SNAPTAB: ProjectDetails = {
     },
   ],
   technology: {
-    frontend: [
-      {
-        name: 'Angular',
-      },
-      {
-        name: 'Flutter',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'Dart',
-      },
-      {
-        name: 'HTML',
-      },
-      {
-        name: 'SCSS',
-      },
-    ],
+    frontend: ['Angular', 'Flutter', 'Typescript', 'Dart', 'HTML', 'SCSS'],
     backend: [
-      {
-        name: 'Firebase',
-      },
-      {
-        name: 'Google Cloud',
-      },
-      {
-        name: 'Supabase',
-      },
-      {
-        name: 'Typesense',
-      },
-      {
-        name: 'Node.js',
-      },
-      {
-        name: 'ASP.NET',
-      },
-      {
-        name: 'Azure',
-      },
+      'Firebase',
+      'Google Cloud',
+      'Supabase',
+      'Typesense',
+      'Node.js',
+      'ASP.NET',
+      'Azure',
     ],
-    prototype: [
-      {
-        name: 'Ionic',
-      },
-      {
-        name: 'Java',
-      },
-      {
-        name: 'libGDX',
-      },
-    ],
-    other: [
-      {
-        name: 'Figma',
-      },
-      {
-        name: 'Lucidchart',
-      },
-      {
-        name: 'Stripe',
-      },
-      {
-        name: 'OpenAI-API',
-      },
-      {
-        name: 'Github-Actions',
-      },
-    ],
+    prototype: ['Ionic', 'Java', 'libGDX'],
+    other: ['Figma', 'Lucidchart', 'Stripe', 'OpenAI-API', 'Github-Actions'],
   },
   images: [
     {

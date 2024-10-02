@@ -1,4 +1,4 @@
-.badge-list {
+.chip-list {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
@@ -6,7 +6,7 @@
   padding: 0px;
   margin: 0px;
 }
-.badge-chip {
+.chip {
   cursor: default;
   display: inline-block;
   font-size: 0.85rem;

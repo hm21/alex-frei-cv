@@ -98,18 +98,7 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
   ],
   install: 'flutter pub add pro_image_editor',
   technology: {
-    frontend: [
-      {
-        name: 'Flutter',
-      },
-      {
-        name: 'Dart',
-      },
-    ],
-    other: [
-      {
-        name: 'Github-Actions',
-      },
-    ],
+    frontend: ['Flutter', 'Dart'],
+    other: ['Github-Actions'],
   },
 };

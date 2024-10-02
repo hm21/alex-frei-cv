@@ -2,20 +2,22 @@ import { NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  ElementRef,
+  HostBinding,
   OnInit,
   TemplateRef,
   ViewContainerRef,
   signal,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
-import { filter, fromEvent, timer } from 'rxjs';
+import { distinctUntilChanged, filter, fromEvent, map, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
+import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { Modal } from 'src/app/utils/modal/modal.component';
 import {
-  BadgeTemplateI,
   ProjectDetails,
   UrlListTemplateI,
 } from '../../utils/portfolio-interfaces';
@@ -31,17 +33,34 @@ import {
     NgxImageHeroDirective,
     SafePipe,
     ImageLoaderDirective,
+    ModalCloseButtonDirective,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   animations: [modalAnimation],
+  host: {
+    '[class.open-hero]': 'openHero()',
+  },
 })
-export class ProjectDetailsComponent extends Modal<ProjectDetails> implements OnInit {
+export class ProjectDetailsComponent
+  extends Modal<ProjectDetails>
+  implements OnInit
+{
+  @HostBinding('@modal') get modalAnimation() {
+    return {
+      value: this.modalFadeOut() ? 'out' : 'in',
+      params: {
+        durationIn: this.modalAnimationDurationIn(),
+        durationOut: this.modalAnimationDurationOut(),
+      },
+    };
+  }
+
   /** Reference to the container for displaying website URLs. */
   private websiteContainer = viewChild.required('websiteContainer', {
     read: ViewContainerRef,
   });
-  /** Reference to the container for displaying technology badges. */
+  /** Reference to the container for displaying technology chips. */
   private technologyContainer = viewChild.required('technologyContainer', {
     read: ViewContainerRef,
   });
@@ -50,9 +69,14 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
     read: ViewContainerRef,
   });
 
-  /** Reference to the badge template. */
-  private badgeTemplate = viewChild.required('badgeTemplate', {
-    read: TemplateRef<{ title: string; items: BadgeTemplateI[] }>,
+  private sectionRef =
+    viewChild.required<ElementRef<HTMLElement>>('sectionRef');
+
+  private headerRef = viewChild.required<ElementRef<HTMLElement>>('headerRef');
+
+  /** Reference to the chip template. */
+  private chipTemplate = viewChild.required('chipTemplate', {
+    read: TemplateRef<{ title: string; items: string[] }>,
   });
   /** Reference to the URL list template. */
   private urlListTemplate = viewChild.required('urlListTemplate', {
@@ -62,7 +86,6 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
   private youtubePlayer = viewChild.required('youtubePlayer', {
     read: TemplateRef<{ url: string }>,
   });
-
 
   /** Duration of modal animation for fade in. */
   public readonly modalAnimationDurationIn = signal(500);
@@ -82,8 +105,42 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
   override ngOnInit(): void {
     this.createDetailInfos();
     this.initKeyListeners();
+    this.listenScrollAnimation();
 
     super.ngOnInit();
+  }
+  /**
+   * Attaches a scroll event listener to the section's native element and applies a box-shadow
+   * to the header's native element when the scroll position is greater than 3 pixels.
+   *
+   * The function listens to the scroll event using RxJS's `fromEvent` and transforms the scroll
+   * event into a boolean value indicating whether the scroll position is greater than 3 pixels.
+   * It then uses `distinctUntilChanged()` to ensure that the box-shadow is applied or removed
+   * only when the scroll position changes between above and below the threshold.
+   *
+   * - If the scroll position is greater than 3 pixels, a box-shadow is applied to the header.
+   * - If the scroll position is less than or equal to 3 pixels, the box-shadow is removed.
+   * @private
+   * @returns {void}
+   */
+  private listenScrollAnimation(): void {
+    fromEvent(this.sectionRef().nativeElement, 'scroll')
+      .pipe(
+        map(() => {
+          const el = this.sectionRef().nativeElement;
+
+          return el.scrollTop > 3;
+        }),
+        distinctUntilChanged(),
+      )
+      .subscribe((show) => {
+        if (show) {
+          this.headerRef().nativeElement.style.boxShadow =
+            '0 4px 6px rgba(0, 0, 0, 0.1)';
+        } else {
+          this.headerRef().nativeElement.style.removeProperty('box-shadow');
+        }
+      });
   }
 
   /**
@@ -135,7 +192,7 @@ export class ProjectDetailsComponent extends Modal<ProjectDetails> implements On
                   : null;
         if (!title) throw new Error(`Title for key '${key}' does not exists!`);
 
-        this.technologyContainer().createEmbeddedView(this.badgeTemplate(), {
+        this.technologyContainer().createEmbeddedView(this.chipTemplate(), {
           title,
           items: this.data().technology[key as 'frontend'],
         });

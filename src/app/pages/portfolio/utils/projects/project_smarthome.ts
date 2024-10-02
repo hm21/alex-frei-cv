@@ -33,32 +33,8 @@ export const PROJECT_SMART_HOME: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
-    frontend: [
-      {
-        name: 'Flutter',
-      },
-      {
-        name: 'Dart',
-      },
-      {
-        name: '.NET IoT',
-      },
-      {
-        name: 'C#',
-      },
-    ],
-    backend: [
-      {
-        name: 'Supabase',
-      },
-    ],
-    prototype: [
-      {
-        name: 'Ionic',
-      },
-      {
-        name: 'Angular',
-      },
-    ],
+    frontend: ['Flutter', 'Dart', '.NET IoT', 'C#'],
+    backend: ['Supabase'],
+    prototype: ['Ionic', 'Angular'],
   },
 };

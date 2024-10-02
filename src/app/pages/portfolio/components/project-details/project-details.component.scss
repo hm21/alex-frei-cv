@@ -1,4 +1,5 @@
 $list-icon-size: 1rem;
+$header-height: 85px;
 
 :host {
   position: fixed;
@@ -7,30 +8,52 @@ $list-icon-size: 1rem;
   right: 0px;
   bottom: 0px;
   z-index: 9999;
-}
-.modal-content {
-  overflow: auto;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
+
   background-color: var(--page-background-primary);
 
   will-change: transform, border-radius, box-shadow;
   scrollbar-gutter: stable both-edges;
-
-  &.open-hero {
-    overflow: hidden;
+}
+header {
+  max-width: 1200px;
+  margin: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  transition: box-shadow 220ms ease;
+  height: $header-height;
+  .container {
+    position: relative;
   }
+}
+.frosted-glass {
+  padding: 10px 0;
+  backdrop-filter: saturate(180%) blur(10px);
+  background-color: rgb(255 255 255 / 66%);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 section {
-  position: relative;
-  max-width: 1200px;
-  margin: auto;
+  &.open-hero {
+    overflow: hidden;
+  }
 
-  padding: 10px 20px 30px;
+  scrollbar-gutter: stable both-edges;
+  overflow: auto;
+
+  max-height: 100vh;
+  max-height: 100dvh;
+  padding-bottom: 30px;
 }
 .body {
+  margin-top: calc($header-height + 15px);
   gap: 20px;
 }
 aside {
@@ -89,10 +112,10 @@ li {
   padding: 3px 0;
 }
 
-.badge-list {
+.chip-list {
   margin-bottom: 20px;
 }
-.badge-chip {
+.chip {
   padding: 3px 7px;
 }
 .list-item {
@@ -138,36 +161,6 @@ li {
   font-size: 0.95rem;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-
-  background-color: var(--page-background-primary);
-  padding: 5px;
-  border-radius: 100%;
-  width: 32px;
-  height: 32px;
-
-  margin: 0px;
-  outline: none;
-  border: none;
-
-  transition: background-color 250ms ease;
-
-  svg {
-    width: 100%;
-    height: 100%;
-
-    fill: var(--text-color-primary);
-  }
-
-  @media (max-width: 500px) {
-    &:hover {
-      background-color: var(--item-hover-color);
-    }
-  }
-}
 .youtube-player {
   transition: opacity 250ms ease;
   border-radius: 4px;
@@ -253,7 +246,29 @@ li {
 }
 @media (max-width: 499px) {
   header {
-    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 0.88rem;
   }
 }
 @media (max-width: 399.9px) {
