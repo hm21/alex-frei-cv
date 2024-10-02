@@ -54,32 +54,8 @@ export const PROJECT_WAIO: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
-    frontend: [
-      {
-        name: 'Angular',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'HTML',
-      },
-      {
-        name: 'SCSS',
-      },
-    ],
-    backend: [
-      {
-        name: 'Firebase',
-      },
-      {
-        name: 'Node.js',
-      },
-    ],
-    other: [
-      {
-        name: 'Figma',
-      },
-    ],
+    frontend: ['Angular', 'Typescript', 'HTML', 'SCSS'],
+    backend: ['Firebase', 'Node.js'],
+    other: ['Figma'],
   },
 };

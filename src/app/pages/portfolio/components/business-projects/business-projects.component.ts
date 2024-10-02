@@ -40,7 +40,7 @@ export class BusinessProjectsComponent extends ExtendedComponent {
   ];
 
   private modal = inject(ModalManager);
-
+  
   /** Opens the project details modal. */
   public openProject() {
     this.modal.open<ProjectDetailsComponent, ProjectDetails>(
