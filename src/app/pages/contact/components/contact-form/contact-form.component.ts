@@ -27,7 +27,6 @@ import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
-import { LoggerService } from 'src/app/services/logger/logger.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 
@@ -67,7 +66,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
 
   private http = inject(HttpClient);
   private endpoints = inject(ENDPOINTS);
-  private logger = inject(LoggerService);
 
   override ngOnInit(): void {
     this.form.valueChanges

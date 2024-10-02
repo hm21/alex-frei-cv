@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { AnalyticsService } from '../services/analytics/analytics.service';
+import { LoggerService } from '../services/logger/logger.service';
 import { MetaManagerService } from '../services/meta-manager/meta-manager.service';
 import { PageMetaData } from '../services/meta-manager/page-meta-data.interface';
 import { ScreenService } from '../services/screen/screen.service';
@@ -28,6 +29,7 @@ export abstract class ExtendedComponent implements OnInit {
   protected destroyRef = inject(DestroyRef);
   protected document = inject(DOCUMENT);
   protected metaManager = inject(MetaManagerService);
+  protected logger = inject(LoggerService);
 
   ngOnInit(): void {
     this.initComponent();

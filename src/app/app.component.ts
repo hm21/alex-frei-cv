@@ -14,7 +14,6 @@ import { routeAnimation } from './animations/route-animations';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
 import { ImagePreloaderService } from './services/image-manager/image-preloader.service';
-import { LoggerService } from './services/logger/logger.service';
 import { ModalManager } from './services/modal-manager/modal-manager.service';
 import { ExtendedComponent } from './utils/extended-component';
 
@@ -38,8 +37,6 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   /** Preload images with ServiceWorker */
   private imagePreloader = inject(ImagePreloaderService);
 
-  /** Injected logger service for logging operations. */
-  private logger = inject(LoggerService);
 
   constructor() {
     super();
