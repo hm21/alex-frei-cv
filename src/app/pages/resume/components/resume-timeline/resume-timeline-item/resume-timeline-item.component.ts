@@ -4,7 +4,7 @@ import {
   Component,
   ElementRef,
   OnInit,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { fromEvent } from 'rxjs';
@@ -35,16 +35,13 @@ export class ResumeTimelineItemComponent
     fromEvent(this.nativeElement, 'mouseenter')
       .pipe(this.destroyPipe())
       .subscribe(() => {
-        this.renderer.addClass(this.sonar().nativeElement, 'sonar-animation');
+        this.sonar().nativeElement.classList.add('sonar-animation');
       });
 
     fromEvent(this.sonar().nativeElement, 'animationend')
       .pipe(this.destroyPipe())
       .subscribe(() => {
-        this.renderer.removeClass(
-          this.sonar().nativeElement,
-          'sonar-animation',
-        );
+        this.sonar().nativeElement.classList.remove('sonar-animation');
       });
   }
 }

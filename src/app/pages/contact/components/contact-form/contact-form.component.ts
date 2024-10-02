@@ -5,14 +5,9 @@ import {
   Component,
   OnInit,
   inject,
-  signal
+  signal,
 } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import {
   Observable,
   Subject,
@@ -21,14 +16,14 @@ import {
   map,
   of,
   switchMap,
-  tap
+  tap,
 } from 'rxjs';
 import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
-import { LoggerService } from 'src/app/services/logger/logger.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ExtendedValidators } from 'src/app/utils/extended-form-validators';
 import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 
 @Component({
@@ -42,10 +37,10 @@ import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider'
 export class ContactFormComponent extends ExtendedComponent implements OnInit {
   /** The reactive form group for the contact form. */
   public form = new FormGroup({
-    firstname: new FormControl('', Validators.required),
-    lastname: new FormControl('', Validators.required),
-    msg: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
+    givenName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
+    familyName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
+    message: new FormControl('', ExtendedValidators.requiredNonWhitespace),
+    email: new FormControl('', [ExtendedValidators.email]),
   });
 
   /** Subject that triggers the form submission. */
@@ -54,7 +49,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   /** Observable that tracks the form state and related messages. */
   public formState = signal<{
     state: 'success' | 'error' | 'loading' | '';
-    msg?: string;
+    message?: string;
     canSend: boolean;
   }>({
     state: '',
@@ -66,7 +61,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
 
   private http = inject(HttpClient);
   private endpoints = inject(ENDPOINTS);
-  private logger = inject(LoggerService);
 
   override ngOnInit(): void {
     this.form.valueChanges
@@ -79,25 +73,66 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
         this.formState.set({ state: '', canSend: true });
       });
 
+    this.listenFormSubmit();
+  }
+
+  /**
+   * Handles form submission pipeline.
+   * This observable processes the form submission, ensures the form is valid, limits submission attempts to 10,
+   * and sends the form data via an HTTP POST request. It updates the form state based on the outcome.
+   */
+  private listenFormSubmit() {
     this.submit$
       .pipe(
+        /**
+         * Maps the submission event to the form instance.
+         * @returns {FormGroup} The current form group instance.
+         */
         map(() => this.form),
+        /**
+         * Updates the internal state of the form before validation.
+         * @param {FormGroup} form - The current form group instance.
+         */
         tap((form) => this.updateFormState(form)),
-        /// Ensure the form is valid and verify that the user has not submitted it more than 10 times.
+        /**
+         * Filters the form to allow only valid forms and ensures that submission attempts are less than 10.
+         * @param {FormGroup} form - The current form group instance.
+         * @returns {boolean} Whether the form is valid and the submission count is less than 10.
+         */
         filter((form) => form.valid && this.sendTries < 10),
+        /**
+         * Prepares the form for submission (e.g., formatting data).
+         * @param {FormGroup} form - The current form group instance.
+         */
         tap((form) => this.prepareFormForSubmission(form)),
+        /**
+         * Sends the form data to the backend using an HTTP POST request.
+         * @param {FormGroup} form - The current form group instance.
+         * @returns {Observable<Object>} The HTTP POST response observable.
+         */
         switchMap((form) =>
           this.http
             .post(this.endpoints.contactMessage, form.value)
+            /**
+             * Catches any errors during the HTTP request and handles them.
+             * @param {Error} err - The error object thrown during the request.
+             * @returns {Observable<Error>} The observable that handles the error.
+             */
             .pipe(catchError((err) => this.handleError(err))),
         ),
+
+        /**
+         * Filters the response to ensure it was successful.
+         * @param {any} res - The response from the HTTP POST request.
+         * @returns {boolean} Whether the response is valid (not an error).
+         */
         filter((res) => res !== 'error'),
         this.destroyPipe(),
       )
       .subscribe(() => {
         this.formState.set({
           state: 'success',
-          msg: CONTACT_MESSAGES.submissionSuccess,
+          message: CONTACT_MESSAGES.submissionSuccess,
           canSend: false,
         });
       });
@@ -111,7 +146,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     if (form.invalid) {
       this.formState.set({
         state: 'error',
-        msg: this.form.get('email')?.invalid
+        message: this.form.get('email')?.invalid
           ? CONTACT_MESSAGES.invalidEmail
           : CONTACT_MESSAGES.requiredFields,
         canSend: true,
@@ -120,7 +155,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
       form.disable();
       this.formState.set({
         state: 'error',
-        msg: CONTACT_MESSAGES.tooManyAttempts,
+        message: CONTACT_MESSAGES.tooManyAttempts,
         canSend: false,
       });
     }
@@ -150,7 +185,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
     if (err.error === 'Blacklist') {
       this.formState.set({
         state: 'error',
-        msg: `<span>${CONTACT_MESSAGES.blacklist}</span>
+        message: `<span>${CONTACT_MESSAGES.blacklist}</span>
           <b>
             <a
               class="danger"
@@ -163,19 +198,19 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
       });
     } else {
       this.form.enable();
-      let msg!: string;
+      let message!: string;
 
       if (err.status === 400) {
-        msg = CONTACT_MESSAGES.error400;
+        message = CONTACT_MESSAGES.error400;
       } else if (err.status === 403) {
-        msg = CONTACT_MESSAGES.error403;
+        message = CONTACT_MESSAGES.error403;
       } else {
-        msg = CONTACT_MESSAGES.unknownError;
+        message = CONTACT_MESSAGES.unknownError;
       }
 
       this.formState.set({
         state: 'error',
-        msg,
+        message,
         canSend: true,
       });
     }

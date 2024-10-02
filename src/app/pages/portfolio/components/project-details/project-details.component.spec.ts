@@ -1,8 +1,7 @@
 import { DOCUMENT } from '@angular/common';
-import { Renderer2, ViewContainerRef } from '@angular/core';
+import { ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
-import { renderer2Mock } from 'src/test/mocks/renderer2.mock';
 import { viewContainerRefMock } from 'src/test/mocks/view-container-ref.mock';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ProjectDetailsComponent } from './project-details.component';
@@ -59,10 +58,6 @@ describe('ProjectDetailsComponent', () => {
       imports: [ProjectDetailsComponent, SharedTestingModule],
       providers: [
         { provide: DOCUMENT, useValue: documentMock },
-        {
-          provide: Renderer2,
-          useValue: renderer2Mock,
-        },
         {
           provide: ViewContainerRef,
           useValue: viewContainerRefMock,

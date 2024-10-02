@@ -7,7 +7,7 @@ import {
   OnInit,
   computed,
   inject,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -91,19 +91,13 @@ export class QuantumQuizGameComponent
         this.nextPage();
       } else {
         this.state.set('correct');
-        this.renderer.addClass(
-          this[`answerRef${option}`]().nativeElement,
-          'correct',
-        );
+        this[`answerRef${option}`]().nativeElement.classList.add('correct');
       }
     } else {
       this.state.set('wrong');
       this.gameManager.destroyQuizGeneration$.next();
-      this.renderer.addClass(this[`answerRef${option}`]().nativeElement, 'wrong');
-      this.renderer.addClass(
-        this[`answerRef${this.correctAnswerLetter()}`]().nativeElement,
-        'correct',
-      );
+      this[`answerRef${option}`]().nativeElement.classList.add('wrong');
+      this[`answerRef${this.correctAnswerLetter()}`]().nativeElement.classList.add('correct');
     }
   }
 
@@ -121,10 +115,7 @@ export class QuantumQuizGameComponent
     this.level.update((level) => ++level);
 
     ['A', 'B', 'C', 'D'].forEach((el) => {
-      this.renderer.removeClass(
-        this[`answerRef${el as 'A'}`]().nativeElement,
-        'correct',
-      );
+      this[`answerRef${el as 'A'}`]().nativeElement.classList.remove('correct');
     });
 
     this.state.set('pending');

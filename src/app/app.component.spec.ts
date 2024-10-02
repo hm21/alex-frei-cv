@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { ElementRef, Renderer2, ViewContainerRef } from '@angular/core';
+import { ElementRef, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideServiceWorker } from '@angular/service-worker';
 import { NgxCountService } from 'ngx-count-animation';
@@ -25,7 +25,6 @@ describe('AppComponent', () => {
         provideServiceWorker('ngsw-worker.js'),
         NgxScrollAnimationsService,
         NgxCountService,
-        Renderer2,
         { provide: DOCUMENT, useValue: document },
         { provide: ElementRef, useValue: { nativeElement: {} } },
         { provide: ViewContainerRef, useValue: {} },

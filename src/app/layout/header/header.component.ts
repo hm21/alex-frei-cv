@@ -33,10 +33,10 @@ export class HeaderComponent extends ExtendedComponent {
     this.showMobileMenu.update((value) => !value);
 
     if (this.showMobileMenu()) {
-      this.renderer.addClass(this.header()?.nativeElement, 'show');
+      this.header()?.nativeElement.classList.add('show');
       this.toggleBtn()!.open.set(true);
     } else {
-      this.renderer.removeClass(this.header()?.nativeElement, 'show');
+      this.header()?.nativeElement.classList.remove('show');
       this.toggleBtn()!.open.set(false);
     }
   }

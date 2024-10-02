@@ -1,24 +1,24 @@
 <form [formGroup]="form" (ngSubmit)="submit$.next()">
   <div class="row">
-    <div class="col h-start">
+    <div class="col h-stretch">
       <div class="input-box">
-        <label for="firstname" i18n>First Name</label>
+        <label for="givenName" i18n>First Name</label>
         <input
           enterkeyhint="next"
-          id="firstname"
+          id="givenName"
           autocomplete="given-name"
-          formControlName="firstname"
+          formControlName="givenName"
           type="text"
         />
       </div>
 
       <div class="input-box">
-        <label for="lastname" i18n>Last Name</label>
+        <label for="familyName" i18n>Last Name</label>
         <input
           enterkeyhint="next"
-          id="lastname"
+          id="familyName"
           autocomplete="family-name"
-          formControlName="lastname"
+          formControlName="familyName"
           type="text"
         />
       </div>
@@ -35,30 +35,30 @@
       </div>
     </div>
 
-    <div class="col h-stretch msg input-box">
+    <div class="col h-stretch message input-box">
       <label for="message" i18n>Message</label>
       <textarea
-        #msg
+        #message
         enterkeyhint="enter"
         maxlength="10000"
         rows="30"
         id="message"
         autocomplete="off"
-        formControlName="msg"
+        formControlName="message"
         type="text"
       ></textarea>
       <small class="ml-auto">
-        {{ msg.value.length | number }} / {{ 10000 | number }}
+        {{ message.value.length | number }} / {{ 10000 | number }}
       </small>
     </div>
   </div>
 
   @switch (formState().state) {
     @case ("success") {
-      <p class="color-primary mt2" [innerHTML]="formState().msg"></p>
+      <p class="color-primary mt2" [innerHTML]="formState().message"></p>
     }
     @case ("error") {
-      <p class="danger mt2" [innerHTML]="formState().msg"></p>
+      <p class="danger mt2" [innerHTML]="formState().message"></p>
     }
     @case ("loading") {
       <svg
