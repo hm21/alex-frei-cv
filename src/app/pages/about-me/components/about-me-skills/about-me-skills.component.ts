@@ -6,7 +6,7 @@ import {
   OnInit,
   TemplateRef,
   viewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import {
   combineLatest,
@@ -84,17 +84,9 @@ export class AboutMeSkillsComponent
     if (this.isBrowser) {
       const elRef = this.listRef().nativeElement;
       // Generate the items twice so that the user can't see the end.
-      this.renderer.setStyle(
-        elRef,
-        'width',
-        `${this.skillList.length * 2 * 120}px`,
-      );
+      elRef.style.width = `${this.skillList.length * 2 * 120}px`;
       // Set the animation duration
-      this.renderer.setStyle(
-        elRef,
-        'animation-duration',
-        `${this.animationDuration}ms`,
-      );
+      elRef.style.animationDuration = `${this.animationDuration}ms`;
 
       // Ensure item is in the viewport
       const scroll$ = this.screen.scroll$.pipe(
@@ -118,11 +110,7 @@ export class AboutMeSkillsComponent
           map(([isElementVisible, isVisible]) => isElementVisible && isVisible),
         )
         .subscribe((show) => {
-          this.renderer.setStyle(
-            elRef,
-            'animation-play-state',
-            show ? 'running' : 'paused',
-          );
+          elRef.style.animationPlayState = show ? 'running' : 'paused';
         });
     }
   }

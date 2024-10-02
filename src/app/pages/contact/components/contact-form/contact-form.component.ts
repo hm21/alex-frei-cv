@@ -42,6 +42,7 @@ import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider'
 export class ContactFormComponent extends ExtendedComponent implements OnInit {
   /** The reactive form group for the contact form. */
   public form = new FormGroup({
+    /// TODO: use own validators to ensure user can't just insert whitespace
     firstname: new FormControl('', Validators.required),
     lastname: new FormControl('', Validators.required),
     msg: new FormControl('', Validators.required),

@@ -5,9 +5,8 @@ import {
   Injectable,
   Injector,
   NgModuleRef,
-  Renderer2,
   Type,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Modal } from 'src/app/utils/modal/modal.component';
@@ -48,12 +47,6 @@ export class ModalManager {
   public idManager = inject(IdManagerService);
 
   /**
-   * Renderer2 instance used to manipulate the DOM, such as setting styles
-   * on the document body when a modal is opened or closed.
-   */
-  private renderer = inject(Renderer2);
-
-  /**
    * Reference to the global `document` object, used for DOM manipulations.
    */
   private document = inject(DOCUMENT);
@@ -88,7 +81,7 @@ export class ModalManager {
     const id = this.idManager.generateUniqueId();
 
     // Hide the default browser scrollbar to prevent background scrolling.
-    this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
+    this.document.body.style.overflow = 'hidden';
 
     // Create the modal component and inject it into the view.
     const cmp = this.viewContainerRef.createComponent<ComponentT>(component, {
@@ -99,7 +92,7 @@ export class ModalManager {
     cmp.instance.onClose.subscribe(() => {
       this.close(id);
       // Restore the scrollbar visibility when the modal is closed.
-      this.renderer.removeStyle(this.document.body, 'overflow');
+      this.document.body.style.removeProperty('overflow');
     });
 
     // Register the newly created modal component in the internal registry.

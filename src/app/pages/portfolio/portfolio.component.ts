@@ -37,13 +37,9 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
     /// Ensure there are no scrollbar offset issues when open the modal
     this.modal.onChangeState$.pipe(this.destroyPipe()).subscribe((res) => {
       if (res === 'open' && this.isScrollbarVisible && !this.screen.xs) {
-        this.renderer.setStyle(
-          this.elRef.nativeElement,
-          'margin-right',
-          `${this.scrollbarWidth}px`,
-        );
+        this.elRef.nativeElement.style.marginRight = `${this.scrollbarWidth}px`;
       } else if (res === 'close') {
-        this.renderer.removeStyle(this.elRef.nativeElement, 'margin-right');
+        this.elRef.nativeElement.style.removeProperty('margin-right');
       }
     });
 

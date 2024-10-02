@@ -4,7 +4,6 @@ import {
   Directive,
   ElementRef,
   OnInit,
-  Renderer2,
   inject,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -27,7 +26,6 @@ export abstract class ExtendedComponent implements OnInit {
   protected screen = inject(ScreenService);
   protected analytics = inject(AnalyticsService);
   protected destroyRef = inject(DestroyRef);
-  protected renderer = inject(Renderer2);
   protected document = inject(DOCUMENT);
   protected metaManager = inject(MetaManagerService);
 

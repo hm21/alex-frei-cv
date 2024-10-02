@@ -4,7 +4,7 @@ import {
   OnInit,
   afterNextRender,
   inject,
-  signal
+  signal,
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { NgxCountService } from 'ngx-count-animation';
@@ -49,11 +49,9 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   }
 
   override ngOnInit(): void {
-    this.renderer.setAttribute(
-      this.document.querySelector('html'),
-      'data-theme',
-      !this.isBrowser ? 'light' : getTheme(),
-    );
+    this.document
+      .querySelector('html')
+      ?.setAttribute('data-theme', this.isBrowser ? getTheme() : 'light');
 
     super.ngOnInit();
   }

@@ -4,10 +4,9 @@ import {
   ElementRef,
   OnDestroy,
   OnInit,
-  Renderer2,
   booleanAttribute,
   inject,
-  input
+  input,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, filter, fromEvent, switchMap, take, tap } from 'rxjs';
@@ -28,8 +27,7 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
   public enableHoverAnimations = input(true, { transform: booleanAttribute });
 
   private manager = inject(CardEffectManagerService);
-  private renderer = inject(Renderer2);
-  private elRef = inject(ElementRef);
+  private elRef = inject<ElementRef<HTMLElement>>(ElementRef);
   private destroyRef = inject(DestroyRef);
   private isBrowser = inject(IS_BROWSER);
   private idManager = inject(IdManagerService);
@@ -53,11 +51,9 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
     this.animationElement = {
       callback: (addClass) => {
         if (addClass) {
-          this.renderer.addClass(this.elRef.nativeElement, 'light-effect');
-          this.renderer.addClass(this.elRef.nativeElement, 'slow');
+          this.elRef.nativeElement.classList.add('light-effect', 'slow');
         } else {
-          this.renderer.removeClass(this.elRef.nativeElement, 'light-effect');
-          this.renderer.removeClass(this.elRef.nativeElement, 'slow');
+          this.elRef.nativeElement.classList.remove('light-effect', 'slow');
         }
       },
       element: this.elementRef,
@@ -75,14 +71,17 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
             filter((isActive) => !isActive),
           ),
         ),
+        // Trigger animation
         tap(() => {
           this.manager.activeAnimation$.next(true);
-          this.renderer.addClass(this.elRef.nativeElement, 'light-effect');
+          this.elRef.nativeElement.classList.add('light-effect');
         }),
+        // Delay until the animation will end
         delay(this.manager.delayBetweenAnimations),
+        // Remove animation effect
         tap(() => {
           this.manager.activeAnimation$.next(false);
-          this.renderer.removeClass(this.elRef.nativeElement, 'light-effect');
+          this.elRef.nativeElement.classList.remove('light-effect');
         }),
         takeUntilDestroyed(this.destroyRef),
       )

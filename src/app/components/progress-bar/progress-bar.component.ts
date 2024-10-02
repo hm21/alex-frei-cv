@@ -5,7 +5,7 @@ import {
   ElementRef,
   input,
   numberAttribute,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { delay, fromEvent, map, startWith, throttleTime } from 'rxjs';
@@ -61,7 +61,7 @@ export class ProgressBarComponent
         this.destroyPipe(),
       )
       .subscribe((width) => {
-        this.renderer.setStyle(barElement, 'width', `${width}%`);
+        barElement.style.width = `${width}%`;
       });
   }
 }
