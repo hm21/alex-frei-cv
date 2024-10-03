@@ -27,6 +27,8 @@ export class QuantumQuizHackerComponent
         this.theme.isDarkMode.set(true);
         this.theme.toggleTheme();
       }
+    } else {
+      this.theme.setDarkMode();
     }
     super.ngOnInit();
   }

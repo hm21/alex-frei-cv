@@ -7,3 +7,12 @@
 article {
   padding: 10px 16px 16px;
 }
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @media (min-width: 600px) {
+    min-height: 285px;
+  }
+}

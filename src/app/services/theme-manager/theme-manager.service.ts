@@ -44,4 +44,19 @@ export class ThemeManagerService {
     this.document.documentElement.setAttribute('data-theme', theme);
     this.changed$.next(this.isDarkMode());
   }
+
+  /**
+   * Set the theme mode to `light` without saving it in the local storage.
+   */
+  public setLightMode() {
+    this.document.documentElement.setAttribute('data-theme', 'light');
+    this.changed$.next(false);
+  }
+  /**
+   * Set the theme mode to `dark` without saving it in the local storage.
+   */
+  public setDarkMode() {
+    this.document.documentElement.setAttribute('data-theme', 'dark');
+    this.changed$.next(true);
+  }
 }
