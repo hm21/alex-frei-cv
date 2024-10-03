@@ -1,4 +1,10 @@
 <header #headerRef class="frosted-glass">
+  <div class="header-action container">
+    <button (click)="closeModal()" afModalCloseButton>
+      <!-- Auto-Generated -->
+    </button>
+  </div>
+
   <div class="row container">
     @if (data().logo) {
       <div class="logo" [innerHTML]="data().logo | safe"></div>
@@ -9,10 +15,6 @@
       <h2>{{ data().subtitle }}</h2>
     </div>
   </div>
-
-  <button (click)="closeModal()" afModalCloseButton>
-    <!-- Auto-Generated -->
-  </button>
 </header>
 
 <section #sectionRef [ngClass]="{ 'open-hero': openHero() }">
