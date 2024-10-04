@@ -1,4 +1,3 @@
-import { DOCUMENT } from '@angular/common';
 import {
   ComponentRef,
   inject,
@@ -6,12 +5,14 @@ import {
   Injector,
   NgModuleRef,
   Type,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Modal } from 'src/app/utils/modal/modal.component';
-import { IdManagerService } from '../id-manager/id-manager.service';
-import { LoggerService } from '../logger/logger.service';
+import { Modal } from 'src/app/shared/modal/modal.base';
+import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
+import { IdManagerService } from '../../services/id-manager/id-manager.service';
+import { LoggerService } from '../../services/logger/logger.service';
+import { ModalComponent } from './modal.component';
 
 /**
  * Injectable service responsible for managing the lifecycle and display of modal components.
@@ -19,15 +20,7 @@ import { LoggerService } from '../logger/logger.service';
  * a registry of currently active modals.
  */
 @Injectable()
-export class ModalManager {
-  /**
-   * A collection of active modal components along with their unique identifiers.
-   */
-  private _components: {
-    id: string;
-    component: ComponentRef<any>;
-  }[] = [];
-
+export class ModalService {
   /**
    * Observable that emits the current state of the modal ('open' or 'close').
    * Can be subscribed to for reacting to modal state changes.
@@ -46,14 +39,19 @@ export class ModalManager {
    */
   public idManager = inject(IdManagerService);
 
-  /**
-   * Reference to the global `document` object, used for DOM manipulations.
-   */
-  private document = inject(DOCUMENT);
-
   /** Injected logger service for logging operations. */
   private logger = inject(LoggerService);
 
+  private isBrowser = inject(IS_BROWSER);
+
+  private modalContainer!: ComponentRef<ModalComponent>;
+
+  constructor() {
+    if (this.isBrowser) {
+      this.modalContainer =
+        this.viewContainerRef.createComponent(ModalComponent);
+    }
+  }
   /**
    * Opens a modal component dynamically.
    *
@@ -75,31 +73,14 @@ export class ModalManager {
       ngModuleRef?: NgModuleRef<unknown>;
     },
   ) {
-    const { data, injector, ngModuleRef } = options || {};
-
     // Create a unique ID for the new modal component.
     const id = this.idManager.generateUniqueId();
 
-    // Hide the default browser scrollbar to prevent background scrolling.
-    this.document.body.style.overflow = 'hidden';
-
-    // Create the modal component and inject it into the view.
-    const cmp = this.viewContainerRef.createComponent<ComponentT>(component, {
-      injector: injector,
-      ngModuleRef: ngModuleRef,
-    });
-    cmp.setInput('data', data);
-    cmp.instance.onClose.subscribe(() => {
-      this.close(id);
-      // Restore the scrollbar visibility when the modal is closed.
-      this.document.body.style.removeProperty('overflow');
-    });
-
-    // Register the newly created modal component in the internal registry.
-    this._components.push({
+    this.modalContainer.instance.open<ComponentT, DataT>(
       id,
-      component: cmp,
-    });
+      component,
+      options,
+    );
 
     // Notify observers that a modal has been opened.
     this.onChangeState$.next('open');
@@ -115,15 +96,7 @@ export class ModalManager {
    * @returns void
    */
   public close(id?: string) {
-    // If no ID is provided, close the last modal in the list.
-    id ??= this._components.getLastItem()!.id;
-
-    // Find the index of the modal to be closed.
-    const i = this._components.findIndex((el) => el.id === id);
-
-    // Remove the modal component from the view and the registry.
-    this.viewContainerRef.remove(i);
-    this._components.splice(i, 1);
+    this.modalContainer.instance.close(id);
 
     // Notify observers that a modal has been closed.
     this.onChangeState$.next('close');
@@ -137,9 +110,6 @@ export class ModalManager {
    * @returns void
    */
   public clearAll() {
-    // Iterate through the list of active modals and close each one.
-    this._components.forEach((el) => {
-      this.close(el.id);
-    });
+    this.modalContainer.instance.clearAll();
   }
 }

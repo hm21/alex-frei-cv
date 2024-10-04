@@ -2,11 +2,11 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { RecommendedPagesComponent } from 'src/app/components/recommended-pages/recommended-pages.component';
 import { PageMetaData } from 'src/app/services/meta-manager/page-meta-data.interface';
-import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalService } from 'src/app/shared/modal/modal.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { BusinessProjectsComponent } from './components/business-projects/business-projects.component';
 import { OtherProjectsComponent } from './components/other-projects/other-projects.component';
@@ -29,7 +29,8 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
     description: $localize`Take a look at the portfolio to know more about Alex Frei`,
   };
 
-  private modal = inject(ModalManager);
+  /** Manages modals */
+  private modal = inject(ModalService);
 
   override ngOnInit(): void {
     this.classList.add('page-padding');

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewContainerRef } from '@angular/core';
-import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalService } from 'src/app/shared/modal/modal.service';
 import { viewContainerRefMock } from 'src/test/mocks/view-container-ref.mock';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { BusinessProjectsComponent } from './business-projects.component';
@@ -18,7 +18,7 @@ describe('BusinessProjectsComponent', () => {
           provide: ViewContainerRef,
           useValue: viewContainerRefMock,
         },
-        ModalManager,
+        ModalService,
       ],
     }).compileComponents();
 

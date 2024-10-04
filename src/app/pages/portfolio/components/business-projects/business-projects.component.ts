@@ -1,9 +1,14 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  INJECTOR,
+} from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
-import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalService } from 'src/app/shared/modal/modal.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ProjectDetails } from '../../utils/portfolio-interfaces';
 import { PROJECT_SNAPTAB } from '../../utils/projects/project-snaptab';
@@ -25,6 +30,8 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   ],
 })
 export class BusinessProjectsComponent extends ExtendedComponent {
+  private modal = inject(ModalService);
+  private injector = inject(INJECTOR);
   /** Safe HTML representation of the logo. */
   public logo!: SafeHtml;
 
@@ -39,14 +46,13 @@ export class BusinessProjectsComponent extends ExtendedComponent {
     $localize`Control!`,
   ];
 
-  private modal = inject(ModalManager);
-  
   /** Opens the project details modal. */
   public openProject() {
     this.modal.open<ProjectDetailsComponent, ProjectDetails>(
       ProjectDetailsComponent,
       {
         data: PROJECT_SNAPTAB,
+        injector: this.injector,
       },
     );
   }

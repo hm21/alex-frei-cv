@@ -8,6 +8,7 @@ import {
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { filter } from 'rxjs';
+import { ProgressSpinnerComponent } from 'src/app/components/progress-spinner/progress-spinner.component';
 import { FUN_FACTS } from 'src/app/configs/fun-facts';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { GitManagerService } from 'src/app/services/git-manager/git-manager.service';
@@ -21,16 +22,17 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
     NgxScrollAnimationsDirective,
     NgxCountAnimationDirective,
     CardEffectsDirective,
+    ProgressSpinnerComponent,
   ],
   templateUrl: './facts.component.html',
   styleUrl: './facts.component.scss',
 })
 export class FactsComponent extends ExtendedComponent implements OnInit {
-  /** Array of facts with their titles, values, and icons. */
-  public items = signal(FUN_FACTS);
-
   /** Service for managing Git-related operations. */
   private gitManager = inject(GitManagerService);
+  
+  /** Array of facts with their titles, values, and icons. */
+  public items = signal(FUN_FACTS);
 
   override ngOnInit(): void {
     super.ngOnInit();

@@ -1,0 +1,16 @@
+:host {
+  max-width: 500px;
+  height: 100vh;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  text-align: right;
+  pointer-events: none;
+  z-index: 1004;
+  @media screen and (min-width: 2080px) {
+    left: 50vw;
+    right: unset;
+    transform: translateX(-145px);
+  }
+}

@@ -1,0 +1,77 @@
+:host {
+  position: relative;
+  display: block;
+  z-index: 1000;
+  width: 290px;
+  height: auto;
+  min-height: 40px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+
+  background-color: var(--page-background-primary);
+  border-left: 5px solid;
+  border-radius: 0 3px 3px 0;
+
+  cursor: pointer;
+  pointer-events: all;
+
+  box-shadow: 0 0 12px #454545;
+  transition: box-shadow var(--animation-duration) ease;
+
+  &:hover {
+    box-shadow: 0 0 18px #303030;
+  }
+
+  &.has-title {
+    min-height: 50px;
+
+    .toast-row {
+      min-height: 50px !important;
+    }
+  }
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+p {
+  color: var(--text-color-primary);
+}
+.toast-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  text-align: left;
+  min-height: 40px;
+}
+.toast-icon {
+  margin-right: 7px;
+  flex-shrink: 0;
+}
+.toast-message {
+  margin: 0px;
+
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  max-width: 264px;
+  font-size: 0.86rem;
+}
+.toast-title {
+  margin: 0px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+@media screen and (max-width: 599px) {
+  :host {
+    width: 90vw;
+    width: min(90vw, 290px);
+  }
+}

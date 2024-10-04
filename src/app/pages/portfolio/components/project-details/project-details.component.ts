@@ -7,6 +7,7 @@ import {
   OnInit,
   TemplateRef,
   ViewContainerRef,
+  inject,
   signal,
   viewChild,
 } from '@angular/core';
@@ -16,7 +17,8 @@ import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
 import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { Modal } from 'src/app/utils/modal/modal.component';
+import { Modal } from 'src/app/shared/modal/modal.base';
+import { ToastService } from 'src/app/shared/toast/toast.service';
 import {
   ProjectDetails,
   UrlListTemplateI,
@@ -46,6 +48,8 @@ export class ProjectDetailsComponent
   extends Modal<ProjectDetails>
   implements OnInit
 {
+  private toast = inject(ToastService);
+
   @HostBinding('@modal') get modalAnimation() {
     return {
       value: this.modalFadeOut() ? 'out' : 'in',
@@ -95,10 +99,6 @@ export class ProjectDetailsComponent
   public modalFadeOut = signal(false);
   /** Flag indicating if video player is loaded. */
   public videoPlayerLoaded = signal(false);
-  /** Flag indicating if install code is copied. */
-  public copiedInstallCode = signal(false);
-  /** Flag indicating if "Copied!" message should be shown. */
-  public showCopiedMsg = signal(false);
 
   public openHero = signal(false);
 
@@ -236,12 +236,6 @@ export class ProjectDetailsComponent
    */
   public async copy(text: string) {
     await navigator.clipboard.writeText(text);
-    this.copiedInstallCode.set(true);
-    this.showCopiedMsg.set(true);
-    timer(2_000)
-      .pipe(this.destroyPipe())
-      .subscribe(() => {
-        this.showCopiedMsg.set(false);
-      });
+    this.toast.success($localize`Copied`);
   }
 }

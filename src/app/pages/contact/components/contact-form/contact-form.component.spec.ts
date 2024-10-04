@@ -21,7 +21,7 @@ describe('ContactFormComponent', () => {
       imports: [ContactFormComponent, ReactiveFormsModule, SharedTestingModule],
       teardown: { destroyAfterEach: false },
     }).compileComponents();
- 
+
     fixture = TestBed.createComponent(ContactFormComponent);
     component = fixture.componentInstance;
     const formValue = {
@@ -78,21 +78,6 @@ describe('ContactFormComponent', () => {
     expect(submitButton.nativeElement.disabled).toBeFalse();
   });
 
-  it('should update formState to error if form is invalid on submit', () => {
-    component.form.setValue({
-      givenName: '',
-      familyName: '',
-      message: '',
-      email: '',
-    });
-    component.submit$.next();
-    expect(component.formState()).toEqual({
-      state: 'error',
-      message: CONTACT_MESSAGES.invalidEmail,
-      canSend: true,
-    });
-  });
-
   it('should send form data when form is valid and update formState to success', () => {
     component.form.setValue({
       givenName: 'John',
@@ -124,14 +109,14 @@ describe('ContactFormComponent', () => {
 
     const req = httpMock.expectOne(endpoints.contactMessage);
     req.flush(
-      { error: 'Blacklist' },
+      'Blacklist',
       { status: 400, statusText: 'Bad Request' },
     );
 
     expect(component.formState()).toEqual({
       state: 'error',
-      message: jasmine.any(String),
-      canSend: true,
+      message: jasmine.stringMatching(/Blacklist/),
+      canSend: false,
     });
   });
 });

@@ -1,5 +1,5 @@
 import { AsyncPipe, DecimalPipe } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -22,19 +22,35 @@ import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
+import { ToastService } from 'src/app/shared/toast/toast.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ExtendedValidators } from 'src/app/utils/extended-form-validators';
 import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
+import { ProgressSpinnerComponent } from '../../../../components/progress-spinner/progress-spinner.component';
 
 @Component({
   selector: 'af-contact-form',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ReactiveFormsModule, DecimalPipe, AsyncPipe],
+  imports: [
+    ReactiveFormsModule,
+    DecimalPipe,
+    AsyncPipe,
+    ProgressSpinnerComponent,
+  ],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent extends ExtendedComponent implements OnInit {
+  /** Displays toast notifications */
+  private toast = inject(ToastService);
+
+  /** Handles HTTP requests */
+  private http = inject(HttpClient);
+
+  /** Provides application endpoints */
+  private endpoints = inject(ENDPOINTS);
+
   /** The reactive form group for the contact form. */
   public form = new FormGroup({
     givenName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
@@ -58,9 +74,6 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
 
   /** Number of times the form submission has been attempted. */
   private sendTries = 0;
-
-  private http = inject(HttpClient);
-  private endpoints = inject(ENDPOINTS);
 
   override ngOnInit(): void {
     this.form.valueChanges
@@ -118,7 +131,9 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
              * @param {Error} err - The error object thrown during the request.
              * @returns {Observable<Error>} The observable that handles the error.
              */
-            .pipe(catchError((err) => this.handleError(err))),
+            .pipe(
+              catchError((err: HttpErrorResponse) => this.handleError(err)),
+            ),
         ),
 
         /**
@@ -130,6 +145,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
         this.destroyPipe(),
       )
       .subscribe(() => {
+        this.toast.success(CONTACT_MESSAGES.submissionSuccess);
         this.formState.set({
           state: 'success',
           message: CONTACT_MESSAGES.submissionSuccess,
@@ -144,13 +160,15 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
    */
   private updateFormState(form: FormGroup) {
     if (form.invalid) {
-      this.formState.set({
-        state: 'error',
-        message: this.form.get('email')?.invalid
-          ? CONTACT_MESSAGES.invalidEmail
-          : CONTACT_MESSAGES.requiredFields,
-        canSend: true,
+      this.toast.warning({
+        duration: 7_000,
+        message:
+          this.form.get('email')?.invalid &&
+          this.form.getRawValue().email?.length !== 0
+            ? CONTACT_MESSAGES.invalidEmail
+            : CONTACT_MESSAGES.requiredFields,
       });
+      this.formState.set({ state: '', canSend: true });
     } else if (this.sendTries >= 10) {
       form.disable();
       this.formState.set({
@@ -179,7 +197,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
    * @param err The error object.
    * @returns An observable that emits 'error'.
    */
-  private handleError(err: any): Observable<any> {
+  private handleError(err: HttpErrorResponse): Observable<any> {
     this.logger.error(err).print();
 
     if (err.error === 'Blacklist') {
@@ -198,21 +216,18 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
       });
     } else {
       this.form.enable();
-      let message!: string;
-
-      if (err.status === 400) {
-        message = CONTACT_MESSAGES.error400;
-      } else if (err.status === 403) {
-        message = CONTACT_MESSAGES.error403;
-      } else {
-        message = CONTACT_MESSAGES.unknownError;
+      switch (err.status) {
+        case 400:
+          this.toast.error(CONTACT_MESSAGES.error400);
+          break;
+        case 403:
+          this.toast.error(CONTACT_MESSAGES.error403);
+          break;
+        default:
+          this.toast.error(CONTACT_MESSAGES.unknownError);
+          break;
       }
-
-      this.formState.set({
-        state: 'error',
-        message,
-        canSend: true,
-      });
+      this.formState.set({ state: '', canSend: true });
     }
     return of('error');
   }

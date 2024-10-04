@@ -52,7 +52,7 @@ img,
   height: 100%;
 }
 h3,
-.loading-spinner,
+.af-progress-spinner,
 .ngx-count-animation {
   z-index: 2;
   position: inherit;
@@ -68,9 +68,7 @@ h3 {
   font-size: 2.2rem;
   font-weight: 500;
 }
-.loading-spinner {
-  width: 40px;
-  height: 40px;
+.af-progress-spinner {
   margin-top: 7px;
 }
 

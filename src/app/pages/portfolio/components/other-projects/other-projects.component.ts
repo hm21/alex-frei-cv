@@ -1,8 +1,13 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  INJECTOR,
+} from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
+import { ModalService } from 'src/app/shared/modal/modal.service';
 import { ProjectDetails } from '../../utils/portfolio-interfaces';
 import { PROJECT_PRO_IMAGE_EDITOR } from '../../utils/projects/project-pro_image_editor';
 import { PROJECT_WAIO } from '../../utils/projects/project-waio';
@@ -24,6 +29,10 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   ],
 })
 export class OtherProjectsComponent {
+  /** Modal manager service for opening project details. */
+  private modal = inject(ModalService);
+  private injector = inject(INJECTOR);
+  
   /** Array of project items. */
   public readonly items: ({ type: string } & ProjectDetails)[] = [
     PROJECT_PRO_IMAGE_EDITOR,
@@ -33,8 +42,6 @@ export class OtherProjectsComponent {
     PROJECT_COUNT_ANIMATION,
     PROJECT_SMART_HOME,
   ];
-  /** Modal manager service for opening project details. */
-  private modal = inject(ModalManager);
 
   /**
    * Opens the project details modal.
@@ -45,6 +52,7 @@ export class OtherProjectsComponent {
       ProjectDetailsComponent,
       {
         data: item,
+        injector: this.injector,
       },
     );
   }

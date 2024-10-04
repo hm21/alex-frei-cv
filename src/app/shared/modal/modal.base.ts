@@ -1,5 +1,5 @@
 import { Directive, input, output } from '@angular/core';
-import { ExtendedComponent } from '../extended-component';
+import { ExtendedComponent } from '../../utils/extended-component';
 
 /**
  * Abstract directive that serves as a base class for modal components.

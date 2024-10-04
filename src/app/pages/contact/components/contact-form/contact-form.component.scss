@@ -20,17 +20,14 @@ textarea {
     }
   }
 }
-.input-box{
-  &:focus-within{
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  &:focus-within {
     color: var(--color-primary);
   }
-}
-.loading-spinner {
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  display: block;
-  shape-rendering: auto;
 }
 textarea {
   height: 210px;
