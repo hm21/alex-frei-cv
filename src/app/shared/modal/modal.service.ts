@@ -50,6 +50,9 @@ export class ModalService {
     if (this.isBrowser) {
       this.modalContainer =
         this.viewContainerRef.createComponent(ModalComponent);
+      this.modalContainer.instance.onClose.subscribe((id) => {
+        this.close(id);
+      });
     }
   }
   /**

@@ -5,6 +5,7 @@ import {
   inject,
   Injector,
   NgModuleRef,
+  output,
   Type,
   viewChild,
   ViewContainerRef,
@@ -30,6 +31,8 @@ export class ModalComponent {
   private containerRef = viewChild.required('containerRef', {
     read: ViewContainerRef,
   });
+
+  public onClose = output<string>();
 
   /**
    * Reference to the global `document` object, used for DOM manipulations.
@@ -57,9 +60,7 @@ export class ModalComponent {
     });
     cmp.setInput('data', data);
     cmp.instance.onClose.subscribe(() => {
-      this.close(id);
-      // Restore the scrollbar visibility when the modal is closed.
-      this.document.body.style.removeProperty('overflow');
+      this.onClose.emit(id);
     });
 
     // Register the newly created modal component in the internal registry.
@@ -86,6 +87,9 @@ export class ModalComponent {
     // Remove the modal component from the view and the registry.
     this.containerRef().remove(i);
     this._components.splice(i, 1);
+    
+    // Restore the scrollbar visibility when the modal is closed.
+    this.document.body.style.removeProperty('overflow');
   }
 
   /**
