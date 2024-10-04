@@ -3,7 +3,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
-  HostBinding,
   OnInit,
   TemplateRef,
   ViewContainerRef,
@@ -19,6 +18,7 @@ import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { Modal } from 'src/app/shared/modal/modal.base';
 import { ToastService } from 'src/app/shared/toast/toast.service';
+import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 import {
   ProjectDetails,
   UrlListTemplateI,
@@ -34,6 +34,7 @@ import {
     NgTemplateOutlet,
     NgxImageHeroDirective,
     SafePipe,
+    TooltipDirective,
     ImageLoaderDirective,
     ModalCloseButtonDirective,
   ],
@@ -42,6 +43,13 @@ import {
   animations: [modalAnimation],
   host: {
     '[class.open-hero]': 'openHero()',
+    '[@modal]': `{
+      value: this.modalFadeOut() ? 'out' : 'in',
+      params: {
+        durationIn: this.modalAnimationDurationIn(),
+        durationOut: this.modalAnimationDurationOut(),
+      },
+    }`,
   },
 })
 export class ProjectDetailsComponent
@@ -49,16 +57,6 @@ export class ProjectDetailsComponent
   implements OnInit
 {
   private toast = inject(ToastService);
-
-  @HostBinding('@modal') get modalAnimation() {
-    return {
-      value: this.modalFadeOut() ? 'out' : 'in',
-      params: {
-        durationIn: this.modalAnimationDurationIn(),
-        durationOut: this.modalAnimationDurationOut(),
-      },
-    };
-  }
 
   /** Reference to the container for displaying website URLs. */
   private websiteContainer = viewChild.required('websiteContainer', {

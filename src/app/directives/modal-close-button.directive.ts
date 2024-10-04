@@ -7,7 +7,6 @@ import { Directive, ElementRef, inject, OnInit } from '@angular/core';
     class: 'modal-close-button',
     type: 'button',
     'aria-label': $localize`Close`,
-    title: $localize`Close`,
     style: `
       position: absolute;
       top: 10px;

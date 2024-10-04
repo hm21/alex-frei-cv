@@ -1,14 +1,14 @@
 import {
   ComponentRef,
   inject,
-  Injectable,
-  ViewContainerRef,
+  Injectable
 } from '@angular/core';
 import { filter, takeWhile, timer } from 'rxjs';
 import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
 import { ToastComponent } from './toast.component';
 import { ToastI } from './utils/toast-interfaces';
 import { ToastType } from './utils/toast-types';
+import { TOAST_VIEW_CONTAINER_REF } from './utils/toast.provider';
 
 @Injectable()
 export class ToastService {
@@ -23,10 +23,10 @@ export class ToastService {
   }
 
   /**
-   * Reference to the ViewContainerRef where modal components will be inserted.
+   * Reference to the ViewContainerRef where toast components will be inserted.
    * This is injected to provide a context for adding components dynamically.
    */
-  public viewContainerRef = inject(ViewContainerRef);
+  public viewContainerRef = inject(TOAST_VIEW_CONTAINER_REF);
 
   /** Indicates if the app is running in a browser environment */
   private isBrowser = inject(IS_BROWSER);

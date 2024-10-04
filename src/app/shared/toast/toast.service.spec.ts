@@ -9,9 +9,6 @@ describe('ToastService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [SharedTestingModule],
-      providers: [
-        ToastService,
-      ],
       teardown: { destroyAfterEach: false },
     });
     service = TestBed.inject(ToastService);

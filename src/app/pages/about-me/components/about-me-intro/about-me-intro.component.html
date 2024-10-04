@@ -18,19 +18,28 @@
       <tr>
         <td i18n>E-Mail</td>
         <td>
-          <a href="mailto:alex.frei@hotmail.ch">alex.frei&#64;hotmail.ch </a>
+          <a
+            i18n-afTooltip
+            afTooltip="Send E-Mail"
+            href="mailto:alex.frei@hotmail.ch"
+            >alex.frei&#64;hotmail.ch
+          </a>
         </td>
       </tr>
       <tr>
         <td i18n>Phone</td>
         <td>
-          <a href="tel:+41799505276"> +41 79 950 52 76 </a>
+          <a i18n-afTooltip afTooltip="Start call" href="tel:+41799505276">
+            +41 79 950 52 76
+          </a>
         </td>
       </tr>
       <tr>
         <td i18n>Location</td>
         <td>
           <a
+            i18n-afTooltip
+            afTooltip="View Location on Google Maps"
             href="https://www.google.com/maps/search/?api=1&query=9642+Ebnat-Kappel,+St.+Gallen,+Schweiz"
             target="_blank"
             >9642 Ebnat-Kappel</a
@@ -40,19 +49,36 @@
       <tr>
         <td>Github</td>
         <td>
-          <a href="https://github.com/hm21" target="_blank">hm21</a>
+          <a
+            i18n-afTooltip
+            afTooltip="View GitHub Profile"
+            href="https://github.com/hm21"
+            target="_blank"
+            >hm21</a
+          >
         </td>
       </tr>
       <tr>
         <td>npm</td>
         <td>
-          <a href="https://www.npmjs.com/~hm21" target="_blank"> hm21 </a>
+          <a
+            i18n-afTooltip
+            afTooltip="View npm Profile"
+            href="https://www.npmjs.com/~hm21"
+            target="_blank"
+          >
+            hm21
+          </a>
         </td>
       </tr>
       <tr>
         <td>Stack-Overflow</td>
         <td>
-          <a href="https://stackoverflow.com/users/9513092" target="_blank"
+          <a
+            i18n-afTooltip
+            afTooltip="View Stack-Overflow Profile"
+            href="https://stackoverflow.com/users/9513092"
+            target="_blank"
             >Alex</a
           >
         </td>
@@ -64,8 +90,8 @@
       <tr>
         <td i18n>Age</td>
         <td
-          i18n-title
-          title="03/21/1995"
+          i18n-afTooltip
+          afTooltip="03/21/1995"
           [ngxCountAnimation]="age()"
           duration="1_400"
         ></td>

@@ -1,9 +1,9 @@
 import {
+  afterNextRender,
   ChangeDetectionStrategy,
   Component,
-  OnInit,
-  afterNextRender,
   inject,
+  OnInit,
   signal,
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
@@ -15,8 +15,11 @@ import { getTheme } from './layout/header/components/theme-switch/utils/theme-sw
 import { HeaderComponent } from './layout/header/header.component';
 import { ImagePreloaderService } from './services/image-manager/image-preloader.service';
 import { ModalService } from './shared/modal/modal.service';
+import { provideModal } from './shared/modal/utils/modal.provider';
 import { ToastService } from './shared/toast/toast.service';
+import { provideToast } from './shared/toast/utils/toast.provider';
 import { TooltipService } from './shared/tooltip/tooltip.service';
+import { provideTooltip } from './shared/tooltip/utils/tooltip.provider';
 import { ExtendedComponent } from './utils/extended-component';
 
 @Component({
@@ -24,11 +27,12 @@ import { ExtendedComponent } from './utils/extended-component';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent],
   providers: [
-    NgxScrollAnimationsService,
+    provideModal(),
+    provideToast(),
+    provideTooltip(),
+    
     NgxCountService,
-    ModalService,
-    ToastService,
-    TooltipService,
+    NgxScrollAnimationsService,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -6,12 +6,13 @@ import {
 } from '@angular/core';
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
+import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 
 @Component({
   selector: 'af-about-me-intro',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TypewriterComponent, NgxCountAnimationDirective],
+  imports: [TypewriterComponent, TooltipDirective, NgxCountAnimationDirective],
   templateUrl: './about-me-intro.component.html',
   styleUrl: './about-me-intro.component.scss',
 })

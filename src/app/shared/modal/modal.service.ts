@@ -4,8 +4,7 @@ import {
   Injectable,
   Injector,
   NgModuleRef,
-  Type,
-  ViewContainerRef,
+  Type
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Modal } from 'src/app/shared/modal/modal.base';
@@ -13,6 +12,7 @@ import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
 import { IdManagerService } from '../../services/id-manager/id-manager.service';
 import { LoggerService } from '../../services/logger/logger.service';
 import { ModalComponent } from './modal.component';
+import { MODAL_VIEW_CONTAINER_REF } from './utils/modal.provider';
 
 /**
  * Injectable service responsible for managing the lifecycle and display of modal components.
@@ -31,7 +31,7 @@ export class ModalService {
    * Reference to the ViewContainerRef where modal components will be inserted.
    * This is injected to provide a context for adding components dynamically.
    */
-  public viewContainerRef = inject(ViewContainerRef);
+  public viewContainerRef = inject(MODAL_VIEW_CONTAINER_REF);
 
   /**
    * Service for managing unique identifiers for modal components.
@@ -50,6 +50,9 @@ export class ModalService {
     if (this.isBrowser) {
       this.modalContainer =
         this.viewContainerRef.createComponent(ModalComponent);
+      this.modalContainer.instance.onClose.subscribe((id) => {
+        this.close(id);
+      });
     }
   }
   /**
