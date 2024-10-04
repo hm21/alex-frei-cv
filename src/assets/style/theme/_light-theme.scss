@@ -1,22 +1,4 @@
 :root {
-  --item-hover-color: rgb(215, 215, 230);
-
-  --card-background: #ffffff;
-  --card-background-accent: #f1fcff;
-  --card-hover-color: #f0f6ff;
-  --card-gradient: linear-gradient(to right, #f1f7ff, #e2edff);
-
-  --input-background-color: #ffffff;
-  --shadow-color: #040e2e29;
-
-  --text-color-primary: #353535;
-  --text-color-secondary: #5c5c5c;
-
-  --page-background-primary: #ffffff;
-
-  --border-color: rgba(0, 0, 0, 0.3);
-  --border-color-darken: rgba(0, 0, 0, 0.6);
-
   --color-primary-50: #f9fafc;
   --color-primary-100: #eaeef5;
   --color-primary-200: #cbd5e7;
@@ -36,24 +18,19 @@
   --color-info: #17a2b8;
   --color-warning: #ff9800;
 
-  --profile-banner-background: #214569d1;
-  --profile-banner-backdrop: saturate(180%) blur(10px);
+  --card-background: #ffffff;
+  --card-background-accent: #f1fcff;
+  --card-hover-color: #f0f6ff;
+  --card-gradient: linear-gradient(to right, #f1f7ff, #e2edff);
 
-  --icon-primary: #2d527c;
-  --icon-secondary: #cee8fa;
+  --shadow-color: #040e2e29;
 
-  --glass-color: #d6e8ff;
-  --glass-gradient: radial-gradient(
-      93% 87% at 87% 89%,
-      rgba(182, 182, 182, 0.23) 0%,
-      transparent 86.18%
-    ),
-    radial-gradient(
-      66% 66% at 26% 20%,
-      rgba(255, 255, 255, 0.699) 0%,
-      rgba(255, 255, 255, 0) 69.79%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  --text-color-primary: #353535;
+  --text-color-secondary: #5c5c5c;
+
+  --page-background-primary: #ffffff;
+
+  --border-color: rgba(0, 0, 0, 0.3);
 
   --animation-duration: 220ms;
 }

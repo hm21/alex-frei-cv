@@ -31,7 +31,17 @@ ul {
   padding: 7px 0 10px;
 
   background-color: var(--card-background);
-  background-image: var(--glass-gradient);
+  background-image: radial-gradient(
+      93% 87% at 87% 89%,
+      rgba(182, 182, 182, 0.23) 0%,
+      transparent 86.18%
+    ),
+    radial-gradient(
+      66% 66% at 26% 20%,
+      rgba(255, 255, 255, 0.699) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    );
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.06);
 
   border-radius: 100%;
@@ -63,6 +73,21 @@ ul {
     overflow: hidden;
   }
 }
+:host-context([data-theme="dark"]) {
+  .nav-item {
+    background-image: radial-gradient(
+        93% 87% at 87% 89%,
+        rgba(82, 82, 82, 0.23) 0%,
+        transparent 86.18%
+      ),
+      radial-gradient(
+        66% 66% at 26% 20%,
+        rgba(88, 88, 88, 0.219) 0%,
+        rgba(255, 255, 255, 0) 69.79%,
+        rgba(255, 255, 255, 0) 100%
+      );
+  }
+}
 
 :host ::ng-deep {
   svg {
@@ -83,7 +108,7 @@ ul {
     }
     &.router-link-active {
       transform: scale(1);
-      background-color: var(--glass-color);
+      background-color: #d6e8ff;
 
       span {
         color: $active-nav-item !important;
@@ -93,6 +118,16 @@ ul {
       }
       .stroke {
         stroke: $active-nav-item;
+      }
+    }
+  }
+}
+
+:host-context([data-theme="dark"]) {
+  :host ::ng-deep {
+    a {
+      &.router-link-active {
+        background-color: #232325;
       }
     }
   }

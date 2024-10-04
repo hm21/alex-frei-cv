@@ -16,3 +16,8 @@
   pointer-events: none;
   user-select: none;
 }
+:host-context([data-theme="dark"]) {
+  :host {
+    background-color: #08101e !important;
+  }
+}

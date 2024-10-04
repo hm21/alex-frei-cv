@@ -23,12 +23,17 @@
 
   z-index: 3;
   background: #0d244247;
-  backdrop-filter: var(--profile-banner-backdrop);
+  backdrop-filter: saturate(180%) blur(10px);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+}
+:host-context([data-theme="dark"]) {
+  .frosted-box {
+    backdrop-filter: grayscale(0.4) blur(10px);
+  }
 }
 .header {
   color: white;

@@ -8,8 +8,8 @@
 }
 .frosted-glass {
   z-index: unset;
-  background-color: var(--profile-banner-background);
-  backdrop-filter: var(--profile-banner-backdrop);
+  background-color: #214569d1;
+  backdrop-filter: saturate(180%) blur(10px);
 }
 .frosted-box {
   position: inherit;
@@ -33,7 +33,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 100%;
 }
@@ -159,6 +158,21 @@ footer {
   }
 }
 
+:host-context([data-theme="dark"]) {
+  .frosted-glass {
+    background-color: #262626db;
+    backdrop-filter: grayscale(0.4) blur(10px);
+  }
+  .contact {
+    border-color: #c7c7c7;
+
+    &:focus-visible,
+    &:hover {
+      background-color:#c7c7c7;
+ 
+    }
+  }
+}
 :host ::ng-deep {
   .btn-language {
     color: white !important;
