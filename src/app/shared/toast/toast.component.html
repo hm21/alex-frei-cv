@@ -1,0 +1,8 @@
+@for (toast of toastList(); track toast.id) {
+  <af-toast-item
+    @afToast
+    class="toast mode-{{ toast.type }}"
+    [toast]="toast"
+    (click)="toast.tap?.(); closeToast.emit(toast)"
+  />
+}

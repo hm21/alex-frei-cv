@@ -2,6 +2,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import {
   NgModule,
   provideExperimentalZonelessChangeDetection,
+  ViewContainerRef,
 } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -13,8 +14,8 @@ import {
 import { provideNgxCountAnimations } from 'ngx-count-animation';
 import {
   QuicklinkDirective,
-  QuicklinkStrategy,
   quicklinkProviders,
+  QuicklinkStrategy,
 } from 'ngx-quicklink';
 import {
   NgxScrollAnimationsDirective,
@@ -22,19 +23,25 @@ import {
 } from 'ngx-scroll-animations';
 import { routes } from 'src/app/app.routes';
 import { provideLogger } from 'src/app/services/logger/logger-configs.provider';
+import { ToastService } from 'src/app/shared/toast/toast.service';
 import { provideEndpoints } from 'src/app/utils/providers/endpoints/endpoints.provider';
 import { providePlatformDetection } from 'src/app/utils/providers/is-browser.provider';
 import '../app/utils/extensions/extensions';
+import { MockToastViewContainerRef } from './mocks/toast-view-container.mock';
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    HttpClientTestingModule,
     NgxScrollAnimationsDirective,
     QuicklinkDirective,
   ],
   exports: [HttpClientTestingModule, NgxScrollAnimationsDirective],
   providers: [
+    {
+      provide: ViewContainerRef,
+      useClass: MockToastViewContainerRef,
+    },
+    ToastService,
     quicklinkProviders,
     provideEndpoints(),
     provideLogger(),

@@ -6,12 +6,13 @@ import {
   TemplateRef,
   ViewContainerRef,
   inject,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
+import { ToastService } from 'src/app/shared/toast/toast.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
@@ -37,6 +38,15 @@ export class ProfileBannerComponent
   extends ExtendedComponent
   implements OnInit
 {
+  /** Handles HTTP requests */
+  private http = inject(HttpClient);
+
+  /** Manages header component */
+  private header = inject(HeaderComponent);
+
+  /** Displays toast notifications */
+  private toast = inject(ToastService);
+
   /**
    * Reference to the container for navigation items.
    */
@@ -61,9 +71,6 @@ export class ProfileBannerComponent
   private navItem = viewChild.required('navItem', {
     read: TemplateRef<any>,
   });
-
-  private http = inject(HttpClient);
-  private header = inject(HeaderComponent);
 
   override ngOnInit(): void {
     this.listenScreenResize();
@@ -133,13 +140,20 @@ export class ProfileBannerComponent
     this.http
       .get(url, { responseType: 'blob' })
       .pipe(this.destroyPipe())
-      .subscribe((blob: Blob) => {
-        const link = document.createElement('a');
-        link.href = window.URL.createObjectURL(blob);
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+      .subscribe({
+        next: (blob: Blob) => {
+          const link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.download = filename;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          this.toast.success($localize`Download Successful`);
+        },
+        error: (err) => {
+          this.logger.error(err);
+          this.toast.error($localize`Download Failed`);
+        },
       });
   }
 }

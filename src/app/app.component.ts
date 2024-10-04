@@ -14,14 +14,22 @@ import { routeAnimation } from './animations/route-animations';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
 import { ImagePreloaderService } from './services/image-manager/image-preloader.service';
-import { ModalManager } from './services/modal-manager/modal-manager.service';
+import { ModalService } from './shared/modal/modal.service';
+import { ToastService } from './shared/toast/toast.service';
+import { TooltipService } from './shared/tooltip/tooltip.service';
 import { ExtendedComponent } from './utils/extended-component';
 
 @Component({
   selector: 'af-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent],
-  providers: [NgxScrollAnimationsService, NgxCountService, ModalManager],
+  providers: [
+    NgxScrollAnimationsService,
+    NgxCountService,
+    ModalService,
+    ToastService,
+    TooltipService,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -37,6 +45,14 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   /** Preload images with ServiceWorker */
   private imagePreloader = inject(ImagePreloaderService);
 
+  /** Manages modals */
+  protected modalManager = inject(ModalService);
+
+  /** Displays toast notifications */
+  protected toastService = inject(ToastService);
+
+  /** Manages tooltips */
+  protected tooltipService = inject(TooltipService);
 
   constructor() {
     super();

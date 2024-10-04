@@ -1,8 +1,6 @@
 import { DOCUMENT } from '@angular/common';
-import { ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ModalManager } from 'src/app/services/modal-manager/modal-manager.service';
-import { viewContainerRefMock } from 'src/test/mocks/view-container-ref.mock';
+import { ModalService } from 'src/app/shared/modal/modal.service';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ProjectDetailsComponent } from './project-details.component';
 
@@ -12,57 +10,13 @@ describe('ProjectDetailsComponent', () => {
   let documentMock: Document;
 
   beforeEach(async () => {
-    /*  modalManagerServiceMock = {
-      modalData: {
-        logo: '<svg></svg>',
-        title: 'Lorem ipsum',
-        subtitle: 'Lorem ipsum',
-        description: `Lorem ipsum`,
-        demoUrl: 'https://alex-frei.web.app',
-        website: [
-          {
-            url: 'https://alex-frei.web.app',
-            title: `Lorem ipsum`,
-          },
-        ],
-        store: [],
-        technology: {
-          frontend: [
-            {
-              name: 'Lorem ipsum',
-            },
-          ],
-          backend: [
-            {
-              name: 'Lorem ipsum',
-            },
-          ],
-          prototype: [
-            {
-              name: 'Lorem ipsum',
-            },
-          ],
-          other: [
-            {
-              name: 'Lorem ipsum',
-            },
-          ],
-        },
-        images: [],
-      },
-    }; */
-
     documentMock = document;
 
     await TestBed.configureTestingModule({
       imports: [ProjectDetailsComponent, SharedTestingModule],
       providers: [
         { provide: DOCUMENT, useValue: documentMock },
-        {
-          provide: ViewContainerRef,
-          useValue: viewContainerRefMock,
-        },
-        ModalManager,
+        ModalService,
       ],
       teardown: { destroyAfterEach: false },
     }).compileComponents();
