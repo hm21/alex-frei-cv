@@ -3,7 +3,7 @@ select,
 textarea {
   appearance: none;
   width: 100%;
-  background-color: var(--input-background-color);
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 12px;
   border: 2px solid #fff;
@@ -13,8 +13,15 @@ textarea {
   color: var(--text-color-primary);
   box-shadow: none !important;
 
-  &:focus{
+  &:focus {
     border-color: var(--color-primary) !important;
+  }
+}
+[data-theme="dark"] {
+  input,
+  select,
+  textarea {
+    background-color: #353539;
   }
 }
 input::-webkit-outer-spin-button,

@@ -22,9 +22,18 @@ h2 {
 }
 .fill {
   transition: fill 300ms ease;
-  fill: var(--icon-primary);
+  fill: #2d527c;
 }
 .fill-secondary {
   transition: fill 300ms ease;
-  fill: var(--icon-secondary);
+  fill: #cee8fa;
+}
+
+:host-context([data-theme="dark"]) {
+  .fill {
+    fill: #161616;
+  }
+  .fill-secondary {
+    fill: #919191;
+  }
 }

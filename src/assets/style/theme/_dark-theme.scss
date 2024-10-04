@@ -1,22 +1,4 @@
 [data-theme="dark"] {
-  --item-hover-color: rgb(88, 88, 94);
-
-  --card-background: #353539;
-  --card-background-accent: #49494f;
-  --card-hover-color: #49494f;
-  --card-gradient: linear-gradient(to right, #273043, #232c3d);
-
-  --input-background-color: #353539;
-  --shadow-color: rgb(66 68 73);
-
-  --text-color-primary: #f4f4f4;
-  --text-color-secondary: #d5d5d5;
-
-  --page-background-primary: #222222;
-
-  --border-color: #f4f4f4;
-  --border-color-darken: rgb(190, 190, 190);
-
   --color-primary-50: #1b1e26;
   --color-primary-100: #242a35;
   --color-primary-200: #2e3645;
@@ -32,22 +14,17 @@
   --color-accent: #49494f;
   --color-light: #f8f8f8;
 
-  --profile-banner-background: #262626db;
-  --profile-banner-backdrop: grayscale(0.4) blur(10px);
+  --card-background: #353539;
+  --card-background-accent: #49494f;
+  --card-hover-color: #49494f;
+  --card-gradient: linear-gradient(to right, #273043, #232c3d);
 
-  --icon-primary: rgb(22, 22, 22);
-  --icon-secondary: #919191;
+  --shadow-color: rgb(66 68 73);
 
-  --glass-color: #232325;
-  --glass-gradient: radial-gradient(
-      93% 87% at 87% 89%,
-      rgba(82, 82, 82, 0.23) 0%,
-      transparent 86.18%
-    ),
-    radial-gradient(
-      66% 66% at 26% 20%,
-      rgba(88, 88, 88, 0.219) 0%,
-      rgba(255, 255, 255, 0) 69.79%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  --text-color-primary: #f4f4f4;
+  --text-color-secondary: #d5d5d5;
+
+  --page-background-primary: #222222;
+
+  --border-color: #f4f4f4;
 }
