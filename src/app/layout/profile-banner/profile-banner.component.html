@@ -10,7 +10,7 @@
   </picture>
 </div>
 
-<!-- That the hero animation will work is it required that we create a separated layer which applies the backdrop-filter.  -->
+<!-- That the hero animation will work, is it required that we create a separated layer which applies the backdrop-filter.  -->
 <div class="frosted-glass"></div>
 
 <div class="frosted-box">
@@ -34,7 +34,7 @@
       [supportedFormats]="['avif', 'webp', 'png']"
       src="assets/img/avatar/alex_4x.png"
       i18n-alt
-      alt="Alex Frei profil picture"
+      alt="Alex Frei profile picture"
     />
   </picture>
 
@@ -46,10 +46,12 @@
   <div class="social">
     <a
       (click)="closeSideMenu()"
+      class="social-icon-btn"
       href="https://github.com/hm21"
       target="_blank"
-      i18n-aria-label
-      aria-label="Social-Github"
+      aria-label="Github"
+      i18n-afTooltip
+      afTooltip="View GitHub Profile"
     >
       <svg
         viewBox="0 0 20 20"
@@ -72,10 +74,12 @@
 
     <a
       (click)="closeSideMenu()"
+      class="social-icon-btn"
       href="https://www.facebook.com/profile.php?id=100078013238002"
       target="_blank"
-      i18n-aria-label
-      aria-label="Social-Facebook"
+      aria-label="Facebook"
+      i18n-afTooltip
+      afTooltip="View Facebook Profile"
     >
       <svg
         viewBox="-5 0 20 20"
@@ -117,10 +121,12 @@
 
     <a
       (click)="closeSideMenu()"
+      class="social-icon-btn"
       href="https://twitter.com/Frei2100"
       target="_blank"
-      i18n-aria-label
-      aria-label="Social-X aka Twitter"
+      aria-label="X aka Twitter"
+      i18n-afTooltip
+      afTooltip="View X Profile"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -143,8 +149,8 @@
   <button
     class="btn contact"
     (click)="downloadPdf()"
-    i18n-title
-    title="Download the CV as a PDF."
+    i18n-afTooltip
+    afTooltip="Download the CV as a PDF"
     i18n
   >
     Download

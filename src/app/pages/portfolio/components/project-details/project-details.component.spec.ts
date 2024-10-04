@@ -1,6 +1,5 @@
 import { DOCUMENT } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ModalService } from 'src/app/shared/modal/modal.service';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ProjectDetailsComponent } from './project-details.component';
 
@@ -14,10 +13,7 @@ describe('ProjectDetailsComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [ProjectDetailsComponent, SharedTestingModule],
-      providers: [
-        { provide: DOCUMENT, useValue: documentMock },
-        ModalService,
-      ],
+      providers: [{ provide: DOCUMENT, useValue: documentMock }],
       teardown: { destroyAfterEach: false },
     }).compileComponents();
   });

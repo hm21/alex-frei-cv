@@ -1,7 +1,7 @@
 <input
   [(ngModel)]="theme.isDarkMode"
-  (ngModelChange)="theme.toggleTheme();"
+  (ngModelChange)="theme.toggleTheme()"
   type="checkbox"
   id="darkmode-toggle"
 />
-<label for="darkmode-toggle"></label>
+<label for="darkmode-toggle" afTooltip="Toggle Theme"></label>

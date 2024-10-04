@@ -13,6 +13,7 @@ import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
 import { ToastService } from 'src/app/shared/toast/toast.service';
+import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
@@ -24,11 +25,14 @@ import { navItems } from '../header/utils/nav-items';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    ThemeSwitchComponent,
-    LanguageSwitchComponent,
-    QuicklinkDirective,
     RouterLink,
     RouterLinkActive,
+    QuicklinkDirective,
+    
+    TooltipDirective,
+    ThemeSwitchComponent,
+    LanguageSwitchComponent,
+    
     NgxImageHeroDirective,
   ],
   templateUrl: './profile-banner.component.html',

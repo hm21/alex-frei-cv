@@ -14,6 +14,11 @@ $header-height: 85px;
   will-change: transform, border-radius, box-shadow;
   scrollbar-gutter: stable both-edges;
 }
+:host-context([data-theme="dark"]) {
+  .frosted-glass {
+    background-color: #222222a8;
+  }
+}
 header {
   position: fixed;
   top: 0px;
@@ -203,6 +208,9 @@ li {
 }
 
 :host ::ng-deep {
+  ::-webkit-scrollbar {
+    background-color: var(--page-background-primary);
+  }
   ::-webkit-scrollbar-track {
     margin-top: $header-height;
     border-radius: 4px 4px 0 0;

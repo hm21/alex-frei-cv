@@ -1,0 +1,18 @@
+:host {
+  position: fixed;
+  z-index: 1004;
+
+  color: white;
+  background-color: #192944 !important;
+
+  max-width: 300px;
+
+  padding: 3px 6px;
+  border-radius: 3px;
+
+  font-weight: 400;
+  font-size: 0.77rem;
+
+  pointer-events: none;
+  user-select: none;
+}
