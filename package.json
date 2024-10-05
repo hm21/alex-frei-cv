@@ -29,7 +29,7 @@
     "@angular/ssr": "^18.2.6",
     "alex-frei-cv": "file:",
     "express": "^4.21.0",
-    "ngx-count-animation": "^2.0.2",
+    "ngx-count-animation": "^2.1.0",
     "ngx-image-hero": "^2.0.2",
     "ngx-quicklink": "^0.4.6",
     "ngx-scroll-animations": "^2.0.1",

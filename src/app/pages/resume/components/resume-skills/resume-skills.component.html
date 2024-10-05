@@ -1,6 +1,6 @@
 <h2 class="section-title" i18n>Frontend skills</h2>
 @for (item of frontendSkills; track $index) {
-  <af-progress-bar [progress]="item.skillLevel">
+  <af-progress-bar [progress]="item.skillLevel" [delay]="staggerDelay * $index">
     <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
   </af-progress-bar>
 }
@@ -12,6 +12,7 @@
   <af-progress-bar
     style="--color-primary-600: #29ca9a; --color-primary-700: #0ba376"
     [progress]="item.skillLevel"
+    [delay]="staggerDelay * ($index + frontendSkills.length)"
   >
     <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
   </af-progress-bar>

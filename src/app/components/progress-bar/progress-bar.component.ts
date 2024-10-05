@@ -8,7 +8,15 @@ import {
   viewChild,
 } from '@angular/core';
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
-import { delay, fromEvent, map, startWith, throttleTime } from 'rxjs';
+import {
+  delay,
+  fromEvent,
+  map,
+  startWith,
+  switchMap,
+  throttleTime,
+  timer,
+} from 'rxjs';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 
 @Component({
@@ -34,6 +42,11 @@ export class ProgressBarComponent
    */
   public progress = input.required({ transform: numberAttribute });
 
+  /**
+   * Delay before the animation starts.
+   */
+  public delay = input(0, { transform: numberAttribute });
+
   ngAfterViewInit(): void {
     if (!this.isBrowser) return;
 
@@ -46,10 +59,12 @@ export class ProgressBarComponent
   private initScrollListener() {
     const barElement = this.barRef().nativeElement;
 
-    fromEvent(this.document, 'scroll')
+    timer(this.delay())
       .pipe(
+        switchMap(() =>
+          fromEvent(this.document, 'scroll').pipe(startWith(null)),
+        ),
         throttleTime(50, undefined, { leading: true, trailing: true }),
-        startWith(null),
         delay(1),
         map(() => {
           const rect = barElement.getBoundingClientRect();

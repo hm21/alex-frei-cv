@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { ProgressBarComponent } from 'src/app/components/progress-bar/progress-bar.component';
 import {
@@ -6,6 +11,7 @@ import {
   FRONTEND_SKILLS,
   KNOWLEDGE,
 } from 'src/app/configs/resume-skills';
+import { ScreenService } from 'src/app/services/screen/screen.service';
 import { SkillItem } from '../../utils/resume-interface';
 
 @Component({
@@ -16,19 +22,34 @@ import { SkillItem } from '../../utils/resume-interface';
   templateUrl: './resume-skills.component.html',
   styleUrl: './resume-skills.component.scss',
 })
-export class ResumeSkillsComponent {
+export class ResumeSkillsComponent implements OnInit {
+  private screen = inject(ScreenService);
+
+  /**
+   * Delay time before the progress-bar animation start.
+   */
+  protected staggerDelay!: number;
+
   /**
    * An array of frontend skills.
    */
-  public frontendSkills: SkillItem[] = FRONTEND_SKILLS;
+  protected frontendSkills: SkillItem[] = FRONTEND_SKILLS;
 
   /**
    * An array of backend skills.
    */
-  public backendSkills: SkillItem[] = BACKEND_SKILLS;
+  protected backendSkills: SkillItem[] = BACKEND_SKILLS;
 
   /**
    * An array of knowledge areas.
    */
-  public knowledge = KNOWLEDGE;
+  protected knowledge = KNOWLEDGE;
+
+  ngOnInit(): void {
+    this.staggerDelay =
+      this.screen.width > 1200 ||
+      (this.screen.width >= 800 && this.screen.width < 1024)
+        ? 80
+        : 0;
+  }
 }
