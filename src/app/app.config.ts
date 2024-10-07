@@ -35,13 +35,15 @@ export const appConfig: ApplicationConfig = {
     provideNgxScrollAnimations({ once: false }),
     provideNgxCountAnimations(),
 
-    provideExperimentalZonelessChangeDetection(),
     provideAnimations(),
     provideHttpClient(
       withFetch(),
       withInterceptors([globalHttpErrorHandlerInterceptor]),
     ),
+    provideExperimentalZonelessChangeDetection(),
     // provideClientHydration(withI18nSupport()),
+
+    // Routing
     quicklinkProviders,
     provideRouter(
       routes,
@@ -52,6 +54,8 @@ export const appConfig: ApplicationConfig = {
         anchorScrolling: 'enabled',
       }),
     ),
+
+    // PWA
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:3000',

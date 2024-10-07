@@ -1,4 +1,4 @@
-import { AsyncPipe, DecimalPipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import {
   ChangeDetectionStrategy,
@@ -22,6 +22,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
+import { InputLabelDirective } from 'src/app/directives/input-label.directive';
 import { ToastService } from 'src/app/shared/toast/toast.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ExtendedValidators } from 'src/app/utils/extended-form-validators';
@@ -33,9 +34,9 @@ import { ProgressSpinnerComponent } from '../../../../components/progress-spinne
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    ReactiveFormsModule,
     DecimalPipe,
-    AsyncPipe,
+    ReactiveFormsModule,
+    InputLabelDirective,
     ProgressSpinnerComponent,
   ],
   templateUrl: './contact-form.component.html',
@@ -160,6 +161,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
    */
   private updateFormState(form: FormGroup) {
     if (form.invalid) {
+      form.markAllAsTouched();
       this.toast.warning({
         duration: 7_000,
         message:
