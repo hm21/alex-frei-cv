@@ -1,10 +1,5 @@
 @import "various/breakpoints";
 
-label {
-  font-weight: 300;
-  font-size: 14px;
-  margin-left: 4px;
-}
 input,
 textarea {
   height: 45px;
@@ -13,21 +8,6 @@ textarea {
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #bbbbbb;
-
-  &.ng-invalid {
-    &.ng-touched {
-      border-color: #ff0000 !important;
-    }
-  }
-}
-.input-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  &:focus-within {
-    color: var(--color-primary);
-  }
 }
 textarea {
   height: 210px;

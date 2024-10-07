@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { TypewriterComponent } from './typewriter.component';
 
-describe('WaioTypewriterComponent', () => {
+describe('TypewriterComponent', () => {
   let component: TypewriterComponent;
   let fixture: ComponentFixture<TypewriterComponent>;
 

@@ -37,30 +37,33 @@ input[type="number"] {
   appearance: textfield;
   -moz-appearance: textfield;
 }
-.input-row {
+label {
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 4px;
+}
+.input-box {
   display: flex;
-  justify-content: space-between;
-  background-color: #ffffff;
-  border: 2px solid white;
-  border-radius: 20px;
-  padding: 0 12px;
-  box-sizing: border-box;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  &:focus-within {
+    color: var(--color-primary);
+  }
+}
 
-  transition: border 200ms ease;
-
-  svg {
-    cursor: pointer;
-    width: 20px;
-    height: 15px;
-    transition: transform 200ms ease;
-    transform: scale(1);
-
-    &:hover {
-      transform: scale(1.1);
+input,
+textarea {
+  &.ng-invalid {
+    &.ng-touched {
+      border-color: #ff0000 !important;
     }
   }
-  &:focus-within {
-    border-color: black;
+}
+label {
+  &.ng-invalid {
+    &.ng-touched {
+      color: #ff0000 !important;
+    }
   }
 }

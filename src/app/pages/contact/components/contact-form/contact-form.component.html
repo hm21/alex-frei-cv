@@ -1,48 +1,46 @@
 <form [formGroup]="form" (ngSubmit)="submit$.next()">
   <div class="row">
     <div class="col h-stretch">
-      <div class="input-box">
-        <label for="givenName" i18n>First Name</label>
-        <input
-          enterkeyhint="next"
-          id="givenName"
-          autocomplete="given-name"
-          formControlName="givenName"
-          type="text"
-        />
-      </div>
+      <input
+        afInputLabel
+        i18n-label
+        label="First Name"
+        enterkeyhint="next"
+        autocomplete="given-name"
+        formControlName="givenName"
+        type="text"
+      />
 
-      <div class="input-box">
-        <label for="familyName" i18n>Last Name</label>
-        <input
-          enterkeyhint="next"
-          id="familyName"
-          autocomplete="family-name"
-          formControlName="familyName"
-          type="text"
-        />
-      </div>
+      <input
+        afInputLabel
+        i18n-label
+        label="Last Name"
+        enterkeyhint="next"
+        autocomplete="family-name"
+        formControlName="familyName"
+        type="text"
+      />
 
-      <div class="input-box">
-        <label for="email" i18n>E-Mail</label>
-        <input
-          enterkeyhint="next"
-          id="email"
-          autocomplete="email"
-          formControlName="email"
-          type="email"
-        />
-      </div>
+      <input
+        afInputLabel
+        i18n-label
+        label="E-Mail"
+        enterkeyhint="next"
+        autocomplete="email"
+        formControlName="email"
+        type="email"
+      />
     </div>
 
-    <div class="col h-stretch message input-box">
-      <label for="message" i18n>Message</label>
+    <div class="col h-stretch message">
       <textarea
         #message
+        afInputLabel
+        i18n-label
+        label="Message"
         enterkeyhint="enter"
         maxlength="10000"
         rows="30"
-        id="message"
         autocomplete="off"
         formControlName="message"
         type="text"
