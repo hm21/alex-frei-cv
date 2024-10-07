@@ -87,7 +87,7 @@ export class ModalComponent {
     // Remove the modal component from the view and the registry.
     this.containerRef().remove(i);
     this._components.splice(i, 1);
-    
+
     // Restore the scrollbar visibility when the modal is closed.
     this.document.body.style.removeProperty('overflow');
   }
@@ -99,8 +99,10 @@ export class ModalComponent {
    */
   public clearAll() {
     // Iterate through the list of active modals and close each one.
-    this._components.forEach((el) => {
-      this.close(el.id);
-    });
+    this._components
+      .map((el) => el.id)
+      .forEach((id) => {
+        this.close(id);
+      });
   }
 }

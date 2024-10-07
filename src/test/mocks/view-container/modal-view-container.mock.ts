@@ -1,8 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ComponentRef, EventEmitter, Injectable } from '@angular/core';
 
 const componentRefMock = {
   instance: {
     onClose: new EventEmitter(),
+    open: (_: any) => {},
+    close: (_: any) => {},
+    clearAll: (_: any) => {},
   },
   changeDetectorRef: {
     detectChanges: jasmine.createSpy('detectChanges'),
