@@ -7,14 +7,16 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgLooseIcon from 'src/assets/img/game/quantum-quiz/loose.svg';
 import { QuizManagerService } from '../../utils/quiz-manager.service';
 
 @Component({
   selector: 'af-quantum-quiz-loose',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, RouterLink, QuicklinkDirective],
+  imports: [DecimalPipe, RouterLink, QuicklinkDirective, SafePipe],
   templateUrl: './quantum-quiz-loose.component.html',
   styleUrls: [
     '../../../../styles/game-button.scss',
@@ -25,6 +27,8 @@ export class QuantumQuizLooseComponent
   extends ExtendedComponent
   implements OnInit
 {
+  protected readonly looseIcon = svgLooseIcon;
+
   private gameManager = inject(QuizManagerService);
 
   override ngOnInit(): void {

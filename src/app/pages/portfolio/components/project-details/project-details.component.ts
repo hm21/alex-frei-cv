@@ -19,6 +19,8 @@ import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { Modal } from 'src/app/shared/modal/modal.base';
 import { ToastService } from 'src/app/shared/toast/toast.service';
 import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
+import svgIconCopy from 'src/assets/img/icon/copy.svg';
+import svgIconGlobe from 'src/assets/img/icon/globe.svg';
 import {
   ProjectDetails,
   UrlListTemplateI,
@@ -56,6 +58,9 @@ export class ProjectDetailsComponent
   extends Modal<ProjectDetails>
   implements OnInit
 {
+  protected readonly iconCopy = svgIconCopy;
+  protected readonly iconGlobe = svgIconGlobe;
+
   private toast = inject(ToastService);
 
   /** Reference to the container for displaying website URLs. */

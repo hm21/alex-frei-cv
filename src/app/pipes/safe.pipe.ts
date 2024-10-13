@@ -25,7 +25,7 @@ export class SafePipe implements PipeTransform {
       case 'resourceUrl':
         return this.sanitizer.bypassSecurityTrustResourceUrl(value);
       default:
-        throw new Error(`Unkown mode: ${mode}`);
+        throw new Error(`Unknown mode: ${mode}`);
     }
   }
 }

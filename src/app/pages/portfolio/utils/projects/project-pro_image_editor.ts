@@ -1,11 +1,11 @@
-import { imageEditorLogo } from '../logos';
+import svgLogo from 'src/assets/img/pro_image_editor/pro_image_editor-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
   type: $localize`Flutter open source`,
   title: 'pro_image_editor',
   subtitle: $localize`A Flutter widget designed for image editing on any device.`,
-  logo: imageEditorLogo,
+  logo: svgLogo,
   description: $localize`
     The ProImageEditor is a Flutter widget designed for image editing. It provides a flexible and convenient way to integrate image editing capabilities 
     into Flutter projects. The editor has a great hit detection ensuring that drawing actions are triggered only when the user actively hovers over the drawing area. 

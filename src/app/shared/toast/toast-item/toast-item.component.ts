@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { ProgressSpinnerComponent } from 'src/app/components/progress-spinner/progress-spinner.component';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ToastIconPipe } from '../utils/toast-icon.pipe';
 import { ToastI } from '../utils/toast-interfaces';
 
 @Component({
@@ -18,7 +19,7 @@ import { ToastI } from '../utils/toast-interfaces';
   styleUrls: ['./toast-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [ProgressSpinnerComponent],
+  imports: [ProgressSpinnerComponent, ToastIconPipe],
   host: {
     '[class.has-title]': 'toast().title',
   },

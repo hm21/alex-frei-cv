@@ -1,14 +1,17 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  ElementRef,
   input,
   OnInit,
-  TemplateRef,
-  viewChild,
-  ViewContainerRef
+  viewChild
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgApps from 'src/assets/img/icon/apps.svg';
+import svgBackend from 'src/assets/img/icon/backend.svg';
+import svgDesign from 'src/assets/img/icon/design.svg';
+import svgWebsite from 'src/assets/img/icon/website.svg';
 import { ServiceCardIcon } from '../../model/service-card-type';
 
 @Component({
@@ -21,26 +24,7 @@ import { ServiceCardIcon } from '../../model/service-card-type';
 })
 export class ServiceCardComponent extends ExtendedComponent implements OnInit {
   /** Reference to the container for displaying icons. */
-  private iconRef = viewChild.required('iconRef', {
-    read: ViewContainerRef,
-  });
-
-  /** Reference to the website icon template. */
-  private websiteIcon = viewChild.required('websiteIcon', {
-    read: TemplateRef<any>,
-  });
-  /** Reference to the apps icon template. */
-  private appsIcon = viewChild.required('appsIcon', {
-    read: TemplateRef<any>,
-  });
-  /** Reference to the design icon template. */
-  private designIcon = viewChild.required('designIcon', {
-    read: TemplateRef<any>,
-  });
-  /** Reference to the backend icon template. */
-  private backendIcon = viewChild.required('backendIcon', {
-    read: TemplateRef<any>,
-  });
+  private iconRef = viewChild.required<ElementRef<HTMLElement>>('iconRef');
 
   /** Icon representing the service. */
   public icon = input.required<ServiceCardIcon>();
@@ -63,16 +47,16 @@ export class ServiceCardComponent extends ExtendedComponent implements OnInit {
   private setIconTemplate() {
     switch (this.icon()) {
       case 'website':
-        this.iconRef().createEmbeddedView(this.websiteIcon());
+        this.iconRef().nativeElement.innerHTML = svgWebsite;
         break;
       case 'app':
-        this.iconRef().createEmbeddedView(this.appsIcon());
+        this.iconRef().nativeElement.innerHTML = svgApps;
         break;
       case 'design':
-        this.iconRef().createEmbeddedView(this.designIcon());
+        this.iconRef().nativeElement.innerHTML = svgDesign;
         break;
       case 'backend':
-        this.iconRef().createEmbeddedView(this.backendIcon());
+        this.iconRef().nativeElement.innerHTML = svgBackend;
         break;
 
       default:

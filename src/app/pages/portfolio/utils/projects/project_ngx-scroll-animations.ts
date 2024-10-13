@@ -1,4 +1,4 @@
-import { openSourceLogo } from '../logos';
+import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
@@ -6,7 +6,7 @@ export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
     type: $localize`Angular open source`,
     title: 'ngx-scroll-animations',
     subtitle: $localize`Add automatic scroll animations to an angular 9+ app.`,
-    logo: openSourceLogo,
+    logo: svgOpenSource,
     description: $localize`
     A package for implementing CSS scroll animations on elements. These animations activate when an element enters the viewport during page scrolling. 
     Users have the flexibility to configure the animations to trigger multiple times or just once. Additionally, 

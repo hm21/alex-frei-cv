@@ -52,25 +52,6 @@ a {
     transform 200ms ease,
     box-shadow 200ms ease;
 
-  svg {
-    transition: transform 250ms ease;
-
-    margin-right: 10px;
-    margin-left: auto;
-
-    flex-shrink: 0;
-  }
-  .chevron {
-    fill: var(--color-light);
-  }
-
-  &:hover {
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.5);
-
-    svg {
-      transform: translateX(10px);
-    }
-  }
   &:active {
     transform: scale(0.95);
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0);
@@ -99,5 +80,31 @@ p {
 @media (max-width: 499px) {
   section {
     grid-template-columns: 100%;
+  }
+}
+
+:host ::ng-deep {
+  a {
+    svg {
+      transition: transform 250ms ease;
+
+      margin-right: 10px;
+      margin-left: auto;
+
+      flex-shrink: 0;
+
+      width: 28px;
+      height: 28px;
+    }
+    path {
+      fill: var(--color-light);
+    }
+    &:hover {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.5);
+
+      svg {
+        transform: translateX(10px);
+      }
+    }
   }
 }

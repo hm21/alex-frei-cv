@@ -113,14 +113,6 @@ footer {
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-
-  svg {
-    width: 18px;
-    height: 18px;
-  }
-  .fill {
-    fill: white;
-  }
 }
 
 @media (max-width: 1024px), (max-height: 489px) {
@@ -168,8 +160,7 @@ footer {
 
     &:focus-visible,
     &:hover {
-      background-color:#c7c7c7;
- 
+      background-color: #c7c7c7;
     }
   }
 }
@@ -184,6 +175,15 @@ footer {
 
     &:hover {
       background-color: transparent !important;
+    }
+  }
+  .social {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    .fill {
+      fill: white;
     }
   }
 }

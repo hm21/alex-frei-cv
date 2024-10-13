@@ -1,8 +1,8 @@
-import { snaptabLogo } from '../logos';
+import svgLogo from 'src/assets/img/snaptab/snaptab-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_SNAPTAB: ProjectDetails = {
-  logo: snaptabLogo,
+  logo: svgLogo,
   title: 'snaptab',
   subtitle: $localize`The Allrounder-Tool for your Company!`,
   description: $localize`

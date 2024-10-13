@@ -7,14 +7,16 @@ import {
   OnInit,
   TemplateRef,
   viewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { NavItemId, navItems } from 'src/app/layout/header/utils/nav-items';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgChevronRight from 'src/assets/img/icon/chevron-right.svg';
 
 @Component({
   selector: 'af-recommended-pages',
@@ -26,6 +28,7 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
     NgxScrollAnimationsDirective,
     NgTemplateOutlet,
     CardEffectsDirective,
+    SafePipe,
   ],
   templateUrl: './recommended-pages.component.html',
   styleUrl: './recommended-pages.component.scss',
@@ -34,6 +37,8 @@ export class RecommendedPagesComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  protected readonly chevronRight = svgChevronRight;
+
   /**
    * Reference to the container element.
    */
@@ -52,7 +57,7 @@ export class RecommendedPagesComponent
    * The active navigation item ID.
    * @required
    */
-  public activeId = input.required<NavItemId>()
+  public activeId = input.required<NavItemId>();
 
   override ngOnInit(): void {
     this.createItems();

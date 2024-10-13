@@ -12,9 +12,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ToastService } from 'src/app/shared/toast/toast.service';
 import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgIconFacebook from 'src/assets/img/icon/social/facebook.svg';
+import svgIconGithub from 'src/assets/img/icon/social/github.svg';
+import svgIconX from 'src/assets/img/icon/social/x.svg';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
 import { HeaderComponent } from '../header/header.component';
@@ -28,11 +32,12 @@ import { navItems } from '../header/utils/nav-items';
     RouterLink,
     RouterLinkActive,
     QuicklinkDirective,
-    
+
     TooltipDirective,
     ThemeSwitchComponent,
     LanguageSwitchComponent,
-    
+    SafePipe,
+
     NgxImageHeroDirective,
   ],
   templateUrl: './profile-banner.component.html',
@@ -42,6 +47,10 @@ export class ProfileBannerComponent
   extends ExtendedComponent
   implements OnInit
 {
+  protected readonly iconGithub = svgIconGithub;
+  protected readonly iconFacebook = svgIconFacebook;
+  protected readonly iconX = svgIconX;
+
   /** Handles HTTP requests */
   private http = inject(HttpClient);
 
