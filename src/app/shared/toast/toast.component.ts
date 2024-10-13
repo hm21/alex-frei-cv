@@ -83,7 +83,7 @@ export class ToastComponent {
       el.push(toast);
       return el;
     });
-    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
   /** Removes a toast notification by ID */
@@ -94,7 +94,7 @@ export class ToastComponent {
         el.splice(i, 1);
         return el;
       });
-      this.cdRef.detectChanges();
+      this.cdRef.markForCheck();
     }
   }
 }

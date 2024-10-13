@@ -31,7 +31,7 @@ export class TooltipComponent implements TooltipBase {
       el.push(item);
       return el;
     });
-    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
   /**
@@ -40,7 +40,7 @@ export class TooltipComponent implements TooltipBase {
    */
   show(id: string): void {
     this.toggle({ id, visible: true });
-    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
   /**
@@ -49,7 +49,7 @@ export class TooltipComponent implements TooltipBase {
    */
   hide(id: string): void {
     this.toggle({ id, visible: false });
-    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
   /**
@@ -64,7 +64,7 @@ export class TooltipComponent implements TooltipBase {
         return el;
       });
     }
-    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
   /**
