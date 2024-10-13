@@ -1,11 +1,11 @@
-import { openSourceLogo } from '../logos';
+import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
   type: $localize`Angular open source`,
   title: 'ngx-image-hero',
   subtitle: $localize`Easy way that images will fly to the middle of the screen for presentation.`,
-  logo: openSourceLogo,
+  logo: svgOpenSource,
   description: $localize`
     A package to implement hero animations, allowing users to click on images and smoothly zoom them into a larger, 
     immersive view, enhancing the user experience and interaction with images.<br/><br/>

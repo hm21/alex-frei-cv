@@ -25,9 +25,11 @@ import {
   tap,
   timer,
 } from 'rxjs';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ThemeManagerService } from 'src/app/services/theme-manager/theme-manager.service';
 import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgInfoIcon from 'src/assets/img/icon/info.svg';
 import { colorClashItemAnimation } from '../../../../../../animations/color-clash-item.animation';
 import { ColorClashManagerService } from '../../utils/color-clash-manager.service';
 import { ColorClashGameItem } from '../../utils/color-clash.interface';
@@ -44,6 +46,7 @@ import { ColorClashRandomItems } from '../models/color-clash-random-items.model'
     UpperCasePipe,
     RouterLink,
     QuicklinkDirective,
+    SafePipe,
   ],
   templateUrl: './color-clash-game.component.html',
   styleUrls: [
@@ -56,6 +59,8 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  public infoIcon = svgInfoIcon;
+
   /** Reference to the buttons container in the template. */
   private buttonsRef = viewChild.required('buttonsRef', {
     read: ViewContainerRef,

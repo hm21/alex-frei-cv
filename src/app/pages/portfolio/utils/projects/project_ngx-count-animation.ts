@@ -1,11 +1,11 @@
-import { openSourceLogo } from '../logos';
+import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
   type: $localize`Angular open source`,
   title: 'ngx-count-animation',
   subtitle: $localize`Count numbers up and down with smooth animation.`,
-  logo: openSourceLogo,
+  logo: svgOpenSource,
   install: 'npm install ngx-count-animation',
   description: $localize`
       A package that elegantly animates number changes, creating a visually engaging transition from one value to another, 

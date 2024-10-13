@@ -152,15 +152,7 @@ li {
     text-decoration: underline;
   }
 }
-.list-icon {
-  font-size: $list-icon-size;
-  height: $list-icon-size;
-  width: $list-icon-size;
-  flex-shrink: 0;
-  &.stroke {
-    stroke: var(--color-primary);
-  }
-}
+
 .description {
   text-align: justify;
   line-height: 170%;
@@ -214,6 +206,15 @@ li {
   ::-webkit-scrollbar-track {
     margin-top: $header-height;
     border-radius: 4px 4px 0 0;
+  }
+  .list-icon {
+    font-size: $list-icon-size;
+    height: $list-icon-size;
+    width: $list-icon-size;
+    flex-shrink: 0;
+    &.stroke {
+      stroke: var(--color-primary);
+    }
   }
   .skeleton-loading::after {
     border-radius: 3px !important;

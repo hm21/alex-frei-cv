@@ -1,11 +1,11 @@
-import { waioLogo } from '../logos';
+import svgLogo from 'src/assets/img/waio/waio-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_WAIO: { type: string } & ProjectDetails = {
   type: $localize`Website`,
   title: 'waio',
   subtitle: $localize`Presentation website from the company waio Applications.`,
-  logo: waioLogo,
+  logo: svgLogo,
   description: $localize`
     This website introduces WAIO Applications, my own company. Alongside information about my company, 
     it offers two captivating games to enrich the user experience.<br/>

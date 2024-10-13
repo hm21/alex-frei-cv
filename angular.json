@@ -38,6 +38,9 @@
               "src/sitemap.xml",
               "src/manifest.webmanifest"
             ],
+            "loader": {
+              ".svg": "text"
+            },
             "styles": [
               "src/assets/style/global-styles.scss"
             ],

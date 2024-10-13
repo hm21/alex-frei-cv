@@ -7,13 +7,15 @@ import {
   signal,
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgGlobalizationIcon from 'src/assets/img/icon/globalization.svg';
 
 @Component({
   selector: 'af-language-switch',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgClass],
+  imports: [NgClass, SafePipe],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss',
   animations: [
@@ -64,6 +66,8 @@ export class LanguageSwitchComponent
   extends ExtendedComponent
   implements OnInit
 {
+  protected readonly globalizationIcon = svgGlobalizationIcon;
+
   /**
    * Indicates whether the language dropdown is shown.
    */

@@ -1,31 +1,13 @@
+import svgCircle from 'src/assets/img/game/color-clash/circle.svg';
+import svgRectangle from 'src/assets/img/game/color-clash/rectangle.svg';
+import svgTriangle from 'src/assets/img/game/color-clash/triangle.svg';
 import { ColorClashRandomItem } from '../../utils/color-clash.interface';
 
 export class ColorClashRandomItems {
   // SVG definitions for different shapes
-  private rectangleSVG = {
-    id: 'rect',
-    svg: `
-    <svg fill="red" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="100" height="100"/>
-    </svg>
-    `,
-  };
-  private triangleSVG = {
-    id: 'triangle',
-    svg: `
-        <svg fill="red" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="50,0 0,100 100,100" />
-        </svg>
-        `,
-  };
-  private circleSVG = {
-    id: 'circle',
-    svg: `
-        <svg fill="red" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="50"/>
-        </svg>
-        `,
-  };
+  private readonly rectangleSVG = { id: 'rect', svg: svgRectangle };
+  private readonly triangleSVG = { id: 'triangle', svg: svgTriangle };
+  private readonly circleSVG = { id: 'circle', svg: svgCircle };
   /**
    * Inserts an element at a specific position in an array.
    * @param array - The array to insert the element into.

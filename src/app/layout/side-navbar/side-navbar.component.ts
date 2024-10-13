@@ -7,22 +7,20 @@ import {
   TemplateRef,
   ViewContainerRef,
   inject,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
+import svgAboutMe from 'src/assets/img/icon/about-me.svg';
+import svgContact from 'src/assets/img/icon/contact.svg';
+import svgPortfolio from 'src/assets/img/icon/portfolio.svg';
+import svgRelax from 'src/assets/img/icon/relax.svg';
+import svgResume from 'src/assets/img/icon/resume.svg';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
 import { navItems } from '../header/utils/nav-items';
-import {
-  aboutMeIcon,
-  contactIcon,
-  portfolioIcon,
-  relaxIcon,
-  resumeIcon,
-} from '../header/utils/raw-icons';
 
 @Component({
   selector: 'af-side-navbar',
@@ -79,19 +77,19 @@ export class SideNavbarComponent
     navItems.forEach((el) => {
       switch (el.id) {
         case 'aboutMe':
-          el.icon = this.sanitizer.bypassSecurityTrustHtml(aboutMeIcon);
+          el.icon = this.sanitizer.bypassSecurityTrustHtml(svgAboutMe);
           break;
         case 'resume':
-          el.icon = this.sanitizer.bypassSecurityTrustHtml(resumeIcon);
+          el.icon = this.sanitizer.bypassSecurityTrustHtml(svgResume);
           break;
         case 'portfolio':
-          el.icon = this.sanitizer.bypassSecurityTrustHtml(portfolioIcon);
+          el.icon = this.sanitizer.bypassSecurityTrustHtml(svgPortfolio);
           break;
         case 'contact':
-          el.icon = this.sanitizer.bypassSecurityTrustHtml(contactIcon);
+          el.icon = this.sanitizer.bypassSecurityTrustHtml(svgContact);
           break;
         case 'relax':
-          el.icon = this.sanitizer.bypassSecurityTrustHtml(relaxIcon);
+          el.icon = this.sanitizer.bypassSecurityTrustHtml(svgRelax);
           break;
       }
 

@@ -1,11 +1,11 @@
-import { iotLogo } from '../logos';
+import svgSmarthome from 'src/assets/img/smarthome/smarthome-logo.svg';
 import { ProjectDetails } from '../portfolio-interfaces';
 
 export const PROJECT_SMART_HOME: { type: string } & ProjectDetails = {
   type: $localize`IoT`,
   title: 'smarthome',
   subtitle: $localize`Smarthome app to automate bee hives and gardens.`,
-  logo: iotLogo,
+  logo: svgSmarthome,
   description: $localize`
     This project is a real-time control application. Users can directly program the functions of GPIO ports without requiring any programming knowledge. 
     Additionally, users can access data about the personal beehive, including real-time temperature readings and the amount of honey produced by the bees.

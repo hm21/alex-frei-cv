@@ -17,22 +17,17 @@
   background: none;
   transition: var(--smooth-background);
 
-  span {
-    margin: 0 4px 0 6px;
-  }
-  svg {
-    height: 1rem;
-    width: 1rem;
-  }
-  .i18n {
-    fill: var(--text-color-primary);
-  }
-  .arrow {
-    stroke: var(--text-color-primary);
-  }
-
   &:hover {
     background-color: var(--color-accent);
+  }
+
+  ::ng-deep {
+    svg {
+      fill: var(--text-color-primary);
+      margin-right: 4px;
+      height: 1rem;
+      width: 1rem;
+    }
   }
 }
 .dropdown-panel {

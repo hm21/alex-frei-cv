@@ -31,15 +31,6 @@
   }
 }
 
-.toast-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-}
 p {
   color: var(--text-color-primary);
 }
@@ -67,6 +58,17 @@ p {
   margin: 0px;
   font-weight: 600;
   letter-spacing: 0.3px;
+}
+:host ::ng-deep {
+  .toast-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
 
 @media screen and (max-width: 599px) {
