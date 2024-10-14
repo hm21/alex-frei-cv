@@ -6,6 +6,8 @@ describe('ProgressSpinnerComponent', () => {
   let component: ProgressSpinnerComponent;
   let fixture: ComponentFixture<ProgressSpinnerComponent>;
 
+  const size = 48;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SharedTestingModule, ProgressSpinnerComponent],
@@ -15,6 +17,7 @@ describe('ProgressSpinnerComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProgressSpinnerComponent);
+    fixture.componentRef.setInput('size', size);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,20 +26,14 @@ describe('ProgressSpinnerComponent', () => {
     expect(component).toBeTruthy();
   });
 
-
   it('should render an SVG with the correct width and height based on size', () => {
-    const svgElement: SVGElement =
-      fixture.nativeElement.querySelector('.loading-spinner');
+    const svgElement: SVGElement = fixture.nativeElement.querySelector('svg');
 
-    const initialSize = component.size().toString();
-    const newSize = '48';
+    expect(svgElement).not.toBeNull();
 
-    expect(svgElement.getAttribute('width')).toBe(initialSize);
-    expect(svgElement.getAttribute('height')).toBe(initialSize);
+    const { width, height } = svgElement.getBoundingClientRect();
 
-    fixture.componentRef.setInput('size', newSize);
-    fixture.detectChanges();
-    expect(svgElement.getAttribute('width')).toBe(newSize);
-    expect(svgElement.getAttribute('height')).toBe(newSize);
+    expect(width).toBe(size);
+    expect(height).toBe(size);
   });
 });

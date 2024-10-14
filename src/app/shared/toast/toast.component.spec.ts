@@ -25,7 +25,7 @@ describe('ToastComponent', () => {
     fixture = TestBed.createComponent(ToastComponent);
     component = fixture.componentInstance;
     cdRef = component.cdRef;
-    spyOn(cdRef, 'detectChanges').and.callThrough();
+    spyOn(cdRef, 'markForCheck').and.callThrough();
     fixture.detectChanges();
   });
 
@@ -40,7 +40,7 @@ describe('ToastComponent', () => {
     const toasts = component.toastList();
     expect(toasts.length).toBe(1);
     expect(toasts[0]).toEqual(toast);
-    expect(cdRef.detectChanges).toHaveBeenCalled();
+    expect(cdRef.markForCheck).toHaveBeenCalled();
   });
 
   it('should remove a toast by ID and trigger change detection', () => {
@@ -54,7 +54,7 @@ describe('ToastComponent', () => {
     const toasts = component.toastList();
     expect(toasts.length).toBe(1);
     expect(toasts[0].id).toBe(2);
-    expect(cdRef.detectChanges).toHaveBeenCalled();
+    expect(cdRef.markForCheck).toHaveBeenCalled();
   });
 
   it('should not remove a toast if the ID does not exist', () => {
@@ -66,6 +66,6 @@ describe('ToastComponent', () => {
     const toasts = component.toastList();
     expect(toasts.length).toBe(1);
     expect(toasts[0]).toEqual(toast);
-    expect(cdRef.detectChanges).toHaveBeenCalledTimes(1); // Only called once during add
+    expect(cdRef.markForCheck).toHaveBeenCalledTimes(1); // Only called once during add
   });
 });
