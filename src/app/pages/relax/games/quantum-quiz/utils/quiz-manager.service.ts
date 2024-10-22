@@ -1,13 +1,17 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Injectable, inject, signal } from '@angular/core';
-import { Subject, takeUntil, tap } from 'rxjs';
+import { inject, Injectable, signal } from '@angular/core';
+import { map, Subject, takeUntil, tap } from 'rxjs';
 import { LoggerService } from 'src/app/services/logger/logger.service';
 import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
 import { GameManager } from '../../../utils/game-manager';
-import { Quiz } from './quiz-interface';
+import { Quiz, QuizResponse } from './quiz-interface';
 
 @Injectable()
 export class QuizManagerService extends GameManager {
+  private endpoints = inject(ENDPOINTS);
+  private logger = inject(LoggerService);
+  private http = inject(HttpClient);
+
   /**
    * The amount of cash won by the player.
    */
@@ -47,9 +51,8 @@ export class QuizManagerService extends GameManager {
    */
   public generatingQuestions = false;
 
-  private endpoints = inject(ENDPOINTS);
-  private logger = inject(LoggerService);
-  private http = inject(HttpClient);
+  private topic?: string;
+  public topicTranslated?: string;
 
   public destroyQuizGeneration$ = new Subject<void>();
 
@@ -91,6 +94,7 @@ export class QuizManagerService extends GameManager {
     this.level.set(0);
     this.generateErrorMsg.set('');
     this.questions.set([]);
+    this.topicTranslated = topic;
     this.generateNewQuestion(topic);
     this.router.navigate([
       '/relax',
@@ -114,12 +118,24 @@ export class QuizManagerService extends GameManager {
   private generateNewQuestion(topic?: string) {
     if (!this.generatingQuestions) return;
     this.http
-      .post(this.endpoints.quiz, {
+      .post<QuizResponse>(this.endpoints.quiz, {
         topic,
         lang: $localize`en`,
         questions: this.questions().map((el) => el.question),
       })
       .pipe(
+        map((res) => {
+          try {
+            this.topic = res.topic;
+            if (res.topicTranslated) {
+              this.topicTranslated = res.topicTranslated;
+            }
+            return JSON.parse(res.generated ?? '{}');
+          } catch (error) {
+            this.logger.error('JSON.parse failed').print(error);
+            return this.generateNewQuestion(this.topic);
+          }
+        }),
         takeUntil(
           this.destroyQuizGeneration$.pipe(
             tap(() => {
@@ -130,15 +146,7 @@ export class QuizManagerService extends GameManager {
         takeUntil(this.destroy$),
       )
       .subscribe({
-        next: (res: any) => {
-          let data: any = {};
-          try {
-            data = JSON.parse(res ?? '{}');
-          } catch (error) {
-            this.logger.error('JSON.parse failed').print(error);
-            return this.generateNewQuestion(topic);
-          }
-
+        next: (data) => {
           if (data && !data?.error) {
             if (this.questions().length === 0) {
               this.router.navigate(
@@ -151,7 +159,7 @@ export class QuizManagerService extends GameManager {
             this.questions.update((items) => [...items, data]);
             this.logger.info(`Question ${this.questions().length}`).print(data);
             if (this.questions().length < 15 && this.generatingQuestions) {
-              this.generateNewQuestion(topic);
+              this.generateNewQuestion(this.topic);
             } else {
               this.generatingQuestions = false;
             }
@@ -201,8 +209,7 @@ export class QuizManagerService extends GameManager {
         'quantum-quiz',
         {
           outlets: {
-            state:
-              this.isGameWon ? 'won' : 'loose',
+            state: this.isGameWon ? 'won' : 'loose',
           },
         },
       ],

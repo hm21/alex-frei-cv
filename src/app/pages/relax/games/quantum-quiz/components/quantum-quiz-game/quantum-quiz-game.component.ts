@@ -30,6 +30,8 @@ export class QuantumQuizGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  private gameManager = inject(QuizManagerService);
+
   /**
    * Reference to the answer button element for option A.
    */
@@ -64,11 +66,14 @@ export class QuantumQuizGameComponent
     return this.gameManager.cashList;
   }
 
-  private gameManager = inject(QuizManagerService);
-
   public get quizQuestions() {
     return this.gameManager.questions;
   }
+
+  public get topic(){
+    return this.gameManager.topicTranslated;
+  }
+
 
   override ngOnInit(): void {
     this.listenShortcutKeys();
@@ -78,7 +83,6 @@ export class QuantumQuizGameComponent
   ngOnDestroy(): void {
     this.gameManager.destroyQuizGeneration$.next();
   }
-
   /**
    * Handles the selection of an option in the game.
    * @param option The selected option ('A', 'B', 'C', or 'D').
