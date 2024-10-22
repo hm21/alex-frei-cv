@@ -4,7 +4,7 @@ import {
   Component,
   inject,
   OnInit,
-  signal,
+  signal
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { NgxCountService } from 'ngx-count-animation';
@@ -30,7 +30,7 @@ import { ExtendedComponent } from './utils/extended-component';
     provideModal(),
     provideToast(),
     provideTooltip(),
-    
+
     NgxCountService,
     NgxScrollAnimationsService,
   ],
@@ -66,11 +66,17 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   }
 
   override ngOnInit(): void {
+    /**
+     * Sets the default application theme.
+     * If using Server-Side Rendering (SSR) and not just pre-rendering, we can set a cookie
+     * to ensure the correct theme (light or dark) is applied directly on the server-side.
+     * On the client side (browser), we dynamically fetch and apply the user’s theme preference.
+     */
     this.document
       .querySelector('html')
       ?.setAttribute('data-theme', this.isBrowser ? getTheme() : 'light');
 
-    super.ngOnInit();
+      super.ngOnInit();
   }
 
   private afterAppIsStable(): void {

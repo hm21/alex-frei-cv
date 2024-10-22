@@ -18,5 +18,8 @@
   },
   "editor.stickyScroll.enabled": true,
   "docwriter.progress.trackClasses": true,
-  "docwriter.style": "JSDoc"
+  "docwriter.style": "JSDoc",
+  "cSpell.words": [
+    "Cybercrime"
+  ]
 }
