@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, filter, fromEvent, takeUntil } from 'rxjs';
-import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/platform.provider';
 
 export abstract class GameManager {
   protected isBrowser = inject(IS_BROWSER);

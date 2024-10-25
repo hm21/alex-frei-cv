@@ -12,7 +12,7 @@ import { LoggerService } from '../services/logger/logger.service';
 import { MetaManagerService } from '../services/meta-manager/meta-manager.service';
 import { PageMetaData } from '../services/meta-manager/page-meta-data.interface';
 import { ScreenService } from '../services/screen/screen.service';
-import { IS_BROWSER } from './providers/is-browser.provider';
+import { IS_BROWSER } from './providers/platform.provider';
 
 @Directive() // Dummy decorator
 /**

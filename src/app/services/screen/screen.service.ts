@@ -8,7 +8,7 @@ import {
   startWith,
   throttleTime,
 } from 'rxjs';
-import { IS_BROWSER } from '../../utils/providers/is-browser.provider';
+import { IS_BROWSER } from '../../utils/providers/platform.provider';
 
 @Injectable({
   providedIn: 'root',

@@ -15,7 +15,7 @@ import {
   CardEffectManagerService,
 } from '../services/card-effect-manager/card-effect-manager.service';
 import { IdManagerService } from '../services/id-manager/id-manager.service';
-import { IS_BROWSER } from '../utils/providers/is-browser.provider';
+import { IS_BROWSER } from '../utils/providers/platform.provider';
 
 @Directive({
   selector: '[afCardEffects]',
