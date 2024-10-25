@@ -3,8 +3,45 @@
   align-items: center;
   justify-content: center;
 }
+
 :host ::ng-deep {
-  svg {
-    shape-rendering: auto;
+  .svg {
+    shape-rendering: optimizeSpeed;
+  }
+}
+
+.determinate-spinner {
+  transform: rotate(-90deg);
+}
+.progress-circle {
+  transition: stroke-dashoffset 0.5s ease;
+  stroke-linecap: round;
+}
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-primary);
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 500;
+}
+.buffer-circle {
+  stroke-linecap: round;
+  animation: rotateBuffer 7s linear infinite;
+
+  stroke-dasharray: 4, 10;
+  stroke-linecap: round;
+
+  transform-origin: center;
+}
+
+@keyframes rotateBuffer {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

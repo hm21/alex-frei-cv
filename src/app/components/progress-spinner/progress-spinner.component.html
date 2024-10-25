@@ -1,0 +1,43 @@
+<svg
+  [attr.viewBox]="viewBox()"
+  [attr.width]="diameter()"
+  [attr.height]="diameter()"
+  xmlns="http://www.w3.org/2000/svg"
+  focusable="false"
+  class="determinate-spinner"
+>
+  <!-- Buffer Circle (Indeterminate Animation) -->
+  <circle
+    class="buffer-circle"
+    [attr.r]="radius()"
+    [style.stroke-width.%]="circleStrokeWidth() * 0.9"
+    stroke="#c0c0c0"
+    fill="none"
+    cx="50%"
+    cy="50%"
+  />
+
+  <!-- Progress Circle (Determinate) -->
+  <circle
+    class="progress-circle"
+    [attr.r]="radius()"
+    [style.stroke-dasharray.px]="strokeCircumference()"
+    [style.stroke-dashoffset.px]="strokeDashOffset()"
+    [style.stroke-width.%]="circleStrokeWidth()"
+    stroke="var(--color-primary)"
+    fill="none"
+    cx="50%"
+    cy="50%"
+  />
+</svg>
+
+<div class="progress-text">
+  <span
+    [ngxCountAnimation]="value()"
+    enableLayoutChangeDetection="false"
+    enableRunOnlyInViewport="false"
+    maximumFractionDigits="0"
+    duration="300"
+  ></span
+  >%
+</div>
