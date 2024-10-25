@@ -1,6 +1,6 @@
 <div #toastContent class="toast-row">
   @if (toast().spinner) {
-    <af-progress-spinner size="36" />
+    <af-progress-spinner diameter="36" />
   } @else {
     <div class="toast-icon" [innerHTML]="toast().type | toastIcon"></div>
   }
