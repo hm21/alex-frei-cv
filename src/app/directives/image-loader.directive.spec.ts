@@ -1,5 +1,6 @@
-import { DestroyRef, ElementRef } from '@angular/core';
+import { DestroyRef, ElementRef, ViewContainerRef } from '@angular/core';
 import { TestBed, inject } from '@angular/core/testing';
+import { MockDefaultViewContainerRef } from 'src/test/mocks/view-container/default-view-container.mock';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ImageLoaderDirective } from './image-loader.directive';
 
@@ -20,6 +21,7 @@ describe('ImageLoaderDirective', () => {
       imports: [SharedTestingModule],
       providers: [
         { provide: ElementRef, useValue: elRefMock },
+        { provide: ViewContainerRef, useClass: MockDefaultViewContainerRef },
       ],
     });
   });

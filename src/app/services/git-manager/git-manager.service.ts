@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
 import { ENDPOINTS } from 'src/app/utils/providers/endpoints/endpoints.provider';
-import { IS_BROWSER } from '../../utils/providers/is-browser.provider';
+import { IS_BROWSER } from '../../utils/providers/platform.provider';
 
 @Injectable({
   providedIn: 'root',

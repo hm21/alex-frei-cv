@@ -16,8 +16,36 @@ import svgIcon from 'src/assets/img/icon/back-button.svg';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, QuicklinkDirective, TooltipDirective, SafePipe],
-  templateUrl: './back-btn.component.html',
-  styleUrl: './back-btn.component.scss',
+  template: `
+    <a
+      [routerLink]="path"
+      i18n-aria-label
+      aria-label="Back button"
+      afTooltip-title
+      afTooltip="Back"
+      [innerHTML]="icon | safe"
+    ></a>
+  `,
+  styles: `
+    a {
+      width: 44px;
+      height: 44px;
+      display: block;
+      padding: 10px;
+      border-radius: 100%;
+
+      transition: background-color 150ms ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--text-color-primary);
+    }
+  `,
 })
 export class BackBtnComponent extends ExtendedComponent {
   /**

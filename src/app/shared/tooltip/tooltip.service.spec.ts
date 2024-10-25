@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { ComponentRef } from '@angular/core';
-import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/platform.provider';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { TooltipComponent } from './tooltip.component';
 import { TooltipService } from './tooltip.service';

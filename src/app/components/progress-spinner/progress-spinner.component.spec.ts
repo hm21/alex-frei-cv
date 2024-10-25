@@ -17,7 +17,7 @@ describe('ProgressSpinnerComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProgressSpinnerComponent);
-    fixture.componentRef.setInput('size', size);
+    fixture.componentRef.setInput('diameter', size);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

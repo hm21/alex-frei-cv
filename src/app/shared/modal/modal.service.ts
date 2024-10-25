@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Modal } from 'src/app/shared/modal/modal.base';
-import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/platform.provider';
 import { IdManagerService } from '../../services/id-manager/id-manager.service';
 import { LoggerService } from '../../services/logger/logger.service';
 import { ModalComponent } from './modal.component';

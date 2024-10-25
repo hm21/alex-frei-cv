@@ -1,5 +1,4 @@
 import { Injectable, inject } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
 import { CONTACT_OPTIONS } from '../../configs/contact-options';
 import { GAMES } from '../../configs/games';
 import { LoggerService } from '../logger/logger.service';
@@ -9,7 +8,6 @@ import { ImageFormatSupportService } from './image-format-support.service';
   providedIn: 'root',
 })
 export class ImagePreloaderService {
-  private serviceWorker = inject(SwUpdate);
   private imageFormatSupport = inject(ImageFormatSupportService);
   private logger = inject(LoggerService);
 
@@ -59,19 +57,7 @@ export class ImagePreloaderService {
 
     urls = urls.map((url) => `${url}.${this.imageFormat}`);
 
-    if (this.serviceWorker.isEnabled) {
-      this.log('Service worker is active, using cache');
-      this.preloadImagesWithServiceWorker(urls).catch(() => {
-        this.log(
-          'Failed to preload images with service worker, fallback to image objects',
-          { error: true },
-        );
-        this.preloadImagesWithoutServiceWorker(urls);
-      });
-    } else {
-      this.log('Service worker not supported, using image objects');
-      this.preloadImagesWithoutServiceWorker(urls);
-    }
+    this.preloadImages(urls);
   }
 
   /**
@@ -86,32 +72,14 @@ export class ImagePreloaderService {
   }
 
   /**
-   * Preloads images using the service worker.
-   * @param {string[]} urls - The URLs of the images to preload.
-   * @returns {Promise<void>}
+   * Preloads a list of image URLs by creating `Image` instances for each and waiting for them to load.
+   * If all images load successfully, the promise resolves. If any image fails to load, the promise rejects.
+   * This function does not rely on the service worker to cache the images.
+   *
+   * @param {string[]} urls - Array of image URLs to be preloaded.
+   * @returns {Promise<void>} A promise that resolves when all images are successfully loaded, or rejects if any fail to load.
    */
-  private async preloadImagesWithServiceWorker(urls: string[]): Promise<void> {
-    const cache = await caches.open('my-cache');
-    const promises = urls.map(async (url) => {
-      this.log(`Caching: ${url}`);
-
-      return await cache.add(url).catch(() => {
-        this.log(`Failed to cache ${url}`, { error: true });
-      });
-    });
-
-    await Promise.all(promises).catch(() => {
-      this.log('Error opening cache', { error: true });
-    });
-    this.log('All images preloaded with service worker');
-  }
-
-  /**
-   * Preloads images without using the service worker.
-   * @param {string[]} urls - The URLs of the images to preload.
-   * @returns {Promise<void>}
-   */
-  private preloadImagesWithoutServiceWorker(urls: string[]): Promise<void> {
+  public preloadImages(urls: string[]): Promise<void> {
     return new Promise((resolve, reject) => {
       const promises = urls.map((url) => {
         return new Promise((res, rej) => {

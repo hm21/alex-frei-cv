@@ -23,7 +23,7 @@ import { provideModalTesting } from 'src/app/shared/modal/utils/modal-test.provi
 import { provideToastTesting } from 'src/app/shared/toast/utils/toast-test.provider';
 import { provideTooltipTesting } from 'src/app/shared/tooltip/utils/tooltip-test.provider';
 import { provideEndpoints } from 'src/app/utils/providers/endpoints/endpoints.provider';
-import { providePlatformDetection } from 'src/app/utils/providers/is-browser.provider';
+import { providePlatformDetection } from 'src/app/utils/providers/platform.provider';
 import '../app/utils/extensions/extensions';
 
 @NgModule({

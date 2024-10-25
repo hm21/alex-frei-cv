@@ -4,7 +4,7 @@ import {
   Injectable
 } from '@angular/core';
 import { filter, takeWhile, timer } from 'rxjs';
-import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/platform.provider';
 import { ToastComponent } from './toast.component';
 import { ToastI } from './utils/toast-interfaces';
 import { ToastType } from './utils/toast-types';

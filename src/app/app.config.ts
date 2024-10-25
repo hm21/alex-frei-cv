@@ -25,7 +25,7 @@ import { routes } from './app.routes';
 import { provideLogger } from './services/logger/logger-configs.provider';
 import { globalHttpErrorHandlerInterceptor } from './utils/interceptor/global-http-error-handler.interceptor';
 import { provideEndpoints } from './utils/providers/endpoints/endpoints.provider';
-import { providePlatformDetection } from './utils/providers/is-browser.provider';
+import { providePlatformDetection } from './utils/providers/platform.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [

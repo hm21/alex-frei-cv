@@ -3,7 +3,7 @@ import {
   inject,
   Injectable
 } from '@angular/core';
-import { IS_BROWSER } from 'src/app/utils/providers/is-browser.provider';
+import { IS_BROWSER } from 'src/app/utils/providers/platform.provider';
 import { TooltipComponent } from './tooltip.component';
 import { TooltipBase, TooltipItem } from './utils/tooltip.interface';
 import { TOOLTIP_VIEW_CONTAINER_REF } from './utils/tooltip.provider';
