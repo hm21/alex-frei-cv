@@ -22,7 +22,7 @@
   </div>
 </header>
 
-<section #sectionRef [ngClass]="{ 'open-hero': openHero() }">
+<section #sectionRef [class.open-hero]="openHero()">
   <div class="body container row">
     <aside>
       <ng-container #videoContainer />
@@ -98,9 +98,7 @@
       }
 
       <h3
-        [ngClass]="{
-          mt2: data().install || data().website || data().demoUrl,
-        }"
+        [class.mt2]="data().install || data().website || data().demoUrl"
         class="mb1"
         i18n
       >
@@ -122,12 +120,12 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
       allowfullscreen
       class="youtube-player"
-      [ngStyle]="{ opacity: videoPlayerLoaded() ? 1 : 0 }"
+      [style.opacity]="videoPlayerLoaded() ? 1 : 0"
       (load)="onVideoPlayerLoaded()"
     ></iframe>
     @if (!videoPlayerLoaded()) {
       <div class="loading-overlay">
-        <div class="spinner"></div>
+        <af-progress-spinner diameter="44" />
       </div>
     }
   </div>

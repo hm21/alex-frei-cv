@@ -1,4 +1,4 @@
-import { NgClass, NgStyle, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,6 +13,7 @@ import {
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { distinctUntilChanged, filter, fromEvent, map, timer } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
+import { ProgressSpinnerComponent } from 'src/app/components/progress-spinner/progress-spinner.component';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
 import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
@@ -31,14 +32,13 @@ import {
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgClass,
-    NgStyle,
     NgTemplateOutlet,
     NgxImageHeroDirective,
     SafePipe,
     TooltipDirective,
     ImageLoaderDirective,
     ModalCloseButtonDirective,
+    ProgressSpinnerComponent,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',

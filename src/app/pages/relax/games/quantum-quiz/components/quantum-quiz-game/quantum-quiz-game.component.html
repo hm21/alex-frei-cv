@@ -39,12 +39,7 @@
     </div>
 
     <div>
-      <div
-        class="answers"
-        [ngClass]="{
-          disabled: state() !== 'pending',
-        }"
-      >
+      <div class="answers" [class.disabled]="state() !== 'pending'">
         <button
           #answerRefA
           class="game-button"
@@ -94,7 +89,7 @@
 
 <div class="levels">
   @for (cash of cashList; track $index) {
-    <div class="level" [ngClass]="{ active: $index === 14 - level() }">
+    <div class="level" [class.active]="$index === 14 - level()">
       <div class="count">{{ cashList.length - $index }}</div>
       <div class="cash">{{ cash | number: "1.2-2" }} CHF</div>
     </div>

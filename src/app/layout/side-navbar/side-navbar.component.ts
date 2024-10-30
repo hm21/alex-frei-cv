@@ -1,4 +1,3 @@
-import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -29,7 +28,6 @@ import { navItems } from '../header/utils/nav-items';
   imports: [
     ThemeSwitchComponent,
     LanguageSwitchComponent,
-    NgTemplateOutlet,
     RouterLink,
     RouterLinkActive,
     QuicklinkDirective,

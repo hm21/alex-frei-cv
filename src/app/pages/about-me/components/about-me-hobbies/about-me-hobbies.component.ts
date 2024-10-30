@@ -1,4 +1,3 @@
-import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -18,7 +17,7 @@ import { Hobbies } from './utils/about-me-hobbies-interfaces';
   selector: 'af-about-me-hobbies',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsDirective, NgTemplateOutlet, TypewriterComponent],
+  imports: [NgxScrollAnimationsDirective, TypewriterComponent],
   templateUrl: './about-me-hobbies.component.html',
   styleUrl: './about-me-hobbies.component.scss',
 })

@@ -1,4 +1,3 @@
-import { NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -21,7 +20,7 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   selector: 'af-other-projects',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsDirective, NgTemplateOutlet, SafePipe],
+  imports: [NgxScrollAnimationsDirective, SafePipe],
   templateUrl: './other-projects.component.html',
   styleUrls: [
     './other-projects.component.scss',
