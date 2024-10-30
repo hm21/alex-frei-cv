@@ -15,6 +15,13 @@ export class ImagePreloaderService {
   private readonly enableLogs = false;
 
   /**
+   * Retrieves the preferred image format, such as 'avif' if supported.
+   */
+  public get preferredImageFormat() {
+    return this.imageFormat;
+  }
+
+  /**
    * Preloads images that are globally required.
    */
   public async startPreloadGlobalImages() {
