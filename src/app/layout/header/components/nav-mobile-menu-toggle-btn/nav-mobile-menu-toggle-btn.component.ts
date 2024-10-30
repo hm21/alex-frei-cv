@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,7 +12,6 @@ import { HeaderComponent } from '../../header.component';
   selector: 'af-nav-mobile-menu-toggle-btn',
   templateUrl: './nav-mobile-menu-toggle-btn.component.html',
   styleUrls: ['./nav-mobile-menu-toggle-btn.component.scss'],
-  imports: [NgClass],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { AsyncPipe, NgClass } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -14,7 +14,7 @@ import { ToastI } from './utils/toast-interfaces';
 @Component({
   selector: 'af-toast',
   standalone: true,
-  imports: [ToastItemComponent, NgClass, AsyncPipe],
+  imports: [ToastItemComponent, AsyncPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('afToast', [

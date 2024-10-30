@@ -1,4 +1,4 @@
-import { NgStyle, UpperCasePipe } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -41,7 +41,6 @@ import { ColorClashRandomItems } from '../models/color-clash-random-items.model'
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgStyle,
     TooltipDirective,
     UpperCasePipe,
     RouterLink,

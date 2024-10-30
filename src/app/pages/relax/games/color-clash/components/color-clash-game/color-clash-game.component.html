@@ -29,7 +29,7 @@
           params: { color: item.isCorrect ? 'green' : 'red' },
         }"
         class="item pos-{{ $index }}"
-        [ngStyle]="{ '--game-item-color': item.color }"
+        [style.--game-item-color]="item.color"
       >
         <div class="mode">{{ item.modeTranslated | uppercase }}</div>
         <div class="content" [innerHTML]="item.content"></div>
@@ -68,7 +68,7 @@
     class="action-button"
     type="button"
     (click)="buttonTap(id, color)"
-    [ngStyle]="{ '--game-item-color': color }"
+    [style.--game-item-color]="color"
   >
     <div class="col" [innerHTML]="content"></div>
     <kbd>{{ shortcut }}</kbd>

@@ -64,31 +64,11 @@ h2 {
 
   &.disabled {
     .game-button {
-      box-shadow: var(--color-primary-600) 0 3px 7px inset !important;
+      box-shadow: var(--color-primary-600) 0 3px 7px inset;
       transform: translateY(2px) !important;
 
       cursor: default;
       pointer-events: none;
-    }
-  }
-  .game-button {
-    &.wrong {
-      box-shadow: #c5372c 0 3px 7px inset !important;
-      background-color: #c5372c;
-      background-image: radial-gradient(
-        100% 100% at 100% 0,
-        #d83327 0,
-        #c5372c 100%
-      );
-    }
-    &.correct {
-      box-shadow: #1f991f 0 3px 7px inset !important;
-      background-color: #1f991f;
-      background-image: radial-gradient(
-        100% 100% at 100% 0,
-        #1ca01c 0,
-        #1f991f 100%
-      );
     }
   }
 }
@@ -121,6 +101,25 @@ h2 {
   span {
     font-size: 0.9rem;
     font-weight: 400;
+  }
+
+  &.wrong {
+    box-shadow: #c5372c 0 3px 7px inset !important;
+    background-color: #c5372c;
+    background-image: radial-gradient(
+      100% 100% at 100% 0,
+      #d83327 0,
+      #c5372c 100%
+    );
+  }
+  &.correct {
+    box-shadow: #1f991f 0 3px 7px inset !important;
+    background-color: #1f991f;
+    background-image: radial-gradient(
+      100% 100% at 100% 0,
+      #1ca01c 0,
+      #1f991f 100%
+    );
   }
 
   &:focus {

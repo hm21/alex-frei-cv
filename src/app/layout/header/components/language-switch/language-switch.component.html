@@ -14,7 +14,7 @@
     @for (language of languages; track $index) {
       <button
         (click)="changeLanguage(language)"
-        [ngClass]="{ selected: activeLanguage().iso2 === language.iso2 }"
+        [class.selected]="activeLanguage().iso2 === language.iso2"
       >
         {{ language.name }}
       </button>

@@ -1,5 +1,4 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -15,7 +14,7 @@ import svgGlobalizationIcon from 'src/assets/img/icon/globalization.svg';
   selector: 'af-language-switch',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgClass, SafePipe],
+  imports: [SafePipe],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss',
   animations: [

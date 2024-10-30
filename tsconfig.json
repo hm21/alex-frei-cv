@@ -18,7 +18,7 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "useDefineForClassFields": false,
+    "useDefineForClassFields": true,
     "lib": [
       "ES2022",
       "dom"
@@ -26,7 +26,6 @@
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "enableIvy": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
