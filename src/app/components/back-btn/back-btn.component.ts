@@ -40,10 +40,12 @@ import svgIcon from 'src/assets/img/icon/back-button.svg';
         background-color: rgba(0, 0, 0, 0.05);
       }
     }
-    svg {
-      width: 100%;
-      height: 100%;
-      fill: var(--text-color-primary);
+    :host ::ng-deep {
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--text-color-primary);
+      }
     }
   `,
 })
