@@ -51,6 +51,10 @@ p {
 .break-after {
   display: none;
 }
+.snaptab-gift {
+  width: auto;
+  aspect-ratio: 5/4;
+}
 
 @media (max-width: 900px), (min-width: 1024px) and (max-width: 1340px) {
   button {

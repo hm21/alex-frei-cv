@@ -164,6 +164,23 @@ footer {
     }
   }
 }
+/* 
+  Resolve an issue in Safari where the avatar appears in low resolution due to 
+  rendering issues caused by the backdrop. 
+*/
+:host-context(.browser-safari) {
+  :host ::ng-deep {
+    #hero-backdrop {
+      opacity: 0.01 !important;
+    }
+    .ngx-hero-fade-out{
+      animation-duration: 0ms !important;
+    }
+    .hero-avatar {
+      position: unset !important;
+    }
+  }
+}
 :host ::ng-deep {
   .btn-language {
     color: white !important;

@@ -4,15 +4,14 @@ import {
   Component,
   inject,
   OnInit,
-  signal
+  signal,
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
-import { NgxCountService } from 'ngx-count-animation';
-import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { timer } from 'rxjs';
 import { routeAnimation } from './animations/route-animations';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
+import { BrowserDetectionService } from './services/browser/browser-detection.service';
 import { ImagePreloaderService } from './services/image-manager/image-preloader.service';
 import { ModalService } from './shared/modal/modal.service';
 import { provideModal } from './shared/modal/utils/modal.provider';
@@ -30,9 +29,7 @@ import { ExtendedComponent } from './utils/extended-component';
     provideModal(),
     provideToast(),
     provideTooltip(),
-
-    NgxCountService,
-    NgxScrollAnimationsService,
+    BrowserDetectionService,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -58,6 +55,10 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   /** Manages tooltips */
   protected tooltipService = inject(TooltipService);
 
+  /** Detect the browser type */
+  protected browserDetectionService = inject(BrowserDetectionService);
+
+
   constructor() {
     super();
     afterNextRender(() => {
@@ -76,7 +77,7 @@ export class AppComponent extends ExtendedComponent implements OnInit {
       .querySelector('html')
       ?.setAttribute('data-theme', this.isBrowser ? getTheme() : 'light');
 
-      super.ngOnInit();
+    super.ngOnInit();
   }
 
   private afterAppIsStable(): void {
