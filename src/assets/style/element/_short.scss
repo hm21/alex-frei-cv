@@ -1,3 +1,4 @@
+@use "sass:map";
 /* Sizes */
 $sizes: (
     0: 0,
@@ -17,23 +18,23 @@ $margins: (
     ml: -left
 );
 
-@each $margin in map-keys($margins) {
-    @each $size in map-keys($sizes) {
+@each $margin in map.keys($margins) {
+    @each $size in map.keys($sizes) {
         .#{$margin}#{$size} {
-            margin#{map-get($margins, $margin)}: map-get($sizes, $size);
+            margin#{map.get($margins, $margin)}: map.get($sizes, $size);
         }
     }
 }
 
-@each $margin in map-keys($margins) {
+@each $margin in map.keys($margins) {
     .#{$margin}-auto {
-        margin#{map-get($margins, $margin)}: auto;
+        margin#{map.get($margins, $margin)}: auto;
     }
 }
 
-@each $margin in map-keys($margins) {
+@each $margin in map.keys($margins) {
     .#{$margin}-full {
-        margin#{map-get($margins, $margin)}: 100%;
+        margin#{map.get($margins, $margin)}: 100%;
     }
 }
 
@@ -46,10 +47,10 @@ $paddings: (
     pl: -left
 );
 
-@each $padding in map-keys($paddings) {
-    @each $size in map-keys($sizes) {
+@each $padding in map.keys($paddings) {
+    @each $size in map.keys($sizes) {
         .#{$padding}#{$size} {
-            padding#{map-get($paddings, $padding)}: map-get($sizes, $size);
+            padding#{map.get($paddings, $padding)}: map.get($sizes, $size);
         }
     }
 }
@@ -59,17 +60,17 @@ $colors: (
     primary: var(--color-primary),
     light: var(--color-light),
 );
-@each $color in map-keys($colors) {
+@each $color in map.keys($colors) {
     .bg-#{$color} {
-        background-color: map-get($colors, $color);
+        background-color: map.get($colors, $color);
     }
     .gradient-#{$color} {
         /// Fix contrast warning in lighthouse...
-        background-image: linear-gradient(map-get($colors, $color), map-get($colors, $color));
+        background-image: linear-gradient(map.get($colors, $color), map.get($colors, $color));
     }
 
     .color-#{$color} {
-        color: map-get($colors, $color);
+        color: map.get($colors, $color);
     }
 }
 

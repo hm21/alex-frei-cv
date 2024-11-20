@@ -1,3 +1,4 @@
+@use "sass:meta";
 :root {
   --primary-font: "Roboto Flex", "Roboto", "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -9,6 +10,6 @@
     --page-padding: 20px;
   }
 }
-@import "./light-theme";
-@import "./dark-theme";
-@import "./frosted-glass-theme";
+@include meta.load-css("light-theme");
+@include meta.load-css("dark-theme");
+@include meta.load-css("frosted-glass-theme");

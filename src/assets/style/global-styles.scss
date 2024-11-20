@@ -1,23 +1,23 @@
-@import "./font/font";
+@use "font/font";
 
-@import "./theme/theme";
+@use "theme/theme";
 
-@import "./various/shared";
-@import "./various/layout";
-@import "./various/breakpoints";
-@import "./various/animations";
-@import "./various/various";
+@use "various/shared";
+@use "various/layout";
+@use "various/breakpoints";
+@use "various/animations";
+@use "various/various";
 
-@import "./element/button";
-@import "./element/chip";
-@import "./element/header";
-@import "./element/input";
-@import "./element/scrollbar";
-@import "./element/short";
-@import "./element/skeleton";
-@import "./element/spacer";
-@import "./element/hero-image";
+@use "element/button";
+@use "element/chip";
+@use "element/header";
+@use "element/input";
+@use "element/scrollbar";
+@use "element/short";
+@use "element/skeleton";
+@use "element/spacer";
+@use "element/hero-image";
 
-@import "./effects/light-move-effect";
+@use "effects/light-move-effect";
 
 @import "node_modules/ngx-scroll-animations/styles/animations.min.css";

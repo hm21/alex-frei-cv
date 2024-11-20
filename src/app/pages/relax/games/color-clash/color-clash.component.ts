@@ -11,9 +11,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { gameScreenAnimation } from '../../animations/game-card.animation';
 import { GameHeaderComponent } from '../../components/game-header/game-header.component';
 import { GAME } from '../../utils/game.token';
-import { ColorClashEvaluationComponent } from './components/color-clash-evaluation/color-clash-evaluation.component';
-import { ColorClashGameComponent } from './components/color-clash-game/color-clash-game.component';
-import { ColorClashInstructionComponent } from './components/color-clash-instruction/color-clash-instruction.component';
 import { ColorClashManagerService } from './utils/color-clash-manager.service';
 
 @Component({
@@ -24,9 +21,6 @@ import { ColorClashManagerService } from './utils/color-clash-manager.service';
     RouterOutlet,
 
     GameHeaderComponent,
-    ColorClashInstructionComponent,
-    ColorClashGameComponent,
-    ColorClashEvaluationComponent,
   ],
   providers: [
     {

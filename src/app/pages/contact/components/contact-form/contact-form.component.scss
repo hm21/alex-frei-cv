@@ -1,4 +1,4 @@
-@import "various/breakpoints";
+@use "various/breakpoints" as breakpoints;
 
 input,
 textarea {
@@ -31,7 +31,7 @@ p {
 .btn {
   margin: 30px auto 0;
 }
-@media screen and (max-width: $bp-md) {
+@media screen and (max-width: breakpoints.$bp-md) {
   .row {
     flex-direction: column;
     align-items: center;

@@ -1,4 +1,4 @@
-@import "various/breakpoints";
+@use "various/breakpoints" as breakpoints;
 
 $snaptab-color: #0f7dff;
 
@@ -82,7 +82,7 @@ p {
     text-align: center;
   }
 }
-@include xs {
+@include breakpoints.xs {
   button {
     padding: 24px 16px;
   }

@@ -6,7 +6,6 @@ import {
   OnInit,
   viewChild
 } from '@angular/core';
-import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import svgApps from 'src/assets/img/icon/apps.svg';
 import svgBackend from 'src/assets/img/icon/backend.svg';
@@ -18,7 +17,6 @@ import { ServiceCardIcon } from '../../model/service-card-type';
   selector: 'af-service-card',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsDirective],
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
 })

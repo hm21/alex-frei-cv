@@ -10,8 +10,6 @@ import {
   viewChild
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
-import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { QuizManagerService } from '../../utils/quiz-manager.service';
 
@@ -19,7 +17,7 @@ import { QuizManagerService } from '../../utils/quiz-manager.service';
   selector: 'af-quantum-quiz-choose-topic',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule, RouterLink, QuicklinkDirective],
+  imports: [FormsModule],
   templateUrl: './quantum-quiz-choose-topic.component.html',
   styleUrl: './quantum-quiz-choose-topic.component.scss',
 })

@@ -34,8 +34,6 @@ import { navItems } from '../header/utils/nav-items';
     QuicklinkDirective,
 
     TooltipDirective,
-    ThemeSwitchComponent,
-    LanguageSwitchComponent,
     SafePipe,
 
     NgxImageHeroDirective,

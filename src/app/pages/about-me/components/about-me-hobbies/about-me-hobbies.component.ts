@@ -8,7 +8,6 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
-import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
 import { HOBBIES } from 'src/app/configs/hobbies';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { Hobbies } from './utils/about-me-hobbies-interfaces';
@@ -17,7 +16,7 @@ import { Hobbies } from './utils/about-me-hobbies-interfaces';
   selector: 'af-about-me-hobbies',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsDirective, TypewriterComponent],
+  imports: [NgxScrollAnimationsDirective],
   templateUrl: './about-me-hobbies.component.html',
   styleUrl: './about-me-hobbies.component.scss',
 })

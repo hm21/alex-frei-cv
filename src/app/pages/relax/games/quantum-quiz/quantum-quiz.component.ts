@@ -12,12 +12,6 @@ import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { gameScreenAnimation } from '../../animations/game-card.animation';
 import { GameHeaderComponent } from '../../components/game-header/game-header.component';
 import { GAME } from '../../utils/game.token';
-import { QuantumQuizChooseTopicComponent } from './components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component';
-import { QuantumQuizGameComponent } from './components/quantum-quiz-game/quantum-quiz-game.component';
-import { QuantumQuizGenerateQuizComponent } from './components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component';
-import { QuantumQuizInstructionComponent } from './components/quantum-quiz-instruction/quantum-quiz-instruction.component';
-import { QuantumQuizLooseComponent } from './components/quantum-quiz-loose/quantum-quiz-loose.component';
-import { QuantumQuizWonComponent } from './components/quantum-quiz-won/quantum-quiz-won.component';
 import { QuizManagerService } from './utils/quiz-manager.service';
 
 @Component({
@@ -29,12 +23,6 @@ import { QuizManagerService } from './utils/quiz-manager.service';
 
     GameHeaderComponent,
     FormsModule,
-    QuantumQuizChooseTopicComponent,
-    QuantumQuizGenerateQuizComponent,
-    QuantumQuizInstructionComponent,
-    QuantumQuizGameComponent,
-    QuantumQuizLooseComponent,
-    QuantumQuizWonComponent,
   ],
   providers: [
     {

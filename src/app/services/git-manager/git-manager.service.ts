@@ -24,9 +24,9 @@ export class GitManagerService {
     }
 
     return this.http.get<number>(this.endpoints.gitCommitCount).pipe(
-      tap(val=>{
+      tap((val) => {
         this.gitCommitCount = val;
-      })
+      }),
     );
   }
 }

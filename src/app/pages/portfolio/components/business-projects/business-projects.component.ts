@@ -5,9 +5,7 @@ import {
   INJECTOR,
 } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
-import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { TypewriterComponent } from 'src/app/components/typewriter/typewriter.component';
-import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ModalService } from 'src/app/shared/modal/modal.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
@@ -21,9 +19,7 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgxScrollAnimationsDirective,
     TypewriterComponent,
-    CardEffectsDirective,
     SafePipe,
   ],
   templateUrl: './business-projects.component.html',
