@@ -69,15 +69,19 @@
         },
         {
           "source": "/en/**",
-          "destination": "/en/index.html"
+          "destination": "/en/index.csr.html"
         },
         {
           "source": "/de/**",
-          "destination": "/de/index.html"
+          "destination": "/de/index.csr.html"
         },
         {
           "source": "/vi/**",
-          "destination": "/vi/index.html"
+          "destination": "/vi/index.csr.html"
+        },
+        {
+          "source": "/**",
+          "destination": "/en/index.csr.html"
         }
       ],
       "trailingSlash": false,
