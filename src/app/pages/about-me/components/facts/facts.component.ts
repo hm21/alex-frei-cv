@@ -10,7 +10,7 @@ import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { filter } from 'rxjs';
 import { ProgressSpinnerComponent } from 'src/app/components/progress-spinner/progress-spinner.component';
 import { FUN_FACTS } from 'src/app/configs/fun-facts';
-import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
+import { CardEffectsDirective } from 'src/app/directives/card-effets/card-effects.directive';
 import { GitManagerService } from 'src/app/services/git-manager/git-manager.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 

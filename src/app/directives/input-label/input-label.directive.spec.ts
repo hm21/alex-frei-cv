@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { ExtendedValidators } from '../utils/extended-form-validators';
+import { ExtendedValidators } from '../../utils/extended-form-validators';
 import { InputLabelDirective } from './input-label.directive';
 
 @Component({

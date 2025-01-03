@@ -14,7 +14,7 @@ import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { distinctUntilChanged, fromEvent, map } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ProgressSpinnerComponent } from 'src/app/components/progress-spinner/progress-spinner.component';
-import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
+import { ImageLoaderDirective } from 'src/app/directives/image-loader/image-loader.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ModalHeaderComponent } from 'src/app/shared/modal/components/modal-header/modal-header.component';
 import { Modal } from 'src/app/shared/modal/modal.base';

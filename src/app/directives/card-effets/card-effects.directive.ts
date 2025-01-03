@@ -13,9 +13,9 @@ import { delay, filter, fromEvent, switchMap, take, tap } from 'rxjs';
 import {
   AnimationElementI,
   CardEffectManagerService,
-} from '../services/card-effect-manager/card-effect-manager.service';
-import { IdManagerService } from '../services/id-manager/id-manager.service';
-import { IS_BROWSER } from '../utils/providers/platform.provider';
+} from '../../services/card-effect-manager/card-effect-manager.service';
+import { IdManagerService } from '../../services/id-manager/id-manager.service';
+import { IS_BROWSER } from '../../utils/providers/platform.provider';
 
 @Directive({
   selector: '[afCardEffects]',

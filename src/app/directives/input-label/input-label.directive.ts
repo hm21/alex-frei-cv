@@ -10,7 +10,7 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NgControl } from '@angular/forms';
 import { distinctUntilChanged, fromEvent, map, merge, startWith } from 'rxjs';
-import { IdManagerService } from '../services/id-manager/id-manager.service';
+import { IdManagerService } from '../../services/id-manager/id-manager.service';
 
 @Directive({
   selector: '[afInputLabel]',

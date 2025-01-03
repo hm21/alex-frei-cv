@@ -12,7 +12,7 @@ import {
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
-import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
+import { CardEffectsDirective } from 'src/app/directives/card-effets/card-effects.directive';
 import { NavItemId, navItems } from 'src/app/layout/header/utils/nav-items';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { ExtendedComponent } from 'src/app/utils/extended-component';

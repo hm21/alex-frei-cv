@@ -1,7 +1,7 @@
 import { Component, input, OnInit, output } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 import { filter, fromEvent, timer } from 'rxjs';
-import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button.directive';
+import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button/modal-close-button.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 import { ExtendedComponent } from 'src/app/utils/extended-component';

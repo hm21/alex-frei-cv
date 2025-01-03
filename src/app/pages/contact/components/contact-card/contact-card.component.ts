@@ -1,6 +1,6 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { CardEffectsDirective } from 'src/app/directives/card-effects.directive';
+import { CardEffectsDirective } from 'src/app/directives/card-effets/card-effects.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 import svgChevronRight from 'src/assets/img/icon/chevron-right.svg';
 

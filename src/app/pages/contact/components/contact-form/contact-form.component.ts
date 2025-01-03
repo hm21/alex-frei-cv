@@ -22,7 +22,7 @@ import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
 } from 'src/app/configs/contact-options';
-import { InputLabelDirective } from 'src/app/directives/input-label.directive';
+import { InputLabelDirective } from 'src/app/directives/input-label/input-label.directive';
 import { ToastService } from 'src/app/shared/toast/toast.service';
 import { ExtendedComponent } from 'src/app/utils/extended-component';
 import { ExtendedValidators } from 'src/app/utils/extended-form-validators';

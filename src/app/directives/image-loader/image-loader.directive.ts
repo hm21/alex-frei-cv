@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, fromEvent, take, takeUntil, tap } from 'rxjs';
-import { ImagePreloaderService } from '../services/image-manager/image-preloader.service';
+import { ImagePreloaderService } from '../../services/image-manager/image-preloader.service';
 
 @Directive({
   selector: '[afImageLoader]',
