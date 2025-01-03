@@ -23,13 +23,13 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
         items: [
           {
             src: 'assets/img/resume/electrical-installer/efz/efz',
-            alt: $localize`EFZ certificate`,
+            alt: $localize`Electrical-Installer certificate`,
             ratio: '1.413',
             backgroundColor: 'white',
           },
           {
             src: 'assets/img/resume/electrical-installer/efz-note/efz-note',
-            alt: $localize`EFZ note`,
+            alt: $localize`Electrical-Installer certificate`,
             ratio: '0.708',
             backgroundColor: 'white',
           },
@@ -41,7 +41,7 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
           },
           {
             src: 'assets/img/resume/electrical-installer/certificate-extended/certificate-extended',
-            alt: $localize`Electrical-Installer certificate extended`,
+            alt: $localize`Electrical-Installer certificate`,
             ratio: '0.708',
             backgroundColor: 'white',
           },
@@ -75,7 +75,7 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
         items: [
           {
             src: 'assets/img/resume/flying-man/flying-man-home/flying-man-home',
-            alt: $localize`Home screen`,
+            alt: $localize`Game screen`,
             ratio: '0.54',
           },
           {
@@ -85,12 +85,12 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
           },
           {
             src: 'assets/img/resume/flying-man/flying-man-game-over/flying-man-game-over',
-            alt: $localize`Game-over screen`,
+            alt: $localize`Game screen`,
             ratio: '0.54',
           },
           {
             src: 'assets/img/resume/flying-man/flying-man-score/flying-man-score',
-            alt: $localize`Score screen`,
+            alt: $localize`Game screen`,
             ratio: '0.54',
           },
         ],

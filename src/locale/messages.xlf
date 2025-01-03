@@ -5,8 +5,8 @@
       <trans-unit id="3820348336004446893" datatype="html">
         <source>Back button</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/back-btn/back-btn.component.html</context>
-          <context context-type="linenumber">4,5</context>
+          <context context-type="sourcefile">src/app/components/back-btn/back-btn.component.ts</context>
+          <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4873644682259066363" datatype="html">
@@ -167,7 +167,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5163146092400769584" datatype="html">
@@ -178,7 +178,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2573931776396641837" datatype="html">
@@ -227,193 +227,270 @@
         <source>March 21, 1995</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2772668468223898232" datatype="html">
         <source>Birthday</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1966987492818924297" datatype="html">
         <source>2001 - 2010</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="494564023046542629" datatype="html">
         <source>Elementary school education</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7144712217485996848" datatype="html">
         <source>2010 - 2014</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7758912282843969586" datatype="html">
         <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2845376991728323788" datatype="html">
+        <source>Show certificate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="537299382316536743" datatype="html">
+        <source>Electrical-Installer certificate</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935438009648073922" datatype="html">
+        <source>Certificate of apprenticeship for Certified Electrical-Installer EFZ.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7699869948741961187" datatype="html">
         <source>2014 - 2015</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1034680067214071440" datatype="html">
         <source>Worked by Brunner &amp; Engler as Electrical-Installer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2287432808592559199" datatype="html">
         <source>March - November 2015</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7589458222524264055" datatype="html">
         <source>Military training</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8824231093838758371" datatype="html">
         <source>Basic training and training to become a “Wachtmeister”.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4969824649958273751" datatype="html">
         <source>2016 - 2020</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="29005198844517419" datatype="html">
         <source>Worked by Elektro Sutter as Electrical-Installer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="529536006459242055" datatype="html">
         <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1296777797052107613" datatype="html">
         <source>2017</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">67</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5297827129625149604" datatype="html">
         <source>Learned programming with Java</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7643796150553263848" datatype="html">
         <source>Program an “Endless Runner” game with libGDX.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7135687405143043394" datatype="html">
+        <source>Show game screenshots</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="771534886820878989" datatype="html">
+        <source>Endless Runner game</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6481307772259569696" datatype="html">
+        <source>Development screenshots of the “Endless Runner” game that I programmed with libGDX.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4747510724872125786" datatype="html">
+        <source>Game screen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1536616651371383953" datatype="html">
         <source>Project “Report-App”</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3305172228304370038" datatype="html">
         <source>Program a simple report app with libGDX for use at the current workplace.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5078177343633834238" datatype="html">
         <source>2018</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6593634431046720544" datatype="html">
         <source>Fiber optic training</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6105716291590614939" datatype="html">
         <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2769517692509899030" datatype="html">
         <source>2018 - 2019</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="135092519774443252" datatype="html">
         <source>Changed “Report-App” from libGDX to Ionic</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9157945684475537355" datatype="html">
         <source>To make the app more professional and simplify the programming of the app, I changed to Ionic 4.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1048684830448412689" datatype="html">
         <source>2020</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5224815218969674863" datatype="html">
         <source>Foundation of WAIO Applications</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">117</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2361532821371688356" datatype="html">
@@ -421,49 +498,85 @@
       Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">53,54</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3434274936212941809" datatype="html">
+        <source>See Full Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="656422260183809064" datatype="html">
         <source>October 24, 2022</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832809533651384093" datatype="html">
         <source>Married</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">127</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1047879433058046950" datatype="html">
         <source>Married with my wife in Vietnam.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6517918695579588424" datatype="html">
+        <source>January 2, 2024</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2536036169835383610" datatype="html">
+        <source>Open source project “pro_image_editor”</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4961929091668136173" datatype="html">
+        <source>Developed one of the best open source image editors for Flutter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7680367944178112353" datatype="html">
         <source>2021 - Today</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8015410393514325898" datatype="html">
         <source>Project “snaptab”</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="873084354537991197" datatype="html">
         <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">142</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1220644583785368760" datatype="html">
@@ -525,7 +638,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">185</context>
+          <context context-type="linenumber">181</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4114955461878444038" datatype="html">
@@ -541,30 +654,30 @@
       <trans-unit id="7819314041543176992" datatype="html">
         <source>Close</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/directives/modal-close-button.directive.ts</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">src/app/directives/modal-close-button/modal-close-button.directive.ts</context>
+          <context context-type="linenumber">10</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="sourcefile">src/app/shared/modal/components/modal-header/modal-header.component.html</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7618870723010461457" datatype="html">
         <source>en</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
-          <context context-type="linenumber">75</context>
+          <context context-type="linenumber">78</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
-          <context context-type="linenumber">119</context>
+          <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
         <source>Open sidemenu</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component.html</context>
-          <context context-type="linenumber">5,6</context>
+          <context context-type="linenumber">4,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3562199946446423606" datatype="html">
@@ -649,14 +762,14 @@
         <source>Alex Frei profile picture</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">37,39</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6442425155039585894" datatype="html">
         <source>Full Stack Developer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">42,44</context>
+          <context context-type="linenumber">43,45</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
@@ -667,7 +780,7 @@
         <source>View GitHub Profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">54,56</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
@@ -678,49 +791,49 @@
         <source>View Facebook Profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">82,84</context>
+          <context context-type="linenumber">67,68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6368393625680537225" datatype="html">
         <source>View X Profile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">129,131</context>
+          <context context-type="linenumber">79,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1687901828466493263" datatype="html">
         <source>Download the CV as a PDF</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">153,154</context>
+          <context context-type="linenumber">89,90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2256581797902573217" datatype="html">
         <source> Download </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">156,157</context>
+          <context context-type="linenumber">92,93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7306768770762854120" datatype="html">
         <source> View source code </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">171,172</context>
+          <context context-type="linenumber">107,108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6601738224471808366" datatype="html">
         <source>Download Successful</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">162</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7918086842988809269" datatype="html">
         <source>Download Failed</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="linenumber">166</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7328564269131534198" datatype="html">
@@ -968,7 +1081,7 @@
         <source>snaptab</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">164,165</context>
+          <context context-type="linenumber">10,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3789001511274969166" datatype="html">
@@ -981,63 +1094,63 @@
       /&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">168,177</context>
+          <context context-type="linenumber">14,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4714295378598704000" datatype="html">
         <source> From project tracking to the completed QR invoice - that&apos;s what <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>snaptab<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> offers you. All important documentation regarding your projects and employees is created, giving you full control at all times! </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">178,182</context>
+          <context context-type="linenumber">24,28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5281048910640512287" datatype="html">
         <source>Company!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="705519754422508972" datatype="html">
         <source>Projects!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2427256133319138583" datatype="html">
         <source>Needs!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6055086305211417287" datatype="html">
         <source>Employees!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1498094916582121722" datatype="html">
         <source>Industry!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1075732990815169061" datatype="html">
         <source>Construction!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8110718739226457864" datatype="html">
         <source>Control!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9033841997412056770" datatype="html">
@@ -1052,35 +1165,35 @@
         <source>Demo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">63,64</context>
+          <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6082171864197428613" datatype="html">
         <source>Install</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">82,83</context>
+          <context context-type="linenumber">68,69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1330330165139018730" datatype="html">
         <source> Technology </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">129,130</context>
+          <context context-type="linenumber">91,92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4523347413979510028" datatype="html">
         <source>YouTube video</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">142,143</context>
+          <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5481284030283031915" datatype="html">
         <source>Website</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">152</context>
+          <context context-type="linenumber">148</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
@@ -1099,35 +1212,35 @@
         <source>Mobile-Store</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">163</context>
+          <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="103220111367852293" datatype="html">
         <source>Frontend</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">183</context>
+          <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5284812472715499591" datatype="html">
         <source>Prototype</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">187</context>
+          <context context-type="linenumber">183</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8693603235657020323" datatype="html">
         <source>Other</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">189</context>
+          <context context-type="linenumber">185</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2115592966120408375" datatype="html">
         <source>Copied</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">237</context>
+          <context context-type="linenumber">208</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7655204782877616451" datatype="html">
@@ -1407,7 +1520,7 @@
         <source>Color Clash Game</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5988661743089198019" datatype="html">
@@ -1432,11 +1545,11 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
-          <context context-type="linenumber">80,81</context>
+          <context context-type="linenumber">23,24</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
-          <context context-type="linenumber">62,63</context>
+          <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="965925007723173656" datatype="html">
@@ -1503,98 +1616,98 @@
         <source>Color</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">213</context>
+          <context context-type="linenumber">217</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984907873245479480" datatype="html">
         <source>Meaning</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">213</context>
+          <context context-type="linenumber">217</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6983516129072435613" datatype="html">
         <source>One</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">269</context>
+          <context context-type="linenumber">273</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
         <source>Two</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">271</context>
+          <context context-type="linenumber">275</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
         <source>Three</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">273</context>
+          <context context-type="linenumber">277</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
         <source>Four</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">275</context>
+          <context context-type="linenumber">279</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
         <source>Five</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">277</context>
+          <context context-type="linenumber">281</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
         <source>Six</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">279</context>
+          <context context-type="linenumber">283</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
         <source>Seven</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">281</context>
+          <context context-type="linenumber">285</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
         <source>Eight</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">283</context>
+          <context context-type="linenumber">287</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
         <source>Nine</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">285</context>
+          <context context-type="linenumber">289</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
         <source>Rectangle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">287</context>
+          <context context-type="linenumber">291</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
         <source>Circle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">289</context>
+          <context context-type="linenumber">293</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
         <source>Triangle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">295</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
@@ -1667,49 +1780,49 @@
         <source>The topic must be between 3 and 20 characters long!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="587771637347115681" datatype="html">
         <source>The topic must be a text and not a number</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5320870651003627043" datatype="html">
         <source>Question</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">6,7</context>
+          <context context-type="linenumber">8,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7841430672042223267" datatype="html">
         <source>Correct</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">12,13</context>
+          <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2398993704199850879" datatype="html">
         <source>Great job! Your answer is correct!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">13,15</context>
+          <context context-type="linenumber">15,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2917314929120683887" datatype="html">
         <source> Continue </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2748884846672363037" datatype="html">
         <source>Wrong</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">25,26</context>
+          <context context-type="linenumber">27,28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6347645514913788737" datatype="html">
@@ -1717,56 +1830,56 @@
             &gt;"/>. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">27,31</context>
+          <context context-type="linenumber">29,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8366540265192565402" datatype="html">
         <source> Okay </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3458530371838111191" datatype="html">
         <source>Option A</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5321019861937126757" datatype="html">
         <source>Option B</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">82</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2715082373615972394" datatype="html">
         <source>Option C</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4783119009559076602" datatype="html">
         <source>Option D</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7016790272435410171" datatype="html">
         <source>Enter</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9178182467454450952" datatype="html">
         <source>Confirm</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2854341657321745191" datatype="html">
@@ -1803,7 +1916,7 @@
         <source>Oops you lose!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
-          <context context-type="linenumber">60,62</context>
+          <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1613601634394055332" datatype="html">
@@ -1811,14 +1924,14 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
-          <context context-type="linenumber">63,69</context>
+          <context context-type="linenumber">6,12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="634279916762654627" datatype="html">
         <source>Waooo you won!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
-          <context context-type="linenumber">42,44</context>
+          <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4718651139256884791" datatype="html">
@@ -1826,25 +1939,25 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
-          <context context-type="linenumber">45,48</context>
+          <context context-type="linenumber">6,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2224234896179261015" datatype="html">
         <source>Quantum Quiz Game</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
         <source>Unknown error occurs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
-          <context context-type="linenumber">160</context>
+          <context context-type="linenumber">168</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
-          <context context-type="linenumber">176</context>
+          <context context-type="linenumber">184</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
@@ -1902,14 +2015,14 @@
         <source>Resume Alex Frei</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7010851194388361735" datatype="html">
         <source>Take a look on the resume from Alex Frei.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2357645764289315007" datatype="html">
