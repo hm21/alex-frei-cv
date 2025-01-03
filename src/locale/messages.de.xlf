@@ -1565,6 +1565,22 @@
           <context context-type="linenumber">118,119</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3434274936212941809" datatype="html">
+        <source>See Full Details</source>
+        <target>Details anzeigen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="656422260183809064" datatype="html">
         <source>October 24, 2022</source>
         <target>24. Oktober 2022</target>
@@ -1579,6 +1595,30 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
           <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6517918695579588424" datatype="html">
+        <source>January 2, 2024</source>
+        <target>02. Januar 2024</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2536036169835383610" datatype="html">
+        <source>Open source project “pro_image_editor”</source>
+        <target>Open-Source-Projekt „pro_image_editor“</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4961929091668136173" datatype="html">
+        <source>Developed one of the best open source image editors for Flutter.</source>
+        <target>Entwickelte einen der besten Open-Source-Bildeditoren für Flutter.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1047879433058046950" datatype="html">
@@ -2208,6 +2248,22 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
           <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="771534886820878989" datatype="html">
+        <source>Endless Runner game</source>
+        <target>„Endless Runner“-Spiel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6481307772259569696" datatype="html">
+        <source>Development screenshots of the “Endless Runner” game that I programmed with libGDX.</source>
+        <target>Entwicklungsscreenshots des „Endless Runner“-Spiels, das ich mit libGDX programmiert habe.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
     </body>
