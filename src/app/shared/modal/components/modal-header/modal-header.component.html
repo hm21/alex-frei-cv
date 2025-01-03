@@ -1,0 +1,21 @@
+<div class="header-action modal-container">
+  <button
+    (click)="closeModal()"
+    i18n-afTooltip
+    afTooltip="Close"
+    afModalCloseButton
+  >
+    <!-- Auto-Generated -->
+  </button>
+</div>
+
+<div class="header-container row modal-container">
+  @if (logo()) {
+    <div class="logo" [innerHTML]="logo() | safe"></div>
+  }
+
+  <div>
+    <h1>{{ title() }}</h1>
+    <h2>{{ subtitle() }}</h2>
+  </div>
+</div>

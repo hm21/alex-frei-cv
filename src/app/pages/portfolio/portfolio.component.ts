@@ -37,42 +37,13 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
 
     /// Ensure there are no scrollbar offset issues when open the modal
     this.modal.onChangeState$.pipe(this.destroyPipe()).subscribe((res) => {
-      if (res === 'open' && this.isScrollbarVisible && !this.screen.xs) {
-        this.elRef.nativeElement.style.marginRight = `${this.scrollbarWidth}px`;
+      if (res === 'open' && this.modal.isScrollbarVisible && !this.screen.xs) {
+        this.elRef.nativeElement.style.marginRight = `${this.modal.scrollbarWidth}px`;
       } else if (res === 'close') {
         this.elRef.nativeElement.style.removeProperty('margin-right');
       }
     });
 
     super.ngOnInit();
-  }
-  private get isScrollbarVisible(): boolean {
-    const element = this.document.body;
-    return (
-      element.scrollHeight > element.clientHeight ||
-      element.scrollWidth > element.clientWidth
-    );
-  }
-  private get scrollbarWidth(): number {
-    // Create a temporary div element
-    const div = this.document.createElement('div');
-
-    // Apply styles to the div to ensure it has a scrollbar
-    div.style.overflow = 'scroll';
-    div.style.width = '100px';
-    div.style.height = '100px';
-    div.style.visibility = 'hidden';
-    div.style.position = 'absolute';
-
-    // Append the div to the body
-    this.document.body.appendChild(div);
-
-    // Measure the scrollbar width
-    const scrollbarWidth = div.offsetWidth - div.clientWidth;
-
-    // Remove the temporary div
-    this.document.body.removeChild(div);
-
-    return scrollbarWidth;
   }
 }

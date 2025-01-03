@@ -1,0 +1,43 @@
+.modal {
+  --modal-header-height: 85px;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1003;
+
+  background-color: var(--page-background-primary);
+
+  will-change: transform, border-radius, box-shadow;
+  scrollbar-gutter: stable both-edges;
+
+  ::-webkit-scrollbar {
+    background-color: var(--page-background-primary);
+  }
+  ::-webkit-scrollbar-track {
+    margin-top: var(--modal-header-height);
+    border-radius: 4px 4px 0 0;
+  }
+  .fill {
+    transition: fill 250ms ease;
+    fill: var(--text-color-primary);
+  }
+  #hero-backdrop {
+    position: absolute !important;
+  }
+}
+
+.modal-container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (max-width: 499px) {
+  .modal-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

@@ -1,10 +1,11 @@
+import { DOCUMENT } from '@angular/common';
 import {
   ComponentRef,
   inject,
   Injectable,
   Injector,
   NgModuleRef,
-  Type
+  Type,
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Modal } from 'src/app/shared/modal/modal.base';
@@ -21,6 +22,9 @@ import { MODAL_VIEW_CONTAINER_REF } from './utils/modal.provider';
  */
 @Injectable()
 export class ModalService {
+  /** Injected reference to the document object. */
+  public document = inject(DOCUMENT);
+
   /**
    * Observable that emits the current state of the modal ('open' or 'close').
    * Can be subscribed to for reacting to modal state changes.
@@ -42,8 +46,10 @@ export class ModalService {
   /** Injected logger service for logging operations. */
   private logger = inject(LoggerService);
 
+  /** Injected flag indicating whether the application is running in a browser environment. */
   private isBrowser = inject(IS_BROWSER);
 
+  /** Reference to the modal container component. */
   private modalContainer!: ComponentRef<ModalComponent>;
 
   constructor() {
@@ -71,7 +77,7 @@ export class ModalService {
   public open<ComponentT extends Modal<DataT>, DataT>(
     component: Type<ComponentT>,
     options?: {
-      data?: any;
+      data?: DataT;
       injector?: Injector;
       ngModuleRef?: NgModuleRef<unknown>;
     },
@@ -114,5 +120,42 @@ export class ModalService {
    */
   public clearAll() {
     this.modalContainer.instance.clearAll();
+  }
+
+  /**
+   * Indicates whether the scrollbar is visible on the body element.
+   */
+  public get isScrollbarVisible(): boolean {
+    const element = this.document.body;
+    return (
+      element.scrollHeight > element.clientHeight ||
+      element.scrollWidth > element.clientWidth
+    );
+  }
+
+  /**
+   * Returns the width of the scrollbar in pixels.
+   */
+  public get scrollbarWidth(): number {
+    // Create a temporary div element
+    const div = this.document.createElement('div');
+
+    // Apply styles to the div to ensure it has a scrollbar
+    div.style.overflow = 'scroll';
+    div.style.width = '100px';
+    div.style.height = '100px';
+    div.style.visibility = 'hidden';
+    div.style.position = 'absolute';
+
+    // Append the div to the body
+    this.document.body.appendChild(div);
+
+    // Measure the scrollbar width
+    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    // Remove the temporary div
+    this.document.body.removeChild(div);
+
+    return scrollbarWidth;
   }
 }

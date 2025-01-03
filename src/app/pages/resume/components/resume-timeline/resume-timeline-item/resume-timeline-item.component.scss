@@ -50,6 +50,48 @@
 .card {
   margin-bottom: 40px;
 }
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+
+  background: transparent;
+  color: var(--color-primary);
+
+  font-size: 0.9rem;
+
+  padding: 0 3px 0 7px;
+  margin: 10px 0 0 0;
+
+  transition:
+    background-color 250ms ease,
+    transform 250ms ease;
+
+  span {
+    height: 24px;
+    transition: transform 250ms ease;
+  }
+  &:hover {
+    background-color: var(--color-primary-50);
+    span {
+      transform: translateX(3px);
+    }
+  }
+  &:focus {
+    background-color: var(--color-primary-100);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+
+  ::ng-deep svg {
+    fill: var(--color-primary);
+  }
+}
 
 h2 {
   font-size: 1.1rem;

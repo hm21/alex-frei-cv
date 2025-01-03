@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RESUME_TIMELINE_ITEMS } from 'src/app/configs/resume-timeline';
-import { ResumeTimelineItem } from '../../utils/resume-interface';
+import { ResumeTimelineItem } from '../../utils/resume.interface';
 import { ResumeTimelineItemComponent } from './resume-timeline-item/resume-timeline-item.component';
 
 @Component({

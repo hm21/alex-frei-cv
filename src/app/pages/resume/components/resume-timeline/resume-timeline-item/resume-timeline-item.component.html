@@ -17,4 +17,11 @@
   <p>
     <ng-content select="[msg]" />
   </p>
+
+  @if (more()) {
+    <button (click)="showMore()">
+      {{ more()?.label }}
+      <span [innerHTML]="chevronRight | safe"></span>
+    </button>
+  }
 </div>

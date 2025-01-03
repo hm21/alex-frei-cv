@@ -1,29 +1,15 @@
-<header #headerRef class="frosted-glass">
-  <div class="header-action container">
-    <button
-      (click)="closeModal()"
-      i18n-afTooltip
-      afTooltip="Close"
-      afModalCloseButton
-    >
-      <!-- Auto-Generated -->
-    </button>
-  </div>
+<af-modal-header
+  (startCloseModal)="modalFadeOut.set(true)"
+  (endCloseModal)="close()"
+  [enableEscapeButton]="!isHeroActive()"
+  [modalAnimationDurationOut]="modalAnimationDurationOut()"
+  [title]="data().title"
+  [subtitle]="data().subtitle"
+  [logo]="data().logo"
+/>
 
-  <div class="header-container row container">
-    @if (data().logo) {
-      <div class="logo" [innerHTML]="data().logo | safe"></div>
-    }
-
-    <div>
-      <h1>{{ data().title }}</h1>
-      <h2>{{ data().subtitle }}</h2>
-    </div>
-  </div>
-</header>
-
-<section #sectionRef [class.open-hero]="openHero()">
-  <div class="body container row">
+<section #sectionRef [class.open-hero]="isHeroActive()">
+  <div class="body modal-container row">
     <aside>
       <ng-container #videoContainer />
 
@@ -50,8 +36,8 @@
               "
               [src]="item.path + (item.isGif ? '.gif' : '_4x.jpeg')"
               [alt]="item.alt"
-              (openHero)="openHero.set(true)"
-              (closeHero)="openHero.set(false)"
+              (openHero)="isHeroActive.set(true)"
+              (closeHero)="isHeroActive.set(false)"
             />
           </picture>
         }

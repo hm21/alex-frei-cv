@@ -11,15 +11,14 @@ import {
   viewChild,
 } from '@angular/core';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
-import { distinctUntilChanged, filter, fromEvent, map, timer } from 'rxjs';
+import { distinctUntilChanged, fromEvent, map } from 'rxjs';
 import { modalAnimation } from 'src/app/animations/modal-animations';
 import { ProgressSpinnerComponent } from 'src/app/components/progress-spinner/progress-spinner.component';
 import { ImageLoaderDirective } from 'src/app/directives/image-loader.directive';
-import { ModalCloseButtonDirective } from 'src/app/directives/modal-close-button.directive';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
+import { ModalHeaderComponent } from 'src/app/shared/modal/components/modal-header/modal-header.component';
 import { Modal } from 'src/app/shared/modal/modal.base';
 import { ToastService } from 'src/app/shared/toast/toast.service';
-import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
 import svgIconCopy from 'src/assets/img/icon/copy.svg';
 import svgIconGlobe from 'src/assets/img/icon/globe.svg';
 import {
@@ -35,16 +34,15 @@ import {
     NgTemplateOutlet,
     NgxImageHeroDirective,
     SafePipe,
-    TooltipDirective,
     ImageLoaderDirective,
-    ModalCloseButtonDirective,
     ProgressSpinnerComponent,
+    ModalHeaderComponent,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
   animations: [modalAnimation],
   host: {
-    '[class.open-hero]': 'openHero()',
+    '[class.open-hero]': 'isHeroActive()',
     '[@modal]': `{
       value: this.modalFadeOut() ? 'out' : 'in',
       params: {
@@ -79,7 +77,9 @@ export class ProjectDetailsComponent
   private sectionRef =
     viewChild.required<ElementRef<HTMLElement>>('sectionRef');
 
-  private headerRef = viewChild.required<ElementRef<HTMLElement>>('headerRef');
+  private headerRef = viewChild.required(ModalHeaderComponent, {
+    read: ElementRef<HTMLElement>,
+  });
 
   /** Reference to the chip template. */
   private chipTemplate = viewChild.required('chipTemplate', {
@@ -94,20 +94,11 @@ export class ProjectDetailsComponent
     read: TemplateRef<{ url: string }>,
   });
 
-  /** Duration of modal animation for fade in. */
-  public readonly modalAnimationDurationIn = signal(500);
-  /** Duration of modal animation for fade out. */
-  public readonly modalAnimationDurationOut = signal(300);
-  /** Flag indicating if modal should fade out. */
-  public modalFadeOut = signal(false);
   /** Flag indicating if video player is loaded. */
   public videoPlayerLoaded = signal(false);
 
-  public openHero = signal(false);
-
   override ngOnInit(): void {
     this.createDetailInfos();
-    this.initKeyListeners();
     this.listenScrollAnimation();
 
     super.ngOnInit();
@@ -201,31 +192,6 @@ export class ProjectDetailsComponent
         });
       });
     }
-  }
-
-  /** Initializes key event listeners. */
-  private initKeyListeners() {
-    fromEvent<KeyboardEvent>(this.document, 'keydown')
-      .pipe(
-        this.destroyPipe(),
-        filter(() => !this.openHero()),
-      )
-      .subscribe((event) => {
-        if (event.key === 'Escape') {
-          this.closeModal();
-        }
-      });
-  }
-
-  /** Closes the modal. */
-  public closeModal() {
-    this.modalFadeOut.set(true);
-
-    timer(this.modalAnimationDurationOut())
-      .pipe(this.destroyPipe())
-      .subscribe(() => {
-        this.close();
-      });
   }
 
   /** Called when the video player is loaded. */

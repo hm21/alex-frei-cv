@@ -1,4 +1,4 @@
-import { SkillItem } from '../pages/resume/utils/resume-interface';
+import { SkillItem } from '../pages/resume/utils/resume.interface';
 
 export const FRONTEND_SKILLS: SkillItem[] = [
   {

@@ -1,4 +1,5 @@
-import { Directive, input, output } from '@angular/core';
+/* eslint-disable @angular-eslint/no-output-on-prefix */
+import { Directive, input, output, signal } from '@angular/core';
 import { ExtendedComponent } from '../../utils/extended-component';
 
 /**
@@ -28,4 +29,15 @@ export abstract class Modal<DataT> extends ExtendedComponent {
   public close() {
     this.onClose.emit();
   }
+
+  /** Duration of modal animation for fade in. */
+  public readonly modalAnimationDurationIn = signal(500);
+  /** Duration of modal animation for fade out. */
+  public readonly modalAnimationDurationOut = signal(300);
+
+  /** Flag indicating if modal should fade out. */
+  public modalFadeOut = signal(false);
+
+  /** Flag indicating if the hero animation is active */
+  public isHeroActive = signal(false);
 }

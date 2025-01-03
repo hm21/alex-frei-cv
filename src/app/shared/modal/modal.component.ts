@@ -17,7 +17,6 @@ import { Modal } from './modal.base';
   standalone: true,
   imports: [],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.scss',
 })
 export class ModalComponent {
   /**
@@ -32,6 +31,7 @@ export class ModalComponent {
     read: ViewContainerRef,
   });
 
+  // eslint-disable-next-line @angular-eslint/no-output-on-prefix
   public onClose = output<string>();
 
   /**
@@ -58,6 +58,7 @@ export class ModalComponent {
       injector: injector,
       ngModuleRef: ngModuleRef,
     });
+    cmp.instance.classList.add('modal');
     cmp.setInput('data', data);
     cmp.instance.onClose.subscribe(() => {
       this.onClose.emit(id);

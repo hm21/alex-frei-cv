@@ -12,7 +12,7 @@ import {
   KNOWLEDGE,
 } from 'src/app/configs/resume-skills';
 import { ScreenService } from 'src/app/services/screen/screen.service';
-import { SkillItem } from '../../utils/resume-interface';
+import { SkillItem } from '../../utils/resume.interface';
 
 @Component({
   selector: 'af-resume-skills',
