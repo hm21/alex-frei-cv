@@ -1,15 +1,15 @@
 import { EventEmitter, Injectable, signal } from '@angular/core';
-import { ToastI } from 'src/app/shared/toast/utils/toast-interfaces';
+import { ToastConfig } from 'src/app/ui/toast/interfaces/toast-interfaces';
 
 @Injectable()
 export class MockToastViewContainerRef {
-  public toastList = signal<ToastI[]>([]);
+  public toastList = signal<ToastConfig[]>([]);
 
   createComponent = jasmine.createSpy('createComponent').and.returnValue({
     instance: {
       closeToast: new EventEmitter(),
       toastList: this.toastList,
-      add: (toast: ToastI) => {
+      add: (toast: ToastConfig) => {
         this.toastList.update((el) => {
           el.push(toast);
           return el;

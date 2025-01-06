@@ -11,15 +11,15 @@ import {
 import { DomSanitizer } from '@angular/platform-browser';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import svgAboutMe from 'src/assets/img/icon/about-me.svg';
 import svgContact from 'src/assets/img/icon/contact.svg';
 import svgPortfolio from 'src/assets/img/icon/portfolio.svg';
 import svgRelax from 'src/assets/img/icon/relax.svg';
 import svgResume from 'src/assets/img/icon/resume.svg';
+import { NAV_ITEMS } from '../../shared/constants/nav-items.constants';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
-import { navItems } from '../header/utils/nav-items';
 
 @Component({
   selector: 'af-side-navbar',
@@ -72,7 +72,7 @@ export class SideNavbarComponent
    * @private
    */
   private createNavItems() {
-    navItems.forEach((el) => {
+    NAV_ITEMS.forEach((el) => {
       switch (el.id) {
         case 'aboutMe':
           el.icon = this.sanitizer.bypassSecurityTrustHtml(svgAboutMe);

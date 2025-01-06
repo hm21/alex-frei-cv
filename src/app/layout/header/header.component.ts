@@ -5,7 +5,7 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { ProfileBannerComponent } from '../profile-banner/profile-banner.component';
 import { SideNavbarComponent } from '../side-navbar/side-navbar.component';
 import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';

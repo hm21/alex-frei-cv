@@ -18,13 +18,13 @@ import {
 } from 'ngx-quicklink';
 import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
 import { routes } from 'src/app/app.routes';
-import { provideLogger } from 'src/app/services/logger/logger-configs.provider';
-import { provideModalTesting } from 'src/app/shared/modal/utils/modal-test.provider';
-import { provideToastTesting } from 'src/app/shared/toast/utils/toast-test.provider';
-import { provideTooltipTesting } from 'src/app/shared/tooltip/utils/tooltip-test.provider';
-import { provideEndpoints } from 'src/app/utils/providers/endpoints/endpoints.provider';
-import { providePlatformDetection } from 'src/app/utils/providers/platform.provider';
-import '../app/utils/extensions/extensions';
+import { provideEndpoints } from 'src/app/core/providers/endpoints/endpoints.provider';
+import { providePlatformDetection } from 'src/app/core/providers/platform.provider';
+import { provideLogger } from 'src/app/core/services/logger/logger-configs.provider';
+import { provideModalTesting } from 'src/app/ui/modal/utils/modal-test.provider';
+import { provideToastTesting } from 'src/app/ui/toast/providers/toast-test.provider';
+import { provideTooltipTesting } from 'src/app/ui/tooltip/providers/tooltip-test.provider';
+import '../app/extensions/extensions.loader';
 
 @NgModule({
   providers: [

@@ -6,8 +6,8 @@ import {
   signal,
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
-import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
+import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import svgGlobalizationIcon from 'src/assets/img/icon/globalization.svg';
 
 @Component({

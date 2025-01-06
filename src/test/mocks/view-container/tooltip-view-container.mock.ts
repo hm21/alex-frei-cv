@@ -1,8 +1,6 @@
 import { Injectable, signal } from '@angular/core';
-import {
-  TooltipBase,
-  TooltipItem,
-} from 'src/app/shared/tooltip/utils/tooltip.interface';
+import { TooltipBase, TooltipItem } from 'src/app/ui/tooltip/interfaces/tooltip.interface';
+
 
 @Injectable()
 export class MockTooltipViewContainerRef {

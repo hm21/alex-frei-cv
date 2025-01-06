@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { relaxRoutes } from './pages/relax/relax.routes';
+import { relaxRoutes } from './features/relax/relax.routes';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/about-me' },
@@ -7,7 +7,7 @@ export const routes: Routes = [
     path: 'about-me',
     data: { animation: 'AboutMePage' },
     loadComponent: () =>
-      import('./pages/about-me/about-me.component').then(
+      import('./features/about-me/about-me.component').then(
         (m) => m.AboutMeComponent,
       ),
   },
@@ -15,13 +15,13 @@ export const routes: Routes = [
     path: 'resume',
     data: { animation: 'ResumePage' },
     loadComponent: () =>
-      import('./pages/resume/resume.component').then((m) => m.ResumeComponent),
+      import('./features/resume/resume.component').then((m) => m.ResumeComponent),
   },
   {
     path: 'portfolio',
     data: { animation: 'PortfolioPage' },
     loadComponent: () =>
-      import('./pages/portfolio/portfolio.component').then(
+      import('./features/portfolio/portfolio.component').then(
         (m) => m.PortfolioComponent,
       ),
   },
@@ -30,7 +30,7 @@ export const routes: Routes = [
     path: 'contact',
     data: { animation: 'ContactPage' },
     loadComponent: () =>
-      import('./pages/contact/contact.component').then(
+      import('./features/contact/contact.component').then(
         (m) => m.ContactComponent,
       ),
   },

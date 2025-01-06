@@ -5,7 +5,7 @@ import {
   model
 } from '@angular/core';
 import { Subject, fromEvent, take, takeUntil } from 'rxjs';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { HeaderComponent } from '../../header.component';
 
 @Component({

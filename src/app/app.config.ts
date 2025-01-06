@@ -1,36 +1,36 @@
 import {
-  ApplicationConfig,
-  isDevMode,
-  provideExperimentalZonelessChangeDetection,
+    ApplicationConfig,
+    isDevMode,
+    provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import {
-  provideRouter,
-  withEnabledBlockingInitialNavigation,
-  withInMemoryScrolling,
-  withPreloading,
+    provideRouter,
+    withEnabledBlockingInitialNavigation,
+    withInMemoryScrolling,
+    withPreloading,
 } from '@angular/router';
 
 import {
-  provideHttpClient,
-  withFetch,
-  withInterceptors,
+    provideHttpClient,
+    withFetch,
+    withInterceptors,
 } from '@angular/common/http';
 import {
-  provideClientHydration,
-  withEventReplay,
-  withIncrementalHydration
+    provideClientHydration,
+    withEventReplay,
+    withIncrementalHydration
 } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideNgxCountAnimations } from 'ngx-count-animation';
 import { QuicklinkStrategy, quicklinkProviders } from 'ngx-quicklink';
 import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
-import '../app/utils/extensions/extensions';
 import { routes } from './app.routes';
-import { provideLogger } from './services/logger/logger-configs.provider';
-import { globalHttpErrorHandlerInterceptor } from './utils/interceptor/global-http-error-handler.interceptor';
-import { provideEndpoints } from './utils/providers/endpoints/endpoints.provider';
-import { providePlatformDetection } from './utils/providers/platform.provider';
+import { globalHttpErrorHandlerInterceptor } from './core/interceptor/global-http-error-handler.interceptor';
+import { provideEndpoints } from './core/providers/endpoints/endpoints.provider';
+import { providePlatformDetection } from './core/providers/platform.provider';
+import { provideLogger } from './core/services/logger/logger-configs.provider';
+import './extensions/extensions.loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [

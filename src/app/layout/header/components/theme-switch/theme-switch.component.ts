@@ -5,9 +5,9 @@ import {
   inject,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ThemeManagerService } from 'src/app/services/theme-manager/theme-manager.service';
-import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ThemeManagerService } from 'src/app/core/services/theme-manager/theme-manager.service';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
+import { TooltipDirective } from 'src/app/ui/tooltip/directives/tooltip.directive';
 
 @Component({
   selector: 'af-theme-switch',

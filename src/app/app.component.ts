@@ -8,18 +8,18 @@ import {
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { timer } from 'rxjs';
-import { routeAnimation } from './animations/route-animations';
+import { BrowserDetectionService } from './core/services/browser/browser-detection.service';
+import { ImagePreloaderService } from './core/services/image-manager/image-preloader.service';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
-import { BrowserDetectionService } from './services/browser/browser-detection.service';
-import { ImagePreloaderService } from './services/image-manager/image-preloader.service';
-import { ModalService } from './shared/modal/modal.service';
-import { provideModal } from './shared/modal/utils/modal.provider';
-import { ToastService } from './shared/toast/toast.service';
-import { provideToast } from './shared/toast/utils/toast.provider';
-import { TooltipService } from './shared/tooltip/tooltip.service';
-import { provideTooltip } from './shared/tooltip/utils/tooltip.provider';
-import { ExtendedComponent } from './utils/extended-component';
+import { routeAnimation } from './shared/animations/route-animations';
+import { ExtendedComponent } from './shared/components/extended-component';
+import { ModalService } from './ui/modal/modal.service';
+import { provideModal } from './ui/modal/utils/modal.provider';
+import { provideToast } from './ui/toast/providers/toast.provider';
+import { ToastService } from './ui/toast/services/toast.service';
+import { provideTooltip } from './ui/tooltip/providers/tooltip.provider';
+import { TooltipService } from './ui/tooltip/services/tooltip.service';
 
 @Component({
   selector: 'af-root',

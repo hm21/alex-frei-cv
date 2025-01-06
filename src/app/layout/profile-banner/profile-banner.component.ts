@@ -12,17 +12,17 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { debounceTime, fromEvent } from 'rxjs';
-import { SafePipe } from 'src/app/pipes/safe.pipe';
-import { ToastService } from 'src/app/shared/toast/toast.service';
-import { TooltipDirective } from 'src/app/shared/tooltip/tooltip.directive';
-import { ExtendedComponent } from 'src/app/utils/extended-component';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
+import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
+import { ToastService } from 'src/app/ui/toast/services/toast.service';
+import { TooltipDirective } from 'src/app/ui/tooltip/directives/tooltip.directive';
 import svgIconFacebook from 'src/assets/img/icon/social/facebook.svg';
 import svgIconGithub from 'src/assets/img/icon/social/github.svg';
 import svgIconX from 'src/assets/img/icon/social/x.svg';
+import { NAV_ITEMS } from '../../shared/constants/nav-items.constants';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
 import { HeaderComponent } from '../header/header.component';
-import { navItems } from '../header/utils/nav-items';
 
 @Component({
   selector: 'af-profile-banner',
@@ -111,7 +111,7 @@ export class ProfileBannerComponent
    * @private
    */
   private createNavItems() {
-    navItems.forEach((el) => {
+    NAV_ITEMS.forEach((el) => {
       this.navItemsRef().createEmbeddedView(this.navItem(), el);
     });
   }
