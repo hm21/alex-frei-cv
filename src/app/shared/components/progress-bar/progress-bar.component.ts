@@ -69,7 +69,8 @@ export class ProgressBarComponent
         map(() => {
           const rect = barElement.getBoundingClientRect();
           const windowHeight =
-            window.innerHeight || this.document.documentElement.clientHeight;
+            this.window?.innerHeight ||
+            this.document.documentElement.clientHeight;
           const isVisible = rect.top < windowHeight;
           return isVisible ? this.progress() : 0;
         }),

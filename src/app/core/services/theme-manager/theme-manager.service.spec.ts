@@ -45,4 +45,22 @@ describe('ThemeManagerService', () => {
       'light',
     );
   });
+
+  it('should set theme to light mode', () => {
+    service.setLightMode();
+
+    expect(documentMock.documentElement.setAttribute).toHaveBeenCalledWith(
+      'data-theme',
+      'light',
+    );
+  });
+
+  it('should set theme to dark mode', () => {
+    service.setDarkMode();
+
+    expect(documentMock.documentElement.setAttribute).toHaveBeenCalledWith(
+      'data-theme',
+      'dark',
+    );
+  });
 });

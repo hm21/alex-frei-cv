@@ -99,7 +99,7 @@ export class ProfileBannerComponent
    */
   private listenScreenResize() {
     if (!this.isBrowser) return;
-    fromEvent(window, 'resize')
+    fromEvent(this.window, 'resize')
       .pipe(this.destroyPipe(), debounceTime(50))
       .subscribe(() => {
         this.checkMobileMenuItems();
@@ -123,7 +123,7 @@ export class ProfileBannerComponent
   private checkMobileMenuItems() {
     if (!this.isBrowser) return;
 
-    if (window.innerWidth <= 1024 || window.innerHeight <= 489) {
+    if (this.window.innerWidth <= 1024 || this.window.innerHeight <= 489) {
       if (this.navItemsRef().length <= 0) this.createNavItems();
       if (this.languageContainerRef().length === 0) {
         this.languageContainerRef().createComponent(LanguageSwitchComponent);
@@ -162,7 +162,7 @@ export class ProfileBannerComponent
           this.toast.success($localize`Download Successful`);
         },
         error: (err) => {
-          this.logger.error(err);
+          this.logger.error(err).print();
           this.toast.error($localize`Download Failed`);
         },
       });

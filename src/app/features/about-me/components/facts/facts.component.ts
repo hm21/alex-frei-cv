@@ -30,7 +30,7 @@ import { CardEffectsDirective } from 'src/app/shared/directives/card-effects/car
 export class FactsComponent extends ExtendedComponent implements OnInit {
   /** Service for managing Git-related operations. */
   private gitManager = inject(GitManagerService);
-  
+
   /** Array of facts with their titles, values, and icons. */
   public items = signal(FUN_FACTS);
 
@@ -40,7 +40,7 @@ export class FactsComponent extends ExtendedComponent implements OnInit {
   }
 
   /** Retrieves the current Git commit count asynchronously. */
-  private async getCommitCount() {
+  private getCommitCount() {
     this.gitManager
       .getCommitCount()
       .pipe(
@@ -48,8 +48,6 @@ export class FactsComponent extends ExtendedComponent implements OnInit {
         filter((count) => !!count),
       )
       .subscribe((count) => {
-        if (!count) return;
-
         const i = this.items().findIndex((el) => el.id === 'git-commits');
         if (i >= 0) {
           this.items.update((items) => {

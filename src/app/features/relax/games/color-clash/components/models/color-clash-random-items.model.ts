@@ -2,12 +2,13 @@ import svgCircle from 'src/assets/img/game/color-clash/circle.svg';
 import svgRectangle from 'src/assets/img/game/color-clash/rectangle.svg';
 import svgTriangle from 'src/assets/img/game/color-clash/triangle.svg';
 import { ColorClashRandomItem } from '../../interfaces/color-clash-random-item.interface';
+import { ColorClashItemId } from '../types/color-clash.types';
 
 export class ColorClashRandomItems {
   // SVG definitions for different shapes
-  private readonly rectangleSVG = { id: 'rect', svg: svgRectangle };
-  private readonly triangleSVG = { id: 'triangle', svg: svgTriangle };
-  private readonly circleSVG = { id: 'circle', svg: svgCircle };
+  private readonly rectangleSVG = { id: 'rect' as ColorClashItemId, svg: svgRectangle };
+  private readonly triangleSVG = { id: 'triangle' as ColorClashItemId, svg: svgTriangle };
+  private readonly circleSVG = { id: 'circle' as ColorClashItemId, svg: svgCircle };
   /**
    * Inserts an element at a specific position in an array.
    * @param array - The array to insert the element into.
@@ -41,7 +42,7 @@ export class ColorClashRandomItems {
 
       if (items.findIndex((el) => el.id === randomNumber.toString()) < 0) {
         items.push({
-          id: randomNumber.toString(),
+          id: randomNumber.toString() as ColorClashItemId,
           content: randomNumber,
         });
       }

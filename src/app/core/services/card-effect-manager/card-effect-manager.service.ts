@@ -10,7 +10,7 @@ import {
   switchMap,
   takeUntil,
   tap,
-  timer
+  timer,
 } from 'rxjs';
 import { ScreenService } from '../screen/screen.service';
 
@@ -22,8 +22,8 @@ export class CardEffectManagerService {
   public activeAnimation$ = new BehaviorSubject(false);
 
   public readonly delayBetweenAnimations = 1_500;
-  private readonly minRandomDelay = 6_000;
-  private readonly maxRandomDelay = 10_000;
+  private minRandomDelay = 6_000;
+  private maxRandomDelay = 10_000;
   private lastTriggeredId = '';
 
   private animationItems: AnimationElementI[] = [];

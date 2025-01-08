@@ -3,7 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
-  signal,
+  signal
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -72,6 +72,7 @@ export class LanguageSwitchComponent
    */
   public showLanguage = signal(false);
 
+
   /**
    * The default language ID.
    */
@@ -139,13 +140,13 @@ export class LanguageSwitchComponent
   public changeLanguage(language: Language) {
     this.showLanguage.set(false);
 
-    let url = window.location.href;
+    let url = this.window.location.href;
     if (!url.endsWith('/')) url += '/';
-    url = window.location.href.replace(
+    url = this.window.location.href.replace(
       `/${this.activeLanguage().iso2}/`,
       `/${language.iso2}/`,
     );
-    window.location.href = url;
+    this.window.location.href = url;
   }
 }
 

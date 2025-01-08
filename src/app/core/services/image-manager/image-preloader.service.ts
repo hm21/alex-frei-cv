@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { CONTACT_OPTIONS } from 'src/app/shared/constants/contact-options.constants';
 import { GAMES } from 'src/app/shared/constants/games.constants';
+import { WINDOW } from '../../providers/window.provider';
 import { LoggerService } from '../logger/logger.service';
 import { ImageFormatSupportService } from './image-format-support.service';
 
@@ -10,6 +11,7 @@ import { ImageFormatSupportService } from './image-format-support.service';
 export class ImagePreloaderService {
   private imageFormatSupport = inject(ImageFormatSupportService);
   private logger = inject(LoggerService);
+  private window = inject(WINDOW);
 
   private imageFormat = 'jpeg';
   private readonly enableLogs = false;
@@ -48,7 +50,7 @@ export class ImagePreloaderService {
    * @returns {number} The device pixel ratio.
    */
   private get devicePixelRatio(): number {
-    return Math.min(4, Math.max(1, window.devicePixelRatio.ceil()));
+    return Math.min(4, Math.max(1, this.window.devicePixelRatio.ceil()));
   }
 
   /**

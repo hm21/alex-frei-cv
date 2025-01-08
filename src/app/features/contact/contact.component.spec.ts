@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { runPageMetaTests } from 'src/test/utils/page-meta-test.helper';
 import { ContactComponent } from './contact.component';
 
 describe('ContactComponent', () => {
@@ -20,4 +21,6 @@ describe('ContactComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  runPageMetaTests(() => component);
 });

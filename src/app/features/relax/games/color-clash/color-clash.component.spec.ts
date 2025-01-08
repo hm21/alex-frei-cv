@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { runPageMetaTests } from 'src/test/utils/page-meta-test.helper';
 import { ColorClashComponent } from './color-clash.component';
 import { ColorClashManagerService } from './services/color-clash-manager.service';
 
@@ -22,4 +23,6 @@ describe('ColorClashComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  runPageMetaTests(() => component);
 });

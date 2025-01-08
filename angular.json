@@ -120,6 +120,12 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverageExclude": [
+              "src/app/features/relax/relax.routes.ts",
+              "src/app/core/providers/**/*.*",
+              "src/app/core/interceptor/global-http-error-handler.interceptor.ts",
+              "src/test/**/*.*"
+            ],
             "polyfills": [
               "@angular/localize/init"
             ],

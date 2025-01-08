@@ -15,6 +15,14 @@ export const globalHttpErrorHandlerInterceptor: HttpInterceptorFn = (
 ) => {
   const logger = inject(LoggerService);
 
+  // For this CV demo, no token is required.
+  // If a token is needed in the future, uncomment and modify the following lines:
+  // const clonedRequest = req.clone({
+  //   setHeaders: {
+  //     Authorization: `Bearer [the token]`,
+  //   },
+  // });
+
   return next(req).pipe(
     retry({
       count: 3,

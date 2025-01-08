@@ -11,7 +11,10 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, filter, fromEvent, switchMap, take, tap } from 'rxjs';
 import { IS_BROWSER } from 'src/app/core/providers/platform.provider';
-import { AnimationElementI, CardEffectManagerService } from 'src/app/core/services/card-effect-manager/card-effect-manager.service';
+import {
+  AnimationElementI,
+  CardEffectManagerService,
+} from 'src/app/core/services/card-effect-manager/card-effect-manager.service';
 import { IdManagerService } from 'src/app/core/services/id-manager/id-manager.service';
 
 @Directive({

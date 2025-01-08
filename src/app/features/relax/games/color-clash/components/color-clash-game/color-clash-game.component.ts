@@ -35,6 +35,7 @@ import { ColorClashGameItem } from '../../interfaces/color-clash-game-item.inter
 import { ColorClashManagerService } from '../../services/color-clash-manager.service';
 import { ColorClashGameButton } from '../models/color-clash-button.model';
 import { ColorClashRandomItems } from '../models/color-clash-random-items.model';
+import { ColorClashItemId } from '../types/color-clash.types';
 
 @Component({
   selector: 'af-color-clash-game',
@@ -267,7 +268,7 @@ export class ColorClashGameComponent
    * @returns The meaning of the item.
    * @throws Error if the meaning for the ID is not found.
    */
-  private getMeaning(id: string) {
+  private getMeaning(id: ColorClashItemId) {
     switch (id) {
       case '1':
         return $localize`One`;

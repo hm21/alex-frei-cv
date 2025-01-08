@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ColorClashManagerService } from '../../services/color-clash-manager.service';
+import { ColorClashItemId } from '../types/color-clash.types';
 import { ColorClashGameComponent } from './color-clash-game.component';
 
 describe('ColorClashGameComponent', () => {
@@ -49,7 +50,9 @@ describe('ColorClashGameComponent', () => {
 
     await new Promise((res) => setTimeout(() => res(null), 1001));
 
-    expect(component.timeBanner()!.nativeElement.innerHTML).not.toBe(initialTime);
+    expect(component.timeBanner()!.nativeElement.innerHTML).not.toBe(
+      initialTime,
+    );
     component.ngOnDestroy();
   });
 
@@ -58,5 +61,58 @@ describe('ColorClashGameComponent', () => {
     spyOn(localStorage, 'setItem');
     component['setGameFinish']();
     expect(localStorage.setItem).toHaveBeenCalled();
+  });
+
+  it('should return for every id a meaning', () => {
+    (
+      [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        'rect',
+        'circle',
+        'triangle',
+      ] as ColorClashItemId[]
+    ).forEach((id) => {
+      expect(component['getMeaning'](id).length).toBeGreaterThanOrEqual(1);
+    });
+  });
+  it("should throw error when meaning didn't exists", () => {
+    expect(()=> component['getMeaning']('unknown' as ColorClashItemId)).toThrowError();
+  });
+
+  describe('Keyboard shortcuts', () => {
+    it('should listen to shortcut keys and trigger buttonTap', () => {
+      spyOn(component, 'buttonTap');
+      const event = new KeyboardEvent('keydown', { key: 's' });
+      document.dispatchEvent(event);
+      expect(component.buttonTap).toHaveBeenCalled();
+    });
+
+    it('should not trigger buttonTap for non-shortcut keys', () => {
+      spyOn(component, 'buttonTap');
+      const event = new KeyboardEvent('keydown', { key: 'a' });
+      document.dispatchEvent(event);
+      expect(component.buttonTap).not.toHaveBeenCalled();
+    });
+
+    it('should map shortcut keys to correct button index', () => {
+      const keyMap = { s: 0, d: 1, f: 2, j: 3, k: 4, l: 5 };
+      spyOn(component, 'buttonTap');
+      Object.keys(keyMap).forEach((key) => {
+        const event = new KeyboardEvent('keydown', { key });
+        document.dispatchEvent(event);
+        expect(component.buttonTap).toHaveBeenCalledWith(
+          component['gameButtons'][keyMap[key as 's']].id,
+          component['gameButtons'][keyMap[key as 's']].color,
+        );
+      });
+    });
   });
 });

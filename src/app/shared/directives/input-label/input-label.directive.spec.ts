@@ -17,6 +17,7 @@ import { InputLabelDirective } from './input-label.directive';
       />
     </form>
   `,
+  // eslint-disable-next-line @angular-eslint/prefer-standalone
   standalone: false,
 })
 class TestComponent {

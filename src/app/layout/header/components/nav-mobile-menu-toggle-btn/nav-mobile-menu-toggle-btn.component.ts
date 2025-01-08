@@ -2,7 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
-  model
+  model,
 } from '@angular/core';
 import { Subject, fromEvent, take, takeUntil } from 'rxjs';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';

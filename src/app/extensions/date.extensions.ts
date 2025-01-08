@@ -120,7 +120,7 @@ Object.defineProperty(Date.prototype, 'day', {
   enumerable: false,
   configurable: true,
 });
-Object.defineProperty(Date.prototype, 'hour', {
+Object.defineProperty(Date.prototype, 'hours', {
   get: function () {
     return this.getHours();
   },

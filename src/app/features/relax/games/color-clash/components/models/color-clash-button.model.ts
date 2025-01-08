@@ -1,4 +1,5 @@
 import { SafeHtml } from '@angular/platform-browser';
+import { ColorClashItemId } from '../types/color-clash.types';
 
 /**
  * Represents a button in the Color Clash game.
@@ -7,7 +8,7 @@ export class ColorClashGameButton {
   content: SafeHtml;
   color: string;
   shortcut: string;
-  id: string;
+  id: ColorClashItemId;
 
   constructor({
     content,
@@ -18,7 +19,7 @@ export class ColorClashGameButton {
     content: SafeHtml;
     color: string;
     buttonIndex: number;
-    id: string;
+    id: ColorClashItemId;
   }) {
     this.id = id;
     this.color = color;

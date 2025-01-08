@@ -1,24 +1,24 @@
 import {
-    ApplicationConfig,
-    isDevMode,
-    provideExperimentalZonelessChangeDetection,
+  ApplicationConfig,
+  isDevMode,
+  provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import {
-    provideRouter,
-    withEnabledBlockingInitialNavigation,
-    withInMemoryScrolling,
-    withPreloading,
+  provideRouter,
+  withEnabledBlockingInitialNavigation,
+  withInMemoryScrolling,
+  withPreloading,
 } from '@angular/router';
 
 import {
-    provideHttpClient,
-    withFetch,
-    withInterceptors,
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
 } from '@angular/common/http';
 import {
-    provideClientHydration,
-    withEventReplay,
-    withIncrementalHydration
+  provideClientHydration,
+  withEventReplay,
+  withIncrementalHydration,
 } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideServiceWorker } from '@angular/service-worker';
@@ -29,11 +29,13 @@ import { routes } from './app.routes';
 import { globalHttpErrorHandlerInterceptor } from './core/interceptor/global-http-error-handler.interceptor';
 import { provideEndpoints } from './core/providers/endpoints/endpoints.provider';
 import { providePlatformDetection } from './core/providers/platform.provider';
+import { provideWindow } from './core/providers/window.provider';
 import { provideLogger } from './core/services/logger/logger-configs.provider';
 import './extensions/extensions.loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideWindow(),
     provideLogger(),
     provideEndpoints(),
     providePlatformDetection(),

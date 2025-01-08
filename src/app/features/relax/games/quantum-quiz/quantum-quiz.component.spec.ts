@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { runPageMetaTests } from 'src/test/utils/page-meta-test.helper';
 import { QuantumQuizComponent } from './quantum-quiz.component';
 import { QuizManagerService } from './services/quiz-manager.service';
 
@@ -22,4 +23,6 @@ describe('QuantumQuizComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  runPageMetaTests(() => component);
 });

@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { HttpTestingController } from '@angular/common/http/testing';
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -108,15 +109,143 @@ describe('ContactFormComponent', () => {
     component.submit$.next();
 
     const req = httpMock.expectOne(endpoints.contactMessage);
-    req.flush(
-      'Blacklist',
-      { status: 400, statusText: 'Bad Request' },
-    );
+    req.flush('Blacklist', { status: 400, statusText: 'Bad Request' });
 
     expect(component.formState()).toEqual({
       state: 'error',
       message: jasmine.stringMatching(/Blacklist/),
       canSend: false,
     });
+  });
+  it('should handle blacklist error correctly', () => {
+    const errorResponse = new HttpErrorResponse({
+      error: 'Blacklist',
+      status: 400,
+      statusText: 'Bad Request',
+    });
+
+    component['handleError'](errorResponse).subscribe((res) => {
+      expect(res).toBe('error');
+      expect(component.formState()).toEqual({
+        state: 'error',
+        message: jasmine.stringMatching(/Blacklist/),
+        canSend: false,
+      });
+    });
+  });
+
+  it('should handle 400 error correctly', () => {
+    const errorResponse = new HttpErrorResponse({
+      status: 400,
+      statusText: 'Bad Request',
+    });
+
+    spyOn(component['toast'], 'error');
+
+    component['handleError'](errorResponse).subscribe((res) => {
+      expect(res).toBe('error');
+      expect(component.formState()).toEqual({
+        state: '',
+        canSend: true,
+      });
+      expect(component['toast'].error).toHaveBeenCalledWith(
+        CONTACT_MESSAGES.error400,
+      );
+    });
+  });
+
+  it('should handle 403 error correctly', () => {
+    const errorResponse = new HttpErrorResponse({
+      status: 403,
+      statusText: 'Forbidden',
+    });
+
+    spyOn(component['toast'], 'error');
+
+    component['handleError'](errorResponse).subscribe((res) => {
+      expect(res).toBe('error');
+      expect(component.formState()).toEqual({
+        state: '',
+        canSend: true,
+      });
+      expect(component['toast'].error).toHaveBeenCalledWith(
+        CONTACT_MESSAGES.error403,
+      );
+    });
+  });
+
+  it('should handle unknown error correctly', () => {
+    const errorResponse = new HttpErrorResponse({
+      status: 500,
+      statusText: 'Internal Server Error',
+    });
+
+    spyOn(component['toast'], 'error');
+
+    component['handleError'](errorResponse).subscribe((res) => {
+      expect(res).toBe('error');
+      expect(component.formState()).toEqual({
+        state: '',
+        canSend: true,
+      });
+      expect(component['toast'].error).toHaveBeenCalledWith(
+        CONTACT_MESSAGES.unknownError,
+      );
+    });
+  });
+
+  it('should disable form and set error state if sendTries >= 10', () => {
+    component['sendTries'] = 10;
+    component.form.setValue({
+      givenName: 'John',
+      familyName: 'Doe',
+      message: 'Hello!',
+      email: 'john.doe@example.com',
+    });
+    component['updateFormState'](component.form);
+    expect(component.form.disabled).toBeTrue();
+    expect(component.formState()).toEqual({
+      state: 'error',
+      message: CONTACT_MESSAGES.tooManyAttempts,
+      canSend: false,
+    });
+  });
+
+  it('should not change form state if form is valid and sendTries < 10', () => {
+    component['sendTries'] = 5;
+    component.form.setValue({
+      givenName: 'John',
+      familyName: 'Doe',
+      message: 'Hello!',
+      email: 'john.doe@example.com',
+    });
+    component['updateFormState'](component.form);
+    expect(component.formState()).toEqual({ state: '', canSend: true });
+  });
+  it('should reset form state to default when form value changes and state is error', () => {
+    component.formState.set({ state: 'error', canSend: false });
+    component.form.controls.givenName.setValue('Jane');
+    fixture.detectChanges();
+    expect(component.formState()).toEqual({ state: '', canSend: true });
+  });
+
+  it('should call listenFormSubmit on ngOnInit', () => {
+    spyOn<any>(component, 'listenFormSubmit');
+    component.ngOnInit();
+    expect(component['listenFormSubmit']).toHaveBeenCalled();
+  });
+
+  it('should mark all fields as touched and show warning toast if form is invalid', () => {
+    spyOn(component['toast'], 'warning');
+    component.form.setValue({
+      givenName: '',
+      familyName: '',
+      message: '',
+      email: 'invalid-email',
+    });
+    component['updateFormState'](component.form);
+    expect(component.form.touched).toBeTrue();
+    expect(component['toast'].warning).toHaveBeenCalled();
+    expect(component.formState()).toEqual({ state: '', canSend: true });
   });
 });
