@@ -285,9 +285,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="491009254733628613" datatype="html">
-        <source> What I do
-</source>
-        <target>Was ich mache</target>
+        <source> What I do</source>
+        <target>Was ich kann</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.html</context>
           <context context-type="linenumber">8,10</context>
@@ -1803,7 +1802,7 @@
       </trans-unit>
       <trans-unit id="1188841585502022097" datatype="html">
         <source>Oops you lose!</source>
-        <target>Ups, du hast verloren!</target>
+        <target>Ups, Sie haben verloren!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">3,5</context>
@@ -2011,9 +2010,8 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         </context-group>
       </trans-unit>
       <trans-unit id="1450372883954287287" datatype="html">
-        <source> Work with
-</source>
-        <target>Arbeite mit</target>
+        <source> Work with</source>
+        <target>Mit was ich arbeite</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
           <context context-type="linenumber">8,10</context>

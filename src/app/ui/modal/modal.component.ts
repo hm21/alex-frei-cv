@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   ComponentRef,
   inject,
@@ -17,6 +18,7 @@ import { Modal } from './modal.base';
   standalone: true,
   imports: [],
   templateUrl: './modal.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ModalComponent {
   /**

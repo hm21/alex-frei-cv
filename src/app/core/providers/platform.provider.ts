@@ -1,4 +1,4 @@
-import { isPlatformBrowser, isPlatformServer, } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { InjectionToken, PLATFORM_ID, Provider } from '@angular/core';
 
 export const IS_BROWSER = new InjectionToken<boolean>('isBrowser');

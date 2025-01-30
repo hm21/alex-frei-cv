@@ -1,9 +1,7 @@
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
-  inject,
-  signal,
+  signal
 } from '@angular/core';
 import { TooltipItemComponent } from './components/tooltip-item/tooltip-item.component';
 import { TooltipBase, TooltipItem } from './interfaces/tooltip.interface';
@@ -11,14 +9,12 @@ import { TooltipBase, TooltipItem } from './interfaces/tooltip.interface';
 @Component({
   selector: 'af-tooltip',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [TooltipItemComponent],
   templateUrl: './tooltip.component.html',
   styleUrl: './tooltip.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TooltipComponent implements TooltipBase {
-  private cdRef = inject(ChangeDetectorRef);
-
   /** Collection of tooltip items managed by this component */
   public tooltips = signal<TooltipItem[]>([]);
 
@@ -31,7 +27,6 @@ export class TooltipComponent implements TooltipBase {
       el.push(item);
       return el;
     });
-    this.cdRef.markForCheck();
   }
 
   /**
@@ -40,7 +35,6 @@ export class TooltipComponent implements TooltipBase {
    */
   show(id: string): void {
     this.toggle({ id, visible: true });
-    this.cdRef.markForCheck();
   }
 
   /**
@@ -49,7 +43,6 @@ export class TooltipComponent implements TooltipBase {
    */
   hide(id: string): void {
     this.toggle({ id, visible: false });
-    this.cdRef.markForCheck();
   }
 
   /**
@@ -64,7 +57,6 @@ export class TooltipComponent implements TooltipBase {
         return el;
       });
     }
-    this.cdRef.markForCheck();
   }
 
   /**
@@ -75,12 +67,16 @@ export class TooltipComponent implements TooltipBase {
    * @param {boolean} [options.visible] - Optional visibility state to set.
    */
   private toggle({ id, visible }: { id: string; visible?: boolean }) {
+    const item = this.tooltips().find((el) => el.id === id);
+    if (item?.visible === visible) {
+      return;
+    }
     this.tooltips.update((el) => {
       const item = el.find((e) => e.id === id);
       if (item) {
         item.visible = visible ?? !item.visible;
       }
-      return el;
+      return [...el];
     });
   }
 }

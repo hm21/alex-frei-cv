@@ -80,9 +80,8 @@ export class ToastComponent {
   public add(toast: ToastConfig) {
     this.toastList.update((el) => {
       el.push(toast);
-      return el;
+      return [...el];
     });
-    this.cdRef.markForCheck();
   }
 
   /** Removes a toast notification by ID */
@@ -91,9 +90,8 @@ export class ToastComponent {
     if (i >= 0) {
       this.toastList.update((el) => {
         el.splice(i, 1);
-        return el;
+        return [...el];
       });
-      this.cdRef.markForCheck();
     }
   }
 }
