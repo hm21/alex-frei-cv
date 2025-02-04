@@ -43,7 +43,10 @@ export class BrowserDetectionService {
       this.browserName = 'opera';
     } else if (/edg/i.test(userAgent)) {
       this.browserName = 'edge';
+    }else{
+      this.browserName = 'unknown';
     }
-    this.browserName = 'unknown';
+
+    return this.browserName;
   }
 }
