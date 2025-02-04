@@ -14,12 +14,9 @@ import { getTheme } from './layout/header/components/theme-switch/utils/theme-sw
 import { HeaderComponent } from './layout/header/header.component';
 import { routeAnimation } from './shared/animations/route-animations';
 import { ExtendedComponent } from './shared/components/extended-component';
-import { ModalService } from './ui/modal/modal.service';
 import { provideModal } from './ui/modal/utils/modal.provider';
 import { provideToast } from './ui/toast/providers/toast.provider';
-import { ToastService } from './ui/toast/services/toast.service';
 import { provideTooltip } from './ui/tooltip/providers/tooltip.provider';
-import { TooltipService } from './ui/tooltip/services/tooltip.service';
 
 @Component({
   selector: 'af-root',
@@ -46,18 +43,8 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   /** Preload images with ServiceWorker */
   private imagePreloader = inject(ImagePreloaderService);
 
-  /** Manages modals */
-  protected modalManager = inject(ModalService);
-
-  /** Displays toast notifications */
-  protected toastService = inject(ToastService);
-
-  /** Manages tooltips */
-  protected tooltipService = inject(TooltipService);
-
   /** Detect the browser type */
   protected browserDetectionService = inject(BrowserDetectionService);
-
 
   constructor() {
     super();
