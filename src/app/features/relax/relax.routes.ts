@@ -91,7 +91,11 @@ export const relaxRoutes: Routes = [
           },
           {
             path: '**',
-            redirectTo: '/relax/quantum-quiz/(state:instruction)',
+            redirectTo: () => {
+              // Angular have an issue in version 19.1 that direct redirect
+              // without function block the full ui when reloading in the specific outlet
+              return '/relax/quantum-quiz/(state:instruction)';
+            },
           },
         ],
       },
@@ -133,7 +137,11 @@ export const relaxRoutes: Routes = [
           },
           {
             path: '**',
-            redirectTo: '/relax/color-clash/(state:instruction)',
+            redirectTo: () => {
+              // Angular have an issue in version 19.1 that direct redirect
+              // without function block the full ui when reloading in the specific outlet
+              return '/relax/color-clash/(state:instruction)';
+            },
           },
         ],
       },
