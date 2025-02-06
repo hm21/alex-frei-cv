@@ -1,6 +1,7 @@
 import { UpperCasePipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   OnDestroy,
@@ -59,6 +60,12 @@ export class ColorClashGameComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
+  private router = inject(Router);
+  private sanitizer = inject(DomSanitizer);
+  private cdRef = inject(ChangeDetectorRef);
+  private theme = inject(ThemeManagerService);
+  private gameManager = inject(ColorClashManagerService);
+  
   public infoIcon = svgInfoIcon;
 
   /** Reference to the buttons container in the template. */
@@ -108,11 +115,6 @@ export class ColorClashGameComponent
   /** Subject used to destroy the countdown timer. */
   private countdownDestroy$ = new Subject();
 
-  private router = inject(Router);
-  private sanitizer = inject(DomSanitizer);
-  public theme = inject(ThemeManagerService);
-  private gameManager = inject(ColorClashManagerService);
-
   override ngOnInit(): void {
     if (this.isBrowser) {
       this.generateButtons();
@@ -135,26 +137,16 @@ export class ColorClashGameComponent
       .pipe(
         filter((event) => this.shortcutKeys.includes(event.key)),
         map((event) => {
-          switch (event.key) {
-            case 's':
-              return 0;
-            case 'd':
-              return 1;
-            case 'f':
-              return 2;
-            case 'j':
-              return 3;
-            case 'k':
-              return 4;
-            default:
-              return 5;
-          }
+          return this.gameButtons.find(
+            (el) => el.shortcut.toLowerCase() == event.key.toLowerCase(),
+          )!;
         }),
         this.destroyPipe(),
       )
-      .subscribe((buttonId) => {
-        const btn = this.gameButtons[buttonId];
-        this.buttonTap(btn.id, btn.color);
+      .subscribe((button) => {
+        this.buttonTap(button.id, button.color);
+        /// Important to detect changes that `item.isCorrect` update in the template
+        this.cdRef.detectChanges();
       });
   }
 
