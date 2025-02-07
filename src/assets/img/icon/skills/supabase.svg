@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" ngxScrollAnimate="fade-in-up-scale" speed="800" once="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
     <title>Supabase</title>
     <g clip-path="url(#clip0_147_961)">
         <path fill="url(#paint0_linear_147_961)" d="M144.757 223.193C139.696 229.566 129.434 226.074 129.312 217.936L127.529 98.9075H207.564C222.06 98.9075 230.145 115.651 221.131 127.004L144.757 223.193Z" />
