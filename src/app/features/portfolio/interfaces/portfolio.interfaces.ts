@@ -22,6 +22,7 @@ export interface ProjectDetails {
     ratio?: string;
     backgroundColor?: string;
     isGif?: boolean;
+    isVideo?: boolean;
   }[];
   video?: SafeResourceUrl;
 }
