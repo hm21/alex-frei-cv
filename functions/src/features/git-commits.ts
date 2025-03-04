@@ -2,9 +2,9 @@ import axios from 'axios';
 import * as express from 'express';
 import { initializeApp } from 'firebase-admin/app';
 import { getDatabase } from 'firebase-admin/database';
-import { error } from 'firebase-functions/logger';
+import { debug, error } from 'firebase-functions/logger';
 import { HttpsError, Request } from 'firebase-functions/v2/https';
-import { ddosCheck } from './utils/ddos-ip-check';
+import { ddosCheck } from '../shared/utils/ddos-ip-check';
 
 initializeApp();
 
@@ -12,6 +12,8 @@ export default async (req: Request, resp: express.Response) => {
   // Check for potential DDOS attack
   const ddosAttack = await ddosCheck(req, 'git-commits', 600);
   if (ddosAttack) return resp.status(403).json('Blacklist');
+
+  debug('⏳ Read git commits count');
 
   const dt = new Date();
   const commitRtdbRef = getDatabase().ref('git/commits');
@@ -26,7 +28,14 @@ export default async (req: Request, resp: express.Response) => {
     return resp.status(200).json(temporaryCount);
   } else {
     // Delete older temporary git commits to save storage
-    await commitRtdbRef.remove().catch(error);
+    await commitRtdbRef
+      .remove()
+      .then(() => {
+        debug('✅ Successfully remove temporary git commit count');
+      })
+      .catch((err) => {
+        error('❌ Failed to remove temporary git commit count', err);
+      });
 
     let count = 0;
     let page = 1;
@@ -42,7 +51,8 @@ export default async (req: Request, resp: express.Response) => {
             page,
           },
         })
-        .catch(() => {
+        .catch((err) => {
+          error('❌ Failed to read git commit count', err);
           throw new HttpsError('unknown', 'Failed to get git commits');
         });
       const pageCommitCount = response.data?.length ?? 0;
@@ -54,8 +64,18 @@ export default async (req: Request, resp: express.Response) => {
         shouldFetchMore = false;
       }
     }
+    debug('✅ Successfully read git commit count');
+
     // Set current commit count in the database
-    await commitRtdbRef.child(formatDate(dt)).set(count).catch(error);
+    await commitRtdbRef
+      .child(formatDate(dt))
+      .set(count)
+      .then(() => {
+        debug('✅ Successfully store temporary git commit count');
+      })
+      .catch((err) => {
+        error('❌ Failed to save temporary git commit count', err);
+      });
 
     return resp.status(200).json(count);
   }
