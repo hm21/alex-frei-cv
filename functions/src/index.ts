@@ -1,6 +1,6 @@
 import { onRequest } from 'firebase-functions/v2/https';
 
-import './extensions/extensions';
+import './core/extensions/extensions';
 
 export const quiz = onRequest(
   {
@@ -13,7 +13,7 @@ export const quiz = onRequest(
     concurrency: 5,
   },
   async (req, res) => {
-    await (await import('./games/quiz')).default(req, res);
+    await (await import('./features/games/quiz')).default(req, res);
   },
 );
 export const gitCommits = onRequest(
@@ -27,7 +27,7 @@ export const gitCommits = onRequest(
     concurrency: 50,
   },
   async (req, res) => {
-    await (await import('./git-commits')).default(req, res);
+    await (await import('./features/git-commits')).default(req, res);
   },
 );
 export const contactForm = onRequest(
@@ -41,6 +41,6 @@ export const contactForm = onRequest(
     concurrency: 5,
   },
   async (req, res) => {
-    await (await import('./contact-form')).default(req, res);
+    await (await import('./features/contact-form')).default(req, res);
   },
 );
