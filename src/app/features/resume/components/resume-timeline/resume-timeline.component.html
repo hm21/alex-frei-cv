@@ -1,7 +1,0 @@
-@for (item of items; track $index) {
-  <af-resume-timeline-item [more]="item.more">
-    <ng-container ngProjectAs="[title]"> {{ item.title }} </ng-container>
-    <ng-container ngProjectAs="[msg]"> {{ item.msg }} </ng-container>
-    <ng-container ngProjectAs="[date]">{{ item.date }}</ng-container>
-  </af-resume-timeline-item>
-}

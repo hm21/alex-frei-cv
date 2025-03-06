@@ -10,27 +10,7 @@
 <section #sectionRef [class.open-hero]="isHeroActive()">
   <div class="modal-container gallery">
     @for (item of data().items; track $index) {
-      <picture
-        [style.backgroundColor]="item.backgroundColor ?? 'black'"
-        [style.aspectRatio]="item.ratio"
-      >
-        <source srcset="{{item.src}}_1x.avif" type="image/avif" />
-        <source srcset="{{item.src}}_1x.webp" type="image/webp" />
-        <source srcset="{{item.src}}_1x.jpeg" type="image/jpeg" />
-
-        <img
-          loading="eager"
-          afImageLoader
-          ngxHero
-          backdropPosition="beforeHeroItem"
-          [highQualityPath]="item.src + '_4x'"
-          [supportedFormats]="['avif', 'webp', 'jpeg']"
-          [src]="item.src"
-          [alt]="item.alt"
-          (openHero)="isHeroActive.set(true)"
-          (closeHero)="isHeroActive.set(false)"
-        />
-      </picture>
+      <af-image-video-chooser [item]="item" />
     }
   </div>
 </section>

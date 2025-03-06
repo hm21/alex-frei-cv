@@ -1,15 +1,15 @@
 import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  OnInit,
+    ChangeDetectionStrategy,
+    Component,
+    inject,
+    OnInit,
 } from '@angular/core';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { RecommendedPagesComponent } from 'src/app/shared/components/recommended-pages/recommended-pages.component';
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import { ResumeSkillsComponent } from './components/resume-skills/resume-skills.component';
-import { ResumeTimelineComponent } from './components/resume-timeline/resume-timeline.component';
+import { ResumeTimelineComponent } from './components/timeline/resume-timeline/resume-timeline.component';
 
 @Component({
   selector: 'af-resume',

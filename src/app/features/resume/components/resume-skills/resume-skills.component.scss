@@ -1,3 +1,23 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    "frontend backend"
+    "more-knowledge more-knowledge";
+
+  gap: 40px;
+
+  margin: 80px 0;
+}
+.frontend {
+  grid-area: frontend;
+}
+.backend {
+  grid-area: backend;
+}
+.more-knowledge {
+  grid-area: more-knowledge;
+}
+
 h2 {
   margin-bottom: 15px;
 }
@@ -6,10 +26,5 @@ h2 {
   margin-bottom: 12px;
 }
 .chip-list {
-  justify-content: space-between;
-}
-@media (max-width: 600px) {
-  .chip-list {
-    justify-content: flex-start;
-  }
+  justify-content: flex-start;
 }

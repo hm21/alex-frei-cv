@@ -14,10 +14,10 @@ export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
     `,
   images: [
     {
-      path: 'assets/img/ngx-count-animation/showcase',
+      path: 'assets/img/ngx-count-animation/showcase.mp4',
       alt: `Count animation showcase`,
       ratio: '4.86 / 5.61',
-      isGif: true,
+      isVideo: true,
     },
   ],
   demoUrl: 'https://ngx-hm21.web.app/count-animation',

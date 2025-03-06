@@ -1,34 +1,43 @@
-<h2 class="section-title" i18n>Frontend skills</h2>
-@for (item of frontendSkills; track $index) {
-  <af-progress-bar [progress]="item.skillLevel" [delay]="staggerDelay * $index">
-    <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
-  </af-progress-bar>
-}
-
-<h2 style="--color-primary: #0ba376" class="section-title mt4" i18n>
-  Backend skills
-</h2>
-@for (item of backendSkills; track $index) {
-  <af-progress-bar
-    style="--color-primary-600: #29ca9a; --color-primary-700: #0ba376"
-    [progress]="item.skillLevel"
-    [delay]="staggerDelay * ($index + frontendSkills.length)"
-  >
-    <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
-  </af-progress-bar>
-}
-
-<h2
-  style="--color-primary: var(--color-primary-700)"
-  class="section-title mt4"
-  i18n
->
-  More knowledge
-</h2>
-<ul class="chip-list">
-  @for (item of knowledge; track $index) {
-    <li ngxScrollAnimate="fade-in-up-scale" class="chip">
-      {{ item }}
-    </li>
+<article class="frontend">
+  <h2 class="section-title" i18n>Frontend skills</h2>
+  @for (item of frontendSkills; track $index) {
+    <af-progress-bar
+      [progress]="item.skillLevel"
+      [delay]="staggerDelay * $index"
+    >
+      <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
+    </af-progress-bar>
   }
-</ul>
+</article>
+
+<article class="backend">
+  <h2 style="--color-primary: #0ba376" class="section-title" i18n>
+    Backend skills
+  </h2>
+  @for (item of backendSkills; track $index) {
+    <af-progress-bar
+      style="--color-primary-600: #29ca9a; --color-primary-700: #0ba376"
+      [progress]="item.skillLevel"
+      [delay]="staggerDelay * ($index + frontendSkills.length)"
+    >
+      <ng-container ngProjectAs="[name]">{{ item.name }}</ng-container>
+    </af-progress-bar>
+  }
+</article>
+
+<article class="more-knowledge">
+  <h2
+    style="--color-primary: var(--color-primary-700)"
+    class="section-title"
+    i18n
+  >
+    More knowledge
+  </h2>
+  <ul class="chip-list">
+    @for (item of knowledge; track $index) {
+      <li ngxScrollAnimate="fade-in-up-scale" class="chip">
+        {{ item }}
+      </li>
+    }
+  </ul>
+</article>

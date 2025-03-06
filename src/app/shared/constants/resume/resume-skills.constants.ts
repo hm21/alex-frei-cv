@@ -47,10 +47,16 @@ export const BACKEND_SKILLS: SkillItem[] = [
 ];
 
 export const KNOWLEDGE = [
-  'Figma',
+  'RxJS',
+  'RxDart',
+  'Angular-Material',
+  'Flutter-provider',
+  'MongoDB',
+  'PostgreSQL',
   'Typesense',
   'Elasticsearch',
   'Algolia',
+  'Figma',
   'Java',
   'libGDX',
   'Unity',
@@ -60,8 +66,14 @@ export const KNOWLEDGE = [
   'Stripe-API',
   'OpenAI-API',
   'Lucidchart',
+  'Sendgrid',
   'Xcode',
   'VS-Code',
   'Android-Studio',
   'Github-Actions',
+  'Canvas',
+  'Web-Workers',
+  'iOS Release (App Store)',
+  'Android Release (Google Play)',
+  'AppGallery Release (Huawei)',
 ];

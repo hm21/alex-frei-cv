@@ -1,4 +1,5 @@
 import { SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
+import { ModalPreviewItem } from 'src/app/ui/modal/utils/modal.interface';
 
 /** Interface for project details. */
 export interface ProjectDetails {
@@ -16,14 +17,7 @@ export interface ProjectDetails {
     prototype?: string[];
     other?: string[];
   };
-  images: {
-    path: string;
-    alt: string;
-    ratio?: string;
-    backgroundColor?: string;
-    isGif?: boolean;
-    isVideo?: boolean;
-  }[];
+  images: ModalPreviewItem[];
   video?: SafeResourceUrl;
 }
 

@@ -14,10 +14,10 @@ export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
   install: 'npm install ngx-image-hero',
   images: [
     {
-      path: 'assets/img/ngx-image-hero/showcase',
+      path: 'assets/img/ngx-image-hero/showcase.mp4',
       alt: `Image hero showcase`,
       ratio: '10 / 5.6',
-      isGif: true,
+      isVideo: true,
     },
   ],
   demoUrl: 'https://ngx-hm21.web.app/image-hero',

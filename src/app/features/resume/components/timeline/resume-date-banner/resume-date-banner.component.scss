@@ -1,0 +1,48 @@
+$height: 3rem;
+$padding: 1.5rem;
+$color: var(--color-primary-700);
+
+:host {
+  height: $height;
+
+  text-align: center;
+  background-color: $color;
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc($height / 2) 0 0 calc($height / 2);
+
+  &::before {
+    content: "";
+    width: $padding;
+    aspect-ratio: 1;
+    background: $color;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+    position: absolute;
+    top: 100%;
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    right: 0;
+  }
+
+  @media (min-width: 1280px) {
+    &[reversed] {
+      &::before {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        left: 0;
+      }
+
+      &::after {
+        transform: translate(-50%, -50%);
+      }
+
+      border-radius: 0 calc($height / 2) calc($height / 2) 0;
+    }
+  }
+}
