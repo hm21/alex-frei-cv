@@ -17,40 +17,7 @@
 
       <div class="gallery">
         @for (item of data().images; track $index) {
-          @if (item.isVideo) {
-            <video
-              [style.aspectRatio]="item.ratio ?? '16 / 9'"
-              autoplay
-              muted
-              controls
-              loop
-              [src]="item.path"
-            ></video>
-          } @else {
-            <picture [style.backgroundColor]="item.backgroundColor ?? 'white'">
-              @if (!item.isGif) {
-                <source srcset="{{item.path}}_1x.avif" type="image/avif" />
-                <source srcset="{{item.path}}_1x.webp" type="image/webp" />
-                <source srcset="{{item.path}}_1x.jpeg" type="image/jpeg" />
-              }
-
-              <img
-                loading="eager"
-                [style.aspectRatio]="item.ratio ?? '16 / 9'"
-                afImageLoader
-                ngxHero
-                backdropPosition="beforeHeroItem"
-                [highQualityPath]="item.isGif ? undefined : item.path + '_4x'"
-                [supportedFormats]="
-                  item.isGif ? ['gif'] : ['avif', 'webp', 'jpeg']
-                "
-                [src]="item.path + (item.isGif ? '.gif' : '_4x.jpeg')"
-                [alt]="item.alt"
-                (openHero)="isHeroActive.set(true)"
-                (closeHero)="isHeroActive.set(false)"
-              />
-            </picture>
-          }
+          <af-image-video-chooser [item]="item" />
         }
       </div>
     </aside>

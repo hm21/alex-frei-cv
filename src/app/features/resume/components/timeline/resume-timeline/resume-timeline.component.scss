@@ -1,0 +1,21 @@
+:host {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-color: var(--border-color);
+    width: 1px;
+    height: 100%;
+
+    top: 0px;
+    left: 50%;
+
+    @media (max-width: 1279px) {
+      left: 0px;
+    }
+  }
+}

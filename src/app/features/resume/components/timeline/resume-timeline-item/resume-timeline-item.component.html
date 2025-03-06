@@ -1,0 +1,33 @@
+<div class="sonar-container">
+  <div #sonarRef class="sonar"></div>
+  <div class="dot"></div>
+</div>
+
+<div
+  class="card"
+  [ngxScrollAnimate]="
+    isReversed() && isMultiRowDesign() ? 'fade-in-right' : 'fade-in-left'
+  "
+  thresholdMode="pixel"
+  aos="100"
+  duration="400"
+>
+  <ng-content select="[date]" />
+
+  <div class="card-content">
+    <h2>
+      <ng-content select="[title]" />
+    </h2>
+
+    <p>
+      <ng-content select="[msg]" />
+    </p>
+
+    @if (more()) {
+      <button (click)="showMore()">
+        {{ more()?.label }}
+        <span [innerHTML]="chevronRight | safe"></span>
+      </button>
+    }
+  </div>
+</div>

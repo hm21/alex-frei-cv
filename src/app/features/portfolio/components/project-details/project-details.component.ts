@@ -10,11 +10,10 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { distinctUntilChanged, fromEvent, map } from 'rxjs';
 import { modalAnimation } from 'src/app/shared/animations/modal-animations';
+import { ImageVideoChooserComponent } from 'src/app/shared/components/image-video-chooser/image-video-chooser.component';
 import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
-import { ImageLoaderDirective } from 'src/app/shared/directives/image-loader/image-loader.directive';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { ModalHeaderComponent } from 'src/app/ui/modal/components/modal-header/modal-header.component';
 import { Modal } from 'src/app/ui/modal/modal.base';
@@ -32,11 +31,10 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     NgTemplateOutlet,
-    NgxImageHeroDirective,
     SafePipe,
-    ImageLoaderDirective,
     ProgressSpinnerComponent,
     ModalHeaderComponent,
+    ImageVideoChooserComponent,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss',
