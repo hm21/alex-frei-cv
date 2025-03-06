@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ResumeDateBannerComponent } from './resume-date-banner.component';
 
 describe('ResumeDateBannerComponent', () => {
@@ -8,9 +9,8 @@ describe('ResumeDateBannerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResumeDateBannerComponent]
-    })
-    .compileComponents();
+      imports: [ResumeDateBannerComponent, SharedTestingModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ResumeDateBannerComponent);
     component = fixture.componentInstance;

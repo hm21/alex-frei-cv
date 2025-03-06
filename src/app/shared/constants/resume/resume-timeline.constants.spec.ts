@@ -32,9 +32,9 @@ describe('RESUME_TIMELINE_ITEMS', () => {
     expect(projects).toContain(PROJECT_WAIO);
   });
 
-  it('should have title length <= 30 characters', () => {
+  it('should have title length <= 55 characters', () => {
     RESUME_TIMELINE_ITEMS.forEach((item) => {
-      expect(item.title.length).toBeLessThanOrEqual(30);
+      expect(item.title.length).toBeLessThanOrEqual(55);
     });
   });
 

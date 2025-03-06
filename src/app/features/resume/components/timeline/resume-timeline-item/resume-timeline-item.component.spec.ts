@@ -2,6 +2,7 @@ import { INJECTOR } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
+import { sleep } from 'src/test/utils/sleep.test';
 import { ResumeTimelineItemComponent } from './resume-timeline-item.component';
 
 describe('ResumeTimelineItemComponent', () => {
@@ -38,14 +39,13 @@ describe('ResumeTimelineItemComponent', () => {
     const event = new Event('mouseenter');
     nativeElement.dispatchEvent(event);
 
-    expect(component['sonar']().nativeElement.classList).toContain(
+    expect(component['sonarRef']().nativeElement.classList).toContain(
       'sonar-animation',
     );
 
-    const animationEndEvent = new Event('animationend');
-    component['sonar']().nativeElement.dispatchEvent(animationEndEvent);
+    await sleep(component['sonarAnimationDuration']);
 
-    expect(component['sonar']().nativeElement.classList).not.toContain(
+    expect(component['sonarRef']().nativeElement.classList).not.toContain(
       'sonar-animation',
     );
   });
