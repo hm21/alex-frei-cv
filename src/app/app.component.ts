@@ -2,13 +2,16 @@ import {
   afterNextRender,
   ChangeDetectionStrategy,
   Component,
+  ElementRef,
   inject,
   OnInit,
   signal,
+  viewChild,
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
-import { timer } from 'rxjs';
+import { filter, timer } from 'rxjs';
 import { BrowserDetectionService } from './core/services/browser/browser-detection.service';
+import { ImageFormatSupportService } from './core/services/image-manager/image-format-support.service';
 import { ImagePreloaderService } from './core/services/image-manager/image-preloader.service';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
@@ -34,9 +37,6 @@ import { provideTooltip } from './ui/tooltip/providers/tooltip.provider';
   animations: [routeAnimation],
 })
 export class AppComponent extends ExtendedComponent implements OnInit {
-  /** Flag indicating whether route animations should be used. */
-  public useRouteAnimations = signal(false);
-
   /** Angular context for children outlets. */
   private contexts = inject(ChildrenOutletContexts);
 
@@ -45,6 +45,14 @@ export class AppComponent extends ExtendedComponent implements OnInit {
 
   /** Detect the browser type */
   protected browserDetectionService = inject(BrowserDetectionService);
+  protected imageFormat = inject(ImageFormatSupportService);
+
+  private mainRef = viewChild.required<ElementRef<HTMLElement>>('mainRef');
+
+  /** Flag indicating whether route animations should be used. */
+  public useRouteAnimations = signal(false);
+
+  private readonly accentPath = 'assets/img/background/bg-blue-blur';
 
   constructor() {
     super();
@@ -64,7 +72,24 @@ export class AppComponent extends ExtendedComponent implements OnInit {
       .querySelector('html')
       ?.setAttribute('data-theme', this.isBrowser ? getTheme() : 'light');
 
+    this.checkBackgroundSupport();
+
     super.ngOnInit();
+  }
+
+  private checkBackgroundSupport() {
+    this.imageFormat.supportCheck
+      .pipe(
+        filter(() => !this.imageFormat.isAvifSupported),
+        this.destroyPipe(),
+      )
+      .subscribe(() => {
+        const alternativeFormat = this.imageFormat.isWebpSupported
+          ? 'webp'
+          : 'jpeg';
+
+        this.mainRef().nativeElement.style.backgroundImage = `url("${this.accentPath}.${alternativeFormat}")`;
+      });
   }
 
   private afterAppIsStable(): void {

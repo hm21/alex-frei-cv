@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
-import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 
 @Component({
   selector: 'af-color-clash-instruction',
@@ -10,13 +9,8 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './color-clash-instruction.component.html',
   styleUrl: './color-clash-instruction.component.scss',
+  host: {
+    class: 'card',
+  },
 })
-export class ColorClashInstructionComponent
-  extends ExtendedComponent
-  implements OnInit
-{
-  override ngOnInit(): void {
-    super.ngOnInit();
-    this.classList.add('card');
-  }
-}
+export class ColorClashInstructionComponent {}

@@ -23,6 +23,11 @@
     </aside>
 
     <article>
+      @if (data().gitStats) {
+        <h3 class="mb1" i18n>Statistics</h3>
+       
+        <af-git-repo-stats class="mb2" [gitStats]="gitStats()" />
+      }
       @if (data().demoUrl) {
         <h3 class="mb1" i18n>Demo</h3>
         <ul>

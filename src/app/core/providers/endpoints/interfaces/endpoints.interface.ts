@@ -16,4 +16,9 @@ export interface Endpoints {
    * The endpoint for the git commit count.
    */
   gitCommitCount: string;
+
+  /**
+   * The endpoint for github repository statistics.
+   */
+  gitRepoStats: string;
 }

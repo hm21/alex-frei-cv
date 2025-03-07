@@ -68,6 +68,10 @@
           "function": "gitCommits"
         },
         {
+          "source": "/api/v1/git-repo-stats",
+          "function": "gitRepoStats"
+        },
+        {
           "source": "/en/**",
           "destination": "/en/index.csr.html"
         },

@@ -10,15 +10,10 @@
 
 <section>
   @for (item of items; track $index) {
-    <af-service-card
-      ngxScrollAnimate
-      aos="70"
-      thresholdMode="pixel"
-      duration="600"
-      [icon]="item.icon"
-    >
-      <ng-container ngProjectAs="[title]">{{ item.title }}</ng-container>
-      <ng-container ngProjectAs="[msg]">{{ item.msg }}</ng-container>
-    </af-service-card>
+    <af-card ngxScrollAnimate aos="70" thresholdMode="pixel" duration="600">
+      <div class="icon" [innerHTML]="item.icon | serviceIcon"></div>
+      <h3 class="title">{{ item.title }}</h3>
+      <p class="msg">{{ item.msg }}</p>
+    </af-card>
   }
 </section>

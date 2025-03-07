@@ -10,7 +10,8 @@
 
     border: 1px solid var(--border-color);
 
-    background-color: var(--card-background);
+    background: var(--card-background);
+    backdrop-filter: var(--card-backdrop-filter);
 
     @media (max-width: 499.9px) {
       padding: 12px 16px;

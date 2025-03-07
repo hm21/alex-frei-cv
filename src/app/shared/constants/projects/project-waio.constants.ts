@@ -1,4 +1,4 @@
-import svgLogo from 'src/assets/img/waio/waio-logo.svg';
+import svgLogo from 'src/assets/img/projects/waio/waio-logo.svg';
 import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_WAIO: { type: string } & ProjectDetails = {
@@ -19,25 +19,25 @@ export const PROJECT_WAIO: { type: string } & ProjectDetails = {
     `,
   images: [
     {
-      path: 'assets/img/waio/waio-home/waio-home',
+      path: 'assets/img/projects/waio/waio-home/waio-home',
       alt: $localize`Waio Homepage`,
       ratio: '2.21 / 1',
       backgroundColor: '#060B29',
     },
     {
-      path: 'assets/img/waio/waio-team/waio-team',
+      path: 'assets/img/projects/waio/waio-team/waio-team',
       alt: $localize`Waio Team`,
       ratio: '2.21 / 1',
       backgroundColor: '#060B29',
     },
     {
-      path: 'assets/img/waio/waio-game-1/waio-game-1',
+      path: 'assets/img/projects/waio/waio-game-1/waio-game-1',
       alt: $localize`Waio Game 1`,
       ratio: '2.21 / 1',
       backgroundColor: '#060B29',
     },
     {
-      path: 'assets/img/waio/waio-game-2/waio-game-2',
+      path: 'assets/img/projects/waio/waio-game-2/waio-game-2',
       alt: $localize`Waio Game 2`,
       ratio: '2.21 / 1',
       backgroundColor: '#060B29',

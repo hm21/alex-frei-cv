@@ -21,9 +21,12 @@ import {
   tap,
   throttleTime,
 } from 'rxjs';
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
 import { ProjectDetailsComponent } from 'src/app/features/portfolio/components/project-details/project-details.component';
 import { ProjectDetails } from 'src/app/features/portfolio/interfaces/portfolio.interfaces';
+import { CardComponent } from 'src/app/shared/components/card/card.component';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
+import { GitRepoStatsComponent } from 'src/app/shared/components/git-repo-stats/git-repo-stats.component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { ModalImageViewerComponent } from 'src/app/ui/modal/components/modal-image-viewer/modal-image-viewer.component';
 import { ModalService } from 'src/app/ui/modal/modal.service';
@@ -35,7 +38,12 @@ import { ResumeMore } from '../../../interfaces/resume.interface';
   selector: 'af-resume-timeline-item',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsDirective, SafePipe],
+  imports: [
+    SafePipe,
+    CardComponent,
+    GitRepoStatsComponent,
+    NgxScrollAnimationsDirective,
+  ],
   templateUrl: './resume-timeline-item.component.html',
   styleUrl: './resume-timeline-item.component.scss',
 })
@@ -48,11 +56,13 @@ export class ResumeTimelineItemComponent
   private injector = inject(INJECTOR);
 
   /** SVG icon for the chevron right. */
-  protected readonly chevronRight = svgChevronRight;
+  protected readonly chevronRightIcon = svgChevronRight;
 
   /** Resume item data. */
   public more = input<ResumeMore>();
   public isReversed = input<boolean>();
+  public gitStats = input<GitRepositoryStatistics | undefined>();
+  public enableGitStats = input<boolean | undefined>();
 
   /** Reference to the sonar element for triggering animations. */
   private sonarRef = viewChild.required<ElementRef<HTMLElement>>('sonarRef');

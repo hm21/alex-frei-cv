@@ -2,10 +2,31 @@ $menu-size: 450px;
 
 :host {
   position: relative;
+  display: block;
+  margin-left: $menu-size ;
 }
 
 main {
-  margin-left: $menu-size;
+  background-image: url(data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEAAAAAAAADhQAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAamlwcnAAAABLaXBjbwAAABNjb2xybmNseAACAAIABoAAAAAMYXYxQ4EkAgAAAAAUaXNwZQAAAAAAAAPoAAACMwAAABBwaXhpAAAAAAMICAgAAAAXaXBtYQAAAAAAAAABAAEEgYIDhAAAA41tZGF0EgAKCjkmfnjLhAgIGkAy9AZEgAAQRzhQARodtG2T6sxgB0OgexXnWS5M4Ysx9HLnR1k4s3tTj5EOpMfndhZjKCMFHz0wT8yiW45akIgzSlVAQtmuMDOzAvQNnYwU05/pIMVgXd9hqIPrdrQdmbo4p2uLoJAnHI6umUwOCLshfRN+tYXHu5tH9f/cQ3hc2mJYUL1rvax7ZA4L9S+/OS2HzHiFI8pGnVnMOk8kh5r66XBsYexwJaEtCyqxitnWLfWPJhi1GUa3d3Wu0W6C8i8ErhzDMqor4vDM6rMXJmbXxtKv1pGD3EaCQOzv4jy0MlKqLqTxBRlB4pwyn7IkXf8Q4KGkUgXARfGCG+0q0zHr4M2dHrqLOBl85xM3TmJxDupmW0o69ZodXgx4JUo5QqUrdbCTgX+BPjbSVBGipQ/uMr1YfJAK/5TBpLlTm9m5QmCqU2so5pJn2R+mukVjChuxPxLpanq1hworzUPN14W19ke7x9IduVD+lfpYEpo1ZGGkuTj/YkIm0J8k1zdMOaTxucKfI8lJ2P/nmv7WQxQxqtI13q1HBym7586j5d2C2PMqrVgEL+ZQ7RWFTp4vWIVqV6zOpSJE/6kTM0JK1f+Udp1N1pP7f40FDhK4eOhlRQ1nG9I3pjAJPV+h/tY5KfISbAZP6hZYDZ2waO4QV2NXMDe5vrkk9xt+4AV0yVW1yCtzQnETAkN808SjdD51pC5LTiRtMIPj8Z1Huc4uDBpGpOOEAZSK+pigy+BM6ND5gVT3pjiy+HaLvA+BI9eFBAp2OSlXvw87pfzcvHf59jVUoPMw0G0sLRuKfmIwqZMBv8JBp4IogkmV0l/kk+X+aNNLsadk5Fyuu23XeeZV6a7MCVP6+zYj7lwcnC4zqKg5IILlP97Q49sCVSXkMeAzhCxsrbJROxI5RCT3GtlHuWeWbxhmWwKLmCwUzYiSQNKDpuQkMJb31Zggk16kcsBc+nArvvB7p53aFbtMbxMbKNXo0yfmr1jCA5Dzru5kKtk3uF5r2kBpuDfDCUsDfGgtY3WZeQzWRpXrDc3kunYNzx1KFOXItMkuHpiUIrPYrR04QwwgvH9A1WjomkdYNOABzH51pRgdANh3TPZjjP48HR8p8i7iGPedMH9v1syYxCCudoUBlJn4AsRE+f2ppJgUORU9jUTANzWpq7xMRZG0YX1aMTiv2l1tVA==);
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+main,
+.theme-helper {
+  min-height: 100vh;
+  min-height: 100lvh;
+}
+.theme-helper {
+  transition: var(--smooth-background);
+  background-color: transparent;
+}
+:host-context([data-theme="dark"]) {
+  .theme-helper {
+    background-color: #000000cf;
+  }
 }
 .af-header {
   width: $menu-size;
@@ -21,13 +42,13 @@ main {
 }
 
 @media (min-width: 3000px) {
-  main {
-    margin-right:  $menu-size;
+  .theme-helper {
+    margin-right: $menu-size;
   }
 }
 @media (max-width: 1400px) {
   $menu-size: 420px;
-  main {
+  :host {
     margin-left: $menu-size;
   }
   .af-header {
@@ -36,7 +57,7 @@ main {
 }
 @media (max-width: 1200px) {
   $menu-size: 390px;
-  main {
+  :host {
     margin-left: $menu-size;
   }
   .af-header {
@@ -44,7 +65,7 @@ main {
   }
 }
 @media (max-width: 1024px), (max-height: 489px) {
-  main {
+  :host {
     margin-left: 0px;
   }
   .af-nav-mobile-menu-toggle-btn {

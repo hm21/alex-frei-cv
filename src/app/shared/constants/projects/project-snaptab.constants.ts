@@ -1,4 +1,4 @@
-import svgLogo from 'src/assets/img/snaptab/snaptab-logo.svg';
+import svgLogo from 'src/assets/img/projects/snaptab/snaptab-logo.svg';
 import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_SNAPTAB: ProjectDetails = {
@@ -70,54 +70,54 @@ export const PROJECT_SNAPTAB: ProjectDetails = {
   },
   images: [
     {
-      path: 'assets/img/snaptab/dashboard/dashboard',
+      path: 'assets/img/projects/snaptab/dashboard/dashboard',
       alt: `Dashboard`,
       ratio: '2.207 / 1',
     },
     {
-      path: 'assets/img/snaptab/project_infos/project_infos',
+      path: 'assets/img/projects/snaptab/project_infos/project_infos',
       alt: `Project-Infos`,
       ratio: '2.207 / 1',
     },
     {
-      path: 'assets/img/snaptab/todo/todo',
+      path: 'assets/img/projects/snaptab/todo/todo',
       alt: `Todo`,
       ratio: '2.207 / 1',
     },
     {
-      path: 'assets/img/snaptab/project/project_mobile',
+      path: 'assets/img/projects/snaptab/project/project_mobile',
       alt: `Project`,
     },
     {
-      path: 'assets/img/snaptab/employee/employee_web',
+      path: 'assets/img/projects/snaptab/employee/employee_web',
       alt: `Employee`,
     },
     {
-      path: 'assets/img/snaptab/docs/docs_web',
+      path: 'assets/img/projects/snaptab/docs/docs_web',
       alt: `Docs`,
     },
     {
-      path: 'assets/img/snaptab/events/events_web',
+      path: 'assets/img/projects/snaptab/events/events_web',
       alt: `Events`,
     },
     {
-      path: 'assets/img/snaptab/gantt/gantt_web',
+      path: 'assets/img/projects/snaptab/gantt/gantt_web',
       alt: `Gantt`,
     },
     {
-      path: 'assets/img/snaptab/time/time_mobile',
+      path: 'assets/img/projects/snaptab/time/time_mobile',
       alt: `Time`,
     },
     {
-      path: 'assets/img/snaptab/client-portal/client-portal_web',
+      path: 'assets/img/projects/snaptab/client-portal/client-portal_web',
       alt: `Client portal`,
     },
     {
-      path: 'assets/img/snaptab/ai/ai_mobile',
+      path: 'assets/img/projects/snaptab/ai/ai_mobile',
       alt: `AI`,
     },
     {
-      path: 'assets/img/snaptab/more/more_web',
+      path: 'assets/img/projects/snaptab/more/more_web',
       alt: `More`,
       backgroundColor: '#ACD2FF',
     },

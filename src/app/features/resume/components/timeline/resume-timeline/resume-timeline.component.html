@@ -1,16 +1,19 @@
 @for (item of items; track $index) {
   @let isReversed = $index % 2 === 0;
-  @let reversedAttr = isReversed ? "" : null;
 
   <af-resume-timeline-item
     [more]="item.more"
+    [gitStats]="item.gitStats"
+    [enableGitStats]="item.enableGitStats"
     [isReversed]="isReversed"
-    [attr.reversed]="reversedAttr"
+    [attr.reversed]="isReversed ? '' : null"
   >
-    <ng-container ngProjectAs="[title]"> {{ item.title }} </ng-container>
-    <ng-container ngProjectAs="[msg]"> {{ item.msg }} </ng-container>
-    <af-resume-date-banner ngProjectAs="[date]" [attr.reversed]="reversedAttr">
+    <af-resume-date-banner ngProjectAs="[date]">
       {{ item.date }}
     </af-resume-date-banner>
+
+    <ng-container ngProjectAs="[title]"> {{ item.title }} </ng-container>
+
+    <ng-container ngProjectAs="[msg]"> {{ item.msg }} </ng-container>
   </af-resume-timeline-item>
 }

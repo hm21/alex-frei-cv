@@ -7,10 +7,47 @@ section {
   grid-template-rows: auto;
 
   gap: 40px;
+
+  @media (max-width: 599px) {
+    grid-template-columns: 100%;
+  }
 }
 
-@media (max-width: 599px) {
-  section {
-    grid-template-columns: 100%;
+.title {
+  margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.msg {
+  margin-top: 7px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+  line-height: 160%;
+}
+.icon {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding: 6px;
+  border-radius: 4px;
+
+  background-color: var(--color-primary);
+
+  width: 44px;
+  height: 44px;
+}
+
+:host ::ng-deep {
+  .icon {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    .fill {
+      fill: var(--color-light);
+    }
   }
 }

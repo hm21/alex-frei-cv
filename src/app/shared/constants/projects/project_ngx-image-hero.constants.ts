@@ -14,7 +14,7 @@ export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
   install: 'npm install ngx-image-hero',
   images: [
     {
-      path: 'assets/img/ngx-image-hero/showcase.mp4',
+      path: 'assets/img/projects/ngx-image-hero/showcase.mp4',
       alt: `Image hero showcase`,
       ratio: '10 / 5.6',
       isVideo: true,

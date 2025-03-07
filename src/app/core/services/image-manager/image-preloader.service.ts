@@ -1,4 +1,5 @@
 import { Injectable, inject } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 import { CONTACT_OPTIONS } from 'src/app/shared/constants/contact-options.constants';
 import { GAMES } from 'src/app/shared/constants/games.constants';
 import { WINDOW } from '../../providers/window.provider';
@@ -73,9 +74,10 @@ export class ImagePreloaderService {
    * Checks and sets the best supported image format.
    */
   private async checkBestSupportedImageFormat() {
-    if (await this.imageFormatSupport.isAvifSupported()) {
+    await firstValueFrom(this.imageFormatSupport.supportCheck);
+    if (this.imageFormatSupport.isAvifSupported) {
       this.imageFormat = 'avif';
-    } else if (await this.imageFormatSupport.isWebpSupported()) {
+    } else if (this.imageFormatSupport.isWebpSupported) {
       this.imageFormat = 'webp';
     }
   }

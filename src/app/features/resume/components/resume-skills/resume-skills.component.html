@@ -1,5 +1,5 @@
 <article class="frontend">
-  <h2 class="section-title" i18n>Frontend skills</h2>
+  <h2 class="section-title">Frontend skills</h2>
   @for (item of frontendSkills; track $index) {
     <af-progress-bar
       [progress]="item.skillLevel"
@@ -11,9 +11,7 @@
 </article>
 
 <article class="backend">
-  <h2 style="--color-primary: #0ba376" class="section-title" i18n>
-    Backend skills
-  </h2>
+  <h2 style="--color-primary: #0ba376" class="section-title">Backend skills</h2>
   @for (item of backendSkills; track $index) {
     <af-progress-bar
       style="--color-primary-600: #29ca9a; --color-primary-700: #0ba376"

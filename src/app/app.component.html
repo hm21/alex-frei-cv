@@ -1,9 +1,12 @@
-<main
-  [@.disabled]="!useRouteAnimations()"
-  [@routeAnimation]="getRouteAnimationData()"
->
-  <div class="container">
-    <router-outlet />
+<main #mainRef>
+  <div class="theme-helper">
+    <div
+      [@.disabled]="!useRouteAnimations()"
+      [@routeAnimation]="getRouteAnimationData()"
+      class="container"
+    >
+      <router-outlet />
+    </div>
   </div>
 </main>
 

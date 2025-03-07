@@ -4,32 +4,32 @@ export const SERVICES: ServiceCard[] = [
   {
     title: $localize`Websites`,
     msg: $localize`
-    As a passionate web developer, I am able to create engaging and fully functional websites. 
-    Whether you need a new website or just want to implement new features, I guarantee first-class quality and user satisfaction.
+    Crafting fast, responsive, and user-friendly websites with modern frameworks like Angular. Whether it's a portfolio, 
+    a business site, or a full-fledged web app, I build solutions that stand out.
       `,
     icon: 'website',
   },
   {
     title: $localize`Apps`,
     msg: $localize`
-    With my experience in the development of mobile and web apps, I create innovative solutions that are tailored to your needs. 
-    I attach great importance to user-friendliness and excellent performance so that the app stands out from the competition.
+    Developing high-performance mobile applications with Flutter or Ionic. I focus on smooth user experiences and cross-platform 
+    compatibility to ensure apps work seamlessly on both iOS and Android.
       `,
     icon: 'app',
   },
   {
     title: $localize`Design`,
     msg: $localize`
-      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
-      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
+      Blending aesthetics with functionality. I create clean UI/UX designs that enhance usability and engage users, 
+      ensuring an intuitive and visually appealing digital experience.
       `,
     icon: 'design',
   },
   {
     title: $localize`Backend`,
     msg: $localize`
-        As a backend developer, I architect robust and scalable systems to power your applications. 
-        From database design to server-side logic, I ensure seamless functionality and reliability.
+        Building scalable and efficient backends with Node.js, Firebase, and Supabase. 
+        From APIs to databases, I make sure everything runs securely and smoothly behind the scenes.
       `,
     icon: 'backend',
   },

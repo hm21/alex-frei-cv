@@ -16,6 +16,9 @@ import { ColorClashManagerService } from '../../services/color-clash-manager.ser
   imports: [RouterLink, QuicklinkDirective],
   templateUrl: './color-clash-evaluation.component.html',
   styleUrl: './color-clash-evaluation.component.scss',
+  host: {
+    class: 'card',
+  },
 })
 export class ColorClashEvaluationComponent
   extends ExtendedComponent
@@ -33,8 +36,6 @@ export class ColorClashEvaluationComponent
     this.generateRatingText();
 
     if (this.isBrowser) this.generateHighScoreMsg();
-
-    this.classList.add('card');
   }
 
   public get points() {

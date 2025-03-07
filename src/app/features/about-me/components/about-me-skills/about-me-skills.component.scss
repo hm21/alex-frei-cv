@@ -44,23 +44,18 @@ li {
   padding: 16px;
   width: 100px;
   flex-shrink: 0;
-  border-radius: 6px;
-
-  background-color: var(--color-primary-100);
 }
 
 h2 {
   margin: 0 var(--page-padding);
 }
 p {
-  text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
 
   width: 100%;
   margin-top: 12px;
 
-  color: var(--color-primary-800);
+  color: var(--text-color-primary);
 
   text-align: center;
   font-weight: 700;

@@ -14,13 +14,9 @@ $folding-space: 33px;
       padding-right: unset;
       margin-left: unset;
 
-      .card {
-        padding-left: 0px;
-        padding-right: $divider-space;
-      }
-      .card-content {
-        padding-right: 0px;
-        padding-left: $folding-space;
+      .af-card {
+        margin-left: 0px;
+        margin-right: $divider-space;
       }
     }
   }
@@ -30,12 +26,8 @@ $folding-space: 33px;
     margin-left: unset;
   }
 
-  .card {
-    padding-left: $divider-space;
-  }
-  .card-content {
-    padding-right: $folding-space;
-    padding-left: 20px;
+  .af-card {
+    margin-left: $divider-space;
   }
 
   &:last-child {
@@ -45,11 +37,15 @@ $folding-space: 33px;
   }
 }
 
+.af-card {
+  padding: 0px;
+}
+
 .card {
   width: 100%;
 }
 .card-content {
-  margin-top: 24px;
+  padding: 20px;
 }
 
 .sonar-container {
@@ -130,12 +126,18 @@ button {
 h2 {
   font-size: 1.1rem;
   font-weight: 700;
+  margin-bottom: 3px;
 }
+.git-repo-stats,
 p {
   font-size: 0.9rem;
-  font-weight: 200;
-  line-height: 1.5rem;
+  font-weight: 300;
+  line-height: 160%;
 }
+.git-repo-stats{
+  font-weight: 500;
+}
+
 @keyframes sonarAnimation {
   0% {
     transform: translate(-50%, -50%) scale(1);
