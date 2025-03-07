@@ -34,13 +34,15 @@ $color: var(--color-primary-700);
   }
 }
 
-:host-context([reversed]) {
-  :host {
-    &::after {
-      left: unset;
-      right: -12px;
-      border-left: 12px solid $color;
-      border-right: unset;
+@media (min-width: 1280px) {
+  :host-context([reversed]) {
+    :host {
+      &::after {
+        left: unset;
+        right: -12px;
+        border-left: 12px solid $color;
+        border-right: unset;
+      }
     }
   }
 }
