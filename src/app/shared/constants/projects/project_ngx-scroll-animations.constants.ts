@@ -15,7 +15,7 @@ export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
     install: 'npm install ngx-scroll-animations',
     images: [
       {
-        path: 'assets/img/ngx-scroll-animations/showcase.mp4',
+        path: 'assets/img/projects/ngx-scroll-animations/showcase.mp4',
         alt: `Scroll animations showcase`,
         ratio: '7 / 3.9',
         isVideo: true,

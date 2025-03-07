@@ -14,7 +14,7 @@ export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
     `,
   images: [
     {
-      path: 'assets/img/ngx-count-animation/showcase.mp4',
+      path: 'assets/img/projects/ngx-count-animation/showcase.mp4',
       alt: `Count animation showcase`,
       ratio: '4.86 / 5.61',
       isVideo: true,

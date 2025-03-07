@@ -1,29 +1,56 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
+import { BehaviorSubject, filter, Observable, take } from 'rxjs';
+import { IS_BROWSER } from '../../providers/platform.provider';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ImageFormatSupportService {
-  private checkedFormats: { [format: string]: boolean } = {};
+  private isBrowser = inject(IS_BROWSER);
 
-  private supportsFormat(format: string): Promise<boolean> | boolean {
-    if (this.checkedFormats[format] != null) return this.checkedFormats[format];
+  public formatChecked$ = new BehaviorSubject(false);
+  private support = {
+    webP: false,
+    avif: false,
+  };
 
+  constructor() {
+    if (this.isBrowser) {
+      this.checkImageSupport();
+    }
+  }
+
+  private async checkImageSupport() {
+    // eslint-disable-next-line no-async-promise-executor
+    await new Promise(async (resolve) => {
+      const isAvifSupported = await this.detectImageFormatSupport('avif');
+      this.support.avif = isAvifSupported;
+
+      if (isAvifSupported) {
+        this.support.webP = true;
+      } else {
+        const isWebpSupported = await this.detectImageFormatSupport('webp');
+        this.support.webP = isWebpSupported;
+      }
+      resolve(true);
+    }).catch(() => console.warn);
+
+    this.formatChecked$.next(true);
+  }
+  private detectImageFormatSupport(format: TestImageFormats): Promise<boolean> {
     return new Promise((resolve) => {
       const image = new Image();
       image.onload = () => {
-        this.checkedFormats[format] = true;
         resolve(true);
       };
       image.onerror = () => {
-        this.checkedFormats[format] = false;
         resolve(false);
       };
       image.src = `data:image/${format};base64,${this.getTestImageBase64(format)}`;
     });
   }
 
-  private getTestImageBase64(format: string): string {
+  private getTestImageBase64(format: TestImageFormats): string {
     // Sample images in base64 to test support
     if (format === 'avif') {
       return 'AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=';
@@ -33,11 +60,31 @@ export class ImageFormatSupportService {
     return '';
   }
 
-  public async isAvifSupported(): Promise<boolean> {
-    return this.supportsFormat('avif');
+  public get supportCheck(): Observable<any> {
+    return new Observable((subscriber) => {
+      this.formatChecked$
+        .pipe(
+          filter((el) => el),
+          take(1),
+        )
+        .subscribe({
+          next() {
+            subscriber.next(true);
+            subscriber.complete();
+          },
+          complete() {
+            subscriber.complete();
+          },
+        });
+    });
   }
 
-  public async isWebpSupported(): Promise<boolean> {
-    return this.supportsFormat('webp');
+  public get isAvifSupported() {
+    return this.support.avif;
+  }
+  public get isWebpSupported() {
+    return this.support.webP;
   }
 }
+
+type TestImageFormats = 'webp' | 'avif';

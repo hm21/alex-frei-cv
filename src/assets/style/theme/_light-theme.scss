@@ -18,7 +18,10 @@
   --color-info: #17a2b8;
   --color-warning: #ff9800;
 
-  --card-background: #ffffff;
+  --button-background-light: #ffffff;
+
+  --card-background: rgba(255, 255, 255, 0.68);
+  --card-backdrop-filter: saturate(140%) blur(10px);
   --card-background-accent: #f1fcff;
   --card-hover-color: #f0f6ff;
   --card-gradient: linear-gradient(to right, #f1f7ff, #e2edff);
@@ -32,5 +35,4 @@
 
   --border-color: rgba(0, 0, 0, 0.3);
 
-  --animation-duration: 220ms;
 }

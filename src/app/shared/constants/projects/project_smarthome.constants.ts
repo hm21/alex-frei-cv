@@ -1,4 +1,4 @@
-import svgSmarthome from 'src/assets/img/smarthome/smarthome-logo.svg';
+import svgSmarthome from 'src/assets/img/projects/smarthome/smarthome-logo.svg';
 import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_SMART_HOME: { type: string } & ProjectDetails = {
@@ -12,22 +12,22 @@ export const PROJECT_SMART_HOME: { type: string } & ProjectDetails = {
     `,
   images: [
     {
-      path: 'assets/img/smarthome/bee_overview/bee_overview',
+      path: 'assets/img/projects/smarthome/bee_overview/bee_overview',
       alt: `Smarthome bee overview`,
       ratio: '1.12 / 1.94',
     },
     {
-      path: 'assets/img/smarthome/bee_details/bee_details',
+      path: 'assets/img/projects/smarthome/bee_details/bee_details',
       alt: `Smarthome bee details`,
       ratio: '1.12 / 1.94',
     },
     {
-      path: 'assets/img/smarthome/switch/switch',
+      path: 'assets/img/projects/smarthome/switch/switch',
       alt: `Smarthome switch`,
       ratio: '1.12 / 1.94',
     },
     {
-      path: 'assets/img/smarthome/ionic-version/ionic-version',
+      path: 'assets/img/projects/smarthome/ionic-version/ionic-version',
       alt: `Smarthome Ionic version`,
       ratio: '1 / 2.2',
     },

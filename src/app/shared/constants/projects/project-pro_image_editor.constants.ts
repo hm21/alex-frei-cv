@@ -1,4 +1,4 @@
-import svgLogo from 'src/assets/img/pro_image_editor/pro_image_editor-logo.svg';
+import svgLogo from 'src/assets/img/projects/pro_image_editor/pro_image_editor-logo.svg';
 import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {

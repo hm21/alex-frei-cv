@@ -33,21 +33,21 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
         subtitle: $localize`A set of lightweight libraries for smooth scroll animations, immersive image transitions, and dynamic number effects—enhancing user experience with minimal effort.`,
         items: [
           {
-            path: 'assets/img/ngx-count-animation/showcase.mp4',
+            path: 'assets/img/projects/ngx-count-animation/showcase.mp4',
             alt: `Count animation showcase`,
             ratio: '0.88',
             isVideo: true,
             backgroundColor: 'white',
           },
           {
-            path: 'assets/img/ngx-image-hero/showcase.mp4',
+            path: 'assets/img/projects/ngx-image-hero/showcase.mp4',
             alt: `Image hero showcase`,
             ratio: '10 / 5.6',
             isVideo: true,
             backgroundColor: 'white',
           },
           {
-            path: 'assets/img/ngx-scroll-animations/showcase.mp4',
+            path: 'assets/img/projects/ngx-scroll-animations/showcase.mp4',
             alt: `Scroll animations showcase`,
             ratio: '7 / 3.9',
             isVideo: true,

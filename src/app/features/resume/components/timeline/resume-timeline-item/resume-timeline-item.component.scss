@@ -14,13 +14,9 @@ $folding-space: 33px;
       padding-right: unset;
       margin-left: unset;
 
-      .card {
-        padding-left: 0px;
-        padding-right: $divider-space;
-      }
-      .card-content {
-        padding-right: 0px;
-        padding-left: $folding-space;
+      .af-card {
+        margin-left: 0px;
+        margin-right: $divider-space;
       }
     }
   }
@@ -30,13 +26,10 @@ $folding-space: 33px;
     margin-left: unset;
   }
 
-  .card {
-    padding-left: $divider-space;
+  .af-card {
+    margin-left: $divider-space;
   }
-  .card-content {
-    padding-right: $folding-space;
-    padding-left: 20px;
-  }
+ 
 
   &:last-child {
     .card {
@@ -45,11 +38,15 @@ $folding-space: 33px;
   }
 }
 
+.af-card{
+  padding: 0px;
+}
+
 .card {
   width: 100%;
 }
 .card-content {
-  margin-top: 24px;
+  padding: 20px;
 }
 
 .sonar-container {

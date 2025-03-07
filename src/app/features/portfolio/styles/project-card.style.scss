@@ -11,7 +11,8 @@ button {
   border: none;
   border-radius: 12px;
 
-  background: var(--card-gradient);
+  background: var(--card-background);
+  backdrop-filter: var(--card-backdrop-filter);
   color: var(--text-color-primary);
   box-shadow:
     0 0 #0000,
@@ -19,7 +20,8 @@ button {
     0px 1px 3px rgba(16, 24, 40, 0.2);
 
   transition:
-    box-shadow 250ms ease,
+  border 250ms ease,
+  box-shadow 250ms ease,
     transform 250ms ease;
 
   &:hover {
@@ -30,11 +32,11 @@ button {
       0px 2px 4px rgba(16, 24, 40, 0.45);
   }
   &:focus {
-    border: none;
+    transform: scale(1.005);
     box-shadow:
       0 0 #0000,
       0 0 #0000,
-      0px 1px 2px 0px rgba(16, 24, 40, 0.15);
+      0px 2px 3px 0px rgba(16, 24, 40, 0.4);
   }
   &:active {
     transform: scale(0.985);

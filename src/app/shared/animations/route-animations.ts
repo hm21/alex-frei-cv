@@ -22,12 +22,9 @@ export const routeAnimation = trigger('routeAnimation', [
   transition(
     '* <=> *',
     [
-      style({ opacity: 0, transform: 'translateX(-50px)' }),
-      animate(
-        '{{duration}} ease',
-        style({ opacity: 1, transform: 'translateX(0px)' }),
-      ),
+      style({ opacity: 0 }),
+      animate('{{duration}} ease', style({ opacity: 1 })),
     ],
-    { params: { duration: '300ms' } },
+    { params: { duration: '200ms' } },
   ),
 ]);

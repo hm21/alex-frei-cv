@@ -23,6 +23,7 @@ import {
 } from 'rxjs';
 import { ProjectDetailsComponent } from 'src/app/features/portfolio/components/project-details/project-details.component';
 import { ProjectDetails } from 'src/app/features/portfolio/interfaces/portfolio.interfaces';
+import { CardComponent } from 'src/app/shared/components/card/card.component';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { ModalImageViewerComponent } from 'src/app/ui/modal/components/modal-image-viewer/modal-image-viewer.component';
@@ -35,7 +36,7 @@ import { ResumeMore } from '../../../interfaces/resume.interface';
   selector: 'af-resume-timeline-item',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgxScrollAnimationsDirective, SafePipe],
+  imports: [NgxScrollAnimationsDirective, CardComponent, SafePipe],
   templateUrl: './resume-timeline-item.component.html',
   styleUrl: './resume-timeline-item.component.scss',
 })

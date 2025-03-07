@@ -9,7 +9,7 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
 import { TypewriterComponent } from 'src/app/shared/components/typewriter/typewriter.component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { ModalService } from 'src/app/ui/modal/modal.service';
-import svgSnaptabGift from 'src/assets/img/snaptab/snaptab-gift.svg';
+import svgSnaptabGift from 'src/assets/img/projects/snaptab/snaptab-gift.svg';
 import { PROJECT_SNAPTAB } from '../../../../shared/constants/projects/project-snaptab.constants';
 import { ProjectDetails } from '../../interfaces/portfolio.interfaces';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';
