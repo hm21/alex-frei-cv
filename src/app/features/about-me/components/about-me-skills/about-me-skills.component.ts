@@ -2,11 +2,10 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
-  OnDestroy,
   OnInit,
   TemplateRef,
   viewChild,
-  ViewContainerRef,
+  ViewContainerRef
 } from '@angular/core';
 import {
   combineLatest,
@@ -29,7 +28,7 @@ import { SkillCard } from './interface/skill-card.interface';
 })
 export class AboutMeSkillsComponent
   extends ExtendedComponent
-  implements OnInit, OnDestroy
+  implements OnInit
 {
   private containerRef = viewChild.required('containerRef', {
     read: ViewContainerRef,
@@ -55,10 +54,6 @@ export class AboutMeSkillsComponent
     this.initAnimation();
   }
 
-  ngOnDestroy(): void {
-    this.containerRef().clear();
-  }
-
   /**
    * Generates the initial skill items to be displayed.
    */
@@ -81,38 +76,35 @@ export class AboutMeSkillsComponent
    * Initializes the animation sequence for the skill items.
    */
   private initAnimation() {
-    if (this.isBrowser) {
-      const elRef = this.listRef().nativeElement;
-      // Generate the items twice so that the user can't see the end.
-      elRef.style.width = `${this.skillList.length * 2 * 120}px`;
-      // Set the animation duration
-      elRef.style.animationDuration = `${this.animationDuration}ms`;
+    if (!this.isBrowser) return;
 
-      // Ensure item is in the viewport
-      const scroll$ = this.screen.scroll$.pipe(
-        startWith(this.isElementVisible()),
-        map(() => this.isElementVisible()),
-        distinctUntilChanged(),
-      );
-      // Ensure the browser tab is visible
-      const visibilityChange$ = fromEvent(
-        this.document,
-        'visibilitychange',
-      ).pipe(
-        startWith(this.document.visibilityState),
-        map(() => this.document.visibilityState === 'visible'),
-        distinctUntilChanged(),
-      );
+    const elRef = this.listRef().nativeElement;
+    // Generate the items twice so that the user can't see the end.
+    elRef.style.width = `${this.skillList.length * 2 * 120}px`;
+    // Set the animation duration
+    elRef.style.animationDuration = `${this.animationDuration}ms`;
 
-      combineLatest([scroll$, visibilityChange$])
-        .pipe(
-          this.destroyPipe(),
-          map(([isElementVisible, isVisible]) => isElementVisible && isVisible),
-        )
-        .subscribe((show) => {
-          elRef.style.animationPlayState = show ? 'running' : 'paused';
-        });
-    }
+    // Ensure item is in the viewport
+    const scroll$ = this.screen.scroll$.pipe(
+      startWith(this.isElementVisible()),
+      map(() => this.isElementVisible()),
+      distinctUntilChanged(),
+    );
+    // Ensure the browser tab is visible
+    const visibilityChange$ = fromEvent(this.document, 'visibilitychange').pipe(
+      startWith(this.document.visibilityState),
+      map(() => this.document.visibilityState === 'visible'),
+      distinctUntilChanged(),
+    );
+
+    combineLatest([scroll$, visibilityChange$])
+      .pipe(
+        this.destroyPipe(),
+        map(([isElementVisible, isVisible]) => isElementVisible && isVisible),
+      )
+      .subscribe((show) => {
+        elRef.style.animationPlayState = show ? 'running' : 'paused';
+      });
   }
 
   /**
