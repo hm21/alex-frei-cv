@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { CardComponent } from './card.component';
+import { GitRepoStatsComponent } from './git-repo-stats.component';
 
-describe('CardComponent', () => {
-  let component: CardComponent;
-  let fixture: ComponentFixture<CardComponent>;
+describe('GitRepoStatsComponent', () => {
+  let component: GitRepoStatsComponent;
+  let fixture: ComponentFixture<GitRepoStatsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardComponent, SharedTestingModule],
+      imports: [GitRepoStatsComponent, SharedTestingModule],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CardComponent);
+    fixture = TestBed.createComponent(GitRepoStatsComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('gitStats', undefined);
     fixture.detectChanges();
   });
 

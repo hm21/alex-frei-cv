@@ -10,8 +10,12 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { distinctUntilChanged, fromEvent, map } from 'rxjs';
+import { GitManagerService } from 'src/app/core/services/git-manager/git-manager.service';
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
 import { modalAnimation } from 'src/app/shared/animations/modal-animations';
+import { GitRepoStatsComponent } from 'src/app/shared/components/git-repo-stats/git-repo-stats.component';
 import { ImageVideoChooserComponent } from 'src/app/shared/components/image-video-chooser/image-video-chooser.component';
 import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
@@ -30,10 +34,11 @@ import {
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    NgTemplateOutlet,
     SafePipe,
-    ProgressSpinnerComponent,
+    NgTemplateOutlet,
     ModalHeaderComponent,
+    GitRepoStatsComponent,
+    ProgressSpinnerComponent,
     ImageVideoChooserComponent,
   ],
   templateUrl: './project-details.component.html',
@@ -58,6 +63,7 @@ export class ProjectDetailsComponent
   protected readonly iconGlobe = svgIconGlobe;
 
   private toast = inject(ToastService);
+  private gitManager = inject(GitManagerService);
 
   /** Reference to the container for displaying website URLs. */
   private websiteContainer = viewChild.required('websiteContainer', {
@@ -95,14 +101,17 @@ export class ProjectDetailsComponent
   /** Flag indicating if video player is loaded. */
   public videoPlayerLoaded = signal(false);
 
+  protected gitStats = signal<GitRepositoryStatistics | undefined>(undefined);
+
   override ngOnInit(): void {
     this.createDetailInfos();
     this.listenScrollAnimation();
     this.initializeVideoConfigs();
+    this.initializeGitStats();
 
     super.ngOnInit();
   }
-  
+
   /**
    * Initializes the video configurations for the component.
    * If there is exactly one image and it is a video, it adds the 'single-player' class
@@ -111,7 +120,7 @@ export class ProjectDetailsComponent
    * @private
    */
   private initializeVideoConfigs() {
-    if (this.data().images.length === 1 && this.data().images[0].isVideo) {
+    if (this.data().images?.length === 1 && this.data().images[0].isVideo) {
       this.elRef.nativeElement.classList.add('single-player');
     }
   }
@@ -147,6 +156,21 @@ export class ProjectDetailsComponent
         } else {
           this.headerRef().nativeElement.style.removeProperty('box-shadow');
         }
+      });
+  }
+
+  /**
+   * Initializes the Git statistics for the items that have `enableGitStats` set to `true`.
+   */
+  private initializeGitStats() {
+    const repoName = this.data().gitStats?.repoName;
+    if (!repoName) return;
+
+    this.gitManager
+      .getRepoStats(repoName)
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((res) => {
+        this.gitStats.set(res);
       });
   }
 

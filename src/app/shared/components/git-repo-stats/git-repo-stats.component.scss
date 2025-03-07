@@ -1,0 +1,33 @@
+:host,
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+:host {
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  font-weight: 500;
+}
+.stars {
+  .icon {
+    margin-bottom: 2px;
+  }
+}
+.item {
+  gap: 4px;
+  min-width: 55px;
+}
+.icon {
+  display: inline-flex;
+}
+
+:host ::ng-deep {
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

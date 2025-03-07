@@ -19,6 +19,10 @@
       <ng-content select="[title]" />
     </h2>
 
+    @if (enableGitStats()) {
+      <af-git-repo-stats [gitStats]="gitStats()" />
+    }
+
     <p>
       <ng-content select="[msg]" />
     </p>
@@ -26,7 +30,7 @@
     @if (more()) {
       <button (click)="showMore()">
         {{ more()?.label }}
-        <span [innerHTML]="chevronRight | safe"></span>
+        <span [innerHTML]="chevronRightIcon | safe"></span>
       </button>
     }
   </div>

@@ -1,3 +1,4 @@
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
 import { ModalImagePreviewData } from 'src/app/ui/modal/utils/modal.interface';
 import { ProjectDetails } from '../../portfolio/interfaces/portfolio.interfaces';
 
@@ -29,6 +30,21 @@ export interface ResumeTimelineItem {
    * The resume more data for the timeline item.
    */
   more?: ResumeMore;
+
+  /**
+   * Indicates whether Git statistics are enabled for the timeline item.
+   */
+  enableGitStats?: boolean;
+
+  /**
+   * Indicates the github statistics
+   */
+  gitStats?: GitRepositoryStatistics;
+
+  /**
+   * The repository name which is required to read the github statistics
+   */
+  repoName?: string;
 }
 
 /**

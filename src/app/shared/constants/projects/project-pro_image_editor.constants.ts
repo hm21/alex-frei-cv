@@ -13,6 +13,9 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
     simplifying the localization process.<br/>
     Of course, the editor also supports multi-threading, where it run in dart native as isolated task and in the web inside web workers.
     `,
+  gitStats: {
+    repoName: 'pro_image_editor',
+  },
   images: [
     {
       path: 'assets/videos/projects/pro_image_editor/grounded-design.mp4',

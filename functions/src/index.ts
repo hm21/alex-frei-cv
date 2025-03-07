@@ -27,7 +27,21 @@ export const gitCommits = onRequest(
     concurrency: 50,
   },
   async (req, res) => {
-    await (await import('./features/git-commits')).default(req, res);
+    await (await import('./features/git/git-commits')).default(req, res);
+  },
+);
+export const gitRepoStats = onRequest(
+  {
+    cors: ['alex-frei.web.app'],
+    timeoutSeconds: 20,
+    memory: '128MiB',
+    minInstances: 0,
+    maxInstances: 5,
+    region: 'europe-west6',
+    concurrency: 50,
+  },
+  async (req, res) => {
+    await (await import('./features/git/git-repo-stats')).default(req, res);
   },
 );
 export const contactForm = onRequest(

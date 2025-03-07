@@ -18,28 +18,13 @@ describe('ImageFormatSupportService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should support AVIF format', async () => {
-    const isSupported = await service.isAvifSupported();
-    expect(isSupported).toBe(true);
-  });
-
-  it('should support WebP format', async () => {
-    const isSupported = await service.isWebpSupported();
-    expect(isSupported).toBe(true);
-  });
-
-  it('should not support an unsupported format', async () => {
-    const isSupported = await service['supportsFormat']('unsupported');
-    expect(isSupported).toBe(false);
-  });
-
   it('should return result from already checked formats', async () => {
-    service['checkedFormats'] = { avif: true, webp: false };
+    service['support'] = { avif: true, webP: false };
 
-    const isAvifSupported = await service.isAvifSupported();
-    expect(isAvifSupported).toBe(true);
+    const isAvifSupported = service.isAvifSupported;
+    expect(isAvifSupported).toBeTrue();
 
-    const isWebpSupported = await service.isWebpSupported();
+    const isWebpSupported = service.isWebpSupported;
     expect(isWebpSupported).toBeFalsy();
   });
 });

@@ -35,7 +35,7 @@ article {
     .gallery {
       grid-template-columns: 1fr;
     }
-    ::ng-deep{
+    ::ng-deep {
       video {
         max-width: 600px;
         max-height: 400px;
@@ -130,6 +130,9 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.git-repo-stats {
+  font-size: 0.95rem;
 }
 
 :host ::ng-deep {

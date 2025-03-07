@@ -19,6 +19,12 @@ export interface ProjectDetails {
   };
   images: ModalPreviewItem[];
   video?: SafeResourceUrl;
+  gitStats?: {
+    /**
+     * The repository name which is required to read the github statistics
+     */
+    repoName: string;
+  };
 }
 
 /** Interface for URL list template items. */

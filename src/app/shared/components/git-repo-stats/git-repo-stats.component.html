@@ -1,0 +1,15 @@
+@for (item of items(); track $index) {
+  <div class="item {{ item.class }}">
+    <div
+      class="icon"
+      [innerHTML]="item.icon | safe"
+      [afTooltip]="item.tooltip"
+    ></div>
+
+    @if (item.value !== undefined) {
+      <span @iconAnimation>{{ item.value }}</span>
+    } @else {
+      <af-progress-spinner diameter="24" />
+    }
+  </div>
+}

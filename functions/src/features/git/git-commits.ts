@@ -4,7 +4,7 @@ import { initializeApp } from 'firebase-admin/app';
 import { getDatabase } from 'firebase-admin/database';
 import { debug, error } from 'firebase-functions/logger';
 import { HttpsError, Request } from 'firebase-functions/v2/https';
-import { ddosCheck } from '../shared/utils/ddos-ip-check';
+import { ddosCheck } from '../../shared/utils/ddos-ip-check';
 
 initializeApp();
 

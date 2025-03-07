@@ -21,6 +21,8 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
       label: $localize`View Details`,
       projectDetails: PROJECT_PRO_IMAGE_EDITOR,
     },
+    enableGitStats: true,
+    repoName: 'pro_image_editor',
   },
   {
     date: $localize`December 2023`,

@@ -29,7 +29,6 @@ $folding-space: 33px;
   .af-card {
     margin-left: $divider-space;
   }
- 
 
   &:last-child {
     .card {
@@ -38,7 +37,7 @@ $folding-space: 33px;
   }
 }
 
-.af-card{
+.af-card {
   padding: 0px;
 }
 
@@ -127,12 +126,18 @@ button {
 h2 {
   font-size: 1.1rem;
   font-weight: 700;
+  margin-bottom: 3px;
 }
+.git-repo-stats,
 p {
   font-size: 0.9rem;
-  font-weight: 200;
-  line-height: 1.5rem;
+  font-weight: 300;
+  line-height: 160%;
 }
+.git-repo-stats{
+  font-weight: 500;
+}
+
 @keyframes sonarAnimation {
   0% {
     transform: translate(-50%, -50%) scale(1);

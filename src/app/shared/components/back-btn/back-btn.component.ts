@@ -21,7 +21,7 @@ import svgIcon from 'src/assets/img/icon/back-button.svg';
       [routerLink]="path"
       i18n-aria-label
       aria-label="Back button"
-      afTooltip-title
+      i18n-afTooltip
       afTooltip="Back"
       [innerHTML]="icon | safe"
     ></a>
