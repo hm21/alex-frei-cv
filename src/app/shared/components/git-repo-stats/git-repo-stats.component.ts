@@ -46,13 +46,13 @@ export class GitRepoStatsComponent {
     return [
       {
         class: 'stars',
-        tooltip: $localize`Stars`,
+        tooltip: `Stars`,
         icon: svgStar,
         value: this.gitStats()?.stargazers_count,
       },
       {
         class: 'forks',
-        tooltip: $localize`Forks`,
+        tooltip: `Forks`,
         icon: svgFork,
         value: this.gitStats()?.forks_count,
       },

@@ -6,7 +6,7 @@
         <source>Back button</source>
         <target>Nút quay lại</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/back-btn/back-btn.component.ts</context>
+          <context context-type="sourcefile">src/app/shared/components/back-btn/back-btn.component.ts</context>
           <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
@@ -15,7 +15,7 @@
 </source>
         <target>Trang gợi ý tiếp theo</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/recommended-pages/recommended-pages.component.html</context>
+          <context context-type="sourcefile">src/app/shared/components/recommended-pages/recommended-pages.component.html</context>
           <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
@@ -23,12 +23,12 @@
         <source>en</source>
         <target>vi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/services/quiz-manager.service.ts</context>
+          <context context-type="linenumber">124</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
@@ -43,60 +43,60 @@
         <source>About me</source>
         <target>Về tôi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7182974689040833178" datatype="html">
         <source>Resume</source>
         <target>Sơ yếu lý lịch</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="sourcefile">src/app/features/resume/resume.component.html</context>
+          <context context-type="linenumber">1,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
-          <context context-type="linenumber">1,3</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9201103587777813545" datatype="html">
         <source>Portfolio</source>
         <target>Danh mục</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.html</context>
+          <context context-type="linenumber">1,2</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3939458405623425043" datatype="html">
         <source>Relax</source>
         <target>Thư giãn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7922989125096435449" datatype="html">
         <source>Contact</source>
         <target>Liên lạc</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6442425155039585894" datatype="html">
         <source>Full Stack Developer</source>
         <target>Full Stack Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">43,45</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">43,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7306768770762854120" datatype="html">
@@ -111,7 +111,7 @@
         <source>About Alex Frei</source>
         <target>Giới thiệu về Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/about-me.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/about-me.component.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
@@ -119,7 +119,7 @@
         <source>Learn more about Alex Frei</source>
         <target>Tìm hiểu thêm về Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/about-me.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/about-me.component.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -127,7 +127,7 @@
         <source>Hiking</source>
         <target>Đi bộ đường dài</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
@@ -135,7 +135,7 @@
         <source>Develop</source>
         <target>Phát triển</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -143,7 +143,7 @@
         <source>As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.</source>
         <target>Là người đam mê ngành kĩ thuật điện tử, tôi dành phần lớn thời gian rảnh rỗi của mình để vẽ , thiết kế, lập trình sơ đồ và biến căn phòng nhỏ của mình như một phòng thí nghiệm công nghệ cao.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
@@ -151,7 +151,7 @@
         <source>Alex Frei</source>
         <target>Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
           <context context-type="linenumber">4,6</context>
         </context-group>
       </trans-unit>
@@ -159,71 +159,71 @@
         <source>E-Mail</source>
         <target>E-Mail</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">17,18</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">19,20</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
           <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3262236020277300799" datatype="html">
         <source>Phone</source>
         <target>Số điện thoại</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">30,31</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">28,29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="471816275243265264" datatype="html">
         <source>Location</source>
         <target>Địa chỉ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">36,37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1949800099101277248" datatype="html">
         <source>Languages</source>
         <target>Ngôn ngữ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">87,88</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">85,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7487151404654126049" datatype="html">
         <source>German, English</source>
         <target>Tiếng Đức, Tiếng Anh</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">88,89</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">86,87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1130652265542107236" datatype="html">
         <source>Age</source>
         <target>Tuổi </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">91,92</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">89,90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6206277469713306308" datatype="html">
         <source>03/21/1995</source>
         <target>03/21/1995</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">94,95</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">92,93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="285383250664560912" datatype="html">
         <source>Angular Developer</source>
         <target>Angular Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
@@ -231,7 +231,7 @@
         <source>Flutter Developer</source>
         <target>Flutter Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
@@ -239,7 +239,7 @@
         <source>Frontend Developer</source>
         <target>Frontend Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
@@ -247,7 +247,7 @@
         <source>Backend Developer</source>
         <target>Backend Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
@@ -255,7 +255,7 @@
         <source>UI/ UX Designer</source>
         <target>Nhà thiết kế UI/UX</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -263,7 +263,7 @@
         <source>Google Cloud Developer</source>
         <target>Google Cloud Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
@@ -271,7 +271,7 @@
         <source>Firebase Developer</source>
         <target>Firebase Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
@@ -279,7 +279,7 @@
         <source>Supabase Developer</source>
         <target>Supabase Developer</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.ts</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.ts</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
@@ -288,7 +288,7 @@
 </source>
         <target>Những gì tôi làm</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-services/about-me-services.component.html</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-services/about-me-services.component.html</context>
           <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
@@ -296,7 +296,7 @@
         <source>Websites</source>
         <target>Trang web</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -304,7 +304,7 @@
         <source>Apps</source>
         <target>Ứng dụng</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
@@ -312,7 +312,7 @@
         <source>Design</source>
         <target>Thiết kế</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
@@ -320,55 +320,43 @@
         <source>Backend</source>
         <target>Backend</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">29</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">181</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4114955461878444038" datatype="html">
-        <source>
-        As a backend developer, I architect robust and scalable systems to power your applications. 
-        From database design to server-side logic, I ensure seamless functionality and reliability.
-      </source>
-        <target>Với tư cách là một lập trình viên Backend, tôi thiết dựng các hệ thống chuyên sâu mạnh mẽ  và có thể mở rộng để cung cấp sự tối ưu nhất cho ứng dụng của bạn.
-Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bảo chức năng liền mạch và độ tin cậy cao. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
-          <context context-type="linenumber">30,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="103220111367852293" datatype="html">
         <source>Frontend</source>
         <target>Frontend</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">179</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">216</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1483267419452198083" datatype="html">
         <source>Fun-Facts</source>
         <target>Những sự thật thú vị </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/facts/facts.component.html</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6988462155330136998" datatype="html">
         <source>About this Website</source>
         <target>Về trang web này</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/facts/facts.component.html</context>
-          <context context-type="linenumber">2,3</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/facts/facts.component.html</context>
+          <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3893126089608256312" datatype="html">
         <source>Coffee Consumed</source>
         <target>Lượng cà phê đã uống </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -376,7 +364,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Walking Breaks</source>
         <target>Giải lao đi bộ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
@@ -384,7 +372,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Songs listened</source>
         <target>Bài hát đã nghe</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -392,7 +380,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Git Commits</source>
         <target>Git Commits</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/fun-facts.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
@@ -400,7 +388,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>First Name</source>
         <target>Tên</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
           <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
@@ -408,7 +396,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Last Name</source>
         <target>Họ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
           <context context-type="linenumber">17,18</context>
         </context-group>
       </trans-unit>
@@ -416,7 +404,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Message</source>
         <target>Lời nhắn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
           <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
@@ -424,7 +412,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>The request has been successfully submitted.</source>
         <target>Yêu cầu đã được gửi thành công.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -432,7 +420,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Unknown error! Please try again.</source>
         <target>Lỗi không xác định! Vui lòng thử lại.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -440,7 +428,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Forbidden request to the server.</source>
         <target>Yêu cầu bị cấm đối với máy chủ.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -448,7 +436,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Invalid data sent. Please fill out the form correctly and try again.</source>
         <target>Đã gửi dữ liệu không hợp lệ. Vui lòng điền vào biểu mẫu một cách chính xác và thử lại.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -456,7 +444,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Open WhatsApp</source>
         <target>Mở WhatsApp</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -464,55 +452,55 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Start call</source>
         <target>Bắt đầu cuộc gọi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">30</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1059908080981133475" datatype="html">
         <source>Send E-Mail</source>
         <target>Gửi E-Mail</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">21,22</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">23,24</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2370050546944857169" datatype="html">
         <source>Alternatively, you can get in touch via the contact form.</source>
         <target>Ngoài ra, bạn có thể liên lạc qua biểu mẫu liên hệ.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.component.html</context>
-          <context context-type="linenumber">11,12</context>
+          <context context-type="sourcefile">src/app/features/contact/contact.component.html</context>
+          <context context-type="linenumber">12,13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5211593647529218831" datatype="html">
         <source>Contact Alex Frei</source>
         <target>Liên hệ với Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="sourcefile">src/app/features/contact/contact.component.ts</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5236911264762992404" datatype="html">
         <source>Contact Alex Frei right now.</source>
         <target>Hãy liên hệ ngay với Alex Frei.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/contact.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="sourcefile">src/app/features/contact/contact.component.ts</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5629671436105198901" datatype="html">
         <source>Business Projects</source>
         <target>Dự án kinh doanh</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
           <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
@@ -520,7 +508,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>snaptab</source>
         <target>snaptab</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
           <context context-type="linenumber">10,11</context>
         </context-group>
       </trans-unit>
@@ -528,7 +516,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> The <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;snaptab-primary&quot;&gt;"/>Allrounder-Tool<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> for <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br class=&quot;break-before&quot; /&gt;"/> your<x id="LINE_BREAK_1" equiv-text="&lt;br class=&quot;break-after&quot; /&gt;"/> <x id="START_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/><x id="CLOSE_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/></source>
         <target> <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;snaptab-primary&quot;&gt;"/>Công cụ toàn năng<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br class=&quot;break-before&quot; /&gt;"/> cho<x id="LINE_BREAK_1" equiv-text="&lt;br class=&quot;break-after&quot; /&gt;"/> <x id="START_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/><x id="CLOSE_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
           <context context-type="linenumber">14,23</context>
         </context-group>
       </trans-unit>
@@ -536,7 +524,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> From project tracking to the completed QR invoice - that&apos;s what <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>snaptab<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> offers you. All important documentation regarding your projects and employees is created, giving you full control at all times! </source>
         <target> Từ theo dõi dự án đến hóa đơn QR đã hoàn thành - đó là những gì  <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>snaptab<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> cung cấp cho bạn. Tất cả tài liệu quan trọng liên quan đến dự án và nhân viên của bạn đều được tạo, mang lại cho bạn toàn quyền kiểm soát mọi lúc! </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.html</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
           <context context-type="linenumber">24,28</context>
         </context-group>
       </trans-unit>
@@ -544,7 +532,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Company!</source>
         <target>Công ty</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
@@ -552,7 +540,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Projects!</source>
         <target>Dự án</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
@@ -560,7 +548,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Needs!</source>
         <target>Nhu cầu</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
@@ -568,7 +556,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Employees!</source>
         <target>Nhân viên</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
@@ -576,7 +564,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Industry!</source>
         <target>Công nghiệp</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
@@ -584,7 +572,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Construction!</source>
         <target>Công trình</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
@@ -592,7 +580,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Control!</source>
         <target>Điều khiển</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/business-projects/business-projects.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
@@ -600,7 +588,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Presentation website</source>
         <target>Trình bày trang web </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
@@ -608,7 +596,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Web-app</source>
         <target>Ứng dụng web</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
@@ -616,7 +604,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Mobile-web-app “PWA”</source>
         <target>Ứng dụng web dành cho thiết bị di động “PWA”</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
@@ -624,7 +612,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Client-portal</source>
         <target>Cổng thông tin khách hàng</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
@@ -632,7 +620,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Admin-access</source>
         <target>Quyền truy cập của quản trị viên</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
@@ -640,19 +628,19 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Website</source>
         <target>Trang mạng</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">185</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
@@ -660,7 +648,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Presentation website from the company waio Applications.</source>
         <target>Trình bày trang Web từ công ty Phần mềm ứng dụng Waio.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -668,7 +656,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Waio Homepage</source>
         <target>Trang chủ của Waio</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
@@ -676,7 +664,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Waio Team</source>
         <target>Nhóm Waio</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -684,7 +672,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Waio Game 1</source>
         <target>Trò chơi Waio 1</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
@@ -692,7 +680,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Waio Game 2</source>
         <target>Trò chơi Waio 2</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
@@ -700,7 +688,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Flutter open source</source>
         <target>Flutter mã nguồn mở</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -708,7 +696,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>A Flutter widget designed for image editing on any device.</source>
         <target>Tiện ích Flutter được thiết kế để chỉnh sửa hình ảnh trên mọi thiết bị.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -716,19 +704,19 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Github-Page</source>
         <target>Trang Github</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
+          <context context-type="linenumber">98</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
@@ -736,15 +724,15 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Angular open source</source>
         <target>Angular open source</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -752,7 +740,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Add automatic scroll animations to an angular 9+ app.</source>
         <target>Thêm hoạt ảnh cuộn tự động vào ứng dụng 9+ góc cạnh.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -760,7 +748,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Easy way that images will fly to the middle of the screen for presentation.</source>
         <target>Cách dễ dàng là hình ảnh sẽ bay ra giữa màn hình để trình chiếu.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -768,7 +756,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Count numbers up and down with smooth animation.</source>
         <target>Đếm số lên xuống với hình ảnh động mượt mà.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -776,7 +764,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>IoT</source>
         <target>IoT</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_smarthome.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -784,7 +772,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Smarthome app to automate bee hives and gardens.</source>
         <target>Ứng dụng Smarthome để tự động hóa tổ ong và vườn.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_smarthome.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -792,11 +780,11 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Close</source>
         <target>Đóng</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/directives/modal-close-button/modal-close-button.directive.ts</context>
+          <context context-type="sourcefile">src/app/shared/directives/modal-close-button/modal-close-button.directive.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/modal/components/modal-header/modal-header.component.html</context>
+          <context context-type="sourcefile">src/app/ui/modal/components/modal-header/modal-header.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -804,64 +792,64 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Demo</source>
         <target>Thử nghiệm</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6082171864197428613" datatype="html">
         <source>Install</source>
         <target>Cài đặt</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">68,69</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">48,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2115592966120408375" datatype="html">
         <source>Copied</source>
         <target>Đã sao chép</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">208</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">245</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1330330165139018730" datatype="html">
         <source> Technology </source>
         <target>Công nghệ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">91,92</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">71,72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4523347413979510028" datatype="html">
         <source>YouTube video</source>
         <target>Video trên YouTube</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.html</context>
-          <context context-type="linenumber">104,105</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">84,85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1580589129894115210" datatype="html">
         <source>Mobile-Store</source>
         <target>Cửa hàng di động</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">196</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5284812472715499591" datatype="html">
         <source>Prototype</source>
         <target>Nguyên mẫu</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">183</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">220</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8693603235657020323" datatype="html">
         <source>Other</source>
         <target>Khác</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">185</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">222</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7655204782877616451" datatype="html">
@@ -869,7 +857,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
 </source>
         <target>Tất cả các dự án liệt kê dưới đây đều do tôi thiết kế và lập trình, viết mã độc quyền.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.html</context>
+          <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.html</context>
           <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
@@ -877,7 +865,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Portfolio Alex Frei</source>
         <target>Danh mục đầu tư Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
@@ -885,7 +873,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Color Clash Game</source>
         <target>Color Clash Game</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/color-clash.component.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
@@ -893,19 +881,19 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Attempt to keep your mind under control without getting confused.</source>
         <target>Hãy cố gắng tập trung điều khiển bộ não để không bị nhầm lẫn. </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/games.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/color-clash.component.ts</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5988661743089198019" datatype="html">
         <source>Evaluation</source>
         <target>Đánh giá</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
@@ -913,7 +901,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> Congratulations, you scored <x id="INTERPOLATION" equiv-text="{{ points() }}"/> points and <x id="INTERPOLATION_1" equiv-text="{{ mistakes() }}"/> mistakes! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></source>
         <target>Xin chúc mừng, bạn đã ghi điểm số <x id="INTERPOLATION" equiv-text="{{ points }}"/> điểm và <x id="INTERPOLATION_1" equiv-text="{{ mistakes }}"/> lỗi! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span [innerHTML]=&quot;msg()&quot;&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_BLOCK_IF" equiv-text="@if (highScoreMsg()) {"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> <x id="INTERPOLATION_2" equiv-text="{{ highScoreMsg() }}"/> <x id="CLOSE_BLOCK_IF" equiv-text="}"/></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">4,14</context>
         </context-group>
       </trans-unit>
@@ -921,15 +909,15 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> Play again </source>
         <target>Chơi lại</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.html</context>
           <context context-type="linenumber">21,22</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">23,24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">23,24</context>
         </context-group>
       </trans-unit>
@@ -937,39 +925,39 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>You made a lot of mistakes. Take it slow next time, I&apos;m sure you can get better!</source>
         <target>Bạn đã mắc rất nhiều lỗi. Lần sau hãy từ từ nhé, tôi chắc chắn bạn sẽ khá hơn!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5189038536564747724" datatype="html">
         <source>Not bad, you just made a few mistakes. But can you also do it without any mistakes?</source>
         <target>Không tệ, bạn chỉ mắc một vài lỗi thôi. Nhưng liệu bạn có thể làm được điều đó mà không mắc bất kỳ sai sót nào không?</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9028248846074123455" datatype="html">
         <source>Great job, you didn&apos;t make any mistakes. But can you score more points in that time without making any mistakes?</source>
         <target>Làm tốt lắm, bạn không mắc lỗi nào cả. Nhưng liệu bạn có thể ghi được nhiều điểm hơn trong khoảng thời gian đó mà không lỗi nào không?</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9011689187710069765" datatype="html">
         <source>Your current high score is <x id="PH" equiv-text="highScore.points"/> points with <x id="PH_1" equiv-text="highScore.mistakes"/> mistakes!</source>
         <target>Điểm cao hiện tại của bạn là <x id="PH" equiv-text="highScore.points"/> điểm với <x id="PH_1" equiv-text="highScore.mistakes"/> lỗi!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4667547387491062114" datatype="html">
         <source>Warm-up laps</source>
         <target>Vòng khởi động</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
@@ -977,11 +965,11 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Show Instruction</source>
         <target>Hiển thị hướng dẫn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
           <context context-type="linenumber">51,52</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
           <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
@@ -989,107 +977,107 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>One</source>
         <target>Một</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">273</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">266</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
         <source>Two</source>
         <target>Hai</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">275</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">268</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
         <source>Three</source>
         <target>Ba</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">277</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">270</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
         <source>Four</source>
         <target>Bốn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">279</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">272</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
         <source>Five</source>
         <target>Năm</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">281</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">274</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
         <source>Six</source>
         <target>Sáu</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">283</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">276</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
         <source>Seven</source>
         <target>Bảy</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">285</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">278</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
         <source>Eight</source>
         <target>Tám</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">287</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">280</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
         <source>Nine</source>
         <target>Chín</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">289</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">282</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
         <source>Rectangle</source>
         <target>Hình chữ nhật</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">284</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
         <source>Circle</source>
         <target>Vòng tròn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">293</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">286</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
         <source>Triangle</source>
         <target>Tam giác</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">295</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">288</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
         <source>Instruction</source>
         <target>Hướng dẫn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">1,3</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
           <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
@@ -1097,7 +1085,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Choose a topic</source>
         <target>Chọn một chủ đề</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
@@ -1106,7 +1094,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
 </source>
         <target>Bạn có thể tự chọn chủ đề cho riêng mình. Ví dụ: bạn có thể nhập &quot;Bóng đá&quot; hoặc &quot;Angular&quot;, từ đó một bài kiểm tra duy nhất sẽ được tạo cho bạn. Ngoài ra, bạn cũng có thể nhấn &quot;Ngẫu nhiên&quot; bên dưới để chọn chủ đề ngẫu nhiên.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">4,7</context>
         </context-group>
       </trans-unit>
@@ -1114,7 +1102,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Insert a topic like Angular or Soccer</source>
         <target>Chèn một chủ đề như Angular hoặc Bóng đá</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
@@ -1122,7 +1110,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> Random </source>
         <target>Ngẫu nhiên</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">26,27</context>
         </context-group>
       </trans-unit>
@@ -1130,7 +1118,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> Generate </source>
         <target>Tạo</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.html</context>
           <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
@@ -1138,7 +1126,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>The topic must be between 3 and 20 characters long!</source>
         <target>Chủ đề phải dài từ 3 đến 20 ký tự!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
           <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
@@ -1146,7 +1134,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>The topic must be a text and not a number</source>
         <target>Chủ đề phải là văn bản chứ không phải số</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
@@ -1154,7 +1142,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Question</source>
         <target>Câu hỏi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">8,9</context>
         </context-group>
       </trans-unit>
@@ -1162,7 +1150,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Correct</source>
         <target>Chính xác</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">14,15</context>
         </context-group>
       </trans-unit>
@@ -1170,7 +1158,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Great job! Your answer is correct!</source>
         <target>Làm tốt lắm! Câu trả lời của bạn là chính xác!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">15,17</context>
         </context-group>
       </trans-unit>
@@ -1178,7 +1166,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> Continue </source>
         <target>Tiếp tục</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
@@ -1186,7 +1174,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Wrong</source>
         <target>Sai</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">27,28</context>
         </context-group>
       </trans-unit>
@@ -1194,7 +1182,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> I&apos;m sorry, but the correct answer was <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b             &gt;"/>. </source>
         <target> Tôi xin lỗi, nhưng câu trả lời đúng là Tôi xin lỗi, nhưng câu trả lời đúng là <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{ correctAnswerLetter() }}"/><x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b           &gt;"/>.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">29,33</context>
         </context-group>
       </trans-unit>
@@ -1202,7 +1190,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source> Okay </source>
         <target>Được rồi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
@@ -1210,7 +1198,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Option A</source>
         <target>Phương án A</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
@@ -1218,7 +1206,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Option B</source>
         <target>Phương án B</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
@@ -1226,7 +1214,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Option C</source>
         <target>Phương án C</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
@@ -1234,7 +1222,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Option D</source>
         <target>Phương án D</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
@@ -1242,7 +1230,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Enter</source>
         <target>Nhập</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
@@ -1250,7 +1238,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Confirm</source>
         <target>Xác nhận</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-game/quantum-quiz-game.component.html</context>
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
@@ -1259,7 +1247,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
 </source>
         <target>Trò chơi này giống như chương trình đố vui &quot;Ai là triệu phú&quot;. Bạn sẽ cố gắng giành được một triệu, nhưng bạn chọn chủ đề. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Nếu bạn chưa quen thì luật chơi của trò chơi đố vui này khá đơn giản. Bạn cố gắng trả lời càng nhiều câu hỏi càng tốt cho đến khi đến câu hỏi thứ một triệu, độ khó tăng dần. Bạn luôn phải chọn giữa bốn câu trả lời, trong đó chỉ có một câu trả lời đúng.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
           <context context-type="linenumber">4,12</context>
         </context-group>
       </trans-unit>
@@ -1268,7 +1256,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
 </source>
         <target>Có vẻ như bạn vẫn còn nhiều điều phải tìm hiểu về chủ đề này trước khi có thể thành thạo nó. Hãy thử một chủ đề mới và xem liệu bạn có thể giành được nhiều điểm hơn không nhé. </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">6,12</context>
         </context-group>
       </trans-unit>
@@ -1276,7 +1264,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Waooo you won!</source>
         <target>Wao bạn đã thắng rồi!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
@@ -1285,7 +1273,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
 </source>
         <target>Có vẻ như bạn là thiên tài trong chủ đề này, xin chúc mừng! Tuy nhiên, tôi có một tin đáng thất vọng: Tôi không giàu nên bạn chưa giành được một triệu. Phần thưởng duy nhất bạn nhận được là trải nghiệm và niềm vui ;)</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-won/quantum-quiz-won.component.html</context>
           <context context-type="linenumber">6,9</context>
         </context-group>
       </trans-unit>
@@ -1293,7 +1281,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Quantum Quiz Game</source>
         <target>Quantum Quiz Game</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
           <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
@@ -1301,31 +1289,31 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Can you emerge victorious on the millionaire show with your AI-generated topic?</source>
         <target>Bạn có thể giành chiến thắng trong chương trình triệu phú với chủ đề do AI tạo ra không?</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/games.ts</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">51</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
         <source>Unknown error occurs</source>
         <target>Xảy ra lỗi không xác định</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
-          <context context-type="linenumber">168</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/services/quiz-manager.service.ts</context>
+          <context context-type="linenumber">169</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/utils/quiz-manager.service.ts</context>
-          <context context-type="linenumber">184</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/services/quiz-manager.service.ts</context>
+          <context context-type="linenumber">185</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
         <source>Do you feel tired about checking out a lot of CVs?</source>
         <target>Bạn có cảm thấy mệt mỏi khi phải xem quá nhiều CV ?</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/relax.component.html</context>
           <context context-type="linenumber">2,4</context>
         </context-group>
       </trans-unit>
@@ -1333,7 +1321,7 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Time to relax and play</source>
         <target>Thời gian để thư giãn và vui chơi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
+          <context context-type="sourcefile">src/app/features/relax/relax.component.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
@@ -1341,317 +1329,111 @@ Từ thiết kế cơ sở dữ liệu đến logic máy chủ, tôi đảm bả
         <source>Let&apos;s play a mini-game to relax a bit!</source>
         <target>Cùng chơi một trò chơi nhỏ để thư giãn chút nhé!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/relax.component.ts</context>
+          <context context-type="sourcefile">src/app/features/relax/relax.component.ts</context>
           <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4669656126417510612" datatype="html">
-        <source>Frontend skills</source>
-        <target>Frontend skills</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
-          <context context-type="linenumber">1,2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="242479384757553256" datatype="html">
         <source>March 21, 1995</source>
         <target>Ngày 21 tháng 3 năm 1995</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">186</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2772668468223898232" datatype="html">
         <source>Birthday</source>
         <target>Sinh nhật</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">187</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1966987492818924297" datatype="html">
         <source>2001 - 2010</source>
         <target>2001 - 2010</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="494564023046542629" datatype="html">
-        <source>Elementary school education</source>
-        <target>Giáo dục tiểu học</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">181</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7144712217485996848" datatype="html">
         <source>2010 - 2014</source>
         <target>2010 - 2014</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7758912282843969586" datatype="html">
-        <source>Apprenticeship for Certified Electrical-Installer EFZ</source>
-        <target>Đào tạo học nghề để trở thành Thợ lắp đặt điện và được chứng nhận EFZ</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7699869948741961187" datatype="html">
         <source>2014 - 2015</source>
         <target>2014-2015</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1034680067214071440" datatype="html">
-        <source>Worked by Brunner &amp; Engler as Electrical-Installer</source>
-        <target>Làm việc tại Brunner &amp; Engler với công việc là Thợ lắp đặt điện</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">138</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2287432808592559199" datatype="html">
         <source>March - November 2015</source>
         <target>Tháng 3 - tháng 11 năm 2015</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">57</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7589458222524264055" datatype="html">
-        <source>Military training</source>
-        <target>Huấn luyện trong quân đội</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">58</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8824231093838758371" datatype="html">
-        <source>Basic training and training to become a “Wachtmeister”.</source>
-        <target>Đào tạo cơ bản và rèn luyện để trở thành “Wachtmeister”.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4969824649958273751" datatype="html">
         <source>2016 - 2020</source>
         <target>2016 - 2020</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">62</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="29005198844517419" datatype="html">
-        <source>Worked by Elektro Sutter as Electrical-Installer</source>
-        <target>Làm việc tại Elektro Sutter với công việc làm Thợ lắp đặt điện</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="529536006459242055" datatype="html">
-        <source>Service technician and project manager. After 2018 change to work only 80% that I have more time for programming.</source>
-        <target>Nhân viên dịch vụ kỹ thuật và quản lý dự án. Sau năm 2018 chuyển sang làm việc bán phần 80% để có nhiều thời gian hơn cho việc lập trình.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1296777797052107613" datatype="html">
-        <source>2017</source>
-        <target>2017</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">101</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5297827129625149604" datatype="html">
-        <source>Learned programming with Java</source>
-        <target>Học lập trình Java</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3305172228304370038" datatype="html">
-        <source>Program a simple report app with libGDX for use at the current workplace.</source>
-        <target>Lập trình một ứng dụng báo cáo đơn giản với libGDX để sử dụng tại nơi làm việc hiện tại.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5078177343633834238" datatype="html">
-        <source>2018</source>
-        <target>2018</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6593634431046720544" datatype="html">
         <source>Fiber optic training</source>
         <target>Đào tạo về cáp quang</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2769517692509899030" datatype="html">
         <source>2018 - 2019</source>
         <target>2018-2019</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="135092519774443252" datatype="html">
-        <source>Changed “Report-App” from libGDX to Ionic</source>
-        <target>Đã thay đổi “Report-App” từ libGDX thành Ionic</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="9157945684475537355" datatype="html">
-        <source>To make the app more professional and simplify the programming of the app, I changed to Ionic 4.</source>
-        <target>Để ứng dụng trở nên chuyên nghiệp hơn và đơn giản hóa việc lập trình ứng dụng, tôi đã đổi sang Ionic 4.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">113</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1048684830448412689" datatype="html">
         <source>2020</source>
         <target>2020</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">116</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5224815218969674863" datatype="html">
-        <source>Foundation of WAIO Applications</source>
-        <target>Nhà sáng lập Waio</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">117</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2361532821371688356" datatype="html">
-        <source>Programing many different things such as website for company and managing tool. 
-      Creation of a web app for “Schule Rotflue” which make it easy for them to present the pedagogical concept.</source>
-        <target>Lập trình nhiều thứ khác nhau như website cho công ty, công cụ quản lý.
-Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ dễ dàng trình bày khái niệm sư phạm.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">118,119</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3434274936212941809" datatype="html">
-        <source>See Full Details</source>
-        <target>Xem Chi Tiết Đầy Đủ</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">121</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">135</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">144</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="656422260183809064" datatype="html">
-        <source>October 24, 2022</source>
-        <target>Ngày 24 tháng 10 năm 2022</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">126</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1832809533651384093" datatype="html">
-        <source>Married</source>
-        <target>Kết hôn</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">127</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6517918695579588424" datatype="html">
-        <source>January 2, 2024</source>
-        <target>Ngày 02 tháng 01 năm 2024</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">131</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2536036169835383610" datatype="html">
-        <source>Open source project “pro_image_editor”</source>
-        <target>Dự án mã nguồn mở "pro_image_editor"</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">132</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4961929091668136173" datatype="html">
-        <source>Developed one of the best open source image editors for Flutter.</source>
-        <target>Phát triển một trong những trình chỉnh sửa hình ảnh mã nguồn mở tốt nhất cho Flutter.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1047879433058046950" datatype="html">
-        <source>Married with my wife in Vietnam.</source>
-        <target>Kết hôn với vợ tôi ở Việt Nam.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">128</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7680367944178112353" datatype="html">
         <source>2021 - Today</source>
         <target>2021- Hiện tại</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">140</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8015410393514325898" datatype="html">
         <source>Project “snaptab”</source>
         <target>Dự án “snaptab”</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">141</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="873084354537991197" datatype="html">
-        <source>Start converting the old “Report-App” into a professional product based on Angular and Flutter that can be sold.</source>
-        <target>Bắt đầu chuyển đổi “Report-App” cũ thành một sản phẩm chuyên nghiệp dựa trên Angular và Flutter có thể bán được ra thị trường</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">142</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4486682505452707131" datatype="html">
         <source>Resume Alex Frei</source>
         <target>Sơ yếu lý lịch của Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
+          <context context-type="sourcefile">src/app/features/resume/resume.component.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
@@ -1659,7 +1441,7 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
         <source>Take a look on the resume from Alex Frei.</source>
         <target>Hãy cùng xem sơ yếu lý lịch của Alex Frei một chút nhé</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/resume.component.ts</context>
+          <context context-type="sourcefile">src/app/features/resume/resume.component.ts</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
@@ -1667,7 +1449,7 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
         <source>Take a look at the portfolio to know more about Alex Frei</source>
         <target>Hãy nhìn vào portfolio để biết thêm về Alex Frei</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/portfolio.component.ts</context>
+          <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -1675,40 +1457,40 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
         <source>Learn more about me.</source>
         <target>Tìm hiểu thêm về tôi.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8389905172455785310" datatype="html">
         <source>View my resume.</source>
         <target>Xem hồ sơ của tôi.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4816634847062468790" datatype="html">
         <source>Explore my portfolio.</source>
         <target>Khám phá portfolio của tôi.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="600135607816560697" datatype="html">
         <source>Take a break and relax.</source>
         <target>Nghỉ ngơi và thư giãn.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5255686146054479472" datatype="html">
         <source>Get in touch with me.</source>
         <target>Liên lạc với tôi.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/header/utils/nav-items.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4457803817113448706" datatype="html">
@@ -1716,59 +1498,23 @@ Tạo một ứng dụng web dành cho “Schule Rotflue” để giúp họ d�
 </source>
         <target>Sở thích của tôi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-hobbies/about-me-hobbies.component.html</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-hobbies/about-me-hobbies.component.html</context>
           <context context-type="linenumber">8,10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="940587807395639833" datatype="html">
-        <source>
-      Focusing on UI/UX design, I craft intuitive user interfaces for optimal user experience. 
-      Creative, technically adept, and user-centric, I enhance interaction and design for maximum efficiency.
-      </source>
-        <target>Tập trung vào thiết kế UI/UX, tôi tạo ra các giao diện trực quan để mang lại trải nghiệp tối ưu cho người dùng .
-Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm trung tâm, tôi nâng cao khả năng tương tác và thiết kế để đạt hiệu quả tối đa.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
-          <context context-type="linenumber">22,25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8386595644548511297" datatype="html">
         <source>The Allrounder-Tool for your Company!</source>
         <target>Công cụ toàn diện dành cho công ty của bạn!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7643796150553263848" datatype="html">
-        <source>Program an “Endless Runner” game with libGDX.</source>
-        <target>Lập trình trò chơi “Endless Runner” với libGDX.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">69</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1536616651371383953" datatype="html">
-        <source>Project “Report-App”</source>
-        <target>Dự án “Report-App”</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6105716291590614939" datatype="html">
-        <source>Further training in Eschlikon at “bingesser huber elektro ag” on fiber optic splices as well as outdoor and indoor installation.</source>
-        <target>Đào tạo thêm về Eschlikon tại “bingesser huber elektro ag” về mối nối cáp quang cũng như lắp đặt ngoài trời và trong nhà.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2573931776396641837" datatype="html">
         <source>Swiming</source>
         <target>Bơi lội</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -1776,7 +1522,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <source>What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it&apos;s the perfect win-win for body and mind.</source>
         <target>Còn gì thư giãn hơn việc được bơi lội một cách sảng khoái? Và bơi lội được coi là như là một môn thể dục, vì vậy đây là sự lựa chọn hoàn hảo nhất cho cơ thể và tinh thần.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -1784,23 +1530,23 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <source>Color</source>
         <target>Màu sắc</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">217</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">210</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984907873245479480" datatype="html">
         <source>Meaning</source>
         <target>Ý nghĩa</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">217</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
+          <context context-type="linenumber">210</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1188841585502022097" datatype="html">
         <source>Oops you lose!</source>
         <target>Rất tiếc, bạn đã thua!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-loose/quantum-quiz-loose.component.html</context>
           <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
@@ -1808,40 +1554,8 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <source>I am one of those people who love the silence of the wilderness, following the call of the birds and experiencing nature as a unique symphony.</source>
         <target>Tôi là một người yêu thích sự tĩnh lặng nhưng cũng thích được thưởng thức tiếng hát líu lo của các loài chim và thích được hoà mình trải nghiệm bản giao hưởng của thiên nhiên đất trời</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/hobbies.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8094203035318077457" datatype="html">
-        <source>
-    As a passionate web developer, I am able to create engaging and fully functional websites. 
-    Whether you need a new website or just want to implement new features, I guarantee first-class quality and user satisfaction.
-      </source>
-        <target>Là một nhà lập trình website đầy nhiệt huyết, tôi có thể tạo các trang web hấp dẫn sinh động với đầy đủ chức năng.
-  Cho dù là bạn cần một trang web mới hoặc chỉ muốn triển khai cập nhật thêm các tính năng, tôi luôn đảm bảo chất lượng và sự hài lòng của người dùng lên hàng đầu.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
-          <context context-type="linenumber">6,9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4899975516988508965" datatype="html">
-        <source>
-    With my experience in the development of mobile and web apps, I create innovative solutions that are tailored to your needs. 
-    I attach great importance to user-friendliness and excellent performance so that the app stands out from the competition.
-      </source>
-        <target>Với kinh nghiệm trong việc phát triển các ứng dụng trên di động và website , tôi tạo ra những giải pháp sáng tạo,phù hợp với nhu cầu dùng của bạn.
-  Tôi cũng rất coi trọng tính lành mạnh đối với người dùng và hiệu năng toàn diện để ứng dụng nổi bật,cạnh tranh cao so với đối thủ.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/services.ts</context>
-          <context context-type="linenumber">14,17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4459582151726446038" datatype="html">
-        <source> Hey, my name is Alex and I&apos;m a passionate software developer who loves to turn ideas into simple and functional solutions. Whether it&apos;s a website, mobile app or server backend, my love for innovation and problem solving drives me to realize every project. Let&apos;s bring your projects to life together! </source>
-        <target> Xin chào, tên tôi là Alex và tôi là một nhà lập trình phần mềm đầy đam mê, tôi thích chuyển hóa ý tưởng thành các giải pháp đơn giản nhưng vẫn thiết thực. Dù đó là website, ứng dụng trên di động hay chương trình hỗ trợ  máy chủ, sự nhiệt huyết trong việc đổi mới và giải quyết các vấn đề là động lực giúp tôi hoàn thành mọi đề tài công việc. Hãy cùng nhau hiện thực hóa các dự án của bạn! </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">7,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2854341657321745191" datatype="html">
@@ -1849,7 +1563,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
 </source>
         <target>Xin vui lòng đợi một lát <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Câu đố sẽ được tạo. Quá trình này thường mất ít hơn 5 giây.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-generate-quiz/quantum-quiz-generate-quiz.component.html</context>
           <context context-type="linenumber">4,8</context>
         </context-group>
       </trans-unit>
@@ -1857,8 +1571,8 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <source>&amp;nbspThe goal is to score more than 60 points without any mistakes!</source>
         <target>&amp;nbsp Mục tiêu là ghi được hơn 60 điểm mà không mắc bất kỳ sai sót nào!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3813774522743670844" datatype="html">
@@ -1866,8 +1580,8 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <target>&amp;nbspNhưng chờ đã, bạn có hơn 60 điểm à?!! Điều đó thật tuyệt vời, có vẻ như bạn là thiên tài!
 </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9033841997412056770" datatype="html">
@@ -1875,7 +1589,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
 </source>
         <target>Dự án khác</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/components/other-projects/other-projects.component.html</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/other-projects/other-projects.component.html</context>
           <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
@@ -1890,7 +1604,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
         <target>ProImageEditor là một tiện ích Flutter được thiết kế để chỉnh sửa hình ảnh. Nó cung cấp một cách linh hoạt và thuận tiện để tích hợp khả năng chỉnh sửa hình ảnh vào các dự án Flutter. Trình chỉnh sửa có khả năng phát hiện lượt truy cập tuyệt vời, đảm bảo rằng các hành động vẽ chỉ được kích hoạt khi người dùng chủ động di chuột qua khu vực vẽ.
   Hơn nữa, trình chỉnh sửa có khả năng tùy biến cao, cho phép thích ứng hoàn toàn với các yêu cầu cụ thể của dự án và cung cấp khả năng dịch thuật dễ dàng, đơn giản hóa quá trình bản địa hóa.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-pro_image_editor.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">9,14</context>
         </context-group>
       </trans-unit>
@@ -1911,7 +1625,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
            &lt;br&gt;&lt;br&gt;
   ứng dụng được cung cấp dưới dạng trình duyệt web cũng như trình duyệt di động dành cho hệ điều hành Android và iOS.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-snaptab.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">8,18</context>
         </context-group>
       </trans-unit>
@@ -1934,7 +1648,7 @@ Sáng tạo, thành thạo về mặt kỹ thuật và lấy người dùng làm
  Trang web được thiết kế tập trung vào hiệu suất và khả năng truy cập, đồng thời nó hoàn toàn đáp ứng, đảm bảo trải nghiệm liền mạch trên tất cả các thiết bị.&lt;br&gt;&lt;br&gt;
 Hầu hết phần UI/UX của dự án này không phải của tôi.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project-waio.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">9,18</context>
         </context-group>
       </trans-unit>
@@ -1947,7 +1661,7 @@ Hầu hết phần UI/UX của dự án này không phải của tôi.</target>
         <target>Một gói tạo hiệu ứng thay đổi số một cách trang nhã, tạo ra sự chuyển tiếp hấp dẫn về mặt trực quan từ giá trị này sang giá trị khác, hoàn hảo để đếm hoặc hiển thị các cập nhật dữ liệu theo thời gian thực.&lt;br&gt;&lt;br&gt;
 Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà như trong thực tế. Điều này là do tôi đã giảm tốc độ khung hình của GIF để tiết kiệm dung lượng lưu trữ.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-count-animation.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">10,14</context>
         </context-group>
       </trans-unit>
@@ -1960,7 +1674,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Gói triển khai hoạt ảnh chính, cho phép người dùng nhấp vào hình ảnh và phóng to chúng một cách mượt mà thành chế độ xem lớn hơn, sống động, nâng cao trải nghiệm người dùng và tương tác với hình ảnh.&lt;br&gt;&lt;br&gt;
   Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà như trong thực tế. Điều này là do tôi đã giảm tốc độ khung hình của GIF để tiết kiệm dung lượng lưu trữ.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-image-hero.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">9,13</context>
         </context-group>
       </trans-unit>
@@ -1973,7 +1687,7 @@ Xin lưu ý rằng bản xem trước bên dưới có thể không mượt mà 
         <target>Gói này triển khai các hoạt ảnh cuộn CSS trên các phần tử. Những hoạt ảnh này kích hoạt khi một phần tử xuất hiện trong khi kéo trang.
 Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kích hoạt nhiều lần hoặc chỉ một lần. Ngoài ra, gói này còn cung cấp các hình ảnh động được tạo sẵn cũng như tùy chọn tạo hình ảnh động tùy chỉnh để phù hợp với các yêu cầu khác nhau.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_ngx-scroll-animations.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">10,14</context>
         </context-group>
       </trans-unit>
@@ -1985,7 +1699,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Dự án này là một ứng dụng quản lý thời gian thực. Người dùng có thể lập trình trực tiếp các chức năng của cổng GPIO mà không cần bất kỳ kiến thức lập trình nào.
  Ngoài ra, người dùng có thể truy cập dữ liệu về tổ ong cá nhân, bao gồm chỉ số nhiệt độ theo thời gian thực và lượng mật ong do ong tạo ra.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/portfolio/utils/projects/project_smarthome.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
           <context context-type="linenumber">9,12</context>
         </context-group>
       </trans-unit>
@@ -1993,7 +1707,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>WhatsApp</source>
         <target>WhatsApp</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
@@ -2001,7 +1715,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>Call</source>
         <target>Gọi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
@@ -2018,7 +1732,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
 </source>
         <target>Làm việc với</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-skills/about-me-skills.component.html</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-skills/about-me-skills.component.html</context>
           <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
@@ -2027,7 +1741,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
 </source>
         <target>Trò chơi nhỏ này nhằm kiểm tra trí não của bạn để xem bạn có thể tập trung vào việc gì đó mà không bị phân tâm đến mức nào. Trò chơi luôn hiển thị cho bạn một mục có tiêu đề “Màu sắc” hoặc “Ý nghĩa” và văn bản màu. Bên dưới đó, bạn sẽ luôn thấy sáu nút được tạo ngẫu nhiên. Mục tiêu của bạn là nhấn đúng nút khớp với tiêu đề và văn bản. Bạn có một phút để ghi càng nhiều điểm càng tốt với càng ít lỗi càng tốt. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Ví dụ: tiêu đề là “Color” và văn bản là “nine” có màu “red”. Trong trường hợp này, bạn nên nhấn nút bên dưới, nút này có màu đỏ. Trường hợp tiêu đề là “Ý nghĩa” bạn nên nhấn vào nút có số “chín”.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">4,15</context>
         </context-group>
       </trans-unit>
@@ -2035,24 +1749,15 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source> Let&apos;s play a <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>mini-game<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> which I created to relax a bit! </source>
         <target>Hãy cùng chơi <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;color-primary&quot;&gt;"/>trò chơi nhỏ<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> để thư giãn một chút!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/relax.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/relax.component.html</context>
           <context context-type="linenumber">5,9</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3050032105384929397" datatype="html">
-        <source> Backend skills
-</source>
-        <target>Backend skills</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
-          <context context-type="linenumber">9,11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4519990428097513339" datatype="html">
         <source>Valid email address is required.</source>
         <target>địa chỉ email hợp lệ là bắt buộc.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
@@ -2060,7 +1765,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>&lt;b&gt;First Name&lt;/b&gt;, &lt;b&gt;Last Name&lt;/b&gt;, and &lt;b&gt;Message&lt;/b&gt; as well as &lt;b&gt;E-Mail&lt;/b&gt; are required.</source>
         <target>Bắt buộc phải có &lt;b&gt;Tên&lt;/b&gt;, &lt;b&gt;Họ&lt;/b&gt; và &lt;b&gt;Tin nhắn&lt;/b&gt; cũng như &lt;b&gt;E-Mail&lt;/b&gt;.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -2068,7 +1773,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>Too many attempts to send the form. Try again later.</source>
         <target>Quá nhiều yêu cầu! Vui lòng thử lại sau.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -2076,37 +1781,20 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via</source>
         <target>Địa chỉ IP của bạn đã bị đưa vào danh sách đen vì bạn đã gửi số lượng yêu cầu cao bất thường đến máy chủ! Nếu những yêu cầu này không được thực hiện với mục đích xấu, vui lòng liên hệ với tôi qua</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/contact-options.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4943998242904350511" datatype="html">
-        <source> Submit </source>
-        <target> Gửi </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/contact/components/contact-form/contact-form.component.html</context>
-          <context context-type="linenumber">73,74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3971100408152984961" datatype="html">
         <source> Next </source>
         <target> Tiếp theo </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-instruction/color-clash-instruction.component.html</context>
           <context context-type="linenumber">29,30</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-instruction/quantum-quiz-instruction.component.html</context>
           <context context-type="linenumber">26,27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8390758753998179871" datatype="html">
-        <source> More knowledge
-</source>
-        <target>Kiến thức thêm</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/resume/components/resume-skills/resume-skills.component.html</context>
-          <context context-type="linenumber">26,28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3649866888162341894" datatype="html">
@@ -2121,12 +1809,12 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>View GitHub Profile</source>
         <target>Xem hồ sơ GitHub</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
-          <context context-type="linenumber">55,56</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">52,53</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">54,55</context>
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8867621810686453432" datatype="html">
@@ -2173,31 +1861,31 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <source>View Location on Google Maps</source>
         <target>Xem vị trí trên Google Maps</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1508691842598131079" datatype="html">
         <source>View npm Profile</source>
         <target>Xem hồ sơ npm</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">66,67</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">64,65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5576844663212850867" datatype="html">
         <source>View Stack-Overflow Profile</source>
         <target>Xem hồ sơ Stack-Overflow</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">79,80</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="542842275323892090" datatype="html">
         <source>Welcome to the Dark Side</source>
         <target>Chào mừng đến với phe Bóng Tối</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-hacker/quantum-quiz-hacker.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-hacker/quantum-quiz-hacker.component.html</context>
           <context context-type="linenumber">17,19</context>
         </context-group>
       </trans-unit>
@@ -2208,7 +1896,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
 Ngay cả khi bạn chưa thành công, việc trở thành một hacker là bước đầu tiên. Để tôi cho bạn một mẹo để thành công.  
 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> &quot;Mở bảng điều khiển trình duyệt và thử nghiệm&quot; </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/relax/games/quantum-quiz/components/quantum-quiz-hacker/quantum-quiz-hacker.component.html</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-hacker/quantum-quiz-hacker.component.html</context>
           <context context-type="linenumber">20,29</context>
         </context-group>
       </trans-unit>
@@ -2216,48 +1904,444 @@ Ngay cả khi bạn chưa thành công, việc trở thành một hacker là bư
         <source>Please wait...</source>
         <target>Vui lòng đợi...</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/toast/toast.service.ts</context>
+          <context context-type="sourcefile">src/app/ui/toast/services/toast.service.ts</context>
           <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2845376991728323788" datatype="html">
         <source>Show certificate</source>
-        <target>Hiển thị chứng chỉ</target>
+        <target>Xem chứng chỉ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2845376991728323788" datatype="html">
-        <source>Show certificate</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="537299382316536743" datatype="html">
         <source>Electrical-Installer certificate</source>
+        <target>Chứng chỉ kỹ thuật viên lắp đặt điện</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">149</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="935438009648073922" datatype="html">
         <source>Certificate of apprenticeship for Certified Electrical-Installer EFZ.</source>
+        <target>Chứng chỉ hoàn thành chương trình học nghề Kỹ thuật viên lắp đặt điện EFZ.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7135687405143043394" datatype="html">
         <source>Show game screenshots</source>
+        <target>Hiển thị ảnh chụp màn hình</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/configs/resume-timeline.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8731184160097155311" datatype="html">
+        <source> Hey, I&apos;m Alex, a passionate software programmer specializing in Flutter and Angular development. I love creating intuitive, high-performance applications and constantly exploring new technologies. </source>
+        <target>Chào bạn, mình là Alex, một lập trình viên phần mềm đam mê chuyên về phát triển Flutter và Angular. Mình thích tạo ra các ứng dụng dễ sử dụng, hiệu suất cao và luôn khám phá những công nghệ mới.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7563035552061651664" datatype="html">
+        <source> Send </source>
+        <target> Gửi </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
+          <context context-type="linenumber">73,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1069523139277190436" datatype="html">
+        <source>Statistics</source>
+        <target>Thống kê</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5047509408992910167" datatype="html">
+        <source> More knowledge </source>
+        <target> Xem thêm kiến thức </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/resume/components/resume-skills/resume-skills.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8890553633144307762" datatype="html">
+        <source>Back</source>
+        <target>Quay lại</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/components/back-btn/back-btn.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7089295473809843771" datatype="html">
+        <source>Snaptab is a smart all-in-one app designed to optimize business administration. From project management and time tracking to invoicing, snaptab automates administrative processes and saves valuable time.</source>
+        <target>Snaptab là ứng dụng thông minh tất cả trong một, được thiết kế để tối ưu hóa việc quản lý doanh nghiệp. Từ quản lý dự án, theo dõi thời gian cho đến lập hóa đơn, Snaptab tự động hóa các quy trình hành chính, giúp bạn tiết kiệm thời gian quý báu.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1468015720862673946" datatype="html">
+        <source>View Details</source>
+        <target>Xem chi tiết</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5960876002172930443" datatype="html">
+        <source>January 2024</source>
+        <target>Tháng 1 năm 2024</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2447580231455435677" datatype="html">
+        <source>Open Source Flutter “pro_image_editor”</source>
+        <target>Dự án mã nguồn mở Flutter "pro_image_editor"</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8827262633538312922" datatype="html">
+        <source>A high-performance open-source image editor for Flutter, featuring multi-threading, CPU control, cropping, rotation, filters, text layers, pixelation, and non-destructive editing.</source>
+        <target>Một trình chỉnh sửa ảnh mã nguồn mở hiệu suất cao dành cho Flutter, hỗ trợ đa luồng, kiểm soát CPU, cắt ảnh, xoay ảnh, bộ lọc, lớp văn bản, hiệu ứng pixel, và chỉnh sửa không phá hủy.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8101110009306585538" datatype="html">
+        <source>December 2023</source>
+        <target>Tháng 12 năm 2023</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3062852020080027538" datatype="html">
+        <source>Open Source Angular Utilities</source>
+        <target>Các tiện ích Angular mã nguồn mở</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4764144103660345602" datatype="html">
+        <source>A set of lightweight libraries for smooth scroll animations, immersive image transitions, and dynamic number effects—enhancing user experience with minimal effort.</source>
+        <target>Bộ thư viện gọn nhẹ cung cấp hiệu ứng cuộn mượt mà, chuyển cảnh hình ảnh sống động và hiệu ứng số động—giúp nâng cao trải nghiệm người dùng một cách dễ dàng.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6142724658615730377" datatype="html">
+        <source>Founded WAIO Applications</source>
+        <target>Thành lập WAIO Applications</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3601714942751873467" datatype="html">
+        <source>Developed various projects, including the company website and a management tool. Created a web app for “Schule Rotflue” to simplify the presentation of their pedagogical concept.</source>
+        <target>Phát triển nhiều dự án khác nhau, bao gồm trang web công ty và công cụ quản lý. Xây dựng ứng dụng web cho “Schule Rotflue” nhằm đơn giản hóa việc trình bày phương pháp giáo dục của họ.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6646159041971297122" datatype="html">
+        <source>Project “Report-App” Ionic version</source>
+        <target>Dự án "Report-App" phiên bản Ionic</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="49329725525943716" datatype="html">
+        <source>I developed a report app with Ionic for craftsmen to simplify report creation and management. Lessons from this project laid the foundation for snaptab’s enhanced features and functionality.</source>
+        <target>Tôi đã phát triển một ứng dụng báo cáo bằng Ionic dành cho các thợ thủ công, giúp đơn giản hóa việc tạo và quản lý báo cáo. Những kinh nghiệm từ dự án này là nền tảng để xây dựng các tính năng và chức năng nâng cao trong Snaptab.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2630043208240739273" datatype="html">
+        <source>Mid-2018</source>
+        <target>Giữa năm 2018</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2853435435266895066" datatype="html">
+        <source>Completed a three-month training in Eschlikon at Bingesser Huber Elektro AG, gaining hands-on experience in fiber optic splicing, as well as outdoor and indoor installations.</source>
+        <target>Hoàn thành khóa đào tạo ba tháng tại Bingesser Huber Elektro AG ở Eschlikon, tích lũy kinh nghiệm thực tế về hàn nối cáp quang cũng như lắp đặt hệ thống điện trong nhà và ngoài trời.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2451039780280121170" datatype="html">
+        <source>Mid-2017</source>
+        <target>Giữa năm 2017</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1202716483531989091" datatype="html">
+        <source>Project “Report-App” Java version</source>
+        <target>Dự án "Report-App" phiên bản Java</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="892376527966652960" datatype="html">
+        <source>My first major project, a simple report app built with Java and libGDX, developed for use at my workplace. It provided valuable experience in mobile development and future projects.</source>
+        <target>Dự án lớn đầu tiên của tôi, một ứng dụng báo cáo đơn giản được xây dựng bằng Java và libGDX, phát triển để sử dụng tại nơi làm việc. Dự án này mang lại cho tôi nhiều kinh nghiệm quý giá trong phát triển ứng dụng di động và là nền tảng cho các dự án sau này.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4643487827540526530" datatype="html">
+        <source>Early 2017</source>
+        <target>Đầu năm 2017</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2798186945549496620" datatype="html">
+        <source>Java Development and Game Programming</source>
+        <target>Lập trình Java và phát triển game</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2234469633707751007" datatype="html">
+        <source>Learned programming with Java and developed an Endless Runner game using libGDX, gaining hands-on experience in game development and software design.</source>
+        <target>Học lập trình Java và phát triển một trò chơi Endless Runner bằng libGDX, tích lũy kinh nghiệm thực tế trong phát triển game và thiết kế phần mềm.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="771534886820878989" datatype="html">
+        <source>Endless Runner game</source>
+        <target>Trò chơi chạy vô tận (Endless Runner)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6481307772259569696" datatype="html">
+        <source>Development screenshots of the “Endless Runner” game that I programmed with libGDX.</source>
+        <target>Ảnh chụp màn hình quá trình phát triển trò chơi "Endless Runner" mà tôi đã lập trình bằng libGDX.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4747510724872125786" datatype="html">
+        <source>Game screen</source>
+        <target>Màn hình trò chơi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5595421027116874228" datatype="html">
+        <source>Elektro Sutter – Electrical Installer</source>
+        <target>Elektro Sutter – Kỹ thuật viên lắp đặt điện</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1143822651746796628" datatype="html">
+        <source>Worked as an electrical installer, service technician, and project manager at Elektro Sutter. In 2018, transitioned to an 80% workload to dedicate more time to programming.</source>
+        <target>Làm việc tại Elektro Sutter với vai trò kỹ thuật viên lắp đặt điện, kỹ thuật viên dịch vụ và quản lý dự án. Năm 2018, chuyển sang làm việc với mức độ 80% để dành nhiều thời gian hơn cho lập trình.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3246093365929712487" datatype="html">
+        <source>Military Training</source>
+        <target>Huấn luyện quân sự</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2002939348668741176" datatype="html">
+        <source>Completed basic training followed by advanced training to achieve the rank of Wachtmeister.</source>
+        <target>Hoàn thành khóa huấn luyện cơ bản, sau đó tiếp tục huấn luyện nâng cao và đạt cấp bậc Wachtmeister (tương đương Hạ sĩ quan).</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4605843931176699734" datatype="html">
+        <source>Brunner &amp; Engler – Electrical Installer</source>
+        <target>Brunner &amp; Engler – Kỹ thuật viên lắp đặt điện</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7937852419963920195" datatype="html">
+        <source>Worked as an electrical installer, gaining hands-on experience in installations and electrical systems.</source>
+        <target>Làm việc ở vị trí kỹ thuật viên lắp đặt điện, tích lũy kinh nghiệm thực tế về lắp đặt và các hệ thống điện.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7319983965373156314" datatype="html">
+        <source>Apprenticeship – Certified Electrical Installer EFZ</source>
+        <target>Học nghề – Chứng chỉ kỹ thuật viên lắp đặt điện EFZ (Chứng chỉ tay nghề Thụy Sĩ)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="726392125931505121" datatype="html">
+        <source>Completed a vocational apprenticeship, earning the EFZ certification as an electrical installer, with practical experience in electrical systems and installations.</source>
+        <target>Hoàn thành chương trình học nghề, nhận chứng chỉ EFZ về kỹ thuật viên lắp đặt điện, tích lũy kinh nghiệm thực tế trong lĩnh vực lắp đặt và hệ thống điện.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8954371642157143595" datatype="html">
+        <source>Elementary School</source>
+        <target>Trường Tiểu học</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2491507272165016031" datatype="html">
+        <source>Completed basic primary education.</source>
+        <target>Hoàn thành chương trình giáo dục tiểu học cơ bản.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1240083553428943202" datatype="html">
+        <source>Just a baby, no coding skills yet!</source>
+        <target>Chỉ là một em bé, chưa biết lập trình đâu nhé!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">188</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1262961095474111527" datatype="html">
+        <source>
+    Crafting fast, responsive, and user-friendly websites with modern frameworks like Angular. Whether it&apos;s a portfolio, 
+    a business site, or a full-fledged web app, I build solutions that stand out.
+      </source>
+        <target>Xây dựng các trang web nhanh, mượt mà và thân thiện với người dùng bằng những framework hiện đại như Angular. Dù là trang portfolio, website doanh nghiệp hay ứng dụng web hoàn chỉnh, tôi đều phát triển những giải pháp nổi bật và hiệu quả.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="linenumber">6,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5256366248509516315" datatype="html">
+        <source>
+    Developing high-performance mobile applications with Flutter or Ionic. I focus on smooth user experiences and cross-platform 
+    compatibility to ensure apps work seamlessly on both iOS and Android.
+      </source>
+        <target>Phát triển các ứng dụng di động hiệu suất cao bằng Flutter hoặc Ionic. Tôi chú trọng vào trải nghiệm người dùng mượt mà và khả năng tương thích đa nền tảng, đảm bảo ứng dụng hoạt động ổn định trên cả iOS và Android.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="linenumber">14,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7356947020592839466" datatype="html">
+        <source>
+      Blending aesthetics with functionality. I create clean UI/UX designs that enhance usability and engage users, 
+      ensuring an intuitive and visually appealing digital experience.
+      </source>
+        <target>Kết hợp hài hòa giữa thẩm mỹ và chức năng. Tôi thiết kế giao diện (UI/UX) tối giản, rõ ràng, nâng cao khả năng sử dụng và thu hút người dùng, đảm bảo mang lại trải nghiệm số trực quan và hấp dẫn.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="linenumber">22,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3264016376354774176" datatype="html">
+        <source>
+        Building scalable and efficient backends with Node.js, Firebase, and Supabase. 
+        From APIs to databases, I make sure everything runs securely and smoothly behind the scenes.
+      </source>
+        <target>Xây dựng hệ thống backend hiệu quả, dễ mở rộng với Node.js, Firebase và Supabase. Từ API đến cơ sở dữ liệu, tôi đảm bảo tất cả đều vận hành ổn định, an toàn và mượt mà phía sau hậu trường.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="linenumber">30,33</context>
         </context-group>
       </trans-unit>
     </body>
