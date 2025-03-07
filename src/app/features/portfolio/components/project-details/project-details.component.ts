@@ -98,9 +98,24 @@ export class ProjectDetailsComponent
   override ngOnInit(): void {
     this.createDetailInfos();
     this.listenScrollAnimation();
+    this.initializeVideoConfigs();
 
     super.ngOnInit();
   }
+  
+  /**
+   * Initializes the video configurations for the component.
+   * If there is exactly one image and it is a video, it adds the 'single-player' class
+   * to the native element of the component.
+   *
+   * @private
+   */
+  private initializeVideoConfigs() {
+    if (this.data().images.length === 1 && this.data().images[0].isVideo) {
+      this.elRef.nativeElement.classList.add('single-player');
+    }
+  }
+
   /**
    * Attaches a scroll event listener to the section's native element and applies a box-shadow
    * to the header's native element when the scroll position is greater than 3 pixels.

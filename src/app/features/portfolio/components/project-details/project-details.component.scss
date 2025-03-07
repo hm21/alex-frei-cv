@@ -29,12 +29,25 @@ article {
 
   padding: 12px;
 }
+
+:host {
+  &.single-player {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+    ::ng-deep{
+      video {
+        max-width: 600px;
+        max-height: 400px;
+      }
+    }
+  }
+}
 .gallery {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-
 }
 
 h3 {
