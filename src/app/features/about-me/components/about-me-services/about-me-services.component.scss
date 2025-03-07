@@ -13,15 +13,6 @@ section {
   }
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-
-  flex-shrink: 0;
-
-  width: 32px;
-  height: 32px;
-}
 .title {
   margin-top: 10px;
   font-size: 1.25rem;
@@ -34,6 +25,20 @@ section {
   color: var(--text-color-secondary);
   line-height: 160%;
 }
+.icon {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding: 6px;
+  border-radius: 4px;
+
+  background-color: var(--color-primary);
+
+  width: 44px;
+  height: 44px;
+}
 
 :host ::ng-deep {
   .icon {
@@ -42,8 +47,7 @@ section {
       height: 100%;
     }
     .fill {
-      transition: fill 300ms ease;
-      fill: var(--color-primary-700);
+      fill: var(--color-light);
     }
   }
 }
