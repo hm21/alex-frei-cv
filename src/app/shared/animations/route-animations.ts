@@ -14,17 +14,25 @@ export const routeAnimation = trigger('routeAnimation', [
       }),
       animate(
         '{{duration}} ease',
-        style({ opacity: 1, transform: '*', transformOrigin: 'top center' }),
+        style({ opacity: '*', transform: '*', transformOrigin: 'top center' }),
       ),
     ],
     { params: { duration: '300ms' } },
   ),
   transition(
-    '* <=> *',
+    '* => ResumePage',
     [
       style({ opacity: 0 }),
-      animate('{{duration}} ease', style({ opacity: 1 })),
+      animate('{{duration}} ease', style({ opacity: '*' })),
     ],
     { params: { duration: '200ms' } },
+  ),
+  transition(
+    '* <=> *',
+    [
+      style({ opacity: 0, transform: 'translateY(20px)' }),
+      animate('{{duration}} ease', style({ opacity: '*', transform: '*' })),
+    ],
+    { params: { duration: '300ms' } },
   ),
 ]);
