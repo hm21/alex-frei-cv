@@ -21,6 +21,9 @@ import { SkillItem } from '../../interfaces/resume.interface';
   imports: [ProgressBarComponent, NgxScrollAnimationsDirective],
   templateUrl: './resume-skills.component.html',
   styleUrl: './resume-skills.component.scss',
+  host: {
+    class: 'af-resume-skills',
+  },
 })
 export class ResumeSkillsComponent implements OnInit {
   private screen = inject(ScreenService);

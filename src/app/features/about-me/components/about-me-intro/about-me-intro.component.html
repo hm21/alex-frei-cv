@@ -4,8 +4,8 @@
   <h1 i18n>Alex Frei</h1>
 
   <p i18n>
-    Hey, I'm Alex, a passionate software programmer specializing in
-    Flutter and Angular development. I love creating intuitive, high-performance
+    Hey, I'm Alex, a passionate software programmer specializing in Flutter and
+    Angular development. I love creating intuitive, high-performance
     applications and constantly exploring new technologies.
   </p>
 </article>
@@ -87,12 +87,14 @@
       </tr>
       <tr>
         <td i18n>Age</td>
-        <td
-          i18n-afTooltip
-          afTooltip="03/21/1995"
-          [ngxCountAnimation]="age()"
-          duration="1_400"
-        ></td>
+        <td>
+          <span
+            i18n-afTooltip
+            afTooltip="03/21/1995"
+            [ngxCountAnimation]="age()"
+            duration="1400"
+          ></span>
+        </td>
       </tr>
     </tbody>
   </table>
