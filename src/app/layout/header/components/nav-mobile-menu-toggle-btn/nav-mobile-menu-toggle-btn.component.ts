@@ -74,6 +74,7 @@ export class NavMobileMenuToggleBtnComponent extends ExtendedComponent {
     backdrop.style.left = '0px';
     backdrop.style.right = '0px';
     backdrop.style.bottom = '0px';
+    backdrop.style.minHeight = '100lvh';
     backdrop.style.position = 'fixed';
 
     backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.33)';
