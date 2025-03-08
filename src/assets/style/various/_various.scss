@@ -1,6 +1,11 @@
 .page-padding {
   display: block;
   padding: var(--page-padding);
+
+  /* Important that the footer have enough space */
+  @media (max-width: 500px) {
+    padding-bottom: 40px;
+  }
 }
 
 #hero-backdrop {
