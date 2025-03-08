@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { relaxRoutes } from './features/relax/relax.routes';
+import { LEGAL_NOTICES_ROUTES } from './features/legal/routes/legal-notices.routes';
+import { RELAX_ROUTES } from './features/relax/relax.routes';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/about-me' },
@@ -25,7 +26,6 @@ export const routes: Routes = [
         (m) => m.PortfolioComponent,
       ),
   },
-  ...relaxRoutes,
   {
     path: 'contact',
     data: { animation: 'ContactPage' },
@@ -34,6 +34,8 @@ export const routes: Routes = [
         (m) => m.ContactComponent,
       ),
   },
+  ...RELAX_ROUTES,
+  ...LEGAL_NOTICES_ROUTES,
   {
     path: '**',
     redirectTo: 'about-me',

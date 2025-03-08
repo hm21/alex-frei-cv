@@ -13,6 +13,7 @@ import { filter, timer } from 'rxjs';
 import { BrowserDetectionService } from './core/services/browser/browser-detection.service';
 import { ImageFormatSupportService } from './core/services/image-manager/image-format-support.service';
 import { ImagePreloaderService } from './core/services/image-manager/image-preloader.service';
+import { FooterComponent } from './layout/footer/footer.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
 import { routeAnimation } from './shared/animations/route-animations';
@@ -24,7 +25,7 @@ import { provideTooltip } from './ui/tooltip/providers/tooltip.provider';
 @Component({
   selector: 'af-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   providers: [
     provideModal(),
     provideToast(),

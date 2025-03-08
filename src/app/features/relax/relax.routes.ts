@@ -4,7 +4,7 @@ import { quantumQuizPlayGuard } from './games/quantum-quiz/guards/quantum-quiz-p
 import { quantumQuizWonGuard } from './games/quantum-quiz/guards/quantum-quiz-won.guard';
 import { QuizManagerService } from './games/quantum-quiz/services/quiz-manager.service';
 
-export const relaxRoutes: Routes = [
+export const RELAX_ROUTES: Routes = [
   {
     path: 'relax',
     children: [

@@ -1,0 +1,32 @@
+@use "various/breakpoints" as breakpoints;
+
+:host {
+  padding: var(--page-padding);
+  display: block;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+address {
+  font-style: normal;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 30px;
+}
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+a {
+  color: black;
+}
+p,
+a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
