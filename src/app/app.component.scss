@@ -3,7 +3,7 @@ $menu-size: 450px;
 :host {
   position: relative;
   display: block;
-  margin-left: $menu-size ;
+  margin-left: $menu-size;
 }
 
 main {
@@ -42,6 +42,7 @@ main,
 }
 
 @media (min-width: 3000px) {
+  .af-footer,
   .theme-helper {
     margin-right: $menu-size;
   }
