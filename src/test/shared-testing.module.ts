@@ -2,7 +2,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import {
   NgModule,
-  provideExperimentalZonelessChangeDetection,
+  provideZonelessChangeDetection
 } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import {
@@ -41,7 +41,7 @@ import '../app/extensions/extensions.loader';
     provideAnimations(),
     provideHttpClient(),
     provideHttpClientTesting(),
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
 
     provideLogger(),
     provideEndpoints(),
