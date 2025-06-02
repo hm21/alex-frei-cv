@@ -16,7 +16,9 @@ export const routes: Routes = [
     path: 'resume',
     data: { animation: 'ResumePage' },
     loadComponent: () =>
-      import('./features/resume/resume.component').then((m) => m.ResumeComponent),
+      import('./features/resume/resume.component').then(
+        (m) => m.ResumeComponent,
+      ),
   },
   {
     path: 'portfolio',

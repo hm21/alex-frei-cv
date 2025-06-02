@@ -1,7 +1,7 @@
 import {
   ApplicationConfig,
   isDevMode,
-  provideExperimentalZonelessChangeDetection,
+  provideZonelessChangeDetection
 } from '@angular/core';
 import {
   provideRouter,
@@ -47,7 +47,7 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([globalHttpErrorHandlerInterceptor]),
     ),
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay(), withIncrementalHydration()),
 
     // Routing
