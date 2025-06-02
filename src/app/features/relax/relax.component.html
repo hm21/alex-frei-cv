@@ -1,39 +1,46 @@
-<section class="section-gap">
-  <h1 i18n>Do you feel tired about checking out a lot of CVs?</h1>
+<h1 i18n>Do you feel tired about checking out a lot of CVs?</h1>
 
-  <h2 i18n>
-    Let's play a <span class="color-primary">mini-game</span> which I created to
-    relax a bit!
-  </h2>
+<h2 i18n>
+  Let's play a <span class="color-primary">mini-game</span> which I created to
+  relax a bit!
+</h2>
 
-  <div class="games">
-    @for (game of games; track $index) {
-      <article>
-        <a [routerLink]="[game.id, { outlets: { state: game.startState } }]">
-          <picture>
-            @for (format of ["avif", "webp", "jpeg"]; track format) {
-              <source
-                srcset="
-                  assets/img/game/{{game.id}}/{{game.id}}_1x.{{format}} 1x,
-                  assets/img/game/{{game.id}}/{{game.id}}_2x.{{format}} 2x,
-                  assets/img/game/{{game.id}}/{{game.id}}_3x.{{format}} 3x,
-                  assets/img/game/{{game.id}}/{{game.id}}_4x.{{format}} 4x
-                "
-                type="image/{{ format }}"
-              />
-            }
-            <img
-              src="assets/img/game/{{ game.id }}/{{ game.id }}_4x.jpeg"
-              [alt]="game.name"
+<div class="games">
+  @for (game of games; track $index) {
+    <a [routerLink]="[game.id, { outlets: { state: game.startState } }]">
+      <div class="img-container">
+        <picture>
+          @for (format of ["avif", "webp", "jpeg"]; track format) {
+            <source
+              srcset="
+                assets/img/game/{{game.id}}/{{game.id}}_1x.{{format}} 1x,
+                assets/img/game/{{game.id}}/{{game.id}}_2x.{{format}} 2x,
+                assets/img/game/{{game.id}}/{{game.id}}_3x.{{format}} 3x,
+                assets/img/game/{{game.id}}/{{game.id}}_4x.{{format}} 4x
+              "
+              type="image/{{ format }}"
             />
-          </picture>
-          <div class="foreground-effect" afCardEffects></div>
-        </a>
+          }
+          <img
+            src="assets/img/game/{{ game.id }}/{{ game.id }}_4x.jpeg"
+            [alt]="game.name"
+          />
+        </picture>
+        <div class="foreground-effect" afCardEffects></div>
+      </div>
 
+      <div class="card-body">
+        <div class="topics">
+          @for (topic of game.topics; track $index) {
+            <div class="chip-round">
+              {{ topic }}
+            </div>
+          }
+        </div>
         <p>
           {{ game.description }}
         </p>
-      </article>
-    }
-  </div>
-</section>
+      </div>
+    </a>
+  }
+</div>
