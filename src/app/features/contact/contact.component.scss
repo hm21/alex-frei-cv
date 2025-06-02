@@ -6,7 +6,6 @@
   color: var(--text-color-primary);
 }
 .contact-options {
-  margin-top: 20px;
   margin-bottom: 50px;
 
   display: grid;
@@ -27,6 +26,13 @@ h2 {
 .fill-secondary {
   transition: fill 300ms ease;
   fill: #cee8fa;
+}
+
+@media (max-width: 409px) {
+  .af-card {
+    border: none;
+    padding: 0px;
+  }
 }
 
 :host-context([data-theme="dark"]) {
