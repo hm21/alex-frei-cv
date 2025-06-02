@@ -1,85 +1,94 @@
-$menu-size: 450px;
+$menu-size: 340px;
 
 :host {
   position: relative;
-  display: block;
-  margin-left: $menu-size;
 }
-
-main {
-  background-image: url(data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEAAAAAAAADhQAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAamlwcnAAAABLaXBjbwAAABNjb2xybmNseAACAAIABoAAAAAMYXYxQ4EkAgAAAAAUaXNwZQAAAAAAAAPoAAACMwAAABBwaXhpAAAAAAMICAgAAAAXaXBtYQAAAAAAAAABAAEEgYIDhAAAA41tZGF0EgAKCjkmfnjLhAgIGkAy9AZEgAAQRzhQARodtG2T6sxgB0OgexXnWS5M4Ysx9HLnR1k4s3tTj5EOpMfndhZjKCMFHz0wT8yiW45akIgzSlVAQtmuMDOzAvQNnYwU05/pIMVgXd9hqIPrdrQdmbo4p2uLoJAnHI6umUwOCLshfRN+tYXHu5tH9f/cQ3hc2mJYUL1rvax7ZA4L9S+/OS2HzHiFI8pGnVnMOk8kh5r66XBsYexwJaEtCyqxitnWLfWPJhi1GUa3d3Wu0W6C8i8ErhzDMqor4vDM6rMXJmbXxtKv1pGD3EaCQOzv4jy0MlKqLqTxBRlB4pwyn7IkXf8Q4KGkUgXARfGCG+0q0zHr4M2dHrqLOBl85xM3TmJxDupmW0o69ZodXgx4JUo5QqUrdbCTgX+BPjbSVBGipQ/uMr1YfJAK/5TBpLlTm9m5QmCqU2so5pJn2R+mukVjChuxPxLpanq1hworzUPN14W19ke7x9IduVD+lfpYEpo1ZGGkuTj/YkIm0J8k1zdMOaTxucKfI8lJ2P/nmv7WQxQxqtI13q1HBym7586j5d2C2PMqrVgEL+ZQ7RWFTp4vWIVqV6zOpSJE/6kTM0JK1f+Udp1N1pP7f40FDhK4eOhlRQ1nG9I3pjAJPV+h/tY5KfISbAZP6hZYDZ2waO4QV2NXMDe5vrkk9xt+4AV0yVW1yCtzQnETAkN808SjdD51pC5LTiRtMIPj8Z1Huc4uDBpGpOOEAZSK+pigy+BM6ND5gVT3pjiy+HaLvA+BI9eFBAp2OSlXvw87pfzcvHf59jVUoPMw0G0sLRuKfmIwqZMBv8JBp4IogkmV0l/kk+X+aNNLsadk5Fyuu23XeeZV6a7MCVP6+zYj7lwcnC4zqKg5IILlP97Q49sCVSXkMeAzhCxsrbJROxI5RCT3GtlHuWeWbxhmWwKLmCwUzYiSQNKDpuQkMJb31Zggk16kcsBc+nArvvB7p53aFbtMbxMbKNXo0yfmr1jCA5Dzru5kKtk3uF5r2kBpuDfDCUsDfGgtY3WZeQzWRpXrDc3kunYNzx1KFOXItMkuHpiUIrPYrR04QwwgvH9A1WjomkdYNOABzH51pRgdANh3TPZjjP48HR8p8i7iGPedMH9v1syYxCCudoUBlJn4AsRE+f2ppJgUORU9jUTANzWpq7xMRZG0YX1aMTiv2l1tVA==);
-
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
-  /* 
-    Mobile browsers often struggle with background-attachment: fixed. Applying a 
-    workaround with transform: translateZ(0); to force hardware acceleration.  
-  */
-  @media (max-width: 1024px) {
-    will-change: transform;
-    transform: translateZ(0);
-  }
-}
-main,
-.theme-helper {
-  min-height: 100vh;
-  min-height: 100lvh;
-}
-.theme-helper {
-  transition: var(--smooth-background);
-  background-color: transparent;
-}
-:host-context([data-theme="dark"]) {
-  .theme-helper {
-    background-color: #000000cf;
-  }
-}
-.af-header {
+aside {
   width: $menu-size;
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
+.af-header {
+  left: $menu-size;
 }
-.af-nav-mobile-menu-toggle-btn {
+.content {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+main {
+  position: relative;
+
+  padding-top: var(--header-height);
+  padding-left: $menu-size;
+
+  width: 100%;
+  display: block;
+}
+
+.backdrop {
   display: none;
 }
+@media (max-width: 959px) {
+  main {
+    padding-left: 0px;
+  }
+  .af-header {
+    left: 0px;
+  }
+  aside {
+    position: fixed;
+    left: unset;
+    right: 0px;
 
-@media (min-width: 3000px) {
-  .af-footer,
-  .theme-helper {
-    margin-right: $menu-size;
+    min-height: 100lvh;
+
+    width: 100%;
+
+    z-index: 1000;
+    transition: opacity 250ms ease;
+    pointer-events: none;
+
+    &.show {
+      pointer-events: all;
+      .backdrop {
+        opacity: 1;
+      }
+
+      .af-profile-banner {
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+        transform: translateX(0);
+      }
+    }
+  }
+  .af-profile-banner {
+    transition-timing-function: ease;
+    transition-duration: 250ms;
+    transition-property: box-shadow, transform;
+
+    box-shadow: 0px 0px 0px transparent;
+    transform: translateX(100%);
+
+    margin-left: auto;
+    width: 340px;
+    max-width: 100vw;
+  }
+  .backdrop {
+    opacity: 0;
+
+    background-color: rgba(0, 0, 0, 0.33);
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
   }
 }
-@media (max-width: 1400px) {
-  $menu-size: 420px;
-  :host {
-    margin-left: $menu-size;
-  }
-  .af-header {
-    width: $menu-size;
-  }
-}
-@media (max-width: 1200px) {
-  $menu-size: 390px;
-  :host {
-    margin-left: $menu-size;
-  }
-  .af-header {
-    width: $menu-size;
-  }
-}
-@media (max-width: 1024px), (max-height: 489px) {
-  :host {
-    margin-left: 0px;
-  }
-  .af-nav-mobile-menu-toggle-btn {
-    display: unset;
-    z-index: 1001;
+@media (max-width: 439px) {
+  .af-profile-banner {
+    width: 100%;
   }
 }

@@ -28,5 +28,10 @@
 
   --page-background-primary: #222222;
 
-  --border-color: #f4f4f4;
+  --border-color: rgb(244, 244, 244, 0.15);
+
+  --header-bg: rgba(22, 22, 22, 1);
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    --header-bg: rgba(22, 22, 22, 0.6);
+  }
 }

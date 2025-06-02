@@ -9,6 +9,10 @@
   --card-radius: 16px;
   --page-padding: 40px;
 
+  --header-filter-bg: saturate(180%) blur(16px);
+  --header-height: 60px;
+  --footer-height: 48px;
+
   @media (max-width: 500px) {
     --page-padding: 20px;
   }

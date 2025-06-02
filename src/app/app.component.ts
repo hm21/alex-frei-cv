@@ -2,6 +2,7 @@ import {
   afterNextRender,
   ChangeDetectionStrategy,
   Component,
+  computed,
   ElementRef,
   inject,
   OnInit,
@@ -16,6 +17,8 @@ import { ImagePreloaderService } from './core/services/image-manager/image-prelo
 import { FooterComponent } from './layout/footer/footer.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
+import { HeaderService } from './layout/header/services/header.service';
+import { ProfileBannerComponent } from './layout/profile-banner/profile-banner.component';
 import { routeAnimation } from './shared/animations/route-animations';
 import { ExtendedComponent } from './shared/components/extended-component';
 import { provideModal } from './ui/modal/utils/modal.provider';
@@ -25,7 +28,12 @@ import { provideTooltip } from './ui/tooltip/providers/tooltip.provider';
 @Component({
   selector: 'af-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    ProfileBannerComponent,
+    FooterComponent,
+  ],
   providers: [
     provideModal(),
     provideToast(),
@@ -47,11 +55,14 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   /** Detect the browser type */
   protected browserDetectionService = inject(BrowserDetectionService);
   protected imageFormat = inject(ImageFormatSupportService);
+  private headerService = inject(HeaderService);
 
   private mainRef = viewChild.required<ElementRef<HTMLElement>>('mainRef');
 
   /** Flag indicating whether route animations should be used. */
   public useRouteAnimations = signal(false);
+
+  public showMobileMenu = computed(() => this.headerService.showMobileMenu());
 
   private readonly accentPath = 'assets/img/background/bg-blue-blur';
 
@@ -115,5 +126,9 @@ export class AppComponent extends ExtendedComponent implements OnInit {
    */
   public getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data.animation;
+  }
+
+  public closeSideMenu(){
+    this.headerService.closeMenu();
   }
 }

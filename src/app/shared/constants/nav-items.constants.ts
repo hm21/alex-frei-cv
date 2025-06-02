@@ -1,10 +1,9 @@
-import { NavItem } from "../../layout/header/interfaces/nav-item.interface";
+import { NavItem } from '../../layout/header/interfaces/nav-item.interface';
 
 /**
  * Array of navigation items.
- * @type {NavItem[]}
  */
-export const NAV_ITEMS: NavItem[] = [
+export const NAV_ITEMS: ReadonlyArray<NavItem> = [
   {
     path: '/about-me',
     name: $localize`About me`,

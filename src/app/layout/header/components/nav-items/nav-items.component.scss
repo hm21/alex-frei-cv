@@ -1,0 +1,63 @@
+$fontSize: clamp(16px, 1rem, 24px);
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  gap: 25px;
+
+  padding: 0px 12px 0px var(--page-padding);
+}
+
+.tabs {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 25px;
+}
+
+.row {
+  gap: 25px;
+}
+
+a {
+  color: var(--text-color-primary);
+
+  font-weight: 500;
+  font-size: $fontSize;
+
+  padding: 8px 0;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 250ms ease;
+
+  &:hover,
+  &.router-link-active {
+    opacity: 1;
+  }
+}
+
+.indicator {
+  position: absolute;
+
+  transition-property: left, width;
+  transition-duration: 240ms;
+  transition-timing-function: ease;
+
+  left: unset;
+  top: 50%;
+
+  border-radius: 2px;
+  margin-top: calc($fontSize / 2 + 3px);
+
+  width: 0px;
+  height: 2px;
+
+  background-color: var(--text-color-primary);
+}

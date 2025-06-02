@@ -1,15 +1,18 @@
 <main #mainRef>
-  <div class="theme-helper">
-    <div
-      [@.disabled]="!useRouteAnimations()"
-      [@routeAnimation]="getRouteAnimationData()"
-      class="container"
-    >
-      <router-outlet />
-    </div>
+  <div
+    [@.disabled]="!useRouteAnimations()"
+    [@routeAnimation]="getRouteAnimationData()"
+    class="container content"
+  >
+    <router-outlet />
   </div>
-  
+
   <af-footer />
 </main>
 
 <af-header />
+
+<aside [class.show]="showMobileMenu()">
+  <div class="backdrop" (click)="closeSideMenu()"></div>
+  <af-profile-banner />
+</aside>

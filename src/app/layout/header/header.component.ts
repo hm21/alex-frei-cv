@@ -1,43 +1,51 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  ElementRef,
-  signal,
-  viewChild,
+  signal
 } from '@angular/core';
+import { distinctUntilChanged, map, startWith } from 'rxjs';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { ProfileBannerComponent } from '../profile-banner/profile-banner.component';
-import { SideNavbarComponent } from '../side-navbar/side-navbar.component';
-import { NavMobileMenuToggleBtnComponent } from './components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
+import { MobileHeaderComponent } from './components/mobile-header/mobile-header.component';
+import { NavItemsComponent } from './components/nav-items/nav-items.component';
 
 @Component({
   selector: 'af-header',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    SideNavbarComponent,
-    ProfileBannerComponent,
-    NavMobileMenuToggleBtnComponent,
+    MobileHeaderComponent,
+    NavItemsComponent,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  host: {
+    class: 'af-header',
+    '[class.shadow]': 'isScrolled()',
+  },
 })
 export class HeaderComponent extends ExtendedComponent {
-  private header = viewChild<ElementRef<HTMLElement>>('header');
-  public toggleBtn = viewChild(NavMobileMenuToggleBtnComponent);
+  protected isScrolled = signal(false);
 
-  /** Flag to control the visibility of the mobile menu. */
-  public showMobileMenu = signal(false);
+  override ngOnInit(): void {
+    this.initializePageScroll();
+    super.ngOnInit();
+  }
 
-  public toggleMenu() {
-    this.showMobileMenu.update((value) => !value);
+  private initializePageScroll() {
+    if (this.isServer) return;
 
-    if (this.showMobileMenu()) {
-      this.header()?.nativeElement.classList.add('show');
-      this.toggleBtn()!.open.set(true);
-    } else {
-      this.header()?.nativeElement.classList.remove('show');
-      this.toggleBtn()!.open.set(false);
-    }
+    this.screen.scroll$
+      .pipe(
+        startWith(null),
+        map(() => {
+          const scrollTop =
+            this.window.scrollY || this.document.documentElement.scrollTop;
+          return scrollTop > 1;
+        }),
+        distinctUntilChanged(),
+      )
+      .subscribe((isScrolled) => {
+        this.isScrolled.set(isScrolled);
+      });
   }
 }

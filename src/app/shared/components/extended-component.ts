@@ -13,7 +13,7 @@ import { LoggerService } from 'src/app/core/services/logger/logger.service';
 import { MetaManagerService } from 'src/app/core/services/meta-manager/meta-manager.service';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ScreenService } from 'src/app/core/services/screen/screen.service';
-import { IS_BROWSER } from '../../core/providers/platform.provider';
+import { IS_BROWSER, IS_SERVER } from '../../core/providers/platform.provider';
 
 @Directive() // Dummy decorator
 /**
@@ -24,6 +24,7 @@ export abstract class ExtendedComponent implements OnInit {
   protected pageMeta?: PageMetaData;
 
   public elRef = inject<ElementRef<HTMLElement>>(ElementRef);
+  public isServer = inject(IS_SERVER);
   public isBrowser = inject(IS_BROWSER);
   protected screen = inject(ScreenService);
   protected analytics = inject(AnalyticsService);

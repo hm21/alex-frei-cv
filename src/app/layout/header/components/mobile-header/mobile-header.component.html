@@ -1,0 +1,33 @@
+<picture class="avatar">
+  @for (format of ["avif", "webp", "png"]; track format) {
+    <source
+      srcset="
+        assets/img/avatar/alex_1x.{{format}} 1x,
+        assets/img/avatar/alex_2x.{{format}} 2x,
+        assets/img/avatar/alex_3x.{{format}} 3x,
+        assets/img/avatar/alex_4x.{{format}} 4x
+      "
+      type="image/{{ format }}"
+    />
+  }
+
+  <img
+    class="avatar"
+    src="assets/img/avatar/alex_4x.png"
+    i18n-alt
+    alt="Alex Frei profile picture"
+  />
+</picture>
+
+<h1>Alex Frei</h1>
+
+<button
+  (click)="toggleMenu()"
+  i18n-aria-label
+  aria-label="Open sidemenu"
+  class="menu-btn mobile-el"
+>
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</button>
