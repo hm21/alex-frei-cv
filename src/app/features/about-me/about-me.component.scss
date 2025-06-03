@@ -1,6 +1,8 @@
 :host {
   padding: var(--page-padding) 0;
   display: block;
+  margin: auto;
+  max-width: 1280px;
 }
 .horizontal-space {
   padding: 0 var(--page-padding);

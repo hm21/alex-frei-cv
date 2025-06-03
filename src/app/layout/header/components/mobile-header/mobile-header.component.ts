@@ -1,14 +1,12 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'af-mobile-header',
-  imports: [],
+  imports: [RouterLink, QuicklinkDirective],
   templateUrl: './mobile-header.component.html',
   styleUrl: './mobile-header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,0 +1,51 @@
+<div class="header">
+  <h2
+    ngxScrollAnimate="fade-in-right"
+    aos="1"
+    duration="400"
+    class="section-title"
+    i18n
+  >
+    Featured Projects
+  </h2>
+
+  <a
+    ngxScrollAnimate="fade-in-left"
+    aos="1"
+    duration="400"
+    routerLink="/portfolio"
+    class="button"
+  >
+    <span i18n>View All Projects</span>
+    <span class="chevron" [innerHTML]="chevronRight | safe"></span>
+  </a>
+</div>
+
+<section>
+  @for (project of projects; track $index) {
+    <div ngxScrollAnimate="fade-in-up-scale" speed="500" aos="0.6" class="card">
+      <picture>
+        <source srcset="{{project.thumbnailPath}}.avif" type="image/avif" />
+        <source srcset="{{project.thumbnailPath}}.webp" type="image/webp" />
+        <source srcset="{{project.thumbnailPath}}.jpeg" type="image/jpeg" />
+
+        <img
+          loading="eager"
+          afImageLoader
+          src="{{ project.thumbnailPath }}.jpeg"
+          [alt]="project.title"
+        />
+      </picture>
+
+      <article>
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.subtitle }}</p>
+
+        <button (click)="openProject(project)" class="button">
+          <span i18n>View details</span>
+          <span class="chevron" [innerHTML]="chevronRight | safe"></span>
+        </button>
+      </article>
+    </div>
+  }
+</section>

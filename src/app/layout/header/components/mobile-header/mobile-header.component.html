@@ -1,25 +1,27 @@
-<picture class="avatar">
-  @for (format of ["avif", "webp", "png"]; track format) {
-    <source
-      srcset="
-        assets/img/avatar/alex_1x.{{format}} 1x,
-        assets/img/avatar/alex_2x.{{format}} 2x,
-        assets/img/avatar/alex_3x.{{format}} 3x,
-        assets/img/avatar/alex_4x.{{format}} 4x
-      "
-      type="image/{{ format }}"
+<a routerLink="/about-me" aria-label="Home">
+  <picture class="avatar">
+    @for (format of ["avif", "webp", "png"]; track format) {
+      <source
+        srcset="
+          assets/img/avatar/alex_1x.{{format}} 1x,
+          assets/img/avatar/alex_2x.{{format}} 2x,
+          assets/img/avatar/alex_3x.{{format}} 3x,
+          assets/img/avatar/alex_4x.{{format}} 4x
+        "
+        type="image/{{ format }}"
+      />
+    }
+
+    <img
+      class="avatar"
+      src="assets/img/avatar/alex_4x.png"
+      i18n-alt
+      alt="Alex Frei profile picture"
     />
-  }
+  </picture>
 
-  <img
-    class="avatar"
-    src="assets/img/avatar/alex_4x.png"
-    i18n-alt
-    alt="Alex Frei profile picture"
-  />
-</picture>
-
-<h1>Alex Frei</h1>
+  <h1>Alex Frei</h1>
+</a>
 
 <button
   (click)="toggleMenu()"

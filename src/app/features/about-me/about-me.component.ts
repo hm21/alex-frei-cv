@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { RecommendedPagesComponent } from 'src/app/shared/components/recommended-pages/recommended-pages.component';
+import { FeaturedProjectsComponent } from '../portfolio/components/featured-projects/featured-projects.component';
 import { ResumeSkillsComponent } from '../resume/components/resume-skills/resume-skills.component';
 import { AboutMeHobbiesComponent } from './components/about-me-hobbies/about-me-hobbies.component';
 import { AboutMeIntroComponent } from './components/about-me-intro/about-me-intro.component';
@@ -18,6 +19,7 @@ import { FactsComponent } from './components/facts/facts.component';
     AboutMeIntroComponent,
     AboutMeServicesComponent,
     AboutMeSkillsComponent,
+    FeaturedProjectsComponent,
     ResumeSkillsComponent,
     FactsComponent,
     RecommendedPagesComponent,

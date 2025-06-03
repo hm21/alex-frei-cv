@@ -101,11 +101,7 @@ td {
     }
   }
 }
-@media (max-width: 1024px) {
-  :host {
-    margin-top: 20px;
-  }
-}
+
 @media (max-width: 359px) {
   article {
     max-width: unset;
