@@ -211,6 +211,8 @@ export class ProjectDetailsComponent
 
     if (this.data().technology) {
       Object.keys(this.data().technology).map((key) => {
+        if (key === 'highlight') return;
+
         const title =
           key === 'frontend'
             ? $localize`Frontend`

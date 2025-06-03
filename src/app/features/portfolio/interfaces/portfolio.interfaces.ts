@@ -7,16 +7,20 @@ export interface ProjectDetails {
   title: string;
   subtitle: string;
   description: string;
+  websiteUrl?: string;
   demoUrl?: string;
+  githubUrl?: string;
   website?: UrlListTemplateI[];
   store?: UrlListTemplateI[];
   install?: string;
   technology: {
+    highlight?: string[];
     frontend?: string[];
     backend?: string[];
     prototype?: string[];
     other?: string[];
   };
+  thumbnailPath?: string;
   images: ModalPreviewItem[];
   video?: SafeResourceUrl;
   gitStats?: {

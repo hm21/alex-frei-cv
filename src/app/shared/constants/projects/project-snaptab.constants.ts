@@ -4,7 +4,7 @@ import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio
 export const PROJECT_SNAPTAB: ProjectDetails = {
   logo: svgLogo,
   title: 'snaptab',
-  subtitle: $localize`The Allrounder-Tool for your Company!`,
+  subtitle: $localize`A smart web and mobile app for craftsmen with time tracking, scheduling, invoicing, and Stripe payments.`,
   description: $localize`
         The application snaptab was primarily developed for craftsmen and
         offers a wide range of features. From time tracking to scheduling
@@ -18,6 +18,7 @@ export const PROJECT_SNAPTAB: ProjectDetails = {
         Android and iOS.
         `,
   demoUrl: 'https://app.snaptab.ch/demo',
+  websiteUrl: 'https://snaptab.ch',
   website: [
     {
       url: 'https://snaptab.ch',
@@ -55,6 +56,7 @@ export const PROJECT_SNAPTAB: ProjectDetails = {
     },
   ],
   technology: {
+    highlight: ['Angular', 'Flutter', 'Firebase', 'Typesense', 'Supabase'],
     frontend: ['Angular', 'Flutter', 'Typescript', 'Dart', 'HTML', 'SCSS'],
     backend: [
       'Firebase',
@@ -68,6 +70,7 @@ export const PROJECT_SNAPTAB: ProjectDetails = {
     prototype: ['Ionic', 'Java', 'libGDX'],
     other: ['Figma', 'Lucidchart', 'Stripe', 'OpenAI-API', 'Github-Actions'],
   },
+  thumbnailPath: 'assets/img/projects/snaptab/thumbnail/thumbnail',
   images: [
     {
       path: 'assets/img/projects/snaptab/dashboard/dashboard',

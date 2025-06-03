@@ -4,7 +4,7 @@ import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio
 export const PROJECT_WAIO: { type: string } & ProjectDetails = {
   type: $localize`Website`,
   title: 'waio',
-  subtitle: $localize`Presentation website from the company waio Applications.`,
+  subtitle: $localize`My company site featuring two hidden games, an image conversion tool, and a fast, accessible, fully responsive design.`,
   logo: svgLogo,
   description: $localize`
     This website introduces WAIO Applications, my own company. Alongside information about my company, 
@@ -43,6 +43,8 @@ export const PROJECT_WAIO: { type: string } & ProjectDetails = {
       backgroundColor: '#060B29',
     },
   ],
+  thumbnailPath: 'assets/img/projects/waio/thumbnail/thumbnail',
+  websiteUrl: 'https://waio.ch',
   website: [
     {
       title: $localize`Website`,
@@ -54,6 +56,7 @@ export const PROJECT_WAIO: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
+    highlight: ['Angular', 'Firebase', 'Figma'],
     frontend: ['Angular', 'Typescript', 'HTML', 'SCSS'],
     backend: ['Firebase', 'Node.js'],
     other: ['Figma'],
