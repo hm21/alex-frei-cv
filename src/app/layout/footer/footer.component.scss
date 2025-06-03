@@ -1,16 +1,22 @@
 :host {
+  display: block;
+
+  font-size: 0.8rem;
+
+  border-top: 1px solid var(--border-color);
+}
+
+.page-container {
+  padding: 0px var(--page-padding);
+}
+
+footer {
+  height: var(--footer-height);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 32px;
   row-gap: 7px;
-  padding: 0px var(--page-padding);
-
-  height: var(--footer-height);
-
-  font-size: 0.8rem;
-
-  border-top: 1px solid var(--border-color);
 }
 
 a {

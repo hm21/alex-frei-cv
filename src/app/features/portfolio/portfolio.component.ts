@@ -32,6 +32,9 @@ import { ProjectDetails } from './interfaces/portfolio.interfaces';
   ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
+  host: {
+    class: 'page-container',
+  },
 })
 export class PortfolioComponent extends ExtendedComponent implements OnInit {
   protected override pageMeta: PageMetaData = {

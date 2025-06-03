@@ -2,7 +2,6 @@
 @use "various/breakpoints" as breakpoints;
 :host {
   padding: var(--page-padding);
-  display: block;
 }
 
 article {

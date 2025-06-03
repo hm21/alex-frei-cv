@@ -26,6 +26,9 @@ import { FactsComponent } from './components/facts/facts.component';
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
+  host: {
+    class: 'page-container',
+  },
 })
 export class AboutMeComponent extends ExtendedComponent {
   protected override pageMeta: PageMetaData = {

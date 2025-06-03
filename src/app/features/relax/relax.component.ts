@@ -3,7 +3,7 @@ import {
   Component,
   OnInit,
   afterNextRender,
-  inject
+  inject,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
@@ -20,6 +20,9 @@ import { CardEffectsDirective } from 'src/app/shared/directives/card-effects/car
   imports: [RouterLink, QuicklinkDirective, CardEffectsDirective],
   templateUrl: './relax.component.html',
   styleUrl: './relax.component.scss',
+  host: {
+    class: 'page-container',
+  },
 })
 export class RelaxComponent extends ExtendedComponent implements OnInit {
   public games = GAMES;

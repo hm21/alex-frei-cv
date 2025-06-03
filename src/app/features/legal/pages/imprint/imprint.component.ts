@@ -7,6 +7,9 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.scss'],
   standalone: true,
+  host: {
+    class: 'page-container',
+  },
 })
 export class ImprintComponent extends ExtendedComponent {
   protected override pageMeta: PageMetaData = {
