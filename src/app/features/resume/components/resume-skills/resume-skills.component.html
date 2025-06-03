@@ -31,11 +31,10 @@
   >
     More knowledge
   </h2>
-  <ul class="chip-list">
+
+  <div class="more-knowledge-grid">
     @for (item of knowledge; track $index) {
-      <li ngxScrollAnimate="fade-in-up-scale" class="chip">
-        {{ item }}
-      </li>
+      <af-resume-skill-card ngxScrollAnimate="fade-in-up-scale" [item]="item" />
     }
-  </ul>
+  </div>
 </article>

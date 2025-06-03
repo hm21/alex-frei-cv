@@ -13,12 +13,18 @@ import {
   KNOWLEDGE,
 } from 'src/app/shared/constants/resume/resume-skills.constants';
 import { SkillItem } from '../../interfaces/resume.interface';
+import { Knowledge } from '../../types/resume.types';
+import { ResumeSkillCardComponent } from '../resume-skill-card/resume-skill-card.component';
 
 @Component({
   selector: 'af-resume-skills',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ProgressBarComponent, NgxScrollAnimationsDirective],
+  imports: [
+    ProgressBarComponent,
+    ResumeSkillCardComponent,
+    NgxScrollAnimationsDirective,
+  ],
   templateUrl: './resume-skills.component.html',
   styleUrl: './resume-skills.component.scss',
   host: {
@@ -36,17 +42,17 @@ export class ResumeSkillsComponent implements OnInit {
   /**
    * An array of frontend skills.
    */
-  protected frontendSkills: SkillItem[] = FRONTEND_SKILLS;
+  protected readonly frontendSkills: ReadonlyArray<SkillItem> = FRONTEND_SKILLS;
 
   /**
    * An array of backend skills.
    */
-  protected backendSkills: SkillItem[] = BACKEND_SKILLS;
+  protected readonly backendSkills: ReadonlyArray<SkillItem> = BACKEND_SKILLS;
 
   /**
    * An array of knowledge areas.
    */
-  protected knowledge = KNOWLEDGE;
+  protected readonly knowledge: ReadonlyArray<Knowledge> = KNOWLEDGE;
 
   ngOnInit(): void {
     this.staggerDelay =
