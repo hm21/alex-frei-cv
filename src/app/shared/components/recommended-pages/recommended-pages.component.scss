@@ -54,7 +54,7 @@ a {
 
   &:active {
     transform: scale(0.95);
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0) !important;
   }
 }
 

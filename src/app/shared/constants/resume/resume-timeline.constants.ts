@@ -2,8 +2,10 @@ import { ResumeTimelineItem } from 'src/app/features/resume/interfaces/resume.in
 import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/project-pro_image_editor.constants';
 import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
 import { PROJECT_WAIO } from 'src/app/shared/constants/projects/project-waio.constants';
+import { PROJECT_PRO_VIDEO_EDITOR } from '../projects/project-pro_video_editor.constants';
+import { PROJECT_UMAMIHOUSE } from '../projects/project_umamihouse';
 
-export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
+export const RESUME_TIMELINE_ITEMS: ReadonlyArray<ResumeTimelineItem> = [
   {
     date: $localize`2021 - Today`,
     title: $localize`Project “snaptab”`,
@@ -14,8 +16,28 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
     },
   },
   {
+    date: $localize`June 2025`,
+    title: `Umami House`,
+    msg: $localize`A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design`,
+    more: {
+      label: $localize`View Details`,
+      projectDetails: PROJECT_UMAMIHOUSE,
+    },
+  },
+  {
+    date: $localize`Mai 2025`,
+    title: `Flutter “pro_video_editor”`,
+    msg: $localize`A cross-platform video editor built with Flutter and native code integration, offering powerful features such as trimming, cropping, and visual effects. Designed for high performance and native-like user experience on Android, iOS, macOS, Windows, and the Web.`,
+    more: {
+      label: $localize`View Details`,
+      projectDetails: PROJECT_PRO_VIDEO_EDITOR,
+    },
+    enableGitStats: true,
+    repoName: 'pro_video_editor',
+  },
+  {
     date: $localize`January 2024`,
-    title: $localize`Open Source Flutter “pro_image_editor”`,
+    title: `Flutter “pro_image_editor”`,
     msg: $localize`A high-performance open-source image editor for Flutter, featuring multi-threading, CPU control, cropping, rotation, filters, text layers, pixelation, and non-destructive editing.`,
     more: {
       label: $localize`View Details`,
@@ -59,13 +81,11 @@ export const RESUME_TIMELINE_ITEMS: ResumeTimelineItem[] = [
       },
     },
   },
-  /* 
   {
-    date: $localize`October 24, 2022`,
-    title: $localize`Married`,
-    msg: $localize`Married with my wife in Vietnam.`,
+    date: $localize`2021`,
+    title: $localize`Rotflue School Educational Concept`,
+    msg: $localize`A digital prototype of the educational concept that is accessible online. Parents can inform themselves at any time about the educational principles and goals, which promotes greater transparency and trust. At the same time, teachers have the opportunity to edit the concept directly online, adapt content, and collaboratively develop it further.`,
   },
-  */
   {
     date: $localize`2020`,
     title: $localize`Founded WAIO Applications`,

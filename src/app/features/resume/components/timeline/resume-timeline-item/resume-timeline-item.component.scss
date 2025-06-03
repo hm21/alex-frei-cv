@@ -45,7 +45,7 @@ $folding-space: 33px;
   width: 100%;
 }
 .card-content {
-  padding: 20px;
+  padding: 0 20px 20px;
 }
 
 .sonar-container {
@@ -95,7 +95,7 @@ button {
   font-size: 0.9rem;
 
   padding: 0 3px 0 7px;
-  margin: 10px 0 0 0;
+  margin: 20px 0 0 0;
 
   transition:
     background-color 250ms ease,
@@ -126,16 +126,18 @@ button {
 h2 {
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 .git-repo-stats,
 p {
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
   line-height: 160%;
 }
 .git-repo-stats{
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
 @keyframes sonarAnimation {
@@ -150,5 +152,5 @@ p {
 }
 
 .sonar-animation {
-  animation: sonarAnimation ease;
+  animation: sonarAnimation ease 1400ms;
 }

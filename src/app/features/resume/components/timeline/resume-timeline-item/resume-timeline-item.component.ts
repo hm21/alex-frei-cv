@@ -100,6 +100,7 @@ export class ResumeTimelineItemComponent
         throttleTime(50),
         filter(() => !this.sonarClassList.contains('sonar-animation')),
         tap(() => {
+          console.log('enter')
           this.mouseEnter$.next();
           this.sonarClassList.add('sonar-animation');
         }),

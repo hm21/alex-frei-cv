@@ -4,7 +4,7 @@ import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio
 export const PROJECT_UMAMIHOUSE: { type: string } & ProjectDetails = {
   type: $localize`Website`,
   title: 'Umami House',
-  subtitle: $localize`A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design`,
+  subtitle: $localize`A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design.`,
   logo: svgLogo,
   description: $localize`Umami House is a stylish and fully responsive website developed for a sushi and bubble tea bar located in the heart of Zurich. 
   The site was designed to reflect the brand’s focus on high-quality ingredients, modern presentation, and a welcoming atmosphere. 

@@ -1,21 +1,17 @@
-$height: 3rem;
 $padding: 1.5rem;
-$color: var(--color-primary-700);
+$color: var(--text-color-primary);
 
 :host {
-  height: $height;
   width: 100%;
 
-  text-align: center;
   border-radius: var(--card-radius) var(--card-radius) 0 0;
-  background-color: $color;
 
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 0.86rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
+  padding: 16px 20px 12px;
 
   display: grid;
-  place-content: center;
   position: relative;
 
   &::after {
@@ -23,7 +19,7 @@ $color: var(--color-primary-700);
     position: absolute;
     transform: translateY(-50%);
 
-    top: calc($height / 2);
+    top: 24px;
     width: 0;
     height: 0;
     border-top: 7px solid transparent;
