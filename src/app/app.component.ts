@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import {
   afterNextRender,
   ChangeDetectionStrategy,
@@ -56,6 +57,7 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   protected browserDetectionService = inject(BrowserDetectionService);
   protected imageFormat = inject(ImageFormatSupportService);
   private headerService = inject(HeaderService);
+  private viewportScroller = inject(ViewportScroller);
 
   private mainRef = viewChild.required<ElementRef<HTMLElement>>('mainRef');
 
@@ -85,6 +87,9 @@ export class AppComponent extends ExtendedComponent implements OnInit {
       ?.setAttribute('data-theme', this.isBrowser ? getTheme() : 'light');
 
     this.checkBackgroundSupport();
+    if (this.isBrowser) {
+      this.viewportScroller.setOffset([0, 60]); // Set offset for fixed header
+    }
 
     super.ngOnInit();
   }
@@ -128,7 +133,7 @@ export class AppComponent extends ExtendedComponent implements OnInit {
     return this.contexts.getContext('primary')?.route?.snapshot?.data.animation;
   }
 
-  public closeSideMenu(){
+  public closeSideMenu() {
     this.headerService.closeMenu();
   }
 }
