@@ -3,6 +3,7 @@ $menu-size: 340px;
 :host {
   position: relative;
 }
+
 aside {
   width: $menu-size;
 
@@ -10,14 +11,17 @@ aside {
   left: 0px;
   top: 0px;
   bottom: 0px;
+  z-index: 1000;
 }
 
 .af-header {
   left: $menu-size;
 }
+
 .content {
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
+
 main {
   position: relative;
 
@@ -31,6 +35,7 @@ main {
 .backdrop {
   display: none;
 }
+
 @media (max-width: 959px) {
   main {
     padding-left: 0px;
