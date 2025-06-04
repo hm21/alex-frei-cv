@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   padding: 8px 8px 8px var(--page-padding);
 }
 
@@ -30,6 +30,12 @@ a {
 h1 {
   white-space: nowrap;
   font-size: clamp(16px, 2rem, 38px);
+
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  transform-origin: center left;
 }
 
 .menu-btn {
