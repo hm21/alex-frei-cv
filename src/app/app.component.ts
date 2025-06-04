@@ -4,14 +4,12 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
-  ElementRef,
   inject,
   OnInit,
-  signal,
-  viewChild,
+  signal
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
-import { filter, timer } from 'rxjs';
+import { timer } from 'rxjs';
 import { BrowserDetectionService } from './core/services/browser/browser-detection.service';
 import { ImageFormatSupportService } from './core/services/image-manager/image-format-support.service';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -55,14 +53,10 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   private headerService = inject(HeaderService);
   private viewportScroller = inject(ViewportScroller);
 
-  private mainRef = viewChild.required<ElementRef<HTMLElement>>('mainRef');
-
   /** Flag indicating whether route animations should be used. */
   public useRouteAnimations = signal(false);
 
   public showMobileMenu = computed(() => this.headerService.showMobileMenu());
-
-  private readonly accentPath = 'assets/img/background/bg-blue-blur';
 
   constructor() {
     super();
@@ -72,37 +66,17 @@ export class AppComponent extends ExtendedComponent implements OnInit {
   }
 
   override ngOnInit(): void {
-    /**
-     * Sets the default application theme.
-     * If using Server-Side Rendering (SSR) and not just pre-rendering, we can set a cookie
-     * to ensure the correct theme (light or dark) is applied directly on the server-side.
-     * On the client side (browser), we dynamically fetch and apply the user’s theme preference.
-     */
+    // Sets the default application theme.
     this.document
       .querySelector('html')
       ?.setAttribute('data-theme', this.isBrowser ? getTheme() : 'light');
 
-    this.checkBackgroundSupport();
     if (this.isBrowser) {
-      this.viewportScroller.setOffset([0, 60]); // Set offset for fixed header
+      // Set offset for fixed header
+      this.viewportScroller.setOffset([0, 60]);
     }
 
     super.ngOnInit();
-  }
-
-  private checkBackgroundSupport() {
-    this.imageFormat.supportCheck
-      .pipe(
-        filter(() => !this.imageFormat.isAvifSupported),
-        this.destroyPipe(),
-      )
-      .subscribe(() => {
-        const alternativeFormat = this.imageFormat.isWebpSupported
-          ? 'webp'
-          : 'jpeg';
-
-        this.mainRef().nativeElement.style.backgroundImage = `url("${this.accentPath}.${alternativeFormat}")`;
-      });
   }
 
   private afterAppIsStable(): void {
