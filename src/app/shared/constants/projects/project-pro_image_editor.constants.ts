@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgLogo from 'src/assets/img/projects/pro_image_editor/pro_image_editor-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
+  id: 'proImageEditor',
   type: $localize`Flutter open source`,
   title: 'pro_image_editor',
   subtitle: $localize`A powerful, customizable Flutter image editor with multi-threading, localization, and a rich set of editing tools.`,

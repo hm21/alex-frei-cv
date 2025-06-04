@@ -9,7 +9,7 @@
   @for (game of games; track $index) {
     <a [routerLink]="[game.id, { outlets: { state: game.startState } }]">
       <div class="img-container">
-        <picture>
+        <picture [afThumbnailBase64]="game.id | relaxThumbnail">
           @for (format of ["avif", "webp", "jpeg"]; track format) {
             <source
               srcset="
@@ -22,8 +22,9 @@
             />
           }
           <img
-            src="assets/img/game/{{ game.id }}/{{ game.id }}_4x.jpeg"
+            loading="lazy"
             [alt]="game.name"
+            src="assets/img/game/{{ game.id }}/{{ game.id }}_4x.jpeg"
           />
         </picture>
         <div class="foreground-effect" afCardEffects></div>

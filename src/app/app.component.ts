@@ -14,7 +14,6 @@ import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { filter, timer } from 'rxjs';
 import { BrowserDetectionService } from './core/services/browser/browser-detection.service';
 import { ImageFormatSupportService } from './core/services/image-manager/image-format-support.service';
-import { ImagePreloaderService } from './core/services/image-manager/image-preloader.service';
 import { FooterComponent } from './layout/footer/footer.component';
 import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
 import { HeaderComponent } from './layout/header/header.component';
@@ -49,9 +48,6 @@ import { provideTooltip } from './ui/tooltip/providers/tooltip.provider';
 export class AppComponent extends ExtendedComponent implements OnInit {
   /** Angular context for children outlets. */
   private contexts = inject(ChildrenOutletContexts);
-
-  /** Preload images with ServiceWorker */
-  private imagePreloader = inject(ImagePreloaderService);
 
   /** Detect the browser type */
   protected browserDetectionService = inject(BrowserDetectionService);
@@ -113,8 +109,6 @@ export class AppComponent extends ExtendedComponent implements OnInit {
     if (this.isBrowser) {
       // Make sure that the page animation will not fail when the page is opened for the first time.
       timer(1).subscribe(() => this.useRouteAnimations.set(true));
-      // Preload all global images
-      this.imagePreloader.startPreloadGlobalImages();
       // Log website visit
       this.analytics.websiteVisit();
     }

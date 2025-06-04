@@ -12,12 +12,20 @@ import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { GAMES } from 'src/app/shared/constants/games.constants';
 import { CardEffectsDirective } from 'src/app/shared/directives/card-effects/card-effects.directive';
+import { ThumbnailBase64Directive } from 'src/app/shared/directives/thumbnail-base64/thumbnail-base64.directive';
+import { RelaxThumbnailPipe } from './pipes/relax-thumbnail.pipe';
 
 @Component({
   selector: 'af-relax',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, QuicklinkDirective, CardEffectsDirective],
+  imports: [
+    RouterLink,
+    RelaxThumbnailPipe,
+    QuicklinkDirective,
+    CardEffectsDirective,
+    ThumbnailBase64Directive,
+  ],
   templateUrl: './relax.component.html',
   styleUrl: './relax.component.scss',
   host: {

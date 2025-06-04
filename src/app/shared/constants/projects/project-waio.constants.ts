@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgLogo from 'src/assets/img/projects/waio/waio-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_WAIO: { type: string } & ProjectDetails = {
+  id: 'waio',
   type: $localize`Website`,
   title: 'waio',
   subtitle: $localize`My company site featuring two hidden games, an image conversion tool, and a fast, accessible, fully responsive design.`,

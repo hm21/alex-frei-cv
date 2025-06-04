@@ -1,7 +1,5 @@
 import { Injectable, inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-import { CONTACT_OPTIONS } from 'src/app/shared/constants/contact-options.constants';
-import { GAMES } from 'src/app/shared/constants/games.constants';
 import { WINDOW } from '../../providers/window.provider';
 import { LoggerService } from '../logger/logger.service';
 import { ImageFormatSupportService } from './image-format-support.service';
@@ -22,28 +20,6 @@ export class ImagePreloaderService {
    */
   public get preferredImageFormat() {
     return this.imageFormat;
-  }
-
-  /**
-   * Preloads images that are globally required.
-   */
-  public async startPreloadGlobalImages() {
-    await this.checkBestSupportedImageFormat();
-
-    const urls = [];
-
-    for (const item of GAMES) {
-      urls.push(
-        `assets/img/game/${item.id}/${item.id}_${this.devicePixelRatio}x`,
-      );
-    }
-    for (const item of CONTACT_OPTIONS) {
-      urls.push(
-        `assets/img/contact/${item.id}/${item.id}_${this.devicePixelRatio}x`,
-      );
-    }
-
-    this.preloadUrls(urls, true);
   }
 
   /**

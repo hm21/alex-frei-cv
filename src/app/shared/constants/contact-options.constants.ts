@@ -1,3 +1,5 @@
+import { ContactCard } from 'src/app/features/contact/types/contact-card.type';
+
 export const CONTACT_EMAIL = 'alex.frei@hotmail.ch';
 
 export const CONTACT_MESSAGES = {
@@ -11,7 +13,7 @@ export const CONTACT_MESSAGES = {
   blacklist: $localize`Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via`,
 };
 
-export const CONTACT_OPTIONS = [
+export const CONTACT_OPTIONS: ReadonlyArray<ContactCard> = [
   {
     id: `whatsapp`,
     title: $localize`WhatsApp`,

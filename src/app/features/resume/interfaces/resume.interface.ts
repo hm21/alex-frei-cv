@@ -1,6 +1,6 @@
 import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
 import { ModalImagePreviewData } from 'src/app/ui/modal/utils/modal.interface';
-import { ProjectDetails } from '../../portfolio/interfaces/portfolio.interfaces';
+import { ProjectDetails } from '../../portfolio/types/project.type';
 
 /**
  * Represents an item in the resume timeline.

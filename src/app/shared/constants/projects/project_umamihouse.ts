@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgLogo from 'src/assets/img/projects/umamihouse/umamihouse-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_UMAMIHOUSE: { type: string } & ProjectDetails = {
+  id: 'umamihouse',
   type: $localize`Website`,
   title: 'Umami House',
   subtitle: $localize`A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design.`,

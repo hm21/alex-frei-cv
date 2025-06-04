@@ -1,8 +1,9 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
-  type: $localize`Angular open source`,
+  id:'ngxCountAnimation'
+,  type: $localize`Angular open source`,
   title: 'ngx-count-animation',
   subtitle: $localize`A package for smooth, animated number transitions, ideal for counters and real-time data updates.`,
   logo: svgOpenSource,

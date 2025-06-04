@@ -30,7 +30,7 @@
         <source srcset="{{project.thumbnailPath}}.jpeg" type="image/jpeg" />
 
         <img
-          loading="eager"
+          loading="lazy"
           afImageLoader
           src="{{ project.thumbnailPath }}.jpeg"
           [alt]="project.title"
@@ -41,9 +41,9 @@
         <h1>{{ project.title }}</h1>
         <p>{{ project.subtitle }}</p>
 
-        <button (click)="openProject(project)" class="button">
-          <span i18n>View details</span>
-          <span class="chevron" [innerHTML]="chevronRight | safe"></span>
+        <button (click)="openProject(project)" class="btn-stroke">
+          <div i18n>View Details</div>
+          <span [innerHTML]="chevronRight | safe"></span>
         </button>
       </article>
     </div>

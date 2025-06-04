@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgLogo from 'src/assets/img/projects/pro_image_editor/pro_image_editor-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_PRO_VIDEO_EDITOR: { type: string } & ProjectDetails = {
+  id: 'proVideoEditor',
   type: $localize`Flutter open source`,
   title: 'pro_video_editor',
   subtitle: $localize`A native-code Flutter video editor with trimming, cropping, and effects across platforms.`,

@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgLogo from 'src/assets/img/projects/snaptab/snaptab-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_SNAPTAB: ProjectDetails = {
+  id: 'snaptab',
   logo: svgLogo,
   title: 'snaptab',
   subtitle: $localize`A smart web and mobile app for craftsmen with time tracking, scheduling, invoicing, and Stripe payments.`,

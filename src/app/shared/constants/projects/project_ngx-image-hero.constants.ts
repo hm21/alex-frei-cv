@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
+  id: 'ngxImageHero',
   type: $localize`Angular open source`,
   title: 'ngx-image-hero',
   subtitle: $localize`A package for smooth hero animations, letting users tap images to zoom into an immersive full-screen view.`,

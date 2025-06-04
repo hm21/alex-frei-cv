@@ -19,7 +19,7 @@ import { PROJECT_SMART_HOME } from 'src/app/shared/constants/projects/project_sm
 import { PROJECT_UMAMIHOUSE } from 'src/app/shared/constants/projects/project_umamihouse';
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { ProjectDetails } from './interfaces/portfolio.interfaces';
+import { ProjectDetails } from './types/project.type';
 
 @Component({
   selector: 'af-portfolio',

@@ -1,7 +1,8 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgSmarthome from 'src/assets/img/projects/smarthome/smarthome-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_SMART_HOME: { type: string } & ProjectDetails = {
+  id:'smarthome',
   type: $localize`IoT`,
   title: 'smarthome',
   subtitle: $localize`A real-time control app for managing GPIO ports and monitoring personal beehives, with no coding required.`,

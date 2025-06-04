@@ -26,7 +26,7 @@
 </a>
 
 <ng-template #imgRef>
-  <picture>
+  <picture [afThumbnailBase64]="id() | contactCardThumbnail">
     @for (format of ["avif", "webp", "jpeg"]; track format) {
       <source
         srcset="
@@ -38,6 +38,10 @@
         type="image/{{ format }}"
       />
     }
-    <img alt="" src="assets/img/contact/{{ id() }}/{{ id() }}_4x.jpeg" />
+    <img
+      loading="lazy"
+      alt=""
+      src="assets/img/contact/{{ id() }}/{{ id() }}_4x.jpeg"
+    />
   </picture>
 </ng-template>

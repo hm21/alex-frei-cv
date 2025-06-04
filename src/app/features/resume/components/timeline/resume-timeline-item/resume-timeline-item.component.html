@@ -28,7 +28,7 @@
     </p>
 
     @if (more()) {
-      <button (click)="showMore()">
+      <button class="btn-stroke" (click)="showMore()">
         {{ more()?.label }}
         <span [innerHTML]="chevronRightIcon | safe"></span>
       </button>

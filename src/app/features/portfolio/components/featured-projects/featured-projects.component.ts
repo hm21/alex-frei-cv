@@ -13,7 +13,7 @@ import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snapt
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import svgChevronRight from 'src/assets/img/icon/chevron-right.svg';
-import { ProjectDetails } from '../../interfaces/portfolio.interfaces';
+import { ProjectDetails } from '../../types/project.type';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';
 
 @Component({

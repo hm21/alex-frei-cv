@@ -1,8 +1,9 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
   {
+    id: 'ngxScrollAnimations',
     type: $localize`Angular open source`,
     title: 'ngx-scroll-animations',
     subtitle: $localize`A CSS scroll animation package with customizable or pre-built effects that trigger on viewport entry, once or multiple times.`,

@@ -1,11 +1,10 @@
-<picture>
+<picture [afThumbnailBase64]="project().id | projectThumbnail">
   <source srcset="{{project().thumbnailPath}}.avif" type="image/avif" />
   <source srcset="{{project().thumbnailPath}}.webp" type="image/webp" />
   <source srcset="{{project().thumbnailPath}}.jpeg" type="image/jpeg" />
 
   <img
-    loading="eager"
-    afImageLoader
+    loading="lazy"
     src="{{ project().thumbnailPath }}.jpeg"
     [alt]="project().title"
   />

@@ -1,8 +1,10 @@
 import { SafeHtml, SafeResourceUrl } from '@angular/platform-browser';
 import { ModalPreviewItem } from 'src/app/ui/modal/utils/modal.interface';
+import { ProjectId } from './project-id.type';
 
 /** Interface for project details. */
-export interface ProjectDetails {
+export type ProjectDetails = {
+  id: ProjectId;
   logo?: SafeHtml;
   title: string;
   subtitle: string;
@@ -29,7 +31,7 @@ export interface ProjectDetails {
      */
     repoName: string;
   };
-}
+};
 
 /** Interface for URL list template items. */
 export interface UrlListTemplateI {
