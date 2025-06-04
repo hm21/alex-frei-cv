@@ -1,12 +1,10 @@
 import { DOCUMENT, inject, Injectable, signal } from '@angular/core';
-import { WINDOW } from 'src/app/core/providers/window.provider';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HeaderService {
   private document = inject(DOCUMENT);
-  private window = inject(WINDOW);
 
   /** Flag to control the visibility of the mobile menu. */
   public showMobileMenu = signal(false);
