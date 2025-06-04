@@ -82,12 +82,12 @@ export const RESUME_TIMELINE_ITEMS: ReadonlyArray<ResumeTimelineItem> = [
     },
   },
   {
-    date: $localize`2021`,
+    date: `2021`,
     title: $localize`Rotflue School Educational Concept`,
     msg: $localize`A digital prototype of the educational concept that is accessible online. Parents can inform themselves at any time about the educational principles and goals, which promotes greater transparency and trust. At the same time, teachers have the opportunity to edit the concept directly online, adapt content, and collaboratively develop it further.`,
   },
   {
-    date: $localize`2020`,
+    date: `2020`,
     title: $localize`Founded WAIO Applications`,
     msg: $localize`Developed various projects, including the company website and a management tool. Created a web app for “Schule Rotflue” to simplify the presentation of their pedagogical concept.`,
     more: {
@@ -96,7 +96,7 @@ export const RESUME_TIMELINE_ITEMS: ReadonlyArray<ResumeTimelineItem> = [
     },
   },
   {
-    date: $localize`2018 - 2019`,
+    date: `2018 - 2019`,
     title: $localize`Project “Report-App” Ionic version`,
     msg: $localize`I developed a report app with Ionic for craftsmen to simplify report creation and management. Lessons from this project laid the foundation for snaptab’s enhanced features and functionality.`,
   },
