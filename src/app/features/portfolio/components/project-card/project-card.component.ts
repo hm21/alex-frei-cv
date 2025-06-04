@@ -22,6 +22,9 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
   styleUrl: './project-card.component.scss',
   imports: [SafePipe, ProjectThumbnailPipe, ThumbnailBase64Directive],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'card-hover-shadow',
+  },
 })
 export class ProjectCardComponent {
   /** Modal manager service for opening project details. */

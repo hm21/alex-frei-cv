@@ -2,8 +2,6 @@ $padding: 1.5rem;
 $color: var(--text-color-primary);
 
 :host {
-  width: 100%;
-
   border-radius: var(--card-radius) var(--card-radius) 0 0;
 
   font-size: 0.86rem;
@@ -27,18 +25,5 @@ $color: var(--text-color-primary);
 
     left: -12px;
     border-right: 12px solid $color;
-  }
-}
-
-@media (min-width: 1280px) {
-  :host-context([reversed]) {
-    :host {
-      &::after {
-        left: unset;
-        right: -12px;
-        border-left: 12px solid $color;
-        border-right: unset;
-      }
-    }
   }
 }

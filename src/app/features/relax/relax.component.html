@@ -7,7 +7,10 @@
 
 <div class="games">
   @for (game of games; track $index) {
-    <a [routerLink]="[game.id, { outlets: { state: game.startState } }]">
+    <a
+      class="card-hover-shadow"
+      [routerLink]="[game.id, { outlets: { state: game.startState } }]"
+    >
       <div class="img-container">
         <picture [afThumbnailBase64]="game.id | relaxThumbnail">
           @for (format of ["avif", "webp", "jpeg"]; track format) {

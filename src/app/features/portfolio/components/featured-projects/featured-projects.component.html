@@ -23,7 +23,7 @@
 
 <section>
   @for (project of projects; track $index) {
-    <div ngxScrollAnimate="fade-in-up-scale" speed="500" aos="0.6" class="card">
+    <div ngxScrollAnimate="fade-in-up-scale" speed="500" aos="0.6" class="card card-hover-shadow">
       <picture>
         <source srcset="{{project.thumbnailPath}}.avif" type="image/avif" />
         <source srcset="{{project.thumbnailPath}}.webp" type="image/webp" />

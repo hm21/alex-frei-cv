@@ -2,29 +2,9 @@ $divider-space: 25px;
 $folding-space: 33px;
 
 :host {
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 50%;
-  margin-left: auto;
-
-  @media (min-width: 1280px) {
-    &[reversed] {
-      flex-direction: row-reverse;
-      padding-right: unset;
-      margin-left: unset;
-
-      .af-card {
-        margin-left: 0px;
-        margin-right: $divider-space;
-      }
-    }
-  }
-  @media (max-width: 1279px) {
-    width: 100%;
-    margin-top: 68px;
-    margin-left: unset;
-  }
+  display: block;
+  margin-top: 40px;
+  margin-left: unset;
 
   .af-card {
     margin-left: $divider-space;
@@ -35,15 +15,19 @@ $folding-space: 33px;
       margin-bottom: 0px;
     }
   }
+
+  @media (min-width: 960px) {
+    padding-right: 20px;
+  }
 }
 
 .af-card {
   padding: 0px;
+
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
-.card {
-  width: 100%;
-}
 .card-content {
   padding: 0 20px 20px;
 }
@@ -57,7 +41,6 @@ $folding-space: 33px;
 .dot {
   position: absolute;
   top: 1.5rem;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 .sonar {
