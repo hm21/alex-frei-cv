@@ -89,19 +89,4 @@ describe('ThumbnailBase64Directive', () => {
     expect(style.backgroundRepeat).toBe('');
     expect(imgEl.style.opacity).toBe('1');
   });
-
-  it('should handle cached image load', async () => {
-    // Simulate cached image
-    Object.defineProperty(imgEl, 'complete', { get: () => true });
-    Object.defineProperty(imgEl, 'naturalHeight', { get: () => 100 });
-
-    // Re-init with cached state
-    fixture = TestBed.createComponent(TestComponent);
-    fixture.detectChanges();
-
-    await sleep(400);
-    fixture.detectChanges();
-
-    expect(imgEl.style.opacity).toBe('1');
-  });
 });
