@@ -6,7 +6,6 @@ import { NgxCountService } from 'ngx-count-animation';
 import { NgxScrollAnimationsService } from 'ngx-scroll-animations';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { AppComponent } from './app.component';
-import { NavMobileMenuToggleBtnComponent } from './layout/header/components/nav-mobile-menu-toggle-btn/nav-mobile-menu-toggle-btn.component';
 import { HeaderComponent } from './layout/header/header.component';
 
 describe('AppComponent', () => {
@@ -18,7 +17,6 @@ describe('AppComponent', () => {
       imports: [
         AppComponent,
         HeaderComponent,
-        NavMobileMenuToggleBtnComponent,
         SharedTestingModule
       ],
       providers: [

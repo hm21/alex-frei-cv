@@ -2,7 +2,6 @@
 @use "various/breakpoints" as breakpoints;
 :host {
   padding: var(--page-padding);
-  display: block;
 }
 
 article {
@@ -41,15 +40,15 @@ h3 {
 
   svg {
     transform: rotate(-45deg);
-    fill: black;
+    fill: var(--text-color-primary);
   }
 }
 
 .privacy-card {
   box-sizing: border-box;
   overflow: hidden;
-  border: 1px solid #b5b5b5;
-  background-color: white !important;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background) !important;
   border-radius: 7px;
   margin: 0 auto 30px;
   width: 100%;
@@ -69,8 +68,6 @@ h3 {
     padding 200ms ease;
   padding: 0 30px;
   &:hover {
-    background-color: color.adjust(#f5f5f5, $lightness: -5%);
-
     .chain-url {
       opacity: 1;
     }
@@ -91,8 +88,7 @@ table {
 }
 th {
   text-align: left;
-  background: #e8eaed;
-  color: black;
+  color: var(--text-color-primary);
   height: 32px;
   padding: 8px;
   vertical-align: middle;
@@ -143,7 +139,7 @@ td {
     line-height: 150%;
   }
   a {
-    color: black;
+    color: var(--text-color-primary);
     text-decoration: underline;
   }
   h4 {
@@ -153,5 +149,8 @@ td {
   ul {
     margin-top: 0.25rem;
     padding-left: 26px;
+  }
+  .drop-down-icon {
+    fill: var(--text-color-primary);
   }
 }

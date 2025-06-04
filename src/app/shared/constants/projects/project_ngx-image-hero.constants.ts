@@ -1,10 +1,11 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
+  id: 'ngxImageHero',
   type: $localize`Angular open source`,
   title: 'ngx-image-hero',
-  subtitle: $localize`Easy way that images will fly to the middle of the screen for presentation.`,
+  subtitle: $localize`A package for smooth hero animations, letting users tap images to zoom into an immersive full-screen view.`,
   logo: svgOpenSource,
   description: $localize`
     A package to implement hero animations, allowing users to click on images and smoothly zoom them into a larger, 
@@ -21,6 +22,8 @@ export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
     },
   ],
   demoUrl: 'https://ngx-hm21.web.app/image-hero',
+  githubUrl: 'https://github.com/hm21/ngx-image-hero',
+  thumbnailPath: 'assets/img/projects/ngx-image-hero/thumbnail/thumbnail',
   website: [
     {
       title: $localize`Github-Page`,
@@ -28,6 +31,7 @@ export const PROJECT_NGX_IMAGE_HERO: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
+    highlight: ['Angular', 'Typescript', 'HTML'],
     frontend: ['Angular', 'Typescript', 'HTML', 'CSS'],
   },
 };

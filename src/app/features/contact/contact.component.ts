@@ -13,6 +13,9 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
   imports: [CardComponent, ContactCardComponent, ContactFormComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
+  host: {
+    class: 'page-container',
+  },
 })
 export class ContactComponent extends ExtendedComponent implements OnInit {
   public readonly contactOptions = CONTACT_OPTIONS;

@@ -1,0 +1,49 @@
+<picture [afThumbnailBase64]="project().id | projectThumbnail">
+  <source srcset="{{project().thumbnailPath}}.avif" type="image/avif" />
+  <source srcset="{{project().thumbnailPath}}.webp" type="image/webp" />
+  <source srcset="{{project().thumbnailPath}}.jpeg" type="image/jpeg" />
+
+  <img
+    loading="lazy"
+    src="{{ project().thumbnailPath }}.jpeg"
+    [alt]="project().title"
+  />
+</picture>
+
+<section>
+  <article>
+    <h1>{{ project().title }}</h1>
+    <p>{{ project().subtitle }}</p>
+
+    <div class="technologies">
+      @for (technology of project().technology.highlight; track $index) {
+        <span class="chip-round">{{ technology }}</span>
+      }
+    </div>
+  </article>
+
+  <footer>
+    <button class="button" (click)="openProject()">
+      <span class="icon" [innerHtml]="iconView | safe"></span>
+      <span i18n>Details</span>
+    </button>
+    @if (project().githubUrl) {
+      <a class="button outline" [href]="project().githubUrl" target="_blank">
+        <span class="icon github" [innerHtml]="iconGithub | safe"></span>
+        <span i18n>View Code</span>
+      </a>
+    }
+    @if (project().websiteUrl) {
+      <a class="button outline" [href]="project().websiteUrl" target="_blank">
+        <span class="icon website" [innerHtml]="iconWebsite | safe"></span>
+        <span i18n>Website</span>
+      </a>
+    }
+    @if (project().demoUrl) {
+      <a class="button outline" [href]="project().demoUrl" target="_blank">
+        <span class="icon demo" [innerHtml]="iconDemo | safe"></span>
+        <span i18n>Demo</span>
+      </a>
+    }
+  </footer>
+</section>

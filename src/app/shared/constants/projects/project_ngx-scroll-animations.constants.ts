@@ -1,11 +1,12 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
   {
+    id: 'ngxScrollAnimations',
     type: $localize`Angular open source`,
     title: 'ngx-scroll-animations',
-    subtitle: $localize`Add automatic scroll animations to an angular 9+ app.`,
+    subtitle: $localize`A CSS scroll animation package with customizable or pre-built effects that trigger on viewport entry, once or multiple times.`,
     logo: svgOpenSource,
     description: $localize`
     A package for implementing CSS scroll animations on elements. These animations activate when an element enters the viewport during page scrolling. 
@@ -22,6 +23,9 @@ export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
       },
     ],
     demoUrl: 'https://ngx-hm21.web.app/scroll-animations',
+    githubUrl: 'https://github.com/hm21/ngx-scroll-animations',
+    thumbnailPath:
+      'assets/img/projects/ngx-scroll-animations/thumbnail/thumbnail',
     website: [
       {
         title: $localize`Github-Page`,
@@ -29,6 +33,7 @@ export const PROJECT_NGX_SCROLL_ANIMATIONS: { type: string } & ProjectDetails =
       },
     ],
     technology: {
+      highlight: ['Angular', 'Typescript', 'HTML'],
       frontend: ['Angular', 'Typescript', 'HTML', 'SCSS'],
     },
   };

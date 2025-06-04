@@ -28,6 +28,9 @@ import { ToastService } from 'src/app/ui/toast/services/toast.service';
     ]),
   ],
   imports: [NgTemplateOutlet, RouterLink],
+  host: {
+    class: 'page-container',
+  },
 })
 export class PrivacyComponent extends ExtendedComponent implements OnInit {
   private route = inject(ActivatedRoute);
@@ -78,7 +81,7 @@ export class PrivacyComponent extends ExtendedComponent implements OnInit {
       cannot be guaranteed by e-mail.`,
       visible: false,
     },
-   {
+    {
       id: 'logfiles',
       title: `Logfiles`,
       text: `
@@ -110,7 +113,7 @@ export class PrivacyComponent extends ExtendedComponent implements OnInit {
       </ul>
       `,
       visible: false,
-    }, /* 
+    } /* 
     {
       id: 'rightsOfTheDataSubject',
       title: `Rights of the person concerned`,
@@ -154,7 +157,7 @@ export class PrivacyComponent extends ExtendedComponent implements OnInit {
       that we are not processing your personal data lawfully.
       `,
       visible: false,
-    }, */
+    }, */,
     {
       id: 'dataCollection',
       title: `Data collection`,

@@ -24,10 +24,7 @@ import { Modal } from 'src/app/ui/modal/modal.base';
 import { ToastService } from 'src/app/ui/toast/services/toast.service';
 import svgIconCopy from 'src/assets/img/icon/copy.svg';
 import svgIconGlobe from 'src/assets/img/icon/globe.svg';
-import {
-  ProjectDetails,
-  UrlListTemplateI,
-} from '../../interfaces/portfolio.interfaces';
+import { ProjectDetails, UrlListTemplateI } from '../../types/project.type';
 
 @Component({
   selector: 'af-project-details',
@@ -211,6 +208,8 @@ export class ProjectDetailsComponent
 
     if (this.data().technology) {
       Object.keys(this.data().technology).map((key) => {
+        if (key === 'highlight') return;
+
         const title =
           key === 'frontend'
             ? $localize`Frontend`

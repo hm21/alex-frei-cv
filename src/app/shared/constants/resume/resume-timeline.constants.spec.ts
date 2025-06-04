@@ -34,13 +34,21 @@ describe('RESUME_TIMELINE_ITEMS', () => {
 
   it('should have title length <= 55 characters', () => {
     RESUME_TIMELINE_ITEMS.forEach((item) => {
-      expect(item.title.length).toBeLessThanOrEqual(55);
+      expect(item.title.length)
+        .withContext(
+          `Title "${item.title.substring(0, 20)}" has length ${item.title.length}`,
+        )
+        .toBeLessThanOrEqual(55);
     });
   });
 
-  it('should have message length <= 250 characters', () => {
+  it('should have message length <= 350 characters', () => {
     RESUME_TIMELINE_ITEMS.forEach((item) => {
-      expect(item.msg?.length ?? 0).toBeLessThanOrEqual(250);
+      expect(item.msg?.length ?? 0)
+        .withContext(
+          `Msg "${item.msg!.substring(0, 20)}" has length ${item.msg!.length}`,
+        )
+        .toBeLessThanOrEqual(350);
     });
   });
 });

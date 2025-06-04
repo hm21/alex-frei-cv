@@ -60,6 +60,9 @@ import { ImageLoaderDirective } from '../../directives/image-loader/image-loader
       border: 1px solid var(--border-color);
     }
   `,
+  host: {
+    class: 'af-image-video-chooser',
+  },
 })
 export class ImageVideoChooserComponent {
   public item = input.required<ModalPreviewItem>();

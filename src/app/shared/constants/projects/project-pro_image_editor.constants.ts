@@ -1,17 +1,17 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgLogo from 'src/assets/img/projects/pro_image_editor/pro_image_editor-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
+  id: 'proImageEditor',
   type: $localize`Flutter open source`,
   title: 'pro_image_editor',
-  subtitle: $localize`A Flutter widget designed for image editing on any device.`,
+  subtitle: $localize`A powerful, customizable Flutter image editor with multi-threading, localization, and a rich set of editing tools.`,
   logo: svgLogo,
-  description: $localize`
-    The ProImageEditor is a Flutter widget designed for image editing. It provides a flexible and convenient way to integrate image editing capabilities 
-    into Flutter projects. The editor has a great hit detection ensuring that drawing actions are triggered only when the user actively hovers over the drawing area. 
-    Furthermore, the editor is highly customizable, allowing for complete adaptation to specific project requirements, and it offers effortless translation capabilities, 
-    simplifying the localization process.<br/>
-    Of course, the editor also supports multi-threading, where it run in dart native as isolated task and in the web inside web workers.
+  description: $localize`The ProImageEditor is a versatile Flutter widget that enables seamless image editing within applications. 
+  It offers a comprehensive suite of tools, including painting, text insertion, cropping, filtering, and more. <br/>
+  The editor supports multi-threading through Dart isolates and web workers, ensuring efficient performance across platforms.<br/>
+  With customizable UI elements, localization support, and various design themes, ProImageEditor provides developers with a 
+  flexible and user-friendly solution for integrating image editing capabilities into their Flutter projects. 
     `,
   gitStats: {
     repoName: 'pro_image_editor',
@@ -88,7 +88,9 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
       backgroundColor: '#000000',
     }, */
   ],
+  thumbnailPath: 'assets/img/projects/pro_image_editor/thumbnail/thumbnail',
   demoUrl: 'https://hm21.github.io/pro_image_editor',
+  githubUrl: 'https://github.com/hm21/pro_image_editor',
   website: [
     {
       title: `pub.dev`,
@@ -101,7 +103,8 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
   ],
   install: 'flutter pub add pro_image_editor',
   technology: {
-    frontend: ['Flutter', 'Dart'],
+    highlight: ['Flutter', 'Dart', 'Kotlin'],
+    frontend: ['Flutter', 'Dart', 'Kotlin'],
     other: ['Github-Actions'],
   },
 };

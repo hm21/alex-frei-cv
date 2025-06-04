@@ -2,6 +2,7 @@
   "name": "functions",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
+    "update": "rmdir /s /q node_modules && del /f /q package-lock.json && npm i",
     "build": "tsc",
     "build:watch": "tsc --watch",
     "serve": "npm run build && firebase emulators:start --only functions",
@@ -15,18 +16,18 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "axios": "^1.7.7",
-    "firebase-admin": "^12.6.0",
-    "firebase-functions": "^6.0.1",
+    "axios": "^1.9.0",
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^6.3.2",
     "node-telegram-bot-api": "^0.66.0",
-    "openai": "^4.68.1"
+    "openai": "^5.0.2"
   },
   "devDependencies": {
-    "@types/node-telegram-bot-api": "^0.64.7",
-    "eslint": "^9.13.0",
+    "@types/node-telegram-bot-api": "^0.64.8",
+    "eslint": "^9.28.0",
     "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.3.0",
-    "typescript": "^5.5.4"
+    "firebase-functions-test": "^3.4.1",
+    "typescript": "^5.8.3"
   },
   "private": true
 }

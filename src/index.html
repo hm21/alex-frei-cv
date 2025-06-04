@@ -152,6 +152,16 @@
       crossorigin="anonymous"
     />
 
+    <!-- Theme loader -->
+    <script>
+      (function () {
+        try {
+          const theme = localStorage.getItem("theme") || "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (_) {}
+      })();
+    </script>
+
     <!-- Dynamic generated -->
   </head>
   <body id="body">

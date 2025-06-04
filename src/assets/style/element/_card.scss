@@ -1,0 +1,19 @@
+.card-hover-shadow {
+  transition-property: border, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0);
+  border: 1px solid var(--border-color);
+
+  &:hover {
+    box-shadow: 2px 2px 10px var(--border-color);
+    border: 1px solid transparent;
+  }
+}
+[data-theme="dark"] {
+  .card-hover-shadow {
+    &:hover {
+      border: 1px solid var(--border-color);
+    }
+  }
+}

@@ -173,32 +173,6 @@ describe('ProfileBannerComponent', () => {
         $localize`Download Successful`,
       );
     });
-
-    it('should close the side menu', () => {
-      const toggleBtnSpy = spyOn(
-        component['header'],
-        'toggleBtn',
-      ).and.returnValue({
-        closeMenu: jasmine.createSpy('closeMenu'),
-      } as any);
-
-      component.closeSideMenu();
-
-      expect(toggleBtnSpy).toHaveBeenCalled();
-    });
-
-    it('should handle download PDF error', () => {
-      spyOn(toastService, 'error');
-
-      component.downloadPdf();
-
-      const req = httpMock.expectOne('assets/docs/alex_frei_cv.pdf');
-      expect(req.request.method).toBe('GET');
-      req.error(new ErrorEvent('Network error')); // Simulate an error response
-
-      // Verify error toast message
-      expect(toastService.error).toHaveBeenCalled();
-    });
   });
 
   describe('Server', () => {

@@ -47,14 +47,14 @@ a {
 
   border-radius: 8px;
 
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
   transition:
     transform 200ms ease,
     box-shadow 200ms ease;
 
   &:active {
     transform: scale(0.95);
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0) !important;
   }
 }
 

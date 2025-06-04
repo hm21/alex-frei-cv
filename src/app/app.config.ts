@@ -1,6 +1,7 @@
 import {
   ApplicationConfig,
   isDevMode,
+  provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection
 } from '@angular/core';
 import {
@@ -48,6 +49,7 @@ export const appConfig: ApplicationConfig = {
       withInterceptors([globalHttpErrorHandlerInterceptor]),
     ),
     provideZonelessChangeDetection(),
+    provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay(), withIncrementalHydration()),
 
     // Routing

@@ -1,20 +1,28 @@
 :host {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 20px;
-  row-gap: 7px;
-  padding: 10px var(--page-padding);
+  display: block;
 
   font-size: 0.8rem;
+
+  border-top: 1px solid var(--border-color);
+}
+
+.page-container {
+  padding: 0px var(--page-padding);
+}
+
+footer {
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  row-gap: 7px;
 }
 
 a {
-  color: var(--color-primary-800);
+  color: var(--text-color-primary);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

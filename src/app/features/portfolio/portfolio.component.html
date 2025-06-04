@@ -3,6 +3,13 @@
   All the projects listed below were both designed and coded exclusively by me.
 </p>
 
-<af-business-projects class="section-gap" />
-<af-other-projects class="section-gap" />
+@for (project of projects; track $index) {
+  <af-project-card
+    ngxScrollAnimate="fade-in-up"
+    aos="120"
+    thresholdMode="pixel"
+    [project]="project"
+  />
+}
+
 <af-recommended-pages activeId="portfolio" />

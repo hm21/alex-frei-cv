@@ -6,8 +6,12 @@
 
   --animation-duration: 220ms;
   --smooth-background: background-color 200ms ease;
-  --card-radius: 16px;
+  --card-radius: 12px;
   --page-padding: 40px;
+
+  --header-filter-bg: saturate(180%) blur(16px);
+  --header-height: 60px;
+  --footer-height: 48px;
 
   @media (max-width: 500px) {
     --page-padding: 20px;

@@ -22,7 +22,7 @@ import svgIconX from 'src/assets/img/icon/social/x.svg';
 import { NAV_ITEMS } from '../../shared/constants/nav-items.constants';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderService } from '../header/services/header.service';
 
 @Component({
   selector: 'af-profile-banner',
@@ -52,11 +52,11 @@ export class ProfileBannerComponent
   /** Handles HTTP requests */
   private http = inject(HttpClient);
 
-  /** Manages header component */
-  private header = inject(HeaderComponent);
 
   /** Displays toast notifications */
   private toast = inject(ToastService);
+
+  private headerService = inject(HeaderService);
 
   /**
    * Reference to the container for navigation items.
@@ -90,7 +90,7 @@ export class ProfileBannerComponent
   }
 
   public closeSideMenu() {
-    this.header.toggleBtn()?.closeMenu();
+    this.headerService.closeMenu();
   }
 
   /**
@@ -123,7 +123,7 @@ export class ProfileBannerComponent
   private checkMobileMenuItems() {
     if (!this.isBrowser) return;
 
-    if (this.window.innerWidth <= 1024 || this.window.innerHeight <= 489) {
+    if (this.window.innerWidth <= 959) {
       if (this.navItemsRef().length <= 0) this.createNavItems();
       if (this.languageContainerRef().length === 0) {
         this.languageContainerRef().createComponent(LanguageSwitchComponent);

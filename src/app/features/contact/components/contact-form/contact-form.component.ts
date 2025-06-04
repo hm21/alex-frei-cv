@@ -53,7 +53,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   private endpoints = inject(ENDPOINTS);
 
   /** The reactive form group for the contact form. */
-  public form = new FormGroup({
+  public form =  new FormGroup({
     givenName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
     familyName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
     message: new FormControl('', ExtendedValidators.requiredNonWhitespace),

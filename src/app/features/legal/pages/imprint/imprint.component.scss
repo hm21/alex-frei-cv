@@ -2,7 +2,6 @@
 
 :host {
   padding: var(--page-padding);
-  display: block;
 }
 .row {
   display: flex;
@@ -23,7 +22,8 @@ h2 {
   font-weight: bold;
 }
 a {
-  color: black;
+  color: var(--text-color-primary);
+  text-decoration: underline;
 }
 p,
 a {

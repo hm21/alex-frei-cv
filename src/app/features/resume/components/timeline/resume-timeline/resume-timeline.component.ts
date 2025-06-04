@@ -32,7 +32,7 @@ export class ResumeTimelineComponent implements OnInit {
   /**
    * An array of resume timeline items.
    */
-  public items: ResumeTimelineItem[] = RESUME_TIMELINE_ITEMS;
+  public readonly items: ReadonlyArray<ResumeTimelineItem> = RESUME_TIMELINE_ITEMS;
 
   protected readonly starIcon = svgStar;
   protected readonly forkIcon = svgFork;

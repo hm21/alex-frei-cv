@@ -20,3 +20,9 @@
   background-color: #12293a99;
   backdrop-filter: saturate(180%) blur(8px);
 }
+
+[data-theme="dark"] {
+  .frosted-glass {
+    background-color: #0a141cb3 !important;
+  }
+}

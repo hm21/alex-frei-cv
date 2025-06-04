@@ -4,10 +4,8 @@
 </div>
 
 <af-card
-  class="card"
-  [ngxScrollAnimate]="
-    isReversed() && isMultiRowDesign() ? 'fade-in-right' : 'fade-in-left'
-  "
+  class="card-hover-shadow"
+  ngxScrollAnimate="fade-in-left"
   thresholdMode="pixel"
   aos="100"
   duration="400"
@@ -28,7 +26,7 @@
     </p>
 
     @if (more()) {
-      <button (click)="showMore()">
+      <button class="btn-stroke" (click)="showMore()">
         {{ more()?.label }}
         <span [innerHTML]="chevronRightIcon | safe"></span>
       </button>

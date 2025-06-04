@@ -2,29 +2,9 @@ $divider-space: 25px;
 $folding-space: 33px;
 
 :host {
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 50%;
-  margin-left: auto;
-
-  @media (min-width: 1280px) {
-    &[reversed] {
-      flex-direction: row-reverse;
-      padding-right: unset;
-      margin-left: unset;
-
-      .af-card {
-        margin-left: 0px;
-        margin-right: $divider-space;
-      }
-    }
-  }
-  @media (max-width: 1279px) {
-    width: 100%;
-    margin-top: 68px;
-    margin-left: unset;
-  }
+  display: block;
+  margin-top: 40px;
+  margin-left: unset;
 
   .af-card {
     margin-left: $divider-space;
@@ -35,17 +15,21 @@ $folding-space: 33px;
       margin-bottom: 0px;
     }
   }
+
+  @media (min-width: 960px) {
+    padding-right: 20px;
+  }
 }
 
 .af-card {
   padding: 0px;
+
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
-.card {
-  width: 100%;
-}
 .card-content {
-  padding: 20px;
+  padding: 0 20px 20px;
 }
 
 .sonar-container {
@@ -57,7 +41,6 @@ $folding-space: 33px;
 .dot {
   position: absolute;
   top: 1.5rem;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 .sonar {
@@ -80,62 +63,21 @@ $folding-space: 33px;
   transition: background-color 250ms ease;
 }
 
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  outline: none;
-  border: 1px solid var(--color-primary);
-  border-radius: 4px;
-
-  background: transparent;
-  color: var(--color-primary);
-
-  font-size: 0.9rem;
-
-  padding: 0 3px 0 7px;
-  margin: 10px 0 0 0;
-
-  transition:
-    background-color 250ms ease,
-    transform 250ms ease;
-
-  span {
-    height: 24px;
-    transition: transform 250ms ease;
-  }
-  &:hover {
-    background-color: var(--color-primary-50);
-    span {
-      transform: translateX(3px);
-    }
-  }
-  &:focus {
-    background-color: var(--color-primary-100);
-  }
-  &:active {
-    transform: scale(0.95);
-  }
-
-  ::ng-deep svg {
-    fill: var(--color-primary);
-  }
-}
-
 h2 {
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 .git-repo-stats,
 p {
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--text-color-secondary);
   line-height: 160%;
 }
-.git-repo-stats{
+.git-repo-stats {
   font-weight: 500;
+  margin-bottom: 5px;
 }
 
 @keyframes sonarAnimation {
@@ -150,5 +92,5 @@ p {
 }
 
 .sonar-animation {
-  animation: sonarAnimation ease;
+  animation: sonarAnimation ease 1400ms;
 }

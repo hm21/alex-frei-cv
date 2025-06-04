@@ -1,8 +1,8 @@
 import {
-    ChangeDetectionStrategy,
-    Component,
-    inject,
-    OnInit,
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
 } from '@angular/core';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -22,6 +22,9 @@ import { ResumeTimelineComponent } from './components/timeline/resume-timeline/r
   ],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss',
+  host: {
+    class: 'page-container',
+  },
 })
 export class ResumeComponent extends ExtendedComponent implements OnInit {
   /** Manages modals */

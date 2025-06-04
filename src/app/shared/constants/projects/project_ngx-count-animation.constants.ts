@@ -1,10 +1,11 @@
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import svgOpenSource from 'src/assets/img/icon/open-source-logo.svg';
-import { ProjectDetails } from '../../../features/portfolio/interfaces/portfolio.interfaces';
 
 export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
-  type: $localize`Angular open source`,
+  id:'ngxCountAnimation'
+,  type: $localize`Angular open source`,
   title: 'ngx-count-animation',
-  subtitle: $localize`Count numbers up and down with smooth animation.`,
+  subtitle: $localize`A package for smooth, animated number transitions, ideal for counters and real-time data updates.`,
   logo: svgOpenSource,
   install: 'npm install ngx-count-animation',
   description: $localize`
@@ -21,6 +22,8 @@ export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
     },
   ],
   demoUrl: 'https://ngx-hm21.web.app/count-animation',
+  githubUrl: 'https://github.com/hm21/count-animation',
+  thumbnailPath: 'assets/img/projects/ngx-count-animation/thumbnail/thumbnail',
   website: [
     {
       title: $localize`Github-Page`,
@@ -28,6 +31,7 @@ export const PROJECT_COUNT_ANIMATION: { type: string } & ProjectDetails = {
     },
   ],
   technology: {
+    highlight: ['Angular', 'Typescript', 'HTML'],
     frontend: ['Angular', 'Typescript', 'HTML'],
   },
 };

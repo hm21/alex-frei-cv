@@ -32,6 +32,9 @@ h2 {
   display: block;
   margin-bottom: 12px;
 }
-.chip-list {
-  justify-content: flex-start;
+
+.more-knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
 }

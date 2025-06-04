@@ -23,7 +23,7 @@ import {
 } from 'rxjs';
 import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
 import { ProjectDetailsComponent } from 'src/app/features/portfolio/components/project-details/project-details.component';
-import { ProjectDetails } from 'src/app/features/portfolio/interfaces/portfolio.interfaces';
+import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import { CardComponent } from 'src/app/shared/components/card/card.component';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { GitRepoStatsComponent } from 'src/app/shared/components/git-repo-stats/git-repo-stats.component';

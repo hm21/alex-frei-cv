@@ -32,22 +32,6 @@
           <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5891707175321515013" datatype="html">
-        <source>Imprint</source>
-        <target>Impressum</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
-          <context context-type="linenumber">1,2</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8440128775129354214" datatype="html">
-        <source>Privacy</source>
-        <target>Datenschutzerklärung</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
-          <context context-type="linenumber">2,3</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
         <source>Open sidemenu</source>
         <target>Seitenmenü öffnen</target>
@@ -513,95 +497,6 @@
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5629671436105198901" datatype="html">
-        <source>Business Projects</source>
-        <target>Geschäftsprojekte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">1,3</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4683860880659222473" datatype="html">
-        <source>snaptab</source>
-        <target>snaptab</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">10,11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3789001511274969166" datatype="html">
-        <source> The <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;snaptab-primary&quot;&gt;"/>Allrounder-Tool<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> for <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br class=&quot;break-before&quot; /&gt;"/> your<x id="LINE_BREAK_1" equiv-text="&lt;br class=&quot;break-after&quot; /&gt;"/> <x id="START_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/><x id="CLOSE_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/></source>
-        <target> Das <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;snaptab-primary&quot;&gt;"/>Allrounder-Tool<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/> für <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br class=&quot;break-before&quot; /&gt;"/> deine<x id="LINE_BREAK_1" equiv-text="&lt;br class=&quot;break-after&quot; /&gt;"/> <x id="START_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/><x id="CLOSE_TAG_AF_TYPEWRITER" ctype="x-af_typewriter" equiv-text="&lt;af-typewriter         class=&quot;snaptab-primary&quot;         [items]=&quot;items&quot;       /&gt;"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">14,23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4714295378598704000" datatype="html">
-        <source> From project tracking to the completed QR invoice - that&apos;s what <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>snaptab<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> offers you. All important documentation regarding your projects and employees is created, giving you full control at all times! </source>
-        <target> Von der Erfassung von Projekten bis zur Erstellung der QR-Rechnung bietet dir <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>snaptab<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> eine umfassende Lösung. Dabei werden alle relevanten Dokumente in Bezug auf deine Projekte und Mitarbeiter erstellt, und du behältst jederzeit die volle Kontrolle und Übersicht!
-</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.html</context>
-          <context context-type="linenumber">24,28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5281048910640512287" datatype="html">
-        <source>Company!</source>
-        <target>Firma!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="705519754422508972" datatype="html">
-        <source>Projects!</source>
-        <target>Projekte!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2427256133319138583" datatype="html">
-        <source>Needs!</source>
-        <target>Bedürfnisse!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="6055086305211417287" datatype="html">
-        <source>Employees!</source>
-        <target>Angestellten!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1498094916582121722" datatype="html">
-        <source>Industry!</source>
-        <target>Branche!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1075732990815169061" datatype="html">
-        <source>Construction!</source>
-        <target>Baustelle!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8110718739226457864" datatype="html">
-        <source>Control!</source>
-        <target>Kontrolle!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/business-projects/business-projects.component.ts</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="4929583442443576063" datatype="html">
         <source>Presentation website</source>
         <target>Präsentationswebseite</target>
@@ -662,14 +557,6 @@
           <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6870824354328033862" datatype="html">
-        <source>Presentation website from the company waio Applications.</source>
-        <target>Präsentationswebseite der Firma waio Applications.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="5195429168031052915" datatype="html">
         <source>Waio Homepage</source>
         <target>Waio Webseite</target>
@@ -710,15 +597,6 @@
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4381248089990542293" datatype="html">
-        <source>A Flutter widget designed for image editing on any device.</source>
-        <target>Ein Flutter-Widget für die Bildbearbeitung auf jedem Gerät.
-</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="2662699029149671881" datatype="html">
         <source>Github-Page</source>
         <target>Github-Seite</target>
@@ -755,45 +633,12 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6774285373642240712" datatype="html">
-        <source>Add automatic scroll animations to an angular 9+ app.</source>
-        <target>Automatische scroll-animationen für Angular 9+ apps.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1002170015007706153" datatype="html">
-        <source>Easy way that images will fly to the middle of the screen for presentation.</source>
-        <target>Einfache Möglichkeit, dass Bilder zur Präsentation in die Mitte des Bildschirms fliegen.
-</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5337895058168876856" datatype="html">
-        <source>Count numbers up and down with smooth animation.</source>
-        <target>Zählt Zahlen flüssig hoch und runter.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="3721298594029045214" datatype="html">
         <source>IoT</source>
         <target>IoT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
           <context context-type="linenumber">5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7988858937831296342" datatype="html">
-        <source>Smarthome app to automate bee hives and gardens.</source>
-        <target>Smarthome-App zur Automatisierung von Bienenstöcken und Gärten.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
-          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7819314041543176992" datatype="html">
@@ -1526,14 +1371,6 @@
           <context context-type="linenumber">8,10</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8386595644548511297" datatype="html">
-        <source>The Allrounder-Tool for your Company!</source>
-        <target>Das Allrounder-Tool für Ihre Firma!</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="2573931776396641837" datatype="html">
         <source>Swiming</source>
         <target>Schwimmen</target>
@@ -1607,30 +1444,6 @@
           <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="9033841997412056770" datatype="html">
-        <source> Other Public Projects
-</source>
-        <target>Andere öffentliche Projekte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/other-projects/other-projects.component.html</context>
-          <context context-type="linenumber">8,10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="965381335090089470" datatype="html">
-        <source>
-    The ProImageEditor is a Flutter widget designed for image editing. It provides a flexible and convenient way to integrate image editing capabilities 
-    into Flutter projects. The editor has a great hit detection ensuring that drawing actions are triggered only when the user actively hovers over the drawing area. 
-    Furthermore, the editor is highly customizable, allowing for complete adaptation to specific project requirements, and it offers effortless translation capabilities, 
-    simplifying the localization process.&lt;br&gt;
-    Of course, the editor also supports multi-threading, where it run in dart native as isolated task and in the web inside web workers.
-    </source>
-        <target>Der ProImageEditor ist ein Flutter-Widget für die Bildbearbeitung. Er bietet eine flexible und bequeme Möglichkeit, Bildbearbeitungsfunktionen in Flutter-Projekte zu integrieren. Der Editor verfügt über großartige „Hit-Boxen“, die sicherstellen, dass Berührungen von Zeichnungen nur dann ausgelöst werden, wenn der Benutzer aktiv über den Zeichnungsbereich mit der Maus fährt. Ebenso ist der Editor in hohem Maße anpassbar, was eine vollständige Anpassung an spezifische Projektanforderungen ermöglicht, und er bietet mühelose Übersetzungsfunktionen, die den Lokalisierungsprozess vereinfachen.&lt;br&gt;
-Natürlich unterstützt der Editor auch Multithreading, wobei er in Dart Native als isolated Task und im Web in Web Workern läuft.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
-          <context context-type="linenumber">9,14</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="7350255949203905689" datatype="html">
         <source>
         The application snaptab was primarily developed for craftsmen and
@@ -1680,7 +1493,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       perfect for counting or displaying real-time data updates.&lt;br&gt;&lt;br&gt;
       Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
     </source>
-        <target>Ein Paket, das Zahlenänderungen elegant animiert und einen visuell ansprechenden Übergang von einem Wert zum anderen schafft, perfekt zum Zählen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so flüssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate reduziert habe, um Speicherplatz zu sparen.</target>
+        <target>Ein Paket, das Zahlenänderungen elegant animiert und einen visuell ansprechenden Übergang von einem Wert zum anderen schafft, perfekt zum Zählen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so flüssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">10,14</context>
@@ -1692,7 +1505,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
     immersive view, enhancing the user experience and interaction with images.&lt;br&gt;&lt;br&gt;
     Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
     </source>
-        <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern ermöglichen, auf Bilder zu klicken, damit sie flüssig vergrößert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so sanft erscheint wie in der Realität. Das liegt daran, dass ich die Bildrate reduziert habe, um Speicherplatz zu sparen.</target>
+        <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern ermöglichen, auf Bilder zu klicken, damit sie flüssig vergrößert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so sanft erscheint wie in der Realität. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">9,13</context>
@@ -1973,7 +1786,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8731184160097155311" datatype="html">
         <source> Hey, I&apos;m Alex, a passionate software programmer specializing in Flutter and Angular development. I love creating intuitive, high-performance applications and constantly exploring new technologies. </source>
-        <target>Hey, mein Name ist Alex, ein begeisterter Softwareentwickler mit Schwerpunkt auf Flutter- und Angular-Entwicklung. Es begeistert mich, intuitive und leistungsstarke Anwendungen zu erstellen und ständig neue Technologien zu entdecken.</target>
+        <target>Hey, ich bin Alex, ein leidenschaftlicher Softwareentwickler, spezialisiert auf Flutter- und Angular-Entwicklung. Ich liebe es, intuitive und leistungsstarke Anwendungen zu entwickeln und ständig neue Technologien zu erkunden.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
           <context context-type="linenumber">7,9</context>
@@ -2013,7 +1826,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="7089295473809843771" datatype="html">
         <source>Snaptab is a smart all-in-one app designed to optimize business administration. From project management and time tracking to invoicing, snaptab automates administrative processes and saves valuable time.</source>
-        <target>Snaptab ist eine All-in-One-App zur Optimierung von Unternehmen. Sie automatisiert administrative Prozesse – von Projektmanagement und Zeiterfassung bis hin zur Rechnungsstellung – und spart somit wertvolle Zeit.</target>
+        <target>Snaptab ist eine All-in-One-App zur Optimierung der Geschäftsverwaltung. Sie automatisiert administrative Prozesse – von Projektmanagement und Zeiterfassung bis hin zur Rechnungsstellung – und spart so wertvolle Zeit.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">10</context>
@@ -2057,7 +1870,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="8827262633538312922" datatype="html">
         <source>A high-performance open-source image editor for Flutter, featuring multi-threading, CPU control, cropping, rotation, filters, text layers, pixelation, and non-destructive editing.</source>
-        <target>Ein leistungsstarker Open-Source-Bildeditor für Flutter, der Funktionen wie Zuschneiden, Rotieren, Filter, Bildanpassungen (z. B. Helligkeit), Zeichnen, Textebenen und Verpixeln unterstützt. Er nutzt Multithreading für optimierte Prozesse und generiert bilder im Hintergrund automatisch.</target>
+        <target>Ein leistungsstarker Open-Source-Bildeditor für Flutter mit Multi-Threading, CPU-Steuerung und nicht-destruktiver Bearbeitung. Unterstützt Funktionen wie Zuschneiden, Rotieren, Filter, Zeichnen, Textebenen und Verpixelung.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">19</context>
@@ -2085,7 +1898,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="4764144103660345602" datatype="html">
         <source>A set of lightweight libraries for smooth scroll animations, immersive image transitions, and dynamic number effects—enhancing user experience with minimal effort.</source>
-        <target>Eine Sammlung kompakter Bibliotheken für flüssige Scroll-Animationen, animierte Bildübergänge und dynamische Zahleneffekte – optimiert die Benutzererfahrung mit minimalem Aufwand.</target>
+        <target>&quot;Eine Sammlung kompakter Bibliotheken für flüssige Scroll-Animationen, animierte Bildübergänge und dynamische Zahleneffekte – optimiert die Benutzererfahrung mit minimalem Aufwand.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">30</context>
@@ -2121,7 +1934,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="49329725525943716" datatype="html">
         <source>I developed a report app with Ionic for craftsmen to simplify report creation and management. Lessons from this project laid the foundation for snaptab’s enhanced features and functionality.</source>
-        <target>Mit Ionic habe ich eine Rapport-App für Handwerker entwickelt, die die Erstellung und Verwaltung von Rapporten vereinfacht. Die Erkenntnisse aus diesem Projekt bildeten die Grundlage für die erweiterten Funktionen und Möglichkeiten in snaptab.</target>
+        <target>Ich habe mit Ionic eine Rapport-App für Handwerker entwickelt, die die Erstellung und Verwaltung von Rapporten erleichtert. Die aus diesem Projekt gewonnenen Erkenntnisse dienten als Basis für die erweiterten Funktionen und Möglichkeiten in snaptab.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">81</context>
@@ -2237,7 +2050,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       </trans-unit>
       <trans-unit id="1143822651746796628" datatype="html">
         <source>Worked as an electrical installer, service technician, and project manager at Elektro Sutter. In 2018, transitioned to an 80% workload to dedicate more time to programming.</source>
-        <target>Als Elektriker im Bereich Servicetechniker und Projektleiter bei Elektro Sutter tätig gewesen. 2018 habe ich das Arbeitspensum auf 80% reduziert, um mehr Zeit für die Programmierung zu haben.</target>
+        <target>Arbeitete als Elektroinstallateur, Servicetechniker und Projektleiter bei Elektro Sutter. 2018 wechselte ich zu einer 80%-Stelle, um mehr Zeit für das Programmieren zu haben.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">130</context>
@@ -2320,7 +2133,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
     Crafting fast, responsive, and user-friendly websites with modern frameworks like Angular. Whether it&apos;s a portfolio, 
     a business site, or a full-fledged web app, I build solutions that stand out.
       </source>
-      <target>Schnelle, responsive und benutzerfreundliche Websites, entwickelt mit modernen Frameworks wie Angular. Ob Portfolio, Firmenwebsite oder komplette Webanwendung – maßgeschneiderte Lösungen, die sich abheben.</target>
+        <target>Schnelle, responsive und benutzerfreundliche Websites, entwickelt mit modernen Frameworks wie Angular. Ob Portfolio, Webseite oder komplette Webanwendung – maßgeschneiderte Lösungen, die sich abheben.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">6,9</context>
@@ -2331,7 +2144,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
     Developing high-performance mobile applications with Flutter or Ionic. I focus on smooth user experiences and cross-platform 
     compatibility to ensure apps work seamlessly on both iOS and Android.
       </source>
-      <target>Leistungsstarke mobile Anwendungen entwickelt mit Flutter oder Ionic, mit Fokus auf ein erstklassiges Benutzererlebnis und plattformübergreifende Kompatibilität, damit die Apps sowohl auf iOS als auch auf Android einwandfrei funktionieren.</target>
+        <target>Leistungsstarke mobile Anwendungen entwickelt mit Flutter oder Ionic, mit Fokus auf ein erstklassiges Benutzererlebnis und plattformübergreifende Kompatibilität, damit die Apps sowohl auf iOS als auch auf Android einwandfrei funktionieren.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">14,17</context>
@@ -2353,7 +2166,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         Building scalable and efficient backends with Node.js, Firebase, and Supabase. 
         From APIs to databases, I make sure everything runs securely and smoothly behind the scenes.
       </source>
-      <target>Skalierbare und effiziente Backends mit Node.js, Firebase und Supabase. Vom API bis zur Datenbank sorge ich dafür, dass alles sicher und problemlos im Hintergrund läuft.</target>
+        <target>Skalierbare und effiziente Backends mit Node.js, Firebase und Supabase. Vom API bis zur Datenbank sorge ich dafür, dass alles sicher und problemlos im Hintergrund läuft.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
           <context context-type="linenumber">30,33</context>

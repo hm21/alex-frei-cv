@@ -8,7 +8,6 @@ const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(withRoutes(serverRoutes)),
     provideNoopAnimations(),
-    // provideServerRoutesConfig(serverRoutes)
   ],
 };
 
