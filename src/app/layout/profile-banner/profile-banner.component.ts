@@ -52,11 +52,14 @@ export class ProfileBannerComponent
   /** Handles HTTP requests */
   private http = inject(HttpClient);
 
-
   /** Displays toast notifications */
   private toast = inject(ToastService);
 
   private headerService = inject(HeaderService);
+  /**
+   * The default language ID.
+   */
+  private readonly languageId = $localize`en`;
 
   /**
    * Reference to the container for navigation items.
@@ -145,8 +148,11 @@ export class ProfileBannerComponent
    * @public
    */
   public downloadPdf() {
-    const url = 'assets/docs/alex_frei_cv.pdf';
-    const filename = 'alex_frei_cv.pdf';
+    const suffix = this.languageId === 'de' ? 'de' : 'en';
+    const languageName = suffix === 'de' ? 'Deutsch' : 'English';
+
+    const url = `assets/docs/alex_frei_cv_${suffix}.pdf`;
+    const filename = `Alex-Frei-CV-${languageName}.pdf`;
 
     this.http
       .get(url, { responseType: 'blob' })

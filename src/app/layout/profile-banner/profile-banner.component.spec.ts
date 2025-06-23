@@ -158,14 +158,14 @@ describe('ProfileBannerComponent', () => {
 
       component.downloadPdf();
 
-      const req = httpMock.expectOne('assets/docs/alex_frei_cv.pdf');
+      const req = httpMock.expectOne('assets/docs/alex_frei_cv_en.pdf');
       expect(req.request.method).toBe('GET');
       req.flush(mockBlob); // Simulate the response with the mock blob
 
       // Verify the anchor element and download setup
       expect(document.createElement).toHaveBeenCalledWith('a');
       expect(anchorElement.href).toContain('blob:'); // Ensure blob URL is set
-      expect(anchorElement.download).toBe('alex_frei_cv.pdf');
+      expect(anchorElement.download).toBe('Alex-Frei-CV-English.pdf');
       expect(anchorElement.click).toHaveBeenCalled(); // Ensure the click method was called
 
       // Verify success toast message

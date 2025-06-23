@@ -31,6 +31,10 @@
           <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
         <source>Open sidemenu</source>
@@ -161,7 +165,7 @@
         <target>E-Mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">17,18</context>
+          <context context-type="linenumber">18,19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
@@ -177,7 +181,7 @@
         <target>Telefon</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">28,29</context>
+          <context context-type="linenumber">30,31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="471816275243265264" datatype="html">
@@ -185,7 +189,7 @@
         <target>Standort</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">38,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1949800099101277248" datatype="html">
@@ -193,7 +197,7 @@
         <target>Sprachen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">85,86</context>
+          <context context-type="linenumber">87,88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7487151404654126049" datatype="html">
@@ -201,7 +205,7 @@
         <target>Deutsch, Englisch</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">86,87</context>
+          <context context-type="linenumber">88,89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1130652265542107236" datatype="html">
@@ -209,7 +213,7 @@
         <target>Alter</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">89,90</context>
+          <context context-type="linenumber">91,92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6206277469713306308" datatype="html">
@@ -217,7 +221,7 @@
         <target>21.03.1995</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">93,94</context>
+          <context context-type="linenumber">95,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="285383250664560912" datatype="html">
@@ -454,7 +458,7 @@
         <target>Anruf starten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
@@ -466,7 +470,7 @@
         <target>E-Mail senden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">21,22</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
@@ -1489,11 +1493,11 @@ Die Anwendung wird sowohl als Web-App als auch als mobile App für Android und i
     ensuring a seamless experience across all devices.&lt;br&gt;&lt;br&gt;
     Most of the UI/UX part of this project is not mine.
     </source>
-        <target>Diese Webseite stellt WAIO Applications, mein eigenes Unternehmen, vor. Neben Informationen über mein Unternehmen bietet sie zwei fesselnde Spiele, um das Benutzererlebnis zu bereichern. Eines dieser Spiele finden Sie, indem Sie auf den Tab „Team“ klicken und dann auf die Schaltfläche „Icebreaker“ drücken. Das andere Spiel ist als „Easter Egg“ auf der Homepage versteckt. Scrollen Sie einfach zum Abschnitt „Für alle Geräte“, klicken Sie auf das rote Rechteck (das ein Telefon mit einer Skalierungsanimation darstellt). &lt;br&gt;&lt;br&gt;
-Auf der Subdomain image.waio.ch bieten wir ein unkompliziertes Tool zum Ändern der Größe und Konvertieren von Bildern in verschiedene Formate und Größen an. &lt;br&gt;&lt;br&gt;
-Die Webseite wurde mit Schwerpunkt auf Leistung und Zugänglichkeit entworfen und ist vollständig responsiv, um ein nahtloses Erlebnis auf allen Geräten zu gewährleisten. 
+        <target>Diese Webseite stellt WAIO Applications, mein eigenes Unternehmen, vor. Neben Informationen &amp;uuml;ber mein Unternehmen bietet sie zwei fesselnde Spiele, um das Benutzererlebnis zu bereichern. Eines dieser Spiele finden Sie, indem Sie auf den Tab &amp;bdquo;Team&amp;ldquo; klicken und dann auf die Schaltfl&amp;auml;che &amp;bdquo;Icebreaker&amp;ldquo; dr&amp;uuml;cken. Das andere Spiel ist als &amp;bdquo;Easter Egg&amp;ldquo; auf der Homepage versteckt. Scrollen Sie einfach zum Abschnitt &amp;bdquo;F&amp;uuml;r alle Ger&amp;auml;te&amp;ldquo;, klicken Sie auf das rote Rechteck (das ein Telefon mit einer Skalierungsanimation darstellt). &lt;br&gt;&lt;br&gt;
+Auf der Subdomain image.waio.ch bieten wir ein unkompliziertes Tool zum &amp;Auml;ndern der Gr&amp;ouml;&amp;szlig;e und Konvertieren von Bildern in verschiedene Formate und Gr&amp;ouml;&amp;szlig;en an. &lt;br&gt;&lt;br&gt;
+Die Webseite wurde mit Schwerpunkt auf Leistung und Zug&amp;auml;nglichkeit entworfen und ist vollst&amp;auml;ndig responsiv, um ein nahtloses Erlebnis auf allen Ger&amp;auml;ten zu gew&amp;auml;hrleisten. 
 &lt;br&gt;&lt;br&gt;
-Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
+Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
           <context context-type="linenumber">10,19</context>
@@ -1505,7 +1509,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
       perfect for counting or displaying real-time data updates.&lt;br&gt;&lt;br&gt;
       Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
     </source>
-        <target>Ein Paket, das Zahlenänderungen elegant animiert und einen visuell ansprechenden Übergang von einem Wert zum anderen schafft, perfekt zum Zählen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so flüssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
+        <target>Ein Paket, das Zahlen&amp;auml;nderungen elegant animiert und einen visuell ansprechenden &amp;Uuml;bergang von einem Wert zum anderen schafft, perfekt zum Z&amp;auml;hlen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten m&amp;ouml;glicherweise nicht so fl&amp;uuml;ssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">11,15</context>
@@ -1517,7 +1521,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
     immersive view, enhancing the user experience and interaction with images.&lt;br&gt;&lt;br&gt;
     Please note that the preview below may not appear as smooth as it does in reality. This is because I reduced the frame rate of the GIF to conserve storage space.
     </source>
-        <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern ermöglichen, auf Bilder zu klicken, damit sie flüssig vergrößert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten möglicherweise nicht so sanft erscheint wie in der Realität. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
+        <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern erm&amp;ouml;glichen, auf Bilder zu klicken, damit sie fl&amp;uuml;ssig vergr&amp;ouml;&amp;szlig;ert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten m&amp;ouml;glicherweise nicht so sanft erscheint wie in der Realit&amp;auml;t. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">10,14</context>
@@ -1638,7 +1642,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>GitHub-Profil anzeigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">52,53</context>
+          <context context-type="linenumber">54,55</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
@@ -1674,7 +1678,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Download Erfolgreich</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
-          <context context-type="linenumber">162</context>
+          <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7918086842988809269" datatype="html">
@@ -1682,7 +1686,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Download Fehlgeschlagen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
-          <context context-type="linenumber">166</context>
+          <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5084660559763515734" datatype="html">
@@ -1690,7 +1694,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Standort in Google Maps anzeigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">40,41</context>
+          <context context-type="linenumber">42,43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1508691842598131079" datatype="html">
@@ -1698,7 +1702,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>npm-Profil anzeigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">66,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5576844663212850867" datatype="html">
@@ -1706,7 +1710,7 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <target>Stack-Overflow-Profil anzeigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">79,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="542842275323892090" datatype="html">
@@ -1771,14 +1775,6 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">118</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8731184160097155311" datatype="html">
-        <source> Hey, I&apos;m Alex, a passionate software programmer specializing in Flutter and Angular development. I love creating intuitive, high-performance applications and constantly exploring new technologies. </source>
-        <target>Hey, ich bin Alex, ein leidenschaftlicher Softwareentwickler, spezialisiert auf Flutter- und Angular-Entwicklung. Ich liebe es, intuitive und leistungsstarke Anwendungen zu entwickeln und ständig neue Technologien zu erkunden.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">7,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7563035552061651664" datatype="html">
@@ -2277,11 +2273,11 @@ Der Großteil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
   With customizable UI elements, localization support, and various design themes, ProImageEditor provides developers with a 
   flexible and user-friendly solution for integrating image editing capabilities into their Flutter projects. 
     </source>
-        <target>ProImageEditor ist ein vielseitiges Flutter-Widget, das nahtlose Bildbearbeitung direkt in Anwendungen ermöglicht.
-Es bietet eine umfassende Tool-Sammlung, darunter Malwerkzeuge, Texteinfügen, Zuschneiden, Filter und vieles mehr. &lt;br&gt;
-Dank der Unterstützung von Multithreading über Dart Isolates und Web Worker läuft der Editor plattformübergreifend besonders performant. &lt;br&gt;
-Mit anpassbaren UI-Elementen, Unterstützung für Lokalisierung und verschiedenen Design-Themes stellt ProImageEditor Entwicklern eine flexible und benutzerfreundliche Lösung zur Verfügung,
-um Bildbearbeitungsfunktionen mühelos in ihre Flutter-Projekte zu integrieren.
+        <target>ProImageEditor ist ein vielseitiges Flutter-Widget, das nahtlose Bildbearbeitung direkt in Anwendungen erm&amp;ouml;glicht.
+Es bietet eine umfassende Tool-Sammlung, darunter Malwerkzeuge, Texteinf&amp;uuml;gen, Zuschneiden, Filter und vieles mehr. &lt;br&gt;
+Dank der Unterst&amp;uuml;tzung von Multithreading &amp;uuml;ber Dart Isolates und Web Worker l&amp;auml;uft der Editor plattform&amp;uuml;bergreifend besonders performant. &lt;br&gt;
+Mit anpassbaren UI-Elementen, Unterst&amp;uuml;tzung f&amp;uuml;r Lokalisierung und verschiedenen Design-Themes stellt ProImageEditor Entwicklern eine flexible und benutzerfreundliche L&amp;ouml;sung zur Verf&amp;uuml;gung,
+um Bildbearbeitungsfunktionen m&amp;uuml;helos in ihre Flutter-Projekte zu integrieren.
 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
@@ -2303,11 +2299,11 @@ um Bildbearbeitungsfunktionen mühelos in ihre Flutter-Projekte zu integrieren.
    Unlike FFmpeg-based solutions, this editor is optimized for real-time responsiveness and supports concurrent processing, 
    making it ideal for demanding video editing tasks in mobile and desktop applications.
     </source>
-        <target>ProVideoEditor ist ein Flutter-Plugin mit nativer Codebasis für fortgeschrittene Video­bearbeitung auf allen wichtigen Plattformen.
-Es bietet Funktionen wie Trimmen, Zuschneiden, Skalieren, Drehen, Spiegeln sowie das Hinzufügen visueller Effekte und Overlays – alles umgesetzt mit plattformspezifischen APIs für maximale Performance und Kompatibilität.
+        <target>ProVideoEditor ist ein Flutter-Plugin mit nativer Codebasis f&amp;uuml;r fortgeschrittene Video&amp;shy;bearbeitung auf allen wichtigen Plattformen.
+Es bietet Funktionen wie Trimmen, Zuschneiden, Skalieren, Drehen, Spiegeln sowie das Hinzuf&amp;uuml;gen visueller Effekte und Overlays &amp;ndash; alles umgesetzt mit plattformspezifischen APIs f&amp;uuml;r maximale Performance und Kompatibilit&amp;auml;t.
 &lt;br&gt;
-Im Gegensatz zu FFmpeg-basierten Lösungen ist dieser Editor auf Echtzeit-Reaktionsfähigkeit optimiert und unterstützt gleichzeitige Verarbeitung,
-was ihn ideal für anspruchsvolle Videobearbeitungsaufgaben in mobilen und Desktop-Anwendungen macht.</target>
+Im Gegensatz zu FFmpeg-basierten L&amp;ouml;sungen ist dieser Editor auf Echtzeit-Reaktionsf&amp;auml;higkeit optimiert und unterst&amp;uuml;tzt gleichzeitige Verarbeitung,
+was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen und Desktop-Anwendungen macht.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
           <context context-type="linenumber">10,15</context>
@@ -2368,10 +2364,10 @@ was ihn ideal für anspruchsvolle Videobearbeitungsaufgaben in mobilen und Deskt
   This combination of real-time control and smart monitoring makes it a powerful tool for hobbyists and makers alike.
     </source>
         <target>Dieses Projekt ist eine Echtzeit-Steuerungsanwendung, die die Interaktion mit Hardware vereinfachen soll.
-Über eine intuitive Benutzeroberfläche können Nutzer GPIO-Ports konfigurieren und steuern, ganz ohne Programmierkenntnisse.
+&amp;Uuml;ber eine intuitive Benutzeroberfl&amp;auml;che k&amp;ouml;nnen Nutzer GPIO-Ports konfigurieren und steuern, ganz ohne Programmierkenntnisse.
 &lt;br&gt;
-Neben der GPIO-Steuerung verbindet sich die App auch mit einem persönlichen Bienenstock-System und liefert Live-Daten wie die Innentemperatur und den Honigertrag.
-Diese Kombination aus Echtzeitsteuerung und intelligenter Überwachung macht die Anwendung zu einem leistungsstarken Werkzeug für Hobbyisten.</target>
+Neben der GPIO-Steuerung verbindet sich die App auch mit einem pers&amp;ouml;nlichen Bienenstock-System und liefert Live-Daten wie die Innentemperatur und den Honigertrag.
+Diese Kombination aus Echtzeitsteuerung und intelligenter &amp;Uuml;berwachung macht die Anwendung zu einem leistungsstarken Werkzeug f&amp;uuml;r Hobbyisten.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
           <context context-type="linenumber">10,14</context>
@@ -2393,13 +2389,13 @@ Diese Kombination aus Echtzeitsteuerung und intelligenter Überwachung macht die
   The website is built with performance and user experience in mind, ensuring fast load times and seamless navigation across all devices. 
   Special attention was given to responsive design, accessibility, and clean visual aesthetics. The project highlights how a well-crafted 
   digital presence can elevate a local business and connect with a broader audience.</source>
-        <target>Umami House ist eine stilvolle und vollständig responsive Website, die für eine Sushi- und Bubble-Tea-Bar im Herzen von Zürich entwickelt wurde.
-Die Seite wurde so gestaltet, dass sie den Fokus der Marke auf hochwertige Zutaten, moderne Präsentation und eine einladende Atmosphäre widerspiegelt.
-Besucher können die vollständige Speisekarte entdecken, mehr über das Konzept des Restaurants erfahren und wichtige Informationen wie Standort und Öffnungszeiten einfach finden.
+        <target>Umami House ist eine stilvolle und vollst&amp;auml;ndig responsive Website, die f&amp;uuml;r eine Sushi- und Bubble-Tea-Bar im Herzen von Z&amp;uuml;rich entwickelt wurde.
+Die Seite wurde so gestaltet, dass sie den Fokus der Marke auf hochwertige Zutaten, moderne Pr&amp;auml;sentation und eine einladende Atmosph&amp;auml;re widerspiegelt.
+Besucher k&amp;ouml;nnen die vollst&amp;auml;ndige Speisekarte entdecken, mehr &amp;uuml;ber das Konzept des Restaurants erfahren und wichtige Informationen wie Standort und &amp;Ouml;ffnungszeiten einfach finden.
 &lt;br&gt;&lt;br&gt;
-Die Website wurde mit Blick auf Leistung und Benutzerfreundlichkeit entwickelt – mit schnellen Ladezeiten und nahtloser Navigation auf allen Geräten.
-Besonderes Augenmerk wurde auf responsives Design, Barrierefreiheit und eine klare visuelle Ästhetik gelegt.
-Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehmen stärken und eine breitere Zielgruppe ansprechen kann.</target>
+Die Website wurde mit Blick auf Leistung und Benutzerfreundlichkeit entwickelt &amp;ndash; mit schnellen Ladezeiten und nahtloser Navigation auf allen Ger&amp;auml;ten.
+Besonderes Augenmerk wurde auf responsives Design, Barrierefreiheit und eine klare visuelle &amp;Auml;sthetik gelegt.
+Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehmen st&amp;auml;rken und eine breitere Zielgruppe ansprechen kann.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.ts</context>
           <context context-type="linenumber">10,16</context>
@@ -2455,6 +2451,14 @@ Gleichzeitig haben Lehrpersonen die Möglichkeit, das Konzept direkt online zu b
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3976526751444112905" datatype="html">
+        <source> Full Stack Developer with a background in electrical engineering and a passion for building high-performance web and mobile applications. I am the sole developer of the app snaptab and the maintainer of the Flutter open-source libraries pro_image_editor and pro_video_editor. </source>
+        <target>Full Stack Developer mit einem Hintergrund in Elektrotechnik und einer Leidenschaft für die Entwicklung von leistungsstarken Web- und mobilen Anwendungen. Ich bin der alleinige Entwickler der App snaptab und der Maintainer der Open-Source-Bibliotheken pro_image_editor und pro_video_editor für Flutter.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">7,10</context>
         </context-group>
       </trans-unit>
     </body>
