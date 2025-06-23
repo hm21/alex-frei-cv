@@ -30,6 +30,10 @@
           <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="8588395098030781778" datatype="html">
         <source>Open sidemenu</source>
@@ -160,7 +164,7 @@
         <target>E-Mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">17,18</context>
+          <context context-type="linenumber">18,19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
@@ -176,7 +180,7 @@
         <target>Số điện thoại</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">28,29</context>
+          <context context-type="linenumber">30,31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="471816275243265264" datatype="html">
@@ -184,7 +188,7 @@
         <target>Địa chỉ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">36,37</context>
+          <context context-type="linenumber">38,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1949800099101277248" datatype="html">
@@ -192,7 +196,7 @@
         <target>Ngôn ngữ</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">85,86</context>
+          <context context-type="linenumber">87,88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7487151404654126049" datatype="html">
@@ -200,7 +204,7 @@
         <target>Tiếng Đức, Tiếng Anh</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">86,87</context>
+          <context context-type="linenumber">88,89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1130652265542107236" datatype="html">
@@ -208,7 +212,7 @@
         <target>Tuổi </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">89,90</context>
+          <context context-type="linenumber">91,92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6206277469713306308" datatype="html">
@@ -216,7 +220,7 @@
         <target>03/21/1995</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">93,94</context>
+          <context context-type="linenumber">95,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="285383250664560912" datatype="html">
@@ -453,7 +457,7 @@
         <target>Bắt đầu cuộc gọi</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
@@ -465,7 +469,7 @@
         <target>Gửi E-Mail</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">21,22</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
@@ -1638,7 +1642,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Xem hồ sơ GitHub</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">52,53</context>
+          <context context-type="linenumber">54,55</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.html</context>
@@ -1674,7 +1678,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Tải xuống thành công</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
-          <context context-type="linenumber">162</context>
+          <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7918086842988809269" datatype="html">
@@ -1682,7 +1686,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Tải xuống không thành công</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
-          <context context-type="linenumber">166</context>
+          <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5084660559763515734" datatype="html">
@@ -1690,7 +1694,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Xem vị trí trên Google Maps</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">40,41</context>
+          <context context-type="linenumber">42,43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1508691842598131079" datatype="html">
@@ -1698,7 +1702,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Xem hồ sơ npm</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">66,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5576844663212850867" datatype="html">
@@ -1706,7 +1710,7 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <target>Xem hồ sơ Stack-Overflow</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">79,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="542842275323892090" datatype="html">
@@ -1771,14 +1775,6 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">118</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="8731184160097155311" datatype="html">
-        <source> Hey, I&apos;m Alex, a passionate software programmer specializing in Flutter and Angular development. I love creating intuitive, high-performance applications and constantly exploring new technologies. </source>
-        <target> Chào, tôi là Alex, một lập trình viên phần mềm đam mê chuyên về phát triển Flutter và Angular. Tôi thích tạo ra các ứng dụng trực quan, hiệu suất cao và luôn khám phá các công nghệ mới. </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">7,9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7563035552061651664" datatype="html">
@@ -2278,11 +2274,11 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
   With customizable UI elements, localization support, and various design themes, ProImageEditor provides developers with a 
   flexible and user-friendly solution for integrating image editing capabilities into their Flutter projects. 
     </source>
-        <target>ProImageEditor là một widget Flutter đa năng cho phép chỉnh sửa hình ảnh mượt mà trong các ứng dụng. 
-  Nó cung cấp một bộ công cụ toàn diện, bao gồm vẽ, chèn văn bản, cắt, lọc, và nhiều hơn nữa. &lt;br&gt;
-  Trình chỉnh sửa hỗ trợ đa luồng thông qua Dart isolates và web workers, đảm bảo hiệu suất hiệu quả trên các nền tảng.&lt;br&gt;
-  Với các yếu tố UI có thể tùy chỉnh, hỗ trợ bản địa hóa, và nhiều chủ đề thiết kế khác nhau, ProImageEditor mang đến cho các nhà phát triển một 
-  giải pháp linh hoạt và thân thiện với người dùng để tích hợp khả năng chỉnh sửa hình ảnh vào các dự án Flutter của họ. 
+        <target>ProImageEditor l&amp;agrave; một widget Flutter đa năng cho ph&amp;eacute;p chỉnh sửa h&amp;igrave;nh ảnh mượt m&amp;agrave; trong c&amp;aacute;c ứng dụng. 
+  N&amp;oacute; cung cấp một bộ c&amp;ocirc;ng cụ to&amp;agrave;n diện, bao gồm vẽ, ch&amp;egrave;n văn bản, cắt, lọc, v&amp;agrave; nhiều hơn nữa. &lt;br&gt;
+  Tr&amp;igrave;nh chỉnh sửa hỗ trợ đa luồng th&amp;ocirc;ng qua Dart isolates v&amp;agrave; web workers, đảm bảo hiệu suất hiệu quả tr&amp;ecirc;n c&amp;aacute;c nền tảng.&lt;br&gt;
+  Với c&amp;aacute;c yếu tố UI c&amp;oacute; thể t&amp;ugrave;y chỉnh, hỗ trợ bản địa h&amp;oacute;a, v&amp;agrave; nhiều chủ đề thiết kế kh&amp;aacute;c nhau, ProImageEditor mang đến cho c&amp;aacute;c nh&amp;agrave; ph&amp;aacute;t triển một 
+  giải ph&amp;aacute;p linh hoạt v&amp;agrave; th&amp;acirc;n thiện với người d&amp;ugrave;ng để t&amp;iacute;ch hợp khả năng chỉnh sửa h&amp;igrave;nh ảnh v&amp;agrave;o c&amp;aacute;c dự &amp;aacute;n Flutter của họ. 
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
@@ -2304,11 +2300,11 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
    Unlike FFmpeg-based solutions, this editor is optimized for real-time responsiveness and supports concurrent processing, 
    making it ideal for demanding video editing tasks in mobile and desktop applications.
     </source>
-        <target>ProVideoEditor là một plugin Flutter bằng mã gốc cho chỉnh sửa video nâng cao trên tất cả các nền tảng chính. 
-   Nó cung cấp các tính năng như cắt, cắt xén, thay đổi tỷ lệ, xoay, lật, và thêm hiệu ứng hình ảnh hoặc lớp phủ, tất cả đều được thực hiện
-   bằng cách sử dụng API gốc của nền tảng để đạt hiệu suất và khả năng tương thích tối đa.&lt;br&gt;
-   Không giống như các giải pháp dựa trên FFmpeg, trình chỉnh sửa này được tối ưu hóa cho khả năng phản hồi theo thời gian thực và hỗ trợ xử lý đồng thời, 
-   làm cho nó lý tưởng cho các nhiệm vụ chỉnh sửa video căng thẳng trong các ứng dụng di động và máy tính để bàn.
+        <target>ProVideoEditor l&amp;agrave; một plugin Flutter bằng m&amp;atilde; gốc cho chỉnh sửa video n&amp;acirc;ng cao tr&amp;ecirc;n tất cả c&amp;aacute;c nền tảng ch&amp;iacute;nh. 
+   N&amp;oacute; cung cấp c&amp;aacute;c t&amp;iacute;nh năng như cắt, cắt x&amp;eacute;n, thay đổi tỷ lệ, xoay, lật, v&amp;agrave; th&amp;ecirc;m hiệu ứng h&amp;igrave;nh ảnh hoặc lớp phủ, tất cả đều được thực hiện
+   bằng c&amp;aacute;ch sử dụng API gốc của nền tảng để đạt hiệu suất v&amp;agrave; khả năng tương th&amp;iacute;ch tối đa.&lt;br&gt;
+   Kh&amp;ocirc;ng giống như c&amp;aacute;c giải ph&amp;aacute;p dựa tr&amp;ecirc;n FFmpeg, tr&amp;igrave;nh chỉnh sửa n&amp;agrave;y được tối ưu h&amp;oacute;a cho khả năng phản hồi theo thời gian thực v&amp;agrave; hỗ trợ xử l&amp;yacute; đồng thời, 
+   l&amp;agrave;m cho n&amp;oacute; l&amp;yacute; tưởng cho c&amp;aacute;c nhiệm vụ chỉnh sửa video căng thẳng trong c&amp;aacute;c ứng dụng di động v&amp;agrave; m&amp;aacute;y t&amp;iacute;nh để b&amp;agrave;n.
     </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
@@ -2369,10 +2365,10 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
   Beyond GPIO control, the app also connects to a personal beehive system, providing live data such as internal temperature and honey production levels. 
   This combination of real-time control and smart monitoring makes it a powerful tool for hobbyists and makers alike.
     </source>
-        <target>Dự án này là một ứng dụng điều khiển theo thời gian thực được thiết kế để đơn giản hóa việc tương tác với phần cứng. 
- Nó cho phép người dùng cấu hình và điều khiển các cổng GPIO thông qua một giao diện trực quan—không cần kỹ năng lập trình. &lt;br&gt;
- Ngoài việc điều khiển GPIO, ứng dụng còn kết nối với hệ thống tổ ong cá nhân, cung cấp dữ liệu trực tiếp như nhiệt độ bên trong và mức sản xuất mật. 
- Sự kết hợp giữa điều khiển theo thời gian thực và giám sát thông minh biến nó thành một công cụ mạnh mẽ cho cả những người đam mê và nhà sản xuất.</target>
+        <target>Dự &amp;aacute;n n&amp;agrave;y l&amp;agrave; một ứng dụng điều khiển theo thời gian thực được thiết kế để đơn giản h&amp;oacute;a việc tương t&amp;aacute;c với phần cứng. 
+ N&amp;oacute; cho ph&amp;eacute;p người d&amp;ugrave;ng cấu h&amp;igrave;nh v&amp;agrave; điều khiển c&amp;aacute;c cổng GPIO th&amp;ocirc;ng qua một giao diện trực quan&amp;mdash;kh&amp;ocirc;ng cần kỹ năng lập tr&amp;igrave;nh. &lt;br&gt;
+ Ngo&amp;agrave;i việc điều khiển GPIO, ứng dụng c&amp;ograve;n kết nối với hệ thống tổ ong c&amp;aacute; nh&amp;acirc;n, cung cấp dữ liệu trực tiếp như nhiệt độ b&amp;ecirc;n trong v&amp;agrave; mức sản xuất mật. 
+ Sự kết hợp giữa điều khiển theo thời gian thực v&amp;agrave; gi&amp;aacute;m s&amp;aacute;t th&amp;ocirc;ng minh biến n&amp;oacute; th&amp;agrave;nh một c&amp;ocirc;ng cụ mạnh mẽ cho cả những người đam m&amp;ecirc; v&amp;agrave; nh&amp;agrave; sản xuất.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
           <context context-type="linenumber">10,14</context>
@@ -2394,12 +2390,12 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
   The website is built with performance and user experience in mind, ensuring fast load times and seamless navigation across all devices. 
   Special attention was given to responsive design, accessibility, and clean visual aesthetics. The project highlights how a well-crafted 
   digital presence can elevate a local business and connect with a broader audience.</source>
-        <target>Umami House là một trang web thời trang và hoàn toàn đáp ứng được phát triển cho một quán sushi và trà sủi bọt nằm ở trung tâm Zurich. 
- Trang web được thiết kế để phản ánh trọng tâm của thương hiệu vào nguyên liệu chất lượng cao, trình bày hiện đại và bầu không khí thân thiện. 
- Khách truy cập có thể khám phá toàn bộ thực đơn, tìm hiểu về khái niệm của nhà hàng và dễ dàng tìm thấy thông tin cần thiết như vị trí và giờ mở cửa. 
+        <target>Umami House l&amp;agrave; một trang web thời trang v&amp;agrave; ho&amp;agrave;n to&amp;agrave;n đ&amp;aacute;p ứng được ph&amp;aacute;t triển cho một qu&amp;aacute;n sushi v&amp;agrave; tr&amp;agrave; sủi bọt nằm ở trung t&amp;acirc;m Zurich. 
+ Trang web được thiết kế để phản &amp;aacute;nh trọng t&amp;acirc;m của thương hiệu v&amp;agrave;o nguy&amp;ecirc;n liệu chất lượng cao, tr&amp;igrave;nh b&amp;agrave;y hiện đại v&amp;agrave; bầu kh&amp;ocirc;ng kh&amp;iacute; th&amp;acirc;n thiện. 
+ Kh&amp;aacute;ch truy cập c&amp;oacute; thể kh&amp;aacute;m ph&amp;aacute; to&amp;agrave;n bộ thực đơn, t&amp;igrave;m hiểu về kh&amp;aacute;i niệm của nh&amp;agrave; h&amp;agrave;ng v&amp;agrave; dễ d&amp;agrave;ng t&amp;igrave;m thấy th&amp;ocirc;ng tin cần thiết như vị tr&amp;iacute; v&amp;agrave; giờ mở cửa. 
  &lt;br&gt;&lt;br&gt;
- Trang web được xây dựng với hiệu suất và trải nghiệm người dùng trong tâm trí, đảm bảo thời gian tải nhanh và điều hướng mượt mà trên tất cả các thiết bị. 
- Sự chú ý đặc biệt đã được dành cho thiết kế đáp ứng, khả năng tiếp cận và thẩm mỹ hình ảnh sạch sẽ. Dự án nhấn mạnh cách mà sự hiện diện kỹ thuật số được thiết kế tốt có thể nâng cao một doanh nghiệp địa phương và kết nối với một đối tượng rộng lớn hơn.</target>
+ Trang web được x&amp;acirc;y dựng với hiệu suất v&amp;agrave; trải nghiệm người d&amp;ugrave;ng trong t&amp;acirc;m tr&amp;iacute;, đảm bảo thời gian tải nhanh v&amp;agrave; điều hướng mượt m&amp;agrave; tr&amp;ecirc;n tất cả c&amp;aacute;c thiết bị. 
+ Sự ch&amp;uacute; &amp;yacute; đặc biệt đ&amp;atilde; được d&amp;agrave;nh cho thiết kế đ&amp;aacute;p ứng, khả năng tiếp cận v&amp;agrave; thẩm mỹ h&amp;igrave;nh ảnh sạch sẽ. Dự &amp;aacute;n nhấn mạnh c&amp;aacute;ch m&amp;agrave; sự hiện diện kỹ thuật số được thiết kế tốt c&amp;oacute; thể n&amp;acirc;ng cao một doanh nghiệp địa phương v&amp;agrave; kết nối với một đối tượng rộng lớn hơn.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.ts</context>
           <context context-type="linenumber">10,16</context>
@@ -2451,6 +2447,14 @@ Người dùng có thể linh hoạt định cấu hình hoạt ảnh để kíc
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3976526751444112905" datatype="html">
+        <source> Full Stack Developer with a background in electrical engineering and a passion for building high-performance web and mobile applications. I am the sole developer of the app snaptab and the maintainer of the Flutter open-source libraries pro_image_editor and pro_video_editor. </source>
+        <target>Lập trình viên Full Stack với nền tảng kỹ thuật điện và đam mê xây dựng các ứng dụng web và di động hiệu suất cao. Tôi là lập trình viên duy nhất của ứng dụng snaptab và là người bảo trì các thư viện mã nguồn mở Flutter pro_image_editor và pro_video_editor.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">7,10</context>
         </context-group>
       </trans-unit>
     </body>
