@@ -28,6 +28,7 @@ img {
 picture {
   display: block;
   overflow: hidden;
+  border: 1px solid var(--border-color);
   flex-shrink: 0;
   width: 340px !important;
   height: auto !important;

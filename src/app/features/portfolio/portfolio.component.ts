@@ -47,11 +47,11 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
     PROJECT_PRO_IMAGE_EDITOR,
     PROJECT_PRO_VIDEO_EDITOR,
     PROJECT_UMAMIHOUSE,
-    PROJECT_WAIO,
     PROJECT_SMART_HOME,
     PROJECT_NGX_SCROLL_ANIMATIONS,
     PROJECT_NGX_IMAGE_HERO,
     PROJECT_COUNT_ANIMATION,
+    PROJECT_WAIO,
   ];
 
   /** Manages modals */
