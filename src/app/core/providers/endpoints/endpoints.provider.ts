@@ -4,10 +4,10 @@ import { Endpoints } from './interfaces/endpoints.interface';
 export const ENDPOINTS = new InjectionToken<Endpoints>('endpoints');
 
 export const devEndpoints: Endpoints = {
-  quiz: 'http://127.0.0.1:5001/alex-frei/europe-west6/quiz',
-  contactMessage: 'http://127.0.0.1:5001/alex-frei/europe-west6/contactForm',
-  gitCommitCount: 'http://127.0.0.1:5001/alex-frei/europe-west6/gitCommits',
-  gitRepoStats: 'http://127.0.0.1:5001/alex-frei/europe-west6/gitRepoStats',
+  quiz: 'http://127.0.0.1:5001/alex-frei/europe-west6/generateQuiz',
+  contactMessage: 'http://127.0.0.1:5001/alex-frei/europe-west6/submitContactForm',
+  gitCommitCount: 'http://127.0.0.1:5001/alex-frei/europe-west6/getGitCommitCount',
+  gitRepoStats: 'http://127.0.0.1:5001/alex-frei/europe-west6/getGitRepoStats',
 };
 
 export const productionEndpoints: Endpoints = {

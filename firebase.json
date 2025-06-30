@@ -57,19 +57,19 @@
       "rewrites": [
         {
           "source": "/api/v1/quiz",
-          "function": "quiz"
+          "function": "generateQuiz"
         },
         {
           "source": "/api/v1/contact-form",
-          "function": "contactForm"
+          "function": "submitContactForm"
         },
         {
           "source": "/api/v1/git-commit-count",
-          "function": "gitCommits"
+          "function": "getGitCommitCount"
         },
         {
           "source": "/api/v1/git-repo-stats",
-          "function": "gitRepoStats"
+          "function": "getGitRepoStats"
         },
         {
           "source": "/en/**",

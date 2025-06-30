@@ -1,60 +1,38 @@
-import { onRequest } from 'firebase-functions/v2/https';
+import { HttpsOptions, onRequest } from 'firebase-functions/v2/https';
 
+import {
+  API_FUNCTION_CONFIG,
+  LONG_RUNNING_FUNCTION_CONFIG,
+} from './core/constants/cloud-functions-config.constants';
 import './core/extensions/extensions';
 
-export const quiz = onRequest(
-  {
-    cors: ['alex-frei.web.app'],
-    timeoutSeconds: 60,
-    memory: '128MiB',
-    minInstances: 0,
-    maxInstances: 3,
-    region: 'europe-west6',
-    concurrency: 5,
-  },
-  async (req, res) => {
-    await (await import('./features/games/quiz')).default(req, res);
-  },
+function createHttpFunction(path: string, config: Partial<HttpsOptions> = {}) {
+  return onRequest(
+    {
+      ...API_FUNCTION_CONFIG,
+      ...config,
+    },
+    async (req, res) => {
+      const handler = (await import(path)).default;
+      await handler(req, res);
+    },
+  );
+}
+
+export const getGitCommitCount = createHttpFunction(
+  './features/git/git-commit-count.function',
 );
-export const gitCommits = onRequest(
-  {
-    cors: ['alex-frei.web.app'],
-    timeoutSeconds: 20,
-    memory: '128MiB',
-    minInstances: 0,
-    maxInstances: 5,
-    region: 'europe-west6',
-    concurrency: 50,
-  },
-  async (req, res) => {
-    await (await import('./features/git/git-commits')).default(req, res);
-  },
+
+export const getGitRepoStats = createHttpFunction(
+  './features/git/git-repo-stats.function',
 );
-export const gitRepoStats = onRequest(
-  {
-    cors: ['alex-frei.web.app'],
-    timeoutSeconds: 20,
-    memory: '128MiB',
-    minInstances: 0,
-    maxInstances: 5,
-    region: 'europe-west6',
-    concurrency: 50,
-  },
-  async (req, res) => {
-    await (await import('./features/git/git-repo-stats')).default(req, res);
-  },
+
+export const generateQuiz = createHttpFunction(
+  './features/games/generate-quiz.function',
+  LONG_RUNNING_FUNCTION_CONFIG,
 );
-export const contactForm = onRequest(
-  {
-    cors: ['alex-frei.web.app'],
-    timeoutSeconds: 60,
-    memory: '128MiB',
-    minInstances: 0,
-    maxInstances: 3,
-    region: 'europe-west6',
-    concurrency: 5,
-  },
-  async (req, res) => {
-    await (await import('./features/contact-form')).default(req, res);
-  },
+
+export const submitContactForm = createHttpFunction(
+  './features/contact-form/submit-contact-form.function',
+  LONG_RUNNING_FUNCTION_CONFIG,
 );
