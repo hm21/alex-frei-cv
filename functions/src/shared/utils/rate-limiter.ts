@@ -148,15 +148,25 @@ async function blacklistIp(ipAddress: string) {
  * @returns Sanitized IP address with dots replaced by dashes
  */
 function extractIpAddress(req: Request): string | null {
-  const ipAddress = (
+  const rawIp = (
     req.headers['x-forwarded-for'] ||
     req.socket.remoteAddress ||
     req.headers['fastly-client-ip'] ||
     req.ip ||
     ''
-  )
-    .toString()
-    .replace(/\./g, '-');
+  ).toString();
 
-  return ipAddress || null;
+  // Split on commas and clean up
+  const ipList = rawIp.split(',').map(ip => ip.trim());
+
+  // Prefer a public IPv4 if available
+  const ipv4Regex = /^(\d{1,3}\.){3}\d{1,3}$/;
+  const selectedIp =
+    ipList.find(ip => ipv4Regex.test(ip)) || ipList[0]; // fallback to first if no IPv4
+
+  // Sanitize for use in RTDB
+  const sanitized = selectedIp.replace(/[.:]/g, '-');
+
+  return sanitized || null;
 }
+

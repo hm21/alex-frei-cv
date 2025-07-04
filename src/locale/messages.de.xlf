@@ -764,7 +764,7 @@
         <target>Portfolio Alex Frei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6886514549192725090" datatype="html">
@@ -1335,7 +1335,7 @@
         <target>Schauen Sie sich das Portfolio von Alex Frei an, um mehr über Ihn zu erfahren</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2817793850755956519" datatype="html">
@@ -2459,6 +2459,38 @@ Gleichzeitig haben Lehrpersonen die Möglichkeit, das Konzept direkt online zu b
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
           <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7780423478230327435" datatype="html">
+        <source>Electronic and Robotic</source>
+        <target>Elektronik und Robotik</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8998681937038436346" datatype="html">
+        <source>Stuff like IoT is fun, but having complete freedom is even better, especially when you build your own electronic board.</source>
+        <target>Dinge wie IoT machen Spaß, aber völlige Freiheit ist noch besser, besonders wenn man seine eigene Elektronikplatine baut.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="376730398258284224" datatype="html">
+        <source>I guess everyone who starts with IoT has tried out a Raspberry Pi or Arduino. But you will quickly realize that for more 
+  complex use cases, they have their limitations. And buying a bunch of extension boards can get pretty expensive. 
+  So why not just build your own electronic board? That’s exactly what I did, I designed the board, had it manufactured in China, 
+  and then soldered all the components onto it myself.
+  &lt;br&gt;&lt;br&gt;
+  Besides that, I also enjoy tinkering with mechanics to build simple robots, like the ones you can see in the videos below.
+</source>
+        <target>Ich denke, jeder, der mit IoT anfängt, hat schon einmal einen Raspberry Pi oder Arduino ausprobiert. Aber man wird schnell feststellen, dass sie für komplexere Anwendungsszenarien ihre Grenzen haben. Und ein Haufen Erweiterungsboards kann ziemlich teuer werden. Warum also nicht einfach seine eigene Elektronikplatine bauen? Genau das habe ich gemacht: Ich habe die Platine entworfen, in China herstellen lassen und dann alle Komponenten selbst darauf gelötet.  
+&lt;br&gt;&lt;br&gt;
+Außerdem bastle ich auch gerne mit Mechanik, um einfache Roboter zu bauen, wie die, die Sie in den folgenden Videos sehen können.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="linenumber">9,14</context>
         </context-group>
       </trans-unit>
     </body>

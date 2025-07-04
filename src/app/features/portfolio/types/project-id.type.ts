@@ -7,4 +7,5 @@ export type ProjectId =
   | 'proImageEditor'
   | 'proVideoEditor'
   | 'snaptab'
+  | 'electronic'
   | 'waio';

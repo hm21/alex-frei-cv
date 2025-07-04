@@ -493,14 +493,14 @@
         <source>Portfolio Alex Frei</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4848585539632032097" datatype="html">
         <source>Take a look at the portfolio to know more about Alex Frei</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6886514549192725090" datatype="html">
@@ -1377,6 +1377,33 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7780423478230327435" datatype="html">
+        <source>Electronic and Robotic</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8998681937038436346" datatype="html">
+        <source>Stuff like IoT is fun, but having complete freedom is even better, especially when you build your own electronic board.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="376730398258284224" datatype="html">
+        <source>I guess everyone who starts with IoT has tried out a Raspberry Pi or Arduino. But you will quickly realize that for more 
+  complex use cases, they have their limitations. And buying a bunch of extension boards can get pretty expensive. 
+  So why not just build your own electronic board? That’s exactly what I did, I designed the board, had it manufactured in China, 
+  and then soldered all the components onto it myself.
+  &lt;br/&gt;&lt;br/&gt;
+  Besides that, I also enjoy tinkering with mechanics to build simple robots, like the ones you can see in the videos below.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="linenumber">9,14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5183297567427907684" datatype="html">
