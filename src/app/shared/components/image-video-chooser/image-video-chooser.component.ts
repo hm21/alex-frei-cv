@@ -9,8 +9,9 @@ import { ImageLoaderDirective } from '../../directives/image-loader/image-loader
   template: `
     @if (item().isVideo) {
       <video
-        [style.aspectRatio]="item().ratio ?? '16 / 9'"
-        autoplay
+      [style.aspectRatio]="item().ratio ?? '16 / 9'"
+      [style.backgroundColor]="item().backgroundColor ?? 'white'"
+        [autoplay]="item().disableVideoAutoplay ? false : true"
         muted
         controls
         loop

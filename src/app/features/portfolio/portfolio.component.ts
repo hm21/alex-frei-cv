@@ -8,6 +8,7 @@ import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { RecommendedPagesComponent } from 'src/app/shared/components/recommended-pages/recommended-pages.component';
+import { PROJECT_ELECTRONIC } from 'src/app/shared/constants/projects/project-electronic.constants';
 import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/project-pro_image_editor.constants';
 import { PROJECT_PRO_VIDEO_EDITOR } from 'src/app/shared/constants/projects/project-pro_video_editor.constants';
 import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
@@ -48,6 +49,7 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
     PROJECT_PRO_VIDEO_EDITOR,
     PROJECT_UMAMIHOUSE,
     PROJECT_SMART_HOME,
+    PROJECT_ELECTRONIC,
     PROJECT_NGX_SCROLL_ANIMATIONS,
     PROJECT_NGX_IMAGE_HERO,
     PROJECT_COUNT_ANIMATION,

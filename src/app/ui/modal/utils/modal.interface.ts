@@ -10,4 +10,5 @@ export interface ModalPreviewItem {
   ratio?: string;
   backgroundColor?: string;
   isVideo?: boolean;
+  disableVideoAutoplay?: boolean;
 }
