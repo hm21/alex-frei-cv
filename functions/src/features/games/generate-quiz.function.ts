@@ -64,7 +64,7 @@ export default async (req: https.Request, resp: express.Response) => {
   }
 
   const prompt = buildQuizPrompt(
-    topic,
+    topicTranslated,
     questionsText,
     existingQuestions.length,
     targetLanguage,
