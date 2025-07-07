@@ -8,7 +8,7 @@ export const DEPLOYMENT_REGION: string | string[] = 'europe-west6';
 export const API_FUNCTION_CONFIG: Partial<HttpsOptions> = {
   cors: DEFAULT_API_CORS_ORIGINS,
   timeoutSeconds: 20,
-  memory: '128MiB',
+  memory: '256MiB',
   minInstances: 0,
   maxInstances: 5,
   region: DEPLOYMENT_REGION,
