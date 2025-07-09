@@ -1,4 +1,11 @@
-import { Component, input, output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  input,
+  OnDestroy,
+  output,
+  viewChild,
+} from '@angular/core';
 import { NgxImageHeroDirective } from 'ngx-image-hero';
 import { ModalPreviewItem } from 'src/app/ui/modal/utils/modal.interface';
 import { ImageLoaderDirective } from '../../directives/image-loader/image-loader.directive';
@@ -9,8 +16,9 @@ import { ImageLoaderDirective } from '../../directives/image-loader/image-loader
   template: `
     @if (item().isVideo) {
       <video
-      [style.aspectRatio]="item().ratio ?? '16 / 9'"
-      [style.backgroundColor]="item().backgroundColor ?? 'white'"
+        #videoRef
+        [style.aspectRatio]="item().ratio ?? '16 / 9'"
+        [style.backgroundColor]="item().backgroundColor ?? 'white'"
         [autoplay]="item().disableVideoAutoplay ? false : true"
         muted
         controls
@@ -65,10 +73,22 @@ import { ImageLoaderDirective } from '../../directives/image-loader/image-loader
     class: 'af-image-video-chooser',
   },
 })
-export class ImageVideoChooserComponent {
+export class ImageVideoChooserComponent implements OnDestroy {
   public item = input.required<ModalPreviewItem>();
   public supportedFormats = input<string[]>(['avif', 'webp', 'jpeg']);
 
   public openHero = output();
   public closeHero = output();
+
+  private videoRef = viewChild<ElementRef<HTMLVideoElement>>('videoRef');
+
+  ngOnDestroy(): void {
+    // Explicitly stop video and cancel buffering
+    const video = this.videoRef()?.nativeElement;
+    if (video) {
+      video.pause();
+      video.removeAttribute('src');
+      video.load(); // cancels download
+    }
+  }
 }
