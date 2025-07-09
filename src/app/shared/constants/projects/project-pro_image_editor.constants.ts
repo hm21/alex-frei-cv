@@ -39,6 +39,27 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
       backgroundColor: '#000000',
     },
     {
+      path: 'assets/videos/projects/pro_image_editor/ai-commands.mp4',
+      alt: `AI-Commands`,
+      ratio: '1 / 1.526',
+      isVideo: true,
+      backgroundColor: '#000000',
+    },
+    {
+      path: 'assets/videos/projects/pro_image_editor/ai-remove-background.mp4',
+      alt: `AI-Remove-Background`,
+      ratio: '1 / 1.526',
+      isVideo: true,
+      backgroundColor: '#000000',
+    },
+    {
+      path: 'assets/videos/projects/pro_image_editor/ai-replace-background.mp4',
+      alt: `AI-Replace-Background`,
+      ratio: '1 / 1.526',
+      isVideo: true,
+      backgroundColor: '#000000',
+    },
+    {
       path: 'assets/videos/projects/pro_image_editor/paint-editor.mp4',
       alt: `Paint-Editor`,
       ratio: '1 / 1.524',
@@ -103,7 +124,7 @@ export const PROJECT_PRO_IMAGE_EDITOR: { type: string } & ProjectDetails = {
   ],
   install: 'flutter pub add pro_image_editor',
   technology: {
-    highlight: ['Flutter', 'Dart', 'Kotlin'],
+    highlight: ['Flutter', 'Dart', 'Kotlin', 'AI-Integration'],
     frontend: ['Flutter', 'Dart', 'Kotlin'],
     other: ['Github-Actions'],
   },
