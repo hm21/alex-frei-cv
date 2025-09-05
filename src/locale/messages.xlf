@@ -317,27 +317,31 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">53</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">94</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5028777105388019087" datatype="html">
@@ -377,11 +381,19 @@
           <context context-type="linenumber">55</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -493,14 +505,14 @@
         <source>Portfolio Alex Frei</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4848585539632032097" datatype="html">
         <source>Take a look at the portfolio to know more about Alex Frei</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6886514549192725090" datatype="html">
@@ -1440,7 +1452,7 @@
         <source>Github-Page</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">121</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
@@ -1590,6 +1602,29 @@
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="4163660228990134962" datatype="html">
+        <source>A modern, responsive website for a professional nail studio, highlighting elegance, care, and a relaxing atmosphere.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4100248153621067899" datatype="html">
+        <source>Gem Nails is a stylish and fully responsive website developed for a nail studio based in Zurich and Münchwilen. 
+  The site reflects the studio’s values: quality, aesthetics, and a welcoming environment where clients can feel at ease. 
+  Visitors can learn about the treatments offered, explore insights into the studio, and easily access essential information such as pricing, location, and opening hours.
+  &lt;br/&gt;&lt;br/&gt;
+  The website was built with performance and user experience in mind, ensuring fast load times and smooth navigation across all devices. 
+  Special attention was given to accessibility, clean design, and modern visual presentation. This project demonstrates how a well-crafted digital presence builds trust and attracts new clients.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
+          <context context-type="linenumber">10,15</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="4222037467811949681" datatype="html">
         <source>Angular open source</source>
         <context-group purpose="location">
@@ -1687,7 +1722,7 @@
       <trans-unit id="6247254812108361232" datatype="html">
         <source>A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -1700,7 +1735,7 @@
   Special attention was given to responsive design, accessibility, and clean visual aesthetics. The project highlights how a well-crafted 
   digital presence can elevate a local business and connect with a broader audience.</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.ts</context>
+          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
           <context context-type="linenumber">10,16</context>
         </context-group>
       </trans-unit>
@@ -1708,230 +1743,229 @@
         <source>2021 - Today</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8015410393514325898" datatype="html">
         <source>Project “snaptab”</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">11</context>
+          <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7089295473809843771" datatype="html">
         <source>Snaptab is a smart all-in-one app designed to optimize business administration. From project management and time tracking to invoicing, snaptab automates administrative processes and saves valuable time.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1010796040184636355" datatype="html">
+        <source>August 2025</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3489447777719600592" datatype="html">
         <source>June 2025</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1392806546705606317" datatype="html">
         <source>A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8112974493074299167" datatype="html">
         <source>Mai 2025</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6922864527686022145" datatype="html">
         <source>A cross-platform video editor built with Flutter and native code integration, offering powerful features such as trimming, cropping, and visual effects. Designed for high performance and native-like user experience on Android, iOS, macOS, Windows, and the Web.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5960876002172930443" datatype="html">
         <source>January 2024</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8827262633538312922" datatype="html">
         <source>A high-performance open-source image editor for Flutter, featuring multi-threading, CPU control, cropping, rotation, filters, text layers, pixelation, and non-destructive editing.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8101110009306585538" datatype="html">
         <source>December 2023</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3062852020080027538" datatype="html">
         <source>Open Source Angular Utilities</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">61</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4764144103660345602" datatype="html">
         <source>A set of lightweight libraries for smooth scroll animations, immersive image transitions, and dynamic number effects—enhancing user experience with minimal effort.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">62</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1712739020789336427" datatype="html">
         <source>Rotflue School Educational Concept</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">86</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2425875096341852586" datatype="html">
         <source>A digital prototype of the educational concept that is accessible online. Parents can inform themselves at any time about the educational principles and goals, which promotes greater transparency and trust. At the same time, teachers have the opportunity to edit the concept directly online, adapt content, and collaboratively develop it further.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6142724658615730377" datatype="html">
         <source>Founded WAIO Applications</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3601714942751873467" datatype="html">
         <source>Developed various projects, including the company website and a management tool. Created a web app for “Schule Rotflue” to simplify the presentation of their pedagogical concept.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6646159041971297122" datatype="html">
         <source>Project “Report-App” Ionic version</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">100</context>
+          <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="49329725525943716" datatype="html">
         <source>I developed a report app with Ionic for craftsmen to simplify report creation and management. Lessons from this project laid the foundation for snaptab’s enhanced features and functionality.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">101</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2630043208240739273" datatype="html">
         <source>Mid-2018</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">104</context>
+          <context context-type="linenumber">114</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6593634431046720544" datatype="html">
         <source>Fiber optic training</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">105</context>
+          <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2853435435266895066" datatype="html">
         <source>Completed a three-month training in Eschlikon at Bingesser Huber Elektro AG, gaining hands-on experience in fiber optic splicing, as well as outdoor and indoor installations.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2451039780280121170" datatype="html">
         <source>Mid-2017</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">109</context>
+          <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1202716483531989091" datatype="html">
         <source>Project “Report-App” Java version</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">110</context>
+          <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
       <trans-unit id="892376527966652960" datatype="html">
         <source>My first major project, a simple report app built with Java and libGDX, developed for use at my workplace. It provided valuable experience in mobile development and future projects.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">111</context>
+          <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4643487827540526530" datatype="html">
         <source>Early 2017</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">114</context>
+          <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2798186945549496620" datatype="html">
         <source>Java Development and Game Programming</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">115</context>
+          <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2234469633707751007" datatype="html">
         <source>Learned programming with Java and developed an Endless Runner game using libGDX, gaining hands-on experience in game development and software design.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">116</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7135687405143043394" datatype="html">
         <source>Show game screenshots</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">118</context>
+          <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
       <trans-unit id="771534886820878989" datatype="html">
         <source>Endless Runner game</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">120</context>
+          <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6481307772259569696" datatype="html">
         <source>Development screenshots of the “Endless Runner” game that I programmed with libGDX.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">121</context>
+          <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4747510724872125786" datatype="html">
         <source>Game screen</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">125</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">130</context>
-        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">135</context>
@@ -1940,168 +1974,176 @@
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">140</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="4969824649958273751" datatype="html">
         <source>2016 - 2020</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">148</context>
+          <context context-type="linenumber">158</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5595421027116874228" datatype="html">
         <source>Elektro Sutter – Electrical Installer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">149</context>
+          <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1143822651746796628" datatype="html">
         <source>Worked as an electrical installer, service technician, and project manager at Elektro Sutter. In 2018, transitioned to an 80% workload to dedicate more time to programming.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">150</context>
+          <context context-type="linenumber">160</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2287432808592559199" datatype="html">
         <source>March - November 2015</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3246093365929712487" datatype="html">
         <source>Military Training</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">154</context>
+          <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2002939348668741176" datatype="html">
         <source>Completed basic training followed by advanced training to achieve the rank of Wachtmeister.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">165</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7699869948741961187" datatype="html">
         <source>2014 - 2015</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">158</context>
+          <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4605843931176699734" datatype="html">
         <source>Brunner &amp; Engler – Electrical Installer</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">159</context>
+          <context context-type="linenumber">169</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7937852419963920195" datatype="html">
         <source>Worked as an electrical installer, gaining hands-on experience in installations and electrical systems.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">160</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7144712217485996848" datatype="html">
         <source>2010 - 2014</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">163</context>
+          <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7319983965373156314" datatype="html">
         <source>Apprenticeship – Certified Electrical Installer EFZ</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">164</context>
+          <context context-type="linenumber">174</context>
         </context-group>
       </trans-unit>
       <trans-unit id="726392125931505121" datatype="html">
         <source>Completed a vocational apprenticeship, earning the EFZ certification as an electrical installer, with practical experience in electrical systems and installations.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">165</context>
+          <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2845376991728323788" datatype="html">
         <source>Show certificate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">167</context>
+          <context context-type="linenumber">177</context>
         </context-group>
       </trans-unit>
       <trans-unit id="537299382316536743" datatype="html">
         <source>Electrical-Installer certificate</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">169</context>
+          <context context-type="linenumber">179</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">174</context>
+          <context context-type="linenumber">184</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">180</context>
+          <context context-type="linenumber">190</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">186</context>
+          <context context-type="linenumber">196</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">192</context>
+          <context context-type="linenumber">202</context>
         </context-group>
       </trans-unit>
       <trans-unit id="935438009648073922" datatype="html">
         <source>Certificate of apprenticeship for Certified Electrical-Installer EFZ.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">170</context>
+          <context context-type="linenumber">180</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1966987492818924297" datatype="html">
         <source>2001 - 2010</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">201</context>
+          <context context-type="linenumber">211</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8954371642157143595" datatype="html">
         <source>Elementary School</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">202</context>
+          <context context-type="linenumber">212</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2491507272165016031" datatype="html">
         <source>Completed basic primary education.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">203</context>
+          <context context-type="linenumber">213</context>
         </context-group>
       </trans-unit>
       <trans-unit id="242479384757553256" datatype="html">
         <source>March 21, 1995</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">206</context>
+          <context context-type="linenumber">216</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2772668468223898232" datatype="html">
         <source>Birthday</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">207</context>
+          <context context-type="linenumber">217</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1240083553428943202" datatype="html">
         <source>Just a baby, no coding skills yet!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
-          <context context-type="linenumber">208</context>
+          <context context-type="linenumber">218</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1220644583785368760" datatype="html">

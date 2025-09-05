@@ -1,4 +1,5 @@
 export type ProjectId =
+  | 'gemnails'
   | 'umamihouse'
   | 'ngxCountAnimation'
   | 'ngxImageHero'
