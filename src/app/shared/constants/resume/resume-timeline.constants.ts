@@ -3,7 +3,8 @@ import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/proj
 import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
 import { PROJECT_WAIO } from 'src/app/shared/constants/projects/project-waio.constants';
 import { PROJECT_PRO_VIDEO_EDITOR } from '../projects/project-pro_video_editor.constants';
-import { PROJECT_UMAMIHOUSE } from '../projects/project_umamihouse';
+import { PROJECT_GEMNAILS } from '../projects/project_gemnails.constants';
+import { PROJECT_UMAMIHOUSE } from '../projects/project_umamihouse.constants';
 
 export const RESUME_TIMELINE_ITEMS: ReadonlyArray<ResumeTimelineItem> = [
   {
@@ -13,6 +14,15 @@ export const RESUME_TIMELINE_ITEMS: ReadonlyArray<ResumeTimelineItem> = [
     more: {
       label: $localize`View Details`,
       projectDetails: PROJECT_SNAPTAB,
+    },
+  },
+  {
+    date: $localize`August 2025`,
+    title: `Gem Nails`,
+    msg: $localize`A modern, responsive website for a professional nail studio, highlighting elegance, care, and a relaxing atmosphere.`,
+    more: {
+      label: $localize`View Details`,
+      projectDetails: PROJECT_GEMNAILS,
     },
   },
   {
