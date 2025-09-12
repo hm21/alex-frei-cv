@@ -1,4 +1,4 @@
-import * as express from 'express';
+import { Response } from 'express';
 import { initializeApp } from 'firebase-admin/app';
 import { logger } from 'firebase-functions';
 import { defineString } from 'firebase-functions/params';
@@ -13,18 +13,18 @@ import {
   TELEGRAM_BOT_TOKEN,
   TELEGRAM_CHAT_ID,
 } from '../../core/constants/telegram.constants';
+import { validateHttpMethod } from '../../shared/utils/http-method.utils';
 import { checkRateLimit } from '../../shared/utils/rate-limiter';
 import { RANDOM_QUIZ_TOPICS } from './constants/random-quiz-topics.constant';
 
 const openai = new OpenAI({ apiKey: defineString('OPEN_AI_KEY').value() });
 const telegramBot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: false });
 
-export default async (req: https.Request, resp: express.Response) => {
-  // Check if the request method is POST
-  if (req.method !== 'POST') {
-    resp.setHeader('Allow', 'POST');
-    return resp.status(405).json({ error: 'Method Not Allowed' });
+export default async (req: https.Request, resp: Response) => {
+  if (!validateHttpMethod(req, resp, ['POST'])) {
+    return;
   }
+  
 
   if (req.body === 'wake-up') {
     return resp.status(200).json('Awake');

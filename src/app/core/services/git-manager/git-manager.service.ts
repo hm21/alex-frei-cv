@@ -48,8 +48,10 @@ export class GitManagerService {
     }
 
     return this.http
-      .post<GitRepositoryStatistics>(this.endpoints.gitRepoStats, {
-        repoName,
+      .get<GitRepositoryStatistics>(this.endpoints.gitRepoStats, {
+        params: {
+          repoName,
+        },
       })
       .pipe(
         tap((val) => {

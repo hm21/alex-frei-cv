@@ -10,6 +10,7 @@ import {
   TELEGRAM_BOT_TOKEN,
   TELEGRAM_CHAT_ID,
 } from '../../core/constants/telegram.constants';
+import { validateHttpMethod } from '../../shared/utils/http-method.utils';
 import { checkRateLimit } from '../../shared/utils/rate-limiter';
 import { ContactFormRequest } from './types/contact-form-request.type';
 
@@ -19,9 +20,8 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: false });
  * Handles the contact form submission and forwards it to Telegram.
  */
 export default async (req: Request, res: Response) => {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method Not Allowed' });
+  if (!validateHttpMethod(req, res, ['POST'])) {
+    return;
   }
 
   const data: ContactFormRequest = req.body;
