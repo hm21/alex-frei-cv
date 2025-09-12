@@ -1,5 +1,5 @@
 import axios from 'axios';
-import * as express from 'express';
+import { Response } from 'express';
 import { initializeApp } from 'firebase-admin/app';
 import { getDatabase } from 'firebase-admin/database';
 import { logger } from 'firebase-functions';
@@ -8,16 +8,16 @@ import { HttpsError, Request } from 'firebase-functions/v2/https';
 initializeApp();
 
 import { getCurrentHourKey } from '../../shared/utils/datetime-helpers';
+import { validateHttpMethod } from '../../shared/utils/http-method.utils';
 import { checkRateLimit } from '../../shared/utils/rate-limiter';
 import { GITHUB_REPO_COMMITS_URL } from './constants/github-endpoint.constants';
 
 const rtdb = getDatabase();
 const commitRtdbRef = rtdb.ref('git').child('commits');
 
-export default async (req: Request, resp: express.Response) => {
-  if (req.method !== 'GET') {
-    resp.setHeader('Allow', 'GET');
-    return resp.status(405).json({ error: 'Method Not Allowed' });
+export default async (req: Request, resp: Response) => {
+  if (!validateHttpMethod(req, resp, ['GET'])) {
+    return;
   }
 
   await checkRateLimit(req, 'git-commits', 600);
@@ -25,11 +25,8 @@ export default async (req: Request, resp: express.Response) => {
 
   const cachedCount = await fetchCachedCommitsCount();
   /// Important: Don't just check `!cachedCount` because that would also fail when the count is 0.
-  console.log(cachedCount !== undefined && cachedCount !== null);
   if (cachedCount !== undefined && cachedCount !== null) {
-    logger.debug(
-      `📦 Cached commit count found. Returning cached value.`,
-    );
+    logger.debug(`📦 Cached commit count found. Returning cached value.`);
     return resp.status(200).json(cachedCount);
   }
 
