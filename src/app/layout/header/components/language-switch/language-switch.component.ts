@@ -3,7 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
-  signal
+  signal,
 } from '@angular/core';
 import { filter, fromEvent } from 'rxjs';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -72,7 +72,6 @@ export class LanguageSwitchComponent
    */
   public showLanguage = signal(false);
 
-
   /**
    * The default language ID.
    */
@@ -81,7 +80,7 @@ export class LanguageSwitchComponent
   /**
    * Array of supported languages.
    */
-  public languages: Language[] = [
+  public languages: ReadonlyArray<Language> = [
     {
       iso2: 'en',
       short: 'EN',

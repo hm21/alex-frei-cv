@@ -26,15 +26,15 @@ export class CardEffectManagerService {
   private maxRandomDelay = 10_000;
   private lastTriggeredId = '';
 
-  private animationItems: AnimationElementI[] = [];
+  private animationItems: AnimationElement[] = [];
 
   private screen = inject(ScreenService);
 
   /**
    * Adds an animation element to the list.
-   * @param {AnimationElementI} item - The animation element to add.
+   * @param {AnimationElement} item - The animation element to add.
    */
-  public addElement(item: AnimationElementI) {
+  public addElement(item: AnimationElement) {
     if (Object.keys(this.animationItems).isEmpty) {
       this.initRandom();
     }
@@ -42,9 +42,9 @@ export class CardEffectManagerService {
   }
   /**
    * Removes an animation element from the list.
-   * @param {AnimationElementI} item - The animation element to remove.
+   * @param {AnimationElement} item - The animation element to remove.
    */
-  public removeElement(item: AnimationElementI) {
+  public removeElement(item: AnimationElement) {
     const index = this.animationItems.findIndex((el) => el.id === item.id);
     this.animationItems.removeByIndex(index);
     if (Object.keys(this.animationItems).isEmpty) {
@@ -119,8 +119,8 @@ export class CardEffectManagerService {
   }
 }
 
-export interface AnimationElementI {
+export type AnimationElement = {
   id: string;
   element: HTMLElement;
   callback: (addClass: boolean) => any;
-}
+};

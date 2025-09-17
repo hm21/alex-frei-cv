@@ -13,7 +13,7 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { distinctUntilChanged, fromEvent, map } from 'rxjs';
 import { GitManagerService } from 'src/app/core/services/git-manager/git-manager.service';
-import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/types/git-repo-stats.type';
 import { modalAnimation } from 'src/app/shared/animations/modal-animations';
 import { GitRepoStatsComponent } from 'src/app/shared/components/git-repo-stats/git-repo-stats.component';
 import { ImageVideoChooserComponent } from 'src/app/shared/components/image-video-chooser/image-video-chooser.component';
