@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -15,16 +15,10 @@ import svgWonIcon from 'src/assets/img/game/quantum-quiz/won.svg';
     '../../../../styles/game-button.scss',
     './quantum-quiz-won.component.scss',
   ],
+  host: {
+    class: 'card',
+  },
 })
-export class QuantumQuizWonComponent
-  extends ExtendedComponent
-  implements OnInit
-{
+export class QuantumQuizWonComponent extends ExtendedComponent {
   protected readonly wonIcon = svgWonIcon;
-
-  override ngOnInit(): void {
-    super.ngOnInit();
-
-    this.classList.add('card');
-  }
 }

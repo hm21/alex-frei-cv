@@ -70,10 +70,9 @@ export class QuantumQuizGameComponent
     return this.gameManager.questions;
   }
 
-  public get topic(){
+  public get topic() {
     return this.gameManager.topicTranslated;
   }
-
 
   override ngOnInit(): void {
     this.listenShortcutKeys();
@@ -101,7 +100,9 @@ export class QuantumQuizGameComponent
       this.state.set('wrong');
       this.gameManager.destroyQuizGeneration$.next();
       this[`answerRef${option}`]().nativeElement.classList.add('wrong');
-      this[`answerRef${this.correctAnswerLetter()}`]().nativeElement.classList.add('correct');
+      this[
+        `answerRef${this.correctAnswerLetter()}`
+      ]().nativeElement.classList.add('correct');
     }
   }
 
@@ -118,9 +119,9 @@ export class QuantumQuizGameComponent
   public nextQuestion() {
     this.level.update((level) => ++level);
 
-    ['A', 'B', 'C', 'D'].forEach((el) => {
+    for (const el of ['A', 'B', 'C', 'D']) {
       this[`answerRef${el as 'A'}`]().nativeElement.classList.remove('correct');
-    });
+    }
 
     this.state.set('pending');
   }

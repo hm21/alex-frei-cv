@@ -7,7 +7,7 @@ import {
   ViewContainerRef,
   inject,
   signal,
-  viewChild
+  viewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -20,6 +20,9 @@ import { QuizManagerService } from '../../services/quiz-manager.service';
   imports: [FormsModule],
   templateUrl: './quantum-quiz-choose-topic.component.html',
   styleUrl: './quantum-quiz-choose-topic.component.scss',
+  host: {
+    class: 'card',
+  },
 })
 export class QuantumQuizChooseTopicComponent
   extends ExtendedComponent
@@ -48,8 +51,6 @@ export class QuantumQuizChooseTopicComponent
 
   override ngOnInit(): void {
     super.ngOnInit();
-
-    this.classList.add('card');
 
     if (this.gameManager.generateErrorMsg()) {
       this.createError(this.gameManager.generateErrorMsg());

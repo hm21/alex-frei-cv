@@ -1,6 +1,6 @@
-import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/project-pro_image_editor.constants';
-import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
-import { PROJECT_WAIO } from 'src/app/shared/constants/projects/project-waio.constants';
+import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/core/constants/projects/project-pro_image_editor.constants';
+import { PROJECT_SNAPTAB } from 'src/app/core/constants/projects/project-snaptab.constants';
+import { PROJECT_WAIO } from 'src/app/core/constants/projects/project-waio.constants';
 import { RESUME_TIMELINE_ITEMS } from './resume-timeline.constants';
 
 describe('RESUME_TIMELINE_ITEMS', () => {
@@ -10,7 +10,7 @@ describe('RESUME_TIMELINE_ITEMS', () => {
   });
 
   it('should have valid properties for each item', () => {
-    RESUME_TIMELINE_ITEMS.forEach((item) => {
+    for (const item of RESUME_TIMELINE_ITEMS) {
       expect(item.date).toBeDefined();
       expect(item.title).toBeDefined();
       expect(item.msg).toBeDefined();
@@ -20,7 +20,7 @@ describe('RESUME_TIMELINE_ITEMS', () => {
           item.more.projectDetails || item.more.imagePreview,
         ).toBeDefined();
       }
-    });
+    }
   });
 
   it('should contain specific projects', () => {
@@ -33,22 +33,22 @@ describe('RESUME_TIMELINE_ITEMS', () => {
   });
 
   it('should have title length <= 55 characters', () => {
-    RESUME_TIMELINE_ITEMS.forEach((item) => {
+    for (const item of RESUME_TIMELINE_ITEMS) {
       expect(item.title.length)
         .withContext(
           `Title "${item.title.substring(0, 20)}" has length ${item.title.length}`,
         )
         .toBeLessThanOrEqual(55);
-    });
+    }
   });
 
   it('should have message length <= 350 characters', () => {
-    RESUME_TIMELINE_ITEMS.forEach((item) => {
+    for (const item of RESUME_TIMELINE_ITEMS) {
       expect(item.msg?.length ?? 0)
         .withContext(
           `Msg "${item.msg!.substring(0, 20)}" has length ${item.msg!.length}`,
         )
         .toBeLessThanOrEqual(350);
-    });
+    }
   });
 });

@@ -8,11 +8,11 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay } from 'rxjs';
+import { RESUME_TIMELINE_ITEMS } from 'src/app/core/constants/resume/resume-timeline.constants';
 import { GitManagerService } from 'src/app/core/services/git-manager/git-manager.service';
-import { RESUME_TIMELINE_ITEMS } from 'src/app/shared/constants/resume/resume-timeline.constants';
 import svgFork from 'src/assets/img/icon/git-forks.svg';
 import svgStar from 'src/assets/img/icon/star.svg';
-import { ResumeTimelineItem } from '../../../interfaces/resume.interface';
+import { ResumeTimelineItem } from '../../../types/resume-timeline-item.type';
 import { ResumeDateBannerComponent } from '../resume-date-banner/resume-date-banner.component';
 import { ResumeTimelineItemComponent } from '../resume-timeline-item/resume-timeline-item.component';
 

@@ -5,20 +5,20 @@ import {
   OnInit,
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
+import { PROJECT_ELECTRONIC } from 'src/app/core/constants/projects/project-electronic.constants';
+import { PROJECT_GEMNAILS } from 'src/app/core/constants/projects/project-gemnails.constants';
+import { PROJECT_COUNT_ANIMATION } from 'src/app/core/constants/projects/project-ngx-count-animation.constants';
+import { PROJECT_NGX_IMAGE_HERO } from 'src/app/core/constants/projects/project-ngx-image-hero.constants';
+import { PROJECT_NGX_SCROLL_ANIMATIONS } from 'src/app/core/constants/projects/project-ngx-scroll-animations.constants';
+import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/core/constants/projects/project-pro_image_editor.constants';
+import { PROJECT_PRO_VIDEO_EDITOR } from 'src/app/core/constants/projects/project-pro_video_editor.constants';
+import { PROJECT_SMART_HOME } from 'src/app/core/constants/projects/project-smarthome.constants';
+import { PROJECT_SNAPTAB } from 'src/app/core/constants/projects/project-snaptab.constants';
+import { PROJECT_UMAMIHOUSE } from 'src/app/core/constants/projects/project-umamihouse.constants';
+import { PROJECT_WAIO } from 'src/app/core/constants/projects/project-waio.constants';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { RecommendedPagesComponent } from 'src/app/shared/components/recommended-pages/recommended-pages.component';
-import { PROJECT_ELECTRONIC } from 'src/app/shared/constants/projects/project-electronic.constants';
-import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/project-pro_image_editor.constants';
-import { PROJECT_PRO_VIDEO_EDITOR } from 'src/app/shared/constants/projects/project-pro_video_editor.constants';
-import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
-import { PROJECT_WAIO } from 'src/app/shared/constants/projects/project-waio.constants';
-import { PROJECT_GEMNAILS } from 'src/app/shared/constants/projects/project_gemnails.constants';
-import { PROJECT_COUNT_ANIMATION } from 'src/app/shared/constants/projects/project_ngx-count-animation.constants';
-import { PROJECT_NGX_IMAGE_HERO } from 'src/app/shared/constants/projects/project_ngx-image-hero.constants';
-import { PROJECT_NGX_SCROLL_ANIMATIONS } from 'src/app/shared/constants/projects/project_ngx-scroll-animations.constants';
-import { PROJECT_SMART_HOME } from 'src/app/shared/constants/projects/project_smarthome.constants';
-import { PROJECT_UMAMIHOUSE } from 'src/app/shared/constants/projects/project_umamihouse.constants';
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectDetails } from './types/project.type';
@@ -35,7 +35,7 @@ import { ProjectDetails } from './types/project.type';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
   host: {
-    class: 'page-container',
+    class: 'page-container page-padding',
   },
 })
 export class PortfolioComponent extends ExtendedComponent implements OnInit {
@@ -62,9 +62,12 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
   private modal = inject(ModalService);
 
   override ngOnInit(): void {
-    this.classList.add('page-padding');
+    super.ngOnInit();
 
-    /// Ensure there are no scrollbar offset issues when open the modal
+    this.handleModalStateChange();
+  }
+  /// Ensure there are no scrollbar offset issues when open the modal
+  private handleModalStateChange() {
     this.modal.onChangeState$.pipe(this.destroyPipe()).subscribe((res) => {
       if (res === 'open' && this.modal.isScrollbarVisible && !this.screen.xs) {
         this.elRef.nativeElement.style.marginRight = `${this.modal.scrollbarWidth}px`;
@@ -72,7 +75,5 @@ export class PortfolioComponent extends ExtendedComponent implements OnInit {
         this.elRef.nativeElement.style.removeProperty('margin-right');
       }
     });
-
-    super.ngOnInit();
   }
 }

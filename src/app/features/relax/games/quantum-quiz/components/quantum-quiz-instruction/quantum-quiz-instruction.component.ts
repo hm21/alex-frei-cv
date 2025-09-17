@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -10,14 +10,8 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
   imports: [RouterLink, QuicklinkDirective],
   templateUrl: './quantum-quiz-instruction.component.html',
   styleUrls: ['./quantum-quiz-instruction.component.scss'],
+  host: {
+    class: 'card',
+  },
 })
-export class QuantumQuizInstructionComponent
-  extends ExtendedComponent
-  implements OnInit
-{
-  override ngOnInit(): void {
-    super.ngOnInit();
-
-    this.classList.add('card');
-  }
-}
+export class QuantumQuizInstructionComponent extends ExtendedComponent {}

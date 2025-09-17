@@ -5,15 +5,15 @@ import {
   OnInit,
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
-import { ScreenService } from 'src/app/core/services/screen/screen.service';
-import { ProgressBarComponent } from 'src/app/shared/components/progress-bar/progress-bar.component';
 import {
   BACKEND_SKILLS,
   FRONTEND_SKILLS,
   KNOWLEDGE,
-} from 'src/app/shared/constants/resume/resume-skills.constants';
-import { SkillItem } from '../../interfaces/resume.interface';
-import { Knowledge } from '../../types/resume.types';
+} from 'src/app/core/constants/resume/resume-skills.constants';
+import { ScreenService } from 'src/app/core/services/screen/screen.service';
+import { ProgressBarComponent } from 'src/app/shared/components/progress-bar/progress-bar.component';
+import { Knowledge } from '../../types/resume-knowledge.type';
+import { SkillItem } from '../../types/resume-skill-item.type';
 import { ResumeSkillCardComponent } from '../resume-skill-card/resume-skill-card.component';
 
 @Component({
@@ -55,6 +55,10 @@ export class ResumeSkillsComponent implements OnInit {
   protected readonly knowledge: ReadonlyArray<Knowledge> = KNOWLEDGE;
 
   ngOnInit(): void {
+    this.calculateStaggerDelay();
+  }
+
+  private calculateStaggerDelay() {
     this.staggerDelay =
       this.screen.width > 1200 ||
       (this.screen.width >= 800 && this.screen.width < 1024)

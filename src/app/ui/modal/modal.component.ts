@@ -101,11 +101,10 @@ export class ModalComponent {
    * @returns void
    */
   public clearAll() {
+    const items = this._components.map((el) => el.id);
     // Iterate through the list of active modals and close each one.
-    this._components
-      .map((el) => el.id)
-      .forEach((id) => {
-        this.close(id);
-      });
+    for (const id of items) {
+      this.close(id);
+    }
   }
 }

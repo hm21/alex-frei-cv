@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { Knowledge } from '../../types/resume.types';
+import { Knowledge } from '../../types/resume-knowledge.type';
 
 @Component({
   selector: 'af-resume-skill-card',

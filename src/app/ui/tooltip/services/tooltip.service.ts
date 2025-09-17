@@ -1,12 +1,9 @@
-import {
-  ComponentRef,
-  inject,
-  Injectable
-} from '@angular/core';
+import { ComponentRef, inject, Injectable } from '@angular/core';
 import { IS_BROWSER } from 'src/app/core/providers/platform.provider';
-import { TooltipBase, TooltipItem } from '../interfaces/tooltip.interface';
+import { TooltipBase } from '../interfaces/tooltip.interface';
 import { TOOLTIP_VIEW_CONTAINER_REF } from '../providers/tooltip.provider';
 import { TooltipComponent } from '../tooltip.component';
+import { TooltipItem } from '../types/tooltip.type';
 
 @Injectable()
 export class TooltipService implements TooltipBase {
@@ -58,7 +55,7 @@ export class TooltipService implements TooltipBase {
    * @param {string} id - The ID of the tooltip to remove.
    */
   public remove(id: string) {
-   if (!this.isBrowser) return;
-    this.tooltipContainer.instance.remove(id); 
+    if (!this.isBrowser) return;
+    this.tooltipContainer.instance.remove(id);
   }
 }

@@ -65,7 +65,7 @@ export class ColorClashGameComponent
   private cdRef = inject(ChangeDetectorRef);
   private theme = inject(ThemeManagerService);
   private gameManager = inject(ColorClashManagerService);
-  
+
   public infoIcon = svgInfoIcon;
 
   /** Reference to the buttons container in the template. */
@@ -159,17 +159,22 @@ export class ColorClashGameComponent
         const newColor = isDarkMode ? '#ffffff' : '#000000';
 
         this.colors.updateLastItem(newColor);
-        this.gameButtons
-          .filter((el) => el.color == oldColor)
-          .forEach((button) => {
-            button.color = newColor;
-          });
+
+        const filteredButtons = this.gameButtons.filter(
+          (el) => el.color == oldColor,
+        );
+
+        for (const button of filteredButtons) {
+          button.color = newColor;
+        }
+
         this.viewItems.update((items) => {
-          items
-            .filter((e) => e.color === oldColor)
-            .forEach((item) => {
-              item.color = newColor;
-            });
+          const filteredItems = items.filter((e) => e.color === oldColor);
+
+          for (const item of filteredItems) {
+            item.color = newColor;
+          }
+
           return [...items];
         });
       });
@@ -179,7 +184,12 @@ export class ColorClashGameComponent
   private generateButtons() {
     this.gameButtons.clear();
     const colors = [...this.colors];
-    new ColorClashRandomItems().generate().forEach((item, i) => {
+
+    const items = new ColorClashRandomItems().generate();
+
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+
       const btn = new ColorClashGameButton({
         id: item.id,
         content: this.sanitizer.bypassSecurityTrustHtml(
@@ -190,7 +200,7 @@ export class ColorClashGameComponent
       });
       this.gameButtons.push(btn);
       this.buttonsRef().createEmbeddedView(this.buttonRef(), btn);
-    });
+    }
   }
 
   /** Generates the game items. */

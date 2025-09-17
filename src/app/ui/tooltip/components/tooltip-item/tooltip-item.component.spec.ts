@@ -1,7 +1,7 @@
 import { ElementRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { TooltipItem } from '../../interfaces/tooltip.interface';
+import { TooltipItem } from '../../types/tooltip.type';
 import { TooltipItemComponent } from './tooltip-item.component';
 
 describe('TooltipItemComponent', () => {

@@ -5,7 +5,7 @@ import {
   OnInit,
   TemplateRef,
   viewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import {
   combineLatest,
@@ -14,8 +14,8 @@ import {
   map,
   startWith,
 } from 'rxjs';
+import { SKILL_CARDS } from 'src/app/core/constants/skill-cards.constants';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { SKILL_CARDS } from 'src/app/shared/constants/skill-cards.constants';
 import { SkillCard } from './interface/skill-card.interface';
 
 @Component({
@@ -60,9 +60,9 @@ export class AboutMeSkillsComponent
   private generateItems() {
     // Generate the items twice so that the user can't see the end.
     for (let i = 0; i < 2; i++) {
-      this.skillList.forEach((skill) => {
+      for (const skill of this.skillList) {
         this.addItem(skill);
-      });
+      }
     }
   }
   /**

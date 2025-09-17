@@ -1,5 +1,5 @@
-import { SkillItem } from 'src/app/features/resume/interfaces/resume.interface';
-import { Knowledge } from 'src/app/features/resume/types/resume.types';
+import { Knowledge } from 'src/app/features/resume/types/resume-knowledge.type';
+import { SkillItem } from 'src/app/features/resume/types/resume-skill-item.type';
 
 export const FRONTEND_SKILLS: SkillItem[] = [
   {

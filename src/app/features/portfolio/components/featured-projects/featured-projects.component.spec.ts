@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { ProjectDetails } from '../../types/project.type';
 import { ProjectDetailsComponent } from '../project-details/project-details.component';
 import { FeaturedProjectsComponent } from './featured-projects.component';
 
@@ -30,9 +29,9 @@ describe('FeaturedProjectsComponent', () => {
 
   it('should have a projects array with 3 items', () => {
     expect(component.projects.length).toBe(3);
-    component.projects.forEach((project: ProjectDetails) => {
+    for (const project of component.projects) {
       expect(project).toBeTruthy();
-    });
+    }
   });
 
   it('should call modal.open with correct arguments when openProject is called', () => {

@@ -27,6 +27,10 @@ export class MobileHeaderComponent extends ExtendedComponent {
   private scrollSub?: Subscription;
 
   override ngOnInit(): void {
+    this.handleRouteAnimations();
+  }
+
+  private handleRouteAnimations() {
     this.router.events
       .pipe(
         filter(

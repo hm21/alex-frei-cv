@@ -32,7 +32,7 @@ import { ModalImageViewerComponent } from 'src/app/ui/modal/components/modal-ima
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import { ModalImagePreviewData } from 'src/app/ui/modal/utils/modal.interface';
 import svgChevronRight from 'src/assets/img/icon/chevron-right.svg';
-import { ResumeMore } from '../../../interfaces/resume.interface';
+import { ResumeMore } from '../../../types/resume-more.type';
 
 @Component({
   selector: 'af-resume-timeline-item',

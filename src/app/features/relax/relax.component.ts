@@ -1,16 +1,15 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  OnInit,
   afterNextRender,
-  inject,
+  inject
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
+import { GAMES } from 'src/app/core/constants/games.constants';
 import { ImagePreloaderService } from 'src/app/core/services/image-manager/image-preloader.service';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { GAMES } from 'src/app/shared/constants/games.constants';
 import { CardEffectsDirective } from 'src/app/shared/directives/card-effects/card-effects.directive';
 import { ThumbnailBase64Directive } from 'src/app/shared/directives/thumbnail-base64/thumbnail-base64.directive';
 import { RelaxThumbnailPipe } from './pipes/relax-thumbnail.pipe';
@@ -29,10 +28,10 @@ import { RelaxThumbnailPipe } from './pipes/relax-thumbnail.pipe';
   templateUrl: './relax.component.html',
   styleUrl: './relax.component.scss',
   host: {
-    class: 'page-container',
+    class: 'page-container page-padding',
   },
 })
-export class RelaxComponent extends ExtendedComponent implements OnInit {
+export class RelaxComponent extends ExtendedComponent {
   public games = GAMES;
 
   protected override pageMeta: PageMetaData = {
@@ -55,11 +54,5 @@ export class RelaxComponent extends ExtendedComponent implements OnInit {
         );
       });
     }
-  }
-
-  override ngOnInit(): void {
-    this.classList.add('page-padding');
-
-    super.ngOnInit();
   }
 }

@@ -8,10 +8,10 @@ import {
 import { NgxCountAnimationDirective } from 'ngx-count-animation';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
 import { filter } from 'rxjs';
+import { FUN_FACTS } from 'src/app/core/constants/fun-facts.constants';
 import { GitManagerService } from 'src/app/core/services/git-manager/git-manager.service';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
-import { FUN_FACTS } from 'src/app/shared/constants/fun-facts.constants';
 import { CardEffectsDirective } from 'src/app/shared/directives/card-effects/card-effects.directive';
 
 @Component({

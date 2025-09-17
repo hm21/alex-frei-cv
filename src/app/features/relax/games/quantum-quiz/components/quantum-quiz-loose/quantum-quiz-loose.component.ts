@@ -2,8 +2,7 @@ import { DecimalPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  OnInit,
-  inject,
+  inject
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
@@ -22,20 +21,14 @@ import { QuizManagerService } from '../../services/quiz-manager.service';
     '../../../../styles/game-button.scss',
     './quantum-quiz-loose.component.scss',
   ],
+  host: {
+    class: 'card',
+  },
 })
-export class QuantumQuizLooseComponent
-  extends ExtendedComponent
-  implements OnInit
-{
+export class QuantumQuizLooseComponent extends ExtendedComponent {
   protected readonly looseIcon = svgLooseIcon;
 
   private gameManager = inject(QuizManagerService);
-
-  override ngOnInit(): void {
-    super.ngOnInit();
-
-    this.classList.add('card');
-  }
 
   public get wonCash() {
     return this.gameManager.wonCash;

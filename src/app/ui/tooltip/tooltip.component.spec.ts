@@ -1,15 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { TooltipItem } from './interfaces/tooltip.interface';
 import { TooltipComponent } from './tooltip.component';
+import { TooltipItem } from './types/tooltip.type';
 
 describe('TooltipComponent', () => {
   let component: TooltipComponent;
   let fixture: ComponentFixture<TooltipComponent>;
 
   beforeEach(async () => {
-
     await TestBed.configureTestingModule({
       imports: [SharedTestingModule, TooltipComponent],
     }).compileComponents();

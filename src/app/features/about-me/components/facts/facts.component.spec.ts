@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { of } from 'rxjs';
+import { FUN_FACTS } from 'src/app/core/constants/fun-facts.constants';
 import { GitManagerService } from 'src/app/core/services/git-manager/git-manager.service';
-import { FUN_FACTS } from 'src/app/shared/constants/fun-facts.constants';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { FactsComponent } from './facts.component';
 

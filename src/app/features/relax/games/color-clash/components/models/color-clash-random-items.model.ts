@@ -6,9 +6,18 @@ import { ColorClashItemId } from '../types/color-clash.types';
 
 export class ColorClashRandomItems {
   // SVG definitions for different shapes
-  private readonly rectangleSVG = { id: 'rect' as ColorClashItemId, svg: svgRectangle };
-  private readonly triangleSVG = { id: 'triangle' as ColorClashItemId, svg: svgTriangle };
-  private readonly circleSVG = { id: 'circle' as ColorClashItemId, svg: svgCircle };
+  private readonly rectangleSVG = {
+    id: 'rect' as ColorClashItemId,
+    svg: svgRectangle,
+  };
+  private readonly triangleSVG = {
+    id: 'triangle' as ColorClashItemId,
+    svg: svgTriangle,
+  };
+  private readonly circleSVG = {
+    id: 'circle' as ColorClashItemId,
+    svg: svgCircle,
+  };
   /**
    * Inserts an element at a specific position in an array.
    * @param array - The array to insert the element into.
@@ -77,13 +86,13 @@ export class ColorClashRandomItems {
   public generate(): ColorClashRandomItem[] {
     let items: Array<ColorClashRandomItem> = this.getRandomNumbers();
 
-    this.getRandomSymbol().forEach((el) => {
+    for (const el of this.getRandomSymbol()) {
       items = this.insertAtPosition(
         items,
         el,
         Math.randomNextInt(items.length + 1),
       );
-    });
+    }
 
     return items;
   }

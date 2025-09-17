@@ -17,11 +17,16 @@ export class GameHeaderComponent implements OnInit {
   private game = inject(GAME);
 
   ngOnInit(): void {
+    this.initializeGameImages();
+  }
+
+  private initializeGameImages() {
     this.gameName.set(this.game.name);
     const rawPath = `assets/img/game/${this.game.id}/${this.game.id}_4x`;
 
     this.imagePaths().clear();
-    ['avif', 'webp', 'jpeg'].forEach((format) => {
+
+    for (const format of ['avif', 'webp', 'jpeg']) {
       this.imagePaths.update((el) => {
         el.push({
           type: `image/${format}`,
@@ -29,7 +34,8 @@ export class GameHeaderComponent implements OnInit {
         });
         return el;
       });
-    });
+    }
+
     this.fallbackPath.set(`${rawPath}.jpeg`);
   }
 }

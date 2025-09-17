@@ -15,9 +15,7 @@ import { ProgressSpinnerMode } from './utils/progress-spinner.type';
 @Component({
   selector: 'af-progress-spinner',
   standalone: true,
-  imports: [
-    NgxCountAnimationDirective
-  ],
+  imports: [NgxCountAnimationDirective],
   templateUrl: './progress-spinner.component.html',
   styleUrl: './progress-spinner.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -90,10 +88,14 @@ export class ProgressSpinnerComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.mode() === 'indeterminate') {
-      this.elRef.nativeElement.innerHTML = svgIcon;
-      const svg = this.elRef.nativeElement.firstChild as SVGElement;
-      svg.style.width = `${this.diameter()}px`;
-      svg.style.height = `${this.diameter()}px`;
+      this.renderIndeterminateIcon();
     }
+  }
+
+  private renderIndeterminateIcon() {
+    this.elRef.nativeElement.innerHTML = svgIcon;
+    const svg = this.elRef.nativeElement.firstChild as SVGElement;
+    svg.style.width = `${this.diameter()}px`;
+    svg.style.height = `${this.diameter()}px`;
   }
 }
