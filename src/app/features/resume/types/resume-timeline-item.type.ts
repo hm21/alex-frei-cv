@@ -1,4 +1,4 @@
-import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/types/git-repo-stats.type';
 import { ResumeMore } from './resume-more.type';
 
 /**

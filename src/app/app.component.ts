@@ -13,7 +13,7 @@ import { timer } from 'rxjs';
 import { BrowserDetectionService } from './core/services/browser/browser-detection.service';
 import { ImageFormatSupportService } from './core/services/image-manager/image-format-support.service';
 import { FooterComponent } from './layout/footer/footer.component';
-import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch';
+import { getTheme } from './layout/header/components/theme-switch/utils/theme-switch.utils';
 import { HeaderComponent } from './layout/header/header.component';
 import { HeaderService } from './layout/header/services/header.service';
 import { ProfileBannerComponent } from './layout/profile-banner/profile-banner.component';

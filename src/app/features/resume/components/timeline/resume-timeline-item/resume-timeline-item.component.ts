@@ -21,7 +21,7 @@ import {
   tap,
   throttleTime,
 } from 'rxjs';
-import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/types/git-repo-stats.type';
 import { ProjectDetailsComponent } from 'src/app/features/portfolio/components/project-details/project-details.component';
 import { ProjectDetails } from 'src/app/features/portfolio/types/project.type';
 import { CardComponent } from 'src/app/shared/components/card/card.component';

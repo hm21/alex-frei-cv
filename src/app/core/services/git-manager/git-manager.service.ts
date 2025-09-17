@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
 import { ENDPOINTS } from 'src/app/core/providers/endpoints/endpoints.provider';
 import { IS_BROWSER } from '../../providers/platform.provider';
-import { GitRepositoryStatistics } from './interfaces/git-repo-stats.interface';
+import { GitRepositoryStatistics } from './types/git-repo-stats.type';
 
 @Injectable({
   providedIn: 'root',

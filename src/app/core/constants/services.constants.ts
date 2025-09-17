@@ -1,6 +1,6 @@
-import { ServiceCard } from "src/app/features/about-me/components/about-me-services/types/service-card-type";
+import { ServiceCard } from 'src/app/features/about-me/components/about-me-services/types/service-card-type';
 
-export const SERVICES: ServiceCard[] = [
+export const SERVICES: ReadonlyArray<ServiceCard> = [
   {
     title: $localize`Websites`,
     msg: $localize`

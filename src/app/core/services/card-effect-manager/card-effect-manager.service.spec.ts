@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ScreenService } from '../screen/screen.service';
 import {
-  AnimationElementI,
+  AnimationElement,
   CardEffectManagerService,
 } from './card-effect-manager.service';
 
@@ -32,7 +32,7 @@ describe('CardEffectManagerService', () => {
   });
 
   it('should add an element and initialize random interval', () => {
-    const item: AnimationElementI = {
+    const item: AnimationElement = {
       id: 'test1',
       element: document.createElement('div'),
       callback: jasmine.createSpy('callback'),
@@ -46,7 +46,7 @@ describe('CardEffectManagerService', () => {
   });
 
   it('should remove an element and stop random interval if no elements left', () => {
-    const item: AnimationElementI = {
+    const item: AnimationElement = {
       id: 'test1',
       element: document.createElement('div'),
       callback: jasmine.createSpy('callback'),

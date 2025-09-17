@@ -1,6 +1,6 @@
 import { Game } from 'src/app/features/relax/interfaces/game.interface';
 
-export const GAMES: Game[] = [
+export const GAMES: ReadonlyArray<Game> = [
   {
     id: 'quantum-quiz',
     name: 'Quantum Quiz',

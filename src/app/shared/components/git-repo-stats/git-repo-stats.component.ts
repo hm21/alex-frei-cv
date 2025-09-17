@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, computed, input } from '@angular/core';
-import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/interfaces/git-repo-stats.interface';
+import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/types/git-repo-stats.type';
 import { TooltipDirective } from 'src/app/ui/tooltip/directives/tooltip.directive';
 import svgFork from 'src/assets/img/icon/git-forks.svg';
 import svgStar from 'src/assets/img/icon/star.svg';

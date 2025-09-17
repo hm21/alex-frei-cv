@@ -12,7 +12,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, filter, fromEvent, switchMap, take, tap } from 'rxjs';
 import { IS_BROWSER } from 'src/app/core/providers/platform.provider';
 import {
-  AnimationElementI,
+  AnimationElement,
   CardEffectManagerService,
 } from 'src/app/core/services/card-effect-manager/card-effect-manager.service';
 import { IdManagerService } from 'src/app/core/services/id-manager/id-manager.service';
@@ -32,7 +32,7 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
   private isBrowser = inject(IS_BROWSER);
   private idManager = inject(IdManagerService);
 
-  private animationElement!: AnimationElementI;
+  private animationElement!: AnimationElement;
 
   ngOnInit() {
     if (this.isBrowser) {
@@ -51,9 +51,9 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
     this.animationElement = {
       callback: (addClass) => {
         if (addClass) {
-          this.elRef.nativeElement.classList.add('light-effect', 'slow');
+          this.classList.add('light-effect', 'slow');
         } else {
-          this.elRef.nativeElement.classList.remove('light-effect', 'slow');
+          this.classList.remove('light-effect', 'slow');
         }
       },
       element: this.elementRef,
@@ -74,14 +74,14 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
         // Trigger animation
         tap(() => {
           this.manager.activeAnimation$.next(true);
-          this.elRef.nativeElement.classList.add('light-effect');
+          this.classList.add('light-effect');
         }),
         // Delay until the animation will end
         delay(this.manager.delayBetweenAnimations),
         // Remove animation effect
         tap(() => {
           this.manager.activeAnimation$.next(false);
-          this.elRef.nativeElement.classList.remove('light-effect');
+          this.classList.remove('light-effect');
         }),
         takeUntilDestroyed(this.destroyRef),
       )
@@ -90,5 +90,8 @@ export class CardEffectsDirective implements OnInit, OnDestroy {
 
   private get elementRef() {
     return this.card() ?? this.elRef.nativeElement;
+  }
+  private get classList() {
+    return this.elRef.nativeElement.classList;
   }
 }

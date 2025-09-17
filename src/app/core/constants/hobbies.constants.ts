@@ -1,6 +1,6 @@
-import { Hobbies } from "src/app/features/about-me/components/about-me-hobbies/types/about-me-hobbies.type";
+import { Hobbies } from 'src/app/features/about-me/components/about-me-hobbies/types/about-me-hobbies.type';
 
-export const HOBBIES: Hobbies[] = [
+export const HOBBIES: ReadonlyArray<Hobbies> = [
   {
     title: $localize`Swiming`,
     message: $localize`What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it's the perfect win-win for body and mind.`,

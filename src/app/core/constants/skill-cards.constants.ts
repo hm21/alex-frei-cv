@@ -1,6 +1,6 @@
-import { SkillCard } from "src/app/features/about-me/components/about-me-skills/interface/skill-card.interface";
+import { SkillCard } from 'src/app/features/about-me/components/about-me-skills/interface/skill-card.interface';
 
-export const SKILL_CARDS: SkillCard[] = [
+export const SKILL_CARDS: ReadonlyArray<SkillCard> = [
   { path: 'css', label: 'CSS', background: '#0277BD' },
   { path: 'google-cloud', label: 'Google-Cloud' },
   { path: 'figma', label: 'Figma' },

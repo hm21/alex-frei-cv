@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, inject, signal } from '@angular/core';
 import { Subject } from 'rxjs';
-import { getTheme } from 'src/app/layout/header/components/theme-switch/utils/theme-switch';
+import { getTheme } from 'src/app/layout/header/components/theme-switch/utils/theme-switch.utils';
 import { IS_BROWSER } from '../../providers/platform.provider';
 
 @Injectable({

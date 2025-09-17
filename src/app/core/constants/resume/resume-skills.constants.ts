@@ -1,7 +1,7 @@
 import { Knowledge } from 'src/app/features/resume/types/resume-knowledge.type';
 import { SkillItem } from 'src/app/features/resume/types/resume-skill-item.type';
 
-export const FRONTEND_SKILLS: SkillItem[] = [
+export const FRONTEND_SKILLS: ReadonlyArray<SkillItem> = [
   {
     name: `Angular`,
     skillLevel: 100,
@@ -24,7 +24,7 @@ export const FRONTEND_SKILLS: SkillItem[] = [
   },
 ];
 
-export const BACKEND_SKILLS: SkillItem[] = [
+export const BACKEND_SKILLS: ReadonlyArray<SkillItem> = [
   {
     name: `Firebase`,
     skillLevel: 100,

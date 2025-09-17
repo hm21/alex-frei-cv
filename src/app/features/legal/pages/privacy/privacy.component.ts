@@ -41,7 +41,7 @@ export class PrivacyComponent extends ExtendedComponent implements OnInit {
     description: `Privacy from the CV from Alex Frei`,
   };
 
-  public items: ItemI[] = [
+  public items: ReadonlyArray<PrivacyItem> = [
     {
       id: 'responsibleForPrivacy',
       title: `Responsible for data privacy`,
@@ -236,10 +236,10 @@ export class PrivacyComponent extends ExtendedComponent implements OnInit {
   }
 }
 
-interface ItemI {
+type PrivacyItem = {
   id: string;
   title: string;
   text: string;
   table?: string;
   visible: boolean;
-}
+};
