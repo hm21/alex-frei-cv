@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GAMES } from 'src/app/shared/constants/games.constants';
+import { GAMES } from 'src/app/core/constants/games.constants';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { GAME } from '../../shared/game.token';
 import { GameHeaderComponent } from './game-header.component';

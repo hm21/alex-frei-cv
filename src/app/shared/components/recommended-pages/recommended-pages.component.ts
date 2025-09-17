@@ -12,9 +12,9 @@ import {
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
+import { NAV_ITEMS } from 'src/app/core/constants/nav-items.constants';
 import { NavItemId } from 'src/app/layout/header/types/nav-item-id.type';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { NAV_ITEMS } from 'src/app/shared/constants/nav-items.constants';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import svgChevronRight from 'src/assets/img/icon/chevron-right.svg';
 import { CardEffectsDirective } from '../../directives/card-effects/card-effects.directive';
@@ -78,17 +78,20 @@ export class RecommendedPagesComponent
     const listAfter: any[] = [];
     const activeIndex = NAV_ITEMS.findIndex((e) => e.id === this.activeId());
 
-    NAV_ITEMS
-      .filter((el) => el.id !== 'contact' && el.id !== this.activeId())
-      .forEach((el) => {
-        if (NAV_ITEMS.findIndex((e) => e.id === el.id) > activeIndex) {
-          listAfter.push(el);
-        } else {
-          listBefore.push(el);
-        }
-      });
-    [...listAfter, ...listBefore].forEach((item) => {
+    const navItems = NAV_ITEMS.filter(
+      (el) => el.id !== 'contact' && el.id !== this.activeId(),
+    );
+
+    for (const item of navItems) {
+      if (NAV_ITEMS.findIndex((e) => e.id === item.id) > activeIndex) {
+        listAfter.push(item);
+      } else {
+        listBefore.push(item);
+      }
+    }
+    
+    for (const item of [...listAfter, ...listBefore]) {
       this.container().createEmbeddedView(this.itemTemplate(), item);
-    });
+    }
   }
 }

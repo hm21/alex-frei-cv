@@ -23,7 +23,7 @@ import { ResumeTimelineComponent } from './components/timeline/resume-timeline/r
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss',
   host: {
-    class: 'page-container',
+    class: 'page-container page-padding',
   },
 })
 export class ResumeComponent extends ExtendedComponent implements OnInit {
@@ -35,9 +35,13 @@ export class ResumeComponent extends ExtendedComponent implements OnInit {
     description: $localize`Take a look on the resume from Alex Frei.`,
   };
   override ngOnInit(): void {
-    this.classList.add('page-padding');
+    super.ngOnInit();
+    
+    this.handleModalStateChange();
+  }
 
-    /// Ensure there are no scrollbar offset issues when open the modal
+  /// Ensure there are no scrollbar offset issues when open the modal
+  private handleModalStateChange() {
     this.modal.onChangeState$.pipe(this.destroyPipe()).subscribe((res) => {
       if (res === 'open' && this.modal.isScrollbarVisible && !this.screen.xs) {
         this.elRef.nativeElement.style.marginRight = `${this.modal.scrollbarWidth}px`;
@@ -45,7 +49,5 @@ export class ResumeComponent extends ExtendedComponent implements OnInit {
         this.elRef.nativeElement.style.removeProperty('margin-right');
       }
     });
-
-    super.ngOnInit();
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
-import { TooltipBase, TooltipItem } from 'src/app/ui/tooltip/interfaces/tooltip.interface';
+import { TooltipBase } from 'src/app/ui/tooltip/interfaces/tooltip.interface';
+import { TooltipItem } from 'src/app/ui/tooltip/types/tooltip.type';
 
 
 @Injectable()

@@ -1,4 +1,4 @@
-export interface Hobbies {
+export type Hobbies = {
   /**
    * The title of the item.
    */
@@ -11,4 +11,4 @@ export interface Hobbies {
    * The icon of the item.
    */
   icon: string;
-}
+};

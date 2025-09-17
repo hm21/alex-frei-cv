@@ -10,6 +10,9 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
   imports: [RouterLink, QuicklinkDirective],
   templateUrl: './quantum-quiz-hacker.component.html',
   styleUrl: './quantum-quiz-hacker.component.scss',
+  host: {
+    class: 'card',
+  },
 })
 export class QuantumQuizHackerComponent
   extends ExtendedComponent
@@ -20,7 +23,11 @@ export class QuantumQuizHackerComponent
   private theme = inject(ThemeManagerService);
 
   override ngOnInit(): void {
-    this.classList.add('card');
+    this.enforceDarkMode();
+    super.ngOnInit();
+  }
+
+  private enforceDarkMode() {
     if (this.isBrowser) {
       this.wasDarkMode = this.theme.isDarkMode();
       if (!this.wasDarkMode) {
@@ -30,7 +37,6 @@ export class QuantumQuizHackerComponent
     } else {
       this.theme.setDarkMode();
     }
-    super.ngOnInit();
   }
 
   ngOnDestroy(): void {

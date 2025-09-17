@@ -1,10 +1,10 @@
-import { ResumeTimelineItem } from 'src/app/features/resume/interfaces/resume.interface';
-import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/project-pro_image_editor.constants';
-import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
-import { PROJECT_WAIO } from 'src/app/shared/constants/projects/project-waio.constants';
+import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/core/constants/projects/project-pro_image_editor.constants';
+import { PROJECT_SNAPTAB } from 'src/app/core/constants/projects/project-snaptab.constants';
+import { PROJECT_WAIO } from 'src/app/core/constants/projects/project-waio.constants';
+import { ResumeTimelineItem } from 'src/app/features/resume/types/resume-timeline-item.type';
+import { PROJECT_GEMNAILS } from '../projects/project-gemnails.constants';
 import { PROJECT_PRO_VIDEO_EDITOR } from '../projects/project-pro_video_editor.constants';
-import { PROJECT_GEMNAILS } from '../projects/project_gemnails.constants';
-import { PROJECT_UMAMIHOUSE } from '../projects/project_umamihouse.constants';
+import { PROJECT_UMAMIHOUSE } from '../projects/project-umamihouse.constants';
 
 export const RESUME_TIMELINE_ITEMS: ReadonlyArray<ResumeTimelineItem> = [
   {

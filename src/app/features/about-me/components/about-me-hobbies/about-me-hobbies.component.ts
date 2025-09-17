@@ -5,12 +5,12 @@ import {
   OnInit,
   TemplateRef,
   viewChild,
-  ViewContainerRef
+  ViewContainerRef,
 } from '@angular/core';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
+import { HOBBIES } from 'src/app/core/constants/hobbies.constants';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { HOBBIES } from 'src/app/shared/constants/hobbies.constants';
-import { Hobbies } from './interfaces/about-me-hobbies-interface';
+import { Hobbies } from './types/about-me-hobbies.type';
 
 @Component({
   selector: 'af-about-me-hobbies',
@@ -24,7 +24,6 @@ export class AboutMeHobbiesComponent
   extends ExtendedComponent
   implements OnInit, OnDestroy
 {
-  
   private containerRef = viewChild.required('containerRef', {
     read: ViewContainerRef,
   });
@@ -38,7 +37,7 @@ export class AboutMeHobbiesComponent
    * @remarks
    * Each item has a title, message, and icon.
    */
-  private readonly items: Hobbies[] = HOBBIES;
+  private readonly items: ReadonlyArray<Hobbies> = HOBBIES;
 
   override ngOnInit(): void {
     this.createItems();
@@ -54,8 +53,8 @@ export class AboutMeHobbiesComponent
    * Creates items by iterating over the array of items and creating embedded views using the provided item template.
    */
   private createItems() {
-    this.items.forEach((item) => {
+    for (const item of this.items) {
       this.containerRef().createEmbeddedView(this.itemTemplate(), item);
-    });
+    }
   }
 }

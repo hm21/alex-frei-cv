@@ -18,13 +18,13 @@ import {
   switchMap,
   tap,
 } from 'rxjs';
-import { ENDPOINTS } from 'src/app/core/providers/endpoints/endpoints.provider';
-import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
 import {
   CONTACT_EMAIL,
   CONTACT_MESSAGES,
-} from 'src/app/shared/constants/contact-options.constants';
+} from 'src/app/core/constants/contact-options.constants';
+import { ENDPOINTS } from 'src/app/core/providers/endpoints/endpoints.provider';
+import { ExtendedComponent } from 'src/app/shared/components/extended-component';
+import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
 import { InputLabelDirective } from 'src/app/shared/directives/input-label/input-label.directive';
 import { ExtendedValidators } from 'src/app/shared/validators/extended-form.validator';
 import { ToastService } from 'src/app/ui/toast/services/toast.service';
@@ -53,7 +53,7 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   private endpoints = inject(ENDPOINTS);
 
   /** The reactive form group for the contact form. */
-  public form =  new FormGroup({
+  public form = new FormGroup({
     givenName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
     familyName: new FormControl('', ExtendedValidators.requiredNonWhitespace),
     message: new FormControl('', ExtendedValidators.requiredNonWhitespace),
@@ -77,6 +77,10 @@ export class ContactFormComponent extends ExtendedComponent implements OnInit {
   private sendTries = 0;
 
   override ngOnInit(): void {
+    this.handleFormStateChanges();
+  }
+
+  private handleFormStateChanges() {
     this.form.valueChanges
       .pipe(
         map(() => this.formState()),

@@ -64,27 +64,29 @@ describe('ColorClashGameComponent', () => {
   });
 
   it('should return for every id a meaning', () => {
-    (
-      [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        'rect',
-        'circle',
-        'triangle',
-      ] as ColorClashItemId[]
-    ).forEach((id) => {
+    const items: ReadonlyArray<ColorClashItemId> = [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      'rect',
+      'circle',
+      'triangle',
+    ];
+
+    for (const id of items) {
       expect(component['getMeaning'](id).length).toBeGreaterThanOrEqual(1);
-    });
+    }
   });
   it("should throw error when meaning didn't exists", () => {
-    expect(()=> component['getMeaning']('unknown' as ColorClashItemId)).toThrowError();
+    expect(() =>
+      component['getMeaning']('unknown' as ColorClashItemId),
+    ).toThrowError();
   });
 
   describe('Keyboard shortcuts', () => {
@@ -105,14 +107,15 @@ describe('ColorClashGameComponent', () => {
     it('should map shortcut keys to correct button index', () => {
       const keyMap = { s: 0, d: 1, f: 2, j: 3, k: 4, l: 5 };
       spyOn(component, 'buttonTap');
-      Object.keys(keyMap).forEach((key) => {
+
+      for (const key in keyMap) {
         const event = new KeyboardEvent('keydown', { key });
         document.dispatchEvent(event);
         expect(component.buttonTap).toHaveBeenCalledWith(
           component['gameButtons'][keyMap[key as 's']].id,
           component['gameButtons'][keyMap[key as 's']].color,
         );
-      });
+      }
     });
   });
 });

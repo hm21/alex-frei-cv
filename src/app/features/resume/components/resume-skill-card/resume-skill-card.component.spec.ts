@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KNOWLEDGE } from 'src/app/shared/constants/resume/resume-skills.constants';
+import { KNOWLEDGE } from 'src/app/core/constants/resume/resume-skills.constants';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ResumeSkillCardComponent } from './resume-skill-card.component';
 

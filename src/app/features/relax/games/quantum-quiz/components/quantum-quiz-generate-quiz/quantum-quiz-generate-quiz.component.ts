@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
 
@@ -9,14 +9,8 @@ import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spi
   imports: [ProgressSpinnerComponent],
   templateUrl: './quantum-quiz-generate-quiz.component.html',
   styleUrl: './quantum-quiz-generate-quiz.component.scss',
+  host: {
+    class: 'card',
+  },
 })
-export class QuantumQuizGenerateQuizComponent
-  extends ExtendedComponent
-  implements OnInit
-{
-  override ngOnInit(): void {
-    super.ngOnInit();
-
-    this.classList.add('card');
-  }
-}
+export class QuantumQuizGenerateQuizComponent extends ExtendedComponent {}

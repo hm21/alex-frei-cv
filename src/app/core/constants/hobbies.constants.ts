@@ -1,4 +1,4 @@
-import { Hobbies } from "src/app/features/about-me/components/about-me-hobbies/interfaces/about-me-hobbies-interface";
+import { Hobbies } from "src/app/features/about-me/components/about-me-hobbies/types/about-me-hobbies.type";
 
 export const HOBBIES: Hobbies[] = [
   {

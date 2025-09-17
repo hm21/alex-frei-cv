@@ -3,9 +3,9 @@ import { TestBed } from '@angular/core/testing';
 import { ComponentRef } from '@angular/core';
 import { IS_BROWSER } from 'src/app/core/providers/platform.provider';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
-import { TooltipItem } from '../interfaces/tooltip.interface';
 import { TOOLTIP_VIEW_CONTAINER_REF } from '../providers/tooltip.provider';
 import { TooltipComponent } from '../tooltip.component';
+import { TooltipItem } from '../types/tooltip.type';
 import { TooltipService } from './tooltip.service';
 
 describe('TooltipService', () => {

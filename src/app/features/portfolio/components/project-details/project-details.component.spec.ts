@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
+import { PROJECT_SNAPTAB } from 'src/app/core/constants/projects/project-snaptab.constants';
 import { ToastService } from 'src/app/ui/toast/services/toast.service';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ProjectDetailsComponent } from './project-details.component';

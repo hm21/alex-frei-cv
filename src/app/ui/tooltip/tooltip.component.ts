@@ -1,10 +1,7 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  signal
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { TooltipItemComponent } from './components/tooltip-item/tooltip-item.component';
-import { TooltipBase, TooltipItem } from './interfaces/tooltip.interface';
+import { TooltipBase } from './interfaces/tooltip.interface';
+import { TooltipItem } from './types/tooltip.type';
 
 @Component({
   selector: 'af-tooltip',
@@ -25,7 +22,7 @@ export class TooltipComponent implements TooltipBase {
   create(item: TooltipItem): void {
     this.tooltips.update((el) => {
       el.push(item);
-      return el;
+      return [...el];
     });
   }
 
@@ -54,7 +51,7 @@ export class TooltipComponent implements TooltipBase {
     if (i >= 0) {
       this.tooltips.update((el) => {
         el.splice(i, 1);
-        return el;
+        return [...el];
       });
     }
   }

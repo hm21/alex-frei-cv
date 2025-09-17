@@ -1,15 +1,15 @@
 import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  INJECTOR,
+    ChangeDetectionStrategy,
+    Component,
+    inject,
+    INJECTOR,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { NgxScrollAnimationsDirective } from 'ngx-scroll-animations';
-import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/shared/constants/projects/project-pro_image_editor.constants';
-import { PROJECT_PRO_VIDEO_EDITOR } from 'src/app/shared/constants/projects/project-pro_video_editor.constants';
-import { PROJECT_SNAPTAB } from 'src/app/shared/constants/projects/project-snaptab.constants';
+import { PROJECT_PRO_IMAGE_EDITOR } from 'src/app/core/constants/projects/project-pro_image_editor.constants';
+import { PROJECT_PRO_VIDEO_EDITOR } from 'src/app/core/constants/projects/project-pro_video_editor.constants';
+import { PROJECT_SNAPTAB } from 'src/app/core/constants/projects/project-snaptab.constants';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { ModalService } from 'src/app/ui/modal/modal.service';
 import svgChevronRight from 'src/assets/img/icon/chevron-right.svg';

@@ -19,7 +19,7 @@ import { TooltipDirective } from 'src/app/ui/tooltip/directives/tooltip.directiv
 import svgIconFacebook from 'src/assets/img/icon/social/facebook.svg';
 import svgIconGithub from 'src/assets/img/icon/social/github.svg';
 import svgIconX from 'src/assets/img/icon/social/x.svg';
-import { NAV_ITEMS } from '../../shared/constants/nav-items.constants';
+import { NAV_ITEMS } from '../../core/constants/nav-items.constants';
 import { LanguageSwitchComponent } from '../header/components/language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../header/components/theme-switch/theme-switch.component';
 import { HeaderService } from '../header/services/header.service';
@@ -114,9 +114,9 @@ export class ProfileBannerComponent
    * @private
    */
   private createNavItems() {
-    NAV_ITEMS.forEach((el) => {
-      this.navItemsRef().createEmbeddedView(this.navItem(), el);
-    });
+    for (const item of NAV_ITEMS) {
+      this.navItemsRef().createEmbeddedView(this.navItem(), item);
+    }
   }
 
   /**

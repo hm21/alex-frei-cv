@@ -5,9 +5,9 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { GAMES } from 'src/app/core/constants/games.constants';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { GAMES } from 'src/app/shared/constants/games.constants';
 import { gameScreenAnimation } from '../../animations/game-card.animation';
 import { GameHeaderComponent } from '../../components/game-header/game-header.component';
 import { GAME } from '../../shared/game.token';

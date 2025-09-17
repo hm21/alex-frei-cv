@@ -18,8 +18,8 @@ import {
 } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { filter } from 'rxjs';
+import { NAV_ITEMS } from 'src/app/core/constants/nav-items.constants';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { NAV_ITEMS } from 'src/app/shared/constants/nav-items.constants';
 import { LanguageSwitchComponent } from '../language-switch/language-switch.component';
 import { ThemeSwitchComponent } from '../theme-switch/theme-switch.component';
 
@@ -74,9 +74,9 @@ export class NavItemsComponent
    * @private
    */
   private createNavItems() {
-    NAV_ITEMS.forEach((el) => {
-      this.navItemsRef()!.createEmbeddedView(this.navItem(), el);
-    });
+    for (const item of NAV_ITEMS) {
+      this.navItemsRef()!.createEmbeddedView(this.navItem(), item);
+    }
   }
 
   private listenRouteChanges() {
@@ -90,9 +90,7 @@ export class NavItemsComponent
       .subscribe((event: NavigationEnd) => {
         const currentUrl = event.urlAfterRedirects;
 
-        const elements = this.links();
-
-        elements.forEach((elRef) => {
+        for (const elRef of this.links()) {
           const el = elRef.nativeElement;
 
           if (currentUrl.includes(el.id)) {
@@ -102,7 +100,7 @@ export class NavItemsComponent
             indicatorStyle.left = `${el.offsetLeft}px`;
             indicatorStyle.width = `${rect.width}px`;
           }
-        });
+        }
       });
   }
 }

@@ -10,7 +10,7 @@ import {
   signal,
 } from '@angular/core';
 import { ScreenService } from 'src/app/core/services/screen/screen.service';
-import { TooltipItem } from '../../interfaces/tooltip.interface';
+import { TooltipItem } from '../../types/tooltip.type';
 
 @Component({
   selector: 'af-tooltip-item',
@@ -19,8 +19,8 @@ import { TooltipItem } from '../../interfaces/tooltip.interface';
   templateUrl: './tooltip-item.component.html',
   styleUrl: './tooltip-item.component.scss',
   host: {
-    '[style.top]': 'top()',
-    '[style.left]': 'left()',
+    '[style.top.px]': 'top()',
+    '[style.left.px]': 'left()',
     '[style.opacity]': 'item().visible ? 1 : 0',
     '[@tooltipInOut]': 'item().visible ? "visible" : "hidden"',
     '(@tooltipInOut.start)': 'onAnimationStart($event)',
@@ -47,10 +47,10 @@ export class TooltipItemComponent implements AfterViewInit, OnDestroy {
   public item = input.required<TooltipItem>();
 
   /** Tooltip's top position, dynamically calculated */
-  public top = signal('0px');
+  public top = signal(0);
 
   /** Tooltip's left position, dynamically calculated */
-  public left = signal('0px');
+  public left = signal(0);
 
   private resizeObserver!: ResizeObserver;
 
@@ -104,8 +104,8 @@ export class TooltipItemComponent implements AfterViewInit, OnDestroy {
       left = this.screen.width - tooltipWidth - gap;
     }
 
-    this.top.set(`${top}px`);
-    this.left.set(`${left}px`);
+    this.top.set(top);
+    this.left.set(left);
   }
 
   /**
