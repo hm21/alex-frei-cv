@@ -71,7 +71,7 @@ export class QuantumQuizGameComponent
   }
 
   public get topic() {
-    return this.gameManager.topicTranslated;
+    return this.gameManager.topic;
   }
 
   override ngOnInit(): void {

@@ -24,7 +24,6 @@ export default async (req: https.Request, resp: Response) => {
   if (!validateHttpMethod(req, resp, ['POST'])) {
     return;
   }
-  
 
   if (req.body === 'wake-up') {
     return resp.status(200).json('Awake');
@@ -33,13 +32,10 @@ export default async (req: https.Request, resp: Response) => {
   await checkRateLimit(req, 'quiz', 120);
 
   const lang = (req.body?.lang as string) ?? 'en';
-  const existingQuestions = (req.body?.questions as string[]) ?? [];
   const topicInput = (req.body?.topic as string)?.truncate(20);
-  const questionsText = existingQuestions.toNumberedList();
 
   logger.debug('📥 Received quiz request', {
     lang,
-    existingQuestionCount: existingQuestions.length,
     topicInput,
   });
 
@@ -58,25 +54,32 @@ export default async (req: https.Request, resp: Response) => {
     );
   }
 
-  if (existingQuestions.length === 0) {
-    logger.debug('🆕 Generating first quiz question', { topic, lang });
-    await sendQuizStartNotification(topic);
+  logger.debug('🆕 Generating first quiz question', { topic, lang });
+  await sendQuizStartNotification(topic);
+
+  const existingQuestions: string[] = [];
+  while (existingQuestions.length < 15 && !resp.closed) {
+    const prompt = buildQuizPrompt({
+      topic: topicTranslated,
+      existingQuestions,
+      language: targetLanguage,
+    });
+
+    const generatedQuestion = await generateQuizCompletion(prompt);
+
+    const responseMessage: Record<string, string> = {
+      value: generatedQuestion,
+    };
+
+    if (existingQuestions.length === 0) {
+      responseMessage.topic = topicTranslated;
+    }
+
+    resp.write(JSON.stringify(responseMessage));
+    existingQuestions.push(generatedQuestion);
   }
 
-  const prompt = buildQuizPrompt(
-    topicTranslated,
-    questionsText,
-    existingQuestions.length,
-    targetLanguage,
-  );
-
-  const generatedContent = await generateQuizCompletion(prompt);
-
-  return resp.status(200).json({
-    topic,
-    topicTranslated,
-    generated: generatedContent,
-  });
+  return resp.end();
 };
 
 /**
@@ -125,15 +128,18 @@ async function translateTopic(
 /**
  * Builds a structured prompt for the OpenAI quiz generation.
  */
-function buildQuizPrompt(
-  topic: string,
-  existingQuestionsText: string,
-  existingCount: number,
-  language: string,
-): string {
+function buildQuizPrompt({
+  topic,
+  existingQuestions,
+  language,
+}: {
+  topic: string;
+  existingQuestions: string[];
+  language: string;
+}): string {
   return `
     Generate one quiz question about the topic "${topic}". 
-    ${existingCount > 0 ? 'The existing quiz questions are:\n' + existingQuestionsText + '\nMake the new question harder and unique.' : ''}
+    ${existingQuestions.length > 0 ? 'The existing quiz questions are:\n' + existingQuestions.toNumberedList() + '\nMake the new question harder and unique.' : ''}
     Each question must have four answer options, with one correct answer.
     Translate the question and answers into ${language}.
     Exclude identifiers like "1.", "a)", etc. Only use plain text.
@@ -159,12 +165,10 @@ function buildQuizPrompt(
  */
 async function generateQuizCompletion(prompt: string): Promise<string> {
   try {
-    logger.debug('🧠 Sending prompt to OpenAI');
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [{ role: 'user', content: prompt }],
     });
-    logger.debug('📤 Received response from OpenAI');
 
     return completion.choices[0].message.content ?? '';
   } catch (err) {

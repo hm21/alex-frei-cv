@@ -1,7 +1,7 @@
 /**
  * Represents a quiz question.
  */
-export interface Quiz {
+export type QuizItem = {
   /**
    * The question text.
    */
