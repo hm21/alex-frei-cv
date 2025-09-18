@@ -1,11 +1,11 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
-import { map, Subject, takeUntil, tap } from 'rxjs';
+import { Observable, Subject, takeUntil, tap } from 'rxjs';
 import { ENDPOINTS } from 'src/app/core/providers/endpoints/endpoints.provider';
 import { LoggerService } from 'src/app/core/services/logger/logger.service';
 import { GameManager } from '../../../shared/game-manager';
-import { QuizResponse } from '../interfaces/quantum-quiz-response.interface';
-import { Quiz } from '../interfaces/quantum-quiz.interface';
+import { QuizItem } from '../types/quantum-quiz-item.type';
+import { QuizResponse } from '../types/quantum-quiz-response.type';
 
 @Injectable()
 export class QuizManagerService extends GameManager {
@@ -26,7 +26,7 @@ export class QuizManagerService extends GameManager {
   /**
    * The list of quiz questions.
    */
-  public questions = signal<Quiz[]>([]);
+  public questions = signal<QuizItem[]>([]);
 
   /**
    * The current level of the game.
@@ -52,8 +52,7 @@ export class QuizManagerService extends GameManager {
    */
   public generatingQuestions = false;
 
-  private topic?: string;
-  public topicTranslated?: string;
+  public topic = signal('');
 
   public destroyQuizGeneration$ = new Subject<void>();
 
@@ -95,7 +94,6 @@ export class QuizManagerService extends GameManager {
     this.level.set(0);
     this.generateErrorMsg.set('');
     this.questions.set([]);
-    this.topicTranslated = topic;
     this.generateNewQuestion(topic);
     this.router.navigate([
       '/relax',
@@ -103,6 +101,49 @@ export class QuizManagerService extends GameManager {
       { outlets: { state: 'generate' } },
     ]);
   }
+
+  private streamQuiz$(topic?: string): Observable<QuizResponse> {
+    return new Observable<QuizResponse>((observer) => {
+      const controller = new AbortController();
+
+      fetch(this.endpoints.quiz, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topic,
+          lang: $localize`en`,
+        }),
+        signal: controller.signal,
+      })
+        .then(async (response) => {
+          const reader = response.body?.getReader();
+          const decoder = new TextDecoder();
+
+          while (true) {
+            const { done, value } = await reader!.read();
+            if (done) break;
+
+            const response = decoder.decode(value, { stream: true });
+
+            try {
+              const msg: QuizResponse = JSON.parse(response);
+              msg.quiz = JSON.parse(msg.value);
+              observer.next(msg);
+            } catch (e) {
+              this.logger.error(`Invalid chunk`).print(e);
+            }
+          }
+
+          observer.complete();
+        })
+        .catch((err) => observer.error(err));
+
+      return () => {
+        controller.abort();
+      };
+    });
+  }
+
   /**
    * Generates a new quiz question based on the provided topic.
    *
@@ -118,25 +159,9 @@ export class QuizManagerService extends GameManager {
    */
   private generateNewQuestion(topic?: string) {
     if (!this.generatingQuestions) return;
-    this.http
-      .post<QuizResponse>(this.endpoints.quiz, {
-        topic,
-        lang: $localize`en`,
-        questions: this.questions().map((el) => el.question),
-      })
+
+    this.streamQuiz$(topic)
       .pipe(
-        map((res) => {
-          try {
-            this.topic = res.topic;
-            if (res.topicTranslated) {
-              this.topicTranslated = res.topicTranslated;
-            }
-            return JSON.parse(res.generated ?? '{}');
-          } catch (error) {
-            this.logger.error('JSON.parse failed').print(error);
-            return this.generateNewQuestion(this.topic);
-          }
-        }),
         takeUntil(
           this.destroyQuizGeneration$.pipe(
             tap(() => {
@@ -148,36 +173,19 @@ export class QuizManagerService extends GameManager {
       )
       .subscribe({
         next: (data) => {
-          if (data && !data?.error) {
-            if (this.questions().length === 0) {
-              this.router.navigate(
-                ['/relax', 'quantum-quiz', { outlets: { state: 'play' } }],
-                {
-                  replaceUrl: true,
-                },
-              );
-            }
-            this.questions.update((items) => [...items, data]);
-            this.logger.info(`Question ${this.questions().length}`).print(data);
-            if (this.questions().length < 15 && this.generatingQuestions) {
-              this.generateNewQuestion(this.topic);
-            } else {
-              this.generatingQuestions = false;
-            }
-          } else {
-            this.generateErrorMsg.set(
-              data?.['error'] ?? $localize`Unknown error occurs`,
-            );
+          if (this.questions().length === 0) {
             this.router.navigate(
-              [
-                '/relax',
-                'quantum-quiz',
-                { outlets: { state: 'choose-topic' } },
-              ],
+              ['/relax', 'quantum-quiz', { outlets: { state: 'play' } }],
               {
                 replaceUrl: true,
               },
             );
+          }
+          if (data.topic) this.topic.set(data.topic);
+          this.questions.update((items) => [...items, data.quiz!]);
+          this.logger.info(`Question ${this.questions().length}`).print(data);
+          if (this.questions().length >= 15 && !this.generatingQuestions) {
+            this.generatingQuestions = false;
           }
         },
         error: (error: HttpErrorResponse) => {

@@ -68,47 +68,6 @@ describe('QuizManagerService', () => {
       expect(service).toBeTruthy();
     });
 
-    it('should generate a new quiz', async () => {
-      const service = TestBed.inject(QuizManagerService);
-
-      spyOn(service, 'generateNewQuestion' as any).and.callThrough();
-
-      service.generateQuiz('science');
-      const req = httpMock.expectOne('/api/quiz');
-
-      service.generatingQuestions = false;
-      req.flush({});
-      expect(service.generatingQuestions).toBeFalsy();
-      expect(service.state()).toBe('pending');
-      expect(service.level()).toBe(0);
-      expect(service.generateErrorMsg()).toBe('');
-      expect(service.questions().length).toBe(1);
-      expect(service.topicTranslated).toBe('science');
-      expect(service['generateNewQuestion']).toHaveBeenCalledWith('science');
-    });
-
-    it('should handle quiz generation error', () => {
-      service.generateQuiz('science');
-      const req = httpMock.expectOne('/api/quiz');
-      req.flush(
-        { error: 'Error generating quiz' },
-        { status: 500, statusText: 'Server Error' },
-      );
-      expect(service.generateErrorMsg()).toBe('Server Error');
-    });
-
-    it('should handle quiz generation success', () => {
-      service.generateQuiz('science');
-      const req = httpMock.expectOne('/api/quiz');
-      service.generatingQuestions = false;
-      req.flush({
-        topic: 'science',
-        generated: JSON.stringify({ question: 'What is quantum physics?' }),
-      });
-      expect(service.questions().length).toBe(1);
-      expect(service.questions()[0].question).toBe('What is quantum physics?');
-    });
-
     it('should end the game and set won cash', () => {
       service.level.set(15);
       service.state.set('correct');

@@ -1,7 +1,7 @@
 /**
  * Contains the endpoints for various features.
  */
-export interface Endpoints {
+export type Endpoints = {
   /**
    * The endpoint for the quiz game.
    */
@@ -21,4 +21,4 @@ export interface Endpoints {
    * The endpoint for github repository statistics.
    */
   gitRepoStats: string;
-}
+};

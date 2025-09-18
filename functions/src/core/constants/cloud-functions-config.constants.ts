@@ -1,7 +1,7 @@
 import { HttpsOptions } from 'firebase-functions/https';
 
 export const DEFAULT_API_CORS_ORIGINS: string | RegExp | (string | RegExp)[] = [
-  'alex-frei.web.app',
+  'https://alex-frei.web.app',
 ];
 export const DEPLOYMENT_REGION: string | string[] = 'europe-west6';
 

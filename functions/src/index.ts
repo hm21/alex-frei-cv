@@ -29,7 +29,10 @@ export const getGitRepoStats = createHttpFunction(
 
 export const generateQuiz = createHttpFunction(
   './features/games/generate-quiz.function',
-  LONG_RUNNING_FUNCTION_CONFIG,
+  {
+    ...LONG_RUNNING_FUNCTION_CONFIG,
+    timeoutSeconds: 120,
+  },
 );
 
 export const submitContactForm = createHttpFunction(
