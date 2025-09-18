@@ -130,7 +130,7 @@ export class QuizManagerService extends GameManager {
               msg.quiz = JSON.parse(msg.value);
               observer.next(msg);
             } catch (e) {
-              this.logger.error(`Invalid chunk: ${e}`);
+              this.logger.error(`Invalid chunk`).print(e);
             }
           }
 
