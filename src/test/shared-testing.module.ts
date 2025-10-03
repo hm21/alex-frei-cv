@@ -1,10 +1,6 @@
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import {
-  NgModule,
-  provideZonelessChangeDetection
-} from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { NgModule, provideZonelessChangeDetection } from '@angular/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
@@ -12,10 +8,7 @@ import {
   withPreloading,
 } from '@angular/router';
 import { provideNgxCountAnimations } from 'ngx-count-animation';
-import {
-  quicklinkProviders,
-  QuicklinkStrategy
-} from 'ngx-quicklink';
+import { quicklinkProviders, QuicklinkStrategy } from 'ngx-quicklink';
 import { provideNgxScrollAnimations } from 'ngx-scroll-animations';
 import { routes } from 'src/app/app.routes';
 import { provideEndpoints } from 'src/app/core/providers/endpoints/endpoints.provider';
@@ -38,7 +31,6 @@ import '../app/extensions/extensions.loader';
         anchorScrolling: 'enabled',
       }),
     ),
-    provideAnimations(),
     provideHttpClient(),
     provideHttpClientTesting(),
     provideZonelessChangeDetection(),
