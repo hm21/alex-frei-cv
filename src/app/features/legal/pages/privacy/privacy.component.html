@@ -42,8 +42,8 @@
 
       <h3 class="text-sm" [innerText]="item.title"></h3>
       <svg
-        [@dropdownRotate]="item.visible"
         class="drop-down-icon"
+        [class.rotated]="item.visible"
         xmlns="http://www.w3.org/2000/svg"
         height="32px"
         viewBox="0 0 24 24"
@@ -54,7 +54,7 @@
       </svg>
     </div>
 
-    <div class="card-body" [@openClose]="item.visible">
+    <div class="card-body" [class.visible]="item.visible">
       <div class="text-xs" [innerHtml]="item.text"></div>
 
       @if (item.visible) {
@@ -110,14 +110,16 @@
         </td>
         <td>
           <p>
-            <strong>Usage:</strong> Server functions use IP addresses to execute event handling functions 
-            and HTTP functions based on end-user actions. These functions assist the user with 
-            computationally intensive tasks or operations that require a higher level of security 
-            verification before the data can be sent to the user.
+            <strong>Usage:</strong> Server functions use IP addresses to execute
+            event handling functions and HTTP functions based on end-user
+            actions. These functions assist the user with computationally
+            intensive tasks or operations that require a higher level of
+            security verification before the data can be sent to the user.
           </p>
           <p>
-            <strong>Retention:</strong> Server functions temporarily store IP addresses 
-            only to provide the service and ensure security against DDoS attacks.
+            <strong>Retention:</strong> Server functions temporarily store IP
+            addresses only to provide the service and ensure security against
+            DDoS attacks.
           </p>
         </td>
       </tr>
@@ -130,12 +132,14 @@
         </td>
         <td>
           <p>
-            <strong>Usage:</strong> Hosting uses the IP addresses of incoming requests 
-            to detect abuse and provide us with a detailed analysis of usage data. 
-            We use hosting to operate all our websites, including the website you are currently visiting.
+            <strong>Usage:</strong> Hosting uses the IP addresses of incoming
+            requests to detect abuse and provide us with a detailed analysis of
+            usage data. We use hosting to operate all our websites, including
+            the website you are currently visiting.
           </p>
           <p>
-            <strong>Retention:</strong> Hosting stores IP data for several months.
+            <strong>Retention:</strong> Hosting stores IP data for several
+            months.
           </p>
         </td>
       </tr>

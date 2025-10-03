@@ -14,6 +14,7 @@ import svgWonIcon from 'src/assets/img/game/quantum-quiz/won.svg';
   styleUrls: [
     '../../../../styles/game-button.scss',
     './quantum-quiz-won.component.scss',
+    '../../../../styles/game-page-animation.scss',
   ],
   host: {
     class: 'card',

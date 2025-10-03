@@ -27,7 +27,6 @@ import {
   timer,
 } from 'rxjs';
 import { ThemeManagerService } from 'src/app/core/services/theme-manager/theme-manager.service';
-import { colorClashItemAnimation } from 'src/app/shared/animations/color-clash-item.animation';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import { TooltipDirective } from 'src/app/ui/tooltip/directives/tooltip.directive';
@@ -52,9 +51,9 @@ import { ColorClashItemId } from '../types/color-clash.types';
   templateUrl: './color-clash-game.component.html',
   styleUrls: [
     '../../../../styles/game-shortcut-key.scss',
+    '../../../../styles/game-page-animation.scss',
     './color-clash-game.component.scss',
   ],
-  animations: [colorClashItemAnimation],
 })
 export class ColorClashGameComponent
   extends ExtendedComponent

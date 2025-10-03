@@ -7,7 +7,7 @@
     ></div>
 
     @if (item.value !== undefined) {
-      <span @iconAnimation>{{ item.value }}</span>
+      <span class="value">{{ item.value }}</span>
     } @else {
       <af-progress-spinner diameter="24" />
     }

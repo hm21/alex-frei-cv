@@ -50,13 +50,10 @@ describe('TooltipItemComponent', () => {
 
   it('should update position on animation start', () => {
     spyOn<any>(component, 'updateTooltipPosition');
-    component.onAnimationStart();
-    expect(component['updateTooltipPosition']).toHaveBeenCalled();
-  });
-
-  it('should update position on animation done', () => {
-    spyOn<any>(component, 'updateTooltipPosition');
-    component.onAnimationDone();
+    const transitionEvent: any = {
+      propertyName: 'opacity',
+    };
+    component.onTransitionStart(transitionEvent);
     expect(component['updateTooltipPosition']).toHaveBeenCalled();
   });
 

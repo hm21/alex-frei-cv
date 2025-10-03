@@ -1,11 +1,11 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import {
+  AnimationCallbackEvent,
   ChangeDetectionStrategy,
   Component,
   OnInit,
   signal,
 } from '@angular/core';
-import { filter, fromEvent } from 'rxjs';
+import { filter, fromEvent, timer } from 'rxjs';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 import svgGlobalizationIcon from 'src/assets/img/icon/globalization.svg';
@@ -17,49 +17,6 @@ import svgGlobalizationIcon from 'src/assets/img/icon/globalization.svg';
   imports: [SafePipe],
   templateUrl: './language-switch.component.html',
   styleUrl: './language-switch.component.scss',
-  animations: [
-    trigger('dropdown', [
-      transition(
-        ':enter',
-        [
-          style({
-            opacity: 0,
-            height: 0,
-            'box-shadow': 'unset',
-          }),
-          animate(
-            '{{duration}} ease',
-            style({
-              opacity: 1,
-              height: '*',
-              'box-shadow': '*',
-            }),
-          ),
-        ],
-        { params: { duration: '200ms' } },
-      ),
-      transition(
-        ':leave',
-        [
-          style({
-            opacity: 1,
-            pointerEvents: 'none',
-            height: '*',
-            'box-shadow': '*',
-          }),
-          animate(
-            '{{duration}} ease',
-            style({
-              opacity: 0,
-              height: 0,
-              'box-shadow': 'unset',
-            }),
-          ),
-        ],
-        { params: { duration: '250ms' } },
-      ),
-    ]),
-  ],
 })
 export class LanguageSwitchComponent
   extends ExtendedComponent
@@ -146,6 +103,23 @@ export class LanguageSwitchComponent
       `/${language.iso2}/`,
     );
     this.window.location.href = url;
+  }
+
+  public handleAnimation(event: AnimationCallbackEvent, enter: boolean) {
+    const elRef = event.target as HTMLElement;
+
+    if (!elRef) return;
+
+    timer(1)
+      .pipe(this.destroyPipe())
+      .subscribe(() => {
+        elRef.style.maxHeight = `${elRef.offsetHeight}px`;
+
+        const classList = elRef!.classList;
+
+        classList.remove(!enter ? 'enter' : 'leave');
+        classList.add(enter ? 'enter' : 'leave');
+      });
   }
 }
 

@@ -1,0 +1,27 @@
+:host {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  animation: modal-enter var(--enter-duration) ease forwards;
+
+  &.leave {
+    animation: modal-exit var(--leave-duration) ease forwards;
+  }
+}
+
+@keyframes modal-enter {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-exit {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    transform: translateY(100%);
+  }
+}

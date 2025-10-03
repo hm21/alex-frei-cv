@@ -19,7 +19,10 @@ import { QuizManagerService } from '../../services/quiz-manager.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FormsModule],
   templateUrl: './quantum-quiz-choose-topic.component.html',
-  styleUrl: './quantum-quiz-choose-topic.component.scss',
+  styleUrls: [
+    './quantum-quiz-choose-topic.component.scss',
+    '../../../../styles/game-page-animation.scss',
+  ],
   host: {
     class: 'card',
   },

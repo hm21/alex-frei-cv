@@ -8,7 +8,10 @@ import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spi
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ProgressSpinnerComponent],
   templateUrl: './quantum-quiz-generate-quiz.component.html',
-  styleUrl: './quantum-quiz-generate-quiz.component.scss',
+  styleUrls: [
+    './quantum-quiz-generate-quiz.component.scss',
+    '../../../../styles/game-page-animation.scss',
+  ],
   host: {
     class: 'card',
   },

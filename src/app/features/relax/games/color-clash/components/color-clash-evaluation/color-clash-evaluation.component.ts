@@ -15,7 +15,10 @@ import { ColorClashManagerService } from '../../services/color-clash-manager.ser
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, QuicklinkDirective],
   templateUrl: './color-clash-evaluation.component.html',
-  styleUrl: './color-clash-evaluation.component.scss',
+  styleUrls: [
+    './color-clash-evaluation.component.scss',
+    '../../../../styles/game-page-animation.scss',
+  ],
   host: {
     class: 'card',
   },

@@ -1,9 +1,5 @@
 import { DecimalPipe } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { QuicklinkDirective } from 'ngx-quicklink';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
@@ -20,6 +16,7 @@ import { QuizManagerService } from '../../services/quiz-manager.service';
   styleUrls: [
     '../../../../styles/game-button.scss',
     './quantum-quiz-loose.component.scss',
+    '../../../../styles/game-page-animation.scss',
   ],
   host: {
     class: 'card',

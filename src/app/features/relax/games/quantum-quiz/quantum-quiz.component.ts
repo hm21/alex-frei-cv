@@ -5,11 +5,10 @@ import {
   inject,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { GAMES } from 'src/app/core/constants/games.constants';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { gameScreenAnimation } from '../../animations/game-card.animation';
 import { GameHeaderComponent } from '../../components/game-header/game-header.component';
 import { GAME } from '../../shared/game.token';
 import { QuizManagerService } from './services/quiz-manager.service';
@@ -18,12 +17,7 @@ import { QuizManagerService } from './services/quiz-manager.service';
   selector: 'af-quantum-quiz',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    RouterOutlet,
-
-    GameHeaderComponent,
-    FormsModule,
-  ],
+  imports: [RouterOutlet, GameHeaderComponent, FormsModule],
   providers: [
     {
       provide: GAME,
@@ -37,7 +31,6 @@ import { QuizManagerService } from './services/quiz-manager.service';
     '../../styles/game-button.scss',
     './quantum-quiz.component.scss',
   ],
-  animations: [gameScreenAnimation],
 })
 export class QuantumQuizComponent
   extends ExtendedComponent
@@ -51,19 +44,9 @@ export class QuantumQuizComponent
     description: $localize`Can you emerge victorious on the millionaire show with your AI-generated topic?`,
   };
 
-  /** Angular context for children outlets. */
-  private contexts = inject(ChildrenOutletContexts);
   private gameManager = inject(QuizManagerService);
 
   ngOnDestroy(): void {
     this.gameManager.destroy();
-  }
-
-  /**
-   * Retrieves animation data for route transitions.
-   * @returns Animation data for route transitions.
-   */
-  public getRouteAnimationData() {
-    return this.contexts.getContext('state')?.route?.snapshot?.data.animation;
   }
 }

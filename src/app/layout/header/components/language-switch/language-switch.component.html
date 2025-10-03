@@ -10,7 +10,12 @@
 </button>
 
 @if (showLanguage()) {
-  <div @dropdown class="dropdown-panel">
+  <div
+    #dropdownRef
+    class="dropdown-panel"
+    (animate.enter)="handleAnimation($event, true)"
+    (animate.leave)="handleAnimation($event, false)"
+  >
     @for (language of languages; track $index) {
       <button
         (click)="changeLanguage(language)"

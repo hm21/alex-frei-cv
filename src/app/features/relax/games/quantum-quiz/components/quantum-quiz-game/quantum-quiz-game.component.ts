@@ -23,6 +23,7 @@ import { QuantumQuizGenerateQuizComponent } from '../quantum-quiz-generate-quiz/
   styleUrls: [
     '../../../../styles/game-button.scss',
     '../../../../styles/game-shortcut-key.scss',
+    '../../../../styles/game-page-animation.scss',
     './quantum-quiz-game.component.scss',
   ],
 })

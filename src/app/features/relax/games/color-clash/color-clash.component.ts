@@ -4,11 +4,10 @@ import {
   inject,
   OnDestroy,
 } from '@angular/core';
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { GAMES } from 'src/app/core/constants/games.constants';
 import { PageMetaData } from 'src/app/core/services/meta-manager/page-meta-data.interface';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
-import { gameScreenAnimation } from '../../animations/game-card.animation';
 import { GameHeaderComponent } from '../../components/game-header/game-header.component';
 import { GAME } from '../../shared/game.token';
 import { ColorClashManagerService } from './services/color-clash-manager.service';
@@ -17,18 +16,13 @@ import { ColorClashManagerService } from './services/color-clash-manager.service
   selector: 'af-color-clash',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    RouterOutlet,
-
-    GameHeaderComponent,
-  ],
+  imports: [RouterOutlet, GameHeaderComponent],
   providers: [
     {
       provide: GAME,
       useValue: GAMES.find((el) => el.id === 'color-clash')!,
     },
   ],
-  animations: [gameScreenAnimation],
   templateUrl: './color-clash.component.html',
   styleUrls: [
     '../../styles/game-styles.scss',
@@ -49,19 +43,9 @@ export class ColorClashComponent
     description: $localize`Attempt to keep your mind under control without getting confused.`,
   };
 
-  /** Angular context for children outlets. */
-  private contexts = inject(ChildrenOutletContexts);
   private gameManager = inject(ColorClashManagerService);
 
   ngOnDestroy(): void {
     this.gameManager.destroy();
-  }
-
-  /**
-   * Retrieves animation data for route transitions.
-   * @returns Animation data for route transitions.
-   */
-  public getRouteAnimationData() {
-    return this.contexts.getContext('state')?.route?.snapshot?.data.animation;
   }
 }

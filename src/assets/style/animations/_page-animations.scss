@@ -1,0 +1,19 @@
+@keyframes page-animation-default {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes page-animation-game {
+  from {
+    opacity: 0.3;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

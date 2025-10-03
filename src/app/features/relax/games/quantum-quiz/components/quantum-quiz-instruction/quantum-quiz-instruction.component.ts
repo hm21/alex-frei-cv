@@ -9,7 +9,10 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterLink, QuicklinkDirective],
   templateUrl: './quantum-quiz-instruction.component.html',
-  styleUrls: ['./quantum-quiz-instruction.component.scss'],
+  styleUrls: [
+    './quantum-quiz-instruction.component.scss',
+    '../../../../styles/game-page-animation.scss',
+  ],
   host: {
     class: 'card',
   },

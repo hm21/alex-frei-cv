@@ -2,7 +2,7 @@ import {
   ApplicationConfig,
   isDevMode,
   provideBrowserGlobalErrorListeners,
-  provideZonelessChangeDetection
+  provideZonelessChangeDetection,
 } from '@angular/core';
 import {
   provideRouter,
@@ -21,7 +21,6 @@ import {
   withEventReplay,
   withIncrementalHydration,
 } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideNgxCountAnimations } from 'ngx-count-animation';
 import { QuicklinkStrategy, quicklinkProviders } from 'ngx-quicklink';
@@ -43,7 +42,6 @@ export const appConfig: ApplicationConfig = {
     provideNgxScrollAnimations({ once: false }),
     provideNgxCountAnimations(),
 
-    provideAnimations(),
     provideHttpClient(
       withFetch(),
       withInterceptors([globalHttpErrorHandlerInterceptor]),

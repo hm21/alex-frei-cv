@@ -1,4 +1,3 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, computed, input } from '@angular/core';
 import { GitRepositoryStatistics } from 'src/app/core/services/git-manager/types/git-repo-stats.type';
 import { TooltipDirective } from 'src/app/ui/tooltip/directives/tooltip.directive';
@@ -12,18 +11,6 @@ import { ProgressSpinnerComponent } from '../progress-spinner/progress-spinner.c
   imports: [SafePipe, TooltipDirective, ProgressSpinnerComponent],
   templateUrl: './git-repo-stats.component.html',
   styleUrl: './git-repo-stats.component.scss',
-  animations: [
-    trigger('iconAnimation', [
-      transition(
-        ':enter',
-        [
-          style({ opacity: 0 }),
-          animate('{{duration}} ease', style({ opacity: '*' })),
-        ],
-        { params: { duration: '300ms' } },
-      ),
-    ]),
-  ],
   host: {
     class: 'git-repo-stats',
   },

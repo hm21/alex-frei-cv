@@ -1,12 +1,10 @@
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   ElementRef,
   OnInit,
-  inject,
   input,
-  viewChild,
+  viewChild
 } from '@angular/core';
 import { ExtendedComponent } from 'src/app/shared/components/extended-component';
 import { ProgressSpinnerComponent } from 'src/app/shared/components/progress-spinner/progress-spinner.component';
@@ -25,7 +23,6 @@ import { ToastIconPipe } from '../../pipes/toast-icon.pipe';
   },
 })
 export class ToastItemComponent extends ExtendedComponent implements OnInit {
-  public cdRef = inject(ChangeDetectorRef);
 
   public toast = input.required<ToastConfig>();
   public toastContent =
@@ -57,5 +54,12 @@ export class ToastItemComponent extends ExtendedComponent implements OnInit {
       accentBackground,
       this.toastContent().nativeElement,
     );
+  }
+
+  public animateOut() {
+    const item = this.nativeElement;
+    const currentHeight = item.offsetHeight;
+    item.style.maxHeight = `${currentHeight}px`;
+    this.classList.add('leave');
   }
 }
