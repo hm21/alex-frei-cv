@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedTestingModule } from 'src/test/shared-testing.module';
 import { ColorClashManagerService } from '../../services/color-clash-manager.service';
 import { ColorClashItemId } from '../types/color-clash.types';
@@ -11,11 +10,7 @@ describe('ColorClashGameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        ColorClashGameComponent,
-        BrowserAnimationsModule,
-        SharedTestingModule,
-      ],
+      imports: [ColorClashGameComponent, SharedTestingModule],
       providers: [ColorClashManagerService],
       teardown: { destroyAfterEach: false },
     }).compileComponents();
