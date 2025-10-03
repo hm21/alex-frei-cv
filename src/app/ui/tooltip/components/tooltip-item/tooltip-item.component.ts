@@ -1,4 +1,3 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -21,23 +20,9 @@ import { TooltipItem } from '../../types/tooltip.type';
   host: {
     '[style.top.px]': 'top()',
     '[style.left.px]': 'left()',
-    '[style.opacity]': 'item().visible ? 1 : 0',
-    '[@tooltipInOut]': 'item().visible ? "visible" : "hidden"',
-    '(@tooltipInOut.start)': 'onAnimationStart($event)',
-    '(@tooltipInOut.done)': 'onAnimationDone($event)',
+    '[class.visible]': 'item().visible',
+    '(transitionstart)': 'onTransitionStart($event)',
   },
-  animations: [
-    trigger('tooltipInOut', [
-      transition('hidden => visible', [
-        style({ opacity: 0, transform: 'scale(0.7)' }),
-        animate('220ms ease', style({ opacity: 1, transform: 'scale(1)' })),
-      ]),
-      transition('visible => hidden', [
-        style({ opacity: 1, transform: 'scale(1)' }),
-        animate('220ms ease', style({ opacity: 0, transform: 'scale(0.7)' })),
-      ]),
-    ]),
-  ],
 })
 export class TooltipItemComponent implements AfterViewInit, OnDestroy {
   private screen = inject(ScreenService);
@@ -108,17 +93,9 @@ export class TooltipItemComponent implements AfterViewInit, OnDestroy {
     this.left.set(left);
   }
 
-  /**
-   * Triggered when animation starts, updating the tooltip position.
-   */
-  public onAnimationStart(): void {
-    this.updateTooltipPosition();
-  }
-
-  /**
-   * Triggered when animation completes, updating the tooltip position.
-   */
-  public onAnimationDone(): void {
-    this.updateTooltipPosition();
+  public onTransitionStart(event: TransitionEvent) {
+    if (event.propertyName === 'opacity') {
+      this.updateTooltipPosition();
+    }
   }
 }

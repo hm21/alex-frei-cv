@@ -24,10 +24,24 @@
 .icon {
   display: inline-flex;
 }
+.value {
+  opacity: 0;
+  animation: fadeIn 300ms ease forwards;
+}
 
 :host ::ng-deep {
   svg {
     width: 1rem;
     height: 1rem;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

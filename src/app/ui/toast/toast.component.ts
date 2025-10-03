@@ -1,11 +1,8 @@
-import { animate, style, transition, trigger } from '@angular/animations';
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
-  inject,
   output,
-  signal,
+  signal
 } from '@angular/core';
 import { ToastItemComponent } from './components/toast-item/toast-item.component';
 import { ToastConfig } from './interfaces/toast-interfaces';
@@ -15,61 +12,10 @@ import { ToastConfig } from './interfaces/toast-interfaces';
   standalone: true,
   imports: [ToastItemComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('afToast', [
-      transition(
-        ':enter',
-        [
-          style({
-            opacity: 0.7,
-            scale: 0.7,
-            transform: 'translateY(-40px)',
-            'margin-bottom': '-30px',
-          }),
-          animate(
-            '{{duration}} ease',
-            style({
-              opacity: 1,
-              scale: 1,
-              transform: 'translateY(0px)',
-              'margin-bottom': '10px',
-            }),
-          ),
-        ],
-        { params: { duration: '350ms' } },
-      ),
-      transition(
-        ':leave',
-        [
-          style({
-            opacity: 1,
-            'min-height': 0,
-            scale: 1,
-            color: 'transparent',
-            overflow: 'hidden',
-          }),
-          animate(
-            '{{duration}} ease-out',
-            style({
-              opacity: 0,
-              height: 0,
-              scale: 0.5,
-              'padding-top': 0,
-              'padding-bottom': 0,
-              'margin-bottom': '0px',
-            }),
-          ),
-        ],
-        { params: { duration: '350ms' } },
-      ),
-    ]),
-  ],
   templateUrl: './toast.component.html',
   styleUrl: './toast.component.scss',
 })
 export class ToastComponent {
-  public cdRef = inject(ChangeDetectorRef);
-
   /** List of toast notifications */
   public toastList = signal<ToastConfig[]>([]);
 

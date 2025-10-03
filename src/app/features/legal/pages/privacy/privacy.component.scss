@@ -74,8 +74,22 @@ h3 {
   }
 }
 .card-body {
+  transition-property: margin, opacity, height;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+
+  opacity: 0;
+  margin: 0px;
+  height: 0px;
+
   .text-xs {
     padding: 0 30px;
+  }
+
+  &.visible {
+    opacity: 1;
+    margin: 20px 0;
+    height: auto;
   }
 }
 
@@ -114,6 +128,11 @@ td {
 
 .drop-down-icon {
   min-width: 32px;
+  transition: transform 300ms ease;
+
+  &.rotated {
+    transform: rotate(180deg);
+  }
 }
 
 @include breakpoints.xs {

@@ -8,7 +8,10 @@ import { QuicklinkDirective } from 'ngx-quicklink';
   imports: [RouterLink, QuicklinkDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './color-clash-instruction.component.html',
-  styleUrl: './color-clash-instruction.component.scss',
+  styleUrls: [
+    './color-clash-instruction.component.scss',
+    '../../../../styles/game-page-animation.scss',
+  ],
   host: {
     class: 'card',
   },

@@ -1,7 +1,9 @@
 @for (toast of toastList(); track toast.id) {
   <af-toast-item
-    @afToast
+    #toastRef
     class="toast mode-{{ toast.type }}"
+    animate.enter="enter"
+    (animate.leave)="toastRef.animateOut()"
     [toast]="toast"
     (click)="toast.tap?.(); closeToast.emit(toast)"
   />

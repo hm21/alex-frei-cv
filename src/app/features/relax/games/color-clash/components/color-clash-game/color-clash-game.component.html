@@ -24,11 +24,10 @@
   <div class="items">
     @for (item of viewItems(); track item.loopId) {
       <div
-        [@viewItem]="{
-          value: 'in',
-          params: { color: item.isCorrect ? 'green' : 'red' },
-        }"
+        animate.leave="leave"
         class="item pos-{{ $index }}"
+        [class.correct]="item.isCorrect"
+        [style.--state-color]="item.isCorrect ? 'green' : 'red'"
         [style.--game-item-color]="item.color"
       >
         <div class="mode">{{ item.modeTranslated | uppercase }}</div>

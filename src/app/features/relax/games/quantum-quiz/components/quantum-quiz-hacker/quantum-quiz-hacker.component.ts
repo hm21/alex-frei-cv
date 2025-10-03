@@ -9,7 +9,10 @@ import { ExtendedComponent } from 'src/app/shared/components/extended-component'
   standalone: true,
   imports: [RouterLink, QuicklinkDirective],
   templateUrl: './quantum-quiz-hacker.component.html',
-  styleUrl: './quantum-quiz-hacker.component.scss',
+  styleUrls: [
+    './quantum-quiz-hacker.component.scss',
+    '../../../../styles/game-page-animation.scss',
+  ],
   host: {
     class: 'card',
   },

@@ -1,10 +1,3 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 import { NgTemplateOutlet } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -15,18 +8,6 @@ import { ToastService } from 'src/app/ui/toast/services/toast.service';
   selector: 'af-privacy',
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss'],
-  animations: [
-    trigger('openClose', [
-      state('true', style({ height: '*', opacity: 1, margin: '20px 0' })),
-      state('false', style({ height: '0px', opacity: 0, margin: '0' })),
-      transition('false <=> true', animate('150ms ease')),
-    ]),
-    trigger('dropdownRotate', [
-      state('true', style({ transform: 'rotate(180deg)' })),
-      state('false', style({ transform: 'rotate(0deg)' })),
-      transition('false <=> true', animate('300ms ease')),
-    ]),
-  ],
   imports: [NgTemplateOutlet, RouterLink],
   host: {
     class: 'page-container',

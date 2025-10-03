@@ -1,10 +1,9 @@
 <main>
   <div
-    [@.disabled]="!useRouteAnimations()"
-    [@routeAnimation]="getRouteAnimationData()"
+    afRoutePageAnimation
     class="container content"
   >
-    <router-outlet />
+    <router-outlet  />
   </div>
 
   <af-footer />
