@@ -141,7 +141,7 @@ function buildQuizPrompt({
     Generate one quiz question about the topic "${topic}". 
     ${existingQuestions.length > 0 ? 'The existing quiz questions are:\n' + existingQuestions.toNumberedList() + '\nMake the new question harder and unique.' : ''}
     Each question must have four answer options, with one correct answer.
-    Translate the question and answers into ${language}.
+    ${language === 'English' ? 'Write the question and all answers only in English' : `Write the question and all answers only in ${language}, not in English.`}
     Exclude identifiers like "1.", "a)", etc. Only use plain text.
     Provide the response in this exact JSON format:
     {
@@ -153,7 +153,6 @@ function buildQuizPrompt({
     {
       "error": "Reason for the error"
     }
-    Make the message clear and helpful in ${language}.
     `;
 }
 /**
