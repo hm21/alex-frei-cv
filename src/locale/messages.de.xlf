@@ -25,11 +25,11 @@
         <target>de</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/services/quiz-manager.service.ts</context>
-          <context context-type="linenumber">124</context>
+          <context context-type="linenumber">114</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/header/components/language-switch/language-switch.component.ts</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">35</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/layout/profile-banner/profile-banner.component.ts</context>
@@ -48,7 +48,7 @@
         <source>About me</source>
         <target>Über mich</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -56,31 +56,31 @@
         <source>Resume</source>
         <target>Lebenslauf</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/resume/resume.component.html</context>
-          <context context-type="linenumber">1,3</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">21</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="sourcefile">src/app/features/resume/resume.component.html</context>
+          <context context-type="linenumber">1,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9201103587777813545" datatype="html">
         <source>Portfolio</source>
         <target>Portfolio</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="sourcefile">src/app/features/portfolio/portfolio.component.html</context>
+          <context context-type="linenumber">1,2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3939458405623425043" datatype="html">
         <source>Relax</source>
         <target>Erholung</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
@@ -88,7 +88,7 @@
         <source>Contact</source>
         <target>Kontakt</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
@@ -132,7 +132,7 @@
         <source>Hiking</source>
         <target>Wandern</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
@@ -140,7 +140,7 @@
         <source>Develop</source>
         <target>Entwickeln</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -148,7 +148,7 @@
         <source>As electronics enthusiast i spend my free time drawing schematics, writing code and turning my apartment into a high-tech lab.</source>
         <target>Als Elektronik-Enthusiast verbringe ich meine Freizeit damit, Schaltpläne zu zeichnen, Code zu schreiben und meine Wohnung in ein High-Tech-Labor zu verwandeln.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
@@ -164,16 +164,16 @@
         <source>E-Mail</source>
         <target>E-Mail</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
           <context context-type="linenumber">18,19</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/contact/components/contact-form/contact-form.component.html</context>
           <context context-type="linenumber">28</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
-          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3262236020277300799" datatype="html">
@@ -301,7 +301,7 @@
         <source>Websites</source>
         <target>Webseiten</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -309,7 +309,7 @@
         <source>Apps</source>
         <target>Apps</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
@@ -317,7 +317,7 @@
         <source>Design</source>
         <target>Design</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
@@ -325,12 +325,12 @@
         <source>Backend</source>
         <target>Backend</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">217</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
+          <context context-type="linenumber">29</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
+          <context context-type="linenumber">214</context>
         </context-group>
       </trans-unit>
       <trans-unit id="103220111367852293" datatype="html">
@@ -338,7 +338,7 @@
         <target>Frontend</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">215</context>
+          <context context-type="linenumber">212</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1483267419452198083" datatype="html">
@@ -361,7 +361,7 @@
         <source>Coffee Consumed</source>
         <target>Kaffee konsumiert</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -369,7 +369,7 @@
         <source>Walking Breaks</source>
         <target>Laufpausen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
@@ -377,7 +377,7 @@
         <source>Songs listened</source>
         <target>Gehörte Lieder</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -385,7 +385,7 @@
         <source>Git Commits</source>
         <target>Git Commits</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/fun-facts.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/fun-facts.constants.ts</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
@@ -417,7 +417,7 @@
         <source>The request has been successfully submitted.</source>
         <target>Die Nachricht wurde erfolgreich übermittelt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -425,7 +425,7 @@
         <source>Unknown error! Please try again.</source>
         <target>Unbekannter Fehler! Bitte versuchen Sie es erneut.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -433,7 +433,7 @@
         <source>Forbidden request to the server.</source>
         <target>Verbotene Anfrage an den Server.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
@@ -441,7 +441,7 @@
         <source>Invalid data sent. Please fill out the form correctly and try again.</source>
         <target>Ungültige Daten gesendet. Bitte füllen Sie das Formular korrekt aus und versuchen Sie es erneut.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
@@ -449,7 +449,7 @@
         <source>Open WhatsApp</source>
         <target>WhatsApp öffnen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
@@ -457,24 +457,24 @@
         <source>Start call</source>
         <target>Anruf starten</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
+          <context context-type="linenumber">28</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1059908080981133475" datatype="html">
         <source>Send E-Mail</source>
         <target>E-Mail senden</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
+          <context context-type="linenumber">35</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="sourcefile">src/app/features/about-me/components/about-me-intro/about-me-intro.component.html</context>
+          <context context-type="linenumber">22,23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2370050546944857169" datatype="html">
@@ -505,7 +505,7 @@
         <source>Presentation website</source>
         <target>Präsentationswebseite</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
@@ -513,7 +513,7 @@
         <source>Web-app</source>
         <target>Web-App</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
@@ -521,7 +521,7 @@
         <source>Mobile-web-app “PWA”</source>
         <target>Mobile-web-app „PWA”</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
@@ -529,7 +529,7 @@
         <source>Client-portal</source>
         <target>Kundenportal</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
@@ -537,7 +537,7 @@
         <source>Admin-access</source>
         <target>Admin-Zugriff</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
@@ -545,83 +545,51 @@
         <source>Website</source>
         <target>Webseite</target>
         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-gemnails.constants.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-gemnails.constants.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-umamihouse.constants.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-umamihouse.constants.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-waio.constants.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-waio.constants.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-waio.constants.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-card/project-card.component.html</context>
           <context context-type="linenumber">39,40</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">182</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">55</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
-          <context context-type="linenumber">51</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5195429168031052915" datatype="html">
-        <source>Waio Homepage</source>
-        <target>Waio Webseite</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7235166256865062307" datatype="html">
-        <source>Waio Team</source>
-        <target>Waio Team</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5462750284769560897" datatype="html">
-        <source>Waio Game 1</source>
-        <target>Waio Spiel 1</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4989925427936502178" datatype="html">
-        <source>Waio Game 2</source>
-        <target>Waio Spiel 2</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5183297567427907684" datatype="html">
         <source>Flutter open source</source>
         <target>Flutter open source</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_video_editor.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -629,39 +597,39 @@
         <source>Github-Page</source>
         <target>Github-Seite</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-count-animation.constants.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-image-hero.constants.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-scroll-animations.constants.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">121</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_video_editor.constants.ts</context>
           <context context-type="linenumber">77</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
-          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4222037467811949681" datatype="html">
         <source>Angular open source</source>
         <target>Angular open source</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -669,7 +637,7 @@
         <source>IoT</source>
         <target>IoT</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-smarthome.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -714,7 +682,7 @@
         <target>Kopiert</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">244</context>
+          <context context-type="linenumber">241</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1330330165139018730" datatype="html">
@@ -738,7 +706,7 @@
         <target>Mobile-Store</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">193</context>
+          <context context-type="linenumber">190</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5284812472715499591" datatype="html">
@@ -746,7 +714,7 @@
         <target>Prototyp</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">219</context>
+          <context context-type="linenumber">216</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8693603235657020323" datatype="html">
@@ -754,7 +722,7 @@
         <target>Sonstiges</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/portfolio/components/project-details/project-details.component.ts</context>
-          <context context-type="linenumber">221</context>
+          <context context-type="linenumber">218</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7655204782877616451" datatype="html">
@@ -780,19 +748,19 @@
         <target>Color Clash Spiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5163146092400769584" datatype="html">
         <source>Attempt to keep your mind under control without getting confused.</source>
         <target>Versuchen Sie, Ihren Verstand unter Kontrolle zu halten, ohne verwirrt zu werden.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/relax/games/color-clash/color-clash.component.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="sourcefile">src/app/core/constants/games.constants.ts</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="sourcefile">src/app/features/relax/games/color-clash/color-clash.component.ts</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5988661743089198019" datatype="html">
@@ -832,7 +800,7 @@
         <target>Leider haben Sie eine Menge Fehler gemacht. Lassen Sie es das nächste Mal langsam angehen, ich bin mir sicher, dass Sie besser werden können!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5189038536564747724" datatype="html">
@@ -840,7 +808,7 @@
         <target>Nicht schlecht, Sie haben nur ein paar Fehler gemacht. Aber schaffen Sie es auch fehlerfrei?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9028248846074123455" datatype="html">
@@ -848,7 +816,7 @@
         <target>Toll, Sie haben keine Fehler gemacht. Aber können Sie in dieser Zeit mehr Punkte erzielen, ohne Fehler zu machen?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9011689187710069765" datatype="html">
@@ -856,7 +824,7 @@
         <target>Ihr aktueller Highscore beträgt <x id="PH" equiv-text="highScore.points"/> Punkte mit <x id="PH_1" equiv-text="highScore.mistakes"/> Fehlern!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4667547387491062114" datatype="html">
@@ -872,11 +840,11 @@
         <target>Anleitung anzeigen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
-          <context context-type="linenumber">51,52</context>
+          <context context-type="linenumber">50,51</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.html</context>
-          <context context-type="linenumber">53,54</context>
+          <context context-type="linenumber">52,53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6983516129072435613" datatype="html">
@@ -884,7 +852,7 @@
         <target>Eins</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">266</context>
+          <context context-type="linenumber">275</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3594109821899435342" datatype="html">
@@ -892,7 +860,7 @@
         <target>Zwei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">268</context>
+          <context context-type="linenumber">277</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5053109843801600778" datatype="html">
@@ -900,7 +868,7 @@
         <target>Drei</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">270</context>
+          <context context-type="linenumber">279</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4586442404696053180" datatype="html">
@@ -908,7 +876,7 @@
         <target>Vier</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">272</context>
+          <context context-type="linenumber">281</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2358474031492585929" datatype="html">
@@ -916,7 +884,7 @@
         <target>Fünf</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">274</context>
+          <context context-type="linenumber">283</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3553471239341143775" datatype="html">
@@ -924,7 +892,7 @@
         <target>Sechs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">276</context>
+          <context context-type="linenumber">285</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8862515584904423537" datatype="html">
@@ -932,7 +900,7 @@
         <target>Sieben</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">278</context>
+          <context context-type="linenumber">287</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7404127797382200841" datatype="html">
@@ -940,7 +908,7 @@
         <target>Acht</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">280</context>
+          <context context-type="linenumber">289</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3039958236254194098" datatype="html">
@@ -948,7 +916,7 @@
         <target>Neun</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">282</context>
+          <context context-type="linenumber">291</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6984675258712446825" datatype="html">
@@ -956,7 +924,7 @@
         <target>Rechteck</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">284</context>
+          <context context-type="linenumber">293</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2742734092970013664" datatype="html">
@@ -964,7 +932,7 @@
         <target>Kreis</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">286</context>
+          <context context-type="linenumber">295</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6243699471535097376" datatype="html">
@@ -972,7 +940,7 @@
         <target>Dreieck</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">288</context>
+          <context context-type="linenumber">297</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5200647034853049117" datatype="html">
@@ -1033,7 +1001,7 @@
         <target>Das Thema muss zwischen 3 und 20 Zeichen lang sein!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="587771637347115681" datatype="html">
@@ -1041,7 +1009,7 @@
         <target>Das Thema muss ein Text und keine Zahl sein</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/components/quantum-quiz-choose-topic/quantum-quiz-choose-topic.component.ts</context>
-          <context context-type="linenumber">79</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5320870651003627043" datatype="html">
@@ -1191,19 +1159,19 @@
         <target>Quantum Quiz Spiel</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="937865599769579559" datatype="html">
         <source>Can you emerge victorious on the millionaire show with your AI-generated topic?</source>
         <target>Können Sie mit einem von Ihnen ausgewählten KI-generierten Thema in der Millionärsshow als Sieger hervorgehen?</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="sourcefile">src/app/core/constants/games.constants.ts</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/quantum-quiz.component.ts</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1832034400815744294" datatype="html">
@@ -1211,11 +1179,7 @@
         <target>Unbekannter Fehler ist aufgetreten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/services/quiz-manager.service.ts</context>
-          <context context-type="linenumber">169</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/relax/games/quantum-quiz/services/quiz-manager.service.ts</context>
-          <context context-type="linenumber">185</context>
+          <context context-type="linenumber">193</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3937846620771701095" datatype="html">
@@ -1231,7 +1195,7 @@
         <target>Zeit zum Entspannen und Spielen</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/relax.component.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7086942020668895494" datatype="html">
@@ -1239,14 +1203,14 @@
         <target>Spiel doch ein Minispiel, um ein wenig zu entspannen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/relax.component.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="242479384757553256" datatype="html">
         <source>March 21, 1995</source>
         <target>21. März 1995</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">216</context>
         </context-group>
       </trans-unit>
@@ -1254,7 +1218,7 @@
         <source>Birthday</source>
         <target>Geburtstag</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">217</context>
         </context-group>
       </trans-unit>
@@ -1262,7 +1226,7 @@
         <source>2001 - 2010</source>
         <target>2001 - 2010</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">211</context>
         </context-group>
       </trans-unit>
@@ -1270,7 +1234,7 @@
         <source>2010 - 2014</source>
         <target>2010 - 2014</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
@@ -1278,7 +1242,7 @@
         <source>2014 - 2015</source>
         <target>2014 - 2015</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
@@ -1286,7 +1250,7 @@
         <source>March - November 2015</source>
         <target>März - November 2015</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
@@ -1294,7 +1258,7 @@
         <source>2016 - 2020</source>
         <target>2016 - 2020</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">158</context>
         </context-group>
       </trans-unit>
@@ -1302,7 +1266,7 @@
         <source>Fiber optic training</source>
         <target>Glasfaserschulung</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
@@ -1310,7 +1274,7 @@
         <source>2021 - Today</source>
         <target>2021 - Heute</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
@@ -1318,7 +1282,7 @@
         <source>Project “snaptab”</source>
         <target>Projekt „snaptab”</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
@@ -1350,7 +1314,7 @@
         <source>Learn more about me.</source>
         <target>Mehr über mich.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
@@ -1358,7 +1322,7 @@
         <source>View my resume.</source>
         <target>Einblicke in Lebenslauf.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
@@ -1366,7 +1330,7 @@
         <source>Explore my portfolio.</source>
         <target>Erkunde mein Portfolio.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
@@ -1374,7 +1338,7 @@
         <source>Take a break and relax.</source>
         <target>Mach eine Pause und entspanne.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -1382,7 +1346,7 @@
         <source>Get in touch with me.</source>
         <target>Kontakt mit mir aufnehmen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/nav-items.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/nav-items.constants.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
@@ -1399,7 +1363,7 @@
         <source>Swiming</source>
         <target>Schwimmen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -1407,7 +1371,7 @@
         <source>What could be more relaxing than a refreshing swim? And swimming counts as exercise, so it&apos;s the perfect win-win for body and mind.</source>
         <target>Was gibt es Erholsameres als ein erfrischendes Bad? Schwimmen als Sport ist die perfekte Win-Win-Situation für Körper und Geist.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -1416,7 +1380,7 @@
         <target>Farbe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">210</context>
+          <context context-type="linenumber">219</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2984907873245479480" datatype="html">
@@ -1424,7 +1388,7 @@
         <target>Bedeutung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-game/color-clash-game.component.ts</context>
-          <context context-type="linenumber">210</context>
+          <context context-type="linenumber">219</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1188841585502022097" datatype="html">
@@ -1439,7 +1403,7 @@
         <source>I am one of those people who love the silence of the wilderness, following the call of the birds and experiencing nature as a unique symphony.</source>
         <target>Ich gehöre zu denjenigen, die die Stille der Wildnis lieben, dem Ruf der Vögel folgen und die Natur als eine einzigartige Sinfonie erleben.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/hobbies.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/hobbies.constants.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
@@ -1457,7 +1421,7 @@
         <target>&amp;nbspDas Ziel ist es, fehlerfrei mehr als 60 Punkte zu erzielen!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3813774522743670844" datatype="html">
@@ -1465,7 +1429,7 @@
         <target>&amp;nbspMoment, Sie haben mehr als 60 Punkte?!! Das ist großartig, anscheinend sind Sie ein Genie!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/relax/games/color-clash/components/color-clash-evaluation/color-clash-evaluation.component.ts</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7350255949203905689" datatype="html">
@@ -1485,30 +1449,8 @@
 
 Die Anwendung wird sowohl als Web-App als auch als mobile App für Android und iOS angeboten.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">9,19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1639297382498004291" datatype="html">
-        <source>
-    This website introduces WAIO Applications, my own company. Alongside information about my company, 
-    it offers two captivating games to enrich the user experience.&lt;br/&gt;
-    You can find one of these games by clicking on the &quot;Team&quot; tab and then pressing the &quot;Icebreaker&quot; button. 
-    The other game is hidden as an &quot;easter egg&quot; on the homepage. Simply scroll to the &quot;For all devices&quot; section, 
-    click on the red rectangle (which represents a phone with a scale animation).&lt;br/&gt;&lt;br/&gt;
-    On the subdomain image.waio.ch, we provide a straightforward tool for resizing and converting images to various formats and sizes.&lt;br/&gt;&lt;br/&gt;
-    The website was designed with a focus on performance and accessibility, and it is fully responsive,
-    ensuring a seamless experience across all devices.&lt;br/&gt;&lt;br/&gt;
-    Most of the UI/UX part of this project is not mine.
-    </source>
-        <target>Diese Webseite stellt WAIO Applications, mein eigenes Unternehmen, vor. Neben Informationen &amp;uuml;ber mein Unternehmen bietet sie zwei fesselnde Spiele, um das Benutzererlebnis zu bereichern. Eines dieser Spiele finden Sie, indem Sie auf den Tab &amp;bdquo;Team&amp;ldquo; klicken und dann auf die Schaltfl&amp;auml;che &amp;bdquo;Icebreaker&amp;ldquo; dr&amp;uuml;cken. Das andere Spiel ist als &amp;bdquo;Easter Egg&amp;ldquo; auf der Homepage versteckt. Scrollen Sie einfach zum Abschnitt &amp;bdquo;F&amp;uuml;r alle Ger&amp;auml;te&amp;ldquo;, klicken Sie auf das rote Rechteck (das ein Telefon mit einer Skalierungsanimation darstellt). &lt;br&gt;&lt;br&gt;
-Auf der Subdomain image.waio.ch bieten wir ein unkompliziertes Tool zum &amp;Auml;ndern der Gr&amp;ouml;&amp;szlig;e und Konvertieren von Bildern in verschiedene Formate und Gr&amp;ouml;&amp;szlig;en an. &lt;br&gt;&lt;br&gt;
-Die Webseite wurde mit Schwerpunkt auf Leistung und Zug&amp;auml;nglichkeit entworfen und ist vollst&amp;auml;ndig responsiv, um ein nahtloses Erlebnis auf allen Ger&amp;auml;ten zu gew&amp;auml;hrleisten. 
-&lt;br&gt;&lt;br&gt;
-Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
-          <context context-type="linenumber">10,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1958216158924998792" datatype="html">
@@ -1519,7 +1461,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
     </source>
         <target>Ein Paket, das Zahlen&amp;auml;nderungen elegant animiert und einen visuell ansprechenden &amp;Uuml;bergang von einem Wert zum anderen schafft, perfekt zum Z&amp;auml;hlen oder zur Anzeige von Datenaktualisierungen in Echtzeit.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten m&amp;ouml;glicherweise nicht so fl&amp;uuml;ssig erscheint wie in Wirklichkeit. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">11,15</context>
         </context-group>
       </trans-unit>
@@ -1531,7 +1473,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
     </source>
         <target>Ein Paket zur Implementierung von Hero-Animationen, die es Benutzern erm&amp;ouml;glichen, auf Bilder zu klicken, damit sie fl&amp;uuml;ssig vergr&amp;ouml;&amp;szlig;ert werden, was die Benutzererfahrung und die Interaktion mit Bildern verbessert.&lt;br&gt;&lt;br&gt; Bitte beachten Sie, dass die Vorschau unten m&amp;ouml;glicherweise nicht so sanft erscheint wie in der Realit&amp;auml;t. Das liegt daran, dass ich die Bildrate des GIFs reduziert habe, um Speicherplatz zu sparen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">10,14</context>
         </context-group>
       </trans-unit>
@@ -1543,7 +1485,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
    </source>
         <target>Ein Paket zur Implementierung von CSS-Scroll-Animationen für Elemente. Diese Animationen werden aktiviert, wenn ein Element beim Scrollen der Seite in den „Sichtbereich“ eintritt. Die Benutzer haben die Flexibilität, die Animationen so zu konfigurieren, dass sie mehrmals oder nur einmal ausgelöst werden. Außerdem ermöglicht das Paket vorgefertigte sowie benutzerdefinierte Animationen für verschiedene Anforderungen zu erstellen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">11,15</context>
         </context-group>
       </trans-unit>
@@ -1551,7 +1493,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>WhatsApp</source>
         <target>WhatsApp</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -1559,7 +1501,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Call</source>
         <target>Anrufen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
@@ -1593,7 +1535,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Valid email address is required.</source>
         <target>Es ist eine gültige E-Mail-Adresse erforderlich.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -1601,7 +1543,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>&lt;b&gt;First Name&lt;/b&gt;, &lt;b&gt;Last Name&lt;/b&gt;, and &lt;b&gt;Message&lt;/b&gt; as well as &lt;b&gt;E-Mail&lt;/b&gt; are required.</source>
         <target>&lt;b&gt;Vorname&lt;/b&gt;, &lt;b&gt;Nachname&lt;/b&gt; und &lt;b&gt;Nachricht&lt;/b&gt; sowie&lt;b&gt;E-Mail&lt;/b&gt; werden ben&amp;ouml;tigt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -1609,7 +1551,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Too many attempts to send the form. Try again later.</source>
         <target>Zu viele Anfragen! Bitte versuchen Sie es später noch einmal.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -1617,7 +1559,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Your IP address has been blacklisted because you have sent an unusually high number of requests to the server! If these requests were not made maliciously, please contact me via</source>
         <target>Ihre IP-Adresse wurde auf die schwarze Liste gesetzt, weil Sie ungewöhnlich viele Anfragen an den Server gesendet haben! Wenn diese Anfragen nicht in böser Absicht gestellt wurden, kontaktieren Sie mich bitte über</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/contact-options.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/contact-options.constants.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
@@ -1741,7 +1683,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Show certificate</source>
         <target>EFZ anzeigen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">177</context>
         </context-group>
       </trans-unit>
@@ -1749,23 +1691,23 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Electrical-Installer certificate</source>
         <target>Elektroinstallateur EFZ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">179</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">184</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">190</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">196</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">202</context>
         </context-group>
       </trans-unit>
@@ -1773,7 +1715,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Certificate of apprenticeship for Certified Electrical-Installer EFZ.</source>
         <target>Lehrabschlusszeugnis zum diplomierten Elektroinstallateur EFZ.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">180</context>
         </context-group>
       </trans-unit>
@@ -1781,7 +1723,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Show game screenshots</source>
         <target>Screenshots vom Spiel anzeigen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
@@ -1821,7 +1763,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Snaptab is a smart all-in-one app designed to optimize business administration. From project management and time tracking to invoicing, snaptab automates administrative processes and saves valuable time.</source>
         <target>Snaptab ist eine All-in-One-App zur Optimierung der Geschäftsverwaltung. Sie automatisiert administrative Prozesse – von Projektmanagement und Zeiterfassung bis hin zur Rechnungsstellung – und spart so wertvolle Zeit.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
@@ -1829,43 +1771,43 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>View Details</source>
         <target>Details anzeigen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/features/portfolio/components/featured-projects/featured-projects.component.html</context>
-          <context context-type="linenumber">45,46</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">53</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/portfolio/components/featured-projects/featured-projects.component.html</context>
+          <context context-type="linenumber">45,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5960876002172930443" datatype="html">
         <source>January 2024</source>
         <target>Januar 2024</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
@@ -1873,7 +1815,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>A high-performance open-source image editor for Flutter, featuring multi-threading, CPU control, cropping, rotation, filters, text layers, pixelation, and non-destructive editing.</source>
         <target>Ein leistungsstarker Open-Source-Bildeditor für Flutter mit Multi-Threading, CPU-Steuerung und nicht-destruktiver Bearbeitung. Unterstützt Funktionen wie Zuschneiden, Rotieren, Filter, Zeichnen, Textebenen und Verpixelung.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
@@ -1881,7 +1823,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>December 2023</source>
         <target>Dezember 2023</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
@@ -1889,11 +1831,11 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Open Source Angular Utilities</source>
         <target>Open-Source Angular Hilfsbibliotheken</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">61</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
@@ -1901,11 +1843,11 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>A set of lightweight libraries for smooth scroll animations, immersive image transitions, and dynamic number effects—enhancing user experience with minimal effort.</source>
         <target>&quot;Eine Sammlung kompakter Bibliotheken für flüssige Scroll-Animationen, animierte Bildübergänge und dynamische Zahleneffekte – optimiert die Benutzererfahrung mit minimalem Aufwand.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">62</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
@@ -1913,7 +1855,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Founded WAIO Applications</source>
         <target>Gründung WAIO Applications</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
@@ -1921,7 +1863,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Developed various projects, including the company website and a management tool. Created a web app for “Schule Rotflue” to simplify the presentation of their pedagogical concept.</source>
         <target>Verschiedene Projekte entwickelt, darunter die Unternehmenswebsite und ein Verwaltungstool. Zudem eine Web-App für die &apos;Schule Rotflue&apos; erstellt, um die Präsentation ihres pädagogischen Konzepts zu optimieren.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
@@ -1929,7 +1871,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Project “Report-App” Ionic version</source>
         <target>Projekt „Rapport-App“ Ionic-Version</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
@@ -1937,7 +1879,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>I developed a report app with Ionic for craftsmen to simplify report creation and management. Lessons from this project laid the foundation for snaptab’s enhanced features and functionality.</source>
         <target>Ich habe mit Ionic eine Rapport-App für Handwerker entwickelt, die die Erstellung und Verwaltung von Rapporten erleichtert. Die aus diesem Projekt gewonnenen Erkenntnisse dienten als Basis für die erweiterten Funktionen und Möglichkeiten in snaptab.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
@@ -1945,7 +1887,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Mid-2018</source>
         <target>Mitte 2018</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">114</context>
         </context-group>
       </trans-unit>
@@ -1953,7 +1895,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Completed a three-month training in Eschlikon at Bingesser Huber Elektro AG, gaining hands-on experience in fiber optic splicing, as well as outdoor and indoor installations.</source>
         <target>Dreimonatige Ausbildung bei Bingesser Huber Elektro AG in Eschlikon abgeschlossen und praktische Erfahrung im Glasfaserspleißen in Außen- und Inneninstallationen gesammelt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
@@ -1961,7 +1903,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Mid-2017</source>
         <target>Mitte 2017</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
@@ -1969,7 +1911,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Project “Report-App” Java version</source>
         <target>Projekt „Rapport-App“ Java-Version</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
@@ -1977,7 +1919,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>My first major project, a simple report app built with Java and libGDX, developed for use at my workplace. It provided valuable experience in mobile development and future projects.</source>
         <target>Mein erstes größeres Projekt: eine einfache Rapport-App, entwickelt mit Java und libGDX für den Einsatz an meinem Arbeitsplatz. Dieses Projekt bot wertvolle Erfahrungen in der mobilen Entwicklung und legte eine Grundlage für zukünftige Projekte.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
@@ -1985,7 +1927,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Early 2017</source>
         <target>Anfang 2017</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
@@ -1993,7 +1935,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Java Development and Game Programming</source>
         <target>Java-Entwicklung und Spieleprogrammierung</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
@@ -2001,7 +1943,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Learned programming with Java and developed an Endless Runner game using libGDX, gaining hands-on experience in game development and software design.</source>
         <target>Programmierung mit Java erlernt und ein Endless Runner-Spiel mit libGDX entwickelt, wodurch ich wertvolle praktische Erfahrungen in der Spieleentwicklung und im Softwaredesign sammeln konnte.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
@@ -2009,7 +1951,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Endless Runner game</source>
         <target>Endless-Runner-Spiel</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
@@ -2017,7 +1959,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Development screenshots of the “Endless Runner” game that I programmed with libGDX.</source>
         <target>Entwicklungsscreenshots des „Endless Runner“-Spiels, das ich mit libGDX programmiert habe.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
@@ -2025,19 +1967,19 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Game screen</source>
         <target>Spiel-Bildschirm</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">135</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">140</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">145</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
@@ -2045,7 +1987,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Elektro Sutter – Electrical Installer</source>
         <target>Elektro Sutter – Elektroinstallateur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
@@ -2053,7 +1995,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Worked as an electrical installer, service technician, and project manager at Elektro Sutter. In 2018, transitioned to an 80% workload to dedicate more time to programming.</source>
         <target>Arbeitete als Elektroinstallateur, Servicetechniker und Projektleiter bei Elektro Sutter. 2018 wechselte ich zu einer 80%-Stelle, um mehr Zeit für das Programmieren zu haben.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">160</context>
         </context-group>
       </trans-unit>
@@ -2061,7 +2003,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Military Training</source>
         <target>Militärische Ausbildung</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
@@ -2069,7 +2011,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Completed basic training followed by advanced training to achieve the rank of Wachtmeister.</source>
         <target>Grundausbildung mit anschließender weiterführender Ausbildung zum Wachtmeister.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">165</context>
         </context-group>
       </trans-unit>
@@ -2077,7 +2019,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Brunner &amp; Engler – Electrical Installer</source>
         <target>Brunner &amp; Engler – Elektroinstallateur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">169</context>
         </context-group>
       </trans-unit>
@@ -2085,7 +2027,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Worked as an electrical installer, gaining hands-on experience in installations and electrical systems.</source>
         <target>Als Elektroinstallateur gearbeitet und dabei praktische Erfahrung in der Installation und Wartung elektrischer Systeme gesammelt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
@@ -2093,7 +2035,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Apprenticeship – Certified Electrical Installer EFZ</source>
         <target>Lehre – Elektroinstallateur EFZ</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">174</context>
         </context-group>
       </trans-unit>
@@ -2101,7 +2043,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Completed a vocational apprenticeship, earning the EFZ certification as an electrical installer, with practical experience in electrical systems and installations.</source>
         <target>Lehre zum Elektroinstallateur abgeschlossen und praktische Erfahrung in elektrischen Systemen und Installationen gesammelt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
@@ -2109,7 +2051,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Elementary School</source>
         <target>Grundschule</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">212</context>
         </context-group>
       </trans-unit>
@@ -2117,7 +2059,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Completed basic primary education.</source>
         <target>Abgeschlossene Grundschulbildung</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">213</context>
         </context-group>
       </trans-unit>
@@ -2125,7 +2067,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Just a baby, no coding skills yet!</source>
         <target>Noch ein Baby – Programmierkenntnisse in Entwicklung!</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">218</context>
         </context-group>
       </trans-unit>
@@ -2136,7 +2078,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
       </source>
         <target>Schnelle, responsive und benutzerfreundliche Websites, entwickelt mit modernen Frameworks wie Angular. Ob Portfolio, Webseite oder komplette Webanwendung – maßgeschneiderte Lösungen, die sich abheben.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">6,9</context>
         </context-group>
       </trans-unit>
@@ -2147,7 +2089,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
       </source>
         <target>Leistungsstarke mobile Anwendungen entwickelt mit Flutter oder Ionic, mit Fokus auf ein erstklassiges Benutzererlebnis und plattformübergreifende Kompatibilität, damit die Apps sowohl auf iOS als auch auf Android einwandfrei funktionieren.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">14,17</context>
         </context-group>
       </trans-unit>
@@ -2158,7 +2100,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
       </source>
         <target>Ästhetik und Funktionalität vereint durch klare UI/UX-Designs, die die Benutzerfreundlichkeit steigern und die Nutzer ansprechen, um eine intuitive und visuell überzeugende digitale Erfahrung zu schaffen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">22,25</context>
         </context-group>
       </trans-unit>
@@ -2169,7 +2111,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
       </source>
         <target>Skalierbare und effiziente Backends mit Node.js, Firebase und Supabase. Vom API bis zur Datenbank sorge ich dafür, dass alles sicher und problemlos im Hintergrund läuft.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/services.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/services.constants.ts</context>
           <context context-type="linenumber">30,33</context>
         </context-group>
       </trans-unit>
@@ -2242,7 +2184,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Knowledge</source>
         <target>Wissen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/games.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -2250,7 +2192,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Intelligence</source>
         <target>Intelligenz</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/games.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -2258,7 +2200,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Reaction</source>
         <target>Reaktion</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/games.constants.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
@@ -2266,7 +2208,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>Focus</source>
         <target>Fokussieren</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/games.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/games.constants.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
@@ -2274,7 +2216,7 @@ Der Gro&amp;szlig;teil des UI/UX-Teils dieses Projekts stammt nicht von mir.</ta
         <source>A powerful, customizable Flutter image editor with multi-threading, localization, and a rich set of editing tools.</source>
         <target>Ein leistungsstarker, anpassbarer Flutter-Bildeditor mit Multithreading, Lokalisierung und einer umfangreichen Auswahl an Bearbeitungswerkzeugen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2292,7 +2234,7 @@ Mit anpassbaren UI-Elementen, Unterst&amp;uuml;tzung f&amp;uuml;r Lokalisierung 
 um Bildbearbeitungsfunktionen m&amp;uuml;helos in ihre Flutter-Projekte zu integrieren.
 </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_image_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_image_editor.constants.ts</context>
           <context context-type="linenumber">10,15</context>
         </context-group>
       </trans-unit>
@@ -2300,7 +2242,7 @@ um Bildbearbeitungsfunktionen m&amp;uuml;helos in ihre Flutter-Projekte zu integ
         <source>A native-code Flutter video editor with trimming, cropping, and effects across platforms.</source>
         <target>Ein Flutter-Videoeditor mit nativer Codebasis, der plattformübergreifend Trimmen, Zuschneiden und Effekte unterstützt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_video_editor.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2317,7 +2259,7 @@ Es bietet Funktionen wie Trimmen, Zuschneiden, Skalieren, Drehen, Spiegeln sowie
 Im Gegensatz zu FFmpeg-basierten L&amp;ouml;sungen ist dieser Editor auf Echtzeit-Reaktionsf&amp;auml;higkeit optimiert und unterst&amp;uuml;tzt gleichzeitige Verarbeitung,
 was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen und Desktop-Anwendungen macht.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-pro_video_editor.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-pro_video_editor.constants.ts</context>
           <context context-type="linenumber">10,15</context>
         </context-group>
       </trans-unit>
@@ -2325,15 +2267,7 @@ was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen u
         <source>A smart web and mobile app for craftsmen with time tracking, scheduling, invoicing, and Stripe payments.</source>
         <target>Eine intelligente Web- und Mobile-App für Handwerker mit Zeiterfassung, Terminplanung, Rechnungsstellung und Stripe-Zahlungen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-snaptab.constants.ts</context>
-          <context context-type="linenumber">8</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="379319037844497681" datatype="html">
-        <source>My company site featuring two hidden games, an image conversion tool, and a fast, accessible, fully responsive design.</source>
-        <target>Meine Unternehmenswebsite mit zwei versteckten Spielen, einem Bildkonvertierungstool sowie einem schnellen, barrierefreien und vollständig responsiven Design.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-waio.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-snaptab.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2341,7 +2275,7 @@ was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen u
         <source>A package for smooth, animated number transitions, ideal for counters and real-time data updates.</source>
         <target>Ein Paket für flüssige, animierte Zahlenübergänge, ideal für Zähler und Echtzeitdatenaktualisierungen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-count-animation.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-count-animation.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2349,7 +2283,7 @@ was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen u
         <source>A package for smooth hero animations, letting users tap images to zoom into an immersive full-screen view.</source>
         <target>Ein Paket für flüssige Hero-Animationen, mit dem Nutzer Bilder antippen können, um nahtlos in eine beeindruckende Vollbildansicht zu zoomen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-image-hero.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-image-hero.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2357,7 +2291,7 @@ was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen u
         <source>A CSS scroll animation package with customizable or pre-built effects that trigger on viewport entry, once or multiple times.</source>
         <target>Eine CSS-Scroll-Animationsbibliothek mit anpassbaren oder vorgefertigten Effekten, die beim Eintritt in den Viewport einmalig oder mehrfach ausgelöst werden.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_ngx-scroll-animations.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-ngx-scroll-animations.constants.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -2365,7 +2299,7 @@ was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen u
         <source>A real-time control app for managing GPIO ports and monitoring personal beehives, with no coding required.</source>
         <target>Eine Echtzeit-Steuerungs-App zur Verwaltung von GPIO-Ports und zur Überwachung eigener Bienenstöcke, ganz ohne Programmierkenntnisse.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-smarthome.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2381,7 +2315,7 @@ was ihn ideal f&amp;uuml;r anspruchsvolle Videobearbeitungsaufgaben in mobilen u
 Neben der GPIO-Steuerung verbindet sich die App auch mit einem pers&amp;ouml;nlichen Bienenstock-System und liefert Live-Daten wie die Innentemperatur und den Honigertrag.
 Diese Kombination aus Echtzeitsteuerung und intelligenter &amp;Uuml;berwachung macht die Anwendung zu einem leistungsstarken Werkzeug f&amp;uuml;r Hobbyisten.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_smarthome.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-smarthome.constants.ts</context>
           <context context-type="linenumber">10,14</context>
         </context-group>
       </trans-unit>
@@ -2389,7 +2323,7 @@ Diese Kombination aus Echtzeitsteuerung und intelligenter &amp;Uuml;berwachung m
         <source>A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design.</source>
         <target>Eine moderne, responsive Website für eine Sushi- und Bubble-Tea-Bar, mit Fokus auf frische Zutaten und zeitgemäßes Design.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-umamihouse.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2409,7 +2343,7 @@ Die Website wurde mit Blick auf Leistung und Benutzerfreundlichkeit entwickelt &
 Besonderes Augenmerk wurde auf responsives Design, Barrierefreiheit und eine klare visuelle &amp;Auml;sthetik gelegt.
 Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehmen st&amp;auml;rken und eine breitere Zielgruppe ansprechen kann.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_umamihouse.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-umamihouse.constants.ts</context>
           <context context-type="linenumber">10,16</context>
         </context-group>
       </trans-unit>
@@ -2417,7 +2351,7 @@ Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehm
         <source>June 2025</source>
         <target>Juni 2025</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -2425,7 +2359,7 @@ Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehm
         <source>A modern, responsive website for a sushi and bubble tea bar, focused on fresh ingredients and modern design</source>
         <target>Eine moderne, responsive Website für eine Sushi- und Bubble-Tea-Bar, die sich auf frische Zutaten und modernes Design konzentriert.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
@@ -2433,7 +2367,7 @@ Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehm
         <source>Mai 2025</source>
         <target>Mai 2025</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
@@ -2443,7 +2377,7 @@ Das Projekt zeigt, wie ein durchdachter digitaler Auftritt ein lokales Unternehm
 Konzipiert für hohe Performance und ein naturnahes Benutzererlebnis auf Android, iOS, macOS, Windows und im Web.
 </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
@@ -2451,7 +2385,7 @@ Konzipiert für hohe Performance und ein naturnahes Benutzererlebnis auf Android
         <source>Rotflue School Educational Concept</source>
         <target>Schule Rotflue Pädagogisches Konzept</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
@@ -2461,7 +2395,7 @@ Konzipiert für hohe Performance und ein naturnahes Benutzererlebnis auf Android
 Eltern können sich jederzeit über die pädagogischen Prinzipien und Ziele informieren, was mehr Transparenz und Vertrauen schafft.
 Gleichzeitig haben Lehrpersonen die Möglichkeit, das Konzept direkt online zu bearbeiten, Inhalte anzupassen und es gemeinsam weiterzuentwickeln.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
@@ -2477,7 +2411,7 @@ Gleichzeitig haben Lehrpersonen die Möglichkeit, das Konzept direkt online zu b
         <source>Electronic and Robotic</source>
         <target>Elektronik und Robotik</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-electronic.constants.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -2485,7 +2419,7 @@ Gleichzeitig haben Lehrpersonen die Möglichkeit, das Konzept direkt online zu b
         <source>Stuff like IoT is fun, but having complete freedom is even better, especially when you build your own electronic board.</source>
         <target>Dinge wie IoT machen Spaß, aber völlige Freiheit ist noch besser, besonders wenn man seine eigene Elektronikplatine baut.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-electronic.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2501,7 +2435,7 @@ Gleichzeitig haben Lehrpersonen die Möglichkeit, das Konzept direkt online zu b
 &lt;br&gt;&lt;br&gt;
 Au&amp;szlig;erdem bastle ich auch gerne mit Mechanik, um einfache Roboter zu bauen, wie die, die Sie in den folgenden Videos sehen k&amp;ouml;nnen.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project-electronic.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-electronic.constants.ts</context>
           <context context-type="linenumber">9,14</context>
         </context-group>
       </trans-unit>
@@ -2509,11 +2443,11 @@ Au&amp;szlig;erdem bastle ich auch gerne mit Mechanik, um einfache Roboter zu ba
         <source>A modern, responsive website for a professional nail studio, highlighting elegance, care, and a relaxing atmosphere.</source>
         <target>Eine moderne, responsive Website für ein professionelles Nagelstudio, die Eleganz, Pflege und eine entspannende Atmosphäre hervorhebt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-gemnails.constants.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
@@ -2528,7 +2462,7 @@ Au&amp;szlig;erdem bastle ich auch gerne mit Mechanik, um einfache Roboter zu ba
 
 Die Website wurde mit Blick auf Leistung und Benutzererfahrung erstellt, um schnelle Ladezeiten und eine reibungslose Navigation auf allen Geräten zu gewährleisten. Besonderes Augenmerk wurde auf Barrierefreiheit, ein sauberes Design und eine moderne visuelle Präsentation gelegt. Dieses Projekt zeigt, wie eine gut gestaltete digitale Präsenz Vertrauen aufbaut und neue Kunden anzieht.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/projects/project_gemnails.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/projects/project-gemnails.constants.ts</context>
           <context context-type="linenumber">10,15</context>
         </context-group>
       </trans-unit>
@@ -2536,8 +2470,34 @@ Die Website wurde mit Blick auf Leistung und Benutzererfahrung erstellt, um schn
         <source>August 2025</source>
         <target>August 2025</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/constants/resume/resume-timeline.constants.ts</context>
+          <context context-type="sourcefile">src/app/core/constants/resume/resume-timeline.constants.ts</context>
           <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5159701856279187731" datatype="html">
+        <source>My company site showcasing modern digital solutions with high performance, accessibility, and a fully responsive design.</source>
+        <target>Mein Unternehmenswebsite präsentiert moderne digitale Lösungen mit hoher Leistung, Barrierefreiheit und einem vollständig responsiven Design.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-waio.constants.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8602310375509827854" datatype="html">
+        <source>
+  This website presents WAIO Applications, my independent software company dedicated to developing innovative, high-performance digital products.&lt;br/&gt;&lt;br/&gt;
+  Our mission is to create software that combines modern design, clean architecture, and excellent user experience. We build reliable applications that perform consistently well across platforms and devices, ensuring both speed and accessibility.&lt;br/&gt;&lt;br/&gt;
+  The site reflects our commitment to high-quality engineering and thoughtful design. Every element is optimized to provide a smooth and intuitive browsing experience, from responsive layouts to lightweight animations.&lt;br/&gt;&lt;br/&gt;
+  At WAIO Applications, we value precision, performance, and clarity in every project we take on. Whether it’s a mobile app, a complex web platform, or a creative experiment, our goal is always to deliver elegant and efficient solutions that make technology feel natural to use.
+  </source>
+        <target>
+  Diese Webseite präsentiert WAIO Applications, mein unabhängiges Softwareunternehmen, das sich der Entwicklung innovativer, leistungsstarker digitaler Produkte widmet.&lt;br/&gt;&lt;br/&gt;
+Unsere Mission ist es, Software zu kreieren, die modernes Design, saubere Architektur und eine ausgezeichnete Benutzererfahrung vereint. Wir entwickeln zuverlässige Anwendungen, die plattform- und geräteübergreifend konstant gut funktionieren und sowohl Geschwindigkeit als auch Zugänglichkeit gewährleisten.&lt;br/&gt;&lt;br/&gt;
+Die Seite spiegelt unser Engagement für hochwertige Ingenieurskunst und durchdachtes Design wider. Jedes Element ist optimiert, um ein reibungsloses und intuitives Surferlebnis zu bieten, von responsiven Layouts bis hin zu leichten Animationen.&lt;br/&gt;&lt;br/&gt;
+Bei WAIO Applications schätzen wir Präzision, Leistung und Klarheit in jedem Projekt, das wir annehmen. Egal, ob es sich um eine mobile App, eine komplexe Webplattform oder ein kreatives Experiment handelt, unser Ziel ist es stets, elegante und effiziente Lösungen zu liefern, die den Umgang mit Technologie natürlich erscheinen lassen.
+</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/constants/projects/project-waio.constants.ts</context>
+          <context context-type="linenumber">10,14</context>
         </context-group>
       </trans-unit>
     </body>
